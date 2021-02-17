@@ -1,2 +1,8 @@
-# udes-dsc-cie
-Data Supply Chain : Canadian Public Companies
+# Project title
+
+Systematic Analysis of the Business Environment : Big Data, Text Mining and Artificial intelligence
+
+A Data Supply Chain perspective for Canadian Public Companies
+
+## Project description
+Countless businesses around the world still manage competitive and economic environment data manually today. With the advent of Big Data, this labour intensive approach has become anachronistic and futile. For this reason, the project, built as a proof of concept (PoC), aims specifically at creating a data pipeline to support timely business analysis and decision based on artificial intelligence and text mining. Specifically, the work involves collecting, analyzing and reporting on official business communications and economic data through diverse channels in an integrated and coherent way. This includes automating the collection of social media posts, press releases and financial reports by businesses for competitive intelligence and academic research. The reporting of key information in the appropriate manner that may include data visualization, dashboarding, infographics or standard document reporting. The project will rely on the Python language and its many data analysis libraries. Through an agile projet approach, data and documents will be collected, stored, mined and analyzed iteratively, one source at a time, to extract key features, meaning and relationships. The PoC will first focus on Canadian businesses as standardized access to financial documents is secured and will ensure the success of the project. The project is ideal for junior data scientists as it is structured as to yield quick value at each phase and to build the candidate skills portfolio in a stepwise manner. The project results will be presented by the candidate to students and staff at Université de Sherbrooke's Business School. Convincing results will be communicated to the scientific community in conferences or articles.

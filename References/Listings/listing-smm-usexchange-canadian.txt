@@ -1,0 +1,704 @@
+List of Canadian Companies on U.S. Exchanges
+
+Symbol	Name	U.S. Exchange	Cross-list symbol	Cross-list exchange	GICS Sector	Industry	Market cap	Average Volume	Action
+SHOP	Shopify Inc. Class A	New York Stock Exchange	CT:SHOP	Toronto Stock Exchange	Information Technology	Software—Application	$148,873,263,850	1,066,588	Analyze
+RY	Royal Bank Of Canada	New York Stock Exchange	CT:RY	Toronto Stock Exchange	Financials	Banks—Diversified	$117,430,682,400	1,355,147	Analyze
+TD	The Toronto-Dominion Bank	New York Stock Exchange	CT:TD	Toronto Stock Exchange	Financials	Banks—Diversified	$104,928,032,830	1,769,388	Analyze
+CNI	Canadian National Railway Company	New York Stock Exchange	CT:CNR	Toronto Stock Exchange	Industrials	Railroads	$75,204,423,158	848,192	Analyze
+ENB	Enbridge Inc	New York Stock Exchange	CT:ENB	Toronto Stock Exchange	Energy	Oil & Gas Midstream	$69,775,888,632	4,560,092	Analyze
+BNS	The Bank Of Nova Scotia	New York Stock Exchange	CT:BNS	Toronto Stock Exchange	Financials	Banks—Diversified	$65,633,055,056	1,219,615	Analyze
+BAM	Brookfield Asset Management Inc.	New York Stock Exchange	CT:BAM-A	Toronto Stock Exchange	Financials	Asset Management	$62,354,414,417	3,182,405	Analyze
+BMO	Bank Of Montreal	New York Stock Exchange	CT:BMO	Toronto Stock Exchange	Financials	Banks—Diversified	$48,779,507,786	552,681	Analyze
+CP	Canadian Pacific Railway Limited	New York Stock Exchange	CT:CP	Toronto Stock Exchange	Industrials	Railroads	$47,255,968,533	329,599	Analyze
+TRI	Thomson Reuters Corporation	New York Stock Exchange	CT:TRI	Toronto Stock Exchange	Industrials	Consulting Services	$42,120,768,147	455,406	Analyze
+TRP	TransCanada Corporation	New York Stock Exchange	CT:TRP	Toronto Stock Exchange	Energy	Oil & Gas Midstream	$40,469,757,008	2,342,689	Analyze
+GOLD	Barrick Gold Corporation	New York Stock Exchange	CT:ABX	Toronto Stock Exchange	Materials	Gold	$39,724,762,232	19,338,199	Analyze
+BCE	BCE, Inc.	New York Stock Exchange	CT:BCE	Toronto Stock Exchange	Communication Services	Telecom Services	$38,933,323,990	1,100,570	Analyze
+CM	Canadian Imperial Bank Of Commerce	New York Stock Exchange	CT:CM	Toronto Stock Exchange	Financials	Banks—Diversified	$38,589,104,651	279,720	Analyze
+MFC	Manulife Financial Corporation	New York Stock Exchange	CT:MFC	Toronto Stock Exchange	Financials	Insurance—Life	$35,894,599,618	2,481,705	Analyze
+NTR	Nutrien Ltd.	New York Stock Exchange	CT:NTR	Toronto Stock Exchange	Materials	Agricultural Inputs	$28,884,273,000	1,828,666	Analyze
+CNQ	Canadian Natural Resources Limited	New York Stock Exchange	CT:CNQ	Toronto Stock Exchange	Energy	Oil & Gas E&P	$27,962,921,770	3,948,455	Analyze
+SLF	Sun Life Financial Inc.	New York Stock Exchange	CT:SLF	Toronto Stock Exchange	Financials	Insurance—Diversified	$27,942,853,889	452,917	Analyze
+TU	Telus Corporation	New York Stock Exchange	CT:T	Toronto Stock Exchange	Communication Services	Telecom Services	$26,938,449,907	1,175,746	Analyze
+WCN	Waste Connections Inc	New York Stock Exchange	CT:WCN	Toronto Stock Exchange	Industrials	Waste Management	$26,263,627,483	1,081,369	Analyze
+SU	Suncor Energy  Inc.	New York Stock Exchange	CT:SU	Toronto Stock Exchange	Energy	Oil & Gas Integrated	$25,698,790,879	8,471,028	Analyze
+FNV	Franco-Nevada Corporation	New York Stock Exchange	CT:FNV	Toronto Stock Exchange	Materials	Gold	$23,121,010,114	578,656	Analyze
+MGA	Magna International	New York Stock Exchange	CT:MG	Toronto Stock Exchange	Consumer Discretionary	Auto Parts	$22,035,192,033	1,638,164	Analyze
+FTS	Fortis Inc.	New York Stock Exchange	CT:FTS	Toronto Stock Exchange	Utilities	Utilities—Regulated Electric	$19,044,231,994	379,760	Analyze
+QSR	Restaurant Brands International Inc.	New York Stock Exchange	CT:QSR	Toronto Stock Exchange	Consumer Discretionary	Restaurants	$18,493,898,062	1,639,913	Analyze
+WPM	Wheaton Precious Metals Corp.	New York Stock Exchange	CT:WPM	Toronto Stock Exchange	Materials	Gold	$18,481,729,161	3,175,129	Analyze
+GIB	CGI Group	New York Stock Exchange	CT:GIB-A	Toronto Stock Exchange	Information Technology	Information Technology Services	$18,379,284,844	154,033	Analyze
+RCI	Rogers Communication	New York Stock Exchange	CT:RCI-B	Toronto Stock Exchange	Communication Services	Telecom Services	$18,192,197,423	288,208	Analyze
+AEM	Agnico Eagle Mines Limited	New York Stock Exchange	CT:AEM	Toronto Stock Exchange	Materials	Gold	$16,867,145,345	1,183,393	Analyze
+CGC	Canopy Growth Corporation	NASDAQ Global Select	CT:WEED	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$15,627,640,893	7,549,734	Analyze
+PBA	Pembina Pipeline Corp.	New York Stock Exchange	CT:PPL	Toronto Stock Exchange	Energy	Oil & Gas Midstream	$14,551,462,806	1,267,211	Analyze
+IMO	Imperial Oil Limited	NYSE American	CT:IMO	Toronto Stock Exchange	Energy	Oil & Gas Integrated	$13,888,732,205	450,404	Analyze
+ABCL	AbCellera Biologics Inc.	NASDAQ Global Select			Health Care	Biotechnology	$12,752,403,003	1,134,553	Analyze
+OTEX	Open Text Corporation	NASDAQ Global Select	CT:OTEX	Toronto Stock Exchange	Information technology	Software—Application	$12,738,062,568	492,208	Analyze
+BEP	Brookfield Renewable Partners L.P.	New York Stock Exchange	CT:BEP.UN		Utilities	Utilities—Renewable	$12,623,304,288	595,580	Analyze
+CVE	Cenovus Energy Inc	New York Stock Exchange	CT:CVE	Toronto Stock Exchange	Energy	Oil & Gas Integrated	$12,487,065,521	11,148,987	Analyze
+BLDP	Ballard Power Systems	NASDAQ Global Market	CT:BLDP	Toronto Stock Exchange	Industrials	Specialty Industrial Machinery	$10,298,674,242	8,633,192	Analyze
+KL	Kirkland Lake Gold Ltd.	New York Stock Exchange	CT:KL	Toronto Stock Exchange	Materials	Gold	$10,272,404,701	1,834,712	Analyze
+AQN	Algonquin Power & Utilities Corp.	New York Stock Exchange	CT:AQN	Toronto Stock Exchange	Utilities	Utilities—Renewable	$10,169,331,990	810,206	Analyze
+TECK	Teck Resources Ltd	New York Stock Exchange	CT:TECK-B	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$9,645,919,571	3,967,283	Analyze
+BEPC	Brookfield Renewable Corporation Class A	New York Stock Exchange			Utilities	Utilities—Renewable	$9,635,216,135	574,358	Analyze
+BHC	Bausch Health Companies Inc.	New York Stock Exchange	CT:BHC	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$9,585,739,089	4,575,001	Analyze
+GFL	GFL Environmental Inc. Subordinate voting shares	New York Stock Exchange	CT:GFL	Toronto Stock Exchange	Industrials	Waste Management	$9,265,576,411	728,406	Analyze
+KGC	Kinross Gold Corporation	New York Stock Exchange	CT:K	Toronto Stock Exchange	Materials	Gold	$8,845,992,841	17,750,629	Analyze
+LSPD	Lightspeed POS Inc. Subordinate Voting Shares	New York Stock Exchange	CT:LSPD	Toronto Stock Exchange	Information Technology	Software—Infrastructure	$8,539,913,757	436,673	Analyze
+SJR	Shaw Communications Inc. (Class B)	New York Stock Exchange	CT:SJR-B	Toronto Stock Exchange	Consumer Discretionary	Telecom Services	$8,534,896,790	930,703	Analyze
+CURLF	Curaleaf Holdings Inc.	OTC markets	CF:CURA	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$8,370,610,270	305,473	Analyze
+BPY	Brookfield Property Partners LP	NASDAQ Global Select	CT:BPY.UN	Toronto Stock Exchange	Financials	Real Estate Services	$8,150,010,503	5,906,372	Analyze
+CAE	CAE Inc.	New York Stock Exchange	CT:CAE	Toronto Stock Exchange	Industrials	Aerospace & Defense	$6,930,332,477	385,488	Analyze
+RBA	Ritchie Bros Auctioneers Inc	New York Stock Exchange	CT:RBA	Toronto Stock Exchange	Industrials	Specialty Business Services	$6,685,981,252	759,897	Analyze
+TFII	TFI International Inc.	New York Stock Exchange	CT:TFII	Toronto Stock Exchange	Industrials	Trucking	$6,650,870,512	243,718	Analyze
+PAAS	Pan American Silver Corp.	NASDAQ Global Select	CT:PAAS	Toronto Stock Exchange	Materials	Silver	$6,623,148,011	4,184,154	Analyze
+BB	Blackberry Limited	New York Stock Exchange	CT:BB	Toronto Stock Exchange	Information Technology	Software—Infrastructure	$6,501,581,221	108,041,874	Analyze
+IVPAF	Ivanhoe Mines Ltd. Class A	OTC markets	CT:IVN	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$6,053,588,472	40,331	Analyze
+FSV	Firstservice Corporation	NASDAQ Global Select	CT:FSV	Toronto Stock Exchange	Real Estate	Real Estate Services	$5,925,928,183	38,481	Analyze
+GTBIF	Green Thumb Industries Inc.	OTC markets	CF:GTII	Canadian Securities Exchange	Consumer Discretionary	Drug Manufacturers—Specialty & Generic	$5,674,013,125	204,109	Analyze
+ACDVF	Air Canada	OTC markets	CT:AC	Toronto Stock Exchange	Industrials	Airlines	$5,570,394,552	195,346	Analyze
+CCJ	Cameco Corporation	New York Stock Exchange	CT:CCO	Toronto Stock Exchange	Energy	Uranium	$5,416,911,669	5,953,913	Analyze
+DSGX	The Descartes Systems Group Inc.	NASDAQ Global Select	CT:DSG	Toronto Stock Exchange	Information Technology	Software—Application	$5,326,401,400	130,740	Analyze
+BTG	B2Gold Corp	NYSE American	CT:BTO	Toronto Stock Exchange	Materials	Gold	$5,213,645,348	8,604,680	Analyze
+GIL	Gildan Activewear Inc. Class A	New York Stock Exchange	CT:GIL	Toronto Stock Exchange	Consumer Discretionary	Apparel Manufacturing	$5,041,601,124	434,705	Analyze
+APHA	Aphria Inc.	NASDAQ Global Select	CT:APHA	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$4,668,829,717	21,835,731	Analyze
+AUY	Yamana Gold Inc.	New York Stock Exchange	CT:YRI	Toronto Stock Exchange	Materials	Gold	$4,647,584,464	17,673,416	Analyze
+STN	Stantec Inc	New York Stock Exchange	CT:STN	Toronto Stock Exchange	Industrials	Engineering & Construction	$4,325,878,373	83,969	Analyze
+WFG	West Fraser Timber Co. Ltd	New York Stock Exchange			Materials	Lumber & Wood Production	$4,149,157,529	65,670	Analyze
+CRON	Cronos Group Inc.	NASDAQ Global Market	CT:CRON	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$4,088,875,318	6,931,607	Analyze
+SSRM	SSR Mining Inc.	NASDAQ Global Select	CT:SSRM	Toronto Stock Exchange	Materials	Gold	$3,735,515,886	1,798,625	Analyze
+AG	First Majestic Silver Corp	New York Stock Exchange	CT:FR	Toronto Stock Exchange	Materials	Silver	$3,720,133,584	17,762,364	Analyze
+CIGI	Colliers International Group Inc.	NASDAQ Global Select	CT:CIGI	Toronto Stock Exchange	Real Estate	Real Estate Services	$3,650,082,649	51,059	Analyze
+MDRPF	Midas Gold Corp.	OTC markets	CV:MAX	TSX Venture Exchange	Materials	Gold	$3,598,595,146	676,260	Analyze
+EDVMF	Endeavour Mining Corporation	OTC markets	CT:EDV	Toronto Stock Exchange	Materials	Gold	$3,472,676,875	39,608	Analyze
+TLRY	Tilray, Inc. - Class 2	NASDAQ Global Select			Health Care	Drug Manufacturers—Specialty & Generic	$3,136,533,233	40,986,047	Analyze
+NG	Novagold Resources Inc.	NYSE American	CT:NG	Toronto Stock Exchange	Materials	Gold	$3,124,353,447	1,369,890	Analyze
+AGI	Alamos Gold Inc Class A	New York Stock Exchange	CT:AGI	Toronto Stock Exchange	Materials	Gold	$3,110,792,430	2,823,403	Analyze
+DOOO	BRP Inc.	NASDAQ Global Select	CT:DOO	Toronto Stock Exchange	Consumer Discretionary	Recreational Vehicles	$3,077,060,407	97,069	Analyze
+BIPC	Brookfield Infrastructure Partners LP Class A Subordinate Voting Shares	New York Stock Exchange	CT:BIPC	Toronto Stock Exchange	Utilities	Asset Management	$2,942,661,387	187,395	Analyze
+CIXX	CI Financial Corp.	New York Stock Exchange	CT:CIX	Toronto Stock Exchange	Financials	Asset Management	$2,800,186,192	47,828	Analyze
+MAXR	Maxar Technologies Ltd.	New York Stock Exchange	CT:MAXR	Toronto Stock Exchange	Industrials	Communication Equipment	$2,692,784,317	1,940,613	Analyze
+MEOH	Methanex Corporation	NASDAQ Global Select	CT:MX	Toronto Stock Exchange	Materials	Chemicals	$2,571,054,805	537,252	Analyze
+ACB	Aurora Cannabis Inc.	New York Stock Exchange	CT:ACB	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$2,506,480,738	30,458,724	Analyze
+TCNNF	Trulieve Cannabis Corp.	OTC markets	CT:TRUL	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$2,460,658,114	175,718	Analyze
+TAC	TransAlta Corporation	New York Stock Exchange	CT:TA	Toronto Stock Exchange	Utilities	Utilities—Independent Power Producers	$2,440,310,011	281,248	Analyze
+CRLBF	Cresco Labs Inc.	OTC markets	CF:CL	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$2,392,247,790	374,824	Analyze
+TRQ	Turquoise Hill Resources Ltd	New York Stock Exchange	CT:TRQ	Toronto Stock Exchange	Materials	Copper	$2,362,456,988	1,082,093	Analyze
+EQX	Equinox Gold Corp.	NYSE American	CT:EQX	Toronto Stock Exchange	Materials	Gold	$2,319,331,665	1,141,298	Analyze
+LAC	Lithium Americas Corp.	New York Stock Exchange	CT:LAC	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$2,299,800,938	10,011,453	Analyze
+GOOS	Canada Goose Holdings Inc. Subordinate Voting Shares	New York Stock Exchange	CT:GOOS	Toronto Stock Exchange	Consumer Discretionary	Apparel Manufacturing	$2,069,870,254	1,817,191	Analyze
+AUPH	Aurinia Pharmaceuticals Inc	NASDAQ Global Market	CT:AUP	Toronto Stock Exchange	Health Care	Biotechnology	$2,035,202,006	6,927,519	Analyze
+CCHWF	Columbia Care Inc.	OTC markets	CF:CCHW	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$1,993,932,686	29,350	Analyze
+PVG	Pretium Resources Inc	New York Stock Exchange	CT:PVG	Toronto Stock Exchange	Materials	Gold	$1,983,036,612	1,631,816	Analyze
+EGO	Eldorado Gold Corporation	New York Stock Exchange	CT:ELD	Toronto Stock Exchange	Materials	Gold	$1,981,972,547	2,827,234	Analyze
+OR	Osisko Gold Royalties Ltd	New York Stock Exchange	CT:OR	Toronto Stock Exchange	Consumer Staples	Gold	$1,880,610,086	993,000	Analyze
+MAG	Mag Silver Corporation	NYSE American	CT:MAG	Toronto Stock Exchange	Materials	Silver	$1,816,619,418	873,195	Analyze
+ZYME	Zymeworks Inc.	New York Stock Exchange			Health Care	Biotechnology	$1,741,516,516	803,932	Analyze
+DCBO	Docebo Inc.	NASDAQ Global Select			Information Technology	Software—Application	$1,706,955,648	93,292	Analyze
+UFS	Domtar Corp	New York Stock Exchange	CT:UFS	Toronto Stock Exchange	Materials	Paper & Paper Products	$1,704,407,333	615,554	Analyze
+TGCDF	Teranga Gold Corporation	OTC markets	CT:TGZ	Toronto Stock Exchange	Materials	Gold	$1,664,161,451	11,369	Analyze
+IAG	Iamgold Corp	New York Stock Exchange	CT:IMG	Toronto Stock Exchange	Financials	Gold	$1,639,840,807	5,400,979	Analyze
+CPG	Crescent Point Energy Corporation	New York Stock Exchange	CT:CPG	Toronto Stock Exchange	Energy	Oil & Gas E&P	$1,606,008,844	4,150,125	Analyze
+HBM	Hudbay Minerals Inc	New York Stock Exchange	CT:HBM	Toronto Stock Exchange	Materials	Copper	$1,549,343,855	1,174,474	Analyze
+KNTNF	K92 Mining Inc.	OTC markets	CV:KNT	TSX Venture Exchange	Materials	Gold	$1,522,278,914	282,879	Analyze
+SA	Seabridge Gold	New York Stock Exchange	CT:SEA	Toronto Stock Exchange	Materials	Gold	$1,424,465,414	391,901	Analyze
+FSM	Fortuna Silver Mines Inc	New York Stock Exchange	CT:FVI	Toronto Stock Exchange	Materials	Silver	$1,416,465,141	5,292,177	Analyze
+STKL	Sunopta Inc	NASDAQ Global Select	CT:SOY	Toronto Stock Exchange	Consumer Staples	Packaged Foods	$1,415,485,055	1,196,631	Analyze
+WPTIF	WPT Industrial Real Estate Investment Trust	OTC markets			Real Estate	REIT—Industrial	$1,310,598,561	5,031	Analyze
+MMEDF	Mind Medicine (MindMed) Inc.	OTC markets			Health Care	Biotechnology	$1,310,226,717	1,681,083	Analyze
+TRIL	Trillium Therapeutics Inc.	NASDAQ Capital Market	CT:TRIL	Toronto Stock Exchange	Health Care	Biotechnology	$1,296,865,067	1,358,655	Analyze
+NGD	New Gold Inc.	NYSE American	CT:NGD	Toronto Stock Exchange	Materials	Gold	$1,285,672,118	8,556,448	Analyze
+SILV	Silvercrest Metals Inc.	NYSE American	CT:SIL	Toronto Stock Exchange	Materials	Other Precious Metals & Mining	$1,271,310,273	1,241,019	Analyze
+SAND	Sandstorm Gold Ltd	New York Stock Exchange	CT:SSL	Toronto Stock Exchange	Industrials	Gold	$1,253,525,820	1,824,079	Analyze
+XEBEF	Xebec Adsorption Inc.	OTC markets	CV:XBC	TSX Venture Exchange	Industrials	Specialty Industrial Machinery	$1,211,492,362	14,639	Analyze
+NXE	Nexgen Energy Ltd.	NYSE American	CT:NXE	Toronto Stock Exchange	Materials	Uranium	$1,200,837,553	1,293,026	Analyze
+SVM	Silvercorp Metals Inc.	NYSE American	CT:SVM	Toronto Stock Exchange	Materials	Silver	$1,173,085,118	2,143,680	Analyze
+SNDL	Sundial Growers Inc.	NASDAQ Capital Market			Health Care	Drug Manufacturers—Specialty & Generic	$1,154,130,670	549,806,898	Analyze
+ARESF	Artis Real Estate Investment Trust	OTC markets	CT:AX-UN	Toronto Stock Exchange	Real Estate	REIT—Diversified	$1,125,616,943	1,400	Analyze
+BDRBF	Bombardier Inc. Class B	OTC markets	CT:BBD-B	Toronto Stock Exchange	Industrials	Aerospace & Defense	$1,102,990,054	450,659	Analyze
+VFF	Village Farms International, Inc.	NASDAQ Capital Market	CT:VFF	Toronto Stock Exchange	Consumer Staples	Farm Products	$1,072,846,941	3,814,633	Analyze
+WPRT	Westport Fuel Systems Inc	NASDAQ Global Select	CT:WPRT	Toronto Stock Exchange	Consumer Discretionary	Auto Parts	$1,072,798,304	4,094,834	Analyze
+JUSHF	Jushi Holdings Inc Class B	OTC markets	CF:JUSH	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$1,000,112,055	18,630	Analyze
+TRSSF	TerrAscend Corp.	OTC markets	CF:TER	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$997,205,970	59,419	Analyze
+ORLA	Orla Mining Ltd.	NYSE American	CT:OLA	Toronto Stock Exchange	Materials	Gold	$958,415,229	133,763	Analyze
+CLS	Celestica	New York Stock Exchange	CT:CLS	Toronto Stock Exchange	Information Technology	Electronic Components	$924,472,552	307,703	Analyze
+NUPMF	New Pacific Metals Corp	OTC markets	CV:NUAG	TSX Venture Exchange	Materials	Other Precious Metals & Mining	$889,963,648	109,988	Analyze
+ACUIF	AcuityAds Holdings Inc	OTC markets	CT:AT	Toronto Stock Exchange	Communication Services	Internet Content & Information	$873,450,092	2,600	Analyze
+HEXO	HEXO Corp.	New York Stock Exchange	CT:HEXO	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$869,798,331	10,494,012	Analyze
+LGORF	Largo Resources Ltd.	OTC markets	CV:LGO	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$858,172,508	215,224	Analyze
+SII	Sprott Inc.	New York Stock Exchange	CT:SII	Toronto Stock Exchange	Financials	Asset Management	$816,217,428	85,761	Analyze
+EXK	Endeavour Silver Corporation	New York Stock Exchange	CT:EDR	Toronto Stock Exchange	Materials	Silver	$778,568,810	5,689,642	Analyze
+ERF	Enerplus Corporation	New York Stock Exchange	CT:ERF	Toronto Stock Exchange	Energy	Oil & Gas E&P	$745,534,460	1,897,511	Analyze
+HVBTF	HIVE Blockchain Technologies Ltd	OTC markets	CV:HIVE	TSX Venture Exchange	Information Technology	Capital Markets	$737,417,420	540,723	Analyze
+VET	Vermilion Energy Inc.	New York Stock Exchange	CT:VET	Toronto Stock Exchange	Energy	Oil & Gas E&P	$733,304,145	2,747,807	Analyze
+MMX	Maverix Metals Inc.	NYSE American	CT:MMX	Toronto Stock Exchange	Materials	Other Precious Metals & Mining	$717,279,146	196,896	Analyze
+RFP	Resolute Forest Products Inc	New York Stock Exchange	CT:RFP	Toronto Stock Exchange	Materials	Paper & Paper Products	$716,681,495	386,908	Analyze
+SWIR	Sierra Wireless Inc	NASDAQ Global Select	CT:SW	Toronto Stock Exchange	Information Technology	Communication Equipment	$694,670,758	548,966	Analyze
+PLNHF	Planet 13 Holdings Inc.	OTC markets	CF:PLTH	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$683,537,773	603,399	Analyze
+SGSVF	Sabina Gold & Silver Corp.	OTC markets	CT:SBB	Toronto Stock Exchange	Materials	Gold	$680,887,587	333,515	Analyze
+CTSDF	Converge Technology Solutions Corp.	OTC markets	CT:CTS	Toronto Stock Exchange	Unknown	Information Technology Services	$665,874,508	1,199	Analyze
+SOLO	Electrameccanica Vehicles Corp. Ltd.	NASDAQ Capital Market			Consumer Discretionary	Auto Manufacturers	$654,544,663	20,663,004	Analyze
+AKU	Akumin Inc.	NASDAQ Capital Market	CT:AKU	Toronto Stock Exchange	Health Care	Diagnostics & Research	$651,255,812	127,437	Analyze
+ABST	Absolute Software Corporation	NASDAQ Global Select	CT:ABT	Toronto Stock Exchange	Information Technology	Software—Application	$650,620,958	103,263	Analyze
+GTBAF	Great Bear Resources Ltd. Class A	OTC markets	CV:GBR	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$633,836,442	116,397	Analyze
+GP	GreenPower Motor Company Inc.	NASDAQ Capital Market	CV:GPV	TSX Venture Exchange	Consumer Discretionary	Auto Manufacturers	$626,674,842	688,979	Analyze
+FFNTF	4Front Ventures Corp.	OTC markets	CF:FFNT	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$625,067,429	183,939	Analyze
+PYRNF	PyroGenesis Canada Inc.	OTC markets	CV:PYR	TSX Venture Exchange	Industrials	Specialty Industrial Machinery	$590,940,897	129,772	Analyze
+GLGDF	Gogold Resources Inc.	OTC markets	CT:GGD	Toronto Stock Exchange	Materials	Other Precious Metals & Mining	$559,652,463	75,896	Analyze
+UUUU	Energy Fuels Inc	NYSE American	CT:EFR	Toronto Stock Exchange	Energy	Uranium	$556,134,285	4,383,640	Analyze
+CNNEF	Canacol Energy Ltd.	OTC markets	CT:CNE	Toronto Stock Exchange	Energy	Oil & Gas E&P	$520,593,854	29,303	Analyze
+PROF	Profound Medical Corp.	NASDAQ Capital Market	CT:PRN	Toronto Stock Exchange	Health Care	Medical Devices	$520,380,411	92,400	Analyze
+SKREF	Skeena Resources Limited	OTC markets	CV:SKE	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$513,678,083	282,633	Analyze
+ENGMF	Enthusiast Gaming Holdings Inc	OTC markets	CT:EGLX	Toronto Stock Exchange	Unknown	Electronic Gaming & Multimedia	$508,915,258	59,158	Analyze
+DNN	Denison Mines Corp (Canada)	NYSE American	CT:DML	Toronto Stock Exchange	Materials	Uranium	$498,712,192	4,698,033	Analyze
+CWBHF	Charlottes Web Holdings Inc.	OTC markets	CT:CWEB	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$479,629,862	553,624	Analyze
+DSVMF	Discovery Metals Corp	OTC markets	CV:DSV	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$473,714,910	835,056	Analyze
+ATUSF	Altius Minerals Corporation	OTC markets	CT:ALS	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$472,845,244	17,002	Analyze
+HUTMF	Hut 8 Mining Corp.	OTC markets	CT:HUT	Toronto Stock Exchange	Unknown	Capital Markets	$464,882,534	125,013	Analyze
+AYRSF	AYR Strategies Inc	OTC markets	CF:AYR	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$458,065,824	30,542	Analyze
+CXBMF	Calibre Mining Corp.	OTC markets	CT:CXB	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$454,825,022	122,273	Analyze
+OGI	Organigram Holdings Inc.	NASDAQ Global Select	CV:OGI	TSX Venture Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$452,612,529	16,297,601	Analyze
+MGDPF	Marathon Gold Corporation	OTC markets	CV:MOZ	TSX Venture Exchange	Materials	Gold	$452,059,668	162,025	Analyze
+NNXPF	NanoXplore Inc.	OTC markets	CV:GRA	TSX Venture Exchange	Unknown	Chemicals	$451,368,323	6,850	Analyze
+HRVSF	Harvest Health & Recreation Inc.	OTC markets	CF:HARV	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$434,954,156	181,971	Analyze
+CSEAF	Clearwater Seafoods Inc	OTC markets	CT:CLR	Toronto Stock Exchange	Consumer Staples		$424,765,925	0	Analyze
+ROGFF	Roxgold Inc.	OTC markets	CT:ROXG	Toronto Stock Exchange	Materials	Gold	$423,506,348	181,695	Analyze
+GSS	Golden Star Resources	NYSE American	CT:GSC	Toronto Stock Exchange	Materials	Gold	$417,425,981	399,341	Analyze
+NSRPF	Novo Resources Corp.	OTC markets	CV:NVO	TSX Venture Exchange	Materials	Gold	$412,332,778	164,955	Analyze
+MTA	Metalla Royalty & Streaming Ltd.	NYSE American	CV:MTA	TSX Venture Exchange	Materials	Other Precious Metals & Mining	$406,530,451	427,987	Analyze
+STLHF	Standard Lithium Ltd.	OTC markets	CV:SLL	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$404,266,400	45,548	Analyze
+AXU	Alexco Resource Corp	NYSE American	CT:AXU	Toronto Stock Exchange	Materials	Other Precious Metals & Mining	$402,365,212	1,845,405	Analyze
+NEXCF	NexTech AR Solutions Corp.	OTC markets			Unknown	Internet Retail	$394,915,082	1,250,585	Analyze
+PLM	Polymet Mining Corporation	NYSE American	CT:POM	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$384,803,032	941,567	Analyze
+TGB	Taseko Mines Limited	NYSE American	CT:TKO	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$363,927,608	2,565,596	Analyze
+GLDLF	GoldMining Inc.	OTC markets	CV:GOLD	TSX Venture Exchange	Materials	Gold	$358,961,750	529,301	Analyze
+USAS	Americas Silver Corporation	NYSE American	CT:USA	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$351,620,241	1,559,400	Analyze
+NMGRF	Nouveau Monde Graphite Inc	OTC markets	CV:NOU	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$351,613,504	46,841	Analyze
+CORVF	Corvus Gold Inc.	OTC markets	CV:KOR	TSX Venture Exchange	Materials	Gold	$340,967,000	29,446	Analyze
+LHSIF	Liberty Health Sciences Inc	OTC markets	CF:LHS	Canadian Securities Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$338,548,073	1,065,566	Analyze
+ABUS	Arbutus Biopharma Corporation	NASDAQ Global Select			Health Care	Biotechnology	$332,844,291	2,752,378	Analyze
+POETF	POET Technologies Inc.	OTC markets	CV:PTK	TSX Venture Exchange	Information Technology	Semiconductors	$332,255,623	408,593	Analyze
+BUROF	Burcon NutraScience Corporation	OTC markets	CT:BU	Toronto Stock Exchange	Materials	Biotechnology	$327,730,556	133,689	Analyze
+NAK	Northern Dynasty Minerals Ltd.	NYSE American	CT:NDM	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$315,608,911	54,528,814	Analyze
+JE	Just Energy Group Inc.	New York Stock Exchange	CT:JE	Toronto Stock Exchange	Consumer Discretionary	Utilities—Diversified	$314,434,286	3,463,632	Analyze
+NTTHF	Neo Lithium Corp.	OTC markets	CV:NLC	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$313,768,521	402,456	Analyze
+TPRFF	Gran Colombia Gold Corp.	OTC markets	CV:GCM	TSX Venture Exchange	Materials	Gold	$312,963,873	86,427	Analyze
+IPATF	ImmunoPrecise Antibodies Ltd.	OTC markets			Health Care	Biotechnology	$309,401,579	185,591	Analyze
+BRGGF	Bragg Gaming Group Inc.	OTC markets	CV:BRAG	TSX Venture Exchange	Unknown	Electronic Gaming & Multimedia	$307,440,987	128,631	Analyze
+GPL	Great Panther Silver Limited	NYSE American	CT:GPR	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$298,262,813	3,614,829	Analyze
+PLG	Platinum Group Metals Ltd.	NYSE American	CT:PTM	Toronto Stock Exchange	Materials	Other Precious Metals & Mining	$296,027,282	1,770,353	Analyze
+KOR	Corvus Gold Inc.	NASDAQ Capital Market	CT:KOR	Toronto Stock Exchange	Materials	Gold	$289,989,215	189,691	Analyze
+BLU	BELLUS Health Inc.	NASDAQ Global Select	CT:BLU	Toronto Stock Exchange	Health Care	Biotechnology	$286,714,741	1,261,808	Analyze
+EXROF	Exro Technologies Inc.	OTC markets			Unknown	Electrical Equipment & Parts	$285,747,199	217,051	Analyze
+NOA	North American Construction Group Ltd.	New York Stock Exchange	CT:NOA	Toronto Stock Exchange	Energy	Oil & Gas Equipment & Services	$285,596,906	69,938	Analyze
+EMX	Emx Royalty Corporation	NYSE American	CV:EMX	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$285,364,290	308,979	Analyze
+GPVRF	GreenPower Motor Company Inc.	OTC markets	CV:GPV	TSX Venture Exchange	Unknown	Auto Manufacturers	$279,379,800	5,557,140	Analyze
+IPA	ImmunoPrecise Antibodies Ltd.	NASDAQ Global Market	CV:IPA	TSX Venture Exchange	Health Care	Biotechnology	$277,695,358	56,197	Analyze
+PDS	Precision Drilling Corp	New York Stock Exchange	CT:PD	Toronto Stock Exchange	Energy	Oil & Gas Drilling	$276,460,040	108,451	Analyze
+GAU	Galiano Gold Inc.	NYSE American			Minerals	Gold	$266,861,691	1,554,878	Analyze
+GLDG	GoldMining Inc.	NYSE American	CT:GOLD	Toronto Stock Exchange	Materials	Other	$263,197,568	644,374	Analyze
+THM	International Tower Hill Mines Ltd	NYSE American	CT:ITH	Toronto Stock Exchange	Materials	Gold	$263,126,048	450,693	Analyze
+TK	Teekay Corp	New York Stock Exchange			Energy	Oil & Gas Midstream	$261,872,015	881,637	Analyze
+MLNLF	Millennial Lithium Corp.	OTC markets	CV:ML	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$259,064,512	29,861	Analyze
+NEPT	Neptune Wellness Solutions Inc	NASDAQ Capital Market	CT:NEPT	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$259,036,338	2,344,848	Analyze
+ACRGF	Acreage Holdings Inc.	OTC markets	CF:ACRG-U	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$256,517,720	115,927	Analyze
+AOTVF	Ascot Resources Ltd.	OTC markets	CT:AOT	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$253,413,775	301,521	Analyze
+QTRHF	Quarterhill Inc	OTC markets	CT:QTRH	Toronto Stock Exchange	Information Technology	Communication Equipment	$247,576,608	26,162	Analyze
+IMV	IMV Inc.	NASDAQ Capital Market	CT:IMV	Toronto Stock Exchange	Health Care	Biotechnology	$247,575,188	241,129	Analyze
+BCEKF	Bear Creek Mining Corporation	OTC markets	CV:BCM	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$244,060,775	101,322	Analyze
+TMDI	Titan Medical Inc.	NASDAQ Capital Market	CT:TMD	Toronto Stock Exchange	Health Care	Medical Devices	$240,101,122	6,197,869	Analyze
+FFMGF	First Mining Gold Corp.	OTC markets	CT:FF	Toronto Stock Exchange	Materials	Gold	$237,907,978	1,310,545	Analyze
+SEOVF	Sernova Corp.	OTC markets			Health Care	Medical Devices	$233,598,745	34,720	Analyze
+GTE	Gran Tierra Energy Inc.	NYSE American	CT:GTE	Toronto Stock Exchange	Energy	Oil & Gas E&P	$232,666,307	38,528,837	Analyze
+MDNAF	Medicenna Therapeutics Corp.	OTC markets	CT:MDNA	Toronto Stock Exchange	Health Care	Biotechnology	$227,965,583	50,315	Analyze
+LMGDF	Lumina Gold Corp.	OTC markets			Unknown	Gold	$222,188,541	277,550	Analyze
+TAKOF	Drone Delivery Canada Corp	OTC markets	CV:FLT	TSX Venture Exchange	Unknown	Computer Hardware	$220,569,918	44,639	Analyze
+CHPGF	Chesapeake Gold Corp.	OTC markets	CV:CKG	TSX Venture Exchange	Materials	Other Precious Metals & Mining	$220,159,846	49,072	Analyze
+BDRAF	Bombardier Inc. Class A	OTC markets	CT:BBD-A	Toronto Stock Exchange	Unknown	Aerospace & Defense	$220,005,936	117,903	Analyze
+LIACF	American Lithium Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$217,697,362	1,235,855	Analyze
+AMXEF	Amex Exploration Inc.	OTC markets	CV:AMX	TSX Venture Exchange	Materials	Gold	$216,592,477	175,106	Analyze
+THTX	Theratechnologies Inc.	NASDAQ Capital Market	CT:TH	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$214,667,602	422,739	Analyze
+PCLOF	PharmaCielo Ltd.	OTC markets	CV:PCLO	TSX Venture Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$214,612,336	19,148	Analyze
+RNKLF	Royal Nickel Corporation	OTC markets	CV:RNX	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$214,042,981	45,752	Analyze
+GSV	Gold Standard Ventures Corporation	NYSE American	CT:GSV	Toronto Stock Exchange	Materials	Gold	$213,064,248	2,975,745	Analyze
+EFLVF	Electrovaya Inc.	OTC markets	CT:EFL	Toronto Stock Exchange	Industrials	Electrical Equipment & Parts	$204,037,811	215,682	Analyze
+DYFSF	DynaCERT Inc.	OTC markets	CV:DYA	TSX Venture Exchange	Industrials	Specialty Industrial Machinery	$203,613,138	31,486	Analyze
+BBSRF	Bluestone Resources Inc.	OTC markets	CV:BSR	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$202,330,026	88,655	Analyze
+VLNCF	Valens GroWorks Corp.	OTC markets	CV:VLNS	TSX Venture Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$200,525,198	80,226	Analyze
+MDNA	Medicenna Therapeutics Corp.	NASDAQ Capital Market	CT:MDNA	Toronto Stock Exchange	Health Care	Biotechnology	$199,671,674	283,083	Analyze
+LOMLF	Lion One Metals Limited	OTC markets	CV:LIO	TSX Venture Exchange	Materials	Gold	$199,135,223	78,450	Analyze
+HEOFF	H2O Innovation Inc.	OTC markets	CV:HEO	TSX Venture Exchange	Industrials	Utilities—Regulated Water	$192,314,003	3,580	Analyze
+ORZCF	Orezone Gold Corporation	OTC markets	CV:ORE	TSX Venture Exchange	Materials	Gold	$191,839,655	100,179	Analyze
+DRTT	DIRTT Environmental Solutions Ltd.	NASDAQ Global Select	CT:DRT	Toronto Stock Exchange	Industrials	Engineering & Construction	$191,379,883	289,285	Analyze
+ITRG	Integra Resources Corp.	NYSE American	CV:ITR	TSX Venture Exchange	Materials	Other Precious Metals & Mining	$191,272,120	86,763	Analyze
+HITIF	High Tide Inc.	OTC markets			Unknown	Tobacco	$188,726,873	72,367	Analyze
+FURY	Fury Gold Mines Limited	NYSE American	CT:FURY	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$188,518,171	641,745	Analyze
+NYMX	Nymox Pharmaceutical Corp	NASDAQ Capital Market			Health Care	Biotechnology	$188,395,208	127,173	Analyze
+MOGO	Mogo Finance Technology Inc.	NASDAQ Capital Market	CT:MOGO	Toronto Stock Exchange	Financials	Software—Application	$186,401,855	1,174,434	Analyze
+GLATF	Global Atomic Corporation	OTC markets	CT:GLO	Toronto Stock Exchange	Unknown	Other Industrial Metals & Mining	$183,657,639	15,258	Analyze
+ALEAF	Aleafia Health Inc.	OTC markets	CT:ALEF	Toronto Stock Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$183,460,831	156,744	Analyze
+FCUUF	Fission Uranium Corp.	OTC markets	CV:FCU	TSX Venture Exchange	Energy	Uranium	$181,022,813	271,514	Analyze
+IRRZF	Integra Resources Corp	OTC markets	CV:ITR	TSX Venture Exchange	Unknown	Other Precious Metals & Mining	$179,337,000	86,839	Analyze
+MAKOF	Mako Mining Corp.	OTC markets			Unknown	Gold	$173,839,068	246,375	Analyze
+CBWTF	Auxly Cannabis Group Inc.	OTC markets	CV:XLY	TSX Venture Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$172,951,902	652,807	Analyze
+EXMGF	Excelsior Mining Corp.	OTC markets	CV:MIN	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$170,567,031	142,500	Analyze
+SRAFF	Sandfire Resources America Inc.	OTC markets	CV:SFR	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$170,509,561	70,690	Analyze
+SRRA	Sierra Oncology	NASDAQ Global Market			Health Care	Biotechnology	$168,258,744	41,244	Analyze
+MNDJF	Mandalay Resources Corporation	OTC markets	CT:MND	Toronto Stock Exchange	Materials	Gold	$164,664,564	11,738	Analyze
+PRMNF	Prime Mining Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$164,128,051	16,365	Analyze
+PROBF	Probe Metals Inc.	OTC markets	CV:PRB	TSX Venture Exchange	Materials	Gold	$164,077,688	74,066	Analyze
+CRECF	Critical Elements Lithium Corporation	OTC markets	CV:CRE	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$161,653,162	1,000	Analyze
+WRN	Western Copper And Gold Corporation	NYSE American	CT:WRN	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$161,361,186	371,502	Analyze
+TLLTF	TILT Holdings Inc.	OTC markets	CF:TILT	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$160,596,211	243,677	Analyze
+DFLYF	Draganfly Inc	OTC markets			Unknown	Aerospace & Defense	$159,545,704	41,899	Analyze
+TREVF	Trevali Mining Corporation	OTC markets	CT:TV	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$154,100,469	32,593	Analyze
+CRHM	CRH Medical Corporation	NYSE American	CT:CRH	Toronto Stock Exchange	Health Care	Medical Instruments & Supplies	$153,351,191	62,096	Analyze
+NIOBF	NioCorp Developments Ltd.	OTC markets	CV:NB	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$145,266,712	47,685	Analyze
+CXXIF	C21 Investments Inc	OTC markets			Unknown	Other	$143,737,142	3,807	Analyze
+ISENF	IsoEnergy Ltd.	OTC markets	CV:ISO	TSX Venture Exchange	Energy	Uranium	$142,987,297	45,344	Analyze
+FFLWF	Fire & Flower Holdings Corp.	OTC markets	CT:FAF	Toronto Stock Exchange	Unknown	Pharmaceutical Retailers	$140,984,348	12,476	Analyze
+OPSSF	Opsens Inc.	OTC markets	CT:OPS	Toronto Stock Exchange	Health Care	Scientific & Technical Instruments	$140,071,666	0	Analyze
+AAGFF	Aftermath Silver Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$138,592,074	328,266	Analyze
+GDRZF	Gold Reserve Inc. Class A	OTC markets	CV:GRZ	TSX Venture Exchange	Materials	Gold	$138,159,117	92,545	Analyze
+MMRGF	Minaurum Gold Inc.	OTC markets	CV:MGG	TSX Venture Exchange	Materials	Gold	$136,379,518	104,275	Analyze
+ALYA	Alithya Group Inc. - Class A Subordinate Voting Shares	NASDAQ Capital Market	CT:ALYA	Toronto Stock Exchange	Information Technology	Information Technology Services	$132,782,346	163,520	Analyze
+RBYCF	Rubicon Minerals Corporation	OTC markets	CT:RMX	Toronto Stock Exchange	Materials	Gold	$129,339,990	23,173	Analyze
+ENCUF	enCore Energy Corp.	OTC markets			Unknown	Uranium	$127,481,493	148,170	Analyze
+VRSSF	Versus Systems Inc	OTC markets			Communication Services	Electronic Gaming & Multimedia	$126,945,782	0	Analyze
+TGODF	Green Organic Dutchman Holdings Ltd.	OTC markets	CT:TGOD	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$126,292,360	658,464	Analyze
+ASM	Avino Silver & Gold Mines Ltd.	NYSE American	CT:ASM	Toronto Stock Exchange	Materials	Silver	$125,396,155	9,083,652	Analyze
+DMGGF	DMG Blockchain Solutions Inc.	OTC markets			Unknown	Software—Application	$124,607,210	31,270	Analyze
+CYDVF	Cypress Development Corp.	OTC markets			Materials	Other Industrial Metals & Mining	$124,176,953	127,909	Analyze
+ELYGF	Ely Gold Royalties Inc.	OTC markets	CV:ELY	TSX Venture Exchange	Unknown	Gold	$124,163,884	345,488	Analyze
+SLVRF	Silver One Resources Inc.	OTC markets			Materials	Silver	$120,637,919	330,347	Analyze
+ATBPF	Antibe Therapeutics Inc.	OTC markets	CV:ATE	TSX Venture Exchange	Health Care	Biotechnology	$119,902,668	0	Analyze
+VQSLF	VIQ Solutions Inc.	OTC markets	CV:VQS	TSX Venture Exchange	Information Technology	Software—Application	$119,405,505	3,425	Analyze
+RIOFF	Rio2 Ltd.	OTC markets	CV:RIO	TSX Venture Exchange	Unknown	Gold	$119,191,468	233,427	Analyze
+AUIAF	Aurania Resources Ltd.	OTC markets			Unknown	Other Precious Metals & Mining	$118,706,126	23,700	Analyze
+ROMJF	Rubicon Organics Inc.	OTC markets	CF:ROMJ	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$118,276,056	400	Analyze
+ALMTF	Almonty Industries Inc.	OTC markets	CT:ALL	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$116,773,727	0	Analyze
+ZOM	Zomedica Pharmaceuticals Corp.	NYSE American	CV:ZOM		Health Care	Drug Manufacturers—Specialty & Generic	$116,681,470	246,926,040	Analyze
+ONCY	Oncolytics Biotech Inc.	NASDAQ Capital Market	CT:ONC	Toronto Stock Exchange	Health Care	Biotechnology	$114,057,561	1,336,518	Analyze
+FTSSF	First Cobalt Corp.	OTC markets	CV:FCC	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$113,216,878	161,754	Analyze
+VS	Versus Systems Inc.	NASDAQ Capital Market	CF:VS	Canadian Securities Exchange	Unknown	Other	$112,604,627	60,539	Analyze
+RCKXF	Rocky Mountain Dealerships Inc.	OTC markets	CT:RME	Toronto Stock Exchange	Industrials	Industrial Distribution	$111,612,633	0	Analyze
+VIZSF	Vizsla Resources Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$111,049,860	342,398	Analyze
+VREOF	Vireo Health International Inc.	OTC markets	CF:VREO	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$109,797,665	79,871	Analyze
+OVTZ	Oculus VisionTech Inc.	OTC markets			Information Technology	Software—Infrastructure	$109,246,786	106,544	Analyze
+CHXMF	Troilus Gold Corp.	OTC markets	CT:TLG	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$108,887,339	146,819	Analyze
+ARREF	Amerigo Resources Ltd	OTC markets	CT:ARG	Toronto Stock Exchange	Materials	Copper	$108,461,611	8,915	Analyze
+YNVYF	Ynvisible Interactive Inc. Class A	OTC markets			Unknown	Electronic Components	$106,930,267	54,700	Analyze
+ACST	Acasti Pharma Inc.	NASDAQ Capital Market	CV:ACST	TSX Venture Exchange	Health Care	Biotechnology	$106,161,376	74,779,442	Analyze
+LMNL	Liminal BioSciences Inc.	NASDAQ Global Market	CT:LMNL	Toronto Stock Exchange	Health Care	Biotechnology	$106,089,949	1,808,777	Analyze
+ABAHF	Abacus Health Products Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$104,441,876	0	Analyze
+BALMF	Balmoral Resources Ltd.	OTC markets	CT:BAR	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$104,220,112	0	Analyze
+SHRMF	Champignon Brands Inc.	OTC markets	CF:SHRM	Canadian Securities Exchange	Unknown	Packaged Foods	$103,892,064	176,258	Analyze
+LXXGF	Lexagene Holdings Inc.	OTC markets			Unknown	Medical Devices	$102,956,929	153,285	Analyze
+SQIDF	SQI Diagnostics Inc.	OTC markets			Health Care	Diagnostics & Research	$102,877,560	0	Analyze
+NMKEF	Nemaska Lithium Inc.	OTC markets	CT:NMX	Toronto Stock Exchange	Materials		$101,800,884	0	Analyze
+CANSF	Willow Biosciences Inc.	OTC markets			Materials	Drug Manufacturers—Specialty & Generic	$101,751,440	58,250	Analyze
+CYRTF	Benchmark Metals Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$101,263,900	226,640	Analyze
+CBIIF	CB2 Insights Inc	OTC markets			Unknown	Health Information Services	$100,536,156	5,400	Analyze
+NXGWF	Next Green Wave Holdings Inc.	OTC markets	CF:NGW	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$98,432,589	117,922	Analyze
+TSRMF	Treasury Metals Inc.	OTC markets	CT:TML	Toronto Stock Exchange	Materials	Gold	$97,791,533	282,600	Analyze
+ADVZF	Adventus Mining Corp.	OTC markets	CV:ADZN	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$97,700,330	13,860	Analyze
+EXN	Excellon Resources Inc.	NYSE American	CT:EXN	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$97,662,542	91,146	Analyze
+GVXXF	GoviEx Uranium Inc Class A	OTC markets			Unknown	Uranium	$97,253,516	72,327	Analyze
+AAU	Almaden Minerals Ltd.	NYSE American	CT:AMM	Toronto Stock Exchange	Materials	Gold	$94,625,994	9,087,103	Analyze
+EXFO	Exfo Inc	NASDAQ Global Select	CT:EXF	Toronto Stock Exchange	Information Technology	Communication Equipment	$93,747,951	104,977	Analyze
+KOREF	KORE Mining Ltd.	OTC markets			Unknown	Gold	$93,613,160	483,950	Analyze
+SPRWF	Supreme Cannabis Company Inc	OTC markets	CT:FIRE	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$93,070,152	303,044	Analyze
+AGEEF	Halo Labs Inc.	OTC markets	QF:HALO		Unknown	Drug Manufacturers—Specialty & Generic	$91,895,756	88,057	Analyze
+MEDIF	MediPharm Labs Corp.	OTC markets	CT:LABS	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$91,479,241	276,375	Analyze
+NTTCF	NetCents Technology Inc. Class A	OTC markets			Unknown	Software—Infrastructure	$88,985,230	35,697	Analyze
+ICNAF	Icanic Brands Company Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$87,533,974	28,948	Analyze
+MMNFF	MedMen Enterprises Inc. Class B	OTC markets	CF:MMEN	Canadian Securities Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$86,309,378	708,678	Analyze
+EPSN	Epsilon Energy Ltd.	NASDAQ Global Market			Energy	Oil & Gas E&P	$84,699,933	16,222	Analyze
+KNRLF	Kontrol Energy Corp.	OTC markets			Unknown	Information Technology Services	$83,592,665	27,504	Analyze
+SNANF	Sona Nanotech Inc.	OTC markets	CF:SONA	Canadian Securities Exchange	Unknown	Medical Instruments & Supplies	$82,997,237	0	Analyze
+SSVFF	Southern Silver Exploration Corp.	OTC markets			Unknown	Other Precious Metals & Mining	$82,578,336	238,603	Analyze
+TGA	Transglobe Energy Corporation	NASDAQ Capital Market	CT:TGL	Toronto Stock Exchange	Energy	Oil & Gas E&P	$81,972,540	547,992	Analyze
+CRTPF	Cardiol Therapeutics Inc. Class A	OTC markets	CT:CRDL	Toronto Stock Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$81,641,393	42,897	Analyze
+BILZF	Ignite International Brands Ltd	OTC markets	CF:BILZ	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$81,310,530	73,871	Analyze
+KRKNF	Kraken Robotics Inc	OTC markets			Unknown	Scientific & Technical Instruments	$79,941,726	62,065	Analyze
+GRSLF	GR Silver Mining Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$79,750,267	156,310	Analyze
+MGMLF	Maple Gold Mines Ltd	OTC markets			Materials	Gold	$78,565,302	355,513	Analyze
+EGTYF	Eguana Technologies Inc	OTC markets			Industrials	Electrical Equipment & Parts	$77,408,984	53,588	Analyze
+DSGT	DSG Global Inc	OTC markets			Unknown	Scientific & Technical Instruments	$75,262,816	49,816	Analyze
+BONXF	BonTerra Resources Inc.	OTC markets	CV:BTR	TSX Venture Exchange	Materials	Gold	$74,408,181	170,221	Analyze
+GLVMF	Golden Valley Mines Ltd.	OTC markets			Materials	Other Industrial Metals & Mining	$73,945,971	93,122	Analyze
+EPWCF	Empower Clinics Inc	OTC markets			Unknown	Medical Care Facilities	$73,791,095	80,625	Analyze
+PTOTF	Patriot One Technologies Inc.	OTC markets	CT:PAT	Toronto Stock Exchange	Unknown	Software—Application	$73,600,786	42,749	Analyze
+QYOUF	QYOU Media Inc.	OTC markets			Communication Services	Entertainment	$73,475,319	700	Analyze
+MGLQF	Magna Gold Corp.	OTC markets			Financials	Gold	$72,730,878	206,097	Analyze
+MGPHF	Mason Graphite Inc.	OTC markets	CV:LLG	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$71,114,399	279,090	Analyze
+NXTTF	Namaste Technologies Inc.	OTC markets	CV:N	TSX Venture Exchange	Unknown	Internet Retail	$70,136,146	186,856	Analyze
+ATIXF	AnalytixInsight Inc. (Canada)	OTC markets			Information Technology	Software—Application	$69,449,014	0	Analyze
+ERLFF	Entree Resources Ltd	OTC markets			Materials	Other Industrial Metals & Mining	$68,736,592	26,225	Analyze
+SROYF	Sailfish Royalty Corp.	OTC markets	CV:FISH	TSX Venture Exchange	Materials	Gold	$68,172,582	29,505	Analyze
+PWWBF	Powerband Solutions Inc.	OTC markets			Unknown	Software—Application	$67,477,829	10,107	Analyze
+SKKY	Skkynet Cloud Systems Inc.	OTC markets			Information Technology	Software—Infrastructure	$67,048,959	0	Analyze
+ANXGF	Anaconda Mining Inc.	OTC markets	CT:ANX	Toronto Stock Exchange	Materials	Gold	$66,569,622	90,648	Analyze
+NGENF	NervGen Pharma Corp.	OTC markets	CV:NGEN	TSX Venture Exchange	Health Care	Biotechnology	$66,019,725	2,982	Analyze
+BMMJ	Body & Mind Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$64,707,349	21,577	Analyze
+OBELF	Obsidian Energy Ltd	OTC markets			Energy	Oil & Gas E&P	$63,591,535	511,752	Analyze
+OSSIF	OneSoft Solutions Inc.	OTC markets			Information Technology	Software—Application	$63,580,447	25,285	Analyze
+AGCBF	Amarillo Gold Corporation	OTC markets			Materials	Gold	$62,960,743	59,608	Analyze
+SILEF	Silver Elephant Mining Corp	OTC markets	CT:ELEF	Toronto Stock Exchange	Unknown	Other Industrial Metals & Mining	$62,068,440	317,365	Analyze
+CCWOF	Canada Silver Cobalt Works Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$60,930,109	124,455	Analyze
+ACHFF	Arch Biopartners Inc.	OTC markets			Health Care	Biotechnology	$60,135,056	0	Analyze
+LOVFF	Cannara Biotech Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$59,173,448	500	Analyze
+ALVOF	Alvopetro Energy Ltd.	OTC markets	CV:ALV	TSX Venture Exchange	Energy	Oil & Gas E&P	$58,838,523	124,000	Analyze
+UURAF	Ucore Rare Metals Inc.	OTC markets	CT:UCU	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$58,804,101	729,400	Analyze
+AVLNF	Avalon Advanced Materials Inc.	OTC markets	CT:AVL	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$58,707,617	36,700	Analyze
+NTOX	Notox Technologies Corp.	OTC markets			Unknown	Leisure	$58,399,809	0	Analyze
+HGGOF	HighGold Mining Inc	OTC markets			Unknown	Gold	$58,158,119	20,249	Analyze
+CDBMF	Cordoba Minerals Corp.	OTC markets	CV:CDB	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$57,554,670	39,692	Analyze
+GGGOF	Galane Gold Ltd.	OTC markets			Materials	Gold	$57,469,057	41,700	Analyze
+ILATF	iLOOKABOUT Corp.	OTC markets			Unknown	Software—Application	$57,400,507	100	Analyze
+MCLDF	mCloud Technologies Corp	OTC markets			Unknown	Software—Application	$57,385,447	121,617	Analyze
+BBKCF	BIGG Digital Assets Inc.	OTC markets			Unknown	Capital Markets	$56,621,420	457,853	Analyze
+NSUPF	Northern Superior Resources Inc.	OTC markets			Unknown	Gold	$55,705,998	5,600	Analyze
+OMZNF	Osisko Metals Incorporated	OTC markets	CT:OM	Toronto Stock Exchange	Unknown	Other Industrial Metals & Mining	$55,427,688	50,565	Analyze
+ASPCF	Acerus Pharmaceuticals Corporation	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$54,738,136	100	Analyze
+CLABF	Core One Labs Inc.	OTC markets	CF:COOL	Canadian Securities Exchange	Unknown	Medical Instruments & Supplies	$53,608,855	146,800	Analyze
+AEZS	Aeterna Zentaris Inc.	NASDAQ Capital Market	CT:AEZS	Toronto Stock Exchange	Health Care	Biotechnology	$53,482,263	20,308,528	Analyze
+VLCJF	Velocity Minerals Ltd.	OTC markets			Unknown		$53,176,215	0	Analyze
+EANRF	Eastmain Resources Inc.	OTC markets	CT:ER	Toronto Stock Exchange	Materials	Gold	$52,716,200	273,227	Analyze
+TBXXF	Turmalina Metals Corp.	OTC markets	CV:TBX	TSX Venture Exchange	Unknown	Other Precious Metals & Mining	$52,701,487	192,625	Analyze
+WDDMF	WeedMD Inc.	OTC markets	CV:WMD	TSX Venture Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$52,607,481	50,984	Analyze
+VVCIF	VIVO Cannabis Inc.	OTC markets	CT:VIVO	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$52,395,109	90,691	Analyze
+HERTF	Heritage Cannabis Holdings Corp.	OTC markets	CF:CANN	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$52,362,068	49,968	Analyze
+FLOOF	Flower One Holdings Inc.	OTC markets	CF:FONE	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$52,179,128	14,469	Analyze
+JGLDF	Japan Gold Corp	OTC markets			Unknown	Gold	$51,882,544	116,596	Analyze
+TSKFF	Talisker Resources Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$50,895,544	31,400	Analyze
+PLSDF	Pulse Seismic Inc.	OTC markets	CT:PSD	Toronto Stock Exchange	Energy	Oil & Gas Equipment & Services	$50,011,647	0	Analyze
+VEXTF	Vext Science Inc.	OTC markets	CF:VEXT	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$50,009,626	500	Analyze
+CRPOF	Ceapro Inc.	OTC markets	CV:CZO	TSX Venture Exchange	Materials	Biotechnology	$48,901,445	0	Analyze
+MGROF	MustGrow Biologics Corp.	OTC markets			Unknown	Other	$48,393,638	0	Analyze
+NULGF	Nulegacy Gold Corporation	OTC markets			Materials	Gold	$47,663,114	609,952	Analyze
+HOILF	Hunter Oil Corp.	OTC markets			Energy	Oil & Gas E&P	$47,601,388	0	Analyze
+RVLGF	Revival Gold Inc	OTC markets			Unknown	Gold	$46,974,498	81,033	Analyze
+MIMZF	Nighthawk Gold Corp.	OTC markets	CT:NHK	Toronto Stock Exchange	Materials	Gold	$46,865,277	41,292	Analyze
+RYMDF	Relay Medical Corp.	OTC markets			Unknown	Diagnostics & Research	$46,754,965	0	Analyze
+PEMIF	Pure Energy Minerals Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$46,652,014	419,300	Analyze
+PDDPF	Medexus Pharmaceuticals Inc.	OTC markets			Health Care	Drug Manufacturers—Specialty & Generic	$46,541,880	1,200	Analyze
+CNTRF	CENTR Brands Corp.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$46,425,957	0	Analyze
+LONCF	Loncor Resources Inc.	OTC markets			Materials	Gold	$46,236,360	27,132	Analyze
+VSQTF	Victory Square Technologies Inc	OTC markets	CF:VST	Canadian Securities Exchange	Unknown	Electronic Gaming & Multimedia	$45,803,301	132,331	Analyze
+DBCCF	Decibel Cannabis Company Inc	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$45,756,655	14,410	Analyze
+KHRNF	Khiron Life Sciences Corp.	OTC markets	CV:KHRN	TSX Venture Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$44,356,033	34,291	Analyze
+TRBMF	Torq Resources Inc.	OTC markets	CV:TORQ	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$42,841,505	6,700	Analyze
+NXOPF	Nexoptic Technology Corp	OTC markets	CV:NXO	TSX Venture Exchange	Information Technology	Electronic Components	$42,156,158	182,122	Analyze
+RSASF	Resaas Services Inc.	OTC markets			Communication Services	Software—Application	$42,020,573	1,854	Analyze
+CHKKF	Chakana Copper Corp.	OTC markets			Unknown	Other Precious Metals & Mining	$42,007,431	131,601	Analyze
+RNSFF	Renaissance Oil Corp.	OTC markets			Energy	Oil & Gas E&P	$41,694,062	3,350	Analyze
+KERMF	Kerr Mines Inc.	OTC markets			Materials	Gold	$41,527,506	74,615	Analyze
+MLYF	Western Magnesium Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$41,127,337	96,422	Analyze
+PGEZF	Group Ten Metals Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$40,996,554	244,900	Analyze
+NSRCF	NextSource Materials Inc	OTC markets			Materials	Other Industrial Metals & Mining	$40,837,840	33,000	Analyze
+VRNDF	Delta 9 Cannabis Inc.	OTC markets	CT:DN	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$40,776,140	27,974	Analyze
+HNCKF	Giga Metals Corporation	OTC markets			Materials	Other Industrial Metals & Mining	$40,427,185	59,100	Analyze
+TNYBF	Tinley Beverage Company Inc.	OTC markets	CF:TNY	Canadian Securities Exchange	Unknown	Beverages—Wineries & Distilleries	$39,940,931	111,377	Analyze
+ISRJF	GEN III Oil Corporation	OTC markets			Unknown	Oil & Gas Refining & Marketing	$39,416,901	0	Analyze
+CTXXF	Cematrix Corporation	OTC markets			Materials	Building Materials	$39,307,719	0	Analyze
+CLHRF	Coral Gold Resources Ltd.	OTC markets	CV:CLH	TSX Venture Exchange	Materials	Gold	$39,152,521	41,840	Analyze
+TBPMF	Tetra Bio-Pharma Inc.	OTC markets	CV:TBP	TSX Venture Exchange	Health Care	Biotechnology	$38,799,133	94,915	Analyze
+AZZUF	Azarga Uranium Corp. Class A	OTC markets			Energy	Uranium	$38,476,308	27,983	Analyze
+KIQ	Kelso Technologies Inc	NYSE American	CT:KLS	Toronto Stock Exchange	Industrials	Railroads	$38,207,770	1,831,057	Analyze
+RGCTF	Redstar Gold Corp.	OTC markets			Unknown	Gold	$37,659,913	14,899	Analyze
+PLUUF	Plateau Energy Metals Inc.	OTC markets			Energy	Uranium	$37,485,556	50,204	Analyze
+NVCN	Neovasc Inc.	NASDAQ Capital Market	CT:NVCN	TSX Venture Exchange	Health Care	Medical Devices	$37,318,302	2,304,388	Analyze
+FTMDF	Fortune Minerals Limited	OTC markets	CT:FT	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$36,207,860	23,375	Analyze
+EMHTF	Emerald Health Therapeutics Inc.	OTC markets	CV:EMH	TSX Venture Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$36,133,789	397,759	Analyze
+LEMIF	Leading Edge Materials Corp.	OTC markets			Materials	Other Industrial Metals & Mining	$36,063,817	44,310	Analyze
+GLBXF	Globex Mining Enterprises Inc.	OTC markets	CT:GMX	Toronto Stock Exchange	Materials	Other Industrial Metals & Mining	$35,895,883	11,900	Analyze
+NORZF	NorZinc Ltd.	OTC markets			Materials	Other Industrial Metals & Mining	$35,684,244	161,294	Analyze
+BEVVF	Bee Vectoring Technologies International Inc.	OTC markets			Unknown	Agricultural Inputs	$35,532,408	7,840	Analyze
+GPHOF	Graphite One Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$35,349,497	15,216	Analyze
+CRCUF	Canarc Resource Corp.	OTC markets			Materials	Gold	$34,879,740	3,103	Analyze
+TLTFF	Theralase Technologies Inc.	OTC markets			Health Care	Medical Devices	$34,726,814	35,500	Analyze
+EVLLF	EnviroLeach Technologies Inc.	OTC markets			Unknown	Gold	$34,417,660	124,918	Analyze
+WKLDF	West Kirkland Mining Inc.	OTC markets			Materials	Gold	$33,772,472	0	Analyze
+STKXF	StrikePoint Gold Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$33,684,398	233,000	Analyze
+APAAF	Appia Energy Corp.	OTC markets			Unknown	Uranium	$33,662,635	9,143	Analyze
+GLDFF	Golden Leaf Holdings Ltd	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$33,483,080	327,196	Analyze
+NDVAF	Indiva Ltd.	OTC markets	CV:NDVA	TSX Venture Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$33,403,610	36,678	Analyze
+NSFDF	NXT Energy Solutions Inc.	OTC markets			Energy	Oil & Gas Equipment & Services	$33,185,462	45,163	Analyze
+MBAIF	CIBT Education Group Inc	OTC markets	CT:MBA	Toronto Stock Exchange	Consumer Discretionary	Education & Training Services	$32,686,007	0	Analyze
+ITHUF	iAnthus Capital Holdings Inc.	OTC markets	CF:IAN	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$32,626,456	124,953	Analyze
+AGNPF	Algernon Pharmaceuticals Inc. Class A	OTC markets			Health Care	Biotechnology	$32,180,666	397,879	Analyze
+LTMCF	Lithium Chile Inc	OTC markets			Unknown	Other Industrial Metals & Mining	$31,760,766	106,526	Analyze
+BMTLF	BeMetals Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$31,694,067	54,300	Analyze
+SNRG	SusGlobal Energy Corp.	OTC markets			Unknown	Utilities—Renewable	$31,590,312	20,001	Analyze
+RYPPF	RYU Apparel Inc	OTC markets			Consumer Discretionary	Apparel Manufacturing	$31,538,063	0	Analyze
+WGMCF	Winston Gold Corp Class A	OTC markets			Unknown	Gold	$31,240,118	221,735	Analyze
+AVCNF	Avicanna Inc	OTC markets	CT:AVCN	Toronto Stock Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$30,996,813	200	Analyze
+RNSGF	Renaissance Gold Inc.	OTC markets			Materials	Other Precious Metals & Mining	$30,643,513	162,980	Analyze
+HUGE	FSD Pharma Inc. - Class B Subordinate Voting Shares	NASDAQ Capital Market	CF:HUGE	Canadian Securities Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$30,475,985	861,658	Analyze
+BLAGF	Blue Lagoon Resources Inc	OTC markets			Unknown	Gold	$30,357,752	38,608	Analyze
+INM	InMed Pharmaceuticals Inc.	NASDAQ Capital Market	CT:IN	Toronto Stock Exchange	Health Care	Biotechnology	$30,313,061	177,427	Analyze
+INTWF	Sharc International Systems Inc	OTC markets			Unknown	Pollution & Treatment Controls	$29,923,491	8,850	Analyze
+ORMNF	Orex Minerals Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$29,608,891	14,420	Analyze
+NCPCF	Nickel Creek Platinum Corp.	OTC markets			Materials	Other Industrial Metals & Mining	$29,547,560	81,983	Analyze
+CVALF	Covalon Technologies Ltd.	OTC markets	CV:COV	TSX Venture Exchange	Health Care	Biotechnology	$29,464,274	600	Analyze
+RDDTF	Radient Technologies Inc	OTC markets	CV:RTI	TSX Venture Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$29,097,255	136,460	Analyze
+GXSFF	GoldSource Mines Inc.	OTC markets			Unknown	Gold	$29,000,855	1,005,409	Analyze
+VLMGF	Viscount Mining Corp.	OTC markets			Unknown	Other Precious Metals & Mining	$28,713,137	850	Analyze
+NTGSF	Golden Predator Mining Corp. Class A	OTC markets	CV:GPY	TSX Venture Exchange	Materials	Gold	$28,589,511	596,581	Analyze
+NTSFF	Nanotech Security Corp.	OTC markets	CV:NTS	TSX Venture Exchange	Industrials	Scientific & Technical Instruments	$28,453,943	48,595	Analyze
+HDRSF	Highland Copper Co. Inc.	OTC markets			Materials	Copper	$28,328,728	410,100	Analyze
+PSHIF	PetroShale Inc.	OTC markets	CV:PSH	TSX Venture Exchange	Energy	Oil & Gas E&P	$28,253,582	100	Analyze
+FCSMF	Focus Graphite Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$28,074,655	37,150	Analyze
+PDPTF	PUDO Inc.	OTC markets			Industrials	Integrated Freight & Logistics	$27,895,605	0	Analyze
+PLPRF	Plus Products Inc.	OTC markets	CF:PLUS	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$27,700,248	21,919	Analyze
+CBDY	Target Group Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$27,517,301	22,129	Analyze
+CADMF	Chemesis International Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$27,407,081	13,960	Analyze
+ROIUF	Route1 Inc.	OTC markets			Information Technology	Software—Application	$27,294,762	1,000	Analyze
+CDTAF	Carl Data Solutions Inc	OTC markets			Unknown	Software—Application	$27,292,617	316	Analyze
+FLURF	FluroTech Ltd.	OTC markets			Unknown	Medical Devices	$27,142,553	0	Analyze
+AQARF	Aquila Resources Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$27,062,764	11,000	Analyze
+MMTIF	Micromem Technologies Inc.	OTC markets			Information Technology	Semiconductors	$26,777,989	22,000	Analyze
+DGNOF	DIAGNOS inc.	OTC markets			Health Care	Information Technology Services	$26,250,370	1,000	Analyze
+CRSXF	Corsa Coal Corp.	OTC markets	CV:CSO	TSX Venture Exchange	Materials	Coking Coal	$26,049,316	122,550	Analyze
+GGTTF	GTEC Holdings Ltd.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$26,019,719	30,000	Analyze
+CVVUF	CanAlaska Uranium Ltd.	OTC markets			Energy	Other Industrial Metals & Mining	$25,980,245	67,950	Analyze
+GGLDF	Getchell Gold Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$25,935,613	64,600	Analyze
+IGXT	Intelgenx Technologies Corp.	OTC markets	CV:IGX	TSX Venture Exchange	Health Care	Biotechnology	$25,628,793	166,825	Analyze
+CTARF	Centaurus Energy Inc.	OTC markets	CV:CTA	TSX Venture Exchange	Energy	Oil & Gas E&P	$25,570,784	110,000	Analyze
+IMLFF	InMed Pharmaceuticals Inc.	OTC markets	CT:IN	Toronto Stock Exchange	Health Care	Biotechnology	$25,477,065	37,407	Analyze
+VGRBF	VGrab Communications Inc	OTC markets			Unknown	Software—Application	$25,457,825	7,800	Analyze
+ARFXF	ProMIS Neurosciences Inc.	OTC markets			Health Care	Biotechnology	$25,438,361	58,419	Analyze
+NSCIF	Nanalysis Scientific Corp	OTC markets	CV:NSCI	TSX Venture Exchange	Unknown	Scientific & Technical Instruments	$25,383,433	0	Analyze
+CWSFF	Cielo Waste Solutions Corp.	OTC markets			Unknown	Waste Management	$25,067,083	12,000	Analyze
+LVCNF	Leviathan Cannabis Group Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$24,863,773	100	Analyze
+SVBL	Silver Bull Resources Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$24,778,859	42,928	Analyze
+MISVF	Minco Silver Corporation	OTC markets	CT:MSV	Toronto Stock Exchange	Materials	Silver	$24,745,671	61,703	Analyze
+OILFF	Nextleaf Solutions Ltd.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$24,744,955	52,635	Analyze
+AXNVF	Axion Ventures Inc	OTC markets	CV:AXV	TSX Venture Exchange	Unknown	Electronic Gaming & Multimedia	$24,564,208	0	Analyze
+SICNF	Sokoman Minerals Corp.	OTC markets			Unknown	Gold	$24,542,076	249,230	Analyze
+WSCRF	North American Nickel Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$23,757,018	0	Analyze
+SKLV	Skye Life Ventures Ltd	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$23,543,671	0	Analyze
+PMEDF	Predictmedix Inc.	OTC markets			Unknown	Medical Devices	$23,432,682	12,565	Analyze
+BRKCF	Barksdale Resources Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$23,244,310	9,010	Analyze
+HYHDF	Hydro66 Holdings Corp.	OTC markets			Unknown	Software—Infrastructure	$23,190,366	114,606	Analyze
+CGNSF	Cognetivity Neurosciences Ltd.	OTC markets			Unknown	Diagnostics & Research	$22,992,023	14,658	Analyze
+CHOOF	Choom Holdings Inc	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$22,979,134	171,616	Analyze
+WMLLF	Wealth Minerals Ltd.	OTC markets	CV:WML	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$22,373,734	21,700	Analyze
+PLRTF	Plymouth Rock Technologies Inc.	OTC markets			Unknown	Security & Protection Services	$22,364,141	150,800	Analyze
+KTGDF	K2 Gold Corporation	OTC markets			Materials	Gold	$22,325,013	62,130	Analyze
+VIVXF	Avivagen Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$22,136,092	0	Analyze
+MARFF	Margaux Resources Ltd.	OTC markets			Unknown	Gold	$22,058,740	9,750	Analyze
+TIGCF	Triumph Gold Corp.	OTC markets			Materials	Other Industrial Metals & Mining	$21,863,723	88,480	Analyze
+PVOTF	BetterLife Pharma Inc.	OTC markets			Health Care	Drug Manufacturers—Specialty & Generic	$21,789,126	739	Analyze
+CTABF	Canntab Therapeutics Ltd.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$21,742,366	0	Analyze
+SYHBF	Skyharbour Resources Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$21,722,716	43,858	Analyze
+NGPHF	Northern Graphite Corporation	OTC markets			Materials	Other Industrial Metals & Mining	$21,487,209	28,199	Analyze
+APTEF	Apteryx Imaging Inc.	OTC markets			Unknown	Health Information Services	$21,085,190	15,000	Analyze
+WSTRF	Western Uranium & Vanadium Corp.	OTC markets	CF:WUC	Canadian Securities Exchange	Unknown	Uranium	$20,908,204	23,992	Analyze
+TGIFF	1933 Industries Inc.	OTC markets	CF:TGIF	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$20,567,047	200,195	Analyze
+FVANF	First Vanadium Corp.	OTC markets	CV:FVAN	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$20,541,086	81,755	Analyze
+HSDT	Helius Medical Technologies Inc. Class A	NASDAQ Capital Market	CT:HSM	Toronto Stock Exchange	Health Care	Medical Devices	$20,333,319	252,710	Analyze
+MYMMF	MYM Nutraceuticals Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$20,284,604	34,372	Analyze
+CGTFF	Columbus Gold Corporation	OTC markets	CT:CGT	Toronto Stock Exchange	Materials	Gold	$19,983,942	177,220	Analyze
+PKLBF	Perk Labs Inc.	OTC markets			Unknown	Software—Infrastructure	$19,841,574	107,078	Analyze
+THCBF	THC BioMed Intl. Ltd.	OTC markets	CF:THC	Canadian Securities Exchange	Health Care	Other	$19,823,581	25,974	Analyze
+GPTRF	Grande Portage Resources Ltd.	OTC markets			Materials	Gold	$19,732,531	58,928	Analyze
+INDXF	Indus Holdings Inc.	OTC markets	CF:INDS	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$19,721,566	7,042	Analyze
+BEWFF	BeWhere Holdings Inc.	OTC markets			Unknown	Communication Equipment	$19,686,921	0	Analyze
+TAOIF	TAG Oil Ltd	OTC markets	CT:TAO	Toronto Stock Exchange	Energy	Oil & Gas E&P	$19,610,419	0	Analyze
+MNRLF	Mineral Mountain Resources Ltd.	OTC markets			Unknown	Gold	$19,457,763	25,649	Analyze
+HTPRF	HTC Purenergy Inc.	OTC markets			Materials		$19,365,868	700	Analyze
+XRTXF	XORTX Therapeutics Inc.	OTC markets			Health Care	Biotechnology	$19,012,149	3,500	Analyze
+BKUCF	Blue Sky Uranium Corp.	OTC markets			Energy	Uranium	$18,965,406	62,000	Analyze
+SPLIF	Nutritional High International Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$18,916,156	156,350	Analyze
+BLONF	CO2 Gro Inc.	OTC markets			Industrials	Agricultural Inputs	$18,868,921	23,875	Analyze
+XXMMF	Ximen Mining Corp.	OTC markets			Unknown	Gold	$18,828,004	400	Analyze
+AUXXF	Allegiant Gold Ltd.	OTC markets	CV:AUAU	TSX Venture Exchange	Materials	Gold	$18,643,826	67,870	Analyze
+NVDEF	Nevada Exploration Inc.	OTC markets			Unknown	Gold	$18,605,573	31,273	Analyze
+GRCAF	Gold Springs Resource Corp.	OTC markets			Unknown	Gold	$18,528,507	825	Analyze
+MIMNF	Mimi's Rock Corp	OTC markets			Unknown		$18,384,059	0	Analyze
+NRXCF	NeutriSci International Inc	OTC markets			Consumer Staples	Drug Manufacturers—Specialty & Generic	$18,209,628	56,200	Analyze
+DFMTF	Defense Metals Corp.	OTC markets			Unknown	Uranium	$18,154,304	246,100	Analyze
+LXRP	Lexaria Bioscience Corp.	OTC markets	CF:LXX	Canadian Securities Exchange	Unknown	Packaged Foods	$18,154,126	693,460	Analyze
+ZPAS	Zoompass Holdings Inc.	OTC markets			Information Technology	Software—Application	$18,097,646	3,009	Analyze
+IPNFF	ImagineAR Inc.	OTC markets			Unknown	Software—Application	$17,643,292	8,546,214	Analyze
+IPOOF	InPlay Oil Corp.	OTC markets	CT:IPO	Toronto Stock Exchange	Energy	Oil & Gas E&P	$17,323,529	200	Analyze
+SGGTF	Signature Resources Ltd.	OTC markets			Unknown	Gold	$17,193,197	63,212	Analyze
+GARWF	Golden Arrow Resources Corp.	OTC markets			Materials	Other Industrial Metals & Mining	$17,186,098	158,322	Analyze
+CGLDF	Core Gold Inc	OTC markets	CV:CGLD	TSX Venture Exchange	Materials	Gold	$17,154,853	0	Analyze
+LEXX	Lexaria Bioscience Corp.	NASDAQ Capital Market	CF:LXX	Canadian Securities Exchange	Health Care	Packaged Foods	$17,108,480	141,863	Analyze
+ASDRF	Ascendant Resources Inc.	OTC markets	CT:ASND	Toronto Stock Exchange	Unknown	Other Industrial Metals & Mining	$16,930,101	124,000	Analyze
+WLDFF	Wildflower Brands Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$16,836,972	1,987	Analyze
+NXXGF	Nexus Gold Corp.	OTC markets			Unknown	Gold	$16,464,762	382,378	Analyze
+ZADDF	Zadar Ventures Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$16,400,394	0	Analyze
+MRBLF	Marble Financial Inc.	OTC markets			Unknown	Credit Services	$16,272,236	0	Analyze
+AZZTF	Aztec Minerals Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$16,117,852	7,742	Analyze
+FLYLF	FLYHT Aerospace Solutions Ltd.	OTC markets	CV:FLY	TSX Venture Exchange	Industrials	Aerospace & Defense	$15,759,205	126,915	Analyze
+GFGSF	GFG Resources Inc.	OTC markets			Unknown	Gold	$15,683,561	93,566	Analyze
+LMRMF	Lomiko Metals Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$15,560,533	77,339	Analyze
+BICTF	Biocure Technology Inc.	OTC markets			Health Care	Biotechnology	$15,506,751	0	Analyze
+RIINF	Braveheart Resources Inc.	OTC markets			Materials	Other Precious Metals & Mining	$15,370,556	363,380	Analyze
+BLILF	Bearing Lithium Corp	OTC markets			Unknown	Other Industrial Metals & Mining	$15,337,338	32,100	Analyze
+SMOFF	Sonoro Metals Corp.	OTC markets			Unknown	Other Precious Metals & Mining	$15,313,911	0	Analyze
+REZZF	Global Battery Metals Ltd.	OTC markets			Materials	Other Industrial Metals & Mining	$15,186,897	0	Analyze
+DSNY	Destiny Media Technologies Inc.	OTC markets			Communication Services	Software—Application	$15,156,351	11,000	Analyze
+HRVOF	Harvest One Cannabis Inc.	OTC markets	CV:HVT	TSX Venture Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$14,969,532	34,484	Analyze
+NRGMF	NRG Metals Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$14,863,020	2,194	Analyze
+YVR	Liquid Media Group Ltd.	NASDAQ Capital Market			Consumer Discretionary	Electronic Gaming & Multimedia	$14,433,879	611,368	Analyze
+GOTRF	Goliath Resources Limited	OTC markets			Unknown	Other Precious Metals & Mining	$14,329,876	100	Analyze
+EXPFF	Experion Holdings Ltd.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$14,308,250	0	Analyze
+CVGRF	City View Green Holdings Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$14,304,960	6,334	Analyze
+WOWMF	Wow Unlimited Media Inc.	OTC markets	CV:WOW	TSX Venture Exchange	Unknown	Entertainment	$14,182,480	0	Analyze
+AQSZF	Aequus Pharmaceuticals Inc.	OTC markets			Health Care	Drug Manufacturers—Specialty & Generic	$13,877,651	19,000	Analyze
+ANLDF	Anfield Energy Inc	OTC markets			Energy	Uranium	$13,792,222	14,000	Analyze
+RLGMF	West Red Lake Gold Mines Inc.	OTC markets			Unknown	Gold	$13,739,597	347,290	Analyze
+RYES	Rise Gold Corp	OTC markets	CF:RISE	Canadian Securities Exchange	Materials	Gold	$13,655,529	1,521	Analyze
+BGI	Birks Group Inc.	NYSE American			Consumer Discretionary	Luxury Goods	$13,533,843	1,731,322	Analyze
+STXMF	Starrex International Ltd.	OTC markets			Unknown	Mortgage Finance	$13,516,699	0	Analyze
+FISOF	Fission 3.0 Corp.	OTC markets			Energy	Other Industrial Metals & Mining	$13,304,347	25,700	Analyze
+ETHOF	Ethos Gold Corp.	OTC markets			Materials	Gold	$13,284,882	83,387	Analyze
+CJCFF	Quebec Precious Metals Corp.	OTC markets			Materials	Gold	$13,123,992	23,409	Analyze
+MPXOF	MPX International Corp.	OTC markets	CF:MPXI	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$12,791,849	12,566	Analyze
+AZASF	Arizona Silver Exploration Inc.	OTC markets			Unknown	Silver	$12,753,521	0	Analyze
+DCNNF	Canadian Palladium Resources Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$12,520,002	315,803	Analyze
+SHVLF	Starcore International Mines Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$12,451,430	0	Analyze
+MMJFF	Matica Enterprises Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$12,284,302	200	Analyze
+NMTLF	New Age Metals Inc	OTC markets			Materials	Other Industrial Metals & Mining	$12,251,018	110,023	Analyze
+SRUTF	Sproutly Canada Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$12,240,048	311,426	Analyze
+INXSF	Intouch Insight Ltd.	OTC markets			Information Technology	Software—Application	$11,776,342	113,000	Analyze
+RVSDF	Riverside Resources Inc.	OTC markets			Unknown	Other Precious Metals & Mining	$11,737,826	397,737	Analyze
+PRVCF	PreveCeutical Medical Inc	OTC markets			Health Care	Biotechnology	$11,565,505	2,705,826	Analyze
+BIDCF	BlockchainK2 Corp.	OTC markets			Information Technology	Capital Markets	$11,502,236	3,600	Analyze
+LVRLF	CordovaCann Corp.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$11,496,070	8,100	Analyze
+GABLF	GABY Inc.	OTC markets			Unknown	Packaged Foods	$11,482,291	0	Analyze
+BNKL	Bionik Laboratories Corp	OTC markets			Health Care	Medical Care Facilities	$11,220,496	1,388	Analyze
+LBCMF	Libero Copper & Gold Corporation	OTC markets			Materials	Other Precious Metals & Mining	$11,142,163	424,060	Analyze
+GATGF	Gatling Exploration Inc.	OTC markets	CV:GTR	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$11,044,680	20,991	Analyze
+JRNGF	Journey Energy Inc.	OTC markets	CT:JOY	Toronto Stock Exchange	Energy	Oil & Gas E&P	$11,013,490	26,500	Analyze
+BKLLF	Codebase Ventures Inc.	OTC markets			Unknown	Capital Markets	$10,995,726	0	Analyze
+QTRRF	Quaterra Resources Inc	OTC markets			Materials	Other Industrial Metals & Mining	$10,957,652	462,300	Analyze
+SYTA	Siyata Mobile, Inc.	NASDAQ Capital Market	CV:SIM	TSX Venture Exchange	Communication Services	Communication Equipment	$10,942,592	28,127	Analyze
+PTRUF	Petrus Resources Ltd.	OTC markets	CT:PRQ	Toronto Stock Exchange	Energy	Oil & Gas E&P	$10,883,259	136	Analyze
+NSPDF	Naturally Splendid Enterprises Ltd.	OTC markets			Health Care	Biotechnology	$10,861,685	708	Analyze
+BBRRF	Blueberries Medical Corp.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$10,808,677	593,307	Analyze
+ULTXF	Ultra Resources Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$10,576,214	0	Analyze
+NRGOF	Newrange Gold Corp.	OTC markets			Materials	Gold	$10,144,411	322,940	Analyze
+MEXGF	Mexican Gold Mining Corp.	OTC markets			Unknown	Other Precious Metals & Mining	$10,096,587	264,788	Analyze
+ELIXF	Elixxer Ltd.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$10,009,427	3,434	Analyze
+BOSQF	Yield Growth Corp.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$9,999,150	222,453	Analyze
+BIOIF	Biome Grow Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$9,698,031	600	Analyze
+PNDHF	Pond Technologies Holdings Inc.	OTC markets			Energy	Farm Products	$9,687,677	12,000	Analyze
+PKSLF	Peeks Social Ltd	OTC markets			Unknown	Internet Content & Information	$9,677,670	0	Analyze
+MJARF	MJardin Group Inc.	OTC markets	CF:MJAR	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$9,523,727	134,472	Analyze
+WCEXF	World Class Extractions Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$9,502,988	21,607	Analyze
+MLRKF	Millrock Resources Inc.	OTC markets	CV:MRO	TSX Venture Exchange	Materials	Other Precious Metals & Mining	$9,396,690	430,043	Analyze
+BORMF	Boreal Metals Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$9,323,761	400	Analyze
+ARXRF	Infinite Ore Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$9,101,248	250	Analyze
+AXREF	Amarc Resources Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$8,975,964	12,500	Analyze
+AXDDF	Azucar Minerals Ltd.	OTC markets	CV:AMZ	TSX Venture Exchange	Materials	Other Precious Metals & Mining	$8,955,461	16,006	Analyze
+MWXRF	Mineworx Technologies Ltd	OTC markets			Materials	Other Industrial Metals & Mining	$8,876,040	33,000	Analyze
+MTLFF	Metallis Resources Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$8,856,147	37,000	Analyze
+EYCCF	Eyecarrot Innovations Corp.	OTC markets			Health Care	Health Information Services	$8,747,453	10,875	Analyze
+CGOTF	Citation Growth Corp	OTC markets	CF:CGRO	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$8,649,040	32,211	Analyze
+MGWFF	Maple Leaf Green World Inc.	OTC markets			Health Care	Drug Manufacturers—Specialty & Generic	$8,535,701	25,604	Analyze
+NRIFF	Nuvo Pharmaceuticals Inc.	OTC markets	CT:NRI	Toronto Stock Exchange	Health Care	Drug Manufacturers—Specialty & Generic	$8,512,741	200	Analyze
+ICOTF	iCo Therapeutics Inc.	OTC markets			Health Care	Biotechnology	$8,456,124	2,500	Analyze
+TTTSF	TruTrace Technologies Inc.	OTC markets			Unknown	Software—Application	$8,386,704	52,000	Analyze
+BNKPF	BNK Petroleum Inc.	OTC markets	CT:BKX	Toronto Stock Exchange	Energy	Oil & Gas E&P	$8,292,059	3,500	Analyze
+OLNCF	Omni-Lite Industries Canada Inc.	OTC markets	CV:OML	TSX Venture Exchange	Industrials	Metal Fabrication	$8,228,378	5,000	Analyze
+CNSNF	Constantine Metal Resources Ltd.	OTC markets	CV:CEM	TSX Venture Exchange	Unknown	Other Industrial Metals & Mining	$7,942,304	5,700	Analyze
+BGAVF	Bravada Gold Corporation	OTC markets			Materials	Other Industrial Metals & Mining	$7,912,141	34,400	Analyze
+FRERF	Fremont Gold Ltd.	OTC markets			Unknown	Gold	$7,864,189	38,000	Analyze
+INLAF	Interlapse Technologies Corp.	OTC markets			Unknown	Software—Application	$7,802,735	0	Analyze
+GGBXF	Green Growth Brands Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$7,744,428	742,193	Analyze
+BHNGF	Bhang Inc.	OTC markets	CF:BHNG	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$7,686,866	113,436	Analyze
+PMCCF	Peloton Minerals Corp.	OTC markets			Unknown	Gold	$7,679,909	12,500	Analyze
+AISSF	A.I.S. Resources Limited	OTC markets			Unknown	Other Industrial Metals & Mining	$7,530,013	7,650	Analyze
+FNNZF	FinCanna Capital Corp.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$7,401,730	5,001	Analyze
+ABEPF	Vision Lithium Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$7,335,940	38,500	Analyze
+OWRDF	One World Lithium Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$7,033,232	9,655	Analyze
+ABNAF	Aben Resources Ltd.	OTC markets			Unknown	Gold	$6,835,801	665,465	Analyze
+REPCF	RepliCel Life Sciences Inc.	OTC markets			Health Care	Biotechnology	$6,808,584	2,415	Analyze
+LMSQF	Latin Metals Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$6,744,340	0	Analyze
+TNREF	Taranis Resources Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$6,623,505	4,000	Analyze
+MDEX	Madison Technologies Inc.	OTC markets			Unknown	Aerospace & Defense	$6,454,955	0	Analyze
+IMEXF	Imagin Medical Inc.	OTC markets			Unknown	Medical Devices	$6,345,852	2,243	Analyze
+SYATF	Siyata Mobile Inc.	OTC markets	CV:SIM	TSX Venture Exchange	Information Technology	Communication Equipment	$6,262,400	29,933	Analyze
+FFRMF	Future Farm Technologies Inc	OTC markets			Unknown	Farm Products	$6,236,959	38,393	Analyze
+CFGMF	California Gold Mining Inc.	OTC markets	CF:CGM	Canadian Securities Exchange	Materials	Gold	$6,159,242	3,175	Analyze
+SSMLF	Nevada Energy Metals Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$5,901,148	250	Analyze
+ISOLF	Isodiol International Inc	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$5,900,062	684,130	Analyze
+CRRVF	CVR Medical Corp.	OTC markets			Unknown	Medical Devices	$5,813,382	52,500	Analyze
+FDMSF	Fandom Sports Media Corp	OTC markets			Unknown	Software—Application	$5,792,700	100	Analyze
+EEVVF	Eve & Co. Inc.	OTC markets	CV:EVE	TSX Venture Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$5,689,070	1,809,368	Analyze
+TIMCF	TIMIA Capital Corp.	OTC markets			Unknown	Asset Management	$5,657,941	0	Analyze
+MRRMF	Miramont Resources Corp	OTC markets			Unknown	Other Precious Metals & Mining	$5,633,093	31,628	Analyze
+ATBHF	Aston Bay Holdings Ltd.	OTC markets			Unknown	Copper	$5,440,653	188,488	Analyze
+IFRTF	International Frontier Resources Corporation	OTC markets			Energy	Oil & Gas E&P	$5,403,301	7,000	Analyze
+RSSFF	Affinor Growers Inc.	OTC markets			Unknown	Farm Products	$5,382,365	1,400	Analyze
+FERL	FEARLESS FILMS INC.	OTC markets			Unknown	Entertainment	$5,377,144	8,496	Analyze
+ATOXF	Durango Resources Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$5,377,056	164,300	Analyze
+ROVMF	Rover Metals Corp.	OTC markets			Unknown	Gold	$5,320,456	43,000	Analyze
+VNNYF	Vinergy Cannabis Capital Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$5,319,493	25,600	Analyze
+RRRLF	Rockridge Resources Ltd.	OTC markets			Unknown	Other Industrial Metals & Mining	$5,255,250	300	Analyze
+DMIFF	Diamcor Mining Inc.	OTC markets			Materials	Other Precious Metals & Mining	$5,002,860	0	Analyze
+MKSEF	Marksmen Energy Inc.	OTC markets			Energy	Oil & Gas E&P	$4,918,044	0	Analyze
+RIGMF	Ridgestone Mining Inc.	OTC markets			Unknown	Other Industrial Metals & Mining	$4,904,191	8,000	Analyze
+CRBTF	Intellabridge Technology Corp.	OTC markets			Unknown	Software—Application	$4,709,752	1,000	Analyze
+DXIEF	DXI Energy Inc.	OTC markets			Energy	Oil & Gas E&P	$4,644,052	17	Analyze
+GZDIF	Grizzly Discoveries Inc	OTC markets			Unknown	Other Industrial Metals & Mining	$4,570,817	66,000	Analyze
+PCRCF	Bolt Metals Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$4,516,212	10,137	Analyze
+HSCHF	H-Source Holdings Ltd. Class A	OTC markets			Unknown	Health Information Services	$4,508,958	27,444	Analyze
+WFTSF	Wavefront Technology Solutions Inc	OTC markets	CV:WEE	TSX Venture Exchange	Energy	Oil & Gas Equipment & Services	$4,431,172	3,755	Analyze
+OSSPF	Osprey Gold Development Ltd	OTC markets			Unknown	Gold	$4,327,196	137,999	Analyze
+TPPRF	Top Strike Resources Corp.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$4,102,855	0	Analyze
+NVTQF	Trench Solutions Inc. Class A	OTC markets			Unknown	Computer Hardware	$4,003,408	0	Analyze
+GGXXF	GGX Gold Corp.	OTC markets			Unknown	Gold	$3,995,076	5,000	Analyze
+PNNRF	Redfund Capital Corp.	OTC markets			Unknown		$3,805,335	0	Analyze
+STSBF	South Star Mining Corp	OTC markets			Unknown	Other Industrial Metals & Mining	$3,792,840	0	Analyze
+IPCIF	Intellipharmaceutics International Inc.	OTC markets			Health Care	Biotechnology	$3,775,200	20,405	Analyze
+GOCOF	Go Metals Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$3,737,977	800	Analyze
+AGGHF	Agrios Global Holdings Ltd.	OTC markets			Unknown	Real Estate Services	$3,715,950	0	Analyze
+CHNUF	China Education Resources Inc.	OTC markets			Consumer Discretionary	Education & Training Services	$3,694,469	0	Analyze
+FLCX	flooidCX Corp.	OTC markets			Unknown	Consulting Services	$3,610,472	0	Analyze
+PHVAF	Phivida Holdings Inc.	OTC markets	CF:VIDA	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$3,545,348	50,211	Analyze
+NOBDF	North Bud Farms Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$3,505,948	0	Analyze
+VRSCF	Valterra Resource Corporation	OTC markets			Unknown	Other Industrial Metals & Mining	$3,480,364	0	Analyze
+AREVF	AREV NanoTec Brands Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$3,444,131	0	Analyze
+VGGOF	Cryptologic Corp	OTC markets			Information Technology	Software—Application	$3,420,183	1,500	Analyze
+CNENF	Claren Energy Corp.	OTC markets			Energy	Oil & Gas E&P	$3,409,197	0	Analyze
+KPIFF	Edgewater Wireless Systems Inc.	OTC markets			Unknown	Communication Equipment	$3,394,773	5,000	Analyze
+FNHI	Franchise Holdings International Inc.	OTC markets			Unknown	Auto Parts	$3,351,677	64,599	Analyze
+CNNXF	CannAmerica Brands Corp.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$3,308,773	40,176	Analyze
+IMAHF	I-Minerals Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$3,168,081	20,000	Analyze
+CHMJF	Chemistree Technology Inc	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$3,146,898	85,544	Analyze
+MGHCF	Minco Capital Corporation	OTC markets			Financials	Asset Management	$3,090,057	11,621	Analyze
+TUMIF	Kingsmen Resources Limited	OTC markets			Unknown	Other Industrial Metals & Mining	$3,083,561	0	Analyze
+TOKIF	Tree of Knowledge International Corp.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$2,923,768	0	Analyze
+PNXLF	Argentina Lithium & Energy Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$2,913,284	6,000	Analyze
+WCTXF	Fuse Cobalt Inc.	OTC markets			Materials	Other Industrial Metals & Mining	$2,805,050	50,540	Analyze
+SNNVF	Sunniva Inc	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$2,729,641	65,797	Analyze
+MLGCF	M3 Metals Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$2,715,348	10,000	Analyze
+HEYBF	HeyBryan Media Inc.	OTC markets			Unknown	Software—Application	$2,712,244	0	Analyze
+EVAHF	EGF Theramed Health Corp.	OTC markets			Unknown	Health Information Services	$2,583,387	70,701	Analyze
+BLEVF	Beleave Inc.	OTC markets	CF:BE	Canadian Securities Exchange	Unknown	Drug Manufacturers—Specialty & Generic	$2,549,301	26,380	Analyze
+SPFYF	Spacefy Inc.	OTC markets			Unknown	Internet Content & Information	$2,472,948	0	Analyze
+RGDCF	Gaia Metals Corp.	OTC markets			Unknown	Other Industrial Metals & Mining	$2,415,425	0	Analyze
+SLSDF	Select Sands Corp.	OTC markets			Materials	Other Industrial Metals & Mining	$2,396,513	6,500	Analyze
+WKULF	Weekend Unlimited Industries Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$2,275,640	640	Analyze
+NOSUF	Nerds On Site Inc.	OTC markets			Unknown	Information Technology Services	$2,125,302	0	Analyze
+LPPPF	LOOPShare Ltd.	OTC markets			Unknown	Software—Application	$1,767,386	4,866	Analyze
+CPPXF	Continental Energy Corporation	OTC markets			Energy	Oil & Gas E&P	$1,747,154	0	Analyze
+CPMMF	Crystal Peak Minerals Inc.	OTC markets	CV:CPM	TSX Venture Exchange	Materials	Other Industrial Metals & Mining	$1,477,780	0	Analyze
+OILCF	Permex Petroleum Corp.	OTC markets			Energy	Oil & Gas E&P	$1,383,132	50,411	Analyze
+NABIF	Nabis Holdings Inc.	OTC markets			Unknown	Drug Manufacturers—Specialty & Generic	$1,339,024	100	Analyze
+JPOTD	Jackpot Digital Inc	OTC markets			Unknown	Gambling	$1,291,930	300	Analyze
+SRBBF	VPN Technologies Inc.	OTC markets			Unknown	Software—Application	$1,288,657	14,000	Analyze
+CYBXF	Gallagher Security Corp.	OTC markets			Unknown	Software—Application	$1,277,506	0	Analyze
+VLEOD	Voleo Trading Systems Inc.	OTC markets			Unknown	Software—Application	$901,485	9,000	Analyze
+LFCOF	Lift & Co Corp	OTC markets			Unknown	Health Information Services	$666,409	6,166	Analyze
+HHHEF	37 Capital Incorporated	OTC markets			Materials	Other Industrial Metals & Mining	$520,033	0	Analyze
+ZIMCF	ZIM Corporation	OTC markets			Unknown	Software—Application	$503,950	0	Analyze
+FTPLF	Fortress Global Enterprises Inc. Class A	OTC markets	CT:FGE	Toronto Stock Exchange	Materials	Other	$194,633	0	Analyze

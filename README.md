@@ -2,16 +2,20 @@
 Data Supply Chain : Canadian Public Companies
 
 # Description
-This project is linked to the MITACS program. The objective is to automate key activities in the analysis of businesses documents. The vision includes :
-- Keyword-based search automation
-- Ontology-based search refinement
-- Document pre-processing and qualification
-- Document content analysis, synthesis and classification
-- Corpus analysis and classification
-- Profile network analysis
-- Key ratio extraction analysis
+This project is linked to the MITACS program. The objective is to automate key activities in competitive intelligence using OSINT. The vision includes :
+- Listing Canadian Public Companies
+- Gathering annual financial reports
+- Processing reports
+  - Extracting management team
+  - Extracting board members
+  - Extraction key financial figures
+  - Extracting specific sections (ex. Corporate social responsibility)
+- Leadership background analysis (education, positions)
+- Leadership profile (ex. gender) and network analysis
+- Official social media outlets monitoring
+- Alternative information outlets monitoring.
 
-Obviously this presentation is beyond a single project and translate to an ambitious program. It is however important to see the big picture to work efficiently on any of the part. The MITACS project will target the first phases and perhaps key interesting problems using an Agile process. 
+Obviously this presentation is beyond a single project and translate to an ambitious program. It is however important to see the big picture to work efficiently on any of the part. The MITACS project will target the first phases and perhaps key interesting problems using an Agile process.
 
 # MITACS announcement
 ## Project Intern

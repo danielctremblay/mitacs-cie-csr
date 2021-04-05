@@ -2,7 +2,7 @@
 
 # Systematic review
 
-  - Search : Google Scholar (literature review methodology)
+  Search : Google Scholar (literature review methodology)
   
 - https://www.sciencedirect.com/science/article/pii/S0148296319304564
 - https://www.tandfonline.com/doi/full/10.1080/07294360.2012.702735

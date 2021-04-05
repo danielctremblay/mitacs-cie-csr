@@ -17,7 +17,7 @@
 
 # Using Text Mining for Systematic Review
 
-  - Search : Google Scholar (using "text mining" for "systematic literature review")
+  Search : Google Scholar (using "text mining" for "systematic literature review")
 
 - https://ieeexplore.ieee.org/abstract/document/8305926?casa_token=FFgANOSsgLUAAAAA:0uyVwXDetF5FO03BTMVwYXNHpY5Kz5GjqKM9cWHXdc8r5hr8lIEJO0o8incYLe_IxIxFvY97
 - https://www.mdpi.com/2071-1050/11/5/1277

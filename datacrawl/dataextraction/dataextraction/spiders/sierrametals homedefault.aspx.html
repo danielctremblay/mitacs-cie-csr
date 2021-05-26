@@ -1,0 +1,1412 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	Sierra Metals Inc. - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":911,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1" name="viewport" /><!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s23.q4cdn.com/335191765/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.sierrametals.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" />
+<link type="image/x-icon" rel="icon" media="" href="//s23.q4cdn.com/335191765/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s23.q4cdn.com/335191765/files/favicon.ico" />
+<link rel="stylesheet" media="print" href="//s23.q4cdn.com/335191765/files/css/print.css" />
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s23.q4cdn.com/335191765/files/css/global.css?v=40505" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s23.q4cdn.com/335191765/files/css/client.css?v=34742" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s23.q4cdn.com/335191765/files/css/print.css" /><script type="text/javascript" src="//s23.q4cdn.com/335191765/files/js/q4.core.1.0.6.min.js"></script>
+<script type="text/javascript" src="//s23.q4cdn.com/335191765/files/js/q4.app.1.0.6.min.js"></script>
+<script type="text/javascript" src="https://widgets.q4app.com/widgets/q4.api.1.13.1.min.js"></script>
+<script type="text/javascript" src="//s23.q4cdn.com/335191765/files/js/select2.min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="https://www.sierrametals.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+(function ($) {
+    function initGaTracking(isp, org) {
+        isp = isp || '(not set)';
+        org = org || '(not set)';
+        $.each(trackingCodes, function (i, data) {
+            if (data.qualifier === "Q4") {
+                ga('create', data.trackingCode, 'auto'); // Q4 tracker
+                ga('set', { 'dimension1': isp });
+                ga('set', { 'dimension2': org });
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+            } else {
+                ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+                ga(data.qualifier + '.set', 'anonymizeIp', true);
+                ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+            }
+        });
+    }
+
+    var trackingCodes = [{qualifier: 'Client', trackingCode: 'UA-65180305-1'}];
+    var ipSessStorageKey = 'ipApiInfo';
+    var ipJsonStringified = sessionStorage.getItem(ipSessStorageKey);
+
+    if (ipJsonStringified) {
+        try {
+            var ipJsonParsed = JSON.parse(ipJsonStringified);
+            initGaTracking(ipJsonParsed.isp, ipJsonParsed.org);
+        } catch (e) {
+            console.error('Failed to JSON parse IP API session storage data\n', e);
+            initGaTracking();
+        }
+    } else {
+        $.getJSON('https://pro.ip-api.com/json/?key=xdjZbj0ZiVVozCo&fields=isp,org')
+            .done(function (ipJson) {
+                sessionStorage.setItem(ipSessStorageKey, JSON.stringify(ipJson));
+                initGaTracking(ipJson.isp, ipJson.org);
+            })
+            .fail(function () {
+                initGaTracking();
+            });
+    }
+})(jQuery);
+</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="Sectionhome PageDefault PageHome LayoutHomePageLayout Languageen-US">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="layout layout--home">
+    <div class="layout_inner">
+        <div class="layout_header">
+            <div class="pane pane--header">
+                <div class="pane_inner clearfix"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="module module-embed module-skip">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a class="module-skip_link" href="#maincontent">Skip to main content</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script type="text/javascript">
+var Q4ApiKey = 'BF185719B0464B3CB809D23926182246';
+</script>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="module module-embed module-logo">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="/"><img src="//s23.q4cdn.com/335191765/files/design/sierra_logo.jpg" alt="Sierra Metals Logo"></a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv4'><nav class="nav nav--main"><ul class="level1">
+	<li class="selected has-children home"><a href="https://www.sierrametals.com/home/default.aspx">Home</a><ul class="level2">
+		<li class="has-children"><a href="https://www.sierrametals.com/about-sierra/overview/default.aspx">About Sierra</a><ul class="level3">
+			<li><a href="https://www.sierrametals.com/about-sierra/overview/default.aspx">Overview</a></li><li><a href="https://www.sierrametals.com/about-sierra/management/default.aspx">Management</a></li><li><a href="https://www.sierrametals.com/about-sierra/directors/default.aspx">Directors</a></li><li><a href="https://www.sierrametals.com/about-sierra/advisers-to-the-board/default.aspx">Advisers to the Board</a></li><li><a href="https://www.sierrametals.com/about-sierra/committee-composition/default.aspx">Committee Composition</a></li><li><a href="https://www.sierrametals.com/about-sierra/corporate-governance/default.aspx">Corporate Governance</a></li>
+		</ul></li><li class="has-children"><a href="https://www.sierrametals.com/projects/default.aspx">Projects</a><ul class="level3">
+			<li class="has-children"><a href="https://www.sierrametals.com/projects/operations/default.aspx">Operations</a><ul class="level4">
+				<li><a href="https://www.sierrametals.com/projects/operations/yauricocha-mine/default.aspx">Yauricocha Mine</a></li><li><a href="https://www.sierrametals.com/projects/operations/bolivar-mine/default.aspx">Bolivar Mine</a></li><li><a href="https://www.sierrametals.com/projects/operations/cusi-mine/default.aspx">Cusi Mine</a></li>
+			</ul></li><li class="has-children"><a href="https://www.sierrametals.com/projects/exploration/default.aspx">Exploration</a><ul class="level4">
+				<li class="has-children"><a href="https://www.sierrametals.com/projects/exploration/peru/victoria/default.aspx">Peru</a><ul class="level5">
+					<li><a href="https://www.sierrametals.com/projects/exploration/peru/victoria/default.aspx">Victoria</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/adrico/default.aspx">Adrico</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/san-juan/default.aspx">San Juan</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/carmencita/default.aspx">Carmencita</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/ipillo/default.aspx">Ipillo</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/exicto-sur/default.aspx">Éxicto Sur</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/yauricocha-fault/default.aspx">Yauricocha Fault</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/yanamachay-silacocha/default.aspx">Yanamachay/Silacocha</a></li>
+				</ul></li><li class="has-children"><a href="https://www.sierrametals.com/projects/exploration/mexico/batopilas-property/default.aspx">Mexico</a><ul class="level5">
+					<li><a href="https://www.sierrametals.com/projects/exploration/mexico/batopilas-property/default.aspx">Batopilas Property</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/maguarichic-property/default.aspx">Maguarichic Property</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/moris-property/default.aspx">Moris Property</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/bacerac-property/default.aspx">Bacerac Property</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/arechuyvo-project/default.aspx">Arechuyvo Project</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/oribo-project/default.aspx">Oribo Project</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/east-durango-project-tecolote/default.aspx">East Durango Project (Tecolote)</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/melchor-ocampo-project/default.aspx">Melchor Ocampo Project</a></li>
+				</ul></li>
+			</ul></li><li><a href="https://www.sierrametals.com/projects/reserves-and-resources/default.aspx">Reserves and Resources</a></li>
+		</ul></li><li class="has-children"><a href="https://www.sierrametals.com/investors/default.aspx">Investors</a><ul class="level3">
+			<li class="has-children"><a href="https://www.sierrametals.com/investors/share-information/stock-quote-and-chart/default.aspx">Share Information</a><ul class="level4">
+				<li><a href="https://www.sierrametals.com/investors/share-information/stock-quote-and-chart/default.aspx">Stock Quote & Chart</a></li><li><a href="https://www.sierrametals.com/investors/share-information/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.sierrametals.com/investors/share-information/dividends/default.aspx">Dividends</a></li>
+			</ul></li><li><a href="https://www.sierrametals.com/investors/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.sierrametals.com/investors/why-invest/default.aspx">Why Invest</a></li><li class="has-children"><a href="https://www.sierrametals.com/investors/financial-information/financial-reports/default.aspx">Financial Information</a><ul class="level4">
+				<li><a href="https://www.sierrametals.com/investors/financial-information/financial-reports/default.aspx">Financial Reports</a></li><li><a href="https://www.sedar.com/DisplayCompanyDocuments.do?lang=EN&amp;issuerNo=00003031" target="_blank">SEDAR Filings</a></li><li><a href="https://www.sierrametals.com/investors/financial-information/sec-filings/default.aspx">SEC Filings</a></li>
+			</ul></li><li><a href="https://www.sierrametals.com/investors/events/default.aspx">Events</a></li><li><a href="https://www.sierrametals.com/investors/media/default.aspx">Media</a></li><li class="has-children"><a href="https://www.sierrametals.com/investors/investor-resources/email-alerts/default.aspx">Investor Resources</a><ul class="level4">
+				<li><a href="https://www.sierrametals.com/investors/investor-resources/email-alerts/default.aspx">Email Alerts</a></li><li><a href="https://www.sierrametals.com/investors/investor-resources/rss/default.aspx">RSS</a></li>
+			</ul></li><li><a href="/investors/events/default.aspx#presentation">Corporate Presentation</a></li><li><a href="https://www.sierrametals.com/investors/Virtual-Mine-Tours/default.aspx">Virtual Mine Tours</a></li>
+		</ul></li><li><a href="https://www.sierrametals.com/responsibility/default.aspx">Responsibility</a></li><li><a href="https://www.sierrametals.com/contact-us/default.aspx">Contact Us</a></li>
+	</ul></li>
+</ul></nav></span><span class='HeaderPaneDiv5'><div id="_ctrl0_ctl18_divModuleContainer" class="module module-html module-language-switch list--reset">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul class="module-language-switch_list">
+    <li class="module-language-switch_list-item module-language-switch_list-item--english"><a href="/">Eng</a></li>
+    <li class="module-language-switch_list-item module-language-switch_list-item--spanish"><a href="/spanish/default.aspx">Esp</a></li>
+    <li class="module-language-switch_list-item module-language-switch_list-item--german"><a href="/german/default.aspx">Ger</a></li>
+</ul>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv6'><div id="_ctrl0_ctl21_divModuleContainer" class="module module-search" role="search">
+    <div class="module_container module_container--outer">
+        <h2 id="_ctrl0_ctl21_lblTitle" class="module_title"><span id="_ctrl0_ctl21_lblModuleTitle" class="ModuleTitle"><span class="sr-only">Site Search(toggle the search module)</span><i class="q4-icon_search2"></i></span></h2>
+        <div class="module_container module_container--inner">
+            <span id="_ctrl0_ctl21_lblSearchText" class="module-search_text"></span>
+            <input name="_ctrl0$ctl21$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl21_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl21$btnSearch&#39;, &#39;&#39;); " />
+            <input type="submit" name="_ctrl0$ctl21$btnSearch" value="Search" id="_ctrl0_ctl21_btnSearch" class="module_button module-search_button" />
+            
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv7'><div id="_ctrl0_ctl24_divModuleContainer" class="module module-embed layout_toggle">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <button type="button" class="q4-icon_menu2" tabindex="0"><span class="sr-only">toggles the navigation panel</span></button>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--banner">
+                <div class="pane_inner clearfix"><span class='HeaderPane2Div1'><div id="_ctrl0_ctl60_divModuleContainer" class="module module-html module-banner-text">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <h1>Well Positioned For Growth</h1>
+<p>Expanding Production in Peru and Mexico</p>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--navigation">
+                <div class="pane_inner clearfix"><span class='NavigationPaneDiv9'><div id="_ctrl0_ctl27_divModuleContainer" class="module module-html module-language-switch list--reset">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul class="module-language-switch_list">
+    <li class="module-language-switch_list-item module-language-switch_list-item--english"><a href="/">Eng</a></li>
+    <li class="module-language-switch_list-item module-language-switch_list-item--spanish"><a href="/spanish/default.aspx">Esp</a></li>
+    <li class="module-language-switch_list-item module-language-switch_list-item--german"><a href="/german/default.aspx">Ger</a></li>
+</ul>
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv10'><div id="_ctrl0_ctl30_divModuleContainer" class="module module-embed layout_toggle">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <button type="button" class="q4-icon_menu" tabindex="0"><span class="sr-only">toggles the navigation panel</span></button>
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv12'><nav class="nav nav--mobile"><ul class="level1">
+	<li class="selected has-children home"><a href="https://www.sierrametals.com/home/default.aspx">Home</a><ul class="level2">
+		<li class="has-children"><a href="https://www.sierrametals.com/about-sierra/overview/default.aspx">About Sierra</a><ul class="level3">
+			<li><a href="https://www.sierrametals.com/about-sierra/overview/default.aspx">Overview</a></li><li><a href="https://www.sierrametals.com/about-sierra/management/default.aspx">Management</a></li><li><a href="https://www.sierrametals.com/about-sierra/directors/default.aspx">Directors</a></li><li><a href="https://www.sierrametals.com/about-sierra/advisers-to-the-board/default.aspx">Advisers to the Board</a></li><li><a href="https://www.sierrametals.com/about-sierra/committee-composition/default.aspx">Committee Composition</a></li><li><a href="https://www.sierrametals.com/about-sierra/corporate-governance/default.aspx">Corporate Governance</a></li>
+		</ul></li><li class="has-children"><a href="https://www.sierrametals.com/projects/default.aspx">Projects</a><ul class="level3">
+			<li class="has-children"><a href="https://www.sierrametals.com/projects/operations/default.aspx">Operations</a><ul class="level4">
+				<li><a href="https://www.sierrametals.com/projects/operations/yauricocha-mine/default.aspx">Yauricocha Mine</a></li><li><a href="https://www.sierrametals.com/projects/operations/bolivar-mine/default.aspx">Bolivar Mine</a></li><li><a href="https://www.sierrametals.com/projects/operations/cusi-mine/default.aspx">Cusi Mine</a></li>
+			</ul></li><li class="has-children"><a href="https://www.sierrametals.com/projects/exploration/default.aspx">Exploration</a><ul class="level4">
+				<li class="has-children"><a href="https://www.sierrametals.com/projects/exploration/peru/victoria/default.aspx">Peru</a><ul class="level5">
+					<li><a href="https://www.sierrametals.com/projects/exploration/peru/victoria/default.aspx">Victoria</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/adrico/default.aspx">Adrico</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/san-juan/default.aspx">San Juan</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/carmencita/default.aspx">Carmencita</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/ipillo/default.aspx">Ipillo</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/exicto-sur/default.aspx">Éxicto Sur</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/yauricocha-fault/default.aspx">Yauricocha Fault</a></li><li><a href="https://www.sierrametals.com/projects/exploration/peru/yanamachay-silacocha/default.aspx">Yanamachay/Silacocha</a></li>
+				</ul></li><li class="has-children"><a href="https://www.sierrametals.com/projects/exploration/mexico/batopilas-property/default.aspx">Mexico</a><ul class="level5">
+					<li><a href="https://www.sierrametals.com/projects/exploration/mexico/batopilas-property/default.aspx">Batopilas Property</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/maguarichic-property/default.aspx">Maguarichic Property</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/moris-property/default.aspx">Moris Property</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/bacerac-property/default.aspx">Bacerac Property</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/arechuyvo-project/default.aspx">Arechuyvo Project</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/oribo-project/default.aspx">Oribo Project</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/east-durango-project-tecolote/default.aspx">East Durango Project (Tecolote)</a></li><li><a href="https://www.sierrametals.com/projects/exploration/mexico/melchor-ocampo-project/default.aspx">Melchor Ocampo Project</a></li>
+				</ul></li>
+			</ul></li><li><a href="https://www.sierrametals.com/projects/reserves-and-resources/default.aspx">Reserves and Resources</a></li>
+		</ul></li><li class="has-children"><a href="https://www.sierrametals.com/investors/default.aspx">Investors</a><ul class="level3">
+			<li class="has-children"><a href="https://www.sierrametals.com/investors/share-information/stock-quote-and-chart/default.aspx">Share Information</a><ul class="level4">
+				<li><a href="https://www.sierrametals.com/investors/share-information/stock-quote-and-chart/default.aspx">Stock Quote & Chart</a></li><li><a href="https://www.sierrametals.com/investors/share-information/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.sierrametals.com/investors/share-information/dividends/default.aspx">Dividends</a></li>
+			</ul></li><li><a href="https://www.sierrametals.com/investors/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.sierrametals.com/investors/why-invest/default.aspx">Why Invest</a></li><li class="has-children"><a href="https://www.sierrametals.com/investors/financial-information/financial-reports/default.aspx">Financial Information</a><ul class="level4">
+				<li><a href="https://www.sierrametals.com/investors/financial-information/financial-reports/default.aspx">Financial Reports</a></li><li><a href="https://www.sedar.com/DisplayCompanyDocuments.do?lang=EN&amp;issuerNo=00003031" target="_blank">SEDAR Filings</a></li><li><a href="https://www.sierrametals.com/investors/financial-information/sec-filings/default.aspx">SEC Filings</a></li>
+			</ul></li><li><a href="https://www.sierrametals.com/investors/events/default.aspx">Events</a></li><li><a href="https://www.sierrametals.com/investors/media/default.aspx">Media</a></li><li class="has-children"><a href="https://www.sierrametals.com/investors/investor-resources/email-alerts/default.aspx">Investor Resources</a><ul class="level4">
+				<li><a href="https://www.sierrametals.com/investors/investor-resources/email-alerts/default.aspx">Email Alerts</a></li><li><a href="https://www.sierrametals.com/investors/investor-resources/rss/default.aspx">RSS</a></li>
+			</ul></li><li><a href="/investors/events/default.aspx#presentation">Corporate Presentation</a></li><li><a href="https://www.sierrametals.com/investors/Virtual-Mine-Tours/default.aspx">Virtual Mine Tours</a></li>
+		</ul></li><li><a href="https://www.sierrametals.com/responsibility/default.aspx">Responsibility</a></li><li><a href="https://www.sierrametals.com/contact-us/default.aspx">Contact Us</a></li>
+	</ul></li>
+</ul></nav></span><span class='NavigationPaneDiv13'><div id="_ctrl0_ctl36_divModuleContainer" class="module module-search" role="search">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <span id="_ctrl0_ctl36_lblSearchText" class="module-search_text"></span>
+            <input name="_ctrl0$ctl36$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl36_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl36$btnSearch&#39;, &#39;&#39;); " />
+            <input type="submit" name="_ctrl0$ctl36$btnSearch" value="Search" id="_ctrl0_ctl36_btnSearch" class="module_button module-search_button" />
+            
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+        <div class="layout_content" id="maincontent">
+            <div class="pane pane--breadcrumb">
+                <div class="pane_inner clearfix"></div>
+            </div>
+            <div class="pane pane--left">
+                <div class="pane_inner clearfix"><span class='LeftPaneDiv'></span></div>
+            </div>
+            <div class="pane pane--content">
+                <div class="pane_inner clearfix"><span class='ContentPaneDiv'><span class='ContentPaneDiv2'><div id="_ctrl0_ctl63_divModuleContainer" class="module module-embed module-mine-boxes module--no-padding dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_container module_container--widget">
+    <div class="module-mine-boxes_items-container grid grid--flex"></div>
+</div>
+<script>
+$('.module-mine-boxes .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    showAllYears: true,
+    fetchAllYears: true,
+    downloadType: 'Home Mines',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    itemContainer: '.module-mine-boxes_items-container',
+    itemTemplate: (
+        /* beautify preserve:start */
+        '<div class="module-mine-boxes_item grid_col grid_col--1-of-3 grid_col--md-1-of-1 grid_col--sm-1-of-1">' +
+            '<a class="module-mine-boxes_item-link" {{#thumb}}style="background-image: url({{thumb}});"{{/thumb}} href="{{url}}">' +
+                '<span class="module-mine-boxes_item-mine">{{{title}}}</span>' +
+                '<span class="module-mine-boxes_item-country">{{{description}}}</span>' +
+            '</a>' +
+        '</div>'
+        /* beautify preserve:end */
+    )
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv3'><div id="_ctrl0_ctl66_divModuleContainer" class="module module-embed module-why-invest module--thin-top">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-why-invest_intro text-center">
+    <p>Sierra Metals Inc. is a mid-tier precious and base metals producer in Latin America offering a <a href="/investors/why-invest/default.aspx">strong value proposition to investors</a>.</p>
+</div>
+<div class="module-why-invest_items-container grid grid--no-gutter grid--flex">
+    <div class="module-why-invest_item grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <div class="module-why-invest_icon"><img src="//s23.q4cdn.com/335191765/files/images/home/icon-historic-low-cash.svg" alt="historic low cash"></div>
+        <div class="module-why-invest_description">
+            <p>Historic Low Cash Cost Production of Base and Precious Metals</p>
+        </div>
+    </div>
+    <div class="module-why-invest_item grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <div class="module-why-invest_icon"><img src="//s23.q4cdn.com/335191765/files/images/home/icon-solid-financial.svg" alt="solid financial"></div>
+        <div class="module-why-invest_description">
+            <p>Solid Financial Position with High Liquidity and Strong Operating Cash Flows</p>
+        </div>
+    </div>
+    <div class="module-why-invest_item grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <div class="module-why-invest_icon"><img src="//s23.q4cdn.com/335191765/files/images/home/icon-strong-prod.svg" alt="strong prod"></div>
+        <div class="module-why-invest_description">
+            <p>Strong Production
+                <br> & Reserve Growth</p>
+        </div>
+    </div>
+    <div class="module-why-invest_item grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <div class="module-why-invest_icon"><img src="//s23.q4cdn.com/335191765/files/images/home/icon-metals.svg" alt="icon metals"></div>
+        <div class="module-why-invest_description">
+            <p>Diversified Asset Base and Production of 5 metals, including Zinc, Copper, Silver, Lead, and Gold
+            </p>
+        </div>
+    </div>
+</div>
+<script>
+$('.module-why-invest .module-why-invest_items-container').slick({
+    arrows: false,
+    dots: true,
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 1,
+        }
+    }]
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv4'><div id="_ctrl0_ctl69_divModuleContainer" class="module module-embed module-featured-presentation-projects module--no-container module--no-padding">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-featured-presentation-projects_items-container grid grid--no-gutter grid--flex">
+    <div class="module-featured-presentation-projects_item module-featured-presentation-projects_item--slideshow grid_col grid_col--4-of-7 grid_col--md-1-of-1 dark">
+        <h2 class="module_title">Feature Presentation</h2>
+        <div class="module-slideshow">
+            <div class="module_container module_container--content grid grid--no-gutter grid--flex"></div>
+        </div>
+    </div>
+    <div class="module-featured-presentation-projects_item module-featured-presentation-projects_item--maps grid_col grid_col--3-of-7 grid_col--md-1-of-1 list--reset">
+        <h2>Projects</h2>
+        <ul class="module-featured-presentation-projects_item-tabs cleafix">
+            <li><a class="module-featured-presentation-projects_item-tab" href="#peru" data-tab=".module-featured-presentation-projects_item-map--peru">Peru</a></li>
+            <li><a class="module-featured-presentation-projects_item-tab" href="#mexico" data-tab=".module-featured-presentation-projects_item-map--mexico">Mexico</a></li>
+        </ul>
+        <div class="module-featured-presentation-projects_item-map module-featured-presentation-projects_item-map--peru">
+            <img src="//s23.q4cdn.com/335191765/files/images/home/peru-landing-map.jpg" alt="peru map">
+            <div class="module-map-locations">
+                <a class="module-map-locations_item module-map-locations_item--yauricocha" href="#" data-property=".module-map-properties_item--yauricocha">
+                    <span class="module-map-locations_item-pin module-map-locations_item-pin--green q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Yauricocha</span>
+                </a>
+            </div>
+            <div class="module-map-properties">
+                <div class="module-map-properties_item module-map-properties_item--yauricocha dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Yauricocha</h4>
+                    <p>Through its wholly owned subsidiary, Dia Bras Peru S.A.C., Sierra Metals acquired 82% of Minera Corona, S.A. ("Corona") in May of 2011. Established in 1993, Corona is a Peruvian company engaged in the exploration, extraction, production and commercialization of copper, lead and zinc concentrates, with high silver and gold components at the Yauricocha Mine in Yauyos Province, Peru. In addition to the producing mine, the Yauricocha property is host to multiple near-mine and regional exploration targets. Sierra Metals´ current land position in Peru exceeds 50,000 hectares.</p>
+                    <a href="/projects/operations/yaurichocha-mine/default.aspx" class="button">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="module-featured-presentation-projects_item-map module-featured-presentation-projects_item-map--mexico">
+            <img src="//s23.q4cdn.com/335191765/files/images/home/mexico-landing-map.jpg" alt="mexico map">
+            <div class="module-map-locations">
+                <a class="module-map-locations_item module-map-locations_item--bacerac" href="#" data-property=".module-map-properties_item--bacerac">
+                    <span class="module-map-locations_item-pin q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Bacerac</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--moris" href="#" data-property=".module-map-properties_item--moris">
+                    <span class="module-map-locations_item-pin q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Moris</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--arechuyvo" href="#" data-property=".module-map-properties_item--arechuyvo">
+                    <span class="module-map-locations_item-pin q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Arechuyvo</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--maguarichic" href="#" data-property=".module-map-properties_item--maguarichic">
+                    <span class="module-map-locations_item-pin q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Maguarichic</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--oribo" href="#" data-property=".module-map-properties_item--oribo">
+                    <span class="module-map-locations_item-pin q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Oribo</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--cusi" href="#" data-property=".module-map-properties_item--cusi">
+                    <span class="module-map-locations_item-pin module-map-locations_item-pin--green q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Cusi</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--bolivar" href="#" data-property=".module-map-properties_item--bolivar">
+                    <span class="module-map-locations_item-pin module-map-locations_item-pin--green q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Bolivar</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--batopilas" href="#" data-property=".module-map-properties_item--batopilas">
+                    <span class="module-map-locations_item-pin q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Batopilas</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--eastdurango" href="#" data-property=".module-map-properties_item--eastdurango">
+                    <span class="module-map-locations_item-pin q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">East Durango</span>
+                </a>
+                <a class="module-map-locations_item module-map-locations_item--melchorocampo" href="#" data-property=".module-map-properties_item--melchorocampo">
+                    <span class="module-map-locations_item-pin q4-icon_pin"></span>
+                    <span class="module-map-locations_item-description">Melchor Ocampo</span>
+                </a>
+            </div>
+
+            <div class="module-map-properties">
+                <div class="module-map-properties_item module-map-properties_item--bacerac dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Bacerac Property</h4>
+                    <p>On the Bacerac property, Sierra is targeting an area of historic workings known as the San Patricio prospect, where initial confirmation sampling over an interval of 8.3 m yielded weighted averages of 2.3 g/t Au and 1,722 g/t Ag, along with significant values of copper and lead. The Company’s geologists have mapped, trenched and sampled the San Patricio area, with reported results including a 23.5 m trench length averaging 0.59 g/t Au and 200.2 g/t Ag. Mineralization is hosted by shallow-dipping breccias.</p>
+                    <p>Core drilling by Sierra resulted in a low recovery of samples from the breccias zones and further drilling is planned with RC (reverse circulation) method in order to improve sample recovery from the target breccias.</p>
+                    <a href="/projects/exploration/mexico/bacerac-property/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--moris dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Moris Property</h4>
+                    <p>The Moris Property is a low-sulphidation epithermal gold and silver prospect that incorporates several historic mines and is being evaluated for potential near-term small-scale production.</p>
+                    <a href="/projects/exploration/mexico/moris-property/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--arechuyvo dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Arechuyvo</h4>
+                    <p>The Arechuyvo project lies in a region with large exposures of Mesozoic limestone and shale that have been intruded by a large granodiorite pluton near Arechuyvo and numerous mineral occurrences are present. The area is prospective for epithermal precious metal mineralization and for copper skarns and polymetallic replacement mineralization.</p>
+                    <a href="/projects/exploration/mexico/arechuyvo-project/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--maguarichic dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Maguarichic Property</h4>
+                    <p>The Maguarichic property is host to epithermal hot spring gold prospects. In November 2010, Fresnillo, Plc. (“Fresnillo”), and the Company reached an amicable agreement whereby Fresnillo gave up its 30% interest in all of Maguarichic, and the Company transferred approximately 30% of the land concessions it held in the western section of the concessions to Fresnillo. The Company now holds 100% direct interest in its remaining Maguarichic Property.</p>
+                    <a href="/projects/exploration/mexico/maguarichic-property/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--oribo dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Oribo</h4>
+                    <p>The Oribo project is in the San Rafael de Oribo area of western Chihuahua State, Mexico. These concessions are located about 23 km west of Monterde and 25 km north of the Palmarejo and Guazapares districts.</p>
+                    <p>The primary exploration target on the property consists of strongly silicified and brecciated limestone and marble with local skarn occurrences near the contact with intrusions of intermediate composition. Manhattan Minerals (Manhattan) previously explored a portion of the property in 1996 and 1997.</p>
+                    <a href="/projects/exploration/mexico/oribo-project/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--cusi dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Cusi</h4>
+                    <p>Sierra Metals Inc. is a significant mineral property holder in Mexico with a land package of over 142,000 hectares.</p>
+                    <p>The Company's key assets in Mexico include the 100% owned Bolivar and Cusi mines located in southwest and central Chihuahua State, respectively. </p>
+                    <a href="/projects/operations/cusi-mine/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--bolivar dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Bolivar</h4>
+                    <p>Sierra Metals Inc. is a significant mineral property holder in Mexico with a land package of over 142,000 hectares.</p>
+                    <p>The Company's key assets in Mexico include the 100% owned Bolivar and Cusi mines located in southwest and central Chihuahua State, respectively.</p>
+                    <a href="/projects/operations/bolivar-mine/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--batopilas dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Batopilas Property</h4>
+                    <p>The Company began reconnaissance exploration work on the Batopilas property in 2011 with encouraging results. The presence of visible free gold in stream sediments was identified over an 8 km2 area within the 25 km2 La Verde alteration area and is a high-priority target for detailed follow-up work for high- to medium-sulphidation gold mineralization. The property also hosts the Corralitos prospect, a molybdenum-copper deposit that was partially drilled by a previous owner in 1997 and drilled by the Company in 2011 with encouraging results. The primary target at Corralitos is stockwork-hosted molybdenum mineralization adjacent to a major NNE-trending fault.</p>
+                    <a href="/projects/exploration/mexico/batopilas-property/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--eastdurango dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>East Durango</h4>
+                    <p>The East Durango project is located in the center of the Mexican Silver Belt, one of the most active exploration areas in Mexico due to major discoveries such as Penasquito and the nearby ECU property. The property was explored in the 1990s by Laminco and its joint venture partner, Carlin Gold. These companies identified large geochemical soil anomalies for gold, as well as the indicator elements arsenic, antimony and mercury, in an area with geologic characteristics similar to the sedimentary rock hosted gold deposits of Nevada.</p>
+                    <a href="/projects/exploration/mexico/east-durango-project-tecolote/default.aspx" class="button">Learn More</a>
+                </div>
+                <div class="module-map-properties_item module-map-properties_item--melchorocampo dark">
+                    <a href="#close" class="module-map-properties_close-button q4-icon_cross"></a>
+                    <h3>Sierra Metals Properties</h3>
+                    <h4>Melchor Ocampo</h4>
+                    <p>Melchor Ocampo is located in the Concepcion del Oro region of northeastern Zacatecas state near the border with Coahuila state. Mineralization in the Concepcion del Oro region consists of carbonate replacement deposits (CRD) including several large mines and significant historical producers at Concepcion del Oro, Terminal de Providencia, Salaverna, Santa Rosa, Noche Buena, Melchor Ocampo, and the huge Peñasquito mine.</p>
+                    <a href="/projects/exploration/mexico/melchor-ocampo-project/default.aspx" class="button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://widgets.q4app.com/widgets/q4.slideshow.1.1.3.min.js"></script>
+<script>
+$('.module-slideshow .module_container--content').slideshow({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    dateFormat: 'MM yy',
+    tags: ['corporate'],
+    tpl: (
+        /* beautify preserve:start */
+        '<div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">' +
+            '<div class="module-slideshow_viewer">' +
+                '<div class="module-slideshow_ratio">' +
+                    '<iframe style="position: absolute; width: 100%; height: 100%;" src=\'/files/js/pdf-js/viewer.html?file={{url}}#zoom=page-fit\' allowfullscreen webkitallowfullscreen></iframe>' +
+                '</div>' +
+            '</div>' +
+        '</div>' +
+        '<div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">' +
+            '<div class="module-slideshow_title">{{{title}}}</div>' +
+            '<div class="module-slideshow_date">{{date}}</div>' +
+            '<div class="module-slideshow_link-container">' +
+                '<a class="module-slideshow_link" href="{{url}}" target="_blank"><i class="q4-icon_pdf2"></i><span class="module-slideshow_link-text"> Download (PDF {{size}})</span><span class="sr-only">(opens in new window)</span></a>' +
+            '</div>' +
+            '<a href="/investors/events/" class=" home-featured-presentation button--dark">All Presentations</a>'+
+            '<a href="/investors/Virtual-Mine-Tours" class=" home-featured-presentation button--dark">Virtual Tours</a>'+
+        '</div>'
+        /* beautify preserve:end */
+    )
+});
+$('.module-map-locations').on('click', '.module-map-locations_item', function(e) {
+    e.preventDefault();
+    var $this = $(this);
+    $($this.data('property')).addClass('js--active');
+});
+$('.module-map-properties_close-button').on('click', function(e) {
+    e.preventDefault();
+    $(this).parent().removeClass('js--active');
+});
+q4Defaults.tabs($('.module-featured-presentation-projects_item--maps'), '.module-featured-presentation-projects_item-tab', '.module-featured-presentation-projects_item-map', null, false);
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv5'><div id="_ctrl0_ctl72_divModuleContainer" class="module module-embed module-news-events-social module--no-padding">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <style type="text/css">
+.module_custom-scoll {
+    max-height: 480px;
+    min-height: 400px;
+    overflow-y: scroll;
+}
+.module_custom-scoll::-webkit-scrollbar {
+    width: 8px !important;
+}
+/* Track */
+.module_custom-scoll::-webkit-scrollbar-track {
+    background: #f1f1f1 !important; 
+}
+/* Handle */
+.module_custom-scoll::-webkit-scrollbar-thumb {
+    background: #036598 !important; 
+}
+
+/* Handle on hover */
+.module_custom-scoll::-webkit-scrollbar-thumb:hover {
+    background: #252C30 !important; 
+}
+.module-social .module_tabs > span {
+    cursor: pointer;
+    min-width: 56px;
+    height: 47px;
+}
+.module-social .module_tabs > .module_tab-switch:not(.js--selected) a {
+    pointer-events: none;
+}
+.module-social .module-media .module_item-inner:hover {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+}
+.module-social .module_tab--twitter:hover a, .module-social .module_tab--twitter a:hover {
+    border-color: #00ACED;
+    color: #00ACED;
+}
+.module-social .module_tab--video.js--selected a, .module-social .module_tab--video:hover a, .module-social .module_tab--video a:hover {
+    border-color: #B1924D;
+    color: #B1924D;
+}
+.module-social .module_tab--vimeo:hover a {
+    border-color: #1a2e3b;
+    color: #1a2e3b;
+}
+</style>
+<div class="module-news-events-social_items-container grid grid--flex">
+    <div class="module-news-events-social_item grid_col grid_col--1-of-3 grid_col--md-1-of-1">
+        <div class="module_rss module_rss--top module_q4-icon-links">
+            <a href="/rss/PressRelease.aspx" class="module_rss-link" target="_blank">
+                <span class="sr-only">Press Release RSS Feed (opens in new window)</span>
+            </a>
+        </div>
+        <h2 class="module_title">Latest News</h2>
+        <div class="module-news-latest">
+            <div class="module_container module_container--content">
+                <div class="module_items-container"></div>
+            </div>
+        </div>
+        <a href="/investors/news-releases/default.aspx" class="module_view-all-link">View All News</a>
+    </div>
+    <div class="module-news-events-social_item grid_col grid_col--1-of-3 grid_col--md-1-of-1">
+        <div class="module_rss module_rss--top module_q4-icon-links">
+            <a href="/rss/Event.aspx" class="module_rss-link" target="_blank">
+                <span class="sr-only">Event RSS Feed (opens in new window)</span>
+            </a>
+        </div>
+        <h2 class="module_title">Upcoming Events</h2>
+        <div class="module-event-latest">
+            <div class="module_container module_container--content">
+                <div class="module_items-container"></div>
+            </div>
+        </div>
+        <a href="/investors/events/default.aspx" class="module_view-all-link">View All Events</a>
+    </div>
+    <div class="module-news-events-social_item grid_col grid_col--1-of-3 grid_col--md-1-of-1">
+        <h2 class="module_title">Social Media</h2>
+        <div class="module-social">
+            <div class="module_tabs grid grid--no-gutter grid--flex">
+                <!-- <span class="module_tab module_tab--all js--selected grid_col grid_col--2-of-6 grid_col--lg-1-of-3 grid_col--lc-1-of-3 grid_col--md-2-of-4 grid_col--sm-1-of-3">
+                    <a class="button" href="#all" data-filter="">All</a>
+                </span> -->
+                <span class="module_tab module_tab-switch module_tab--twitter grid_col grid_col--1-of-6 grid_col--lg-1-of-3 grid_col--lc-1-of-3 grid_col--md-1-of-4 grid_col--sm-1-of-3 js--selected" data-tab="twitter">
+<!--                     <a class="button" href="#twitter" data-filter="twitter"><i class="q4-icon_twitter"></i><span class="sr-only">Twitter</span></a> -->
+                    <a class="button button--external" href="https://twitter.com/SierraMetals" target="_blank"><i class="q4-icon_twitter"></i><span class="sr-only">Twitter</span></a> 
+                </span>
+                <span class="module_tab module_tab-switch module_tab--video grid_col grid_col--1-of-6 grid_col--lg-1-of-3 grid_col--lc-1-of-3 grid_col--md-1-of-4 grid_col--sm-1-of-3" data-tab="video">
+                    <a class="button button--external" href="/investors/media/default.aspx" target="_blank"><i class="q4-icon_video"></i><span class="sr-only">Video</span></a>
+                </span>
+                <!-- <span class="module_tab module_tab--facebook grid_col grid_col--1-of-6 grid_col--lg-1-of-3 grid_col--lc-1-of-3 grid_col--md-1-of-4 grid_col--sm-1-of-3">
+                    <a class="button" href="#facebook" data-filter="facebook"><i class="q4-icon_facebook"></i><span class="sr-only">Facebook</span></a>
+                </span> -->
+                <span class="module_tab module_tab--instagram grid_col grid_col--1-of-6 grid_col--lg-1-of-3 grid_col--lc-1-of-3 grid_col--md-1-of-4 grid_col--sm-1-of-3">
+                    <a class="button button--external" href="https://www.instagram.com/sierrametals/" target="_blank"><i class="q4-icon_instagram2"></i><span class="sr-only">Instagram</span></a>
+                </span>
+                <span class="module_tab module_tab--linkedin grid_col grid_col--1-of-6 grid_col--lg-1-of-3 grid_col--lc-1-of-3 grid_col--md-1-of-4 grid_col--sm-1-of-3">
+                    <a class="button button--external" href="https://www.linkedin.com/company/sierra-metals-inc-?trk=tyah" target="_blank"><i class="q4-icon_linkedin"></i><span class="sr-only">LinkedIn</span></a>
+                </span>
+                <span class="module_tab module_tab--vimeo grid_col grid_col--1-of-6 grid_col--lg-1-of-3 grid_col--lc-1-of-3 grid_col--md-1-of-4 grid_col--sm-1-of-3">
+                    <a class="button button--external" href="https://vimeo.com/user124164712" target="_blank"><i class="q4-icon_vimeo"></i><span class="sr-only">Vimeo</span></a>
+                </span>
+            </div>
+            <div class="module_container module_container--content module_media-content">
+                <div class="module-twitter module_social-scoll module_custom-scoll module_data-tab" data-tab="twitter">
+                    <a class="twitter-timeline" data-link-color="#B1924D" href="https://twitter.com/SierraMetals?ref_src=twsrc%5Etfw">Tweets by SierraMetals</a> 
+<!--                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+                </div>
+                <div class="module-media module_custom-scoll module_data-tab js--hidden" data-tab="video">
+                    <div class="module_container module_container--widget">
+                        <div class="module_items-container grid grid--flex"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//widgets.q4app.com/widgets/q4.mashfeed.1.6.2.min.js"></script>
+<script>
+$('.module-social .module_tabs .module_tab-switch').on('click', function () {
+    $('.module-social .module_tabs .module_tab-switch').removeClass('js--selected');
+    $(this).addClass('js--selected');
+    var tab = $(this).attr('data-tab');
+    $('.module-social .module_data-tab').addClass('js--hidden');
+    $('.module-social .module_data-tab[data-tab="'+tab+'"]').removeClass('js--hidden');
+});
+$('.module-news-latest .module_container--content').news({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    showAllYears: true,
+    limit: 3,
+    titleLength: 100,
+    itemContainer: '.module_items-container',
+    itemTemplate: (
+        /* beautify preserve:start */
+        '<div class="module_item">' +
+            '<div class="module_date-time">' +
+                '<span class="module_date-text">{{date}}</span>' +
+            '</div>' +
+            '<div class="module_headline">' +
+                '<a class="module_headline-link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>{{title}} {{#blank}}<span class="sr-only">(opens in new window)</span>{{/blank}}</a>' +
+            '</div>' +
+        '</div>'
+        /* beautify preserve:end */
+    ),
+    beforeRender: function(e, data) {
+        $.each(data.items, function(idx, item) {
+            var url = item.url.toLowerCase().split('.');
+            if (url[url.length - 1] == 'pdf') {
+                item.blank = true;
+            }
+        });
+    },
+    complete: function(e) {
+        $(e.target).find('.module_items-container').slick({
+            arrows: false,
+            dots: true,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    }
+});
+$('.module-event-latest .module_container--content').events({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    showAllYears: true,
+    limit: 2,
+    sortAscending: 1,
+    showPast: false,
+    useMoment: true,
+    loadBody: true,
+    dateFormat: '[<span class="month">]MMM[</span>] [<span class="day">]D[</span>]',
+    itemContainer: '.module_items-container',
+    itemTemplate: (
+        /* beautify preserve:start */
+        '<div class="module_item">' +
+            '<div class="module_date-thumbnail">' +
+                '<div class="module_date-time">' +
+                    '<span class="module_date-text"><span class="module_date-text-start">{{{date}}}</span><span class="module_date-text-end">{{{endDate}}}</span></span>' +
+                '</div>' +
+                '<div class="module_thumbnail">{{{thumbEvent}}}</div>' +
+            '</div>' +
+            '<div class="module_headline">' +
+                '<a class="module_headline-link" href="{{url}}">{{title}}</a>' +
+            '</div>' +
+            '<div class="module_links module_q4-icon-links list--reset">' +
+                '{{#webcast}}' +
+                    '<div class="module_webcast">' +
+                        '<a class="module_link module_webcast-link" href="{{webcast}}" target="_blank">' +
+                            '<span class="module_link-text">Webcast</span>' +
+                            '<span class="sr-only">(opens in new window)</span>'+
+                        '</a>' +
+                    '</div>' +
+                '{{/webcast}}' +
+                '{{#isFuture}}' +
+                    '<div class="module_add-to-calendar">' +
+                        '<span class="module_link module_add-to-calendar-reveal">Add to Calendar</span>' +
+                        '<ul class="module_add-to-calendar-list">' +
+                            '<li class="module_add-to-calendar-item module_add-to-calendar-item--apple">' +
+                                '<a href="/DownloadICal.aspx?id={{id}}" target="_blank" class="module_add-to-calendar-link">' +
+                                    '<i class="q4-icon_apple"></i>' +
+                                    '<span class="module_add-to-calendar-text sr-only">Add to Apple Calendar</span>' +
+                                '</a>' +
+                            '</li>' +
+                            '<li class="module_add-to-calendar-item module_add-to-calendar-item--google">' +
+                                '<a href="/DownloadICal.aspx?id={{id}}&platform=GoogleCalendar" target="_blank" class="module_add-to-calendar-link">' +
+                                    '<i class="q4-icon_google"></i>' +
+                                    '<span class="module_add-to-calendar-text sr-only">Add to Google Calendar</span>' +
+                                '</a>' +
+                                '</li>' +
+                            '<li class="module_add-to-calendar-item module_add-to-calendar-item--outlook">' +
+                                '<a href="/DownloadICal.aspx?id={{id}}" target="_blank" class="module_add-to-calendar-link">' +
+                                    '<i class="q4-icon_microsoft"></i>' +
+                                    '<span class="module_add-to-calendar-text sr-only">Add to Microsoft Outlook</span>' +
+                                '</a>' +
+                            '</li>' +
+                            '<li class="module_add-to-calendar-item module_add-to-calendar-item--ics">' +
+                                '<a href="/DownloadICal.aspx?id={{id}}" target="_blank" class="module_add-to-calendar-link">' +
+                                    '<i class="q4-icon_calendar"></i>' +
+                                    '<span class="module_add-to-calendar-text sr-only">Add to iCalendar</span>' +
+                                '</a>' +
+                            '</li>' +
+                        '</ul>' +
+                    '</div>' +
+                '{{/isFuture}}' +
+                '{{#presentations}}' +
+                    '<div class="module_presentation"><a href="{{docUrl}}" target="_blank" class="module_link module_presentation-link">Presentation <span class="sr-only">(opens in new window)</span></a></div>' +
+                '{{/presentations}}' +
+                '{{#pressReleases}}' +
+                    '<div class="module_news"><a href="{{url}}" target="_blank" class="module_link module_news-link">Press Release <span class="sr-only">(opens in new window)</span></a></div>' +
+                '{{/pressReleases}}' +
+                '{{#docs.length}}' +
+                    '<ul class="module_attachments">' +
+                        '{{#docs}}' +
+                            '<li class="module_attachment {{type}}">' +
+                                '<a href="{{url}}" target="_blank" class="module_link module_attachment-link">{{title}} <span class="sr-only">(opens in new window)</span></a>' +
+                            '</li>' +
+                        '{{/docs}}' +
+                    '</ul>' +
+                '{{/docs.length}}' +
+                '{{#financialReports}}' +
+                    '<ul class="module_financials">' +
+                        '{{#docs}}{{^duplicateWebcast}}' +
+                            '<li>' +
+                                '<a href="{{docUrl}}" target="_blank" class="module_link module_financial-link {{docCategory}}"> {{docTitle}} <span class="sr-only">(opens in new window)</span></a>' +
+                            '</li>' +
+                        '{{/duplicateWebcast}}{{/docs}}' +
+                    '</ul>' +
+                '{{/financialReports}}' +
+            '</div>' +
+        '</div>'
+        /* beautify preserve:end */
+    ),
+    beforeRenderItems: function(e, tpl) {
+        $.each(tpl.items, function(i, item) {
+            if (item.date === item.endDate) {
+                item.endDate = "";
+            }
+            $.each(item.financialReports, function(j, report) {
+                $.each(report.docs, function(k, doc) {
+                    if (doc.docCategory == 'webcast' && doc.docUrl == item.webcast) {
+                        doc.duplicateWebcast = true;
+                    }
+                });
+            });
+            //this checks if an event has the 'has-logo' tag to add the specific logo for each event
+            item.hasBody = false;
+            if (item.tags.indexOf('has-logo') > -1) {
+                item.hasBody = true;
+                item.thumbEvent = $('<div>' + item.body + '</div>').find('.module_body-logo').html();
+            } else {
+                item.thumbEvent = '<img src="//s23.q4cdn.com/335191765/files/design/sierra-logo.svg" alt="Sierra Metals Logo">';
+            }
+        });
+    },
+    itemsComplete: function(e) {
+        $(e.target).find('.module_item').each(function() {
+            var $this = $(this);
+            var $starMonth = $this.find('.module_date-text-start .month').text();
+            var $endMonth = $this.find('.module_date-text-end .month').text();
+            if ($starMonth == $endMonth) {
+                $this.find('.module_date-text-end .month').remove();
+            }
+        });
+    },
+    complete: function(e) {
+        $(e.target).find('.module_items-container').slick({
+            arrows: false,
+            dots: true,
+            infinite: false,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+        q4App.addToCalendar($(e.target).find('.module_add-to-calendar'));
+    }
+});
+$('.module-media .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Media',
+    showAllYears: true,
+    limit: 6,
+    itemContainer: '.module_items-container',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    itemTemplate: (
+        /* beautify preserve:start */
+        '<div class="module_item grid_col grid_col--1-of-1">' +
+            '<div class="module_item-inner">' +
+                // '<div class="module_thumbnail" {{#thumb}}style="background-image: url({{thumb}});"{{/thumb}}></div>' +
+                '<a class="module_headline-link" href="{{url}}" target="_blank"><img src="{{thumb}}"></a>'+
+                '<div class="module_headline"><a class="module_headline-link" href="{{url}}" target="_blank">{{{title}}}<span class="sr-only">(opens in new window)</span></a></div>' +
+            '</div>' +
+        '</div>'
+        /* beautify preserve:end */
+    )
+});
+// $('.module-social .module_container--content').mashfeed({
+//     dateFormat: 'MMMM D, YYYY',
+//     limit: 2,
+//     titleLength: 0,
+//     parseLinks: true,
+//     feeds: [{
+//     //     name: 'facebook',
+//     //     type: 'socialstream',
+//     //     client: 'sierra',
+//     //     channel: 'facebook',
+//     //     template: (
+//     //         /* beautify preserve:start */
+//     //         '{{#.}}' +
+//     //             '<div class="module_item module_item-facebook">' +
+//     //                 '<div class="module_headline">{{{title}}}</div>' +
+//     //                 '<div class="module_date-time">{{date}}</div>' +
+//     //             '</div>' +
+//     //         '{{/.}}'
+//     //         /* beautify preserve:end */
+//     //     )
+//     // }, {
+//         name: 'twitter',
+//         type: 'socialstream',
+//         client: 'sierra',
+//         channel: 'twitter',
+//         template: (
+//             /* beautify preserve:start */
+//             '{{#.}}' +
+//                 '<div class="module_item module_item-twitter">' +
+//                     '<div class="module_client-name">@{{user.screen_name}}</div>' +
+//                     '<div class="module_headline">{{{title}}}</div>' +
+//                     '<div class="module_date-time">{{date}}</div>' +
+//                 '</div>' +
+//             '{{/.}}'
+//             /* beautify preserve:end */
+//         )
+//     }],
+//     complete: function(e) {
+//         var $social = $(this),
+//             slickOpts = {
+//                 arrows: false,
+//                 dots: true,
+//                 infinite: false,
+//                 slidesToShow: 2,
+//                 slidesToScroll: 1,
+//                 autoplay: true,
+//                 adaptiveHeight: true,
+//                 responsive: [{
+//                     breakpoint: 1024,
+//                     settings: {
+//                         slidesToShow: 1
+//                     }
+//                 }]
+//             }
+//         $social.slick(slickOpts);
+//         $('.module_tabs .button').not('.button--external').on('click', function(e) {
+//             e.preventDefault();
+//             $social.slick('unslick');
+//             if (e.keyCode == 13 || e.type == 'click') {
+//                 $(this).parent().addClass('js--selected').siblings().removeClass('js--selected');
+//                 $social.mashfeed('updateFilter', $(this).data('filter'));
+//             }
+//             $social.slick(slickOpts);
+//         });
+//     }
+// });
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv6'><div id="_ctrl0_ctl75_divModuleContainer" class="module module-embed module-image-links">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-image-links_items-container grid grid--flex">
+    <div class="module-image-links_item module-image-links_item--production grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <a class="module-image-links_item-link" href="/projects/operations/production-summary/default.aspx">
+            <span class="module-image-links_item-link-inner">
+                <span class="module-image-links_item-title">Production Summary</span>
+            <span class="module-image-links_item-description">Overview of production</span>
+            </span>
+        </a>
+    </div>
+    <div class="module-image-links_item module-image-links_item--investment grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <a class="module-image-links_item-link" href="/investors/why-invest/default.aspx">
+            <span class="module-image-links_item-link-inner">
+                <span class="module-image-links_item-title">Why Invest</span>
+            <span class="module-image-links_item-description">Financial position & potential</span>
+            </span>
+        </a>
+    </div>
+    
+<!-- 00093537 Updating Q3 in the box to Q1 -->
+    <div class="module-image-links_item module-image-links_item--conference grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <a class="module-image-links_item-link" href="https://event.on24.com/wcc/r/3081089/8CC784C584EEDC0F4B1375A13E2CE27A">
+            <span class="module-image-links_item-link-inner">
+                <span class="module-image-links_item-title">First Quarter 2021 Financial Results</span>
+            <span class="module-image-links_item-description">Register Here</span>
+            </span>
+        </a>
+    </div>
+<!--
+    <div class="module-image-links_item module-image-links_item--conference grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <a class="module-image-links_item-link" href="https://www.sierrametals.com/investors/events/event-details/2020/Sierra-Metals-Q3-2020-Consolidated-Financial-Results">
+            <span class="module-image-links_item-link-inner">
+                <span class="module-image-links_item-title">Q3 2020 Financial Results</span>
+            <span class="module-image-links_item-description">Most Recent</span>
+            </span>
+        </a>
+    </div>
+-->
+<!--  00093537 end  -->
+    <div class="module-image-links_item module-image-links_item--virtual-tours grid_col grid_col--1-of-4 grid_col--md-1-of-1">
+        <a class="module-image-links_item-link" href="/investors/Virtual-Mine-Tours">
+            <span class="module-image-links_item-link-inner">
+                <span class="module-image-links_item-title">Virtual Mine Tours</span>
+            <span class="module-image-links_item-description">View Here</span>
+            </span>
+        </a>
+    </div>
+    
+    
+<!--     <div class="module-image-links_item module-image-links_item--financial grid_col grid_col--1-of-3 grid_col--md-1-of-1"></div> -->
+</div>
+<script>
+$('.module-image-links_item--financial').financials({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    fetchAllYears: true,
+    limit: 1,
+    reportTypes: ["First Quarter", "Second Quarter", "Third Quarter", "Fourth Quarter"],
+    docCategories: ['webcast'],
+    append: false,
+    loadingMessage: '<p class="module_loader"><i class="q4-icon_spinner"></i><span class="sr-only">Loading latest financials...</span></p>',
+    template: (
+        /* beautify preserve:start */
+        '{{#items}}' +
+            '{{#docs}}' +
+                '<a class="module-image-links_item-link" href="{{docUrl}}"{{#blank}} target="_blank"{{/blank}}>' +
+                    '<span class="module-image-links_item-link-inner">' +
+                        '<span class="module-image-links_item-title">{{year}} {{shortType}} Quarterly Results Call - Registration</span>' +
+                        '<span class="module-image-links_item-description">Learn more</span>' +
+                        '{{#blank}}<span class="sr-only">(opens in new window)</span>{{/blank}}' +
+                    '</span>' +
+                '</a>' +
+            '{{/docs}}' +
+        '{{/items}}'
+        /* beautify preserve:end */
+    ),
+    beforeRender: function(e, data) {
+        $.each(data.items, function(idx, item) {
+            $.each(item.docs, function(idx, doc) {
+                // Make sure any local links open in the same window
+                var url = doc.docUrl.toLowerCase().split('.');
+                if (url[url.length - 1] != 'aspx') {
+                    doc.blank = true;
+                }
+            });
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--right">
+                <div class="pane_inner clearfix"><span class='RightPaneDiv'></span></div>
+            </div>
+        </div>
+        <div class="layout_footer" role="contentinfo">
+            <div class="pane pane--footer grid grid--no-gutter">
+                <div class="pane_inner clearfix"><span class='FooterPaneDiv'></span></div>
+            </div>
+            <div class="pane pane--footer2">
+                <div class="pane_inner clearfix"><span class='FooterPane2Div16'><div id="_ctrl0_ctl39_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl39_divModuleContainer" class="module module-links module-links-footer list--reset">
+    <div class="module_container module_container--outer">
+        <h2 id="_ctrl0_ctl39_lblTitle" class="module_title"><span id="_ctrl0_ctl39_lblModuleTitle" class="ModuleTitle">Quicklinks</span></h2>
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl39_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.sierrametals.com/contact-us/default.aspx" id="_ctrl0_ctl39_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Contact Us</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.sierrametals.com/investors/financial-information/financial-reports/default.aspx" id="_ctrl0_ctl39_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Financials</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.sierrametals.com/projects/default.aspx" id="_ctrl0_ctl39_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_self">Projects</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl03_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.sedar.com/DisplayCompanyDocuments.do?lang=EN&issuerNo=00003031" id="_ctrl0_ctl39_QuickLinkList_ctl03_link" class="module-links_list-item-link" target="_blank">SEDAR Filings</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl04_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.sierrametals.com/investors/financial-information/sec-filings/default.aspx" id="_ctrl0_ctl39_QuickLinkList_ctl04_link" class="module-links_list-item-link" target="_self">SEC Filings</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl05_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.sierrametals.com/investors/investor-resources/email-alerts/default.aspx" id="_ctrl0_ctl39_QuickLinkList_ctl05_link" class="module-links_list-item-link" target="_self">Email Alerts</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div17'><div id="_ctrl0_ctl42_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl42_divModuleContainer" class="module module-links module-links-social list--reset dark">
+    <div class="module_container module_container--outer">
+        <h2 id="_ctrl0_ctl42_lblTitle" class="module_title"><span id="_ctrl0_ctl42_lblModuleTitle" class="ModuleTitle">Stay Connected</span></h2>
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl42_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://twitter.com/SierraMetals" id="_ctrl0_ctl42_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_twitter"></i><span class="sr-only">Twitter (opens in a new window)</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.facebook.com/SierraMetalsInc" id="_ctrl0_ctl42_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_facebook"></i><span class="sr-only">Facebook (opens in a new window)</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.instagram.com/sierrametals/" id="_ctrl0_ctl42_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_instagram2"></i><span class="sr-only">Instagram (opens in a new window)</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl03_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.linkedin.com/company/sierra-metals-inc-?trk=tyah" id="_ctrl0_ctl42_QuickLinkList_ctl03_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_linkedin"></i><span class="sr-only">Linkedin (opens in a new window)</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl04_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://vimeo.com/user124164712" id="_ctrl0_ctl42_QuickLinkList_ctl04_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_vimeo"></i><span class="sr-only">vimeo (opens in a new window)</span></a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--credits grid grid--no-gutter">
+                <div class="pane_inner clearfix"><span class='Q4FooterDiv18'><div id="_ctrl0_ctl45_divModuleContainer" class="module module-html copyright grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            © <span class="copyright_year"></span> Sierra Metals Inc. All Rights Reserved.
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv19'><div id="_ctrl0_ctl48_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl48_divModuleContainer" class="module module-links module-links-bottom list--reset grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl48_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl48_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.sierrametals.com/disclaimer/default.aspx" id="_ctrl0_ctl48_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Terms of Use</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl48_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.sierrametals.com/privacy-statement/default.aspx" id="_ctrl0_ctl48_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Privacy Statement</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl48_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="Modules/IRPortal.Modules.Core/4_2_2/#" id="_ctrl0_ctl48_QuickLinkList_ctl02_link" class="module-links_list-item-link"><span class="cm-link">Cookie Preferences</span></a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv20'>
+<div class="module module-q4-credits">
+    <div class="module_container module_container--outer">
+        <div class="module_container module_container--inner">
+            <a href="https://www.q4inc.com/Powered-by-Q4/" id="_ctrl0_ctl51_hrefWebsiteRecording" class="module-q4-credits-link" target="_blank">
+                <span id="_ctrl0_ctl51_lblWebsiteRecording" class="module-q4-credits_powered-text">Powered By Q4 Inc.</span>
+                <span id="_ctrl0_ctl51_lblVersion" class="module-q4-credits_version-text">5.56.0.1</span>
+                <span class="sr-only">(opens in new window)</span>
+            </a>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv21'><div id="_ctrl0_ctl54_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script>
+var q4App = $.extend(true, q4Defaults, {
+    scollingTable: function(selector) {
+        $(selector).not(selector + ' table').wrap('<div class="table-wrapper" />');
+    },
+    //rewriting the default mobile expand functionality because some pages has children with no redirect
+    _onMobileMenuExpand: function($nav) {
+        $nav.on('click touch touchstart', 'li.has-children:not(.home) > a > .nav_arrow-icon, li.has-children.no-link:not(.home) > span > .nav_arrow-icon', function(e) {
+            var $this = $(this),
+                $parent = $this.closest('li');
+            if (!$parent.hasClass('js--expanded')) {
+                e.preventDefault();
+                $parent.siblings().removeClass('js--expanded');
+                $parent.addClass('js--expanded');
+            }
+        });
+    },
+    //mobile navigation functionality
+    mobileNav: function() {
+        $('.nav--mobile .level2 li.has-children > a').not('.nav--mobile .level4 li.has-children > a').append('<span class="nav_arrow-icon q4-icon_arrow"></span>');
+        $('.nav--mobile .level2 li.has-children').not('.nav--mobile .level4 li.has-children').find('> ul').prepend('<li class="nav_back-button"><a href="#back"></a></li>');
+        $('.nav--mobile .level2 li.has-children').not('.nav--mobile .level4 li.has-children').each(function() {
+            var $text = $(this).find('> a').text();
+            $(this).find('.nav_back-button a').text($text);
+        });
+        $('.nav_back-button a').on('click', function(e) {
+            e.preventDefault();
+            $(this).closest('.has-children').removeClass('js--expanded');
+        });
+        var $navHeight = $('.nav--mobile').outerHeight();
+        $('.nav--mobile').removeAttr('style').css('min-height', $navHeight);
+        $('.nav--mobile .nav_arrow-icon').on('click touch touchstart', function() {
+            var $levelHeight = $(this).parent().next().outerHeight();
+            if ($navHeight <= $levelHeight) {
+                $('.nav--mobile').removeAttr('style').css('min-height', $levelHeight);
+            } else {
+                $('.nav--mobile').removeAttr('style').css('min-height', $navHeight);
+            }
+        });
+        $('.nav--mobile  .level3 > .nav_back-button a').on('click', function() {
+            $('.nav--mobile').removeAttr('style').css('min-height', $navHeight);
+        });
+    },
+    //rewriting the androidTap function to work on ios devices
+    androidTap: function(selector) {
+        if (q4App.isMobile.Android() || q4App.isMobile.iOS()) {
+            $(selector).on('touch touchstart', 'li.has-children > a, li.has-children.no-link > span', function(e) {
+                var $this = $(this),
+                    $parent = $this.parent();
+                if (!$parent.hasClass('sfHover')) {
+                    e.preventDefault();
+                    $parent.siblings().removeClass('sfHover');
+                    $parent.addClass('sfHover');
+                }
+            });
+        }
+    },
+    //chechs if level4 of secondary navigations has chidren
+    hasChildren: function() {
+        $('.nav--secondary .level4 > li').each(function() {
+            if ($(this).hasClass('has-children')) {
+                $(this).parent().addClass('js--has-children');
+            }
+        });
+    },
+    //select2
+    customSelect: function() {
+        $(".layout_content").find('select').select2({
+            minimumResultsForSearch: Infinity
+        });
+    },
+    init: function() {
+        var app = this;
+        app.cleanUp();
+        app.submitOnEnter('.module-unsubscribe');
+        app.submitOnEnter('.module-search');
+        app.validateSubmit('.module-search');
+        app.superfish($('.nav--main .level2'), {
+            cssArrows: false
+        });
+        app.superfish($('.nav--secondary .level3'), {
+            cssArrows: false
+        });
+        app.mobileNav();
+        app.mobileMenuToggle($('.layout'), '.pane--navigation', '.layout_toggle button');
+        app.cleanQuickLinks($('.module-links'));
+        app.copyright($('.copyright_year'));
+        app.docTracking();
+        app.fancySignup();
+        app.resetDate(['.nav a[href*="s4.q4web.com"]:not([href$=".pdf"])']);
+        app.previewToolbar();
+        app.sections();
+        app.reveal('.pane--header .module-search', 'h2', '.module_container--inner', false);
+        app.hasChildren();
+        app.customSelect();
+        app.contrast.init();
+    }
+});
+q4App.init();
+</script>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv22'><div id="_ctrl0_ctl57_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <link rel="stylesheet" type="text/css" href="//s23.q4cdn.com/335191765/files/css/other/q4.cookie-monster.min.css">
+<style type="text/css">
+    .cm .optional_slider[data-toggle="on"]{background-color: #5b8849;}
+    .cm .optional_slider[data-toggle="on"]:before{left: 2px;}
+    .cm_close-button:after, .cm_close-button:before {top: 0; left:7.5px;}
+    .cm .cm_close-button {width: 20px;}
+    .cm .cm_disclaimer-buttons button {background-color: #036598;}
+</style>
+<script type="text/javascript" src="https://widgets.q4app.com/widgets/q4.cookiemonster.0.1.6.min.js"></script>
+<script type="text/javascript">
+$(window).cookieMonster({
+  logo: '', //default
+  triggerClass: '.cm-link',
+  initState: 'disclaimer', // disclaimer/open/closed
+  acceptOnClose: false, // when users click on the close button or outside the sidebar this will set the cookie and the recommended settings.
+  googleUACode: 'UA-65180305-1',
+  disclaimer: {
+    layout: 'banner', //popup/banner
+    style: 'slide-up', //slide-up/fade-in
+    header: 'Cookies on this website.',
+    description: 'We use cookies on sierrametals.com to provide you with the best possible experience. If you wish to review the cookies we store, please select the Cookie Preferences option on this banner. After your preferences are saved, you can use the cookie icon at the left to modify your selections at any time. For more information, you can review our <a href="/privacy-statement/default.aspx">Privacy Statement</a>.',
+    accept: 'Accept',
+    control: 'Cookie Preferences',
+    deny: 'Deny',
+    closeButton: true,
+    onDeny: function() {},
+    onAccept: function() {},
+    onClose: function() {}
+  },
+  preferences: {
+    position: 'left', //left/right
+    header: 'Sierra Metals Cookie Preferences',
+    description: 'Please use the following sections to learn more about the types of cookies we use, and how you can opt out of those you do not wish to be stored. At sierrametals.com, we respect your privacy and are committed to protecting your information. For more information, you can review our <a href="/privacy-statement/default.aspx">Privacy Statement</a>.',
+    statement: null,
+    recommendedText: 'Accept Recommended Settings',
+    necessaryHeader: 'Necessary Cookies',
+    necessaryDescription: 'These cookies are necessary for the services and viewing experience of this site, and cannot be opted out of via this tool. If you still wish to remove these, you may do using your browser settings. A description of these technologies is provided in our <a href="/privacy-statement/default.aspx">Privacy Statement</a>.',
+    thirdPartyHeader: 'Warning: Some cookies require your attention',
+    thirdPartyDescription: 'Consent for some third party cookies can not be automatically revoked. Please follow the link below if you want to opt out of them.',
+  },
+  style: {
+    disclaimer: {
+      headerColor: '#036598',
+      textColor: '#252C30',
+      buttonTextColor: '#fff',
+      acceptButtonColor: '#036598',
+    },
+    preference: {
+      bgcolor: '',
+      headerColor: '#036598',
+      textColor: '#252C30',
+      acceptButtonColor: '#036598',
+      buttonTextColor: '#fff',
+      warningHeaderColor: '#252C30',
+    }
+  },
+  optionalCookies: [{
+      name: 'twitter',
+      label: 'Twitter',
+      description: 'We use these cookies to deliver a seamless user experience.',
+      cookies: ['personalization_id', 'tfw_exp'],
+      onByDefault: false,
+      onAccept: function() {
+        function async_load() {
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.src = 'https://platform.twitter.com/widgets.js';
+          var c = document.getElementsByTagName('script')[0];
+          c.parentNode.insertBefore(s, c);
+        }
+        async_load();
+      },
+      onRevoke: function() {},
+      onDeny: function() {},
+      thirdPartyCookies: {
+        name: 'Twitter',
+        optOutLink: 'https://help.twitter.com/en/twitter-for-websites-ads-info-and-privacy'
+      }
+    }
+  ],
+  complete: function(e) {}
+});
+</script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

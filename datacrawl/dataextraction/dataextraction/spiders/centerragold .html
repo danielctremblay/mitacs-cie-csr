@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Centerra Gold</title>
+        <link rel="icon" href="/favicon.png">
+        <link rel="alternate" type="application/rss+xml" title="Centerra Gold RSS" href="http://centerragold.com/rss.xml" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="/css/1.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/css/2.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/css/3.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/css/4.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/css/5.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/css/6.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="/css/custom.css?v=0.4" media="all" />
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.min.css" media="all" />
+        <script type="text/javascript" src="/js/1.js"></script>
+        <script type="text/javascript" src="/js/2.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.3.1/lity.min.js"></script>
+	<script type="text/javascript">
+	<!--//--><![CDATA[//><!--
+	(function($) {
+            $(document).ready(function() {
+                effectsIn = Drupal.settings.inEffects;
+                effectsOut = Drupal.settings.outEffects;
+                var options = Drupal.settings.md_slider_options_1;
+                $('#md-slider-1-block').mdSlider(options);
+              });
+            })(jQuery);
+        //--><!]]>
+	</script>
+        <script type="text/javascript" src="/js/3.js?v=0.01"></script>
+        <script type="text/javascript" src="/js/4.js"></script>
+        <script src="https://unpkg.com/axios@0.17.0/dist/axios.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+	<script type="text/javascript">
+	<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"corporate","theme_token":"cmotV1Vv-UZK4h27naBERq2sBJEaZqYnOcH5rZ1yiW8","js":{"profiles\/superhero\/modules\/contrib\/lightbox2\/js\/auto_image_handling.js":1,"profiles\/superhero\/modules\/contrib\/lightbox2\/js\/lightbox.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.js":1,"misc\/jquery.once.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.core.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.widget.js":1,"misc\/drupal.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.button.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.mouse.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.draggable.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.position.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.resizable.js":1,"profiles\/superhero\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.dialog.js":1,"sites\/all\/modules\/ext_link_page\/ext_link_page.js":1,"profiles\/superhero\/libraries\/isotope\/jquery.isotope.js":1,"profiles\/superhero\/modules\/superhero_framework\/superhero_dropdown\/js\/superhero-dropdown.js":1,"profiles\/superhero\/modules\/premium\/md_slider\/js\/jquery.touchwipe.js":1,"profiles\/superhero\/modules\/premium\/md_slider\/js\/mdvideobox.js":1,"profiles\/superhero\/modules\/premium\/md_slider\/js\/modernizr.js":1,"profiles\/superhero\/modules\/premium\/md_slider\/js\/jquery.easing.js":1,"profiles\/superhero\/modules\/premium\/md_slider\/js\/md-slider.js":1,"0":1,"profiles\/superhero\/themes\/superhero\/js\/smoothscroll.js":1,"profiles\/superhero\/libraries\/stellar.js\/jquery.stellar.min.js":1,"profiles\/superhero\/themes\/superhero\/vendor\/bootstrap\/js\/bootstrap.min.js":1,"profiles\/superhero\/themes\/superhero\/vendor\/jquery.appear.js":1,"profiles\/superhero\/themes\/superhero\/js\/superhero.js":1,"profiles\/superhero\/themes\/superhero\/js\/superhero-sticky.js":1,"profiles\/superhero\/themes\/corporate\/js\/corporate.js":1},"css":{"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"profiles\/superhero\/modules\/contrib\/views\/css\/views.css":1,"profiles\/superhero\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"profiles\/superhero\/modules\/contrib\/ctools\/css\/ctools.css":1,"profiles\/superhero\/modules\/contrib\/lightbox2\/css\/lightbox.css":1,"profiles\/superhero\/libraries\/isotope\/jquery.isotope.css":1,"profiles\/superhero\/modules\/superhero_framework\/superhero_dropdown\/css\/superhero-dropdown.css":1,"profiles\/superhero\/modules\/premium\/md_slider\/css\/animate.css":1,"profiles\/superhero\/modules\/premium\/md_slider\/css\/md-slider.css":1,"0":1,"profiles\/superhero\/modules\/premium\/md_slider\/css\/md-slider-style.css":1,"profiles\/superhero\/themes\/superhero\/vendor\/bootstrap\/css\/bootstrap.min.css":1,"profiles\/superhero\/modules\/superhero_framework\/superhero_block\/css\/block.css":1,"profiles\/superhero\/themes\/superhero\/vendor\/bootstrap\/css\/bootstrap-theme.min.css":1,"profiles\/superhero\/themes\/superhero\/vendor\/font-awesome\/css\/font-awesome.min.css":1,"profiles\/superhero\/themes\/superhero\/vendor\/animate.css":1,"profiles\/superhero\/themes\/superhero\/css\/main.css":1,"profiles\/superhero\/themes\/corporate\/css\/style.css":1,"public:\/\/css\/corporate-theme-preset1.css":1,"public:\/\/customcss\/custom.css":1}},"ext_link_page":{"pathLinkPage":"\/ext_link","messageTitle":"NOTICE ON THIRD PARTY LINKS","messageBody":"You are about to leave Centerra Gold Inc.\u2019s secured website to go to a third party website, independent of Centerra Gold.\r\n\r\nBy selecting this link, you will be transferred from Centerra\u2019s website to a website that is not affiliated or owned by Centerra.\r\nYou may proceed at your own risk. Centerra has no control over sites accessed from hyperlinks provided and as such Centerra is not responsible or liable for the operation or contents of the website to which you are linking. Centerra does not monitor the content, maintain, nor endorse the information on any linked website.\r\n\r\nYou are about to leave [site_name].  If you are not taken there in [delay] seconds, follow this link: [link].","extLinkClass":"","directDisable":0,"delay":10,"siteName":"Centerra Gold"},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)public:\/","default_image":"\/profiles\/superhero\/modules\/contrib\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":1,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":1,"force_show_nav":1,"show_caption":0,"loop_items":1,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"(\\.thumbnail)","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"img.thumbnail, img.image-thumbnail","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":0,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":0},"inEffects":["bounceIn","bounceInDown","bounceInUp","bounceInLeft","bounceInRight","fadeIn","fadeInUp","fadeInDown","fadeInLeft","fadeInRight","fadeInUpBig","fadeInDownBig","fadeInLeftBig","fadeInRightBig","flipInX","flipInY","foolishIn","lightSpeedIn","puffIn","rollIn","rotateIn","rotateInDownLeft","rotateInDownRight","rotateInUpLeft","rotateInUpRight","twisterInDown","twisterInUp","swap","swashIn","tinRightIn","tinLeftIn","tinUpIn","tinDownIn","vanishIn"],"outEffects":["bombRightOut","bombLeftOut","bounceOut","bounceOutDown","bounceOutUp","bounceOutLeft","bounceOutRight","fadeOut","fadeOutUp","fadeOutDown","fadeOutLeft","fadeOutRight","fadeOutUpBig","fadeOutDownBig","fadeOutLeftBig","fadeOutRightBig","flipOutX","flipOutY","foolishOut","hinge","holeOut","lightSpeedOut","puffOut","rollOut","rotateOut","rotateOutDownLeft","rotateOutDownRight","rotateOutUpLeft","rotateOutUpRight","rotateDown","rotateUp","rotateLeft","rotateRight","swashOut","tinRightOut","tinLeftOut","tinUpOut","tinDownOut","vanishOut"],"md_slider_options_1":{"fullwidth":true,"transitionsSpeed":800,"width":"100%","height":"420","enableDrag":true,"responsive":true,"loop":true,"showLoading":false,"loadingPosition":"bottom","showArrow":true,"showBullet":true,"posBullet":"2","showThumb":false,"posThumb":"1","slideShowDelay":"8000","slideShow":true,"styleBorder":"0","styleShadow":"0","videoBox":false}});
+	//--><!]]>
+	</script>
+    </head>
+    <body class="html front not-logged-in no-sidebars page-node wide ltr">
+    <div class="body-innerwrapper">
+        <div id="skip-link">
+            <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+        </div>
+        <div class="region region-page-top">
+        </div>
+
+        <div class="body">
+            <section id="section-top-panel" class="section section-top-panel" style="margin:0;padding:8px 0;background-color:#424242;">
+                <div class="container">
+                    <div class="row">
+                        <div class="region region-toppanel-col-sm-2 col-md-2 col-lg-2">
+                        </div>
+                        <div class="region region-toppanel-third col-sm-2 col-md-2 col-lg-2">
+                        </div>
+                        <div class="region region-toppanel-second col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                            <div id="block-block-10" class="block block-block header-menu">
+
+
+                                <div class="content">
+                                    <ul>
+                                        <li><a href="/contact-us">Contact us</a>
+                                        </li>
+                                        <li><a href="/subscribe">Subscribe</a>
+                                        </li>
+                                        <li><a href="/disclaimer">Disclaimer</a>
+                                        </li>
+                                        <li><a href="/privacy-policy">Privacy Policy</a>
+                                        </li>
+                                        <li><a href="/glossary">Glossary</a>
+                                        </li>
+                                        <li><a href="/ext_link?url=http%3A//www.kitco.com/">Kitco</a>
+                                        </li>
+                                        <li><a href="/ext_link?url=http%3A//sedar.com/" target="_blank">SEDAR</a>
+                                        </li>
+                                        <li><a href="/ext_link?url=https%3A//www.sec.gov/" target="_blank">EDGAR</a>
+                                        </li>
+                                        <li><a href="/ext_link?url=http%3A//www.gold.org/" target="_blank">World Gold Council</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-header" class="section section-header superhero-sticky" style="margin:0;padding:0;">
+                <div class="container">
+                    <div class="row">
+                        <div class="region region-logo col-md-2 col-lg-2">
+                            <div class="site-logo clearfix">
+                                <a href="/" rel="home" class="active"><img src="/images/cg_logo.png" id="logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="region region-menu col-md-10 col-lg-10">
+
+                            <div id="block-superhero-dropdown-superhero-dropdown-block" class="block block-superhero-dropdown">
+
+
+                                <div class="content">
+                                    <a data-target=".nav-collapse" data-toggle="collapse" href="#" class="superhero-mobile-menu-toggle .btn .btn-default">
+                                        <i class="fa fa-align-justify"></i>
+                                    </a>
+                                    <div class="superhero-dropdown">
+                                        <ul class="menu">
+                                            <li class="leaf"><a href="/" class="active">Home</a>
+                                            </li>
+                                            <li class="expanded"><a href="/corporate">Corporate</a>
+                                                <ul class="menu">
+                                                    <li class="leaf"><a href="/corporate/quick-facts">Quick Facts</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/corporate/centerra-vision">Centerra Vision</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/corporate/centerra-values">Centerra Values</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/corporate/strategy">Strategy</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/corporate/directors-management">Directors &amp; Management</a>
+                                                    </li>
+                                                    <li class="expanded"><a href="/corporate/board-committees-and-mandate">Corporate Governance</a>
+                                                        <ul class="menu">
+                                                            <li class="leaf"><a href="/corporate/shareholder-documents">Shareholder Documents</a>
+                                                            </li>
+                                                            <li class="leaf"><a href="/corporate/board-committees-and-mandate">Board Mandate and Committee Charters</a>
+                                                            </li>
+                                                            <li class="leaf"><a href="/corporate/shareholder-feedback">Shareholder Feedback</a>
+                                                            </li>
+                                                            <li class="leaf"><a href="/corporate/code-of-ethics">Code of Ethics</a>
+                                                            </li>
+                                                            <li class="leaf"><a href="/corporate/complaint-procedure">Complaint Procedure</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="leaf"><a href="/corporate/history">History</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="expanded"><a href="/operations">Operations</a>
+                                                <ul class="menu">
+                                                    <li class="leaf"><a href="/operations/reserve-and-resource-summary">Reserve and Resource Summary</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/operations/life-mine-summary">Life of Mine Summary</a>
+                                                    </li>
+                                                    <li class="expanded"><a href="/operations/kumtor">Mine Operations</a>
+                                                        <ul class="menu">
+                                                            <li class="expanded"><a href="/operations/kumtor">Kumtor</a>
+                                                                <ul class="menu">
+                                                                    <li class="leaf"><a href="/operations/kumtor/history">History</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/kumtor/exploration-results">Exploration Results</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/kumtor/production-and-reserves">Production and Reserves</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/kumtor/mining-and-milling">Mining &amp; Milling</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/kumtor/environment-and-safety">Environment and Safety</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/kumtor/socio-economic-impact">Socio-Economic Impact</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/kumtor/environment-and-sustainability">Annual Environment & Sustainability Reports</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="expanded"><a href="/operations/mount-milligan/history">Mount Milligan</a>
+                                                                <ul class="menu">
+                                                                    <li class="leaf"><a href="/operations/mount-milligan/history">History</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/mount-milligan/exploration-results">Exploration Results</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/mount-milligan/production-and-reserves">Production and Reserves</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/mount-milligan/community-engagement">Community Engagement</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="expanded"><a href="/operations/oksut/history">Oksut</a>
+                                                                <ul class="menu">
+                                                                    <li class="leaf"><a href="/operations/oksut/history">History</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/oksut/resource-estimate">Resource Estimate</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/oksut/exploration-results">Exploration Results</a>
+                                                                    </li>
+                                                                    <li class="leaf"><a href="/operations/oksut/construction-update">Construction Update</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="expanded tcm"><a href="/operations/thompson-creek-metals/thompson-creek/history">Thompson Creek Metals</a>
+                                                                <ul class="menu">
+                                                                    
+                                                                    <li class="expanded"><a href="/operations/thompson-creek-metals/thompson-creek/history">Thompson Creek Mine</a>
+                                                                        <ul class="menu">
+                                                                            <li class="leaf"><a href="/operations/thompson-creek-metals/thompson-creek/history">History</a>
+                                                                            </li>
+                                                                            <li class="leaf"><a href="/operations/thompson-creek-metals/thompson-creek/production-and-reserves">Production and Reserves</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="expanded"><a href="/operations/thompson-creek-metals/endako/history">Endako</a>
+                                                                        <ul class="menu">
+                                                                            <li class="leaf"><a href="/operations/thompson-creek-metals/endako/history">History</a>
+                                                                            </li>
+                                                                            <li class="leaf"><a href="/operations/thompson-creek-metals/endako/production-and-reserves">Production and Reserves</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li class="expanded"><a href="/operations/thompson-creek-metals/langeloth/history">Langeloth Metallurgical Facility</a>
+                                                                        <ul class="menu">
+                                                                            <li class="leaf"><a href="/operations/thompson-creek-metals/langeloth/history">History</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="expanded"><a href="/operations/kemess/kemess-underground-project">Development</a>
+                                                        <ul class="menu">
+                                                            <li class="expanded"><a href="/operations/kemess/kemess-underground-project">Kemess</a>
+                                                                <ul class="menu">
+                                                                    <li class="leaf"><a href="/operations/kemess/kemess-underground-project">Kemess Underground Project</a></li>
+                                                                    <li class="leaf"><a href="/operations/kemess/kemess-east">Kemess East</a></li>
+                                                                    <li class="leaf"><a href="/operations/kemess/ceaa-reports">CEAA Reports</a></li>
+                                                                    <li class="leaf"><a href="/operations/kemess/technical-reports">Technical Reports</a></li>
+                                                                    <li class="leaf"><a href="/operations/kemess/reserves-and-resources">Reserves and Resources</a></li>
+                                                                    <li class="leaf"><a href="/operations/kemess/environment">Environment</a></li>
+                                                                    <li class="leaf"><a href="/operations/kemess/exploration-results">Exploration Results</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            
+                                                        </ul>
+                                                    </li>
+                                                    <li class="expanded"><a href="/operations/berg/history">Advanced Exploration</a>
+                                                        <ul class="menu">
+                                                            <li class="expanded"><a href="/operations/berg/history">Berg</a>
+                                                                <ul class="menu">
+                                                                    <li class="leaf"><a href="/operations/berg/history">History</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="leaf"><a href="/operations/exploration-results">Exploration Results</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="expanded"><a href="/investor">Investor Centre</a>
+                                                <ul class="menu">
+                                                    <li class="leaf"><a href="/investor/why-own-centerra">Why Own Centerra</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/investor/stock-information">Stock Information</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/investor/dividend">Dividend</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/investor/news-releases">News Releases</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/investor/financials">Financials</a>
+                                                    </li>
+                                                    <!-- <li class="leaf"><a href="/investor/factsheets">Factsheets</a>
+                                                    </li> -->
+                                                    <li class="leaf"><a href="/investor/events-presentations">Events &amp; Presentations</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/investor/webcasts">Webcast</a>
+                                                    </li>
+                                                     <li class="leaf"><a href="https://sustainability.centerragold.com/transparency-hub/">ESG Transparency Hub</a>
+                                                    </li>
+                                                    <li class="expanded"><a href="/investor/multimedia">Multimedia</a>
+                                                        <ul class="menu">
+                                                            <li class="leaf"><a href="/investor/multimedia/photo-gallery">Photo Gallery</a>
+                                                            </li>
+                                                            <li class="leaf"><a href="/investor/multimedia/video-gallery">Video Gallery</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="leaf"><a href="/investor/analyst-coverage">Analyst Coverage</a>
+                                                    </li>
+                                                    <li class="leaf"><a href="/investor/shareholder-information">Shareholder Information</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="leaf"><a href="https://sustainability.centerragold.com/"
+                                                >
+                                                Responsible Mining
+                                                 
+                                                </a></li>
+                                            <li class="leaf"><a 
+                                                href="https://sustainability.centerragold.com/transparency-hub/">
+                                                <p style="font-size: 12.5px; width: min-content; min-width: 100%; line-height: 2; padding-top: 20px;">
+                                                ESG Documents
+                                                </p>   
+                                                </a>
+                                            </li>
+                                            
+                                            
+                                            
+
+                                            
+                                            <li class="leaf"><a href="/careers">Careers</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+<section id="section-feature" class="section section-feature" style="margin:0;padding:0;">
+    <div class="sh-container">
+        <div class="row">
+            <div id="first-slider">
+                <div id="centerra-carousel" class="carousel slide carousel-fade">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#centerra-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#centerra-carousel" data-slide-to="1"></li>
+                        <li data-target="#centerra-carousel" data-slide-to="2"></li>
+                        <li data-target="#centerra-carousel" data-slide-to="3"></li>
+                        <li data-target="#centerra-carousel" data-slide-to="4"></li>
+                        
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <!-- Item 1 -->
+                        <div class="item active slide1">
+                            <div class="row"><div class="container">
+                                <div class="col-md-3 text-right">
+                                    <img style="max-width: 340px; visibility: hidden"  data-animation="animated zoomInLeft" src="/img/window_domain.png">
+                                </div>
+                                <div class="col-md-9 text-left">
+
+                                 </div>
+                            </div></div>
+                         </div>
+                        <!-- Item 2 -->
+                        <div class="item slide2">
+                            <a href="/operations/mount-milligan/history">
+                                <div class="row"><div class="container">
+                                    <div class="col-md-3 text-right">
+                                        <img style="max-width: 340px; visibility: hidden"  data-animation="animated zoomInLeft" src="/img/window_domain.png">
+                                    </div>
+                                    <div class="col-md-9 text-left">
+
+                                     </div>
+                                </div></div>
+                            </a>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="item slide3">
+                            <a href="/operations/kumtor">
+                                <div class="row"><div class="container">
+                                    <div class="col-md-3 text-right">
+                                        <img style="max-width: 340px; visibility: hidden"  data-animation="animated zoomInLeft" src="/img/window_domain.png">
+                                    </div>
+                                    <div class="col-md-9 text-left">
+
+                                     </div>
+                                </div></div>
+                            </a>
+                        </div>
+                        <!-- End Item 3 -->
+                        <!-- Item 4 -->
+                        <div class="item slide4">
+                            <a href="/operations/oksut/history">
+                                <div class="row"><div class="container">
+                                    <div class="col-md-3 text-right">
+                                        <img style="max-width: 340px; visibility: hidden"  data-animation="animated zoomInLeft" src="/img/window_domain.png">
+                                    </div>
+                                    <div class="col-md-9 text-left">
+
+                                     </div>
+                                </div></div>
+                            </a>
+                        </div>
+                        <!-- End Item 4 -->
+                        <!-- Item 5 -->
+                        <div class="item slide5">
+                            <a href="/operations/kemess/kemess-underground-project">
+                                <div class="row"><div class="container">
+                                    <div class="col-md-3 text-right">
+                                        <img style="max-width: 340px; visibility: hidden"  data-animation="animated zoomInLeft" src="/img/window_domain.png">
+                                    </div>
+                                    <div class="col-md-9 text-left">
+
+                                     </div>
+                                </div></div>
+                            </a>
+                        </div>
+                        <!-- End Item 5 -->
+                        <!-- Item 6 -->
+                        
+
+
+                    </div>
+                    <!-- End Wrapper for slides-->
+                    <a class="left carousel-control" href="#centerra-carousel" role="button" data-slide="prev" style="display: none">
+                        <i class="fa fa-angle-left"></i><span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#centerra-carousel" role="button" data-slide="next" style="display: none">
+                        <i class="fa fa-angle-right"></i><span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section-content-top" class="section section-content-top" style="margin:0;padding:0;">
+    <div class="container">
+        <div class="row">
+            <div class="region region-content-top-2 col-sm-9 col-md-3 col-lg-3">
+
+                <div id="block-block-2" class="block block-block">
+                    <div class="content" style="padding-bottom: 15px;">
+                        <div class="front-page-side-bar">
+                            <h3 class="block-title">What's New</h3>
+                            <div style="padding: 0 10px;">
+                                <div style="margin-top: 10px; color:#3c3c3c; font-size:14px; font-weight:bold; text-transform: uppercase; ">Öksüt Mine</div>
+
+                                <a href="/img/Oksut-First-Gold-Bar.jpg"><img src="/img/oksut_firstgoldbar.png"/></a>
+                                <p style="font-size: 10px; text-align: center"><i>Öksüt First Gold Pour – January 31, 2020</i></p>
+                                
+                                <div style="margin-top: 10px; color:#2a6c4e; font-size:14px; font-weight:bold;">Q1-2021 Webcast Slides</div>
+                                <div class="video-tn">
+                                    <a href="https://s3.amazonaws.com/centerragold/events/May2021/l0vJefV38atUmBuXBogK.pdf" target="_blank">
+                                        <img src="/img/webcast_q1_2021_tn.jpg"/></a>
+                                </div>
+                                
+
+                                
+
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="margin-top: 25px;">
+                    <div class="item" style="margin: 10px 0"><a href="http://www.kumtor.kg/en" target="_blank"><img src="/images/kumtorlogo-rs.jpg" /></a></div>
+                    <div class="item" style=""><a href="/operations/mount-milligan/history"><img src="/images/mm-logo.jpg" style="width:200px; margin-left: -20px" /></a></div>
+                    <div class="item" style="margin: 10px 0"><a href="http://oksutmadencilik.com.tr/en" target="_blank"><img src="/images/oksut-maden-cilik_logo.png" /></a></div>
+                    <div class="item" style="margin: 30px 0"><a href="/operations/kemess/kemess-underground-project"><img src="/images/kemess_logo_1.jpg" width=130 /></a></div>
+                    
+                    <div class="item" style="margin: 20px 0"><a href="/operations/thompson-creek-metals/thompson-creek/history"><img src="/images/ThompsonCreek-Logo.jpg" width=150 /></a></div>
+                    <div class="item" style="margin: 40px 0"><a href="/ext_link?url=http%3A//www.gold.org"><img src="/images/wgc-member.png" /></a></div>
+                </div>
+
+            </div>
+            <div class="region region-content-top-1 col-sm-5 col-md-5 col-lg-5">
+                <div id="block-block-3" class="block block-block">
+                    <h3 class="block-title">Welcome to Centerra Gold</h2>
+                    <div class="content">
+                        <p>Centerra Gold is a Canadian-based gold mining and exploration company engaged in the operation, exploration, development and acquisition of gold properties in North America, Asia and other markets worldwide. Centerra Gold operates three mines, the Mount Milligan Mine in Canada, the Kumtor Mine in the Kyrgyz Republic, and the Öksüt Mine in Turkey. Centerra Gold’s vision is to build a team-based culture of excellence that responsibly delivers sustainable value and growth. Our objective is to build shareholder value by maximizing the potential of our current properties and leveraging our financial strength and experience to acquire new long-life, low-cost projects.</p>
+                    </div>
+                </div>
+                <div id="block-views-news-releases-block" class="block block-views">
+
+                    <h3 class="block-title">News Releases</h2>
+
+                    <div class="content">
+                        <div class="view view-news-releases view-id-news_releases">
+
+                            <div class="view-content">
+                                                                    <div class="views-row">
+                                        <div class="views-field views-field-field-news-release-date">
+                                            <div class="field-content">
+                                                <span class="date-display-single">May 20, 2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="views-field views-field-field-news-release-file">
+                                            <div class="field-content">
+                                                <span class="file">
+                                                    <img class="file-icon" alt="PDF icon" src="/img/application-pdf.png">
+                            <a href="https://s3.amazonaws.com/centerragold/news/May2021/3QpHGseElImerFleUMxt.pdf" target="_blank">Centerra Gold Announces Proceedings Against Former Board Director Tengiz Bolturuk</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="views-row">
+                                        <div class="views-field views-field-field-news-release-date">
+                                            <div class="field-content">
+                                                <span class="date-display-single">May 18, 2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="views-field views-field-field-news-release-file">
+                                            <div class="field-content">
+                                                <span class="file">
+                                                    <img class="file-icon" alt="PDF icon" src="/img/application-pdf.png">
+                            <a href="https://s3.amazonaws.com/centerragold/news/May2021/9QbL5oDj7VhD5NxEgDcA.pdf" target="_blank">Centerra Gold Conference Call on Kyrgyz Republic Developments</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="views-row">
+                                        <div class="views-field views-field-field-news-release-date">
+                                            <div class="field-content">
+                                                <span class="date-display-single">May 17, 2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="views-field views-field-field-news-release-file">
+                                            <div class="field-content">
+                                                <span class="file">
+                                                    <img class="file-icon" alt="PDF icon" src="/img/application-pdf.png">
+                            <a href="https://s3.amazonaws.com/centerragold/news/May2021/5tWvjvm1EaO8s3KKN2ah.pdf" target="_blank">Centerra Gold Announces Restrictions on Shares Held by Kyrgyzaltyn JSC</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="views-row">
+                                        <div class="views-field views-field-field-news-release-date">
+                                            <div class="field-content">
+                                                <span class="date-display-single">May 17, 2021</span>
+                                            </div>
+                                        </div>
+                                        <div class="views-field views-field-field-news-release-file">
+                                            <div class="field-content">
+                                                <span class="file">
+                                                    <img class="file-icon" alt="PDF icon" src="/img/application-pdf.png">
+                            <a href="https://s3.amazonaws.com/centerragold/news/May2021/lLOBQ4IWWnZWzMOwV2MY.pdf" target="_blank">Centerra Gold Responds to Latest Developments in the Kyrgyz Republic</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="region region-content-top-2 col-sm-4 col-md-3 col-lg-4">
+                <div id="block-block-2" class="block block-block">
+                    <div class="content">
+                        <div class="front-page-side-bar">
+
+                            <h3 class="block-title">
+                                <a href="/investor/stock-information">Stock Information </a>
+                            </h3>
+                                <div style="padding-left: 10px;color:#3c3c3c; font-size:14px; font-weight:bold;">CG.TO (TSX)</div>
+                                <div class="api-loader" style="width: 100%; height: 173px; background-color: white; text-align: center; padding-top: 25px;"><img src="/img/loading.gif" /><h6 style="color #5b5b5b">Loading ...</h6></div>
+                                <table class="api-stock-quotes" border="0" style="width:100%; display: none;">
+                                  <tr>
+                                    <td colspan="3"><div style="font-size:22px; font-weight:bold; line-height:28px;"><sup>$</sup><span class="api-price"></span></div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="34%"><font color="#3c3c3c">Change</font></td>
+                                    <td width="33%"><div align="right"><strong><span class="api-change"></span></strong></div></td>
+                                    <td width="33%"><div align="right"><strong><span class="api-change_percent"></span>%</strong></div></td>
+                                  </tr>
+                                  <tr>
+                                    <td><font color="#3c3c3c">Volume</font></td>
+                                    <td colspan="2"><div align="right"><font color="#3c3c3c"><strong> <span class="api-volume"></span></strong></font></div></td>
+                                  </tr>
+
+                                  
+                                </table>
+
+                                <div style="padding-left: 10px;color:#3c3c3c; font-size:14px; font-weight:bold;">CGAU (NYSE)</div>
+                                <div class="api-loader" style="width: 100%; height: 173px; background-color: white; text-align: center; padding-top: 25px;"><img src="/img/loading.gif" /><h6 style="color #5b5b5b">Loading ...</h6></div>
+                                <table class="api-stock-quotes" border="0" style="width:100%; display: none;">
+                                  <tr>
+                                    <td colspan="3"><div style="font-size:22px; font-weight:bold; line-height:28px;"><sup>$</sup><span class="api-priceNY"></span></div></td>
+                                  </tr>
+                                  <tr>
+                                    <td width="34%"><font color="#3c3c3c">Change</font></td>
+                                    <td width="33%"><div align="right"><strong><span class="api-changeNY"></span></strong></div></td>
+                                    <td width="33%"><div align="right"><strong><span class="api-change_percentNY"></span>%</strong></div></td>
+                                  </tr>
+                                  <tr>
+                                    <td><font color="#3c3c3c">Volume</font></td>
+                                    <td colspan="2"><div align="right"><font color="#3c3c3c"><strong> <span class="api-volumeNY"></span></strong></font></div></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td><font color="#3c3c3c"><strong>Gold</strong></font></td>
+                                    <td colspan="2"><div align="right"><font color="#3c3c3c"><strong><span class="api-gold"></span></strong></font></div></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td><font color="#3c3c3c"><strong>Copper</strong></font></td>
+                                    <td colspan="2"><div align="right"><font color="#3c3c3c"><strong><span class="api-copper"></span></strong></font></div></td>
+                                  </tr>
+
+                                  <tr>
+                                    <td colspan="3"><div style="color:#575757; font-size:10px;">Updated: <span class="api-date"></span></div></td>
+                                  </tr>
+                                </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="block-block-4" class="block block-block">
+    <div class="content">
+        <div class="front-page-side-bar">
+            <h3 class="block-title">Quick Links</h3>
+            <table border="0" cellpadding="0" cellspacing="0" class="quick_links" style="width:100%">
+                <tbody>
+                    <tr>
+                        <td><img alt="" src="/img/icon_download.png" />
+                        </td>
+                        <td>
+                            <p>
+                                <strong><a href="https://cg-raw.s3.amazonaws.com/cg/reports/CenterraGold_TSFDisclosure_Aug_2020.pdf">Church of England Tailings Disclosure</a></strong>
+                                
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img alt="" src="/img/icon_graph.png" />
+                        </td>
+                        <td>Why Own
+                            <br /><strong><a href="/investor/why-own-centerra">Centerra Gold?</a></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img alt="" src="/img/global_location.png" width="46" />
+                        </td>
+                        <td>Operations
+                            <br /><strong><a href="/operations/global-locations">Global Locations</a></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img alt="" src="/img/icon_calendar.png" />
+                        </td>
+                        <td>Attend Centerra Gold
+                            <br /><strong><a href="/investor/events-presentations">Upcoming Events/Webcasts</a></strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img alt="" src="/img/icon_documents.png" />
+                        </td>
+                        <td>Download &amp; View
+                            <p><strong><a href="https://www.centerragold.com/cg-raw/cg/cg-annual-report-2020.pdf">2020 Annual Report</a></strong>
+                            </p>
+                            <p><strong><a href="https://www.centerragold.com/cg-raw/cg/2019_Centerra_ESG_Report.pdf" target="_blank">2019 Centerra ESG Report</a></strong>
+                            </p>
+                            
+                            <p><strong><a href="https://www.centerragold.com/cg-raw/cg/1-wgc_guidance_note_on_non-gaap_metrics.pdf" target="_blank">WGC Guidance Note on non-GAAP Metrics</a></strong>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img alt="" src="/img/icon_download.png" />
+                        </td>
+                        <td>Download PDF
+                            <p><strong><a href="/2021-meeting-materials">2021 Annual Meeting Materials</a></strong>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img alt="" src="/img/icon_newsrelease.png" />
+                        </td>
+                        <td>Subscribe for
+                            <br /><strong><a href="/subscribe">News Releases</a></strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+            <section id="section-bottom2" class="section section-bottom2" style="margin:0;padding:0;">
+                <div class="container">
+                    <div class="row">
+                        <div class="region region-bottom-fifth col-sm-4 col-md-4 col-lg-4">
+                            <div id="block-block-1" class="block block-block">
+                                <div class="content">
+                                    <h3>Corporate</h3>
+                                    <p><a href="/corporate/quick-facts">Quick Facts</a>
+                                    </p>
+                                    <p><a href="/corporate/centerra-vision">Centerra Vision</a>
+                                    </p>
+                                    <p><a href="/corporate/centerra-values">Centerra Values</a>
+                                    </p>
+                                    <p><a href="/corporate/strategy">Strategy</a>
+                                    </p>
+                                    <p><a href="/corporate/directors-management">Directors &amp; Management</a>
+                                    </p>
+                                    <p><a href="/corporate/board-committees-and-mandate">Corporate Governance</a>
+                                    </p>
+                                    <p><a href="/corporate/history">History</a>
+                                    </p>
+                                    <p> </p>
+                                    <h3>Operations</h3>
+                                    <p>Reserve &amp; Resources Summary</p>
+                                    <p>Life of Mine Summary</p>
+                                    <p><a href="/operations/kumtor">Mine Operations</a>
+                                    </p>
+                                    <p><a href="/operations/kemess/kemess-underground-project">Development</a>
+                                    </p>
+                                    <p><a href="/operations/berg/history">Advanced Exploration</a>
+                                    </p>
+                                    <p><a href="/operations/exploration-results">Exploration Results</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="region region-bottom-third col-sm-4 col-md-4 col-lg-4">
+                            <div id="block-block-6" class="block block-block">
+                                <div class="content">
+                                    <h3>Investor Centre</h3>
+                                    <p><a href="/investor/why-own-centerra">Why Own Centerra</a>
+                                    </p>
+                                    <p><a href="/investor/stock-information">Stock Information</a>
+                                    </p>
+                                    <p><a href="/investor/dividend">Dividend</a>
+                                    </p>
+                                    <p><a href="/investor/news-releases">News Releases</a>
+                                    </p>
+                                    <p><a href="/investor/financials">Financials</a>
+                                    </p>
+                                    <!-- <p><a href="/investor/factsheets">Factsheets</a>
+                                    </p> -->
+                                    <p><a href="/investor/events-presentations">Events &amp; Presentations</a>
+                                    </p>
+                                    <p><a href="https://sustainability.centerragold.com/transparency-hub/">ESG Transparency Hub</a>
+                                    </p>
+                                    <p><a href="/investor/multimedia/photo-gallery">Photo Gallery</a>
+                                    </p>
+                                    <p><a href="/investor/analyst-coverage">Analyst Coverage</a>
+                                    </p>
+                                    <p><a href="/investor/shareholder-information">Shareholder Information</a>
+                                    </p>
+                                    <p><a href="/2021-meeting-materials">2021 Annual Meeting Materials</a></p>
+                                    <p> </p>
+                                    <h3>Corporate Responsibility</h3>
+                                    <p><a href="https://sustainability.centerragold.com/">Responsible Mining</a>
+                                    <p><a href="https://sustainability.centerragold.com/transparency-hub/">ESG Documents</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="region region-bottom-fourth col-sm-4 col-md-4 col-lg-4">
+                            <div id="block-block-7" class="block block-block">
+                                <div class="content">
+                                    <h3>Corporate Headquarters</h3>
+                                    <p>1 University Avenue, Suite 1500
+                                        <br /> Toronto, ON
+                                        <br /> M5J 2P1</p>
+                                    <p> </p>
+                                    <p>Tel: +1 (416) 204-1953</p>
+                                    <p>Fax: +1 (416) 204-1954</p>
+                                    <p>Email: <a href="mailto:info@centerragold.com">info@centerragold.com</a>
+                                    </p>
+                                    <p>
+                                        <a href="/ext_link?url=http%3A//goo.gl/maps/DFngQ"><img alt="location" src="/img/location.png" />
+                                        </a>
+                                    </p>
+                                    <p> </p>
+                                    <h3>Careers</h3>
+                                    <p><a href="/careers">Careers</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section-footer" class="section section-footer" style="margin:0;padding:0;">
+                <div class="container">
+                    <div class="row">
+                        <div class="region region-footer-col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                            <div id="block-block-8" class="block block-block footer-copyright">
+
+
+                                <div class="content">
+                                    <p>Copyright © 2021 Centerra Gold Inc.
+                                        <br /><span style="font-size:12px;">Powered by <a href="http://www.renmarkfinancial.com"> Renmark Financial Communications Inc.</a></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="region region-footer-second col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <div id="block-block-9" class="block block-block footer-menu">
+
+
+                                <div class="content">
+                                    <ul>
+                                        <li><a href="/">Home</a>
+                                        </li>
+                                        <li><a href="/contact-us">Contact us</a>
+                                        </li>
+                                        <li><a href="/subscribe">Subscribe</a>
+                                        </li>
+                                        <li><a href="/disclaimer">Disclaimer</a>
+                                        </li>
+                                        <li><a href="/privacy-policy">Privacy Policy</a>
+                                        </li>
+                                        <li><a href="/glossary">Glossary</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="region region-page-bottom">
+        </div>
+                <script type="text/javascript" src="/js/footer.js"></script>
+        <script type="text/javascript" src="/js/lightbox.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-26995147-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+        
+<script type="text/javascript">
+(function( $ ) {
+
+    //Function to animate slider captions
+    function doAnimations( elems ) {
+        //Cache the animationend event in a variable
+        var animEndEv = 'webkitAnimationEnd animationend';
+
+        elems.each(function () {
+            var $this = $(this),
+                $animationType = $this.data('animation');
+            $this.addClass($animationType).one(animEndEv, function () {
+                $this.removeClass($animationType);
+            });
+        });
+    }
+
+    //Variables on page load
+    var $myCarousel = $('#centerra-carousel'),
+        $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+
+    //Initialize carousel
+    $myCarousel.carousel();
+
+    //Animate captions in first slide on page load
+    doAnimations($firstAnimatingElems);
+
+    //Pause carousel
+    $myCarousel.carousel('pause');
+
+
+    //Other slides to be animated on carousel slide event
+    $myCarousel.on('slide.bs.carousel', function (e) {
+        var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+        doAnimations($animatingElems);
+    });
+    $('#centerra-carousel').carousel({
+        interval:3000,
+        pause: "false"
+    });
+
+
+
+    axios.get('/api/quote')
+        .then(function (response) {
+            $(".api-stock-quotes").show();
+            $(".api-loader").hide();
+            $(".api-price").text(response.data.price);
+            $(".api-price").parent().css("color", response.data.color);
+            $(".api-change").text(response.data.change);
+            $(".api-change").parent().css("color", response.data.color);
+            $(".api-change_percent").text(response.data.change_percent);
+            $(".api-change_percent").parent().css("color", response.data.color);
+            $(".api-volume").text(response.data.volume);
+            $(".api-date").text(response.data.last_updated);
+
+            $(".api-priceNY").text(response.data.priceNY);
+            $(".api-priceNY").parent().css("color", response.data.colorNY);
+            $(".api-changeNY").text(response.data.changeNY);
+            $(".api-changeNY").parent().css("color", response.data.colorNY);
+            $(".api-change_percentNY").text(response.data.change_percentNY);
+            $(".api-change_percentNY").parent().css("color", response.data.colorNY);
+            $(".api-volumeNY").text(response.data.volumeNY);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+    axios.get('/api/gold')
+        .then(function (response) {
+            $(".api-gold").text(response.data.gold);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+    axios.get('/api/copper')
+        .then(function (response) {
+            $(".api-copper").text(response.data.copper);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+})(jQuery);
+</script>
+    </div>
+</body>
+</html>

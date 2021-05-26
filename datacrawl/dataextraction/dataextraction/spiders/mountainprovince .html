@@ -1,0 +1,2050 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://mountainprovince.burnkit.com/ -->
+
+  <html class="homepage wd_hero_image" lang="">
+
+<head>
+<!-- begin spin_special_output(head_start) -->
+<link href="css/wd_categories.css" type="text/css" rel="stylesheet" wd_script_id="wd_categories.css">
+<script type="text/javascript" src="js/jquery-webdriver.js" wd_script_id="jquery-webdriver.js"></script>
+<script type="text/javascript" src="js/webdriver.js" wd_script_id="webdriver.js"></script>
+<script type="text/javascript">webDriver.push_jQuery();</script>
+<script type="text/javascript" src="js/wd_resize.js" wd_script_id="wd_resize.js"></script>
+<script type="text/javascript" src="js/wd_imagesloaded.js" wd_script_id="wd_imagesloaded.js"></script>
+<link href="css/wd_carousel.css" type="text/css" rel="stylesheet" wd_script_id="wd_carousel.css">
+<script type="text/javascript" wd_script_id="wd_carousel_script">
+(function($, undefined) {
+	webDriver.loadCarousel = function() {
+		var options = {};
+		var options_string = $(this).attr("wd_carousel_options");
+		if (options_string)
+			options = JSON.parse(options_string);
+		$(this).wd_carousel(options);
+
+
+	}
+	
+	webDriver.resizeCarousel = function() {
+		$(this).find(".wd_carousel-list").wd_carousel("resize");
+		return false;
+	}
+	
+	var wd_carousel = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_carousel.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.$element = $(element);
+			this._options = {
+				selector: "li",
+				center: true,
+				slideSpeed: 500,
+				slideEasing: "linear",
+				infinite: true,
+				widthMode: "content", // content, columns, width
+				heightMode: "fixed", // content, fixed
+				columns: 3,
+				minWidth: 250,
+				scrollUnit: "item", // item, page
+				scrollSize: 1,
+				dragThreshold: 10,
+				"class": "",
+				autoScroll: 0
+			};
+			
+			this.options(options);
+			
+			this.$container = $("<div>").addClass("wd_carousel").attr("wd_resize","resizeCarousel").insertBefore(this.$element);
+			if (this._options["class"])
+				this.$container.addClass(this._options["class"]);
+			this.$cropper = $("<div>").addClass("wd_carousel-cropper").appendTo(this.$container);
+			this.$element
+					.addClass("wd_carousel-list")
+					.appendTo(this.$cropper)
+					.css({position:"absolute",top:0,left:0})
+					.on("dragstart", "*", function(event) {event.preventDefault();});
+			this.$prev = $("<a class=\"wd_carousel-arrow wd_carousel-prev fa fa-chevron-left\" href=\"#prev\"><\/a>")
+					.on("click", function(event) {
+						self.stop();
+						self.prev();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			this.$next = $("<a class=\"wd_carousel-arrow wd_carousel-next fa fa-chevron-right\" href=\"#next\"><\/a>")
+					.on("click", function(event) {
+						self.stop();
+						self.next();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+
+			//Indicators	
+			
+			$(".single_slider_carousel_indicators li").on("click", function(e){
+
+						var sli_index = $(this).attr("data-slide-to");
+						
+						//scrollToItem: function(item) { 
+
+						var slides = self.$element.children().not(".wd_clone");
+
+						self.scrollToItem(slides[sli_index]);
+				})	
+			
+//			this.$dragger = $("<div>")
+//					.addClass("wd_carousel-dragger")
+//					.appendTo(this.$cropper)
+			this.$cropper
+					.on("click", function(event) {
+						self.onClick(event);
+					})
+					.on("mousedown touchstart", function(event) {
+						self.dragStart(event);
+					})
+					.on("mousemove touchmove", function(event) {
+						self.dragMove(event);
+					})
+					.on("mouseup touchend mouseleave touchcancel", function(event) {
+						self.dragEnd(event);
+					});
+			this.dragging = false;
+			this.dragged = false;
+			
+			this.$items = this.$element.children(this._options.selector);
+			this.$items.addClass("wd_carousel-item");
+			
+			// Remove any non-items (e.g. unintended text nodes)
+			this.$element.empty();
+			this.$element.append(this.$items);
+
+			this.navEnabled = true;
+			this.currentIndex = 0;
+			this.$currentItem = this.$items.eq(0);
+			
+			this.$clones = $([]);
+			
+			this.size_known = false;
+			this.$element.wd_imagesloaded(
+				function() {
+					self.size_known = true;					
+					self.resize();
+				},
+				"size"
+			);
+			
+			this.reset();
+			
+			this.start(this._options.autoScroll);
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.resize();
+		},
+
+		reset: function() {
+			this.$items.data("wd_carousel-index", null);
+			this.$clones.data("wd_carousel-index", null);
+			this.$element.children(".wd_clone").detach();
+			
+			var $children = this.$element.children();
+			this.itemCount = $children.length;
+			$children.each(function(index) {
+				$(this).data("wd_carousel-index", index);
+			});
+			
+			if (this.itemCount > 0) {
+				var $last_child = $children.eq(-1);
+				this.listWidth = $last_child.position().left + $last_child.outerWidth();
+			} else {
+				this.listWidth = 0;
+			}
+			
+			var cropperWidth = this.$cropper.innerWidth();
+			
+			if (this.itemCount < 2 || this.listWidth <= cropperWidth) {
+				var position = this._options.center ? ((cropperWidth-this.listWidth)/2) : 0;
+				this.$element.css("left", position);
+				$children.addClass("wd_carousel-current");
+				if (this.itemCount > 0 && this.size_known) {
+					this.$currentItem = this.itemAt(this.listWidth/2);
+					this.currentIndex = this.$currentItem.data("wd_carousel-index");
+				}
+				this.hideNav(true);
+			} else {
+				var left = cropperWidth;
+				for (var i = -1; i > -$children.length; --i) {
+					var $item = $children.eq(i);
+					var $clone = $item.data("wd_carousel-clone-left");
+					if (!$clone)
+						$clone = this.clone($item, "left");
+					this.$element.prepend($clone);
+					$clone.data("wd_carousel-index", i);
+					left -= $item.outerWidth();
+					if (left <= 0)
+						break;
+				}
+				
+				var right = 0;
+				for (var i = 0; i < $children.length; ++i) {
+					var $item = $children.eq(i);
+					var $clone = $item.data("wd_carousel-clone-right");
+					if (!$clone)
+						$clone = this.clone($item, "right");
+					this.$element.append($clone);
+					$clone.data("wd_carousel-index", $children.length+i);
+					right += $item.outerWidth();
+					if (right >= cropperWidth)
+						break;
+				}
+
+				this.hideNav(false);
+
+				var index = this.$currentItem.data("wd_carousel-index");
+				if (!index)
+					index = 0;
+				this.scrollToIndex(index, true);
+			}
+		},
+				
+		clone: function($item, dir) {
+			var $clone = $item.clone(true)
+				.attr("id","")
+				.addClass("wd_clone")
+				.data("wd_carousel-cloned-from", $item);
+		
+			$clone.find("[id]").each(function() {
+				$(this).attr("id", "");
+			});
+
+			$item.data("wd_carousel-clone-"+dir, $clone);
+			
+			this.$clones = this.$clones.add($clone);
+			
+			return $clone;
+		},
+				
+		hideNav: function(hide) {
+			this.$prev.toggle(!hide);
+			this.$next.toggle(!hide);
+			this.navEnabled = !hide;
+		},
+				
+		next: function() {
+			return this.scrollBy(this._options.scrollSize, this._options.scrollUnit);
+		},
+
+		prev: function() {
+			return this.scrollBy(-this._options.scrollSize, this._options.scrollUnit);
+		},
+		
+		scrollBy: function(count, unit) {
+			if (!this.navEnabled)
+				return false;
+			
+			var index;
+			if (unit == "item") {
+				index = this.currentIndex + count;
+			} else { // unit == "page"
+				var pageWidth = this.$cropper.innerWidth();
+				var offset = count;
+				if (this._options.center) {
+					pageWidth /= 2;
+					++offset;
+				}
+				var position = offset * pageWidth - this.$element.position().left;
+				var $item = this.itemAt(position);
+				index = $item.data("wd_carousel-index");
+				if (index == this.currentIndex)
+					index += (count < 0) ? -1 : 1;
+			}
+			
+			return this.scrollToIndex(index);
+		},
+				
+		_doAutoScroll: function() {
+			if (this.navEnabled && this.autoScrollInterval > 0) {
+				var self = this;
+				this.autoScrollTimer = setTimeout(function() {
+						self.next();
+					},
+					this.autoScrollInterval
+				);
+			}
+		},
+		
+		start: function(interval) {
+			this.pause();
+			if (interval !== undefined)
+				this.autoScrollInterval = interval;
+			this._doAutoScroll();
+		},
+		
+		pause: function() {
+			if (this.autoScrollTimer) {
+				clearTimeout(this.autoScrollTimer);
+				this.autoScrollTimer = null;
+			}
+		},
+				
+		stop: function() {
+			this.pause();
+			this.autoScrollInterval = 0;
+		},
+		
+		scrollToIndex: function(index, now) {
+			if (this.itemCount == 0 || !this.navEnabled)
+				return false;
+			
+			this.pause();
+			
+			var $children = this.$element.children().not(".wd_clone");
+			
+			index = (index + $children.length) % $children.length;
+			var $child = $children.eq(index);
+			
+			this.$element.find(".wd_carousel-current").removeClass("wd_carousel-current");
+			$child.addClass("wd_carousel-current");
+			
+			var position = -$child.position().left;
+			if (this._options.center) {
+				position += this.$cropper.innerWidth()/2 - $child.outerWidth()/2;
+			}
+			
+			if (this._options.slideEasing && !now) {
+				this.$element.stop();
+				
+				var cur_offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var cur_pos = this.$element.position().left;
+				var $cur_item = this.itemAt(cur_offset - cur_pos);
+				var cur_dist = Math.abs(position - cur_pos);
+				
+				var $clone, clone_pos, clone_dist;
+				$clone = $cur_item.data("wd_carousel-clone-left");
+				if ($clone) {
+					var clone_pos = -$clone.position().left;
+					if (this._options.center) {
+						clone_pos += this.$cropper.innerWidth()/2 - $clone.outerWidth()/2;
+					}
+					clone_dist = Math.abs(position - clone_pos);
+					if (clone_dist < cur_dist) {
+						cur_pos = clone_pos;
+						cur_dist = clone_dist;
+					}
+				}
+
+				$clone = $cur_item.data("wd_carousel-clone-right");
+				if ($clone) {
+					var clone_pos = -$clone.position().left;
+					if (this._options.center) {
+						clone_pos += this.$cropper.innerWidth()/2 - $clone.outerWidth()/2;
+					}
+					clone_dist = Math.abs(position - clone_pos);
+					if (clone_dist < cur_dist) {
+						cur_pos = clone_pos;
+						cur_dist = clone_dist;
+					}
+				}
+
+				var self = this;
+				this.$element.css("left", cur_pos);
+				this.$element.animate({left: position}, this._options.slideSpeed, this._options.slideEasing, function() {self.start();});
+			} else {
+				this.$element.css("left", position);
+				this.start();
+			}
+
+			this.currentIndex = index;
+			this.$currentItem = $child;
+		},
+				
+		scrollToItem: function(item) {
+			var index = $(item).data("wd_carousel-index");
+			if (index !== null)
+				this.scrollToIndex(index);
+		},
+				
+		makeItemCurrent: function(item) {
+			var $item = $(item);
+			if (!$item.hasClass("wd_carousel-current")) {
+				this.$element.find(".wd_carousel-current").removeClass("wd_carousel-current");
+				
+				var $clonedFrom = $item.data("wd_carousel-cloned-from");
+				if ($clonedFrom) {
+					var clone_pos = $item.position().left;
+					var item_pos = $clonedFrom.position().left;
+					var offset = clone_pos - item_pos;
+					this.$element.css("left", this.$element.css("left") + offset);
+					this.dragListX += offset;
+					$item = $clonedFrom;
+				}
+				
+				$item.addClass("wd_carousel-current");
+				this.currentIndex = $item.data("wd_carousel-index");
+				this.$currentItem = $item;
+			}
+		},
+				
+		itemAt: function(position) {
+			var $children = this.$element.children();
+			if ($children.length == 0)
+				return null;
+			
+			var $item = $children.eq(Math.floor($children.length/2));
+			var dir = 0;
+			while (true) {
+				if (position < $item.position().left) {
+					$item = $item.prev();
+					if (dir == 1)
+						break;
+					dir = -1;
+				} else if (position > $item.position().left + $item.outerWidth()) {
+					$item = $item.next();
+					if (dir == -1)
+						break;
+					dir = 1;
+				} else {
+					break;
+				}
+				if ($item.length == 0)
+					break;
+			}
+			
+			return $item;
+		},
+				
+		onClick: function(event) {
+			if (this.dragged) {
+				event.stopImmediatePropagation();
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		},
+				
+		dragStart: function(event) {
+			this.dragged = false;
+
+			if (!this.navEnabled)
+				return;
+
+			this.pause();
+			this.dragIndex = this.currentIndex;
+			
+			this.dragStartX = this.eventPosition(event);
+			if (this.dragStartX === undefined)
+				return;
+			
+			this.dragListX = this.$element.position().left;
+
+//			this.$cropper.addClass("dragging");
+			this.dragging = true;
+		},
+				
+		dragMove: function(event) {
+			if (!this.dragging)
+				return;
+			
+			event.preventDefault();
+			
+			var pos = this.eventPosition(event);
+			var delta = pos - this.dragStartX;
+			
+			if (!this.dragged && Math.abs(delta) >= this._options.dragThreshold) {
+				this.$cropper.addClass("dragging");
+				this.dragged = true;
+			}
+			
+			if (this.dragged) {
+				var list_position = this.dragListX+delta;
+				this.$element.css("left", list_position);
+				
+				var offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var position = offset - this.$element.position().left;
+				var $item = this.itemAt(position);
+				this.makeItemCurrent($item);
+			}
+		},
+				
+		dragEnd: function(event) {
+			if (!this.dragging)
+				return;
+			
+			if (this.dragged) {
+				var offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var position = offset - this.$element.position().left;
+				var $item = this.itemAt(position);
+				var index = $item.data("wd_carousel-index");
+				if (index !== null && index != this.dragIndex)
+					this.stop();
+				this.scrollToIndex(index);
+			}
+
+			this.$cropper.removeClass("dragging");
+			this.dragging = false;
+			this.start();
+		},
+				
+		eventPosition: function(event) {
+			if (event.originalEvent && event.originalEvent.touches) {
+				var touches = event.originalEvent.touches;
+				if (touches.length != 1)
+					return undefined;
+				return touches[0].pageX;
+			} else {
+				return event.pageX;
+			}
+		},
+				
+		filter: function(selector) {
+			this.$element.children().detach();
+			var $items = this.$items;
+			if (selector)
+				$items = $items.filter(selector);
+			if ($items.length > 0)
+				this.$element.append($items);
+			this.reset();
+		},
+		
+		destroy: function() {
+			this.stop();
+			this.filter(false);
+			this.$clones = $([]);
+			this.$items
+				.removeClass("wd_carousel-item")
+				.data("wd_carousel-index", null)
+				.data("wd_carousel-clone-right", null)
+				.data("wd_carousel-clone-left", null);
+			this.$element
+				.removeClass("wd_carousel-list")
+				.insertBefore(this.$container);
+			this.$container.remove();
+		},
+		
+		resize: function() {
+			if (this._options.widthMode != "content") {
+				var totalWidth = this.$cropper.innerWidth();
+				var columns = this._options.columns;
+				if (this._options.widthMode == "width")
+					columns = Math.max(Math.floor(totalWidth / this._options.minWidth), 1);
+				var width = totalWidth / columns;
+				this.$items.outerWidth(width);
+				this.$clones.outerWidth(width);
+			}
+			
+			webDriver.doResize(this.$element);
+			
+			if (this._options.heightMode == "content") {
+				var height = this.$element.outerHeight();
+				this.$cropper.height(height);
+			}
+			
+			this.reset();
+		}
+	};
+
+	$.fn.wd_carousel = function(options) {
+		var args = Array.prototype.slice.call(arguments, 1);
+		var result = this;
+		
+		this.each(function() {
+			var instance = $(this).data("wd_carousel");
+			if (typeof options == "string") {
+				var res = instance[options].apply(instance, args);
+				if (typeof res != "undefined") {
+					result = res;
+					return false;
+				}
+			} else {
+                if (instance) {
+                    instance.reload(options);
+                } else {
+                    $(this).data("wd_carousel", new wd_carousel(this, options));
+                }
+			}
+        });
+		
+		return result;
+    };
+})(webDriver.jQuery);
+</script>
+<style type="text/css" wd_script_id="template teaser_list:newsfeed_releases:system style">
+.wd_newsfeed_releases-teaser .wd_date {
+	font-weight: bold;
+}
+.wd_newsfeed_releases-teaser .wd_title {
+	font-weight: bold;
+}
+.wd_newsfeed_releases-teaser .subscribe_link {
+	margin-bottom: 1em;
+}
+.wd_newsfeed_releases-teaser span.wd_subscribe_email-icon {  
+	font-size: 1.2em; 
+}</style>
+<style type="text/css" wd_script_id="featureboxes_style">
+		.wd_featurebox_icon {
+			display: inline;
+		}
+		.wd_featurebox_icon img {
+			vertical-align: middle;
+		}
+		div.wd_featurebox_group div.wd_tabs_wrapper {
+			border: none;
+			border-bottom: 1px solid #E1E1E1;
+			padding: 0 0 5px 0;
+		}
+		div.wd_featurebox_group div.wd_featurebox {
+			border: none;
+			padding: 8px 0 0 0;
+		}
+		div.wd_featurebox_group li.wd_tab {
+			float: none;
+			color: #666666;
+		}
+		div.wd_featurebox_group li.wd_tab-active {
+			border: none;
+			background-color: transparent;
+			color: #000000;
+			font-weight: bold;
+		}
+		div.wd_featurebox_group li.wd_tab-inactive {
+			cursor: auto;
+		}
+	</style>
+<script type="text/javascript" src="js/wd_scriptloader.js" wd_script_id="wd_scriptloader.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js" wd_script_id="jquery-ui.js"></script>
+<link href="css/wd_modal.css" type="text/css" rel="stylesheet" wd_script_id="wd_modal.css">
+<link href="css/wd_wcag.css" type="text/css" rel="stylesheet" wd_script_id="wd_wcag.css">
+<script type="text/javascript" wd_script_id="wd_modal_script">
+(function($) {
+	webDriver.resizeModal = function() {
+		$(this).find(".wd_modal").wd_modal("resize");
+		return false;
+	}
+	
+	var modals = [];
+		
+	function _value(value, base) {
+		if (typeof value == "string" && value.indexOf("%") > 0) {
+			return  base * parseInt(value, 10) / 100;
+		} else {
+			return parseInt(value, 10);
+		}
+	}
+	
+	var wd_modal = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_modal.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.isOpen = false;
+			this.opener = null;
+			
+			this.$element = $(element);
+			this._options = {
+				autoOpen: false,
+				closeExisting: false,
+				closeOnEscape: true,
+				closeOnOverlayClick: true,
+				fadeDuration: null,
+				margin: "10%",
+				padding: 10
+			};
+			
+			this.options(options);
+			
+			this.$overlay = $("<div>").addClass("wd_modal-overlay").attr("wd_resize","resizeModal").appendTo($("body")).hide();
+			this.$outer = $("<div>").addClass("wd_modal-outer").appendTo(this.$overlay);
+			this.$inner = $("<div>").addClass("wd_modal-inner").appendTo(this.$outer).append(this.$element);
+			// Hack because I can't figure out where the extra few pixels at the bottom of the content are coming from
+			this.$inner.css("overflow-y", "hidden");
+			this.$close = $("<a class=\"wd_modal-close fa fa-times\" href=\"#close\" title=\"Close\"><span class=\"wd_sr-only\">Close Dialog<\/span><\/a>")
+					.on("click", function(event) {self.close(); event.preventDefault();})
+					.appendTo(this.$outer);
+			this.$element.addClass("wd_modal");
+			
+			if (this._options.autoOpen)
+				this.open(this._options.closeExisting);
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+
+				this._options.fadeDuration = parseInt(this._options.fadeDuration, 10);
+				if (isNaN(this._options.fadeDuration))
+					this._options.fadeDuration = false;
+				
+				if (!$.isArray(this._options.margin))
+					this._options.margin = [this._options.margin];
+				if (this._options.margin.length < 2)
+					this._options.margin[1] = this._options.margin[0];
+				if (this._options.margin.length < 3)
+					this._options.margin[2] = this._options.margin[0];
+				if (this._options.margin.length < 4)
+					this._options.margin[3] = this._options.margin[1];
+				
+				if (!$.isArray(this._options.padding))
+					this._options.padding = [this._options.padding];
+				if (this._options.padding.length < 2)
+					this._options.padding[1] = this._options.padding[0];
+				if (this._options.padding.length < 3)
+					this._options.padding[2] = this._options.padding[0];
+				if (this._options.padding.length < 4)
+					this._options.padding[3] = this._options.padding[1];
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.resize();
+		},
+		
+		open: function(closeExisting, now) {
+			if (this.isOpen)
+				return;
+			
+			var self = this;
+			var myCloseExisting = closeExisting;
+			
+			if (!this.opener)
+				this.opener = document.activeElement;
+
+			if (closeExisting && modals.length > 0) {
+				for (var i = modals.length - 1; i >= 0; --i)
+					modals[i].close(true, true);
+			}
+
+			this.$overlay.addClass("wd_modal-current");
+			$("body").append(this.$overlay);
+
+			if (!now && this._options.fadeDuration) {
+				this.$overlay.fadeIn(this._options.fadeDuration, function() {self.open(myCloseExisting, true);});
+			} else {
+				if (modals.length == 0) {
+					$("body").css("overflow","hidden");
+					$(document).on("keydown.wd_modal", function (event) {
+						var current = modals[modals.length - 1];
+						if ((event.which == 27 || event.keyCode == 27) && current._options.closeOnEscape) {
+							current.close();
+							event.stopImmediatePropagation();
+							event.preventDefault();
+						}
+					});
+				}
+
+				if (this._options.closeOnOverlayClick) {
+					this.$overlay.on("click.wd_modal", function (event) {
+						if (event.target == this) {
+							self.close();
+							event.preventDefault();
+						}
+					});
+				}
+
+				modals.push(this);
+				
+				this.$overlay.show();
+				
+				var $focus = this.$element.find(":focusable");
+				if ($focus.length > 0)
+					$focus[0].focus();
+				
+				this.isOpen = true;
+
+				this.$element.trigger("open");
+			}
+		},
+		
+		close: function(skipCurrent, now) {
+			if (!this.isOpen)
+				return;
+			
+			this.$element.trigger("beforeClose");
+			
+			// TODO: allow closing of lower modals
+			modals.pop();
+			
+			if (modals.length == 0) {
+				$("body").css("overflow","");
+				$(document).off("keydown.wd_modal");
+			}
+			
+			this.$overlay.off("click.wd_modal");
+			
+			if (this.opener) {
+				this.opener.focus();
+				this.opener = null;
+			}
+			
+			this.isOpen = false;
+			this.$overlay.removeClass("wd_modal-current").hide();
+			
+			if (!skipCurrent && modals.length > 0)
+				modals[modals.length-1].$overlay.addClass("wd_modal-current");
+			
+			this.$element.trigger("close");
+		},
+		
+		destroy: function() {
+			this.close(false, true);
+			$("body").append(this.$element);
+			this.$overlay.remove();
+		},
+		
+		resize: function() {
+			if (!this.isOpen)
+				return;
+			
+			var self = this;
+			var winWidth = $(window).width();
+			var winHeight = $(window).height();
+			
+			var margin = this._options.margin;
+			var padding = this._options.padding;
+			
+			var width = winWidth - _value(margin[1], winWidth) - _value(margin[3], winWidth) - _value(padding[1], winWidth) - _value(padding[1], winWidth);
+			var height = winHeight - _value(margin[0], winHeight) - _value(margin[2], winHeight) - _value(padding[0], winHeight) - _value(padding[2], winHeight);
+			
+			this.$inner.css("max-width", width);
+			this.$inner.css("max-height", height);
+			
+			$.each(["Top", "Right", "Bottom", "Left"], function(i, v) {
+				self.$outer.css("padding" + v, _value(padding[i])+"px");
+			});
+			
+			var fixed = this.$element.find("[wd_need_fixed_container]").is(":visible");
+			
+			this.$inner.css("width", width);
+			this.$inner.css("height", height);
+
+			webDriver.doResize(this.$inner);
+			
+			if (!fixed) {
+				this.$inner.css("width", "auto");
+				this.$inner.css("height", "auto");
+				if (this.$element.outerHeight() > height)
+					this.$inner.css("height", height);
+				if (this.$element.outerWidth() > width)
+					this.$inner.css("width", width);
+			}
+		}
+	};
+
+	$.fn.wd_modal = function(options) {
+		if (options == "exists") {
+			return !!$(this).data("wd_modal");
+		} else if (typeof options == "string") {
+            var instance = $(this).data("wd_modal");
+			if (!instance)
+				return null;
+			var args = Array.prototype.slice.call(arguments, 1);
+            return instance[options].apply(instance, args);
+        } else {
+            return this.each(function() {
+                var instance = $(this).data("wd_modal");
+                if (instance) {
+                    instance.reload(options);
+                } else {
+                    $(this).data("wd_modal", new wd_modal(this, options));
+                }
+            });
+        }
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript">webDriver.pop_jQuery();</script>
+<script type="text/javascript" wd_script_id="subscribe_featurebox_script">
+			(function($) {
+				webDriver.subscribeClose = function(data) {
+					$(".wd_subscribe_modal").wd_modal("close");
+				};
+			
+				webDriver.subscribeSubmit = function(form, id) {
+					var $modal = $(".wd_subscribe_modal");
+					if ($modal.length == 0) {
+						$modal = $('<div class="wd_subscribe_modal" style="display:none;"></div>');
+						$modal.wd_modal({
+							autoOpen: false,
+						});
+					}
+
+					var my_form = form;
+					var form_data = $(form).serializeArray();
+
+					$modal.html('<div class="wd_loading">Loading...</div>');
+					$modal.show();
+					$modal.wd_modal("open", true);
+
+					$modal.load(
+						"https://www.mountainprovince.com/email-alerts?ajax=subscribe&id="+id,
+						form_data,
+						function() {
+							disable_submit(my_form, false);
+						}
+					);
+				};
+			})(webDriver.jQuery);
+		</script>
+<script type="text/javascript" src="js/wd_form.js" wd_script_id="wd_form.js"></script>
+<link href="css/wd_form.css" type="text/css" rel="stylesheet" wd_script_id="wd_form.css">
+<script type="text/javascript" wd_script_id="featurebox_financial_script">
+			var ir_featurebox = {
+				featureboxes: new Array,
+				ticker_data: new Array,
+
+				update: function(index, ticker, filer) {
+					var item_id = ticker || filer;
+					if (!this.featureboxes[index]) {
+						this.featureboxes[index] = {
+							ticker: ticker,
+							filer: filer,
+							chart: false,
+							size: false
+						};
+					}
+
+					if (!this.ticker_data[item_id])
+						this.ticker_data[item_id] = {};
+
+					if (ticker && webDriver.jQuery("#ir_featurebox_"+index+"-quote").length)
+						this.update_quote(index, ticker);
+
+					if (ticker && webDriver.jQuery("#ir_featurebox_"+index+"-chart").length)
+						this.update_chart(index, ticker);
+
+					if (ticker && webDriver.jQuery("#ir_featurebox_"+index+"-data").length)
+						this.update_data(index, ticker);
+
+					if (filer && webDriver.jQuery("#ir_featurebox_"+index+"-filings").length)
+						this.update_filings(index, filer);
+
+					if (webDriver.jQuery("#ir_featurebox_"+index+"-footer").length)
+						this.update_labels(index, ticker, filer);
+				},
+
+				update_labels: function(index, ticker, filer) {
+					var item_id = ticker || filer;
+					if (!this.ticker_data[item_id]["labels"]) {
+						webDriver.jQuery("#ir_featurebox_"+index+"-footer").html("");
+						webDriver.jQuery.getJSON(
+							"index.php",
+							{
+								ajax: "ir_featurebox",
+								ticker: ticker,
+								filer: filer,
+								data: "labels"
+							},
+							function(data) {
+								ir_featurebox.ticker_data[item_id]["labels"] = data;
+								ir_featurebox.update_labels(index, ticker, filer);
+							}
+						);
+					} else {
+						webDriver.jQuery("#ir_featurebox_"+index+"-footer").html(this.ticker_data[item_id]["labels"].footer);
+					}
+				}
+			};
+		</script>
+<style type="text/css" wd_script_id="ir_ticker_selector_style">
+				div.wd_ticker_selector {
+					text-align: right;
+					margin: 5px 0;
+				}
+			</style>
+<script type="text/javascript">webDriver.push_jQuery();</script>
+<link href="css/wd_linkmenu.css" type="text/css" rel="stylesheet" wd_script_id="wd_linkmenu.css">
+<script type="text/javascript" wd_script_id="wd_linkmenu_script">
+(function($, undefined) {
+	webDriver.resizeLinkMenu = function() {
+		$(this).data("wd_linkmenu_element").wd_linkmenu("resize");
+		return false;
+	};
+	
+	var wd_linkmenu = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_linkmenu.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.$element = $(element);
+			this._options = {
+				"class": "",
+				"label": "Menu",
+			};
+			
+			this.options(options);
+			
+			this.$active = this.$orig_active = this.$element.find(".wd_linkmenu-active");
+			var label = this.$active ? this.$active.text() : this._options["label"];
+			
+			this.$header = $("<div>")
+					.addClass("wd_linkmenu-header")
+					.attr("tabindex","0")
+					.data("wd_linkmenu_element", this.$element)
+					.attr("wd_resize", "resizeLinkMenu")
+					.on("click.wd_linkmenu", function(event) {
+						self.toggle();
+						event.preventDefault();
+					})
+					.insertBefore(this.$element)
+			;
+			if (this._options["class"])
+				this.$header.addClass(this._options["class"]);
+			var attr_string = this.$element.attr("wd_linkmenu_header");
+			if (attr_string) {
+				var attrs = JSON.parse(attr_string);
+				for(var name in attrs)
+					this.$header.attr(name, attrs[name]);
+			}
+			this.$label = $("<span>")
+					.addClass("wd_linkmenu-label")
+					.text(label)
+					.appendTo(this.$header);
+			this.$icon = $("<span class=\"wd_linkmenu-icon fa fa-chevron-down\" title=\"Open\"><\/span>")
+					.appendTo(this.$header);
+
+			this.$items = this.$element.children(".wd_linkmenu-item");
+			this.$items
+					.addClass("wd_linkmenu-listitem")
+					.prop("tabIndex", -1)
+			;
+			
+			// Remove any non-items (e.g. unintended text nodes)
+			this.$element.empty();
+			this.$element.append(this.$items);
+
+			this.$element.addClass("wd_linkmenu-list");
+			
+			// TODO: make tabs treat show/hide similar to Load, Resize
+			this.$element.closest("div.wd_assets").bind("wd_assets_show", function() {self.resize();});
+			this.$element.closest("div.wd_tab_content").bind("wd_tab_show", function() {self.resize();});
+
+			this.$element
+					.appendTo($("body"))
+					.hide()
+			;
+			
+			this.need_size = true;
+			this.resize();
+
+			this.$header.on("keydown.wd_linkmenu", function(event) {self.onkeydown(event,false);});
+			this.$header.on("blur.wd_linkmenu", function() {self.onblur();});
+			
+			this.$element.on("keydown.wd_linkmenu", function(event) {self.onkeydown(event,true);});
+			this.$element.on("blur.wd_linkmenu", function() {self.onblur();});
+			this.$element.on("mousemove.wd_linkmenu", function(event) {self.onmousemove(event);});
+			this.$items.not(".wd_disabled").on("click.wd_linkmenu", function() {self.onitemclick(this);})
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.reset();
+		},
+
+		reset: function() {
+		},
+
+		onkeydown: function(event, on_item) {
+			var key = event.which || event.keyCode;
+			var used = false;
+			switch (key) {
+				case 13: // Return
+				case 32: // Space
+					if (!on_item) {
+						this.toggle();
+						used = true;
+					}
+					break;
+				case 27: // Escape
+					this.close();
+					used = true;
+					break;
+				case 9: // Tab
+					if (on_item)
+						this.$header[0].focus(); // Move focus back to normal flow
+					break;
+				case 33: // Page Up
+				case 36: // Home
+					if (!on_item)
+						this.open();
+					this.first();
+					used = true;
+					break;
+				case 34: // Page Down
+				case 35: // End
+					if (!on_item)
+						this.open();
+					this.last();
+					used = true;
+					break;
+				case 38: // Up
+				case 37: // Left
+					if (!on_item)
+						this.open();
+					this.prev();
+					used = true;
+					break;
+				case 40: // Down
+				case 39: // Right
+					if (!on_item)
+						this.open();
+					this.next();
+					used = true;
+					break;
+			}
+			
+			if (used) {
+				event.stopImmediatePropagation();
+				event.preventDefault();
+			}
+		},
+
+		onmousemove: function(event) {
+			var $item = $(event.target);
+			if ($item.hasClass("wd_linkmenu-listitem"))
+				this.goto($item);
+		},
+				
+		onitemclick: function(item) {
+			$item = $(item);
+			this.$label.text($item.text());
+			this.$orig_active = this.$active = $item;
+			this.close();
+			this.$header[0].focus();
+		},
+				
+		open: function() {
+			var self = this;
+			$(document).on("mousedown.wd_linkmenu touchstart.wd_linkmenu", function(event) {
+				if ($(event.target).closest(self.$header.add(self.$element)).length == 0)
+					self.close();
+			});
+			
+			this.$header.addClass("wd_linkmenu-active");
+			this.$element
+					.show()
+					.position({my:"left top",at:"left bottom",of:this.$header})
+			;
+			this.goto(this.$active);
+		},
+				
+		close: function() {
+			this.$element.hide();
+			this.set_active(this.$orig_active);
+			this.$header.removeClass("wd_linkmenu-active");
+			
+			$(document).off(".wd_linkmenu");
+		},
+				
+		onblur: function() {
+			if (!this.ignore_blur)
+				this.close();
+			this.ignore_blur = false;
+		},
+				
+		toggle: function() {
+			this.$element.is(":visible") ? this.close() : this.open();
+		},
+				
+		set_active: function($item) {
+			if ($item.length > 0) {
+				if (this.$active)
+					this.$active.removeClass("wd_linkmenu-active");
+				this.$active = $item;
+				this.$active.addClass("wd_linkmenu-active");
+			}
+		},
+				
+		goto: function($item) {
+			if ($item.length > 0) {
+				this.set_active($item);
+				this.ignore_blur = true;
+				this.$active[0].focus();
+			}
+		},
+				
+		next: function() {
+			if (!this.$active)
+				this.first();
+			else
+				this.goto(this.$active.next());
+		},
+
+		prev: function() {
+			if (!this.$active)
+				this.last();
+			else
+				this.goto(this.$active.prev());
+		},
+				
+		first: function() {
+			this.goto(this.$items.first());
+		},
+		
+		last: function() {
+			this.goto(this.$items.last());
+		},
+		
+		destroy: function() {
+			this.$items
+				.removeClass("wd_linkmenu-listitem")
+				.off(".wd_linkmenu")
+			;
+			this.$element
+				.off(".wd_linkmenu")
+				.removeClass("wd_linkmenu-list")
+				.insertBefore(this.$header)
+			;
+			this.$header.remove();
+		},
+		
+		resize: function() {
+			if (this.need_size && this.$label.is(":visible")) {
+				var temp_show = !this.$element.is(":visible");
+				if (temp_show) {
+					this.$element.show();
+				}
+				
+				this.$label.width("auto");
+				this.$element.width("auto");
+				this.$label.width(this.$element.width());
+				this.$element.width(this.$header.width());
+
+				if (temp_show) {
+					this.$element.hide();
+				}
+				this.need_size = false;
+			}
+		}
+	};
+
+	$.fn.wd_linkmenu = function(options) {
+		var args = Array.prototype.slice.call(arguments, 1);
+		var result = this;
+		
+		this.each(function() {
+			var instance = $(this).data("wd_linkmenu");
+			if (typeof options == "string") {
+				var res = instance[options].apply(instance, args);
+				if (typeof res != "undefined") {
+					result = res;
+					return false;
+				}
+			} else {
+                if (!instance) {
+					instance = new wd_linkmenu(this, options);
+					$(this).data("wd_linkmenu", instance);
+				}
+				
+                instance.reload(options);
+			}
+        });
+		
+		return result;
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" wd_script_id="wd_linkmenu_init_script">
+			webDriver.jQuery(function($) {
+				$(".wd_linkmenu").each(function() {
+					var $menu = $(this);
+					$menu.wd_linkmenu();
+				});
+			});
+		</script>
+<style type="text/css" wd_script_id="ir_featurebox_quote_style">
+				div.wd_quote-value {
+					margin: 5px 0 0 0;
+				}
+
+				div.wd_quote-price {
+					display: inline;
+					font-weight: bold;
+				}
+
+				div.wd_quote-change {
+					display: inline;
+					margin-left: 1ex;
+					padding-left: 15px;
+					font-weight: bold;
+				}
+
+				div.wd_quote-change:before {
+					content: "(";
+				}
+
+				div.wd_quote-change:after {
+					content: ")";
+				}
+
+				div.wd_quote-value-down div.wd_quote-change {
+					color: #cc0000;
+					background: url(images/webdriver/stockpricedown.gif) left center no-repeat;
+				}
+
+				div.wd_quote-value-up div.wd_quote-change {
+					color: #00cc00;
+					background: url(images/webdriver/stockpriceup.gif) left center no-repeat;
+				}
+			</style>
+<link href="thirdparty/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" wd_script_id="font-awesome.min.css">
+<script type="text/javascript" wd_script_id="ir_featurebox_quote_script">
+				ir_featurebox.update_quote = function(index, ticker) {
+					if (!this.ticker_data[ticker]["quote"]) {
+						webDriver.jQuery("#ir_featurebox_"+index+"-quote").html('<center><span class="wd_loading_rotate" ><span class="fa-spin fa-fw fa fa-circle-o-notch" style="font-size: 3em;"></span><span class="wd_sr-only">Loading...</span></span></center>');
+						webDriver.jQuery.get(
+							"index.php",
+							{
+								ajax: "ir_featurebox",
+								ticker: ticker,
+								data: "quote"
+							},
+							function(data) {
+								ir_featurebox.ticker_data[ticker]["quote"] = data;
+								ir_featurebox.update_quote(index, ticker);
+							}
+						);
+					} else {
+						webDriver.jQuery("#ir_featurebox_"+index+"-quote").html(this.ticker_data[ticker]["quote"]);
+					}
+				}
+			</script>
+<style type="text/css" wd_script_id="featurebox_financial_style">
+			div.wd_chart-quote-footer {
+				margin: 5px 0 0 0;
+				font-size: .75em;
+				color: #999999;
+			}
+		</style>
+<script type="text/javascript">webDriver.pop_jQuery();</script>
+
+<!-- end spin_special_output(head_start) -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>Mountain Province</title>
+  
+ <meta name="keywords" content="" />
+ <meta name="description" content="" />
+ <meta name="twitter:card" content="summary" />
+ <meta property="og:url" content="https://www.mountainprovince.com/home" />
+
+  <!-- Place favicon.ico in the root directory -->
+
+  <link href="./room_index_files/main.css" type="text/css" rel="stylesheet">
+
+
+    <link rel="alternate" href="https://www.mountainprovince.com/news?pagetemplate=rss" type="application/rss+xml" title="">
+  
+<script type="text/javascript" src="./room_index_files/sidebarv2.js" async="true"></script>
+
+
+
+  <link rel="stylesheet" href="css/wdcontent.css">
+
+<!-- begin spin_special_output(head_end) -->
+<script type="text/javascript" src="js/wd_fixed_aspect_ratio.js" wd_script_id="wd_fixed_aspect_ratio.js"></script>
+<script type="text/javascript" src="js/wd_load.js" wd_script_id="wd_load.js"></script>
+<link rel="canonical" href="https://www.mountainprovince.com/" />
+<!-- end spin_special_output(head_end) -->
+</head>
+
+<body class="wd_pageid_174">
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+
+
+<header class="js--header-fix">
+    <div class="container">
+      <a class="brand wd_logo_wrapper" href="home" title="Mountain Province">
+
+
+<svg width="250px" height="100px" id="Layer_1" data-name="Layer 1" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 338.36 54.66"><defs><style>.cls-1{fill:#fff;}</style></defs><title>Mountain Province Diamond logo-K-H</title><polygon class="cls-1" points="1.56 53.5 0.27 53.48 33.87 0.14 67.44 53.49 66.17 53.5 33.89 2.24 1.56 53.5"></polygon><polygon class="cls-1" points="16.87 53.5 15.57 53.48 49.17 0.14 82.74 53.49 81.48 53.5 49.2 2.24 16.87 53.5"></polygon><polygon class="cls-1" points="32.42 53.5 31.13 53.48 64.73 0.14 98.3 53.49 97.03 53.5 64.75 2.24 32.42 53.5"></polygon><path class="cls-1" d="M137.15,14.85,150,2V28.89H148.8v-24L137.15,16.49,125.5,4.87v24h-1.17V2Z"></path><path class="cls-1" d="M185.73,16.08a12.91,12.91,0,0,1-1.06,5.21,13.48,13.48,0,0,1-7.12,7.12,13.33,13.33,0,0,1-10.42,0,13.83,13.83,0,0,1-4.27-2.87A13.24,13.24,0,0,1,159,16.08a13,13,0,0,1,1-5.21,13.17,13.17,0,0,1,2.87-4.26,14,14,0,0,1,4.27-2.87,13.33,13.33,0,0,1,10.42,0,13.67,13.67,0,0,1,4.25,2.87,13.5,13.5,0,0,1,2.87,4.26A12.84,12.84,0,0,1,185.73,16.08Zm-1.19,0a11.83,11.83,0,0,0-1-4.75A12.39,12.39,0,0,0,181,7.45a12.16,12.16,0,0,0-3.88-2.61,12.23,12.23,0,0,0-9.5,0,12.16,12.16,0,0,0-3.88,2.61,12.39,12.39,0,0,0-2.61,3.88,12.26,12.26,0,0,0,0,9.51,12.12,12.12,0,0,0,6.49,6.51,12.23,12.23,0,0,0,9.5,0,12.12,12.12,0,0,0,6.49-6.51A11.94,11.94,0,0,0,184.54,16.08Z"></path><path class="cls-1" d="M214.5,19.56a9.61,9.61,0,0,1-.78,3.86,9.89,9.89,0,0,1-5.25,5.26,9.78,9.78,0,0,1-7.7,0,9.84,9.84,0,0,1-5.27-5.26,9.61,9.61,0,0,1-.78-3.86V3.26h1.16v16.3a8.65,8.65,0,0,0,2.56,6.2,8.85,8.85,0,0,0,2.79,1.86,8.71,8.71,0,0,0,9.56-1.86,8.69,8.69,0,0,0,2.55-6.2V3.26h1.16Z"></path><path class="cls-1" d="M226.26,5.52V28.89h-1.17V2l18.69,24.64V3.26h1.13V30.12Z"></path><path class="cls-1" d="M263.7,4.43V28.89h-1.16V4.43h-9.33V3.26H273V4.43Z"></path><path class="cls-1" d="M306.82,3.26H308V28.89h-1.16Z"></path><path class="cls-1" d="M319.7,5.52V28.89h-1.16V2l18.69,24.64V3.26h1.13V30.12Z"></path><path class="cls-1" d="M127,40c1.92,0,2.77,0,3.73.58a3.29,3.29,0,0,1,1.7,3,3.42,3.42,0,0,1-1.77,3.12,7.27,7.27,0,0,1-3.52.56h-1.86v6.38h-1V40Zm-1.72.86v5.52h1.92a5.43,5.43,0,0,0,3.07-.6,2.83,2.83,0,0,0,0-4.3c-.59-.4-1.29-.62-3.21-.62Z"></path><path class="cls-1" d="M138.2,40a8.4,8.4,0,0,1,3.26.4,3.37,3.37,0,0,1,2.07,3.12,3.42,3.42,0,0,1-2.61,3.32c.78.5,1.14,1,4.29,5.86l.64.94h-1.26L142,49.47a8.4,8.4,0,0,0-1.68-2,3.68,3.68,0,0,0-2.26-.42h-1.46v6.54H135.5V40Zm-1.64.88v5.32H138a6.6,6.6,0,0,0,3.06-.44,2.51,2.51,0,0,0,1.25-2.24,2.45,2.45,0,0,0-1.27-2.2,5.81,5.81,0,0,0-2.78-.44Z"></path><path class="cls-1" d="M219.26,40.83h-6.39v5.44h6.23v.88h-6.23v5.58h6.55v.86h-7.61V40h7.45Z"></path><path class="cls-1" d="M158.13,41.9A6.79,6.79,0,0,0,156,40.45a6.72,6.72,0,0,0-5.28,0,7,7,0,0,0-2.17,1.45,6.73,6.73,0,0,0-2,4.8,6.78,6.78,0,0,0,2,4.79,7,7,0,0,0,2.17,1.45,6.72,6.72,0,0,0,5.28,0,6.79,6.79,0,0,0,2.15-1.45,7,7,0,0,0,1.46-2.15,6.87,6.87,0,0,0,0-5.29A7,7,0,0,0,158.13,41.9Zm1,4.8a5.79,5.79,0,0,1-1.69,4.11,6,6,0,0,1-1.85,1.25,5.76,5.76,0,0,1-6.35-1.25A5.81,5.81,0,0,1,148,49a5.9,5.9,0,0,1,0-4.52,6,6,0,0,1,1.25-1.85,5.85,5.85,0,0,1,1.84-1.24,5.88,5.88,0,0,1,4.51,0,5.75,5.75,0,0,1,3.09,3.09A5.7,5.7,0,0,1,159.13,46.7Z"></path><polygon class="cls-1" points="167.6 51.81 162.75 40.09 162.7 39.97 161.6 39.97 167.6 54.41 173.59 39.97 172.49 39.97 167.6 51.81"></polygon><rect class="cls-1" x="177.03" y="39.97" width="1" height="13.53"></rect><polygon class="cls-1" points="191.92 51.56 182.35 38.95 182.35 53.49 183.34 53.49 183.34 41.92 192.9 54.52 192.9 39.97 191.92 39.97 191.92 51.56"></polygon><path class="cls-1" d="M199,42.64a5.81,5.81,0,0,1,8.22,0l.14.14.69-.68-.14-.14a6.88,6.88,0,0,0-2.17-1.47A6.8,6.8,0,0,0,198.26,42a6.79,6.79,0,0,0-1.45,2.15,6.75,6.75,0,0,0,0,5.29,6.77,6.77,0,0,0,3.61,3.6,6.49,6.49,0,0,0,2.64.54A6.72,6.72,0,0,0,205.7,53a6.83,6.83,0,0,0,2.17-1.45l.14-.15-.68-.68-.15.14a6.07,6.07,0,0,1-1.85,1.24,6,6,0,0,1-4.53,0A5.88,5.88,0,0,1,199,50.86,5.81,5.81,0,0,1,197.71,49a5.75,5.75,0,0,1-.45-2.27,5.69,5.69,0,0,1,.45-2.25A6,6,0,0,1,199,42.64Z"></path><path class="cls-1" d="M240.32,42a6.86,6.86,0,0,0-2.14-1.45,6.62,6.62,0,0,0-2.64-.53h-4.68V53.49h4.68a6.45,6.45,0,0,0,2.64-.53,6.85,6.85,0,0,0,3.59-3.59,6.7,6.7,0,0,0,0-5.27A6.79,6.79,0,0,0,240.32,42ZM235.54,52.5h-3.68V41h3.68a5.56,5.56,0,0,1,2.23.46,5.85,5.85,0,0,1,1.84,1.24,5.7,5.7,0,0,1,1.24,1.83,5.85,5.85,0,0,1,.44,2.24,5.79,5.79,0,0,1-.44,2.25,6,6,0,0,1-1.24,1.84,5.89,5.89,0,0,1-1.83,1.23A5.64,5.64,0,0,1,235.54,52.5Z"></path><rect class="cls-1" x="246.74" y="39.97" width="1" height="13.53"></rect><polygon class="cls-1" points="266.55 39.06 266.55 53.49 267.54 53.49 267.54 41.47 273.31 47.22 279.08 41.47 279.08 53.49 280.07 53.49 280.07 39.06 273.31 45.82 266.55 39.06"></polygon><path class="cls-1" d="M295.52,41.9a6.84,6.84,0,0,0-2.16-1.45,6.72,6.72,0,0,0-5.28,0,6.84,6.84,0,0,0-2.16,1.45,6.66,6.66,0,0,0-1.46,2.15,6.84,6.84,0,0,0,0,5.28,6.6,6.6,0,0,0,1.46,2.16,6.84,6.84,0,0,0,2.16,1.45,6.72,6.72,0,0,0,5.28,0,6.84,6.84,0,0,0,2.16-1.45A7.14,7.14,0,0,0,297,49.34a6.75,6.75,0,0,0,0-5.29A7.14,7.14,0,0,0,295.52,41.9Zm1,4.8a5.57,5.57,0,0,1-.46,2.26,5.78,5.78,0,0,1-1.24,1.85,5.77,5.77,0,0,1-8.2,0,5.85,5.85,0,0,1-1.7-4.11,5.71,5.71,0,0,1,.46-2.26,6,6,0,0,1,1.24-1.85,5.85,5.85,0,0,1,1.84-1.24,5.9,5.9,0,0,1,4.52,0,5.85,5.85,0,0,1,1.84,1.24,6,6,0,0,1,1.24,1.85A5.54,5.54,0,0,1,296.52,46.7Z"></path><polygon class="cls-1" points="310.87 51.56 301.3 38.95 301.3 53.49 302.29 53.49 302.29 41.92 311.85 54.52 311.85 39.97 310.87 39.97 310.87 51.56"></polygon><path class="cls-1" d="M327.3,44.1a6.82,6.82,0,0,0-3.6-3.59,6.61,6.61,0,0,0-2.63-.53h-4.68V53.5h4.68A6.61,6.61,0,0,0,323.7,53a6.79,6.79,0,0,0,3.6-3.6,6.61,6.61,0,0,0,.53-2.63A6.69,6.69,0,0,0,327.3,44.1Zm-6.23,8.41h-3.69V41h3.69a5.46,5.46,0,0,1,2.23.46,6.07,6.07,0,0,1,1.83,1.23A5.8,5.8,0,0,1,326.37,49a5.86,5.86,0,0,1-3.07,3.07A5.62,5.62,0,0,1,321.07,52.51Z"></path><path class="cls-1" d="M337.8,41.91a6.07,6.07,0,0,0-3.08-1,2.66,2.66,0,0,0-2.88,2.53c0,1.68,1.54,2.2,3,2.7s3.48,1.43,3.48,3.75a3.77,3.77,0,0,1-4,3.62,6.55,6.55,0,0,1-3.5-1.15v-1.2a6.07,6.07,0,0,0,3.46,1.39,2.71,2.71,0,0,0,2.9-2.63c0-1.77-1.72-2.45-2.8-2.79A6.55,6.55,0,0,1,332,46a3.27,3.27,0,0,1-1.24-2.51A3.67,3.67,0,0,1,334.62,40a6.79,6.79,0,0,1,3.18.83Z"></path><path class="cls-1" d="M287.3,2.11l-11.08,26.8h1.3l5.58-13.6h8.37l5.59,13.6h1.31Zm-3.71,12,3.71-9,3.69,9Z"></path><path class="cls-1" d="M257.18,39l-6,14.51h1.1l2.87-7h4l2.88,7h1.11Zm1.6,6.51h-3.21l1.61-3.89Z"></path></svg>
+      </a>
+      <span class="hamburger--primary js--hamburger__primary"><span>Menu</span></span>
+
+    </div>
+    <div class="nav--wrapper js--mobile__nav">
+      <nav class="nav--primary">
+        <div class="container">
+         <!--  <ul>
+            <li>
+              <a href="https://mountainprovince.burnkit.com/about-us">Company</a>
+              <ul>
+                <li><a href="https://mountainprovince.burnkit.com/about-us">About Us</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/management">Management</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/board-of-directors">Board of Directors</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/governance">Governance</a></li>
+
+                <li><a href="https://mountainprovince.burnkit.com/contact-us">Contact Us</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://mountainprovince.burnkit.com/assets-overview">Assets</a>
+              <ul>
+                <li><a href="https://mountainprovince.burnkit.com/assets-overview">Overview</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/gahcho-kue">Gahcho Kué</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/kennady-north">Kennady North</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/minerals-resources-reserves">Mineral Resources &amp; Reserves</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/media-gallery-cat">Media Gallery</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://mountainprovince.burnkit.com/sustainability">Sustainability</a>
+              <ul>
+                <li><a href="https://mountainprovince.burnkit.com/sustainability">Overview</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/people">People</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/environment">Environment</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/wildlife">Wildlife</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="https://mountainprovince.burnkit.com/diamonds">Diamonds</a>
+              <ul>
+                <li><a href="https://mountainprovince.burnkit.com/diamonds">Overview</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/sales">Sales</a></li>
+              </ul>
+            </li>
+            <li>
+            <a href="https://mountainprovince.burnkit.com/news-releases">News</a>
+            </li>
+            <li class="investors">
+              <a href="https://mountainprovince.burnkit.com/#" class="js--hamburger__investors">Investors</a>
+              <ul class="nav--investors">
+                <li><a href="https://mountainprovince.burnkit.com/investor-highlights">Highlights</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/financial-reports">Financial Reports</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/events-presentations">Events &amp; Presentations</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/analyst-coverage">Analyst Coverage</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/shareholders">Shareholders</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/sedar-filings">Sedar<sup>®</sup> Filings</a></li>
+              </ul>
+            </li>
+          </ul> -->
+          <ul class="wd_nav wd_desktop_nav">
+            
+
+<li><a href="about-us" target="_self">Company</a>
+	<ul class="wd_subnav">
+
+
+	<li><a href="https://www.mountainprovince.com/about-us" target="_self">About Us</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/management" target="_self">Management</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/board-of-directors" target="_self">Board of Directors</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/governance" target="_self">Governance</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/contact-us" target="_self">Contact Us</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+
+
+<li><a href="assets" target="_self">Assets</a>
+	<ul class="wd_subnav">
+
+
+	<li><a href="https://www.mountainprovince.com/assets" target="_self">Overview</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/gahcho-kue" target="_self">Gahcho Kué</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/kennady-north" target="_self">Kennady North</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/mineral-resource-reserves" target="_self">Mineral Resource & Reserves</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/exploration" target="_self">Exploration</a></li>
+
+
+
+
+	<li><a href="image-gallery" target="_self">Media Gallery</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+
+
+<li><a href="https://www.mountainprovince.com/sustainability" target="_self">Sustainability</a>
+	<ul class="wd_subnav">
+
+
+	<li><a href="sustainability " target="_self">Overview</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/community" target="_self">Community</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/people" target="_self">People</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/environment" target="_self">Environment</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+
+
+<li><a href="diamonds" target="_self">Diamonds</a>
+	<ul class="wd_subnav">
+
+
+	<li><a href="https://www.mountainprovince.com/diamonds" target="_self">Overview</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/sales" target="_self">Sales</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+
+
+<li><a href="financial-reports" target="_self">Investors</a>
+	<ul class="wd_subnav">
+
+
+	<li><a href="https://www.mountainprovince.com/investor-highlights" target="_self">Investor Highlights</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/financial-reports" target="_self">Financial Reports</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/events-presentations" target="_self">Events & Presentations</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/analyst-coverage" target="_self">Analyst Coverage</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/sedar" target="_self">SEDAR® Filings</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/agm" target="_self">Notice of Annual General Meeting</a></li>
+
+
+
+
+	<li><a href="https://www.mountainprovince.com/notice-of-special-meeting" target="_self">Notice of Special Meeting</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+
+
+<li><a href="https://www.mountainprovince.com/news" target="_self">News</a>
+	</li>
+
+
+
+
+
+
+             <li class="investors">
+              <a href="#" class="js--hamburger__investors">Investors</a>
+              <ul class="nav--investors">
+                <li><a href="https://mountainprovince.burnkit.com/investor-highlights">Highlights</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/financial-reports">Financial Reports</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/events-presentations">Events &amp; Presentations</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/analyst-coverage">Analyst Coverage</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/shareholders">Shareholders</a></li>
+                <li><a href="https://mountainprovince.burnkit.com/sedar-filings">Sedar<sup>®</sup> Filings</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+    </div>
+</header>
+
+<!-- Add your site or application content here -->
+<div class="js--scroll__smooth">
+ <!-- <div class="scroll--wrapper js--scroll__smooth"> -->   <!-- Remove because it conflicts with scroll listener from WD -->
+
+  <div class="content--wrapper">
+
+    
+        <div class="module--hero">
+      <div class="module--hero__clipped">
+        <div class="module--hero__text">
+            <h1>Mountain Province</h1>
+        </div>
+        
+        <div class="module--hero__text wd_hero_title">
+          <h1>Mountain Province</h1>
+        </div>
+
+        
+        <div class="module--hero__image" style="background-image: url(/image/feature+box+1.jpg);"> 
+          <img src="/image/feature+box+1.jpg" />
+
+          
+          
+          <div class="vimeo-wrapper">
+            <video class="wd_video_hero" autoplay="" muted="" loop="">
+              <source src="images/MPD_RW_Edit6.5_1080_H264.mp4" type="video/mp4">
+              </video>
+          </div>
+
+           
+
+        </div>
+      
+
+                    <a href="https://vimeo.com/387783510" class="js--modal" title="Kennady Diamonds"> Watch Video</a>
+                <a class="intro--arrow"></a>
+      </div>
+    </div>
+
+    
+
+        <!-- ADDING STYLING ROOT / NAMESPACING -->
+      <section class="wd_projects_temp wd_main_content" id="intro"> 
+      
+              <div class="module--blockquote wd_blockquote">
+            <div class="container">
+              <blockquote>
+                 <p>Natural diamonds from Canada&rsquo;s North, creating value and respecting the invaluable.</p>
+              </blockquote>
+            </div>
+          </div>
+
+      
+      <div class="module--text__content wd_page">
+               <div id="wd_printable_content">
+<div class="wd_standard">
+<div class="wd_category wd_category_92"><div class="wd_category_info"><h1 class="category_header">Category 2 - Two layered pictures</h1><div class="category_intro"><div class="category_summary"></div>
+</div></div><div class="wd_category_items wd_category_items_92"><div class="item"><table width="736" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 10px 10px 10px 0px;" role="presentation"><tr><td><img src="/image/mountain-diamonds-s2-desktop-home-1%2B736x913.jpg" border="0" alt="" title=""  /></td></tr></table>
+<div class="item_name">-no-title-</div></div>
+<div class="item"><table width="485" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 10px 10px 10px 0px;" role="presentation"><tr><td><img src="/image/Photo+2020-11-27%2C+11+52+56+AM+485x385.jpg" border="0" alt="" title=""  /></td></tr><tr><td align="center" class="imagecaption"><p>The 157 carat “Polaris” diamond displaying natural blue fluorescence</p></td></tr></table>
+<div class="item_name">-no-title-</div></div>
+</div></div><div class="wd_category wd_category_93"><div class="wd_category_info"><h1 class="category_header">Category 3 - Three Column text</h1><div class="category_intro"><div class="category_summary"></div>
+</div></div><div class="wd_category_items wd_category_items_93"><div class="item"><div class="item_name">Mountain Province Diamonds</div><p>Mountain Province Diamonds is a Canadian diamond company. In joint venture with De Beers, we oversee operations at the Gahcho Ku&eacute; diamond mine located in the Northwest Territories of Canada. We are unique in the diamond industry that we market and sell our share of diamonds independently from our joint venture partner De Beers.</p>
+
+<p>Our primary assets are a 49% interest in the Gahcho Ku&eacute; Mine and our 100% owned Kennady North Project.</p>
+</div>
+<div class="item"><div class="item_name"></div></div>
+<div class="item"><div class="item_name"></div></div>
+<div class="item"><div class="item_name"></div></div>
+<div class="item"><div class="item_name"></div></div>
+<div class="item"><div class="item_name">Our Vision</div><p>Mountain Province Diamonds brings together exploration, mining, and marketing of natural rough diamonds from Canada&rsquo;s Northwest Territories. Our vision is to create long-term value for our business and to work with local communities to ensure we leave a lasting, positive legacy in the areas we operate. We preserve the heritage of our natural diamonds by independently marketing through select partners and offering diamonds of known provenance.</p>
+
+<p><a class="button" href="about-us">About Us</a></p>
+</div>
+</div></div><div class="wd_category wd_category_94"><div class="wd_category_info"><h1 class="category_header">Category 8 - full width photo/small overlapping</h1><div class="category_intro"><div class="category_summary"></div>
+</div></div><div class="wd_category_items wd_category_items_94"><div class="item"><table width="1436" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 10px 10px 10px 0px;" role="presentation"><tr><td><img src="/image/mountain-diamonds-s4-desktop-home-1%2B1436x908.jpg" border="0" alt="" title=""  /></td></tr></table>
+<div class="item_name">-no-title-</div></div>
+<div class="item"><table width="485" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 10px 10px 10px 0px;" role="presentation"><tr><td><img src="/image/mountain-diamonds-s3-desktop-home-1%2B485x385.jpg" border="0" alt="" title=""  /></td></tr><tr><td align="center" class="imagecaption"><p>60.60 Carat Vivid Yellow Rough Diamond</p></td></tr></table>
+<div class="item_name">-no-title-</div></div>
+</div></div><div class="wd_category wd_category_95"><div class="wd_category_info"><h1 class="category_header">Category 5 - Three Column text</h1><div class="category_intro"><div class="category_summary"></div>
+</div></div><div class="wd_category_items wd_category_items_95"><div class="item"><div class="item_name">Gahcho Kué</div><p>Northwest Territories land mass: 1,346,000 km&sup2; (519,693 miles&sup2;)</p>
+
+<p>Gahcho Ku&eacute; kimberlites: &lt;0.02 km&sup2; (&lt;0.01 miles&sup2;)</p>
+
+<p>Gahcho Ku&eacute; mine site: 12 km&sup2; (4.7 miles&sup2;)</p>
+
+<p><a class="button" href="gahcho-kue">Explore</a></p>
+</div>
+</div></div><div class="wd_category wd_category_97"><div class="wd_category_info"><h1 class="category_header">Category 7 - Three Column text</h1><div class="category_intro"><div class="category_summary"></div>
+</div></div><div class="wd_category_items wd_category_items_97"><div class="item"><div class="item_name">Sustainability</div><p>Mountain Province Diamonds operates in some of the most unique places on Earth. Our projects are enveloped by open skies on a vast expanse of arctic tundra, rich with vibrant and resilient indigenous cultures. We are committed to leaving a lasting, positive legacy where we operate. We believe there is always a way to do better and are committed to continuous improvement over time.</p>
+
+<p><a class="button" href="sustainability">Learn More</a></p>
+</div>
+<div class="item"><div class="item_name"></div></div>
+<div class="item"><div class="item_name"></div></div>
+<div class="item"><div class="item_name">Community</div><p>Mountain Province Diamonds believes that the benefits of our operations should outlast the lifespan of our projects. We respect the people whose ancestors have lived on the land for many generations and seek to work together to find the right balance between socioeconomic and environmental impacts to ensure that Mountain Province Diamonds&rsquo; projects create long-lasting benefits for generations to come.</p>
+
+<!-- <p><a class="button" href="community">Community</a></p> -->
+</div>
+<div class="item"><div class="item_name">People</div><p>Mountain Province Diamonds understands that the inclusion of diverse people across our organisation fosters ingenuity and builds strength and resilience into our projects. &nbsp;We invest in the people who have chosen to work with us and we work together to ensure everyone goes home safe and healthy at the end of the day.</p>
+
+<!-- <p><a class="button" href="people">People</a></p> -->
+</div>
+<div class="item"><div class="item_name"></div></div>
+<div class="item"><div class="item_name">Environment</div><p>Mountain Province Diamonds values the ecosystems in which we operate and respects the people who depend on them.&nbsp; We work collaboratively with local communities, technical experts, and regulatory authorities to ensure the long-term health of the land, air, water, and wildlife in and around our projects.</p>
+<!-- <p><a class="button" href="environment">Environment</a></p> --></div>
+</div></div><div class="wd_category wd_category_98"><div class="wd_category_info"><h1 class="category_header">Category 6 - Single Left Photo</h1><div class="category_intro"><div class="category_summary"></div>
+</div></div><div class="wd_category_items wd_category_items_98"><div class="item"><table width="1272" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 10px 10px 10px 0px;" role="presentation"><tr><td><img src="/image/mountain-diamonds-s5-desktop-home-4-newer.jpg" border="0" alt="" title=""  /></td></tr></table>
+<div class="item_name">BLUE DIAMOND</div></div>
+</div></div><div class="wd_category wd_category_99"><div class="wd_category_info"><h1 class="category_header">Category 10 - two layered pictures</h1><div class="category_intro"><div class="category_summary"></div>
+</div></div></div><div class="wd_category wd_category_103"><div class="wd_category_info"><h1 class="category_header">Category 11 - two layered pictures</h1><div class="category_intro"><div class="category_summary"></div>
+</div></div><div class="wd_category_items wd_category_items_103"><div class="item"><table width="1272" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 10px 10px 10px 0px;" role="presentation"><tr><td><img src="/image/mountain-diamonds-s2-desktop-home-2.jpg" border="0" alt="" title=""  /></td></tr></table>
+<div class="item_name">-no-title-</div></div>
+<div class="item"><table width="485" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 10px 10px 10px 0px;" role="presentation"><tr><td><img src="/image/mountain-diamonds-s3-desktop-home-3%2B485x385+v2.jpg" border="0" alt="" title=""  /></td></tr></table>
+<div class="item_name">-no-title-</div></div>
+</div></div>
+</div>
+</div>      </div>
+     
+      
+              <!-- HOMEPAGE CAROUSEL -->
+        <div class="module--text__content module--slider wd_proj_slider __home">
+            <div class="container">
+                 <div class="wd_asset_carousel_aspect" wd_resize="adjustAspectRatio" wd_fixed_aspect="height:16:9:300:300">
+    <ul class="wd_layout-carousel" wd_carousel_options='{"minWidth":"50%","center":false,"widthMode":"width","interval":8000,"heightMode":"content"}' wd_onload="loadCarousel">
+    <li><div class="wd_carousel_body"><img src="/image/mountain-diamonds-s3-desktop-home-2+750.jpg" title="" alt="" border="0"  /><div class="wd_carousel_caption"><h4></h4><p class="wd_carousel_description"></p></div></div></li><li><div class="wd_carousel_body"><img src="/image/mountain-diamonds-s5-desktop-home-3%2B750.jpg" title="" alt="" border="0"  /><div class="wd_carousel_caption"><h4></h4><p class="wd_carousel_description"></p></div></div></li><li><div class="wd_carousel_body"><img src="/image/mountain-diamonds-s4-desktop-assets-1%2B750.jpg" title="" alt="" border="0"  /><div class="wd_carousel_caption"><h4></h4><p class="wd_carousel_description"></p></div></div></li><li><div class="wd_carousel_body"><img src="/image/mountain-diamonds-s5-desktop-assets-1%2B750.jpg" title="" alt="" border="0"  /><div class="wd_carousel_caption"><h4></h4><p class="wd_carousel_description"></p></div></div></li>    </ul>
+
+    <div class="wd_indis_wrap">
+      <ol class="single_slider_carousel_indicators">
+          <li data-slide-to="0"><span></span></li><li data-slide-to="1"><span></span></li><li data-slide-to="2"><span></span></li><li data-slide-to="3"><span></span></li>      </ol>
+    </div>
+  </div>
+           </div>
+        </div>
+        
+
+
+  
+
+   
+     
+
+   
+
+
+               <!-- middle FB -->
+     <div class="module--text__content wd_middle_fb">
+      <div class="container">
+
+            <div class="wd_featureboxes_middle wd_featureboxes-horizontal">
+<div id="wd_featurebox-teaser_6" class="wd_featurebox_container wd_featurebox-teaser"><div class="wd_featurebox_title">Latest News</div><div class="wd_featurebox">
+<div class="wd_newsfeed_releases-teaser">
+
+
+	
+		<div class="item">
+			
+			<div class="wd_date">05.12.2021</div>
+			<div class="wd_title"><a href="https://www.mountainprovince.com/2021-05-12-Mountain-Province-Diamonds-Announces-First-Quarter-Financial-Results-and-Guidance-for-2021">Mountain Province Diamonds Announces First Quarter Financial Results and Guidance for 2021</a></div>
+			<div class="wd_summary"><p>Mountain Province Diamonds Inc. ("Mountain Province", the "Company") (TSX: MPVD) (OTCQX: MPVD) today announces financial results for the first quarter ended March 31, 2021 ("the Quarter" or "Q1...</p></div>
+		</div>
+	
+		<div class="item">
+			
+			<div class="wd_date">05.12.2021</div>
+			<div class="wd_title"><a href="https://www.mountainprovince.com/2021-05-12-Mountain-Province-Diamonds-Announces-US-33-0-million-Term-Loan">Mountain Province Diamonds Announces US$33.0 million Term Loan</a></div>
+			<div class="wd_summary"><p>Mountain Province Diamonds Inc. ("Mountain Province" or the "Company") (TSX: MPVD) (OTCQX: MPVD) today announces that it has amended and restated its credit agreement (the "Transaction") with...</p></div>
+		</div>
+	
+		<div class="item">
+			
+			<div class="wd_date">04.13.2021</div>
+			<div class="wd_title"><a href="https://www.mountainprovince.com/2021-04-13-Mountain-Province-Diamonds-Announces-First-Quarter-2021-Production-and-Sales-Results-Details-of-Earnings-Release-and-Conference-Call">Mountain Province Diamonds Announces First Quarter 2021 Production and Sales Results, Details of Earnings Release and Conference Call</a></div>
+			<div class="wd_summary"><p>Mountain Province Diamonds Inc. ("Mountain Province", the "Company") (TSX: MPVD) (OTCQX: MPVD) today announces production and sales results for the first quarter ended March 31, 2021 ("the...</p></div>
+		</div>
+	
+
+
+</div>
+<p class="more"><a href="https://www.mountainprovince.com/news">View All</a></p>
+</div></div></div>
+               
+    
+      </div>
+    </div>
+
+     <!-- END OF middle FB -->
+       
+
+
+
+              
+
+
+    
+    
+
+    <!-- SIGN UP -->
+    <div class="module--cta wd_sign-up_glob">
+      <div class="container">
+
+                <div class="wd_featureboxes_sign_up wd_featureboxes-vertical">
+<div id="wd_featurebox-subscribe_2" class="wd_featurebox_container wd_featurebox-subscribe"><div class="wd_featurebox_title">Stay in the know</div><div class="wd_featurebox"><div class="wd_subscribe_featurebox"><div class="wd_intro"> <p>Sign up to our Newsletter for the latest news and press notifications sent directly to your email. </p>
+
+<h2>Newsletter</h2></div>
+ <form method="POST" class="wd_formbuilder" id="subscribe_form_2" name="formbuilderform" action="https://www.mountainprovince.com/home?submitted=1" enctype="multipart/form-data" onsubmit="disable_submit(this, true);var ok = check_required_fields(this,[&quot;subscribe_2[email]&quot;],[&quot;subscribe_2[email]&quot;],&quot;#ff0000&quot;,&quot;This field is required&quot;,&quot;This field must contain a valid email address&quot;,&quot;Please fill in all required fields highlighted in red.&quot;,&quot;Please provide a valid email address.&quot;); if (!ok) {disable_submit(this,false); return false;} webDriver.subscribeSubmit(this,2); return false;">
+  <div class="wd_form_header">
+   <div class="wd_form_legend">
+* Required Fields
+   </div>
+  </div>
+   <div class="wd_form_field wd_form_field_pos_right">
+    <div class="wd_form_field_label">
+<label for="formbuilderform_subscribe_2[email]">*&nbsp;Email</label>
+    </div>
+    <div class="wd_form_field_input">
+     <input type="text" name="subscribe_2[email]" value="" size="16" id="formbuilderform_subscribe_2[email]" />
+    </div>
+   </div>
+  <div class="wd_form_footer">
+   <div class="wd_form_buttons">
+<input type="submit" class="wd_formbuilder_submit" name="Submit" value="Submit">
+   </div>
+  </div>
+ </form>
+</div></div></div></div>
+     
+      </div>
+    </div>
+
+       
+  
+  </section><!-- end of wd_main_content -->
+
+  </div><!-- end content-wrapper -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a class="brand" href="home" title="Mountain Province">
+            <svg width="170px" height="30px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 338.36 54.66"><defs><style>.cls-1{fill:#fff;}</style></defs><title>Mountain Province Diamond logo-K-H</title><polygon class="cls-1" points="1.56 53.5 0.27 53.48 33.87 0.14 67.44 53.49 66.17 53.5 33.89 2.24 1.56 53.5"></polygon><polygon class="cls-1" points="16.87 53.5 15.57 53.48 49.17 0.14 82.74 53.49 81.48 53.5 49.2 2.24 16.87 53.5"></polygon><polygon class="cls-1" points="32.42 53.5 31.13 53.48 64.73 0.14 98.3 53.49 97.03 53.5 64.75 2.24 32.42 53.5"></polygon><path class="cls-1" d="M137.15,14.85,150,2V28.89H148.8v-24L137.15,16.49,125.5,4.87v24h-1.17V2Z"></path><path class="cls-1" d="M185.73,16.08a12.91,12.91,0,0,1-1.06,5.21,13.48,13.48,0,0,1-7.12,7.12,13.33,13.33,0,0,1-10.42,0,13.83,13.83,0,0,1-4.27-2.87A13.24,13.24,0,0,1,159,16.08a13,13,0,0,1,1-5.21,13.17,13.17,0,0,1,2.87-4.26,14,14,0,0,1,4.27-2.87,13.33,13.33,0,0,1,10.42,0,13.67,13.67,0,0,1,4.25,2.87,13.5,13.5,0,0,1,2.87,4.26A12.84,12.84,0,0,1,185.73,16.08Zm-1.19,0a11.83,11.83,0,0,0-1-4.75A12.39,12.39,0,0,0,181,7.45a12.16,12.16,0,0,0-3.88-2.61,12.23,12.23,0,0,0-9.5,0,12.16,12.16,0,0,0-3.88,2.61,12.39,12.39,0,0,0-2.61,3.88,12.26,12.26,0,0,0,0,9.51,12.12,12.12,0,0,0,6.49,6.51,12.23,12.23,0,0,0,9.5,0,12.12,12.12,0,0,0,6.49-6.51A11.94,11.94,0,0,0,184.54,16.08Z"></path><path class="cls-1" d="M214.5,19.56a9.61,9.61,0,0,1-.78,3.86,9.89,9.89,0,0,1-5.25,5.26,9.78,9.78,0,0,1-7.7,0,9.84,9.84,0,0,1-5.27-5.26,9.61,9.61,0,0,1-.78-3.86V3.26h1.16v16.3a8.65,8.65,0,0,0,2.56,6.2,8.85,8.85,0,0,0,2.79,1.86,8.71,8.71,0,0,0,9.56-1.86,8.69,8.69,0,0,0,2.55-6.2V3.26h1.16Z"></path><path class="cls-1" d="M226.26,5.52V28.89h-1.17V2l18.69,24.64V3.26h1.13V30.12Z"></path><path class="cls-1" d="M263.7,4.43V28.89h-1.16V4.43h-9.33V3.26H273V4.43Z"></path><path class="cls-1" d="M306.82,3.26H308V28.89h-1.16Z"></path><path class="cls-1" d="M319.7,5.52V28.89h-1.16V2l18.69,24.64V3.26h1.13V30.12Z"></path><path class="cls-1" d="M127,40c1.92,0,2.77,0,3.73.58a3.29,3.29,0,0,1,1.7,3,3.42,3.42,0,0,1-1.77,3.12,7.27,7.27,0,0,1-3.52.56h-1.86v6.38h-1V40Zm-1.72.86v5.52h1.92a5.43,5.43,0,0,0,3.07-.6,2.83,2.83,0,0,0,0-4.3c-.59-.4-1.29-.62-3.21-.62Z"></path><path class="cls-1" d="M138.2,40a8.4,8.4,0,0,1,3.26.4,3.37,3.37,0,0,1,2.07,3.12,3.42,3.42,0,0,1-2.61,3.32c.78.5,1.14,1,4.29,5.86l.64.94h-1.26L142,49.47a8.4,8.4,0,0,0-1.68-2,3.68,3.68,0,0,0-2.26-.42h-1.46v6.54H135.5V40Zm-1.64.88v5.32H138a6.6,6.6,0,0,0,3.06-.44,2.51,2.51,0,0,0,1.25-2.24,2.45,2.45,0,0,0-1.27-2.2,5.81,5.81,0,0,0-2.78-.44Z"></path><path class="cls-1" d="M219.26,40.83h-6.39v5.44h6.23v.88h-6.23v5.58h6.55v.86h-7.61V40h7.45Z"></path><path class="cls-1" d="M158.13,41.9A6.79,6.79,0,0,0,156,40.45a6.72,6.72,0,0,0-5.28,0,7,7,0,0,0-2.17,1.45,6.73,6.73,0,0,0-2,4.8,6.78,6.78,0,0,0,2,4.79,7,7,0,0,0,2.17,1.45,6.72,6.72,0,0,0,5.28,0,6.79,6.79,0,0,0,2.15-1.45,7,7,0,0,0,1.46-2.15,6.87,6.87,0,0,0,0-5.29A7,7,0,0,0,158.13,41.9Zm1,4.8a5.79,5.79,0,0,1-1.69,4.11,6,6,0,0,1-1.85,1.25,5.76,5.76,0,0,1-6.35-1.25A5.81,5.81,0,0,1,148,49a5.9,5.9,0,0,1,0-4.52,6,6,0,0,1,1.25-1.85,5.85,5.85,0,0,1,1.84-1.24,5.88,5.88,0,0,1,4.51,0,5.75,5.75,0,0,1,3.09,3.09A5.7,5.7,0,0,1,159.13,46.7Z"></path><polygon class="cls-1" points="167.6 51.81 162.75 40.09 162.7 39.97 161.6 39.97 167.6 54.41 173.59 39.97 172.49 39.97 167.6 51.81"></polygon><rect class="cls-1" x="177.03" y="39.97" width="1" height="13.53"></rect><polygon class="cls-1" points="191.92 51.56 182.35 38.95 182.35 53.49 183.34 53.49 183.34 41.92 192.9 54.52 192.9 39.97 191.92 39.97 191.92 51.56"></polygon><path class="cls-1" d="M199,42.64a5.81,5.81,0,0,1,8.22,0l.14.14.69-.68-.14-.14a6.88,6.88,0,0,0-2.17-1.47A6.8,6.8,0,0,0,198.26,42a6.79,6.79,0,0,0-1.45,2.15,6.75,6.75,0,0,0,0,5.29,6.77,6.77,0,0,0,3.61,3.6,6.49,6.49,0,0,0,2.64.54A6.72,6.72,0,0,0,205.7,53a6.83,6.83,0,0,0,2.17-1.45l.14-.15-.68-.68-.15.14a6.07,6.07,0,0,1-1.85,1.24,6,6,0,0,1-4.53,0A5.88,5.88,0,0,1,199,50.86,5.81,5.81,0,0,1,197.71,49a5.75,5.75,0,0,1-.45-2.27,5.69,5.69,0,0,1,.45-2.25A6,6,0,0,1,199,42.64Z"></path><path class="cls-1" d="M240.32,42a6.86,6.86,0,0,0-2.14-1.45,6.62,6.62,0,0,0-2.64-.53h-4.68V53.49h4.68a6.45,6.45,0,0,0,2.64-.53,6.85,6.85,0,0,0,3.59-3.59,6.7,6.7,0,0,0,0-5.27A6.79,6.79,0,0,0,240.32,42ZM235.54,52.5h-3.68V41h3.68a5.56,5.56,0,0,1,2.23.46,5.85,5.85,0,0,1,1.84,1.24,5.7,5.7,0,0,1,1.24,1.83,5.85,5.85,0,0,1,.44,2.24,5.79,5.79,0,0,1-.44,2.25,6,6,0,0,1-1.24,1.84,5.89,5.89,0,0,1-1.83,1.23A5.64,5.64,0,0,1,235.54,52.5Z"></path><rect class="cls-1" x="246.74" y="39.97" width="1" height="13.53"></rect><polygon class="cls-1" points="266.55 39.06 266.55 53.49 267.54 53.49 267.54 41.47 273.31 47.22 279.08 41.47 279.08 53.49 280.07 53.49 280.07 39.06 273.31 45.82 266.55 39.06"></polygon><path class="cls-1" d="M295.52,41.9a6.84,6.84,0,0,0-2.16-1.45,6.72,6.72,0,0,0-5.28,0,6.84,6.84,0,0,0-2.16,1.45,6.66,6.66,0,0,0-1.46,2.15,6.84,6.84,0,0,0,0,5.28,6.6,6.6,0,0,0,1.46,2.16,6.84,6.84,0,0,0,2.16,1.45,6.72,6.72,0,0,0,5.28,0,6.84,6.84,0,0,0,2.16-1.45A7.14,7.14,0,0,0,297,49.34a6.75,6.75,0,0,0,0-5.29A7.14,7.14,0,0,0,295.52,41.9Zm1,4.8a5.57,5.57,0,0,1-.46,2.26,5.78,5.78,0,0,1-1.24,1.85,5.77,5.77,0,0,1-8.2,0,5.85,5.85,0,0,1-1.7-4.11,5.71,5.71,0,0,1,.46-2.26,6,6,0,0,1,1.24-1.85,5.85,5.85,0,0,1,1.84-1.24,5.9,5.9,0,0,1,4.52,0,5.85,5.85,0,0,1,1.84,1.24,6,6,0,0,1,1.24,1.85A5.54,5.54,0,0,1,296.52,46.7Z"></path><polygon class="cls-1" points="310.87 51.56 301.3 38.95 301.3 53.49 302.29 53.49 302.29 41.92 311.85 54.52 311.85 39.97 310.87 39.97 310.87 51.56"></polygon><path class="cls-1" d="M327.3,44.1a6.82,6.82,0,0,0-3.6-3.59,6.61,6.61,0,0,0-2.63-.53h-4.68V53.5h4.68A6.61,6.61,0,0,0,323.7,53a6.79,6.79,0,0,0,3.6-3.6,6.61,6.61,0,0,0,.53-2.63A6.69,6.69,0,0,0,327.3,44.1Zm-6.23,8.41h-3.69V41h3.69a5.46,5.46,0,0,1,2.23.46,6.07,6.07,0,0,1,1.83,1.23A5.8,5.8,0,0,1,326.37,49a5.86,5.86,0,0,1-3.07,3.07A5.62,5.62,0,0,1,321.07,52.51Z"></path><path class="cls-1" d="M337.8,41.91a6.07,6.07,0,0,0-3.08-1,2.66,2.66,0,0,0-2.88,2.53c0,1.68,1.54,2.2,3,2.7s3.48,1.43,3.48,3.75a3.77,3.77,0,0,1-4,3.62,6.55,6.55,0,0,1-3.5-1.15v-1.2a6.07,6.07,0,0,0,3.46,1.39,2.71,2.71,0,0,0,2.9-2.63c0-1.77-1.72-2.45-2.8-2.79A6.55,6.55,0,0,1,332,46a3.27,3.27,0,0,1-1.24-2.51A3.67,3.67,0,0,1,334.62,40a6.79,6.79,0,0,1,3.18.83Z"></path><path class="cls-1" d="M287.3,2.11l-11.08,26.8h1.3l5.58-13.6h8.37l5.59,13.6h1.31Zm-3.71,12,3.71-9,3.69,9Z"></path><path class="cls-1" d="M257.18,39l-6,14.51h1.1l2.87-7h4l2.88,7h1.11Zm1.6,6.51h-3.21l1.61-3.89Z"></path></svg>
+          </a>
+        </div>
+        <div class="col">
+
+          <div class="wd_hide_me_pls wd_stock_wrap">
+                      <div class="wd_featureboxes_stock_quote wd_featureboxes-vertical">
+<div id="wd_featurebox-financial_5" class="wd_featurebox_container wd_featurebox-financial"><div class="wd_featurebox_title"></div><div class="wd_featurebox"><div class="wd_ticker_selector"><span role="menu" wd_linkmenu_header="{&quot;title&quot;:&quot;Ticker&quot;}" class="wd_linkmenu"><a href="#" aria-label="Show data for Mountain Province Diamonds Inc." role="menuitem" onclick="ir_featurebox.update(5, 'MPVD:CA', false);return false;" aria-current="true" class="wd_linkmenu-item wd_linkmenu-active">TSX: MPVD</a><a href="#" aria-label="Show data for Mountain Province Diamonds Inc." role="menuitem" onclick="ir_featurebox.update(5, 'MPVD', false);return false;" class="wd_linkmenu-item">NASDAQ: MPVD</a></span></div><div class="wd_quote-container" id="ir_featurebox_5-quote"></div><div class="wd_chart-quote-footer" id="ir_featurebox_5-footer"></div><script type="text/javascript">webDriver.jQuery(function() {ir_featurebox.update(5, "MPVD:CA", false);});</script></div></div></div>
+
+                     <!-- END OF stock_quote FB -->
+          </div>
+          <!-- <span class="module--stocks">TSX: MPVD $1.30</span> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col">
+          <div class="row">
+            <div class="col">
+              <strong>MPD</strong>
+              <ul>
+                <li><a href="assets-overview" title="Assets">Assets</a></li>
+                <li><a href="sustainability" title="Sustainability">Sustainability</a></li>
+                <li><a href="diamonds" title="Diamonds">Diamonds</a></li>
+                <li><a href="news" title="News">News</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <strong>Company</strong>
+              <ul>
+                <li><a href="about-us" title="About Us">About Us</a></li>
+                <li><a href="management" title="Management">Management</a></li>
+                <li><a href="board-of-directors" title="Board of Directors">Board of Directors</a></li>
+                <li><a href="governance" title="Governance">Governance</a></li>
+                <li><a href="contact-us" title="Contact Us">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <strong>Investors</strong>
+              <ul>
+                <li><a href="investor-highlights" title="Higlights">Highlights</a></li>
+                <li><a href="financial-reports" title="Financial Reports">Financial Reports</a></li>
+                <li><a href="events-presentations" title="Events &amp; Presentations">Events &amp; Presentations</a></li>
+                <li><a href="analyst-coverage" title="Analyst Coverage">Analyst Coverage</a></li>
+
+                <li><a href="sedar" title="Sedar™ Filings">Sedar™ Filings</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <strong>General Inquiries</strong>
+              <a href="tel:+14163613562" title="+14163613562">+1 416 361 3562</a>
+              <a href="mailto:info@mountaindiamonds.com">info@mountaindiamonds.com</a>
+
+              <p>161 Bay Street, Suite 1410 P.O. BOX 216,
+              Toronto, On. M5J 2S1</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">&nbsp;</div>
+            <div class="col">
+
+            </div>
+        <!--     <div class="col">
+              <small><a href="https://mountainprovince.burnkit.com/privacy" title="Terms &amp; Privacy">Terms &amp; Privacy</a></small>
+            </div> -->
+            <div class="col">
+              <small><a href="home" title="Mountain Diamonds">©2020 Mountain Diamonds</a></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div class="wd_hidden_mod_templates">
+  
+
+  <div class="module--blockquote" >
+      <div class="container">
+        <blockquote>
+          <p>Natural diamonds from Canada’s North, creating value and respecting the invaluable.</p>
+        </blockquote>
+      </div>
+    </div>
+
+
+   <div class="module--two-col__image js--parallax__effect has--secondary">
+      <div class="container">
+        <div class="module--dual-image__secondary">
+          <div class="image--wrapper">
+            <div class="image--container">
+              <img src="/dist/images/dual-secondary.jpg">
+              <div class="image--overlay is--reveal"></div>
+            </div>
+          </div>
+          <span class="caption">60.60 Carat Vivid Yellow Rough Diamond</span>
+        </div>
+        <div class="module--dual-image__primary">
+          <div class="image--wrapper" style="height:863px; width: 100%;">
+            <div class="image--container" style="transform: scale(1.1) translateX(0) translateY(54.629999999999995px) translateZ(0);">
+              <img src="/dist/images/dual-primary.jpg">
+              <div class="image--overlay is--reveal"></div>
+            </div>
+          </div>
+          <!-- <span class="caption">Lorem Ipsum</span> -->
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<!-- <div class="wd_pic_primary"><img alt="" src="image/ice+terrain.png" /></div>
+<div class="wd_pic_second"><img alt="" src="image/91.40+k+diamond.png" /></div> -->
+
+  <div class="overlay"></div>
+  <script src="./room_index_files/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./js/wd_scripts.js" async></script>
+
+ <!--  <script src="./room_index_files/main.js" defer></script>
+ -->
+
+<!-- begin spin_special_output(body_end) -->
+<script wd_script_id="piwik_tracking_code"></script>
+<!-- Piwik Tracking Code -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+
+  _paq.push(["setCustomVariable", 1, "Content Type", "Standard", "page"]);
+
+  _paq.push(["setCustomVariable", 3, "Navigation Page", "Mountain Province", "page"]);
+
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//stats.drivetheweb.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", 4770]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+	<img src="https://stats.drivetheweb.com/piwik.php?idsite=4770&rec=1" style="border:0" alt="" />
+</noscript>
+<!-- End Piwik Tracking Code -->
+		
+<!-- end spin_special_output(body_end) -->
+</body></html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"0780edd7f5",applicationID:"96630573"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link href="/property-geojson-feed" rel="preload" as="fetch" />
+<link href="/available-units-json" rel="preload" as="fetch" />
+<link rel="shortcut icon" href="https://killamreit.com/sites/all/themes/custom/killam_ar/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="description" content="Killam Apartment REIT properties are located in cities throughout Atlantic Canada, British Columbia, Alberta and Ontario. Find the perfect apartment for you." />
+<link rel="canonical" href="https://killamreit.com/content/home" />
+<link rel="shortlink" href="https://killamreit.com/node/7" />
+  <title>Apartments for Rent | Killam Apartment REIT</title>
+  <link type="text/css" rel="stylesheet" href="https://killamreit.com/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://killamreit.com/sites/default/files/css/css_hTLrwzbU9bZhjvzx-j5entbJFEHkjJyd6RgHEla8FhA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://killamreit.com/sites/default/files/css/css_dWBHPbSQWh-19e3Bc29cTHIsefj--RoEVftmVdOAMn4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://killamreit.com/sites/default/files/css/css_H2L4h2DKFUkmy78Na_bCBO7rc7taYOPhDZM00ISqvW8.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://killamreit.com/sites/default/files/css/css_F11X3cHklj5azfpgVXgsvDBke_qGqs6n27oKLj_o40o.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&amp;qtpq6g" media="all" />
+  <script type="text/javascript" src="https://killamreit.com/sites/default/files/google_tag/google_tag.script.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
+<script type="text/javascript" src="https://killamreit.com/misc/jquery-extend-3.4.0.js?v=1.8.3"></script>
+<script type="text/javascript" src="https://killamreit.com/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.8.3"></script>
+<script type="text/javascript" src="https://killamreit.com/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://killamreit.com/misc/drupal.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.position.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.menu.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.autocomplete.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="https://killamreit.com/misc/ajax.js?v=7.80"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArAJmh80UkeITDQR_1dMlYJhqBSDUpA84&amp;libraries=geometry"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/custom/killam_search_autocomplete/js/jquery.autocomplete.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/views/js/base.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/misc/progress.js?v=7.80"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/ctools/js/auto-submit.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/views_ajax_get/views_ajax_get.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/modules/contrib/views/js/ajax_view.js?qtpq6g"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var addthis_config = {"data_track_addressbar":false,"ui_disable":true};
+//--><!]]>
+</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-544fd2f9194cbe04"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/themes/custom/killam_ar/assets/js/jquery.flexslider-min.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/themes/custom/killam_ar/assets/js/js.cookie.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/themes/custom/killam_ar/assets/js/scripts.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/themes/custom/killam_ar/assets/js/gtmFormAjax.js?qtpq6g"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"killam_ar","theme_token":"amwlaEoC_lqgkXMDDuflQimqdWSwcwjIayCwWoBtFJY","jquery_version":"1.8","js":{"sites\/all\/themes\/custom\/killam_ar\/assets\/js\/killam_geolocate.js":1,"sites\/all\/themes\/custom\/killam_ar\/assets\/js\/home_search_validation.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.position.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.menu.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.autocomplete.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"https:\/\/maps.googleapis.com\/maps\/api\/js?key=AIzaSyArAJmh80UkeITDQR_1dMlYJhqBSDUpA84\u0026libraries=geometry":1,"sites\/all\/modules\/custom\/killam_search_autocomplete\/js\/jquery.autocomplete.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/auto-submit.js":1,"sites\/all\/modules\/contrib\/views_ajax_get\/views_ajax_get.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"0":1,"\/\/s7.addthis.com\/js\/300\/addthis_widget.js#pubid=ra-544fd2f9194cbe04":1,"sites\/all\/themes\/custom\/killam_ar\/assets\/js\/jquery.flexslider-min.js":1,"sites\/all\/themes\/custom\/killam_ar\/assets\/js\/js.cookie.js":1,"sites\/all\/themes\/custom\/killam_ar\/assets\/js\/scripts.js":1,"sites\/all\/themes\/custom\/killam_ar\/assets\/js\/gtmFormAjax.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.menu.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custom\/killam_search_autocomplete\/css\/themes\/user-blue.css":1,"sites\/all\/modules\/custom\/killam_search_autocomplete\/css\/themes\/basic-green.css":1,"\/\/use.fontawesome.com\/releases\/v5.5.0\/css\/all.css":1,"sites\/all\/themes\/custom\/killam_ar\/assets\/css\/flexslider.css":1,"sites\/all\/themes\/custom\/killam_ar\/assets\/css\/killam-icons.css":1,"sites\/all\/themes\/custom\/killam_ar\/style.css":1,"\/\/fonts.googleapis.com\/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i":1}},"killam_search_autocomplete":{"form1":{"selector":"#search-form[action=\u0022\/search\/node\u0022] #edit-keys","minChars":"3","max_sug":"10","no_results":"-- no results --","type":"internal","datas":"https:\/\/killamreit.com\/","fid":"1","theme":"basic-green","auto_submit":"1","auto_redirect":"1"},"form2":{"selector":"#search-form[action=\u0022\/search\/user\u0022] #edit-keys","minChars":"3","max_sug":"10","no_results":"-- no results --","type":"internal","datas":"https:\/\/killamreit.com\/","fid":"2","theme":"user-blue","auto_submit":"1","auto_redirect":"1"},"form3":{"selector":"#edit-search-block-form--2","minChars":"3","max_sug":"10","no_results":"-- no results --","type":"internal","datas":"https:\/\/killamreit.com\/","fid":"3","theme":"basic-green","auto_submit":"1","auto_redirect":"1"},"form4":{"selector":".region-home-hero #apartment-search input#full_address","minChars":"3","max_sug":"12","no_results":"-- no results --","type":"internal","datas":"https:\/\/killamreit.com\/sites\/all\/modules\/killam_views\/killam_autocomplete.php?p=","fid":"4","theme":"user-blue","auto_submit":"1","auto_redirect":"1"},"form5":{"selector":"#homepage-apartment-search-region","minChars":"1","max_sug":"10","no_results":"-- no results --","type":"internal","datas":"https:\/\/killamreit.com\/killam_search_autocomplete\/autocomplete\/5\/","fid":"5","theme":"basic-green","auto_submit":"1","auto_redirect":"1"}},"autocomplete":{"callback_path":"sites\/all\/modules\/custom\/killam_views"},"better_exposed_filters":{"views":{"section_page_hero":{"displays":{"block_1":{"filters":[]},"property_details_hero":{"filters":[]}}},"apartment_grid":{"displays":{"homepage_grid_block":{"filters":[]}}},"property_details_view":{"displays":{"property_details_block":{"filters":[]}}},"testimonials_":{"displays":{"homepage_testimonials_block":{"filters":[]},"block_3":{"filters":{"field_region_tid":{"required":false}}}}},"property_map":{"displays":{"block":{"filters":[]}}}}},"viewsAjaxGet":["apartment_grid","testimonials_"],"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:1085c978af715fc12d92c36ea43f5da0":{"view_name":"apartment_grid","view_display_id":"homepage_grid_block","view_args":"Halifax","view_path":"node\/7","view_base_path":null,"view_dom_id":"1085c978af715fc12d92c36ea43f5da0","pager_element":0},"views_dom_id:ac49d440a8f9450ae6f6ce31ac765e18":{"view_name":"testimonials_","view_display_id":"block_3","view_args":"","view_path":"node\/7","view_base_path":null,"view_dom_id":"ac49d440a8f9450ae6f6ce31ac765e18","pager_element":0}}},"urlIsAjaxTrusted":{"\/views\/ajax":true,"\/":true}});
+//--><!]]>
+</script>
+</head>
+
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-7 node-type-home-page hide-addthis page-content-home" >
+  <div id="skip-link">
+    <a href="#main-content">Skip to main content</a>
+  </div>
+  <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2VBKJ&gtm_auth=mGjUQFZvWIugsR8SVIrDWA&gtm_preview=env-76&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager">Google Tag Manager</iframe></noscript>  
+  <!-- Pre Header -->
+    <div class="region region-pre-header">
+    <div id="block-site-alert-0" class="block block-site-alert">
+
+    
+    
+    
+    <div class="content">
+          <div class="alert-message alert-message-color-2">
+    <div class="o-wrapper">
+      <div class="alert-message-container">
+        <div class="alert-message-icon">
+          <i class="fa fa-lg fa-exclamation-circle"></i>
+        </div>
+        <div class="alert-message-content">
+          <p><strong>ATTENTION</strong>&nbsp;<a href="https://killamreit.com/killam-covid-19-pandemic-planning" target="_self">Read&nbsp;the latest&nbsp;</a>on our COVID-19 pandemic planning</p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="alert-message-dismiss js-dismiss-alert">&times; <span class="screen-reader-text">Dismiss alert message.</span></a>
+  </div>
+    </div>
+</div>
+  </div>
+  <!-- /Pre Header -->
+
+<!--/Header-->
+  <header class="c-header">
+    <div class="o-wrapper">
+      <div class="c-header__layout">
+        <div class="c-header__logo-container">
+          <!--Header Logo-->
+<div class="c-header__logo">
+    <a href="/"><img src="/sites/all/themes/custom/killam_ar/assets/img/logo-killam-apartment-reit.svg" alt="Killam Apartment Reit Logo"></a>
+</div>
+<!--/Header Logo-->        </div>
+        <div class="c-header__menu-container">
+          <!--Header Navigation-->
+<div class="c-header__menu">
+    <div class="c-header__menu-toggle js-toggle-menu">
+        <i class="c-icon icon-bars"></i>
+    </div>
+    <div class="c-header__menu-links">
+        <div class="c-header__menu-close js-toggle-menu">
+            <span>Close Menu</span> <i class="c-icon icon-times"></i>
+        </div>
+        <nav id="nav" class="slide">
+              <div class="region region-header-menu">
+    <div id="block-block-8" class="block block-block">
+
+    
+    
+    
+    <div class="content">
+        <!-- Google Tag Manager --><noscript><iframe title="Google Tag Manager" src="//www.googletagmanager.com/ns.html?id=GTM-N2VBKJ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>
+<!--//--><![CDATA[// ><!--
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N2VBKJ');
+//--><!]]>
+</script><!-- End Google Tag Manager -->    </div>
+</div>
+<div id="block-menu-block-2" class="block block-menu-block">
+
+    
+    
+    
+    <div class="content">
+        <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first expanded menu-mlid-404 apartments-nav"><a href="/apartments">Apartments</a><ul class="menu"><li class="first expanded menu-mlid-2139"><a href="/apartments?region=Alberta" class="no-menu">Alberta</a><ul class="menu"><li class="first leaf menu-mlid-2140"><a href="/apartments?region=calgary">Calgary</a></li>
+<li class="leaf menu-mlid-2141"><a href="/apartments?region=sherwood%20park">Sherwood Park</a></li>
+<li class="last leaf menu-mlid-2273"><a href="/apartments?region=edmonton">Edmonton</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2947"><a href="/apartments?region=british%2Bcolumbia">British Columbia</a><ul class="menu"><li class="first last leaf menu-mlid-2948"><a href="/apartments?region=victoria">Victoria</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2142"><a href="/apartments?region=new%2Bbrunswick" class="no-menu">New Brunswick</a><ul class="menu"><li class="first leaf menu-mlid-2143"><a href="/apartments?region=dieppe">Dieppe</a></li>
+<li class="leaf menu-mlid-2144"><a href="/apartments?region=fredericton">Fredericton</a></li>
+<li class="leaf menu-mlid-2145"><a href="/apartments?region=miramichi">Miramichi</a></li>
+<li class="leaf menu-mlid-2146"><a href="/apartments?region=moncton">Moncton</a></li>
+<li class="leaf menu-mlid-2147"><a href="/apartments?region=riverview">Riverview</a></li>
+<li class="last leaf menu-mlid-2148"><a href="/apartments?region=saint%20john">Saint John</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2149"><a href="/apartments?region=newfoundland" class="no-menu">Newfoundland</a><ul class="menu"><li class="first leaf menu-mlid-2150"><a href="/apartments?region=grand%20falls%20-%20windsor">Grand Falls - Windsor</a></li>
+<li class="last leaf menu-mlid-2151"><a href="/apartments?region=st.%20john%27s">St. John&#039;s</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2152"><a href="/apartments?region=nova%2Bscotia" class="no-menu">Nova Scotia</a><ul class="menu"><li class="first leaf menu-mlid-2153"><a href="/apartments?region=bedford">Bedford</a></li>
+<li class="leaf menu-mlid-2154"><a href="/apartments?region=dartmouth">Dartmouth</a></li>
+<li class="leaf menu-mlid-2155"><a href="/apartments?region=halifax">Halifax</a></li>
+<li class="last leaf menu-mlid-2156"><a href="/apartments?region=sydney">Sydney</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2157"><a href="/apartments?region=ontario" class="no-menu">Ontario</a><ul class="menu"><li class="first leaf menu-mlid-2158"><a href="/apartments?region=cambridge">Cambridge</a></li>
+<li class="leaf menu-mlid-2159"><a href="/apartments?region=kanata%20ottawa">Kanata</a></li>
+<li class="leaf menu-mlid-2160"><a href="/apartments?region=london">London</a></li>
+<li class="leaf menu-mlid-2161"><a href="/apartments?region=mississauga">Mississauga</a></li>
+<li class="leaf menu-mlid-2162"><a href="/apartments?region=ottawa">Ottawa</a></li>
+<li class="last leaf menu-mlid-2163"><a href="/apartments?region=toronto">Toronto</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-2164"><a href="/apartments?region=prince%2Bedward%2Bisland" class="no-menu">Prince Edward Island</a><ul class="menu"><li class="first leaf menu-mlid-2165"><a href="/apartments?region=charlottetown">Charlottetown</a></li>
+<li class="leaf menu-mlid-2166"><a href="/apartments?region=stratford">Stratford</a></li>
+<li class="last leaf menu-mlid-2167"><a href="/apartments?region=summerside">Summerside</a></li>
+</ul></li>
+</ul></li>
+<li class="leaf menu-mlid-1562"><a href="/new-developments">New Developments</a></li>
+<li class="leaf menu-mlid-2129"><a href="/commercial">Commercial</a></li>
+<li class="last leaf menu-mlid-3117"><a href="https://killamreit.com/esg/environmental">Sustainability</a></li>
+</ul></div>
+    </div>
+</div>
+  </div>
+        </nav>
+    </div>
+</div>
+<!--/Header Navigation-->          <!--Header Search-->
+<div class="c-header__search-container">
+    <div class="c-header__search">
+          <div class="region region-header-search">
+    <div id="block-search-form" class="block block-search">
+
+    
+    
+    
+    <div class="content">
+        <form action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128" class="form-text" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-CVrc9e4HhXmEQ6U_J6l44M9wuFRhFc6LVHpZ05fS7KI" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>    </div>
+</div>
+  </div>
+    </div>
+    <div class="c-header__search-toggle js-toggle-search">
+        <i class="c-icon icon-search"></i>
+    </div>
+</div>
+<!--/Header Search-->        </div>
+      </div>
+    </div>
+  </header>
+<!--/Header-->
+
+
+<!--Main-->
+<main class="o-main">
+    <a id="main-content"></a>
+      <div class="region region-hero c-home__hero gray-nurse">
+    <div id="block-views-section-page-hero-block-1" class="block block-views c-home__hero-block c-home__hero-block--hero">
+
+    
+    
+    
+    <div class="content">
+        <div class="view view-section-page-hero view-id-section_page_hero view-display-id-block_1 view-dom-id-3bb924c05f830efab92d33796e96ceb5">
+        
+  
+  
+      <div class="view-content">
+        <div class="c-hero">
+      
+          <div class="c-hero__image"><div class="c-hero__image-image" style="background-image: url(https://killamreit.com/sites/default/files/saginawpark.jpg);"></div>
+</div>    
+          <h1 class="c-hero__summary">Find your next home with us.</h1>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div>
+<div id="block-block-22" class="block block-block c-home__hero-block c-home__hero-block--search">
+
+    
+    
+    
+    <div class="c-home__search o-wrapper">
+        
+<form action="/apartments" id="homepage-apartment-search" method="get" _lpchecked="1">
+<div class="home-search-warpper">
+    <input type="text" id="homepage-apartment-search-region" class="txt-box ui-autocomplete-processed ui-theme-user-blue ui-autocomplete-input" name="region" value="Halifax" placeholder="Enter city" autocomplete="off" required="true">
+    <input type="number" id="homepage-apartment-search-maxrent" class="txt-box" min="100" max="10000" step="100" maxlength="5" pattern="\d+" name="maxrent" value="Halifax" placeholder="Enter budget" autocomplete="off">
+    <input class="btn btn-brick" type="submit" value="Search" aria-label="Search">
+</div>
+</form>    </div>
+</div>
+<div id="block-menu-block-4" class="block block-menu-block c-home__hero-block c-home__hero-block--cities">
+
+    <div class="c-home__cities-container">
+        
+                    <div class="c-home__cities-heading">
+                <h2>Search for apartments by city</h2>
+            </div>
+        
+        
+        <div class="content">
+            <div class="menu-block-wrapper menu-block-4 menu-name-main-menu parent-mlid-404 menu-level-1 c-home__cities">
+    <ul class="menu"><li class="first expanded menu-mlid-2139"><a href="/apartments?region=Alberta" class="no-menu">Alberta</a><ul class="menu"><li class="first leaf menu-mlid-2140"><a href="/apartments?region=calgary">Calgary</a></li>
+<li class="leaf menu-mlid-2141"><a href="/apartments?region=sherwood%20park">Sherwood Park</a></li>
+<li class="last leaf menu-mlid-2273"><a href="/apartments?region=edmonton">Edmonton</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2947"><a href="/apartments?region=british%2Bcolumbia">British Columbia</a><ul class="menu"><li class="first last leaf menu-mlid-2948"><a href="/apartments?region=victoria">Victoria</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2142"><a href="/apartments?region=new%2Bbrunswick" class="no-menu">New Brunswick</a><ul class="menu"><li class="first leaf menu-mlid-2143"><a href="/apartments?region=dieppe">Dieppe</a></li>
+<li class="leaf menu-mlid-2144"><a href="/apartments?region=fredericton">Fredericton</a></li>
+<li class="leaf menu-mlid-2145"><a href="/apartments?region=miramichi">Miramichi</a></li>
+<li class="leaf menu-mlid-2146"><a href="/apartments?region=moncton">Moncton</a></li>
+<li class="leaf menu-mlid-2147"><a href="/apartments?region=riverview">Riverview</a></li>
+<li class="last leaf menu-mlid-2148"><a href="/apartments?region=saint%20john">Saint John</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2149"><a href="/apartments?region=newfoundland" class="no-menu">Newfoundland</a><ul class="menu"><li class="first leaf menu-mlid-2150"><a href="/apartments?region=grand%20falls%20-%20windsor">Grand Falls - Windsor</a></li>
+<li class="last leaf menu-mlid-2151"><a href="/apartments?region=st.%20john%27s">St. John&#039;s</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2152"><a href="/apartments?region=nova%2Bscotia" class="no-menu">Nova Scotia</a><ul class="menu"><li class="first leaf menu-mlid-2153"><a href="/apartments?region=bedford">Bedford</a></li>
+<li class="leaf menu-mlid-2154"><a href="/apartments?region=dartmouth">Dartmouth</a></li>
+<li class="leaf menu-mlid-2155"><a href="/apartments?region=halifax">Halifax</a></li>
+<li class="last leaf menu-mlid-2156"><a href="/apartments?region=sydney">Sydney</a></li>
+</ul></li>
+<li class="expanded menu-mlid-2157"><a href="/apartments?region=ontario" class="no-menu">Ontario</a><ul class="menu"><li class="first leaf menu-mlid-2158"><a href="/apartments?region=cambridge">Cambridge</a></li>
+<li class="leaf menu-mlid-2159"><a href="/apartments?region=kanata%20ottawa">Kanata</a></li>
+<li class="leaf menu-mlid-2160"><a href="/apartments?region=london">London</a></li>
+<li class="leaf menu-mlid-2161"><a href="/apartments?region=mississauga">Mississauga</a></li>
+<li class="leaf menu-mlid-2162"><a href="/apartments?region=ottawa">Ottawa</a></li>
+<li class="last leaf menu-mlid-2163"><a href="/apartments?region=toronto">Toronto</a></li>
+</ul></li>
+<li class="last expanded menu-mlid-2164"><a href="/apartments?region=prince%2Bedward%2Bisland" class="no-menu">Prince Edward Island</a><ul class="menu"><li class="first leaf menu-mlid-2165"><a href="/apartments?region=charlottetown">Charlottetown</a></li>
+<li class="leaf menu-mlid-2166"><a href="/apartments?region=stratford">Stratford</a></li>
+<li class="last leaf menu-mlid-2167"><a href="/apartments?region=summerside">Summerside</a></li>
+</ul></li>
+</ul></div>
+        </div>
+    </div>
+</div>
+<div id="block-views-4c668730eed17712861d5b11c9bf7ff7" class="block block-views c-home__hero-block">
+
+    
+    
+    
+    <div class="content">
+        <div class="view view-section-page-hero view-id-section_page_hero view-display-id-property_details_hero view-dom-id-a93364a3c6dffb280e0680b76898799d">
+        
+  
+  
+      <div class="view-content">
+        <div class="c-hero c-hero--slider">
+      
+          <div class="flexslider"></div>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>    </div>
+</div>
+  </div>
+
+    <div class="gray-nurse">
+        <div class="o-wrapper ">
+                        <div class="tabs"></div>                                </div>
+    </div>
+
+    <div class="o-content">
+          <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+    
+    
+    <div class="content">
+        <div id="node-7" class="node node-home-page clearfix" about="/content/home" typeof="sioc:Item foaf:Document">
+    <div >
+        
+                        <span property="dc:title" content="Home" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+                    </div>
+</div>
+    </div>
+</div>
+<div id="block-views-7516187de75ace134606c62b3568d82f" class="block block-views">
+
+    
+    
+    
+    <div class="content">
+        <div class="view view-apartment-grid view-id-apartment_grid view-display-id-homepage_grid_block view-dom-id-1085c978af715fc12d92c36ea43f5da0 gray-nurse">
+    <div class="o-wrapper u-padding-vertical">
+                                
+        
+        
+                    <div class="view-content c-tiles c-tiles--limit">
+                  <div class="c-tile">
+    <div class="c-tile__content">
+                        
+                                    <div class="c-tile__gallery flexslider"><div class="item-list"><ul><li class="first"><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP2035-Edit-Edit.jpg?itok=r7omER40" width="600" height="337" alt="21 Parkland Apartments Newly Renovated Kitchen Image" title="21 Parkland Apartments Newly Renovated Kitchen Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP2072-Edit.jpg?itok=410lmHj8" width="600" height="337" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP2091-Edit.jpg?itok=TIhw_i2_" width="600" height="337" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP2062.jpg?itok=cNIjxzzJ" width="600" height="337" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/21Parkland1.jpg?itok=FxO9rAh3" width="600" height="337" alt="21 Parkland Dining Area Image" title="21 Parkland Dining Area Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/21Parkland3.jpg?itok=14QN7qTt" width="600" height="337" alt="21 Parkland Dining Area &amp; Living Room Image" title="21 Parkland Dining Area &amp; Living Room Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/21Parkland5.jpg?itok=rKlv8voG" width="600" height="337" alt="21 Parkland Bedroom Image" title="21 Parkland Bedroom Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/parklaneexterior.jpg?itok=o8yBs9i2" width="600" height="337" alt="21 Parkland Drive Exterior Image" title="21 Parkland Drive Exterior Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/21Parkland9.jpg?itok=gBKdqVbq" width="600" height="337" alt="21 Parkland Kitchen 2 Image" title="21 Parkland Kitchen 2 Image" /></li>
+<li class="last"><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/21Parkland17.jpg?itok=QpcYV9zN" width="600" height="337" alt="21 Parkland Bedroom Image" title="21 Parkland Bedroom Image" /></li>
+</ul></div></div>                                            
+                                    <h3 class="c-tile__title"><a href="/apartments/halifax-ns/21-parkland-drive">21 Parkland Drive</a></h3>                                            
+                                    <p class="c-tile__address">21 Parkland Drive</p>                                            
+            <div class="c-tile__units">            <span>Units: </span>            Bachelor, 1–2 Bedroom            </div>                                
+                                    
+    <div class="c-tile__amenities">
+                                        <i class="c-icon icon-cat" title="Cat Friendly"></i>
+                                                        <i class="c-icon icon-elevator" title="Elevator"></i>
+                                                        <i class="c-icon icon-laundry" title="Laundry"></i>
+                                                        <i class="c-icon icon-parking" title="Parking"></i>
+                                                </div>
+
+                                            
+            <p class="c-tile__phone">            <span>Contact Leasing Agent: </span>            <a href="tel:1-833-291-3729">1-833-291-3729</a>            </p>                                
+                                    <div class="c-tile__footer">
+    <div class="c-tile__more">
+        <a href="/apartments/halifax-ns/21-parkland-drive" class="c-btn c-btn--primary">See More</a>    </div>
+
+    <div class="c-tile__like js-toggle-like " data-prop="12417">
+        <i class="c-icon icon-heart"></i>
+    </div>
+
+    <div class="c-tile__share addthis_toolbox" addthis:url="https://killamreit.com/apartments/halifax-ns/21-parkland-drive" addthis:title="21 Parkland Drive">
+        <a class="addthis_button_compact">
+            <i class="c-icon icon-share"></i>
+        </a>
+    </div>
+</div>
+                        </div>  </div>
+  <div class="c-tile">
+    <div class="c-tile__content">
+                        
+                                    <div class="c-tile__gallery flexslider"><div class="item-list"><ul><li class="first"><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Kitchen2.jpg?itok=oAiOn5gN" width="600" height="337" alt="Chapter House Kitchen - Renovated" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Livingeoom1_0.jpg?itok=Dpv9brMx" width="600" height="337" alt="Chapter House Living Room - Renovated" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/bedroom1.jpg?itok=vJMjwU7L" width="600" height="337" alt="Chapter House Bedroom - Renovated" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/bathroom2.jpg?itok=ypTtH8VW" width="600" height="337" alt="Chapter House Bathroom - Renovated" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/ChapterHouse_Out.jpg?itok=kAN_75WB" width="600" height="337" alt="Chapter House  Commercial Exterior Image" title="Chapter House  Commercial Exterior Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP4423.jpg?itok=8wr4VlzR" width="600" height="337" alt="Chapter House Kitchen Image" title="Chapter House Kitchen Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP4409.jpg?itok=RpJLepe0" width="600" height="337" alt="Chapter House Living Room Image" title="Chapter House Living Room Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP4443.jpg?itok=LN_-G7pU" width="600" height="337" alt="Chapter House Bedroom 1 Image" title="Chapter House Bedroom 1 Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP4441.jpg?itok=hltG5_qP" width="600" height="337" alt="Chapter House Bedroom 2 Image" title="Chapter House Bedroom 2 Image" /></li>
+<li class="last"><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP4449.jpg?itok=8j1NWT0z" width="600" height="337" alt="Chapter House Bathroom Image" title="Chapter House Bathroom Image" /></li>
+</ul></div></div>                                            
+                                    <h3 class="c-tile__title"><a href="/apartments/halifax-ns/chapter-house">Chapter House</a></h3>                                            
+                                    <p class="c-tile__address">1314 Cathedral Lane</p>                                            
+            <div class="c-tile__units">            <span>Units: </span>            1–4 Bedroom            </div>                                
+                                    
+    <div class="c-tile__amenities">
+                                        <i class="c-icon icon-cat" title="Cat Friendly"></i>
+                                                        <i class="c-icon icon-dog" title="Dog Friendly"></i>
+                                                        <i class="c-icon icon-elevator" title="Elevator"></i>
+                                                        <i class="c-icon icon-laundry" title="Laundry"></i>
+                                                        <i class="c-icon icon-parking" title="Parking"></i>
+                                                </div>
+
+                                            
+            <p class="c-tile__phone">            <span>Contact Leasing Agent: </span>            <a href="tel:1-833-270-0751">1-833-270-0751</a>            </p>                                
+                                    <div class="c-tile__footer">
+    <div class="c-tile__more">
+        <a href="/apartments/halifax-ns/chapter-house" class="c-btn c-btn--primary">See More</a>    </div>
+
+    <div class="c-tile__like js-toggle-like " data-prop="12462">
+        <i class="c-icon icon-heart"></i>
+    </div>
+
+    <div class="c-tile__share addthis_toolbox" addthis:url="https://killamreit.com/apartments/halifax-ns/chapter-house" addthis:title="Chapter House">
+        <a class="addthis_button_compact">
+            <i class="c-icon icon-share"></i>
+        </a>
+    </div>
+</div>
+                        </div>  </div>
+  <div class="c-tile">
+    <div class="c-tile__content">
+                        
+                                    <div class="c-tile__gallery flexslider"><div class="item-list"><ul><li class="first"><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/Garden%20Park_Out.jpg?itok=0ybDxMmu" width="600" height="337" alt="Garden Park Exterior Image" title="Garden Park Exterior Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/427678_GardenPark5.jpg?itok=b-nwpoH8" width="600" height="337" alt="Garden Park Exterior 2 Image" title="Garden Park Exterior 2 Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/Lobby.2.Reno_.jpg?itok=nC3G4Gp7" width="600" height="337" alt="Garden Park Lobby Image" title="Garden Park Lobby Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP5610.jpg?itok=61WObOcp" width="600" height="337" alt="Garden Park Kitchen Image" title="Garden Park Kitchen Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP5609.jpg?itok=mGW4jQbn" width="600" height="337" alt="Garden Park Kitchen 2 Image" title="Garden Park Kitchen 2 Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP5614.jpg?itok=OpLNojr7" width="600" height="337" alt="Garden Park Living Space Image" title="Garden Park Living Space Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP5616.jpg?itok=7aj3Sc3Q" width="600" height="337" alt="Garden Park Living Space 2 Image" title="Garden Park Living Space 2 Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP5628.jpg?itok=y_fv6LiO" width="600" height="337" alt="Garden Park Storage Image" title="Garden Park Storage Image" /></li>
+<li><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/_KMP5623.jpg?itok=TnLbw_5-" width="600" height="337" alt="Garden Park Bathroom Image" title="Garden Park Bathroom Image" /></li>
+<li class="last"><img typeof="foaf:Image" src="https://killamreit.com/sites/default/files/styles/property_tiles/public/Hero%20Shots/NS/Gym.2.Reno_.jpg?itok=3jO2J_71" width="600" height="337" alt="Garden Park Gym Image" title="Garden Park Gym Image" /></li>
+</ul></div></div>                                            
+                                    <h3 class="c-tile__title"><a href="/apartments/halifax-ns/garden-park">Garden Park</a></h3>                                            
+                                    <p class="c-tile__address">1472 Cathedral Lane</p>                                            
+            <div class="c-tile__units">            <span>Units: </span>            Bachelor, 1–2 Bedroom            </div>                                
+                                    
+    <div class="c-tile__amenities">
+                                        <i class="c-icon icon-cat" title="Cat Friendly"></i>
+                                                        <i class="c-icon icon-elevator" title="Elevator"></i>
+                                                        <i class="c-icon icon-gym" title="Fitness"></i>
+                                                        <i class="c-icon icon-laundry" title="Laundry"></i>
+                                                        <i class="c-icon icon-parking" title="Parking"></i>
+                                                </div>
+
+                                            
+            <p class="c-tile__phone">            <span>Contact Leasing Agent: </span>            <a href="tel:1-833-270-0746">1-833-270-0746</a>            </p>                                
+                                    <div class="c-tile__footer">
+    <div class="c-tile__more">
+        <a href="/apartments/halifax-ns/garden-park" class="c-btn c-btn--primary">See More</a>    </div>
+
+    <div class="c-tile__like js-toggle-like " data-prop="12446">
+        <i class="c-icon icon-heart"></i>
+    </div>
+
+    <div class="c-tile__share addthis_toolbox" addthis:url="https://killamreit.com/apartments/halifax-ns/garden-park" addthis:title="Garden Park">
+        <a class="addthis_button_compact">
+            <i class="c-icon icon-share"></i>
+        </a>
+    </div>
+</div>
+                        </div>  </div>
+            </div>
+            <div class="c-tiles__more u-hide">
+                <a href="#" class="c-tiles__more-btn js-toggle-tiles c-btn c-btn--primary">Show More</a>
+            </div>
+        
+        
+        
+        
+        
+            </div>
+</div>    </div>
+</div>
+  </div>
+                  <div class="region region-after-content">
+    <div id="block-views-752daadd316a20c541c2986081e76020" class="block block-views">
+
+    
+    
+    
+    <div class="content">
+        <div class="view view-testimonials- view-id-testimonials_ view-display-id-homepage_testimonials_block view-dom-id-cec1538252f7236d130f6e7e24e12e06 nandor">
+    <div class="o-wrapper u-padding-vertical-large c-testimonials__container">
+                                
+        
+        
+                    <div class="view-content c-testimonials">
+                <div class="c-testimonials__slider flexslider">
+                        <ul class="slider">          <li class="slide c-testimonial">  
+          
+<div class="c-testimonial__body-container">
+    <div class="c-testimonial__body">
+                <em>&ldquo;I love living here.&rdquo;</em>
+            </div>
+</div>
+
+<div class="c-testimonial__author">
+Tenant of 10-214 Harlington Cres. </div>
+
+<div class="c-testimonial__source">
+Tenant Survey 2019</div>
+
+  </li>
+          <li class="slide c-testimonial">  
+          
+<div class="c-testimonial__body-container">
+    <div class="c-testimonial__body">
+                <em>&ldquo;This is a great place to live.&rdquo;</em>
+            </div>
+</div>
+
+<div class="c-testimonial__author">
+Tenant of 125 Knightsridge Drive</div>
+
+<div class="c-testimonial__source">
+Tenant Survey 2020</div>
+
+  </li>
+          <li class="slide c-testimonial">  
+          
+<div class="c-testimonial__body-container">
+    <div class="c-testimonial__body">
+                <em>&ldquo;I am very pleased with the Killam experience!&rdquo;</em>
+            </div>
+</div>
+
+<div class="c-testimonial__author">
+Tenant of 1325 Hollis Street</div>
+
+<div class="c-testimonial__source">
+Tenant Survey 2020</div>
+
+  </li>
+          <li class="slide c-testimonial">  
+          
+<div class="c-testimonial__body-container">
+    <div class="c-testimonial__body">
+                <em>&ldquo;I love the building and the on-site manager and maintenance staff are awesome.
+&rdquo;</em>
+            </div>
+</div>
+
+<div class="c-testimonial__author">
+Tenant of 155 Stoneybrook Court</div>
+
+<div class="c-testimonial__source">
+Tenant Survey 2019</div>
+
+  </li>
+      </ul>                </div>
+            </div>
+        
+        
+        
+        
+        
+            </div>
+</div>    </div>
+</div>
+  </div>
+    </div>
+</main>
+<!--/Main-->
+
+<!--Footer-->
+<footer class="c-footer">
+    <div class="o-wrapper">
+        <div class="o-layout">
+            <div class="o-layout__item u-1/1 u-1/4@tablet">
+                <!--Footer Contact-->
+<div class="c-footer__contact u-padding-bottom">
+    <div class="o-layout">
+        <div class="o-layout__item u-1/1 u-1/2@mobile u-1/1@tablet">
+                            <p><strong>Head Office Contact Information</strong><br>
+3700 Kempt Road Suite 100<br>
+Halifax NS, B3K 4X8</p>                    </div>
+        <div class="o-layout__item u-1/1 u-1/2@mobile u-1/1@tablet">
+            <p>
+                                    Toll Free: <a href="tel:1-866-453-8900">1-866-453-8900</a><br>
+                                                    Tel: <a href="tel:902-453-9000">902-453-9000</a><br>
+                                                    Fax: <a href="tel:902-442-5325">902-442-5325</a>
+                            </p>
+        </div>
+    </div>
+</div>
+<!--/Footer Contact-->            </div>
+
+            <div class="o-layout__item u-1/1 u-2/4@tablet">
+                <div class="c-footer__menu u-padding-bottom-large">
+                      <div class="region region-footer-menu">
+    <div id="block-menu-menu-footer-menu" class="block block-menu">
+
+    
+    
+    
+    <div class="content">
+        <ul class="menu"><li class="first leaf"><a href="/furnished-suites">Furnished Suites</a></li>
+<li class="leaf"><a href="/manufactured-home-communities">Manufactured Homes</a></li>
+<li class="leaf"><a href="/seasonal-resorts">Seasonal Resorts</a></li>
+<li class="leaf"><a href="/tenants">For Tenants</a></li>
+<li class="leaf"><a href="/new-developments">New Developments</a></li>
+<li class="leaf"><a href="/about">About Killam Apartment REIT</a></li>
+<li class="leaf"><a href="/about/why-killam">Why Killam</a></li>
+<li class="leaf"><a href="/contact">Contact Us</a></li>
+<li class="leaf"><a href="/about/careers">Careers</a></li>
+<li class="leaf"><a href="/investor-relations">Investor Relations</a></li>
+<li class="leaf"><a href="/about/2020-tenant-survey">Tenant Survey</a></li>
+<li class="leaf"><a href="/tenants/perks-card">Perks Card</a></li>
+<li class="last leaf"><a href="https://killamreit.com/esg/environmental">ESG</a></li>
+</ul>    </div>
+</div>
+  </div>
+                </div>
+            </div>
+
+            <div class="o-layout__item u-1/1 u-1/4@tablet">
+                <div class="c-footer__logo">
+                    <a href="/"><img src="/sites/all/themes/custom/killam_ar/assets/img/logo-killam-apartment-reit.svg" alt="Killam Apartment Reit Logo"></a>
+                </div>
+                <!--Footer Social-->
+<div class="c-footer__social">
+    <div class="c-footer__social-links">
+                    <a href="https://www.facebook.com/killamapartments/" class="c-footer__social-link facebook" target="_blank"><i class="c-icon icon-facebook"></i></a>
+                            <a href="https://twitter.com/KillamTweets" class="c-footer__social-link twitter" target="_blank"><i class="c-icon icon-twitter"></i></a>
+                            <a href="https://www.youtube.com/channel/UCskmIA1yRTejR3aTSKYwjEw" class="c-footer__social-link youtube" target="_blank"><i class="c-icon icon-youtube"></i></a>
+                            <a href="https://www.instagram.com/killam.apartments/" class="c-footer__social-link instagram" target="_blank"><i class="c-icon icon-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/killam-apartments" class="c-footer__social-link linkedin" target="_blank"><i class="c-icon icon-linkedin"></i></a>
+            </div>
+</div>
+<!--/Footer Social-->            </div>
+        </div>
+    </div>
+</footer>
+<!--/Footer-->  <script type="text/javascript" src="https://killamreit.com/sites/all/themes/custom/killam_ar/assets/js/killam_geolocate.js?qtpq6g"></script>
+<script type="text/javascript" src="https://killamreit.com/sites/all/themes/custom/killam_ar/assets/js/home_search_validation.js?qtpq6g"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0780edd7f5","applicationID":"96630573","transactionName":"YQcDMBcFVxVWV01eXVhNNBYMSxYPWVBcTxxGChE=","queueTime":0,"applicationTime":14,"atts":"TUAARl8fRBs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

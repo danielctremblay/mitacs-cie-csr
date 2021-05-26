@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--
+       <meta http-equiv="X-UA-Compatible" content="IE=9" /> -->
+	
+	<title>Mullen Group |</title>
+	<meta name="description" content="" />		
+	
+	<link rel="pingback" href="//www.mullen-group.com/xmlrpc.php" />
+
+		<!--[if lt IE 9]>
+	<script src="//www.mullen-group.com/wp-content/themes/Divi/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Mullen Group &raquo; Feed" href="//www.mullen-group.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Mullen Group &raquo; Comments Feed" href="//www.mullen-group.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Mullen Group &raquo; Home Comments Feed" href="//www.mullen-group.com/home/feed/" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v7.16.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=UA-127225323-13"  type="text/javascript" data-cfasync="false"></script>
+			<script type="text/javascript" data-cfasync="false">
+				var mi_version = '7.16.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+				
+								var disableStr = 'ga-disable-UA-127225323-13';
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					return document.cookie.indexOf( disableStr + '=true' ) > - 1;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if ( __gtagTrackerIsOptedOut() ) {
+					window[disableStr] = true;
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+					window[disableStr] = true;
+				}
+
+				if ( 'undefined' === typeof gaOptout ) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+				if ( mi_track_user ) {
+					function __gtagTracker() {dataLayer.push( arguments );}
+					__gtagTracker( 'js', new Date() );
+					__gtagTracker( 'set', {
+						'developer_id.dZGIzZG' : true,
+						                    });
+					__gtagTracker( 'config', 'UA-127225323-13', {
+						forceSSL:true,					} );
+										window.gtag = __gtagTracker;										(
+						function () {
+							/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+							/* ga and __gaTracker compatibility shim. */
+							var noopfn = function () {
+								return null;
+							};
+							var newtracker = function () {
+								return new Tracker();
+							};
+							var Tracker = function () {
+								return null;
+							};
+							var p = Tracker.prototype;
+							p.get = noopfn;
+							p.set = noopfn;
+							p.send = function (){
+								var args = Array.prototype.slice.call(arguments);
+								args.unshift( 'send' );
+								__gaTracker.apply(null, args);
+							};
+							var __gaTracker = function () {
+								var len = arguments.length;
+								if ( len === 0 ) {
+									return;
+								}
+								var f = arguments[len - 1];
+								if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+									if ( 'send' === arguments[0] ) {
+										var hitConverted, hitObject = false, action;
+										if ( 'event' === arguments[1] ) {
+											if ( 'undefined' !== typeof arguments[3] ) {
+												hitObject = {
+													'eventAction': arguments[3],
+													'eventCategory': arguments[2],
+													'eventLabel': arguments[4],
+													'value': arguments[5] ? arguments[5] : 1,
+												}
+											}
+										}
+										if ( typeof arguments[2] === 'object' ) {
+											hitObject = arguments[2];
+										}
+										if ( 'undefined' !== typeof (
+											arguments[1].hitType
+										) ) {
+											hitObject = arguments[1];
+										}
+										if ( hitObject ) {
+											action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+											hitConverted = mapArgs( hitObject );
+											__gtagTracker( 'event', action, hitConverted );
+										}
+									}
+									return;
+								}
+
+								function mapArgs( args ) {
+									var gaKey, hit = {};
+									var gaMap = {
+										'eventCategory': 'event_category',
+										'eventAction': 'event_action',
+										'eventLabel': 'event_label',
+										'eventValue': 'event_value',
+										'nonInteraction': 'non_interaction',
+										'timingCategory': 'event_category',
+										'timingVar': 'name',
+										'timingValue': 'value',
+										'timingLabel': 'event_label',
+									};
+									for ( gaKey in gaMap ) {
+										if ( 'undefined' !== typeof args[gaKey] ) {
+											hit[gaMap[gaKey]] = args[gaKey];
+										}
+									}
+									return hit;
+								}
+
+								try {
+									f.hitCallback();
+								} catch ( ex ) {
+								}
+							};
+							__gaTracker.create = newtracker;
+							__gaTracker.getByName = newtracker;
+							__gaTracker.getAll = function () {
+								return [];
+							};
+							__gaTracker.remove = noopfn;
+							__gaTracker.loaded = true;
+							window['__gaTracker'] = __gaTracker;
+						}
+					)();
+									} else {
+										console.log( "" );
+					( function () {
+							function __gtagTracker() {
+								return null;
+							}
+							window['__gtagTracker'] = __gtagTracker;
+							window['gtag'] = __gtagTracker;
+					} )();
+									}
+			</script>
+				<!-- / Google Analytics by MonsterInsights -->
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.mullen-group.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<meta content="Divi v.2.2" name="generator"/><style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='colorbox-css'  href='//www.mullen-group.com/wp-content/plugins/wp-colorbox/example5/colorbox.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='//www.mullen-group.com/wp-includes/css/dist/block-library/style.min.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='page-list-style-css'  href='//www.mullen-group.com/wp-content/plugins/sitemap/css/page-list.css?ver=4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='stock-ticker-css'  href='//www.mullen-group.com/wp-content/plugins/stock-ticker/assets/css/stock-ticker.css?ver=3.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='stock-ticker-custom-css'  href='//www.mullen-group.com/wp-content/uploads/stock-ticker-custom.css?ver=3.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='monsterinsights-popular-posts-style-css'  href='//www.mullen-group.com/wp-content/plugins/google-analytics-for-wordpress/assets/css/frontend.min.css?ver=7.16.2' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,700,800&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='//www.mullen-group.com/wp-content/themes/Divi/style.css?ver=2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-css-css'  href='//www.mullen-group.com/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes.css?ver=3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='et-shortcodes-responsive-css-css'  href='//www.mullen-group.com/wp-content/themes/Divi/epanel/shortcodes/css/shortcodes_responsive.css?ver=3.0' type='text/css' media='all' />
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/plugins/enable-jquery-migrate-helper/js/jquery/jquery-1.12.4-wp.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/plugins/enable-jquery-migrate-helper/js/jquery-migrate/jquery-migrate-1.4.1-wp.js?ver=1.4.1-wp' id='jquery-migrate-js'></script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/plugins/wp-colorbox/jquery.colorbox-min.js?ver=1.1.4' id='colorbox-js'></script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/plugins/wp-colorbox/wp-colorbox.js?ver=1.1.4' id='wp-colorbox-js'></script>
+<script type='text/javascript' id='monsterinsights-frontend-script-js-extra'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/www.mullen-group.com","hash_tracking":"false","ua":"UA-127225323-13"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=7.16.2' id='monsterinsights-frontend-script-js'></script>
+<link rel="https://api.w.org/" href="//www.mullen-group.com/wp-json/" /><link rel="alternate" type="application/json" href="//www.mullen-group.com/wp-json/wp/v2/pages/171" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="//www.mullen-group.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="//www.mullen-group.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.7.2" />
+<link rel="canonical" href="//www.mullen-group.com/" />
+<link rel='shortlink' href='//www.mullen-group.com/' />
+<link rel="alternate" type="application/json+oembed" href="//www.mullen-group.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mullen-group.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="//www.mullen-group.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mullen-group.com%2F&#038;format=xml" />
+
+        <script type="text/javascript">
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = 'e8c220f8ba';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', '//www.mullen-group.com/wp-admin/admin-ajax.php' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        </script>
+
+		<link rel="apple-touch-icon" sizes="120x120" href="/wp-content/uploads/fbrfg/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/wp-content/uploads/fbrfg/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/wp-content/uploads/fbrfg/favicon-16x16.png">
+<link rel="manifest" href="/wp-content/uploads/fbrfg/site.webmanifest">
+<link rel="shortcut icon" href="/wp-content/uploads/fbrfg/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/wp-content/uploads/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />	<style>
+		a { color: #2EA3F2; }
+
+		body { color: #000000; }
+
+		.et_pb_counter_amount, .et_pb_featured_table .et_pb_pricing_heading, .et_quote_content, .et_link_content, .et_audio_content { background-color: #2EA3F2; }
+
+		#main-header, #main-header .nav li ul, .et-search-form, #main-header .et_mobile_menu { background-color: #ffffff; }
+
+		#top-header, #et-secondary-nav li ul { background-color: #2EA3F2; }
+
+		.woocommerce a.button.alt, .woocommerce-page a.button.alt, .woocommerce button.button.alt, .woocommerce-page button.button.alt, .woocommerce input.button.alt, .woocommerce-page input.button.alt, .woocommerce #respond input#submit.alt, .woocommerce-page #respond input#submit.alt, .woocommerce #content input.button.alt, .woocommerce-page #content input.button.alt, .woocommerce a.button, .woocommerce-page a.button, .woocommerce button.button, .woocommerce-page button.button, .woocommerce input.button, .woocommerce-page input.button, .woocommerce #respond input#submit, .woocommerce-page #respond input#submit, .woocommerce #content input.button, .woocommerce-page #content input.button, .woocommerce-message, .woocommerce-error, .woocommerce-info { background: #2EA3F2 !important; }
+
+		#et_search_icon:hover, .mobile_menu_bar:before, .footer-widget h4, .et-social-icon a:hover, .comment-reply-link, .form-submit input, .et_pb_sum, .et_pb_pricing li a, .et_pb_pricing_table_button, .et_overlay:before, .entry-summary p.price ins, .woocommerce div.product span.price, .woocommerce-page div.product span.price, .woocommerce #content div.product span.price, .woocommerce-page #content div.product span.price, .woocommerce div.product p.price, .woocommerce-page div.product p.price, .woocommerce #content div.product p.price, .woocommerce-page #content div.product p.price, .et_pb_member_social_links a:hover { color: #2EA3F2 !important; }
+
+		.woocommerce .star-rating span:before, .woocommerce-page .star-rating span:before, .et_pb_widget li a:hover, .et_pb_bg_layout_light .et_pb_promo_button, .et_pb_bg_layout_light .et_pb_more_button, .et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active, .et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active, .et_pb_gallery .et_pb_gallery_pagination ul li a.active, .wp-pagenavi span.current, .wp-pagenavi a:hover, .et_pb_contact_submit, .et_pb_bg_layout_light .et_pb_newsletter_button, .nav-single a, .posted_in a { color: #2EA3F2 !important; }
+
+		.et-search-form, .nav li ul, .et_mobile_menu, .footer-widget li:before, .et_pb_pricing li:before, blockquote { border-color: #2EA3F2; }
+
+		#main-footer { background-color: ; }
+
+		#top-menu a { color: #000000; }
+
+		#top-menu li.current-menu-ancestor > a, #top-menu li.current-menu-item > a, .bottom-nav li.current-menu-item > a { color: #2EA3F2; }
+
+		</style>
+<link rel="shortcut icon" href="//www.mullen-group.com/wp-content/uploads/2020/09/Mullen-Group-Favicon-1.png" /><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #000000; background-image: url("//www.mullen-group.com/wp-content/uploads/2015/03/siteBG.jpg"); background-position: center top; background-size: auto; background-repeat: repeat; background-attachment: fixed; }
+</style>
+	<script type="text/javascript">
+  var x = location.pathname;
+switch(x){
+case "/about-us/":
+window.location="/about-us/corporate-profile/";
+break;
+
+case "/corporate-responsibility/":
+window.location="/corporate-responsibility/governance-compliance/";
+break;
+
+case "/contact-us/":
+window.location="/contact-us/mullen-group-head-office/";
+break;
+
+case "/subsidiaries/":
+window.location="/subsidiaries/overview/";
+break;
+
+case "/investors/":
+window.location="/investors/investment-thesis/";
+break;
+
+case "/investors/ir-contact/":
+window.location="/contact-us/ir-contact/";
+break;
+
+case "/about-us/subsidiaries/":
+window.location="/subsidiaries/overview/";
+break;
+
+case "/contact-us/careers/":
+window.location="/careers/career-opportunities/";
+break;
+}
+
+  window.onorientationchange = detectIPadOrientation;  
+ function detectIPadOrientation () {  
+  var orientation = window.orientation; 
+  var i = window.location.href;
+    if ( orientation == 0 ) {  
+    // window.location.reload(); 
+	 window.location.replace(i);
+    }  
+    else if ( orientation == 90 ) {  
+    // window.location.reload(); 
+	window.location.replace(i);
+    }  
+    else if ( orientation == -90 ) {  
+   //  window.location.reload();
+   window.location.replace(i);
+    }  
+    else if ( orientation == 180 ) {  
+    //  window.location.reload();
+	window.location.replace(i);
+    }  
+ } 
+</script>
+
+<script type="text/javascript">
+(function() {
+var s = document.createElement('script');
+s.src = 'http://mullen-group.mwnewsroom.com/scripts/headlines/js';
+s.setAttribute('async', 'true');
+document.documentElement.firstChild.appendChild(s);
+})();
+</script>
+
+<style> 
+h1.qmod-heading {background-image:none}
+span.qmod-longname  {display:none}
+span.qmod-last:before {content: 'TSX: '}
+</style>
+<!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+</head>
+<body class="home page-template-default page page-id-171 custom-background et_fixed_nav et_pb_pagebuilder_layout et_right_sidebar unknown">
+	<div id="page-container">
+
+	
+		<header id="main-header" class="et_nav_text_color_dark">
+			<div class="container clearfix">
+							<a href="//www.mullen-group.com/">
+					<img src="//www.mullen-group.com/wp-content/uploads/2015/02/mullen-logo.gif" alt="Mullen Group" id="logo" />
+				</a>
+
+				<div id="et-top-navigation">
+					<nav id="top-menu-nav">
+					<ul id="top-menu" class="nav"><li id="menu-item-1235" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1235"><a href="/about-us/corporate-profile/">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-643" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-643"><a href="//www.mullen-group.com/about-us/corporate-profile/">Corporate Profile</a></li>
+	<li id="menu-item-646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-646"><a href="//www.mullen-group.com/about-us/our-mission/">Our Mission</a></li>
+	<li id="menu-item-647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647"><a href="//www.mullen-group.com/about-us/shared-services/">Shared Services</a></li>
+	<li id="menu-item-645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-645"><a href="//www.mullen-group.com/about-us/history/">History</a></li>
+	<li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="//www.mullen-group.com/about-us/culture-and-values/">Culture and Values</a></li>
+	<li id="menu-item-1937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1937"><a href="//www.mullen-group.com/about-us/subsidiaries/">Subsidiaries</a></li>
+</ul>
+</li>
+<li id="menu-item-1256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1256"><a href="/corporate-governance/governance-compliance/">Corporate Governance</a>
+<ul class="sub-menu">
+	<li id="menu-item-653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-653"><a href="//www.mullen-group.com/corporate-governance/governance-compliance/">Compliance</a></li>
+	<li id="menu-item-655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655"><a href="//www.mullen-group.com/corporate-governance/leadership-team/">Leadership Team</a></li>
+	<li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-651"><a href="//www.mullen-group.com/corporate-governance/board-of-directors/">Board of Directors</a></li>
+	<li id="menu-item-650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-650"><a href="//www.mullen-group.com/corporate-governance/board-committees/">Board Committees</a></li>
+	<li id="menu-item-654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-654"><a href="//www.mullen-group.com/corporate-governance/health-safety-environment/">Health, Safety &#038; Environment</a></li>
+</ul>
+</li>
+<li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-673"><a href="//www.mullen-group.com/investors/">Investors</a>
+<ul class="sub-menu">
+	<li id="menu-item-678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-678"><a href="//www.mullen-group.com/investors/investment-thesis/">Why Invest in Mullen Group?</a></li>
+	<li id="menu-item-679" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-679"><a href="//www.mullen-group.com/investors/reports-filings/">Reports &#038; Filings</a></li>
+	<li id="menu-item-677" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-677"><a href="//www.mullen-group.com/investors/financial-highlights/">Financial Highlights</a></li>
+	<li id="menu-item-676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-676"><a href="//www.mullen-group.com/investors/events-webcasts-presentations/">Events, Webcasts &#038; Presentations</a></li>
+	<li id="menu-item-675" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-675"><a href="//www.mullen-group.com/investors/dividends/">Dividends</a></li>
+	<li id="menu-item-681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-681"><a href="//www.mullen-group.com/investors/share-price/">Share Price</a></li>
+	<li id="menu-item-674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-674"><a href="//www.mullen-group.com/investors/analysts/">Analysts</a></li>
+	<li id="menu-item-1931" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1931"><a href="//www.mullen-group.com/investors/ir-contact/">IR Contact</a></li>
+	<li id="menu-item-680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-680"><a href="//www.mullen-group.com/investors/request-documents/">Request Documents</a></li>
+</ul>
+</li>
+<li id="menu-item-656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-656"><a href="//www.mullen-group.com/news/">News</a></li>
+<li id="menu-item-657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-657"><a href="//www.mullen-group.com/subsidiaries/">Subsidiaries</a>
+<ul class="sub-menu">
+	<li id="menu-item-659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-659"><a href="//www.mullen-group.com/subsidiaries/overview/">Overview</a></li>
+	<li id="menu-item-660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-660"><a href="//www.mullen-group.com/subsidiaries/less-than-truckload/">Less-Than-Truckload</a></li>
+	<li id="menu-item-3886" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3886"><a href="//www.mullen-group.com/subsidiaries/logisticswarehousing-segment/">Logistics &#038; Warehousing</a></li>
+	<li id="menu-item-658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658"><a href="//www.mullen-group.com/subsidiaries/specialized-and-industrial/">Specialized &#038; Industrial Services</a></li>
+</ul>
+</li>
+<li id="menu-item-1566" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1566"><a href="/careers/people-focus/">Careers</a>
+<ul class="sub-menu">
+	<li id="menu-item-664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-664"><a href="//www.mullen-group.com/careers/people-focus/">People Focus</a></li>
+	<li id="menu-item-662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-662"><a href="//www.mullen-group.com/careers/career-opportunities/">Career Opportunities</a></li>
+	<li id="menu-item-1273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1273"><a href="//www.mullen-group.com/careers/culture-and-values/">Culture and Values</a></li>
+	<li id="menu-item-666" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="//www.mullen-group.com/careers/quality-human-resources/">Quality &#038; Human Resources</a></li>
+	<li id="menu-item-663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-663"><a href="//www.mullen-group.com/careers/faq/">FAQs</a></li>
+	<li id="menu-item-665" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="//www.mullen-group.com/careers/privacy-statement/">Privacy Statement</a></li>
+</ul>
+</li>
+<li id="menu-item-668" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-668"><a href="//www.mullen-group.com/contact-us/">Contact Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-672"><a href="//www.mullen-group.com/contact-us/mullen-group-head-office/">Mullen Group Head Office</a></li>
+	<li id="menu-item-1940" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1940"><a href="//www.mullen-group.com/contact-us/careers/">Careers</a></li>
+	<li id="menu-item-671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-671"><a href="//www.mullen-group.com/contact-us/ir-contact/">IR Contact</a></li>
+	<li id="menu-item-670" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-670"><a href="//www.mullen-group.com/contact-us/corporate-information/">Corporate Information</a></li>
+</ul>
+</li>
+</ul>					</nav>
+
+					
+										<div id="et_top_search">
+						<span id="et_search_icon"></span>
+						<form role="search" method="get" class="et-search-form et-hidden" action="//www.mullen-group.com/">
+						<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />						</form>
+					</div>
+					
+					<div id="et_mobile_nav_menu">
+			<a href="#" class="mobile_nav closed">
+				<span class="select_page">Select Page</span>
+				<span class="mobile_menu_bar"></span>
+			</a>
+		</div>				</div> <!-- #et-top-navigation -->
+                          </div> <!-- .container -->
+
+                          <div class="clearfix" id="tsx"><div class="container"><div class="stock"><div id="qm-wrap">
+				<div data-qmod-tool="miniquotes" data-qmod-params='{"symbol":"MTL:CA"}' class="qtool"></div>
+                          </div>
+                          </div>
+                       <div class="dividend"> <a href="/dividend-disclaimer/" style="color:#fff"><span class="title">DIVIDENDS PAID TO SHAREHOLDERS:</span>
+                     
+			<img id="dollar" src=/wp-content/uploads/2015/04/flipperDollar.png>
+			<img id="i-m" src=/wp-content/uploads/2015/04/blank.png>
+			
+		    <img id="i-l" src=/wp-content/uploads/2015/04/flipperBlank.png>
+		    <img src=/wp-content/uploads/2015/04/comma.png>
+			<img id="i-k" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img id="i-j" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img id="i-i" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img src=/wp-content/uploads/2015/04/comma.png>
+			<img id="i-h" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img id="i-g" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img id="i-f" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img src=/wp-content/uploads/2015/04/comma.png>
+			<img id="i-e" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img id="i-d" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img id="i-c" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img src=/wp-content/uploads/2015/04/dot.png>
+			<img id="i-b" src=/wp-content/uploads/2015/04/flipperBlank.png>
+			<img id="i-a" src=/wp-content/uploads/2015/04/flipperBlank.png></a></div>
+			
+                         </div></div>
+		    </header> <!-- #main-header -->
+
+<script>
+//work for checking year
+var tmpYear = new Date();
+tmpYear = tmpYear.getFullYear();
+
+//Check to see if year is 2015, if not dividend numbers need to be updated
+if (tmpYear = "2015")
+{
+	var gerErGoing = setInterval(function(){getPaid()},1000);
+}
+
+function getPaid()
+{
+	function calculatePaid(basePaidDate, basePaid, paidPerSecond, when) {
+		var secondsSincePaidDate = when - basePaidDate;
+		return basePaid + paidPerSecond*secondsSincePaidDate;
+	}
+	
+	function getTickerTableRow(tickerTable, when) {
+		for (var i = 1; i < tickerTable.length; i++) {
+			if (tickerTable[i].startingDate > when) {
+				return tickerTable[i - 1];
+			}
+		}
+		
+		return tickerTable[tickerTable.length - 1];
+	}
+	
+	function getPaidOnDate(tickerTable, when) {
+		var row = getTickerTableRow(tickerTable, when);
+		return calculatePaid(row.startingDate, row.paid, row.paidPerSecond, when);
+	}
+	
+	// Unix Timestamps for humans
+	// To get these values, run a command like this on a Linux box - echo `date -d '2016-03-31' +%s`
+	// Reminder: 8am is 2pm UTC
+	var d2018_12_31 = 1546239600;
+	var d2020_04_02 = 1585785600;
+	var d2020_08_04 = 1596528000;
+	var d2020_08_04_8am = 1596550260;
+	var d2020_09_01_8am = 1598968800;
+	var d2020_10_01_8am = 1601560800;
+	var d2021_01_01_8am = 1609513200;
+	
+	var tickerTable = [
+		// 2018-12-31
+		{ startingDate: d2018_12_31, paid: 1203460000, paidPerSecond: 172315.02 / 24 / 60 / 60 },
+		// 2020-04-02
+		{ startingDate: d2020_04_02, paid: 1287269932, paidPerSecond: 0 },
+		// 2020-08-04
+		{ startingDate: d2020_08_04_8am, paid: 1287269932, paidPerSecond: 1.11894 },
+		// 2020-09-01
+		{ startingDate: d2020_09_01_8am, paid: 1290218519, paidPerSecond: 1.11504 },
+		// 2020-10-01
+		{ startingDate: d2020_10_01_8am, paid: 1293125840, paidPerSecond: 1.10562 },
+		// 2021-01-01
+		{ startingDate: d2021_01_01_8am, paid: 1304772984, paidPerSecond: 1.47416 }
+	];
+	
+	// [2020-07-26 Josh K] Switch to a tabular method for calculating paid values. See
+	// tickerTable above.
+	var printDivTotal = getPaidOnDate(tickerTable, (new Date()).getTime() / 1000)
+		.toFixed(2);
+
+	//var nowDate = new Date();
+	//var paidMay15_2016 = 1203460000;
+	//var paidPerDay = 172315.02;
+	//var paidPerHour = 0;
+	//var paidPerMin = 0;
+	//var paidPerSec = 0;
+
+	//Date Stuff
+	//Get today's date in seconds since 1-1-1970
+	//nowDate = nowDate.getTime();
+	//convert to seconds
+	//nowDate = nowDate / 1000;
+	//nowDate = Math.round(nowDate);
+	//subtract the amount of seconds between 1-1-1970 and 2-23-2017
+	//to get value run this on a Linux box - echo `date -d '2016-03-31' +%s`
+	//nowDate = nowDate - 1546239600;
+	//we now have the value of seconds in 2014
+
+	//Money Stuff
+	//get amount paid per second based on dividend per day
+	//paidPerHour = paidPerDay / 24;
+	//paidPerMin = paidPerHour / 60;
+	//paidPerSec = paidPerMin / 60;
+	//get amount paid up to now
+	//printDivTotal = paidMay15_2016 + (paidPerSec * nowDate);
+	//printDivTotal = 1287269932; // Fixed at 1.2B until May or June [2020-04-02 Josh K]
+
+	//round to 2 decimal places
+	
+	//Image Stuff
+	//Create the array
+	var images = new Array();
+	var numbers = new Array();
+	var newImage = "/wp-content/uploads/2015/04/flipper";
+	var extension = ".png";
+
+	images[0]="i-a";
+	images[1]="i-b";
+	images[2]="i-c";
+	images[3]="i-d";
+	images[4]="i-e";
+	images[5]="i-f";
+	images[6]="i-g";
+	images[7]="i-h";
+	images[8]="i-i";
+	images[9]="i-j";
+	images[10]="i-k";
+	images[11]="i-l";
+	
+	//break number apart into array
+	printDivTotal = printDivTotal.toString();
+	//reverse the number ***so that the trillions place can be added later if needed***
+	printDivTotal = printDivTotal.split("").reverse().join("");
+	for (var i = 0, len = printDivTotal.length; i < len; i += 1)
+	{
+		if (!(isNaN(printDivTotal.charAt(i))))
+		{
+			numbers.push(+printDivTotal.charAt(i));
+		}
+	}
+	
+	//set images using the two arrays
+	for (var i = 0, len = numbers.length; i < len; i += 1)
+	{
+		newImage = newImage + numbers[i] + extension;
+		document.getElementById(images[i]).src = newImage;
+		newImage = "/wp-content/uploads/2015/04/flipper";
+	}
+
+	//add the comma if the new digit is added
+	if (!(isNaN(numbers[11])))
+	{
+		document.getElementById("newComma").src = "/wp-content/uploads/2015/04/comma.png";
+	}
+}
+</script>
+		<div id="et-main-area">
+
+<div id="main-content">
+
+
+			
+				<article id="post-171" class="post-171 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+					<div id="home-banner" class="et_pb_section et_pb_fullwidth_section et_section_regular" style='background-color:#ffffff;'>
+			
+			
+				
+				<div class="et_pb_slider et_pb_slider_no_pagination et_slider_auto et_slider_speed_14000">
+			<div class="et_pb_slides">
+				<div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center" style='background-color:#ffffff;background-image:url(//www.mullen-group.com/wp-content/uploads/2021/05/PP_CoastGas_Award-1.jpg);'>
+			
+			<div class="et_pb_container clearfix">
+				
+				<div class="et_pb_slide_description">
+					<h2>Premay Pipeline - Award</h2>
+					<div class="et_pb_slide_content">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="https://www.coastalgaslink.com/milestone-safe-delivery-of-692-km-of-pipe-along-project-route/" target="_blank" rel="attachment wp-att-2374 noopener noreferrer"><img loading="lazy" class="alignnone size-full wp-image-2374 aligncenter" src="//www.mullen-group.com/wp-content/uploads/2015/05/learn-more.png" alt="learn-more" width="106" height="31" /></a></p>
+</div>
+					
+				</div> <!-- .et_pb_slide_description -->
+			</div> <!-- .et_pb_container -->
+			
+		</div> <!-- .et_pb_slide -->
+		<div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center" style='background-color:#ffffff;background-image:url(//www.mullen-group.com/wp-content/uploads/2021/04/Q1-2021-E3-2-Final.jpg);'>
+			
+			<div class="et_pb_container clearfix">
+				
+				<div class="et_pb_slide_description">
+					<h2>Q1 2021</h2>
+					<div class="et_pb_slide_content">
+<div id="banner3">
+<p>Mullen Group Ltd. Reports<br />
+2021 First Quarter Financial Results</p>
+<p>Interim Report  <a href="//www.mullen-group.com/wp-content/uploads/2021/04/Q1-21.pdf" target="_blank" rel="noopener noreferrer"><img loading="lazy" class="alignnone wp-image-1584 size-full" src="//www.mullen-group.com/wp-content/uploads/2015/03/search-arrow.png" alt="" width="15" height="17" /></a><br />
+News Release  <a href="https://mma.prnewswire.com/media/1493583/Mullen_Group_Ltd__Mullen_Group_Ltd__Reports_2021_First_Quarter_F.pdf?p=pdf" target="_blank" rel="noopener noreferrer"><img loading="lazy" class="alignnone wp-image-1584 size-full" src="//www.mullen-group.com/wp-content/uploads/2015/03/search-arrow.png" alt="" width="15" height="17" /></a><br />
+Webcast &#8211; April 22, 2021 @ 9:00 am MST  <a href="http://services.choruscall.ca/links/mullengroup20210422.html" target="_blank" rel="noopener noreferrer"><img loading="lazy" class="alignnone wp-image-1584 size-full" src="//www.mullen-group.com/wp-content/uploads/2015/03/search-arrow.png" alt="" width="15" height="17" /></a></p>
+<p>&nbsp;</p>
+</div>
+</div>
+					
+				</div> <!-- .et_pb_slide_description -->
+			</div> <!-- .et_pb_container -->
+			
+		</div> <!-- .et_pb_slide -->
+		<div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center" style='background-color:#ffffff;background-image:url(//www.mullen-group.com/wp-content/uploads/2021/04/Bandstra-1.jpg);'>
+			
+			<div class="et_pb_container clearfix">
+				
+				<div class="et_pb_slide_description">
+					<h2>Mullen Group acquires Bandstra Transportation</h2>
+					<div class="et_pb_slide_content">
+<div id="banner3">
+<p><span style="color: #000000;">April 16, 2021 &#8211; News Release  <a style="color: #000000;" href="https://mullengroup.mediaroom.com/2021-04-16-Mullen-Group-Ltd-Announces-Accretive-Acquisition" target="_blank" rel="noopener noreferrer"><img loading="lazy" class="alignnone wp-image-1584 size-full" src="//www.mullen-group.com/wp-content/uploads/2015/03/search-arrow.png" alt="" width="15" height="17" /></a></span><br />
+<span style="color: #000000;">About Bandstra Transportation  <a style="color: #000000;" href="https://www.bandstra.com/" target="_blank" rel="noopener noreferrer"><img loading="lazy" class="alignnone wp-image-1584 size-full" src="//www.mullen-group.com/wp-content/uploads/2015/03/search-arrow.png" alt="" width="15" height="17" /></a></span></p>
+<p>&nbsp;</p>
+</div>
+</div>
+					
+				</div> <!-- .et_pb_slide_description -->
+			</div> <!-- .et_pb_container -->
+			
+		</div> <!-- .et_pb_slide -->
+		<div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center" style='background-color:#ffffff;background-image:url(//www.mullen-group.com/wp-content/uploads/2020/03/Gardewine_2020_Carousel_final.jpg);'>
+			
+			<div class="et_pb_container clearfix">
+				
+				<div class="et_pb_slide_description">
+					<h2>Less-Than-Truckload</h2>
+					<div class="et_pb_slide_content">
+<h2><span style="color: #000000;">Final Mile Less-Than-Truckload Provider Serving Western Canada and Ontario</span></h2>
+<ul>
+<li><span style="color: #000000;">temperature controlled delivery services</span></li>
+<li><span style="color: #000000;">ambient transportation</span></li>
+<li><span style="color: #000000;">leading-edge technology</span></li>
+<li><span style="color: #000000;">extensive terminal network</span></li>
+</ul>
+<p><a href="/subsidiaries/less-than-truckload/" rel="attachment wp-att-2374 noopener"><img loading="lazy" class="alignright wp-image-2374 size-full" src="//www.mullen-group.com/wp-content/uploads/2015/05/learn-more.png" alt="learn-more" width="106" height="31" /></a></p>
+</div>
+					
+				</div> <!-- .et_pb_slide_description -->
+			</div> <!-- .et_pb_container -->
+			
+		</div> <!-- .et_pb_slide -->
+		<div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center" style='background-color:#ffffff;background-image:url(//www.mullen-group.com/wp-content/uploads/2020/03/L_andW_Carousel_2020_final.jpg);'>
+			
+			<div class="et_pb_container clearfix">
+				
+				<div class="et_pb_slide_description">
+					<h2>Logistics &amp; Warehousing</h2>
+					<div class="et_pb_slide_content">
+<div id="banner4">
+<h2>One of Canada’s Premier Logistics and Warehousing companies serving North America</h2>
+<ul>
+<li>Logistics, Intermodal and Transload</li>
+<li>Value-added warehousing and distribution</li>
+<li>Full Truckload</li>
+<li>Third-party logistics</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="/subsidiaries/logisticswarehousing-segment/" rel="attachment wp-att-2374 noopener"><img loading="lazy" class="alignnone wp-image-2374 size-full" src="//www.mullen-group.com/wp-content/uploads/2015/05/learn-more.png" alt="learn-more" width="106" height="31" /></a></p>
+</div>
+</div>
+					
+				</div> <!-- .et_pb_slide_description -->
+			</div> <!-- .et_pb_container -->
+			
+		</div> <!-- .et_pb_slide -->
+		<div class="et_pb_slide et_pb_bg_layout_light et_pb_media_alignment_center" style='background-color:#ffffff;background-image:url(//www.mullen-group.com/wp-content/uploads/2020/03/SI_Carousel_2020_final.jpg);'>
+			
+			<div class="et_pb_container clearfix">
+				
+				<div class="et_pb_slide_description">
+					<h2>Specialized &amp; Industrial</h2>
+					<div class="et_pb_slide_content">
+<div id="banner5">
+<h1><strong>We serve Canada&#8217;s Natural Resources and Infrastructure Sectors</strong></h1>
+<ul>
+<li><strong>pipeline</strong></li>
+<li><strong>construction</strong></li>
+<li><strong>petrochemical</strong></li>
+<li><strong>infrastructure</strong></li>
+<li><strong>utility and telecom</strong></li>
+<li><strong>oil and natural gas</strong></li>
+</ul>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="/subsidiaries/specialized-and-industrial/" rel="attachment wp-att-2374 noopener"><img loading="lazy" class="wp-image-2374 size-full alignleft" src="//www.mullen-group.com/wp-content/uploads/2015/05/learn-more.png" alt="learn-more" width="106" height="31" /></a></p>
+</div>
+					
+				</div> <!-- .et_pb_slide_description -->
+			</div> <!-- .et_pb_container -->
+			
+		</div> <!-- .et_pb_slide -->
+		<div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center" style='background-color:#ffffff;background-image:url(//www.mullen-group.com/wp-content/uploads/2019/06/BMCJune2019-2-3.jpg);'>
+			
+			<div class="et_pb_container clearfix">
+				
+				<div class="et_pb_slide_description">
+					<h2>We are a people business </h2>
+					<div class="et_pb_slide_content">
+<div id="banner5">
+<h1><span style="color: #ffffff;">We are a People Business</span></h1>
+<ul>
+<li><span style="color: #ffffff;">integrity</span></li>
+<li><span lang="EN-US" style="color: #ffffff;">Education and Training</span></li>
+<li><span style="color: #ffffff;">safety</span></li>
+<li><span style="color: #ffffff;">commitment to quality</span></li>
+</ul>
+<h4><span style="color: #ffffff;">Mullen Group’s Business Management Certificate Graduating Class 2019<br />
+A new term to commence September 2019</span></h4>
+<p><span style="color: #ffffff;"><a style="color: #ffffff;" href="/careers/people-focus/" target="_blank" rel="attachment wp-att-2374 noopener noreferrer"><img loading="lazy" class="alignnone size-full wp-image-2374" src="//www.mullen-group.com/wp-content/uploads/2015/05/learn-more.png" alt="learn-more" width="106" height="31" /></a></span></p>
+</div>
+</div>
+					
+				</div> <!-- .et_pb_slide_description -->
+			</div> <!-- .et_pb_container -->
+			
+		</div> <!-- .et_pb_slide -->
+		<div class="et_pb_slide et_pb_bg_layout_dark et_pb_media_alignment_center" style='background-color:#ffffff;background-image:url(//www.mullen-group.com/wp-content/uploads/2015/03/slider2-2.jpg);'>
+			
+			<div class="et_pb_container clearfix">
+				
+				<div class="et_pb_slide_description">
+					<h2>Inuksuk</h2>
+					<div class="et_pb_slide_content">
+<div id="banner2">
+<h1>Our mission is to acquire companies and strive to improve their performance</h1>
+<p><a href="/about-us/our-mission/" target="_blank" rel="attachment wp-att-2374 noopener noreferrer"><img loading="lazy" class="alignnone size-full wp-image-2374" src="//www.mullen-group.com/wp-content/uploads/2015/05/learn-more.png" alt="learn-more" width="106" height="31" /></a></p>
+</div>
+</div>
+					
+				</div> <!-- .et_pb_slide_description -->
+			</div> <!-- .et_pb_container -->
+			
+		</div> <!-- .et_pb_slide -->
+		
+			</div> <!-- .et_pb_slides -->
+		</div> <!-- .et_pb_slider -->
+		
+			
+		</div> <!-- .et_pb_section --><div id="home-content" class="et_pb_section et_section_regular">
+			
+			
+				
+				<div class="et_pb_row">
+			<div class="et_pb_column et_pb_column_1_3">
+			<div class="et_pb_text et_pb_bg_layout_light et_pb_text_align_left">
+			<div class='et-box et-shadow'>
+					<div class='et-box-content'><strong>STAY CONNECTED</strong></div></div>
+<ul>
+<li><img class="alignnone size-full wp-image-239" src="//www.mullen-group.com/wp-content/uploads/2015/02/chairmans.png" alt="chairmans" /><a title="Message from the Chairman" href="//www.mullen-group.com/home/message-from-the-chairman/">Chairman&#8217;s message</a></li>
+<li><img loading="lazy" class="alignnone size-full wp-image-243" src="/wp-content/uploads/2020/04/covid-19.png" alt="video" width="27" height="23" /><a data-where-to-fix="/var/www/html/wp-content/mu-plugins/custom.php" href="/news/covid-19-information" title="COVID-19 Information">COVID-19 Information</a></li>
+<li><img loading="lazy" class="alignnone size-full wp-image-246" src="//www.mullen-group.com/wp-content/uploads/2015/02/careers.png" alt="careers" width="27" height="23" /><a title="Career Opportunities" href="//www.mullen-group.com/careers/career-opportunities/">Careers</a></li>
+</ul>
+
+		</div> <!-- .et_pb_text -->
+		</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3">
+			<div class="et_pb_text et_pb_bg_layout_light et_pb_text_align_left">
+			<div class='et-box et-shadow'>
+					<div class='et-box-content'><strong>INVESTOR INFORMATION</strong></div></div>
+<ul>
+<li><img loading="lazy" class="alignnone size-full wp-image-248" src="//www.mullen-group.com/wp-content/uploads/2015/02/financial-report.png" alt="financial-report" width="27" height="23" /><a title="Reports &amp; Filings" href="//www.mullen-group.com/investors/reports-filings/">Financial reports</a></li>
+<li><img loading="lazy" class="alignnone size-full wp-image-250" src="//www.mullen-group.com/wp-content/uploads/2015/02/share-price.png" alt="share-price" width="27" height="23" /><a title="Share Price" href="//www.mullen-group.com/investors/share-price/">Share price (Charts)</a></li>
+<li class="twoline"><img loading="lazy" class="alignnone size-full wp-image-252" src="//www.mullen-group.com/wp-content/uploads/2015/02/events.png" alt="events" width="27" height="23" /><a title="Events, Webcasts, Presentations" href="//www.mullen-group.com/investors/events-webcasts-presentations/">Events, webcasts &amp; presentations</a></li>
+</ul>
+
+		</div> <!-- .et_pb_text -->
+		</div> <!-- .et_pb_column --><div class="et_pb_column et_pb_column_1_3">
+			<div id="home-news" class="et_pb_text et_pb_bg_layout_light et_pb_text_align_left">
+			<div class='et-box et-shadow'>
+					<div class='et-box-content'><strong>RECENT NEWS</strong></div></div> <iframe loading="lazy" src="/wp-content/themes/news/news-widget.php" width="100%" height="192" frameborder="0" scrolling="no"></iframe>
+		</div> <!-- .et_pb_text -->
+		</div> <!-- .et_pb_column -->
+		</div> <!-- .et_pb_row --><div class="et_pb_row">
+			<div class="et_pb_column et_pb_column_4_4">
+			<div id="home-footer" class="et_pb_text et_pb_bg_layout_light et_pb_text_align_left">
+			
+<div class="mobileBreak">D I V E R S I T Y <strong>•</strong> S T A B I L I T Y <strong>•</strong> R E L I A B I L I T Y</div>
+<p>&nbsp;</p>
+<div class="copyright">© Copyright Mullen Group 2015 <strong>|</strong> <a title="Legal" href="//www.mullen-group.com/legal/">Legal</a> <strong>|</strong> <a title="Privacy Policy" href="//www.mullen-group.com/privacy-policy/">Privacy Policy</a> <strong>|</strong> <a title="Sitemap" href="//www.mullen-group.com/sitemap/">Sitemap</a></div>
+
+		</div> <!-- .et_pb_text -->
+		</div> <!-- .et_pb_column -->
+		</div> <!-- .et_pb_row -->
+			
+		</div> <!-- .et_pb_section -->
+					</div> <!-- .entry-content -->
+
+				
+				</article> <!-- .et_pb_post -->
+
+			
+
+</div> <!-- #main-content -->
+
+
+	<span class="et_pb_scroll_top et-pb-icon"></span>
+
+
+			<footer id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+	<div class="footer-widget"><div id="text-6" class="fwidget et_pb_widget widget_text">			<div class="textwidget">&copy;Copyright Mullen Group 2015</div>
+		</div> <!-- end .fwidget --></div> <!-- end .footer-widget --><div class="footer-widget last"><div id="text-2" class="fwidget et_pb_widget widget_text">			<div class="textwidget"><a href="/dividend-disclaimer/" class="investorOnly">Dividend Disclaimer</a>
+<strong>|</strong>
+ <a href="/legal/">Legal</a>
+ <strong>|</strong> 
+<a href="/privacy-policy/">Privacy Policy</a>
+<strong>|</strong>
+<a href="/sitemap/"> Sitemap</a>  
+</div>
+		</div> <!-- end .fwidget --></div> <!-- end .footer-widget -->	</div> <!-- #footer-widgets -->
+</div>	<!-- .container -->
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				
+						<p id="footer-info">Designed by <a href="http://www.elegantthemes.com" title="Premium WordPress Themes">Elegant Themes</a> | Powered by <a href="http://www.wordpress.org">WordPress</a></p>
+					</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+	<script type='text/javascript' src='//www.mullen-group.com/wp-content/plugins/stock-ticker/assets/js/jquery.webticker.min.js?ver=2.2.0.1' id='jquery-webticker-js'></script>
+<script type='text/javascript' id='stock-ticker-js-extra'>
+/* <![CDATA[ */
+var stockTickerJs = {"ajax_url":"https:\/\/www.mullen-group.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/plugins/stock-ticker/assets/js/jquery.stockticker.min.js?ver=3.2.0' id='stock-ticker-js'></script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-includes/js/comment-reply.min.js?ver=5.7.2' id='comment-reply-js'></script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/themes/Divi/js/jquery.fitvids.js?ver=2.2' id='divi-fitvids-js'></script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/themes/Divi/js/waypoints.min.js?ver=2.2' id='waypoints-js'></script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/themes/Divi/js/jquery.magnific-popup.js?ver=2.2' id='magnific-popup-js'></script>
+<script type='text/javascript' id='divi-custom-script-js-extra'>
+/* <![CDATA[ */
+var et_custom = {"ajaxurl":"https:\/\/www.mullen-group.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.mullen-group.com\/wp-content\/themes\/Divi\/images","et_load_nonce":"3e2d70c064","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","fill":"Fill","field":"field","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","next":"Next"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-content/themes/Divi/js/custom.js?ver=2.2' id='divi-custom-script-js'></script>
+<script type='text/javascript' src='//www.mullen-group.com/wp-includes/js/wp-embed.min.js?ver=5.7.2' id='wp-embed-js'></script>
+	<!-- LOADER 103233 -->
+<script id="qmod" type="application/javascript" src="//qmod.quotemedia.com/js/qmodLoader.js" data-qmod-wmid="103233" data-qmod-env="app" async="" data-qmod-version=""></script>
+<!-- END QMOD CODE -->
+
+</body>
+</html>

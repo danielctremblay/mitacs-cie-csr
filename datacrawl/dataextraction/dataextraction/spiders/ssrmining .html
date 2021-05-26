@@ -1,0 +1,1030 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <title>SSR Mining</title>
+    <link type="text/css" rel="stylesheet" media="all" href="/_templates/1/source/style.css?v=0.702">
+    <link type="text/css" rel="stylesheet" media="screen" href="/_templates/1/source/flexslider.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="/_templates/1/source/mobile-menu.css">
+    <script>
+      var is_ie = navigator.userAgent.toLowerCase().indexOf('trident') > -1;
+      if(is_ie) {document.write('<link href="/_templates/1/source/ie.css" rel="stylesheet" type="text/css">');}
+    </script>
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#23415a">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#23415a">
+    <!-- FAVICON -->
+    <!-- OPENGRAPH -->
+    <meta property='og:description' content="SSR Mining Inc. is a Vancouver-based mining company focused on the operation, development, exploration and acquisition of precious metal projects. It is listed under the ticker symbol SSRM on the NASDAQ Capital Markets and the Toronto Stock Exchange."/>
+    <meta property='og:type' content='website'/>
+    <meta property="og:image" content="/OG.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <!-- OPENGRAPH -->
+    <link type="text/css" rel="stylesheet" media="all" href="/_resources/fancybox/script/jquery.fancybox.css?v=2.1.4" />
+    <script src="https://use.fontawesome.com/91b073d9d7.js"></script>
+    <!--<style type="text/css">
+      .five9-chat-button {
+        font-size: 24px !important;
+      }
+      .five9-chat-button:after {
+        content: " Now" !important;
+      }1
+      #five9-popout-button {
+        float: right;
+      } 
+    </style>
+
+    <script src="https://app.five9.com/consoles/SocialWidget/five9-social-widget.min.js"></script>
+<script>
+var options = {
+  "rootUrl": "https://app.five9.com/consoles/",
+  "type": "chat",
+  "title": "SSR Mining Inc.",
+  "tenant": "Kingsdale",
+  "profiles": "SSR - CHAT - 2020",
+  "showProfiles": false,
+  "theme": "default-theme.css",
+  "surveyOptions": {
+    "showComment": true,
+    "requireComment": false
+  },
+  "fields": {
+    "name": {
+      "value": "",
+      "show": true,
+      "label": "Name"
+    },
+    "email": {
+      "value": "",
+      "show": true,
+      "label": "Email"
+    }
+  },
+  "playSoundOnMessage": true,
+  "allowCustomerToControlSoundPlay": false,
+  "showEmailButton": true,
+  "hideDuringAfterHours": false,
+  "useBusinessHours": false,
+  "showPrintButton": false,
+  "allowUsabilityMenu": false
+};
+Five9SocialWidget.addWidget(options);
+</script>-->
+<script>  
+
+  // Variables required for the interactive map, the smarty variables are pulled from content id 189 on line 819 in script.php
+  var $loadMapScript = true;
+
+  var $path = '/';
+
+  var markers;
+  var map;
+  var markerCluster;
+  var markersGroup = [];
+  var $template_id = 9;
+  var iconBase = $path + '_templates/' + $template_id + '/source/img/map-icons/';  
+
+  var $default_zoom = 3;
+  var openInfoWindow = false;
+  var previousMarker = false;
+  var previousWindow = false;
+  var time = false;
+  var locations = [ 
+{
+	"project":"Sunrise Lake",
+	"url":"operations/exploration/sunrise_lake/",
+	"lat":"62.901290",
+	"lng":"-112.378974",
+	"type":"exploration",
+	"popup":"",
+},{
+	"project":"Seabee",
+	"url":"operations/production/seabee/",
+	"lat":"55.683521",
+	"lng":"-103.621941",
+	"type":"production",
+	"popup":"",
+},{
+	"project":"Amisk",
+	"url":"operations/exploration/amisk/",
+	"lat":"53.689613",
+	"lng":"-101.263081",
+	"type":"exploration",
+	"popup":"",
+},{
+	"project":"Marigold",
+	"url":"operations/production/marigold/",
+	"lat":"40.749719",
+	"lng":"-117.149069",
+	"type":"production",
+	"popup":"",
+},{
+	"project":"Pitarrilla",
+	"url":"operations/development/pitarrilla/",
+	"lat":"25.898450",
+	"lng":"-105.248684",
+	"type":"development",
+	"popup":"",
+},{
+	"project":"San Luis",
+	"url":"operations/development/san_luis/",
+	"lat":"-9.198244",
+	"lng":"-76.920303",
+	"type":"development",
+	"popup":"",
+},{
+	"project":"Puna",
+	"url":"operations/production/puna/",
+	"lat":"-24.694432",
+	"lng":"-65.498107",
+	"type":"production",
+	"popup":"",
+},{
+	"project":"Copper Hill",
+	"url":"operations/exploration/copper-hill/",
+	"lat":"40.386954",
+	"lng":"39.298084",
+	"type":"exploration",
+	"popup":"",
+},{
+	"project":"Gediktepe NSR",
+	"url":"operations/development/gediktepe/",
+	"lat":"39.495200",
+	"lng":"28.263914",
+	"type":"development",
+	"popup":"",
+},{
+	"project":"Turkey Properties",
+	"url":"",
+	"lat":"38.778093",
+	"lng":"35.183781",
+	"type":"turkey",
+	"popup":"<div class='type'>Production</div><div class='production'><a href='/operations/production/copler-mine/'>Çöpler</a></div><div class='type'>Exploration</div><div class='exploration'><a href='/operations/exploration/cakmaktepe/'>Çakmaktepe</a></div><div class='exploration'><a href='/operations/exploration/ardich/'>Ardich</a></div><div class='exploration'><a href='/operations/exploration/copler-saddle/'>Çöpler Saddle</a></div><div class='exploration'><a href='/operations/exploration/mavialtin-porphyry-belt/'>Mavialtin Porphyry Belt</a></div>",
+},
+];
+  // var API_KEY = '!--|$api_key|--';
+  // var API_KEY = 'AIzaSyDl1pV0LQKQcssFQhP21Q83UEuKBt6Qke4';
+  var API_KEY = 'AIzaSyCjbnxJ8pt0BlZ57h1vgAP2gyQf6g3PwCo';
+  // console.log(API_KEY);
+  var initialStyles = [
+    {
+        "featureType": "all",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "saturation": "-100"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "color": "#20415b"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "gamma": 0.01
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "saturation": -31
+            },
+            {
+                "lightness": -33
+            },
+            {
+                "weight": 2
+            },
+            {
+                "gamma": 0.8
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "color": "#8796b3"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "color": "#20415b"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 30
+            },
+            {
+                "saturation": 30
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            },
+            {
+                "color": "#3b667f"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "saturation": 20
+            },
+            {
+                "color": "#ff0000"
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 20
+            },
+            {
+                "saturation": -20
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "lightness": 10
+            },
+            {
+                "saturation": -30
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "saturation": 25
+            },
+            {
+                "lightness": 25
+            },
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "all",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "all",
+        "stylers": [
+            {
+                "lightness": -20
+            },
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#f9f7f8"
+            }
+        ]
+    }
+];
+  var $map_center_latitude = 30;
+  var $map_center_longitude = -39;
+  var $needInit = true;
+
+</script>
+<script>
+// Variable needed for the map to set links appropriately  
+$staging = false;
+</script>
+<!-- Include the interactive map's js and css -->
+<script type="text/javascript" id="google-map-script" src="/_templates/9/source/js/script.js??v=0.702"></script>
+<link type="text/css" rel="stylesheet" media="all" href="/_templates/9/source/css/map.css?v=0.702">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- Include the bio listing's js and css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.12/featherlight.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.css">
+<link rel="stylesheet" href="/_templates/10/source/css/bio.css?v=0.702">
+</head>
+<body id="str-">
+<div id="main-container" class="subcat-">
+  <header id="header">
+    <div id="navigation-container" class="not-mobile">
+      <ul id="navigation">
+          <li id="logo" class="category"><a data-target="1" href="/"><svg class='nav-logo' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444.77 461.08">
+  <title>ssr-mining-logo</title>
+  <path class="a" d="M73.23,368.91c37.89,0,62.37-21,62.37-53.44V315c0-33.25-25.63-44.51-53.33-51.72-28.79-7.38-30-10.16-30-15.76V247.1c0-5.27,5.95-8.67,15.15-8.67,11.36,0,23.74,4.75,37.84,14.53l4.08,2.83L132.65,222l-3.59-2.88c-17.34-13.92-37.92-21-61.19-21-35.15,0-59.69,21.42-59.69,52.09v0.45c0,35.54,25.16,44.85,55.56,52.61,27.78,7.12,27.78,11.17,27.78,15.09v0.45c0,9.08-13.48,9.79-17.61,9.79-15.15,0-28.58-5.51-43.54-17.86l-3.8-3.13L0,339.43l3.58,3.19A104.33,104.33,0,0,0,73.23,368.91Z"/>
+  <path class="a" d="M216,368.91c37.89,0,62.37-21,62.37-53.44V315c0-33.25-25.63-44.51-53.33-51.72-28.8-7.38-30-10.16-30-15.76V247.1c0-5.27,5.95-8.67,15.16-8.67,11.36,0,23.74,4.75,37.84,14.53l4.08,2.83L275.45,222l-3.59-2.88c-17.34-13.92-37.92-21-61.19-21-35.15,0-59.69,21.42-59.69,52.09v0.45c0,35.54,25.16,44.85,55.56,52.61,27.78,7.12,27.78,11.17,27.78,15.09v0.45c0,9.08-13.48,9.79-17.61,9.79-15.15,0-28.58-5.51-43.54-17.86l-3.8-3.13L142.8,339.43l3.58,3.19A104.32,104.32,0,0,0,216,368.91Z"/>
+  <path class="a" d="M359.1,316.82l33.35,49.8h52.25L404.62,308l0.57-.28c19.6-9.61,30.39-27.51,30.39-50.41v-0.44c0-34.89-24.5-56.57-63.94-56.57H295.19V366.63H339.5v-50h19.43Zm-19.6-75.54h29.23c14.65,0,22.08,5.85,22.08,17.39v0.45c0,10.91-7.81,17.16-21.41,17.16H339.5v-35Z"/>
+  <circle class="b" cx="352.51" cy="88.99" r="88.99"/>
+  <path class="c" d="M240.75,178.08A89,89,0,1,1,240.75,0V178.08Z"/>
+  <polygon class="a" points="135.54 433.52 120.37 388.91 97.19 388.91 97.19 459.55 113.63 459.55 113.63 416.95 128.51 459.55 141.78 459.55 156.65 416.54 156.65 459.55 173.09 459.55 173.09 388.91 149.9 388.91 135.54 433.52"/>
+  <rect class="a" x="183.89" y="388.91" width="17.4" height="70.64"/>
+  <polygon class="a" points="255.69 432.02 228.86 388.91 212.09 388.91 212.09 459.55 228.53 459.55 228.53 416.54 255.26 459.55 272.13 459.55 272.13 388.91 255.69 388.91 255.69 432.02"/>
+  <rect class="a" x="282.93" y="388.91" width="17.4" height="70.64"/>
+  <polygon class="a" points="354.72 432.02 327.9 388.91 311.13 388.91 311.13 459.55 327.57 459.55 327.57 416.54 354.29 459.55 371.16 459.55 371.16 388.91 354.72 388.91 354.72 432.02"/>
+  <path class="a" d="M413.7,420.26v13.57h14.95a14.62,14.62,0,0,1-4.2,8.88c-2.47,2.29-6.07,3.46-10.7,3.46a16.43,16.43,0,0,1-8-1.81,15.31,15.31,0,0,1-5.32-4.84,21.39,21.39,0,0,1-3-6.93,33.58,33.58,0,0,1-1-8.08,36.13,36.13,0,0,1,1-8.42,21.83,21.83,0,0,1,3-7.12,15.14,15.14,0,0,1,5.32-4.88,16.48,16.48,0,0,1,8-1.81,13.89,13.89,0,0,1,8.55,2.63,13.25,13.25,0,0,1,4.72,7.92l0.22,0.92h16.61l-0.13-1.31a26.26,26.26,0,0,0-10.16-18.71,30.26,30.26,0,0,0-9.26-4.83,34.57,34.57,0,0,0-10.54-1.63,35.85,35.85,0,0,0-14.59,2.87,31.43,31.43,0,0,0-11,8,35.39,35.39,0,0,0-6.83,11.82A44.06,44.06,0,0,0,379,424.52a42.61,42.61,0,0,0,2.36,14.31,34.55,34.55,0,0,0,6.83,11.63,31.45,31.45,0,0,0,11,7.8,36.33,36.33,0,0,0,14.58,2.82,26.54,26.54,0,0,0,10.31-2.14,22.39,22.39,0,0,0,7.74-5.65l1.24,6.27h11.74V420.26H413.7Z"/>
+</svg></a></li>
+
+          <li id="nav2" class="category ">
+            <a href="/company/" data-target="2">
+              <svg id='company-icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 18 24">
+  <defs>
+    <clipPath id="ci-a">
+      <rect class="a" width="18" height="24"/>
+    </clipPath>
+  </defs>
+  <title>company</title>
+  <g class="b">
+    <rect class="c stroke-me" x="0.5" y="2.5" width="17" height="21"/>
+    <rect class="c stroke-me" x="7.5" y="19.5" width="3" height="4"/>
+  </g>
+  <rect class="c stroke-me" x="7.5" y="14.5" width="3" height="3"/>
+  <rect class="c stroke-me" x="12.5" y="14.5" width="3" height="3"/>
+  <rect class="c stroke-me" x="2.5" y="14.5" width="3" height="3"/>
+  <rect class="c stroke-me" x="7.5" y="9.5" width="3" height="3"/>
+  <rect class="c stroke-me" x="12.5" y="9.5" width="3" height="3"/>
+  <rect class="c stroke-me" x="2.5" y="9.5" width="3" height="3"/>
+  <rect class="c stroke-me" x="7.5" y="4.5" width="3" height="3"/>
+  <rect class="c stroke-me" x="12.5" y="4.5" width="3" height="3"/>
+  <rect class="c stroke-me" x="2.5" y="4.5" width="3" height="3"/>
+  <g class="b">
+    <polygon class="c" points="15.5 0.5 2.5 0.5 0.5 2.5 17.5 2.5 15.5 0.5"/>
+  </g>
+</svg>
+              <span>Company</span>
+            </a>
+          </li>
+
+          <li id="nav3" class="category ">
+            <a href="/operations/" data-target="3">
+              <svg class="svg-icon operations-icon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:#274159;}</style></defs><title>AmericasArtboard 1</title><path class="cls-1" d="M25.4,49.6A24.6,24.6,0,1,1,50,25,24.63,24.63,0,0,1,25.4,49.6Zm0-47.19A22.59,22.59,0,1,0,48,25,22.61,22.61,0,0,0,25.4,2.41Z"/><path class="cls-1" d="M30.46,46.35a1.1,1.1,0,0,1-.55-.16c-.19-.13-1.87-1.24-1.78-2.82,0-.49.22-1.83.45-3.39l0-.11c.21-1.43.56-3.78.58-4.34l-.08-.05A2.45,2.45,0,0,1,28,34.22a3.17,3.17,0,0,0-.33-.57A3.24,3.24,0,0,1,27,31.3a2.79,2.79,0,0,1,.61-1.49l.07-.1-4.39-2.13a1.18,1.18,0,0,1-.38-.32l-2.34-3.21a3.08,3.08,0,0,1-2.08-2.7l-.15-2.06L16.67,17A6.17,6.17,0,0,0,15,16.1h-.05c-.19,0-.22,0-.23,0a1,1,0,0,1-.89.52H11.86a1.07,1.07,0,0,1-.6-.19A3.73,3.73,0,0,1,10,13.36,3.7,3.7,0,0,1,11,10.44a2.15,2.15,0,0,1,1.42-.51,2.69,2.69,0,0,1,.4,0l4,.64L18,10.4l.29-.82a4.42,4.42,0,0,1,2.4-2.51L27.5,4.19l.44-.2a4.22,4.22,0,0,1,1.64-.34,4.33,4.33,0,0,1,1.5.28l.42.16A1.62,1.62,0,0,1,31.82,7L30,8.17a.44.44,0,0,0-.12.15.32.32,0,0,0,.12.39l2.7,1.85a1.88,1.88,0,0,1,.46,2.65,1.88,1.88,0,0,1-1.52.76,1.93,1.93,0,0,1-.75-.15l-2.1-.93h-.08a.25.25,0,0,0-.23.11,2.57,2.57,0,0,1-.38.55l-.5.55a1.14,1.14,0,0,0-.3.86,1.12,1.12,0,0,0,.42.81l.29-.11a2,2,0,0,1,2-1.9,2,2,0,0,1,1.35.52l1.17,1.05a3.12,3.12,0,0,1,.23,4.39l-3.5,3.92a3.5,3.5,0,0,1-2.53,1.16L29,27.56a2.16,2.16,0,0,1,1.32-.44,2.1,2.1,0,0,1,.56.07,12.71,12.71,0,0,1,3.33,1.42l.34.21A1.82,1.82,0,0,1,35.33,30l2,.86a2,2,0,0,1,.82,3l-.43.59-.33,1.32A2.51,2.51,0,0,1,36,37.41a.83.83,0,0,0-.29.24l-2.2,3-.11.14c-.8,1.08-1.2,1.63-1.44,1.91,0,.18-.22.89-.37,1.49l-.08,1.2a1,1,0,0,1-.55.85A1,1,0,0,1,30.46,46.35Zm-.62-16.81s0,.06,0,.13A2.21,2.21,0,0,1,29.28,31a.91.91,0,0,0-.22.53c0,.36.05.53.34,1a4.36,4.36,0,0,1,.55,1c0,.06,0,.07.25.22a1.93,1.93,0,0,1,1,1.65c0,.56-.22,2.17-.61,4.77-.05.36-.11.72-.16,1.07.42-.55,1.79-2.39,3.56-4.81a3,3,0,0,1,1.07-.88.48.48,0,0,0,.26-.3l.4-1.53a1,1,0,0,1,.16-.33l.51-.71-2.07-.86a1.77,1.77,0,0,1-1-1.31l-.24-.15a10.57,10.57,0,0,0-2.79-1.19h0a.13.13,0,0,0-.1,0l-.32.33ZM14.86,14a2.35,2.35,0,0,1,.45,0A8.15,8.15,0,0,1,18,15.43a1.1,1.1,0,0,1,.21.22l1.95,2.67a1,1,0,0,1,.19.53l.17,2.35a1,1,0,0,0,.83.94,1,1,0,0,1,.64.41l2.44,3.33.87.42L25,25.84a2,2,0,0,1-.41-1.19,1.93,1.93,0,0,1,1.92-1.92l.17.2v-.2a1.44,1.44,0,0,0,1.07-.47l3.5-3.92a1.06,1.06,0,0,0-.08-1.49L30,15.8a1.9,1.9,0,0,1-1.35,1.81l-.32.1a1.87,1.87,0,0,1-.62.1,2,2,0,0,1-1.29-.47,3.22,3.22,0,0,1-1.15-2.24,3.18,3.18,0,0,1,.83-2.39l.5-.55.09-.13a2.3,2.3,0,0,1,2-1.22,2.24,2.24,0,0,1,.92.2l.29.13-1.07-.74A2.38,2.38,0,0,1,28,7.54a2.45,2.45,0,0,1,.88-1.08L30,5.74a2.43,2.43,0,0,0-.38,0,2,2,0,0,0-.84.17l-.44.18-.07,0-6,2.53a.17.17,0,0,1-.09.06L21.49,9a2.31,2.31,0,0,0-1.27,1.33l-.5,1.37a1,1,0,0,1-.79.65L17,12.65H16.7L12.52,12h0c-.07,0-.09,0-.11,0A2,2,0,0,0,12,13.36a2.37,2.37,0,0,0,.3,1.26h1A2.29,2.29,0,0,1,14.86,14Z"/><path class="cls-1" d="M38.21,32.23a1.81,1.81,0,0,0-1-1.18l-2.05-.9A1.63,1.63,0,0,0,34.4,29l-.35-.21a12.61,12.61,0,0,0-3.27-1.4,2,2,0,0,0-1.86.46l-2.48-3.15a.08.08,0,0,1,0,0,.06.06,0,0,1,0,0,.08.08,0,0,1,0,0,3.26,3.26,0,0,0,2.62-1.09l3.5-3.91a2.92,2.92,0,0,0-.22-4.11l-1.16-1.05a1.82,1.82,0,0,0-3,1.27.16.16,0,0,1-.11.15l-.33.11a.2.2,0,0,1-.15,0,1.36,1.36,0,0,1-.14-2l.5-.56a2.15,2.15,0,0,0,.35-.5.45.45,0,0,1,.57-.2l2.1.93a1.68,1.68,0,0,0,2-.54,1.65,1.65,0,0,0,.29-1.26,1.61,1.61,0,0,0-.7-1.1L29.9,8.88a.52.52,0,0,1-.19-.64A.55.55,0,0,1,29.9,8l1.81-1.21a1.4,1.4,0,0,0,.63-1.34,1.42,1.42,0,0,0-.91-1.17L31,4.12a4,4,0,0,0-3,0l-.41.18,0,0L21.46,7h0l-.67.28a4.22,4.22,0,0,0-2.29,2.4l-.34.92-1.28.23-4-.64a2,2,0,0,0-1.66.44,3.45,3.45,0,0,0-1,2.76,3.55,3.55,0,0,0,1.21,3,.83.83,0,0,0,.48.15H13.8a.84.84,0,0,0,.73-.43s.12-.19.47-.13a5.76,5.76,0,0,1,1.83.93l1.73,2.38.15,2.11a2.89,2.89,0,0,0,2,2.55l2.38,3.26a.86.86,0,0,0,.31.26L28,29.62a.84.84,0,0,1-.17.3,2.77,2.77,0,0,0-.57,1.41,3,3,0,0,0,.64,2.21,3.25,3.25,0,0,1,.35.61,2.19,2.19,0,0,0,1,1.16l.18.12v0c0,.43-.33,2.75-.58,4.44s-.45,3-.47,3.48C28.25,44.85,29.84,45.9,30,46a.87.87,0,0,0,.44.13.83.83,0,0,0,.83-.78l.07-1.24c.15-.61.34-1.32.42-1.57.24-.29.67-.86,1.54-2l2.2-3a1,1,0,0,1,.37-.3,2.33,2.33,0,0,0,1.26-1.5l.36-1.38.42-.59A1.81,1.81,0,0,0,38.21,32.23ZM24.31,26l-2.44-3.34a.82.82,0,0,0-.51-.32,1.23,1.23,0,0,1-1-1.13l-.17-2.34a.73.73,0,0,0-.16-.43l-1.94-2.67a1,1,0,0,0-.17-.18,7.91,7.91,0,0,0-2.64-1.31,2.07,2.07,0,0,0-1.86.54H12.21a2.45,2.45,0,0,1-.39-1.46,2.06,2.06,0,0,1,.41-1.5.37.37,0,0,1,.33-.07l4.18.66a.61.61,0,0,0,.27,0l1.89-.33a.83.83,0,0,0,.63-.53l.5-1.37a2.52,2.52,0,0,1,1.38-1.45l.67-.28.09-.06,6-2.54.08,0,.41-.18a2.38,2.38,0,0,1,1.76,0h0L29,6.63a2.13,2.13,0,0,0-.8,1A2.19,2.19,0,0,0,29,10.24l2.71,1.85h0v0a0,0,0,0,1,0,0l-2.1-.93a2.1,2.1,0,0,0-2.69.93l-.12.17-.51.56a3,3,0,0,0-.77,2.23,3,3,0,0,0,1.08,2.11,1.81,1.81,0,0,0,1.72.33l.32-.1a1.83,1.83,0,0,0,1.26-1.66.17.17,0,0,1,.17-.15.15.15,0,0,1,.11,0l1.16,1a1.26,1.26,0,0,1,.1,1.78l-3.5,3.91a1.61,1.61,0,0,1-1.3.54,1.73,1.73,0,0,0-1.81,1.72,1.71,1.71,0,0,0,.37,1.06L26,26.84Zm12.28,6.79-.51.72a.68.68,0,0,0-.12.26l-.41,1.53a.65.65,0,0,1-.36.43,2.66,2.66,0,0,0-1,.82c-1.94,2.65-3.35,4.54-3.66,4.94a1.75,1.75,0,0,0-.42.89c.08-.63.2-1.44.32-2.24a45.83,45.83,0,0,0,.6-4.73,1.74,1.74,0,0,0-.94-1.5c-.23-.14-.28-.19-.33-.31a3.92,3.92,0,0,0-.53-1,1.46,1.46,0,0,1-.37-1.1,1.14,1.14,0,0,1,.26-.62,2.25,2.25,0,0,0,.5-1.33.61.61,0,0,0,.07-.17l.33-.33a.34.34,0,0,1,.33-.09,10.81,10.81,0,0,1,2.84,1.21l.32.2a1.59,1.59,0,0,0,.93,1.25l2.09.92a.14.14,0,0,1,.08.1A.13.13,0,0,1,36.59,32.79Z"/></svg>
+              <span>Operations</span>
+            </a>
+          </li>
+
+          <li id="nav4" class="category ">
+            <a class='external'  href="http://ir.ssrmining.com/" data-target="4">
+            <!-- <a class='external'  href="http://ir.ssrmining.com/alerts.cfm" data-target="4"> -->
+              <svg class='svg-icon investors-icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 23.81">
+  <defs>
+    <clipPath id="ii-a">
+      <rect class="a" width="24" height="23.81"/>
+    </clipPath>
+  </defs>
+  <title>Investors Icon</title>
+  <g class="b">
+    <polyline class="c stroke-blue" points="23 23.31 0.5 23.31 0.5 0.81"/>
+    <circle class="c stroke-blue" cx="8.5" cy="6.93" r="1.5"/>
+    <circle class="c stroke-blue" cx="7.72" cy="16.31" r="1.5"/>
+    <circle class="c stroke-blue" cx="16.13" cy="9.31" r="1.5"/>
+    <circle class="c stroke-blue" cx="15.13" cy="16.31" r="1.5"/>
+    <circle class="c stroke-blue" cx="22" cy="12.31" r="1.5"/>
+    <circle class="c stroke-blue" cx="22" cy="2" r="1.5"/>
+    <line class="c stroke-blue" x1="17.04" y1="8.13" x2="20.99" y2="3.11"/>
+    <line class="c stroke-blue" x1="9.93" y1="7.39" x2="14.68" y2="8.92"/>
+    <line class="c stroke-blue" x1="0.5" y1="11.78" x2="7.22" y2="7.71"/>
+    <line class="c stroke-blue" x1="16.42" y1="15.56" x2="20.7" y2="13.07"/>
+    <line class="c stroke-blue" x1="9.22" y1="16.31" x2="13.62" y2="16.31"/>
+    <line class="c stroke-blue" x1="0.68" y1="20.86" x2="6.43" y2="17.08"/>
+  </g>
+</svg>
+              <span>Investors</span>
+            </a>
+          </li>
+
+          <li id="nav6" class="category ">
+            <a href="/corporate_responsibility/" data-target="6">
+              <svg id='responsibility-icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 21.83 21.83">
+  <defs>
+    <clipPath id="res-a" transform="translate(0 0)">
+      <rect class="a" width="21.83" height="21.83"/>
+    </clipPath>
+  </defs>
+  <title>responsibility</title>
+  <g class="b">
+    <line class="c stroke-me" x1="13.83" y1="8" x2="1.83" y2="20"/>
+    <path class="c stroke-me" d="M21.33,0.5S18.17,29.34,2.68,19.16C-7.5,3.67,21.33.5,21.33,0.5Z" transform="translate(0 0)"/>
+    <polyline class="c stroke-me" points="10.84 16 5.83 16 5.83 11"/>
+    <polyline class="c stroke-me" points="13.34 12 9.84 12 9.84 8.5"/>
+    <polyline class="c stroke-me" points="15.34 8 13.84 8 13.84 6.5"/>
+  </g>
+</svg>
+              <span>Corporate<br />Responsibility</span>
+            </a>
+          </li>
+
+          <li id="nav7" class="category ">
+            <a href="/careers/" data-target="7">
+              <svg class='svg-icon careers-icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 19">
+  <defs>
+    <clipPath id="car-a" transform="translate(0)">
+      <rect class="a" width="24" height="19"/>
+    </clipPath>
+  </defs>
+  <title>Careers Icon</title>
+  <g class="b">
+    <path class="c stroke-blue" d="M7.92,18.5H15.5V14c0-.5-3-2-5.5-3V9s1-.35,1-2.5c0.69,0,1-2,0-2A4.33,4.33,0,0,0,11.5,2C11,0,6,0,5.5,2,3.39,1.57,5,4.21,5,4.5c-1,0-.7,2,0,2C5,8.65,6,9,6,9v2C3.5,12,.5,13.5.5,14v4.5H7.92Z" transform="translate(0)"/>
+    <path class="d stroke-blue" d="M18,18.5h5.5V14c0-.5-2.5-1.2-4.5-2V10.5s1-.28,1-2c0.56,0,.77-2,0-2,0-.17.81-1.07,0.5-2C20,3,16,3,15.5,4.5c-1.69-.35-0.5,1.77-0.5,2-0.8,0-.56,2,0,2,0,1.72,1,2,1,2v1" transform="translate(0)"/>
+  </g>
+</svg>
+              <span>Careers</span><!--https://ssrmining-openhire.silkroad.com/epostings/index.cfm?version=1&company_id=30070-->
+            </a>
+          </li>
+
+          <li id="nav8" class="category ">
+            <a href="/connect/" data-target="8">
+              <svg id='connect-icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 23 23.75">
+  <defs>
+    <clipPath id="cncti-a">
+      <rect class="a" width="23" height="23.75"/>
+    </clipPath>
+  </defs>
+  <title>connect</title>
+  <g class="b">
+    <polygon class="c stroke-me" points="0.5 13.5 5.5 10.25 11.5 13.5 11.5 20 5.5 23.25 0.5 20 0.5 13.5"/>
+    <polygon class="c stroke-me" points="11.5 13.5 17.5 10.25 22.5 13.5 22.5 20 17.5 23.25 11.5 20 11.5 13.5"/>
+    <polygon class="c stroke-me" points="5.5 3.75 11.5 0.5 17.5 3.75 17.5 10.25 11.5 13.5 5.5 10.25 5.5 3.75"/>
+  </g>
+</svg>
+              <span>Connect</span>
+            </a>
+          </li>
+
+          <li id="nav-signup" class="category">
+            <a class='external' href="http://ir.ssrmining.com/alerts.cfm">
+              <!-- <a class='external' href="http://ir.ssrmining.com/alerts.cfm"> -->
+              <svg id='email-icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22 15">
+  <defs>
+    <clipPath id="em-a">
+      <rect class="a" width="22" height="15"/>
+    </clipPath>
+  </defs>
+  <title>email</title>
+  <g class="b">
+    <rect class="c stroke-me" x="0.5" y="0.5" width="21" height="14" rx="1.5" ry="1.5"/>
+    <polyline class="c stroke-me" points="21 1 11 9 1 1"/>
+  </g>
+</svg>
+              <span>Email<br/> Signup</span>
+            </a>
+          </li>
+      </ul>
+
+      <div id="subnavigation">
+        <div class="container">
+                </div>
+      </div>
+    </div>
+
+
+    <div id="mobile-nav"><img src="/_templates/1/source/btn_mobile_nav.png" alt="Navigation" height="36" /></div>
+    <div id='mobile-logo'>
+      <a href='/'><svg class='nav-logo' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444.77 461.08">
+  <title>ssr-mining-logo</title>
+  <path class="a" d="M73.23,368.91c37.89,0,62.37-21,62.37-53.44V315c0-33.25-25.63-44.51-53.33-51.72-28.79-7.38-30-10.16-30-15.76V247.1c0-5.27,5.95-8.67,15.15-8.67,11.36,0,23.74,4.75,37.84,14.53l4.08,2.83L132.65,222l-3.59-2.88c-17.34-13.92-37.92-21-61.19-21-35.15,0-59.69,21.42-59.69,52.09v0.45c0,35.54,25.16,44.85,55.56,52.61,27.78,7.12,27.78,11.17,27.78,15.09v0.45c0,9.08-13.48,9.79-17.61,9.79-15.15,0-28.58-5.51-43.54-17.86l-3.8-3.13L0,339.43l3.58,3.19A104.33,104.33,0,0,0,73.23,368.91Z"/>
+  <path class="a" d="M216,368.91c37.89,0,62.37-21,62.37-53.44V315c0-33.25-25.63-44.51-53.33-51.72-28.8-7.38-30-10.16-30-15.76V247.1c0-5.27,5.95-8.67,15.16-8.67,11.36,0,23.74,4.75,37.84,14.53l4.08,2.83L275.45,222l-3.59-2.88c-17.34-13.92-37.92-21-61.19-21-35.15,0-59.69,21.42-59.69,52.09v0.45c0,35.54,25.16,44.85,55.56,52.61,27.78,7.12,27.78,11.17,27.78,15.09v0.45c0,9.08-13.48,9.79-17.61,9.79-15.15,0-28.58-5.51-43.54-17.86l-3.8-3.13L142.8,339.43l3.58,3.19A104.32,104.32,0,0,0,216,368.91Z"/>
+  <path class="a" d="M359.1,316.82l33.35,49.8h52.25L404.62,308l0.57-.28c19.6-9.61,30.39-27.51,30.39-50.41v-0.44c0-34.89-24.5-56.57-63.94-56.57H295.19V366.63H339.5v-50h19.43Zm-19.6-75.54h29.23c14.65,0,22.08,5.85,22.08,17.39v0.45c0,10.91-7.81,17.16-21.41,17.16H339.5v-35Z"/>
+  <circle class="b" cx="352.51" cy="88.99" r="88.99"/>
+  <path class="c" d="M240.75,178.08A89,89,0,1,1,240.75,0V178.08Z"/>
+  <polygon class="a" points="135.54 433.52 120.37 388.91 97.19 388.91 97.19 459.55 113.63 459.55 113.63 416.95 128.51 459.55 141.78 459.55 156.65 416.54 156.65 459.55 173.09 459.55 173.09 388.91 149.9 388.91 135.54 433.52"/>
+  <rect class="a" x="183.89" y="388.91" width="17.4" height="70.64"/>
+  <polygon class="a" points="255.69 432.02 228.86 388.91 212.09 388.91 212.09 459.55 228.53 459.55 228.53 416.54 255.26 459.55 272.13 459.55 272.13 388.91 255.69 388.91 255.69 432.02"/>
+  <rect class="a" x="282.93" y="388.91" width="17.4" height="70.64"/>
+  <polygon class="a" points="354.72 432.02 327.9 388.91 311.13 388.91 311.13 459.55 327.57 459.55 327.57 416.54 354.29 459.55 371.16 459.55 371.16 388.91 354.72 388.91 354.72 432.02"/>
+  <path class="a" d="M413.7,420.26v13.57h14.95a14.62,14.62,0,0,1-4.2,8.88c-2.47,2.29-6.07,3.46-10.7,3.46a16.43,16.43,0,0,1-8-1.81,15.31,15.31,0,0,1-5.32-4.84,21.39,21.39,0,0,1-3-6.93,33.58,33.58,0,0,1-1-8.08,36.13,36.13,0,0,1,1-8.42,21.83,21.83,0,0,1,3-7.12,15.14,15.14,0,0,1,5.32-4.88,16.48,16.48,0,0,1,8-1.81,13.89,13.89,0,0,1,8.55,2.63,13.25,13.25,0,0,1,4.72,7.92l0.22,0.92h16.61l-0.13-1.31a26.26,26.26,0,0,0-10.16-18.71,30.26,30.26,0,0,0-9.26-4.83,34.57,34.57,0,0,0-10.54-1.63,35.85,35.85,0,0,0-14.59,2.87,31.43,31.43,0,0,0-11,8,35.39,35.39,0,0,0-6.83,11.82A44.06,44.06,0,0,0,379,424.52a42.61,42.61,0,0,0,2.36,14.31,34.55,34.55,0,0,0,6.83,11.63,31.45,31.45,0,0,0,11,7.8,36.33,36.33,0,0,0,14.58,2.82,26.54,26.54,0,0,0,10.31-2.14,22.39,22.39,0,0,0,7.74-5.65l1.24,6.27h11.74V420.26H413.7Z"/>
+</svg></a>
+    </div>
+    <div id="mobile-navigation" class="mobile-only">
+        <ul>
+            <li id="nav1" class="category active"><a href="/" data-target="1" class="through load-page">Home</a></li>
+            <li id="nav2" class="category nav "><a href="/company/" data-target="2" class="nav-link">Company</a>
+                <div class="sub-dropdown"><div class="container">
+                <ul class="sub">
+                  <li><a href="/company/" title="Our Company" data-target="2" class="subnav-link change-page through">Our Company</a></li>
+                                                                                                                                                          <li><a href="/company/leadership-team/" title="Leadership Team" data-target="2" class="subnav-link change-page through">Leadership Team</a></li>
+                                                                      <li><a href="/company/bod/" title="Board of Directors" data-target="2" class="subnav-link change-page through">Board of Directors</a></li>
+                                                  </ul>
+                </div></div>
+            </li>
+            <li id="nav3" class="category nav "><a href="/operations/" data-target="3" class="nav-link">Operations</a>
+                <div class="sub-dropdown"><div class="container">
+                <ul class="sub">
+                                  
+                    <li><a href="/operations/" title="Our Operations" data-target="3" class="subnav-link change-page through">Our Operations</a></li>
+                                  
+                    <li><a href="/operations/production/copler-mine/" title="Production" data-target="3" class="subnav-link change-page through">Production</a></li>
+                                  
+                    <li><a href="/operations/development/gediktepe/" title="Development" data-target="3" class="subnav-link change-page through">Development</a></li>
+                                  
+                    <li><a href="/operations/exploration/amisk/" title="Exploration" data-target="3" class="subnav-link change-page through">Exploration</a></li>
+                                  
+                    <li><a href="/operations/index.php#videos" title="Company Videos" data-target="3" class="subnav-link change-page through">Company Videos</a></li>
+                                  
+                    <li><a href="/operations/rr/" title="Reserves and Resources" data-target="3" class="subnav-link change-page through">Reserves and Resources</a></li>
+                                </ul>
+                </div></div>
+            </li>
+            <!-- <li id="nav4" class="category !--|if $category == 'Investors'|--active!--|/if|--"><a href="http://ir.silverstandard.com/" data-target="4" class="through load-page">Investors</a></li> -->
+            <li id="nav4" class="category "><a href="http://ir.ssrmining.com/alerts.cfm" data-target="4" class="through load-page">Investors</a></li>
+            <li id="nav6" class="category "><a href="/corporate_responsibility/" data-target="6" class="through load-page">Corporate Responsibility</a></li>
+            <li id="nav7" class="category "><a href="/careers/" data-target="7" class="through load-page">Careers</a></li>
+            <li id="nav8" class="category "><a href="/connect/" data-target="8" class="through load-page">Connect</a></li>
+        </ul>
+    </div>
+
+    <div id="main-image" style="position:relative">
+      <div class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li><span>&nbsp;</span><!--This is a dummy container to fix the flexslider js bug.--></li>
+            <li>
+              <div style="background-image:url(/_templates/1/source/homepage-banner.jpg);" class="image">
+                <div id="homepage-slide-content">
+                  <div>
+                    <figure><svg id='white-logo' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 189.17 196.11">
+  <defs>
+    <clipPath id="wl-a">
+      <rect class="a" width="189.17" height="196.11"/>
+    </clipPath>
+  </defs>
+  <title>logo-white</title>
+  <g class="b">
+    <path class="c" d="M31.15,156.9c16.11,0,26.53-8.92,26.53-22.73V134c0-14.14-10.9-18.93-22.68-22-12.25-3.14-12.76-4.32-12.76-6.7V105.1c0-2.24,2.53-3.69,6.45-3.69,4.83,0,10.1,2,16.09,6.18l1.74,1.21,9.91-14.38-1.53-1.23a40.52,40.52,0,0,0-26-8.92c-14.95,0-25.39,9.11-25.39,22.16v0.19c0,15.11,10.7,19.08,23.63,22.38,11.82,3,11.82,4.75,11.82,6.42v0.19c0,3.86-5.73,4.16-7.49,4.16-6.44,0-12.15-2.34-18.52-7.59l-1.62-1.33L0,144.37l1.52,1.36A44.37,44.37,0,0,0,31.15,156.9"/>
+    <path class="c" d="M91.88,156.9c16.11,0,26.53-8.92,26.53-22.73V134c0-14.14-10.9-18.93-22.68-22C83.48,108.85,83,107.67,83,105.29V105.1c0-2.24,2.53-3.69,6.45-3.69,4.83,0,10.1,2,16.09,6.18l1.74,1.21,9.91-14.38-1.53-1.23a40.52,40.52,0,0,0-26-8.92c-14.95,0-25.39,9.11-25.39,22.16v0.19c0,15.11,10.7,19.08,23.63,22.38,11.82,3,11.82,4.75,11.82,6.42v0.19c0,3.86-5.73,4.16-7.49,4.16-6.44,0-12.15-2.34-18.52-7.59L72,130.84l-11.3,13.53,1.52,1.36A44.37,44.37,0,0,0,91.88,156.9"/>
+    <path class="c" d="M152.73,134.75l14.19,21.18h22.22L172.09,131l0.24-.12c8.34-4.09,12.93-11.7,12.93-21.44v-0.19c0-14.84-10.42-24.06-27.19-24.06H125.55v70.73H144.4V134.65h8.26Zm-8.33-32.13h12.43c6.23,0,9.39,2.49,9.39,7.4v0.19c0,4.64-3.32,7.3-9.11,7.3H144.4V102.62Z"/>
+    <path class="d" d="M112.08,37.85A37.85,37.85,0,1,0,149.93,0a37.85,37.85,0,0,0-37.85,37.85"/>
+    <path class="e" d="M102.4,75.74A37.87,37.87,0,1,1,102.4,0V75.74Z"/>
+    <polygon class="c" points="57.65 184.39 51.19 165.41 41.34 165.41 41.34 195.46 48.33 195.46 48.33 177.34 54.66 195.46 60.3 195.46 66.63 177.16 66.63 195.46 73.62 195.46 73.62 165.41 63.76 165.41 57.65 184.39"/>
+    <rect class="c" x="78.21" y="165.41" width="7.4" height="30.04"/>
+    <polygon class="c" points="108.75 183.75 97.34 165.41 90.21 165.41 90.21 195.46 97.2 195.46 97.2 177.16 108.57 195.46 115.74 195.46 115.74 165.41 108.75 165.41 108.75 183.75"/>
+    <rect class="c" x="120.33" y="165.41" width="7.4" height="30.04"/>
+    <polygon class="c" points="150.87 183.75 139.46 165.41 132.33 165.41 132.33 195.46 139.32 195.46 139.32 177.16 150.69 195.46 157.86 195.46 157.86 165.41 150.87 165.41 150.87 183.75"/>
+    <path class="c" d="M176,178.75v5.77h6.36a6.22,6.22,0,0,1-1.79,3.78,6.48,6.48,0,0,1-4.55,1.47,7,7,0,0,1-3.42-.77,6.52,6.52,0,0,1-2.26-2.06A9.08,9.08,0,0,1,169,184a14.25,14.25,0,0,1-.41-3.43A15.38,15.38,0,0,1,169,177a9.31,9.31,0,0,1,1.29-3,6.46,6.46,0,0,1,2.26-2.07,7,7,0,0,1,3.42-.77,5.9,5.9,0,0,1,3.64,1.12,5.63,5.63,0,0,1,2,3.37l0.09,0.39h7.06l-0.06-.56a11.18,11.18,0,0,0-4.32-8,12.85,12.85,0,0,0-3.94-2.05,14.7,14.7,0,0,0-4.48-.69,15.26,15.26,0,0,0-6.2,1.22,13.37,13.37,0,0,0-4.67,3.38,15,15,0,0,0-2.9,5,18.72,18.72,0,0,0-1,6.21,18.14,18.14,0,0,0,1,6.09,14.73,14.73,0,0,0,2.91,4.95,13.38,13.38,0,0,0,4.67,3.32,15.45,15.45,0,0,0,6.2,1.2,11.28,11.28,0,0,0,4.38-.91,9.5,9.5,0,0,0,3.29-2.4l0.53,2.66h5V178.75H176Z"/>
+  </g>
+</svg>
+</figure>
+                    <div>
+                      <p>
+                        <small style="font-size: 20px;line-height: 26px;">TSX: SSRM | NASDAQ: SSRM | ASX: SSR</small>
+                      </p> 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div style="background-image:url(/_templates/1/source/slidebg_company_03.jpg);" class="image">
+                <div class='plain-banner-content'>
+                  <h1>
+                    A Free Cash Flow Leader with a Diversified Portfolio of High Quality,<br>Long-Life Assets
+                  </h1>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <span>&nbsp;</span><!--This is a dummy container for operations.-->
+            </li>
+
+            <li>
+              <div style="background-image:url(/_templates/1/source/slidebg_investors.jpg);" class="image"></div>
+            </li>
+
+            <li>
+              <div style="background-image:url(/_templates/1/source/slidebg_sf.jpg);" class="image noshift">
+              </div>
+            </li>
+
+            <li>
+              <div style="background-image:url(/_templates/1/source/corporate-responsibility-banner.jpg);" class="image">
+                <div class='plain-banner-content'>
+                  <div class="btn-container sustainability">
+                    <a href="/_resources/SSR-Sustainability-Report-2020.pdf" target="_blank" class="btn btn-orange-cta">SSR MINING<br> SUSTAINABILITY REPORT</a>
+                    <!-- <a href="#" data-target="alacer_gold_sustainbility_reports" class="btn btn-orange-cta scroll-page">ALACER GOLD<br> SUSTAINABILITY REPORT</a> -->
+                </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div style="background-image:url(/_templates/1/source/slidebg_careers.jpg);" class="image">
+                <div class='plain-banner-content'>
+                  <div>
+                    <h1>We Deliver Excellence</h1>
+                      <a style='margin-top:25px;' class='btn btn-orange-cta' href='https://ssrmining-openhire.silkroad.com/epostings/index.cfm?version=1&company_id=30070' title='Current Openings'>
+                          Current Opportunities
+                      </a>&nbsp;&nbsp;
+                      <a style='margin-top:25px;' class='btn btn-orange-cta' href='https://ssrmining-openhire.silkroad.com/epostings/index.cfm?version=2&company_id=30070' title='Current Openings'>
+                          OPORTUNIDADES EN LATINOAMÉRICA
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div style="background-image:url(/_templates/1/source/banner_connect.jpg);" class="image">
+                <div class='plain-banner-content'>
+                  <h1>Connect with us</h1>
+                </div>
+              </div>
+            </li>
+          </ul> <!--ul.slides-->
+        </div> <!--div.flexslider-->
+      </div> <!--div.slider-->
+    </div> <!--div#main-image-->
+  </header>
+
+  <div id="content" class="content-">
+
+      <div id="main-content">
+      <div id="covid-content">
+        <div class="container">
+          <h1 class="covid-header">A FREE CASH FLOW FOCUSED GOLD PRODUCER</h1>
+          <div class="covid-links">
+            <div class="link-container">
+              <h3><a href="/_resources/SSR-Mining-Q121-Presentation-May-2021.pdf" target="_blank">May 2021 Corporate Presentation</a></h3>
+              <hr>
+            </div>
+            <div class="link-container">
+              <h3><a href="/_resources/news/SSR-Mining-Reports-First-Quarter-2021-Results.pdf" target="_blank">SSR Mining Reports First Quarter 2021 Results</a></h3>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-links">
+        <p>Questions? Need help voting? Contact Kingsdale Advisors at 1-888-518-1557 (toll-free in North America), 1-800-155-612 (toll free in Australia), or 416-867-2272 (for collect calls outside of North America), by email <a href="mailto:contactus@kingsdaleadvisors.com">contactus@kingsdaleadvisors.com</a> or live chat.</p>
+      </div>
+      <div id="home-content">
+        <div id="home-news">
+          <div>
+          <h1>Latest News</h1>
+
+          
+  <div><strong>May 21 2021</strong><p><a href=http://ir.ssrmining.com/files/doc_news/2021/05/SSR-Mining-Reports-2021-AGM-Voting-Results.pdf class='blue-link'>SSR Mining Announces Voting Results from 2021 Annual and Special Meeting of Shareholders</a></p></div><div><strong>May 06 2021</strong><p><a href=http://ir.ssrmining.com/files/doc_news/2021/SSR-Mining-Reports-First-Quarter-2021-Results.pdf class='blue-link'>SSR Mining Reports First Quarter 2021 Results</a></p></div><div><strong>Apr 20 2021</strong><p><a href=http://ir.ssrmining.com/files/doc_news/2021/04/2021-04-20-Q1-2021-Call-Details-FINAL.pdf class='blue-link'>SSR Mining to Announce First Quarter 2021 Consolidated Financial Results on May 6, 2021</a></p></div>
+
+          </div>
+
+          <div><a href='http://ir.ssrmining.com/Investors/press-releases/default.aspx' class='btn btn-blue' title='View All Latest News'>View All <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+        </div> <!--#home-news-->
+
+        <div id="home-events">
+          <div>
+          <h1>Latest Events</h1>
+          
+  <div><strong>May 21 2021</strong><p><a href=http://ir.ssrmining.com/investors/events/event-details/2021/2021-Annual-and-Special-Meeting-of-Shareholders/default.aspx class='blue-link'>2021 Annual and Special Meeting of Shareholders</a></p></div><div><strong>May 06 2021</strong><p><a href=http://ir.ssrmining.com/investors/events/event-details/2021/First-Quarter-2021-Financial-Results/default.aspx class='blue-link'>First Quarter 2021 Financial Results</a></p></div><div><strong>May 06 2021</strong><p><a href=http://ir.ssrmining.com/files/doc_presentations/Presentations/2021/SSR-Mining-Q121-Presentation-May-2021.pdf class='blue-link'>May 2021 Corporate Presentation</a></p></div>
+
+          </div>
+
+          <div><a href='http://ir.ssrmining.com/Investors/events/default.aspx' class='btn btn-blue' title='View All Events'>View All <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+        </div> <!--#home-events-->
+
+        <div id="home-investor-kit">
+          <!-- <div>
+            <h1>Investors Kit</h1>
+
+            <a class='blue-link' href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx'>
+              Corporate Presentation
+            </a>
+            <br />
+            <a class='blue-link' href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx'>
+              Management's Discussion<br />and Analysis
+            </a>
+            <br />
+            <a class='blue-link' href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx'>
+              Financial Statements
+            </a>
+              <br />
+            <a class='blue-link' href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx'>
+              Annual Information Report
+            </a>
+          </div>
+
+          <div><a href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx' class='btn btn-blue' title='View All Investor Content'>View All <i class="fa fa-angle-right" aria-hidden="true"></i></a></div> -->
+         <!--<div>
+            <h1>Investors Kit</h1>
+
+            <a class='blue-link' href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx'>
+              Corporate Presentation
+            </a>
+            <br />
+            <a class='blue-link' href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx'>
+              Management's Discussion<br />and Analysis
+            </a>
+            <br />
+            <a class='blue-link' href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx'>
+              Financial Statements
+            </a>
+              <br />
+            <a class='blue-link' href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx'>
+              Annual Information Report
+            </a>
+          </div>
+
+          <div><a href='http://ir.ssrmining.com/investors/investor-kit-download-library/default.aspx' class='btn btn-blue' title='View All Investor Content'>View All <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+        </div>-->
+
+        <div id="home-stock-info">
+          <div>
+            <h1>Stock Info</h1>
+            <table width="100%" style="margin-bottom: 25px;">
+              <tr><td><strong>TSX: SSRM</strong></td><td></td></tr>
+              <tr><td>Last</td><td align="right">$22.52</td></tr>
+              <tr><td>Change</td><td align="right">+$0.07</td></tr>
+              <tr><td colspan="2" align="center"><img src="/_templates/1/source/line.jpg" alt="" /></td></tr>
+              <tr><td><strong>NASDAQ: SSRM</strong></td><td></td></tr>
+              <tr><td>Last</td><td align="right">$18.57</td></tr>
+              <tr><td>Change</td><td align="right">-$0.05</td></tr>
+              <tr><td colspan="2" height="20" align="center"><img src="/_templates/1/source/line.jpg" alt="" /></td></tr>  
+              <tr><td><strong>ASX: SSR</strong></td><td></td></tr>
+              <tr><td>Last</td><td align="right">23.99</td></tr>
+              <tr><td>Change</td><td align="right">+$0.00</td></tr>
+              <tr><td colspan="2" height="20" align="center"><img src="/_templates/1/source/line.jpg" alt="" /></td></tr>              
+              <tr><td><strong>Gold</strong></td><td></td></tr>
+              <tr><td>Last</td><td align="right">$1900.03</td></tr>
+              <tr><td>Change</td><td align="right">+$1.96</td></tr>
+              <tr><td colspan="2" align="center"><img src="/_templates/1/source/line.jpg" alt="" /></td></tr>
+              <tr><td><strong>Silver</strong></td><td></td></tr>
+              <tr><td>Last</td><td align="right">$27.77</td></tr>
+              <tr><td>Change</td><td align="right">-$0.20</td></tr>
+            </table>
+          </div>
+
+          <div><a href='http://ir.ssrmining.com/Investors/stock-information/default.aspx' class='btn btn-blue' title='View All Stock Information'>View All <i class="fa fa-angle-right" aria-hidden="true"></i></a></div>
+        </div>
+      </div> <!--#home-buttons-->
+    </div> <!--#main-content-->
+  
+        
+      
+
+        
+        
+        
+        <div class="container clearset main"></div>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32942335-5"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-32942335-5');
+      </script>
+
+        
+        
+        
+        
+            </div>
+
+    <div id="footer">
+      <div id="footer-content">
+          <div id="footer-left">
+            
+
+<svg class='svg-icon tm-logo-icon' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 759 637.3">
+<style type="text/css">
+  .st0{fill:#FFFFFF;}
+  .st1{fill:#E16928;}
+  .st2{fill:#CED8D8;}
+</style>
+<path class="st0" d="M162.6,457.8c37.9,0,62.4-21,62.4-53.4v-0.4c0-33.2-25.6-44.5-53.3-51.7c-28.8-7.4-30-10.2-30-15.8V336
+  c0-5.3,5.9-8.7,15.2-8.7c11.4,0,23.7,4.8,37.8,14.5l4.1,2.8l23.3-33.8l-3.6-2.9c-17.3-13.9-37.9-21-61.2-21
+  c-35.1,0-59.7,21.4-59.7,52.1v0.4c0,35.5,25.2,44.8,55.6,52.6c27.8,7.1,27.8,11.2,27.8,15.1v0.4c0,9.1-13.5,9.8-17.6,9.8
+  c-15.2,0-28.6-5.5-43.5-17.9l-3.8-3.1l-26.6,31.8l3.6,3.2C111.9,448.5,136.6,457.8,162.6,457.8z"/>
+<path class="st0" d="M305.4,457.8c37.9,0,62.4-21,62.4-53.4v-0.4c0-33.2-25.6-44.5-53.3-51.7c-28.8-7.4-30-10.2-30-15.8V336
+  c0-5.3,5.9-8.7,15.2-8.7c11.4,0,23.7,4.8,37.8,14.5l4.1,2.8l23.3-33.8l-3.6-2.9c-17.3-13.9-37.9-21-61.2-21
+  c-35.1,0-59.7,21.4-59.7,52.1v0.4c0,35.5,25.2,44.8,55.6,52.6c27.8,7.1,27.8,11.2,27.8,15.1v0.4c0,9.1-13.5,9.8-17.6,9.8
+  c-15.2,0-28.6-5.5-43.5-17.9l-3.8-3.1l-26.6,31.8l3.6,3.2C254.7,448.5,279.4,457.8,305.4,457.8z"/>
+<path class="st0" d="M448.4,405.7l33.4,49.8H534L494,396.9l0.6-0.3c19.6-9.6,30.4-27.5,30.4-50.4v-0.4c0-34.9-24.5-56.6-63.9-56.6
+  h-76.5v166.3h44.3v-50h19.4L448.4,405.7z M428.8,330.2h29.2c14.7,0,22.1,5.9,22.1,17.4v0.4c0,10.9-7.8,17.2-21.4,17.2h-29.9V330.2z"
+  />
+<circle class="st1" cx="441.9" cy="177.9" r="89"/>
+<path class="st2" d="M330.1,267c-49.2,0-89-39.9-89-89s39.9-89,89-89V267z"/>
+<polygon class="st0" points="224.9,522.4 209.7,477.8 186.5,477.8 186.5,548.5 203,548.5 203,505.9 217.9,548.5 231.1,548.5 
+  246,505.5 246,548.5 262.4,548.5 262.4,477.8 239.2,477.8 "/>
+<rect x="273.2" y="477.8" class="st0" width="17.4" height="70.6"/>
+<polygon class="st0" points="345,520.9 318.2,477.8 301.4,477.8 301.4,548.5 317.9,548.5 317.9,505.5 344.6,548.5 361.5,548.5 
+  361.5,477.8 345,477.8 "/>
+<rect x="372.3" y="477.8" class="st0" width="17.4" height="70.6"/>
+<polygon class="st0" points="444.1,520.9 417.2,477.8 400.5,477.8 400.5,548.5 416.9,548.5 416.9,505.5 443.6,548.5 460.5,548.5 
+  460.5,477.8 444.1,477.8 "/>
+<path class="st0" d="M503,509.2v13.6H518c-0.6,3.8-2,6.8-4.2,8.9c-2.5,2.3-6.1,3.5-10.7,3.5c-3.2,0-5.9-0.6-8-1.8
+  c-2.2-1.2-4-2.8-5.3-4.8c-1.4-2-2.4-4.4-3-6.9c-0.6-2.6-1-5.3-1-8.1c0-2.9,0.3-5.7,1-8.4c0.6-2.7,1.7-5.1,3-7.1
+  c1.4-2,3.1-3.7,5.3-4.9c2.2-1.2,4.9-1.8,8-1.8c3.4,0,6.2,0.9,8.6,2.6c2.3,1.7,3.9,4.4,4.7,7.9l0.2,0.9h16.6l-0.1-1.3
+  c-0.4-4-1.5-7.7-3.3-10.8c-1.8-3.1-4.1-5.8-6.9-7.9c-2.7-2.1-5.9-3.7-9.3-4.8c-3.4-1.1-6.9-1.6-10.5-1.6c-5.4,0-10.3,1-14.6,2.9
+  c-4.3,1.9-8,4.6-11,8c-3,3.3-5.3,7.3-6.8,11.8c-1.6,4.5-2.4,9.4-2.4,14.6c0,5.1,0.8,9.9,2.4,14.3c1.6,4.4,3.9,8.3,6.8,11.6
+  c3,3.3,6.7,5.9,11,7.8c4.3,1.9,9.2,2.8,14.6,2.8c3.4,0,6.9-0.7,10.3-2.1c2.8-1.2,5.4-3.1,7.7-5.7l1.2,6.3h11.7v-39.3H503z"/>
+<g>
+  <path class="st0" d="M635.8,89.5v3.9c0,0.3-0.1,0.5-0.3,0.7c-0.2,0.2-0.5,0.3-0.8,0.3h-10v27.2c0,0.3-0.1,0.5-0.3,0.8
+    c-0.2,0.2-0.4,0.3-0.7,0.3h-4.5c-0.3,0-0.5-0.1-0.8-0.3c-0.2-0.2-0.3-0.5-0.3-0.8V94.4h-9.9c-0.3,0-0.5-0.1-0.8-0.3
+    c-0.2-0.2-0.3-0.4-0.3-0.7v-3.9c0-0.3,0.1-0.6,0.3-0.8c0.2-0.2,0.5-0.3,0.8-0.3h26.6c0.3,0,0.5,0.1,0.8,0.3
+    C635.7,88.9,635.8,89.2,635.8,89.5z M670.6,89.4l2.6,32.2c0,0.3-0.1,0.6-0.3,0.8c-0.2,0.2-0.5,0.3-0.8,0.3h-4.5
+    c-0.3,0-0.5-0.1-0.7-0.3c-0.2-0.2-0.3-0.4-0.3-0.7l-1.5-19.7l-6.3,14.2c-0.2,0.4-0.5,0.6-1,0.6h-4c-0.4,0-0.8-0.2-1-0.6l-6.3-14.3
+    l-1.5,19.8c0,0.3-0.1,0.5-0.3,0.7s-0.4,0.3-0.7,0.3h-4.5c-0.3,0-0.5-0.1-0.8-0.3c-0.2-0.2-0.3-0.5-0.3-0.8l2.6-32.2
+    c0-0.3,0.1-0.5,0.3-0.7c0.2-0.2,0.4-0.3,0.7-0.3h4.8c0.4,0,0.8,0.2,1,0.6l7.4,17.4c0.2,0.5,0.4,1.1,0.7,1.7
+    c0.1-0.2,0.2-0.4,0.3-0.8c0.1-0.4,0.3-0.7,0.4-0.9l7.4-17.4c0.2-0.4,0.5-0.6,1-0.6h4.7c0.3,0,0.5,0.1,0.7,0.3
+    C670.5,88.9,670.6,89.1,670.6,89.4z"/>
+</g>
+</svg>
+
+            <div>
+              Copyright &copy; 2021 SSR Mining. All Rights Reserved.<br />
+              <a href="http://www.blendermedia.com" title='Website Design &amp; Developerment by Blender' target="_blank">Designed and Powered by <span>Blender</span></a>
+            </div>
+          </div>
+          <div id="footer-right">
+            <a href="/_resources/legal/legal_notice.pdf" target='_blank'>Terms and Conditions</a> - <a href="/_resources/legal/privacy_policy.pdf" target='_blank'>Privacy Policy</a>
+          </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/_templates/1/source/jquery.flexslider.js"></script>
+<script src="/_resources/highcharts/highcharts.js"></script>
+<script src="/_resources/highcharts/modules/exporting.js"></script>
+<script type="text/javascript" src="/_templates/1/source/charts.js?v=0.702"></script>
+<script type="text/javascript" src="/_templates/1/source/history.js"></script>
+<script type="text/javascript" src="/_templates/1/source/touchswipe.js"></script>
+<script type="text/javascript" src="/_resources/fancybox/script/jquery.fancybox.pack.js?v=2.1.4"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/detect_swipe/2.1.1/jquery.detect_swipe.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.13/featherlight.gallery.min.js"></script>
+<script src="/_templates/10/source/js/bio.js?v=0.702"></script> 
+<script type="text/javascript" src="/_templates/1/source/script.js?v=0.702"></script>
+<!--[if lte IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17137899-13']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

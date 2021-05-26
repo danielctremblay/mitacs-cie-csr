@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)https://www.energyfuels.com/corporate/environment-responsibility/ -->
+<html lang="en-US" class="js gr__energyfuels_com"><!--<![endif]--><head>
+<!-- begin spin_special_output(head_start) -->
+<base href="https://www.energyfuels.com/"><style type="text/css" wd_script_id="search_form_style">
+		.wd_search_form .wd_input_datepicker {
+			margin-right: 2px;
+		}
+		.wd_search_type_checkbox {
+			margin-left: 20px;
+		}
+		</style>
+<script type="text/javascript" src="js/jquery-webdriver.js" wd_script_id="jquery-webdriver.js"></script>
+<script type="text/javascript" src="js/webdriver.js" wd_script_id="webdriver.js"></script>
+<script type="text/javascript" wd_script_id="search_form_script">
+			function wd_toggle_search_form(link, advanced) {
+				var $ = webDriver.jQuery;
+				var $container = $(link).closest(".wd_search_form_container");
+				var basic_form = $container.find(".wd_search_form_basic");
+				var basic_query = basic_form.find('input[name="query"]');
+				var advanced_form = $container.find(".wd_search_form_advanced");
+				var advanced_query = advanced_form.find('input[name="query"]');
+
+				if (advanced) {
+					advanced_query.val(basic_query.val());
+					advanced_form.show();
+					basic_form.hide();
+				} else {
+					basic_query.val(advanced_query.val());
+					basic_form.show();
+					advanced_form.hide();
+				}
+			}
+
+			function wd_toggle_search_type_checkboxes(radio) {
+				var $ = webDriver.jQuery;
+				var $radio = $(radio);
+				var all = $radio.val() == "All" ? $radio.is(":checked") : !$radio.is(":checked");
+				var $checkboxes = $radio.closest(".wd_form_field").find(".wd_search_type_checkbox");
+				$checkboxes.find('input[type="checkbox"]').prop("disabled", all);
+				$checkboxes.toggle(!all);
+			}
+
+			webDriver.jQuery(function ($) {
+				$('.wd_search_type_radio input[type="radio"]').each(function() {wd_toggle_search_type_checkboxes(this);});
+			});
+		</script>
+<style type="text/css" wd_script_id="featureboxes_style">
+		.wd_featurebox_icon {
+			display: inline;
+		}
+		.wd_featurebox_icon img {
+			vertical-align: middle;
+		}
+		div.wd_featurebox_group div.wd_tabs_wrapper {
+			border: none;
+			border-bottom: 1px solid #E1E1E1;
+			padding: 0 0 5px 0;
+		}
+		div.wd_featurebox_group div.wd_featurebox {
+			border: none;
+			padding: 8px 0 0 0;
+		}
+		div.wd_featurebox_group li.wd_tab {
+			float: none;
+			color: #666666;
+		}
+		div.wd_featurebox_group li.wd_tab-active {
+			border: none;
+			background-color: transparent;
+			color: #000000;
+			font-weight: bold;
+		}
+		div.wd_featurebox_group li.wd_tab-inactive {
+			cursor: auto;
+		}
+	</style>
+<link href="thirdparty/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" wd_script_id="font-awesome.min.css">
+<style type="text/css" wd_script_id="template teaser_list:newsfeed_releases:system style">
+.wd_newsfeed_releases-teaser .wd_date {
+	font-weight: bold;
+}
+.wd_newsfeed_releases-teaser .wd_title {
+	font-weight: bold;
+}
+.wd_newsfeed_releases-teaser .subscribe_link {
+	margin-bottom: 1em;
+}
+.wd_newsfeed_releases-teaser span.wd_subscribe_email-icon {  
+	font-size: 1.2em; 
+}</style>
+<script type="text/javascript" src="js/wd_scriptloader.js" wd_script_id="wd_scriptloader.js"></script>
+<script type="text/javascript">webDriver.push_jQuery();</script>
+<script type="text/javascript" src="js/jquery-ui.js" wd_script_id="jquery-ui.js"></script>
+<script type="text/javascript" src="js/wd_resize.js" wd_script_id="wd_resize.js"></script>
+<link href="css/wd_modal.css" type="text/css" rel="stylesheet" wd_script_id="wd_modal.css">
+<link href="css/wd_wcag.css" type="text/css" rel="stylesheet" wd_script_id="wd_wcag.css">
+<script type="text/javascript" wd_script_id="wd_modal_script">
+(function($) {
+	webDriver.resizeModal = function() {
+		$(this).find(".wd_modal").wd_modal("resize");
+		return false;
+	}
+	
+	var modals = [];
+		
+	function _value(value, base) {
+		if (typeof value == "string" && value.indexOf("%") > 0) {
+			return  base * parseInt(value, 10) / 100;
+		} else {
+			return parseInt(value, 10);
+		}
+	}
+	
+	var wd_modal = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_modal.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.isOpen = false;
+			this.opener = null;
+			
+			this.$element = $(element);
+			this._options = {
+				autoOpen: false,
+				closeExisting: false,
+				closeOnEscape: true,
+				closeOnOverlayClick: true,
+				fadeDuration: null,
+				margin: "10%",
+				padding: 10
+			};
+			
+			this.options(options);
+			
+			this.$overlay = $("<div>").addClass("wd_modal-overlay").attr("wd_resize","resizeModal").appendTo($("body")).hide();
+			this.$outer = $("<div>").addClass("wd_modal-outer").appendTo(this.$overlay);
+			this.$inner = $("<div>").addClass("wd_modal-inner").appendTo(this.$outer).append(this.$element);
+			// Hack because I can't figure out where the extra few pixels at the bottom of the content are coming from
+			this.$inner.css("overflow-y", "hidden");
+			this.$close = $("<a class=\"wd_modal-close fa fa-times\" href=\"#close\" title=\"Close\"><span class=\"wd_sr-only\">Close Dialog<\/span><\/a>")
+					.on("click", function(event) {self.close(); event.preventDefault();})
+					.appendTo(this.$outer);
+			this.$element.addClass("wd_modal");
+			
+			if (this._options.autoOpen)
+				this.open(this._options.closeExisting);
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+
+				this._options.fadeDuration = parseInt(this._options.fadeDuration, 10);
+				if (isNaN(this._options.fadeDuration))
+					this._options.fadeDuration = false;
+				
+				if (!$.isArray(this._options.margin))
+					this._options.margin = [this._options.margin];
+				if (this._options.margin.length < 2)
+					this._options.margin[1] = this._options.margin[0];
+				if (this._options.margin.length < 3)
+					this._options.margin[2] = this._options.margin[0];
+				if (this._options.margin.length < 4)
+					this._options.margin[3] = this._options.margin[1];
+				
+				if (!$.isArray(this._options.padding))
+					this._options.padding = [this._options.padding];
+				if (this._options.padding.length < 2)
+					this._options.padding[1] = this._options.padding[0];
+				if (this._options.padding.length < 3)
+					this._options.padding[2] = this._options.padding[0];
+				if (this._options.padding.length < 4)
+					this._options.padding[3] = this._options.padding[1];
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.resize();
+		},
+		
+		open: function(closeExisting, now) {
+			if (this.isOpen)
+				return;
+			
+			var self = this;
+			var myCloseExisting = closeExisting;
+			
+			if (!this.opener)
+				this.opener = document.activeElement;
+
+			if (closeExisting && modals.length > 0) {
+				for (var i = modals.length - 1; i >= 0; --i)
+					modals[i].close(true, true);
+			}
+
+			this.$overlay.addClass("wd_modal-current");
+			$("body").append(this.$overlay);
+
+			if (!now && this._options.fadeDuration) {
+				this.$overlay.fadeIn(this._options.fadeDuration, function() {self.open(myCloseExisting, true);});
+			} else {
+				if (modals.length == 0) {
+					$("body").css("overflow","hidden");
+					$(document).on("keydown.wd_modal", function (event) {
+						var current = modals[modals.length - 1];
+						if ((event.which == 27 || event.keyCode == 27) && current._options.closeOnEscape) {
+							current.close();
+							event.stopImmediatePropagation();
+							event.preventDefault();
+						}
+					});
+				}
+
+				if (this._options.closeOnOverlayClick) {
+					this.$overlay.on("click.wd_modal", function (event) {
+						if (event.target == this) {
+							self.close();
+							event.preventDefault();
+						}
+					});
+				}
+
+				modals.push(this);
+				
+				this.$overlay.show();
+				
+				var $focus = this.$element.find(":focusable");
+				if ($focus.length > 0)
+					$focus[0].focus();
+				
+				this.isOpen = true;
+
+				this.$element.trigger("open");
+			}
+		},
+		
+		close: function(skipCurrent, now) {
+			if (!this.isOpen)
+				return;
+			
+			this.$element.trigger("beforeClose");
+			
+			// TODO: allow closing of lower modals
+			modals.pop();
+			
+			if (modals.length == 0) {
+				$("body").css("overflow","");
+				$(document).off("keydown.wd_modal");
+			}
+			
+			this.$overlay.off("click.wd_modal");
+			
+			if (this.opener) {
+				this.opener.focus();
+				this.opener = null;
+			}
+			
+			this.isOpen = false;
+			this.$overlay.removeClass("wd_modal-current").hide();
+			
+			if (!skipCurrent && modals.length > 0)
+				modals[modals.length-1].$overlay.addClass("wd_modal-current");
+			
+			this.$element.trigger("close");
+		},
+		
+		destroy: function() {
+			this.close(false, true);
+			$("body").append(this.$element);
+			this.$overlay.remove();
+		},
+		
+		resize: function() {
+			if (!this.isOpen)
+				return;
+			
+			var self = this;
+			var winWidth = $(window).width();
+			var winHeight = $(window).height();
+			
+			var margin = this._options.margin;
+			var padding = this._options.padding;
+			
+			var width = winWidth - _value(margin[1], winWidth) - _value(margin[3], winWidth) - _value(padding[1], winWidth) - _value(padding[1], winWidth);
+			var height = winHeight - _value(margin[0], winHeight) - _value(margin[2], winHeight) - _value(padding[0], winHeight) - _value(padding[2], winHeight);
+			
+			this.$inner.css("max-width", width);
+			this.$inner.css("max-height", height);
+			
+			$.each(["Top", "Right", "Bottom", "Left"], function(i, v) {
+				self.$outer.css("padding" + v, _value(padding[i])+"px");
+			});
+			
+			var fixed = this.$element.find("[wd_need_fixed_container]").is(":visible");
+			
+			this.$inner.css("width", width);
+			this.$inner.css("height", height);
+
+			webDriver.doResize(this.$inner);
+			
+			if (!fixed) {
+				this.$inner.css("width", "auto");
+				this.$inner.css("height", "auto");
+				if (this.$element.outerHeight() > height)
+					this.$inner.css("height", height);
+				if (this.$element.outerWidth() > width)
+					this.$inner.css("width", width);
+			}
+		}
+	};
+
+	$.fn.wd_modal = function(options) {
+		if (options == "exists") {
+			return !!$(this).data("wd_modal");
+		} else if (typeof options == "string") {
+            var instance = $(this).data("wd_modal");
+			if (!instance)
+				return null;
+			var args = Array.prototype.slice.call(arguments, 1);
+            return instance[options].apply(instance, args);
+        } else {
+            return this.each(function() {
+                var instance = $(this).data("wd_modal");
+                if (instance) {
+                    instance.reload(options);
+                } else {
+                    $(this).data("wd_modal", new wd_modal(this, options));
+                }
+            });
+        }
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" wd_script_id="events_tools_script">
+			function spin_event_popup(url) {
+				var $modal = webDriver.jQuery("#wd_event_modal");
+				if (url && $modal.length == 0) {
+					$modal = webDriver.jQuery('<div id="wd_event_modal">');
+					$modal.wd_modal({
+						autoOpen: false,
+					});
+				}
+
+				if (url) {
+					$modal.html("Loading...");
+					$modal.wd_modal("open");
+					if (/^https?:\/\//.test(url)) {
+						$modal.load(url, function() {webDriver.queueCallback(function() {$modal.wd_modal("resize");});});
+					} else {
+						$modal.html(url);
+						$modal.wd_modal("resize");
+					}
+				} else if ($modal.length > 0) {
+					$modal.wd_modal("close");
+				}
+			}
+		</script>
+<script type="text/javascript" wd_script_id="recaptcha2_script">
+			var recaptcha2_loaded = false;
+
+			function wd_recaptcha2_init() {
+				if (recaptcha2_loaded) {
+					$(".wd_recaptcha2_needed").each(function() {
+						grecaptcha.render(this, {"sitekey": "6LdDmR8TAAAAAJ72DH_RtavsrDUlu6g6lzvajKsK"});
+						$(this).removeClass("wd_recaptcha2_needed");
+					});
+				}
+			}
+
+			function on_recaptcha2_loaded() {
+				recaptcha2_loaded = true;
+				wd_recaptcha2_init();
+			}
+		</script>
+<style type="text/css" wd_script_id="recaptcha2_style">)
+			.g-recaptcha iframe {
+				vertical-align: bottom;
+			}
+		</style>
+<script type="text/javascript">webDriver.pop_jQuery();</script>
+<script type="text/javascript" wd_script_id="subscribe_featurebox_script">
+			(function($) {
+				webDriver.subscribeClose = function(data) {
+					$(".wd_subscribe_modal").wd_modal("close");
+				};
+			
+				webDriver.subscribeSubmit = function(form, id) {
+					var $modal = $(".wd_subscribe_modal");
+					if ($modal.length == 0) {
+						$modal = $('<div class="wd_subscribe_modal" style="display:none;"></div>');
+						$modal.wd_modal({
+							autoOpen: false,
+						});
+					}
+
+					var my_form = form;
+					var form_data = $(form).serializeArray();
+
+					$modal.html('<div class="wd_loading">Loading...</div>');
+					$modal.show();
+					$modal.wd_modal("open", true);
+
+					$modal.load(
+						"https://www.energyfuels.com/contact-us?ajax=subscribe&id="+id,
+						form_data,
+						function() {
+							disable_submit(my_form, false);
+						}
+					);
+				};
+			})(webDriver.jQuery);
+		</script>
+<script type="text/javascript" src="js/wd_form.js" wd_script_id="wd_form.js"></script>
+<link href="css/wd_form.css" type="text/css" rel="stylesheet" wd_script_id="wd_form.css">
+
+<!-- end spin_special_output(head_start) -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script async="" src="js//info"></script><script async="" src="js//info(1)"></script>
+	
+			
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://www.energyfuels.com/xmlrpc.php">
+
+		<!--[if lt IE 9]>
+	<script src="https://www.energyfuels.com/wp-content/themes/Divi/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	
+
+	<script>var et_site_url='https://www.energyfuels.com';var et_post_id='189';function et_core_page_resource_fallback(a,b){"undefined"===typeof b&&(b=a.sheet.cssRules&&0===a.sheet.cssRules.length);b&&(a.onerror=null,a.onload=null,a.href?a.href=et_site_url+"/?et_core_page_resource="+a.id+et_post_id:a.src&&(a.src=et_site_url+"/?et_core_page_resource="+a.id+et_post_id))}
+</script>
+
+<title>Investors - Uranium Stocks - Energy Fuels</title>
+
+
+ <meta name="keywords" content="" />
+ <meta name="description" content="Energy Fuels is a fully-integrated producer of both uranium and vanadium, and owner of the only operational conventional uranium mining in the United States." />
+ <meta name="twitter:card" content="summary" />
+ <meta property="og:site_name" content="Energy Fuels" />
+ <meta property="og:url" content="https://www.energyfuels.com/investors" />
+
+		
+<link rel="stylesheet" id="db121_socicons-css" href="css/icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="wtfdivi-user-css-css" href="css/wp_head.css" type="text/css" media="all">
+<link rel="stylesheet" id="dsc-css-css" href="css/dsc-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="parent-style-css" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="child-style-css" href="css/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="divi-style-css" href="css/style(2).css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="css/dashicons.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="css/grid_sys_only_bootstrap.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="css/wdcontent.css" type="text/css" media="all">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
+
+<script type="text/javascript" src="js/frontend.min.js"></script>
+<script type="text/javascript" src="js/jsapi"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="js/dynamic-stock-charts.min.js"></script><script src="js/saved_resource" type="text/javascript"></script><link href="css/ui+en,controls+en.css" type="text/css" rel="stylesheet"><script src="js/format+en,default+en,ui+en,controls+en,corechart+en.I.js" type="text/javascript"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var SnazzyDataForSnazzyMaps = [];
+SnazzyDataForSnazzyMaps={"id":83,"name":"Muted Blue","description":"An unobtrusive blue design for minimal user-experiences. Design for the Rock RMS project.","url":"https:\/\/snazzymaps.com\/style\/83\/muted-blue","imageUrl":"https:\/\/az769952.vo.msecnd.net\/assets\/83-muted-blue.png?v=20151006050917","json":"[\r\n\t{\"featureType\": \"all\",\r\n\t\t\"stylers\":[\r\n\t\t\t{\"saturation\": 0},\r\n\t\t\t{\"hue\": \"#e7ecf0\"}\r\n\t\t]\r\n\t},\r\n\t{\"featureType\": \"road\",\r\n\t\t\"stylers\":[\r\n\t\t\t{\"saturation\": -70}\r\n\t\t]\r\n\t},\r\n\t{\"featureType\": \"transit\",\r\n\t\t\"stylers\":[\r\n\t\t\t{\"visibility\": \"off\"}\r\n\t\t]\r\n\t},\r\n\t{\"featureType\": \"poi\",\r\n\t\t\"stylers\":[\r\n\t\t\t{\"visibility\": \"off\"}\r\n\t\t]\r\n\t},\r\n\t{\"featureType\": \"water\",\r\n\t\t\"stylers\":[\r\n\t\t\t{\"visibility\": \"simplified\"},\r\n\t\t\t{\"saturation\": -60}\r\n\t\t]\r\n\t}\r\n]","views":12833,"favorites":35,"createdBy":{"name":"Jon Edmiston","url":"https:\/\/www.rockrms.com"},"createdOn":"2014-04-16T02:58:37.86"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="js/snazzymaps.js"></script>
+<script type="text/javascript" src="js/stockdio-wp.js"></script>
+<link rel="https://api.w.org/" href="https://www.energyfuels.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.energyfuels.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.energyfuels.com/wp-includes/wlwmanifest.xml"> 
+
+
+
+<meta name="google-site-verification" content="oAtOLnGnhEcgp9SGyEjIEGx3_VxhMTq-LMN15alNu68" />
+<meta name="msvalidate.01" content="E6882B210298C4F3648B9892F796590B" />
+
+
+<link rel="shortlink" href="https://www.energyfuels.com/?p=189">
+<link rel="alternate" type="application/json+oembed" href="https://www.energyfuels.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.energyfuels.com%2Fcorporate%2Fenvironment-responsibility%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://www.energyfuels.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.energyfuels.com%2Fcorporate%2Fenvironment-responsibility%2F&amp;format=xml">
+<style>
+.db_pb_team_member_website_icon:before{content:"\e0e3";}
+.db_pb_team_member_email_icon:before{content:"\e010";}
+.db_pb_team_member_instagram_icon:before{content:"\e09a";}
+</style>
+<style>#et_builder_outer_content .db_pb_button_2,.db_pb_button_2{margin-left:30px}</style>		<style type="text/css">
+			.comments-link {
+				display: none;
+			}
+					</style>
+		
+		<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//www.energyfuels.com/?wordfence_lh=1&hid=68B075F793528B6025A27B0EE2343EA8');
+</script><!-- Markup (JSON-LD) structured in schema.org ver.4.2.1 START -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Energy Fuels",
+    "url": "https://www.energyfuels.com",
+    "logo": "https://www.energyfuels.com/images/logo.png"
+}
+</script>
+<!-- Markup (JSON-LD) structured in schema.org END -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="https://www.energyfuels.com/wp-content/uploads/2015/09/favicon.png"><link rel="stylesheet" id="et-divi-customizer-global-cached-inline-styles" href="css/et-divi-customizer-global-15484624716704.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)"><script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $.getJSON('https://www.google.com/finance/info?client=ig&q=NYSEMKT:UUUU&callback=?',function(response){
+    var stockInfo = response[0];
+    var stockString ='<div class="stockWrapper">NYSEMKT: ';
+    stockString +='<span class="stockSymbol">'+stockInfo.t+'&nbsp;</span>';
+    stockString +='<strong>USD <span class="stockPrice">'+stockInfo.l+'&nbsp;</span>';
+    stockString +='<span class="stockChange">'+stockInfo.c+'</span>';
+    stockString +='</strong></div>';
+    $('.stockTick1').prepend(stockString);
+  });
+
+
+ 
+});
+</script>
+
+<script>
+$(document).ready(function(){
+
+  $.getJSON('https://finance.google.com/finance/info?client=ig&q=TSE:EFR&callback=?',function(response){
+    var stockInfo = response[0];
+    var stockString ='<div class="stockWrapper">TSE: ';
+    stockString +='<span class="stockSymbol">'+stockInfo.t+'&nbsp;</span>';
+    stockString +='<strong>CDN <span class="stockPrice">'+stockInfo.l+'&nbsp;</span>';
+    stockString +='<span class="stockChange">'+stockInfo.c+'</span>';
+    stockString +='</strong></div>';
+    $('.stockTick2').prepend(stockString);
+  });
+ 
+});
+</script>
+
+<style>[data-columns]::before{visibility:hidden;position:absolute;font-size:1px;}</style><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><script type="text/javascript" async="" src="js/saved_resource(1)"></script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-37885837-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-37885837-1');
+</script>
+
+
+
+<!-- begin spin_special_output(head_end) -->
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?onload=on_recaptcha2_loaded&render=explicit&hl=en-US" wd_script_id="api.js?onload=on_recaptcha2_loaded&render=explicit&hl=en-US"></script>
+<link rel="canonical" href="https://www.energyfuels.com/investors" />
+<!-- end spin_special_output(head_end) -->
+</head>
+
+
+
+
+
+<body class="wd_pageid_123  page-template-default page page-id-189 page-child parent-pageid-111 desktop et_pb_button_helper_class et_fullwidth_nav et_fullwidth_secondary_nav et_fixed_nav et_show_nav et_cover_background et_secondary_nav_enabled et_pb_gutter osx et_pb_gutters3 et_primary_nav_dropdown_animation_expand et_secondary_nav_dropdown_animation_fade et_pb_footer_columns1 et_header_style_left et_pb_pagebuilder_layout et_right_sidebar et_divi_theme chrome et_minified_js et_minified_css">
+
+
+	
+
+	<div id="page-container" class="et-animated-content" style="padding-top: 111px; margin-top: -1px;">
+
+			<div id="top-header" class="">
+			<div class="container clearfix">
+
+			
+<div id="stockTickers"><div class="stockTick2"></div><div class="stockTick1"></div>
+</div>
+				<div id="et-secondary-menu">
+
+				<ul class="et-social-icons">
+
+
+</ul>				</div> <!-- #et-secondary-menu -->
+
+			</div> <!-- .container -->
+		</div> <!-- #top-header -->
+	
+		<header id="main-header" data-height-onload="80" data-height-loaded="true" data-fixed-height-onload="80" class="" style="top: 31px;">
+			<div class="container clearfix et_menu_container et_pb_menu_visible et_pb_no_animation">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="index.php">
+						<img src="images/ef-logo-LARGE-horiz-stacked.png" alt="Energy Fuels" id="logo" data-actual-width="500" data-actual-height="142">
+					</a>
+				</div>
+				<div id="et-top-navigation" style="padding-left: 311px;">
+					<nav id="top-menu-nav">
+					<ul id="top-menu" class="nav">	
+							
+							
+					<li class="menu-item menu-item-type-post_type menu-item-object-page">
+				<a href="https://www.energyfuels.com/welcome" target="_self">Welcome</a>
+					</li>
+
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+						<a href="https://www.energyfuels.com/corporate" target="_self">Corporate</a>
+			<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/executive-bios" target="_self">Executive Bios</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/board-of-directors" target="_self">Board of Directors</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/history" target="_self">History</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/governance" target="_self">Governance</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/environment-responsibility" target="_self">Environment & Responsibility</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/careers" target="_self">Careers</a>
+</li>
+
+</ul>
+		</li>
+
+				<li class="menu-item menu-item-type-post_type menu-item-object-page wd_active menu-item-has-children">
+					<a href="https://www.energyfuels.com/investors" target="_self">Investors</a>
+
+			<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/presentation" target="_self">Presentation</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/news-releases" target="_self">News Releases</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/events" target="_self">Events</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/financials" target="_self">Financials</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/sec-filings" target="_self">SEC Filings</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/stock-information" target="_self">Stock Information</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/resource-summary" target="_self">Resource Summary</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/analyst-coverage" target="_self">Analyst Coverage</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/vanadium-production" target="_self">Vanadium Production</a>
+</li>
+
+</ul>
+		</li>
+
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+						<a href="https://www.energyfuels.com/operations" target="_self">Operations</a>
+			<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/conventional-operations" target="_self">Conventional</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/in-situ" target="_self">In Situ</a>
+</li>
+
+</ul>
+		</li>
+
+					<li class="menu-item menu-item-type-post_type menu-item-object-page">
+				<a href="https://www.energyfuels.com/knowledge-center" target="_self">Knowledge Center</a>
+					</li>
+
+					<li class="menu-item menu-item-type-post_type menu-item-object-page">
+				<a href="https://www.energyfuels.com/contact-us" target="_self">Contact</a>
+					</li>
+					</ul>					
+
+				</nav>
+
+					
+										<div id="et_top_search">
+						<span id="et_search_icon"></span>
+					</div>
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				<ul id="mobile_menu_wd" class="et_mobile_menu">
+
+							<li class="menu-item">
+	
+<a href="https://www.energyfuels.com/welcome" target="_self">Welcome</a>
+	</li>
+ 
+		<li class="menu-item has_sub">
+			<div class="wd_open_trig"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+	
+<a href="https://www.energyfuels.com/corporate" target="_self">Corporate</a>
+	<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/executive-bios" target="_self">Executive Bios</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/board-of-directors" target="_self">Board of Directors</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/history" target="_self">History</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/governance" target="_self">Governance</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/environment-responsibility" target="_self">Environment & Responsibility</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/careers" target="_self">Careers</a>
+</li>
+
+</ul>
+</li>
+ 
+		<li class="menu-item active has_sub">
+			<div class="wd_open_trig"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+	
+	<a href="https://www.energyfuels.com/investors" target="_self">Investors</a>
+
+	<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/presentation" target="_self">Presentation</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/news-releases" target="_self">News Releases</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/events" target="_self">Events</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/financials" target="_self">Financials</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/sec-filings" target="_self">SEC Filings</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/stock-information" target="_self">Stock Information</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/resource-summary" target="_self">Resource Summary</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/analyst-coverage" target="_self">Analyst Coverage</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/vanadium-production" target="_self">Vanadium Production</a>
+</li>
+
+</ul>
+</li>
+ 
+		<li class="menu-item has_sub">
+			<div class="wd_open_trig"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
+	
+<a href="https://www.energyfuels.com/operations" target="_self">Operations</a>
+	<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/conventional-operations" target="_self">Conventional</a>
+</li>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page">
+<a href="https://www.energyfuels.com/in-situ" target="_self">In Situ</a>
+</li>
+
+</ul>
+</li>
+ 
+		<li class="menu-item">
+	
+<a href="https://www.energyfuels.com/knowledge-center" target="_self">Knowledge Center</a>
+	</li>
+ 
+		<li class="menu-item">
+	
+<a href="https://www.energyfuels.com/contact-us" target="_self">Contact</a>
+	</li>
+
+
+				</ul>
+
+</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container et_pb_search_form_hidden et_pb_no_animation" style="height: 120px;">
+					<!-- <form role="search" method="get" class="et-search-form" action="https://www.energyfuels.com/" style="max-width: 935px;">
+					<input type="search" class="et-search-field" placeholder="Search …" value="" name="s" title="Search for:" style="font-size: 20px;">					</form> -->
+					<div class="et-search-form wd_search">
+					<div class="wd_search_form_container"><form name="basic_search" method="get" action="https://www.energyfuels.com/index.php?s=82" class="wd_search_form wd_search_form_basic"><input type="hidden" name="s" value="search_results" /><input type="text" name="query" value="" size="32" placeholder="Keywords..." title="Keywords..." /> <input type="submit" name="submit" value="Search"></form>
+</div><!-- END SITE SEARCH -->
+					</div>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> <!-- #main-header -->
+
+		<div id="et-main-area">
+<div id="main-content">
+
+				<article id="post-189" class="post-189 page type-page status-publish hentry">
+
+				
+					<div class="entry-content">
+				
+							
+																	<div class="wd_home_hero" style="background-image: url(/image/EF-Banner-final.jpg);">
+											<div class="wd_header_content">
+											<!-- 	<div class="wd_row">
+													<div class="wd_col-md-12"> -->
+														<div class="hero_inner">
+																<h2>Investors</h2>
+															<!-- 	<p class="hero-desc">
+																																	</p> -->
+																														<!-- </div>
+													</div> -->
+												</div>
+											</div> 
+										</div><!-- END HOME HERO -->
+
+										
+								
+ 
+						
+					
+					
+
+
+					<!-- Generic Page PAGE ID 123-->
+					<!-- Investor quicklinks -->
+
+					
+					
+
+										<section class="wd_inv_quicklinks hp_wd_sec">
+						<div class="wd_container">
+							<div class="wd_row">
+								<div class="wd_col-md-12 ">
+									
+									<div class="wd_featureboxes_quick-links wd_featureboxes-vertical">
+<div id="wd_featurebox-standard_5" class="wd_featurebox_container wd_featurebox-standard"><div class="wd_featurebox_title">Investor Quick Links</div><div class="wd_featurebox"><ul>
+	<li><a href="presentation"><i class="fa fa-file-text-o">Presentation</i></a></li>
+	<li><a href="stock-information"><i class="fa fa fa-bar-chart">Stock</i></a></li>
+	<li><a href="events"><i class="fa fa-calendar">Events</i></a></li>
+	<li><a href="financials"><i class="fa fa-pie-chart">Financials</i></a></li>
+	<li><a href="analyst-coverage"><i class="fa fa-users">Analysts</i></a></li>
+</ul>
+</div></div></div>
+ 
+
+								</div>
+								
+							</div>
+						</div>
+					</section>
+
+						
+					
+					<!-- Press Releases -->
+					<section class="inv_press_reles">
+						<div class="wd_container-fluid">
+							<div class="wd_row">
+								<div class="wd_col-md-6 ">
+									<div class="hp_wd_sec">
+									<div class="wd_featureboxes_press_reles wd_featureboxes-vertical">
+<div id="wd_featurebox-teaser_5" class="wd_featurebox_container wd_featurebox-teaser"><div class="wd_featurebox_title">Press Releases</div><div class="wd_featurebox">
+<div class="wd_newsfeed_releases-teaser">
+<div class="subscribe_link"><a href="https://www.energyfuels.com/contact-us"><span class="wd_subscribe_email-icon fa fa-envelope-o"></span></a> <a href="https://www.energyfuels.com/contact-us">Contact</a></div>
+
+	
+		<div class="item">
+			
+			<div class="wd_date">May 13, 2021</div>
+			<div class="wd_title"><a href="https://www.energyfuels.com/2021-05-13-Energy-Fuels-Announces-Q1-2021-Results,-Including-Robust-Balance-Sheet,-Continued-Readiness-to-Supply-Uranium-into-the-U-S-Uranium-Reserve-when-Established-Continued-Ramp-up-to-Commercial-Rare-Earth-Production-Webcast-on-Monday,-May-17,-2021">Energy Fuels Announces Q1-2021 Results, Including Robust Balance Sheet, Continued Readiness to Supply Uranium into the U.S. Uranium Reserve when Established & Continued Ramp-up to Commercial Rare Earth Production; Webcast on Monday, May 17, 2021</a></div>
+			<div class="wd_summary"><p>Energy Fuels Inc. (NYSE American: UUUU) (TSX: EFR) ("Energy Fuels" or the "Company") today reported its financial results for the quarter ended March 31, 2021. The Company's annual report on Form...</p></div>
+		</div>
+	
+		<div class="item">
+			
+			<div class="wd_date">Apr 27, 2021</div>
+			<div class="wd_title"><a href="https://www.energyfuels.com/2021-04-27-Energy-Fuels-Engages-Leading-Consultant-to-Support-Development-of-Rare-Earth-Separation-at-White-Mesa-Mill-in-Utah">Energy Fuels Engages Leading Consultant to Support Development of Rare Earth Separation at White Mesa Mill in Utah</a></div>
+			<div class="wd_summary"><p>Carester SAS is recognized as one of the leading global experts on rare earth separation Significant experience in processing natural monazite feeds into value-added rare earth products Potential...</p></div>
+		</div>
+	
+		<div class="item">
+			
+			<div class="wd_date">Apr 23, 2021</div>
+			<div class="wd_title"><a href="https://www.energyfuels.com/2021-04-23-Energy-Fuels-and-Team-from-Penn-State-University-Awarded-Additional-1-75-Million-by-U-S-Department-of-Energy-for-Rare-Earth-Feasibility-Study">Energy Fuels and Team from Penn State University Awarded Additional $1.75 Million by U.S. Department of Energy for Rare Earth Feasibility Study</a></div>
+			<div class="wd_summary"><p>Energy Fuels Inc. (NYSE: UUUU) (TSX: EFR) ("Energy Fuels" or the "Company") is pleased to announce that the U.S. Department of Energy ("DOE") Office of Fossil Energy and National Energy Technology...</p></div>
+		</div>
+	
+		<div class="item">
+			
+			<div class="wd_date">Apr 21, 2021</div>
+			<div class="wd_title"><a href="https://www.energyfuels.com/2021-04-21-Energy-Fuels-and-Hyperion-Sign-MOU-for-the-Supply-of-Monazite-to-Produce-Rare-Earth-Products">Energy Fuels and Hyperion Sign MOU for the Supply of Monazite to Produce Rare Earth Products</a></div>
+			<div class="wd_summary"><p>A Further Step in the Development of a Fully Integrated U.S. Rare Earth Element Supply Chain Energy Fuels and Hyperion have signed a memorandum of understanding to evaluate the potential supply of...</p></div>
+		</div>
+	
+
+
+</div>
+</div></div></div>
+ 
+									</div>
+								</div>
+								<div class="wd_col-md-6 wd_bg_image_wrap">
+									<div class="hp_wd_sec empty_img ">
+										<div class="wd_featureboxes_hp_mid_right wd_featureboxes-vertical">
+<div id="wd_featurebox-standard_6" class="wd_featurebox_container wd_featurebox-standard"><div class="wd_featurebox_title"></div><div class="wd_featurebox"><table width="800" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 0px 0px 0px 0px;" role="presentation"><tr><td><img src="/image/unsplash1.jpg" border="0" alt="" title=""  /></td></tr></table>
+</div></div></div>
+									</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- Upcoming Events -->
+					<section class="wd_up_events">
+						<div class="wd_container-fluid">
+							<div class="wd_row">
+
+								<div class="wd_col-md-6 wd_bg_image_wrap">
+									<div class="hp_wd_sec empty_img __left">
+										<div class="wd_featureboxes_hp_mid_left wd_featureboxes-vertical">
+<div id="wd_featurebox-standard_7" class="wd_featurebox_container wd_featurebox-standard"><div class="wd_featurebox_title"></div><div class="wd_featurebox"><table width="800" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" align="left" style="margin: 0px 0px 0px 0px;" role="presentation"><tr><td><img src="/image/unsplash2.jpg" border="0" alt="" title=""  /></td></tr></table>
+</div></div></div>
+									</div>
+
+								</div>
+								<div class="wd_col-md-6 ">
+									<div class="hp_wd_sec">
+									<div class="wd_featureboxes_up_events wd_featureboxes-vertical">
+<div id="wd_featurebox-teaser_6" class="wd_featurebox_container wd_featurebox-teaser"><div class="wd_featurebox_title">Upcoming Events</div><div class="wd_featurebox">
+<div class="wd_events-teaser">
+<div class="wd_events_list_upcoming"><div class="item"><div class="item_name"><a href="https://www.energyfuels.com/events?item=29" class="itemlink">Annual Meeting of Shareholders</a></div>
+<div class="item_date">Wednesday, May 26, 2021</div>
+<div class="wd_event_subscribe"><a href="#" onclick="spin_event_popup('https://www.energyfuels.com/events?item=29&subscribe=1&pagetemplate=inset'); return false;">Add to Calendar</a></div></div>
+</div><div class="wd_events_list_past"><div class="item"><div class="item_name"><a href="https://www.energyfuels.com/events?item=30" class="itemlink">Q1-2021 Conference Call and Webcast</a></div>
+<div class="item_date">Monday, May 17, 2021</div>
+<div class="item_time">4:00pm - 5:00pm EDT</div>
+</div>
+<div class="item"><div class="item_name"><a href="https://www.energyfuels.com/events?item=26" class="itemlink">NobleCon17 Virtual Investor Conference</a></div>
+<div class="item_date">Tuesday, January 19, 2021 - Thursday, January 21, 2021</div>
+</div>
+<div class="item"><div class="item_name"><a href="https://www.energyfuels.com/events?item=28" class="itemlink">Energy Fuels Set to Enter Commercial Rare Earth Business in Q1-2021</a></div>
+<div class="item_date">Tuesday, December 15, 2020</div>
+<div class="item_time">9:00am MST</div>
+</div>
+</div>
+</div>
+</div></div></div>
+ 
+									</div>
+								</div>
+							
+							</div>
+						</div>
+					</section>
+
+					
+					<section class="fb_subscribe">
+						<div class="wd_container">
+							<div class="wd_row">
+								<div class="wd_col-md-12. hp_wd_sec">
+									<div class="wd_featureboxes_bottom wd_featureboxes-vertical">
+<div id="wd_featurebox-subscribe_1" class="wd_featurebox_container wd_featurebox-subscribe"><div class="wd_featurebox_title">Sign up for Alerts</div><div class="wd_featurebox"><div class="wd_subscribe_featurebox"><div class="wd_intro">By clicking “Submit”, you are consenting to receive email updates, press releases, invitations, and other electronic messages from Energy Fuels Inc.  You may withdraw your consent at any time by contacting us.</div>
+ <form method="POST" class="wd_formbuilder" id="subscribe_form_1" name="formbuilderform" action="https://www.energyfuels.com/investors?submitted=1" enctype="multipart/form-data" onsubmit="disable_submit(this, true);var ok = check_required_fields(this,[&quot;subscribe_1[email]&quot;],[&quot;subscribe_1[email]&quot;],&quot;#ff0000&quot;,&quot;This field is required&quot;,&quot;This field must contain a valid email address&quot;,&quot;Please fill in all required fields highlighted in red.&quot;,&quot;Please provide a valid email address.&quot;); if (!ok) {disable_submit(this,false); return false;} webDriver.subscribeSubmit(this,1); return false;">
+  <div class="wd_form_header">
+   <div class="wd_form_legend">
+* Required Fields
+   </div>
+  </div>
+   <div class="wd_form_field wd_form_field_pos_right">
+    <div class="wd_form_field_label">
+<label for="formbuilderform_subscribe_1[email]">*&nbsp;Email</label>
+    </div>
+    <div class="wd_form_field_input">
+     <input type="text" name="subscribe_1[email]" value="" size="16" id="formbuilderform_subscribe_1[email]" />
+    </div>
+   </div>
+  <div class="wd_form_footer">
+   <div class="wd_form_buttons">
+<input type="submit" class="wd_formbuilder_submit" name="Submit" value="Submit">
+   </div>
+  </div>
+ </form>
+</div></div></div></div>
+								</div>
+								
+							</div>
+						</div>
+					</section>
+
+									
+				
+
+</div> <!-- .entry-content -->
+</article> <!-- .et_pb_post -->
+
+			
+
+</div> <!-- #main-content -->
+
+
+	<span class="et_pb_scroll_top et-pb-icon et-hidden"></span>
+
+
+			<footer id="main-footer">
+				
+
+		
+				<div id="et-footer-nav">
+					<div class="container">
+						<ul id="menu-footer" class="bottom-nav"><li id="menu-item-587" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-587"><a href="corporate/">Corporate</a></li>
+<li id="menu-item-584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-584"><a href="investors/">Investors</a></li>
+<li id="menu-item-586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="operations/">Operations</a></li>
+<li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-585"><a href="contact-us/">Contact</a></li>
+<li id="menu-item-592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-592"><a href="careers/">Careers</a></li>
+<li id="menu-item-596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-596"><a href="privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-600" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-600"><a href="legal/">Legal</a></li>
+<li id="menu-item-699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-600"><a href="https://www.energyfuels.com/site-map">Site Map</a></li>
+<li id="menu-item-944" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-944"><a href="presentation/">Presentation</a></li>
+<!-- <li id="menu-item-945" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-945"><a href="https://www.energyfuels.com/investors/fact-sheet/">Fact Sheet</a></li> -->
+</ul>					</div>
+				</div> <!-- #et-footer-nav -->
+
+			
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<!-- <ul class="et-social-icons">
+
+
+</ul> -->
+				<ul class="et_pb_social_media_follow et_pb_module et_pb_bg_layout_light socialhome clearfix">
+				<!-- <li class="et_pb_social_icon et_pb_social_network_link"><a rel="nofollow" href="https://plus.google.com/+EnergyfuelsInc/" class="icon" title="Google Plus" target="_blank"><img src="images/google-button.png" alt="Google Plus"></a></li> -->
+				<li class="et_pb_social_icon et_pb_social_network_link"><a rel="nofollow" href="https://www.linkedin.com/company/energy-fuels-resources" class="icon" title="LinkedIn" target="_blank"><img src="images/linkedin-button.png" alt="LinkedIn"></a></li>
+				<li class="et_pb_social_icon et_pb_social_network_link"><a rel="nofollow" href="https://twitter.com/energy_fuels" class="icon" title="Twitter" target="_blank"><img src="images/twitter-button.png" alt="Twitter"></a></li>
+				<li><a href="https://www.addtoany.com/share_save?linkurl=http%3A%2F%2Fwww.energyfuels.com&amp;linkname=Energy%20Fuels" class="icon" title="Share This"><img src="images/share-button.png" alt="Share This"></a>
+<script type="text/javascript">
+var a2a_config = a2a_config || {};
+a2a_config.linkname = "Energy Fuels";
+a2a_config.linkurl = "https://www.energyfuels.com";
+a2a_config.onclick = 1;
+a2a_config.num_services = 8;
+</script>
+<script type="text/javascript" src="js/page.js"></script></li>
+				<li class="et_pb_social_icon et_pb_social_network_link"><a href="contact-us/" title="Subscribe" target="_blank" class="subscribe-button"><img src="images/subscribe-button.png" alt="Subscribe"></a></li>
+				</ul>
+						<p id="footer-info">© 2019 ENERGY FUELS INC., ALL RIGHTS RESERVED<br>225 Union Blvd., Suite 600 Lakewood, Colorado, 80228<br><a href="tel:+1-888-864-2125">1.888.864.2125</a></p>					
+</div>	<!-- .container -->
+				</div>
+			</footer> <!-- #main-footer -->
+		</div> <!-- #et-main-area -->
+
+
+	</div> <!-- #page-container -->
+
+
+	<script type="text/javascript">
+		var et_animation_data = [];
+	</script>
+	<link rel="stylesheet" id="et-builder-googlefonts-css" href="css/css" type="text/css" media="all">
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var et_shortcodes_strings = {"previous":"Previous","next":"Next"};
+var et_pb_custom = {"ajaxurl":"https:\/\/www.energyfuels.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/www.energyfuels.com\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/www.energyfuels.com\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"2de8f479e0","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"1d7565f3d6","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","is_builder_plugin_used":"","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"189","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":""};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+
+
+<script>
+
+function convertToSlug(Text)
+{
+    return Text
+        .toLowerCase()
+        .replace(/[^\w ]+/g,'')
+        .replace(/ +/g,'-');
+}
+
+	//Custom WD Scripts
+	$(document).ready(function(){
+
+		//Grab Slideshow
+		$('.single_slider_carousel_inner > .item').each(function(){
+
+			var img_url = $(this).find('img').attr('src');
+
+			$(this).css('background-image', 'url('+img_url+')');
+
+			$(this).find('img').hide();
+		});
+
+		/*Attachment Download Hack*/
+
+		$('.item .wd_attachment').each(function(){
+			var attch_link = $(this).find('a').attr('href');
+
+			$(this).parent().addClass('wd_attch_item');
+
+			$(this).before('<a class="wd_attch_link" href="'+attch_link+'"><i class="fa fa-file-pdf-o"></i></a>');
+		})
+
+		/*Sign up for Alerts*/
+
+		var sign_up_obs = window.setInterval(function(){
+
+			var my_elem = $('.fb_subscribe .wd_form_field input[type=text]');
+
+			if(my_elem.length>0){ //Check if osbservable element exists
+				
+				clearInterval(sign_up_obs); //Clear recurrsion
+
+				//Start Procesdure
+				$('.fb_subscribe .wd_form_field input[name*=name]').attr('placeholder', 'Name');
+				$('.fb_subscribe .wd_form_field input[name*=email]').attr('placeholder', '*Email');
+				$('.fb_subscribe .wd_intro').appendTo('.fb_subscribe .wd_subscribe_featurebox');
+			}
+
+		}, 500);
+		
+		$('.wd_pageid_181 #wd_printable_content').append($('#wd_printable_content img:first-child'));
+		/*Analyst Coverage*/
+
+		$('.wd_pageid_119 .wd_category_items .item').wrapInner('<div class="inner_wrap" />');
+
+		//HP first row
+		var sec_img_url = $('.wd_pageid_118 .wd_featureboxes_hp_top_right .wd_imagetable img').attr('src');
+		$('.fb_ene_env .wd_bg_image_wrap').append('<div class="inner_bg" style="background-image:url('+ sec_img_url +')"></div>');
+
+		sec_img_url = $('.wd_pageid_118 .wd_featureboxes_hp_mid_right .wd_imagetable img').attr('src');
+		$('.fb_high_quick .wd_bg_image_wrap').append('<div class="inner_bg" style="background-image:url('+ sec_img_url +')"></div>');
+
+
+		/*Interior pages Mid Image Panels*/
+		if( $('.inv_press_reles').length > 0){
+
+			sec_img_url = $('.wd_featureboxes_hp_mid_right  .wd_imagetable img').attr('src');
+			 $('.inv_press_reles .wd_bg_image_wrap').append('<div class="inner_bg" style="background-image:url('+ sec_img_url +')"></div>');
+
+			sec_img_url = $('.wd_featureboxes_hp_mid_left  .wd_imagetable img').attr('src');
+			 $('.wd_up_events .wd_bg_image_wrap').append('<div class="inner_bg" style="background-image:url('+ sec_img_url +')"></div>');
+
+			 $('.fb_subscribe.__addi .wd_featurebox_container').wrapInner('<div class="inner_wrap"> </div>')
+
+
+		}
+
+		/*Expand Collapse Middle FB in HP*/
+
+		$('.fb_hp_middle .wd_featureboxes_middle .wd_featurebox_container').each(function(index){
+
+				//grabbing all elements adjacent to item_name and wrapping them for isolation
+				
+				
+
+				if(index != 0){
+
+					$(this).find('.wd_featurebox').addClass('wd_item_collapse');
+
+					//Click action on title
+					$(this).find(".wd_featurebox_title").on('click',function(e){
+						$(this).parent().toggleClass('active');
+						$(this).nextAll('.wd_item_collapse').slideToggle('fast');
+					});	
+
+				}else{
+					$(this).addClass('active __not_collapse');
+				}
+
+		});
+
+
+		/*EXP box on homepage*/
+
+		var last_cat  = $('.wd_pageid_20 .wd_category_items .item:last').addClass('wd_exp_box');
+
+		last_cat.find('.item_summary').addClass('wd_item_collapse');
+
+		last_cat.find('.item_name').on('click', function(e){
+
+				$(this).parent().toggleClass('active');
+				$(this).nextAll('.wd_item_collapse').slideToggle('fast');
+
+		});
+
+		last_cat.find('.item_name a').on('click', function(e){
+			e.preventDefault();
+		});
+
+
+
+
+
+			
+
+
+
+		$('.wd_featureboxes_bottom .wd_newsfeed_releases-teaser .item').each(function(){
+			$(this).find('.wd_date').appendTo($(this));
+		})
+
+
+		/*Project Templating*/
+		$('.wd_projects_temp .wd_category').each(function(){
+
+			var cat_id = $(this).find('.category_header').text(),
+				row_html_stru = '';
+
+
+			cat_id = convertToSlug(cat_id);
+
+
+			if( cat_id != 'map-full-width'){
+				row_html_stru = '<div class="wd_container"><div class="wd_row"><div class="wd_col-md-12"></div></div></div>';
+			}else{
+				row_html_stru = '<div class="wd_full-width"></div>';
+			}
+			
+
+			var cat_classes = 'wd_cat_sec wd_'+ cat_id;
+
+			//Add Structure and class name
+			$(this).wrapInner(row_html_stru).addClass(cat_classes);
+		})
+
+		//Shady patch to accomodate for sections that need similar styling to a unique cat name convention
+		$('.wd_3-columns-second-time').each(function(){
+			$(this).removeClass('wd_3-columns-second-time');
+			$(this).addClass('wd_3-columns');
+		})
+
+		$('.wd_2-columns-b').each(function(){
+			$(this).removeClass('wd_2-columns-b');
+			$(this).addClass('wd_2-columns');
+		})
+
+		$('.wd_maparrows-b').each(function(){
+			$(this).removeClass('wd_maparrows-b');
+			$(this).addClass('wd_maparrows');
+		})
+
+		//Find Image category
+		//Loop through each of the items
+		$('.wd_category.wd_background-image').each(function(){
+
+			
+			//find image_attch in first item
+			//get Url
+			var img_url = $(this).find('.item:first-child .wd_imagetable img').attr('src');
+			//add bg to container
+			$(this).css('background-image', 'url('+img_url+')');
+
+		});
+ 
+		/*HISTORY PAGE*/
+		if($('body.wd_pageid_20').length > 0){
+
+			$('#wd_printable_content > .wd_imagetable').wrap('<div class="wrap_col_1"></div>');
+			$('#wd_printable_content .wrap_col_1').nextAll().wrapAll('<div class="wrap_col_2"></div>');
+
+		}
+
+
+		$('.wd_pageid_20 .wd_category_items .wd_imagetable').each(function(){
+
+			$(this).find('img').appendTo($(this).parent());
+			$(this).remove();
+
+		})
+
+		$('.wd_pageid_20 .wd_category_items .item > img').each(function(){
+				$(this).wrap('<div class="img_wrap" />');
+
+				$(this).parent().append('<h4>'+$(this).attr('title')+'</h4>');
+		})
+
+
+		/*Mobile Menu Submenu Collapse*/
+		$(".et_mobile_menu .wd_open_trig").on('click',function(e){
+			$(this).toggleClass('active');
+			$(this).nextAll('.sub-menu').slideToggle('fast');
+		});	
+
+
+
+		$('.wd_pageid_66 #wd_printable_content > p:first').appendTo('.wd_pageid_66 #wd_printable_content');
+		
+
+	})
+</script>
+
+
+
+<script type="text/javascript" src="js/custom.min.js"></script>
+
+<!-- begin spin_special_output(body_end) -->
+<script wd_script_id="piwik_tracking_code"></script>
+<!-- Piwik Tracking Code -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+
+  _paq.push(["setCustomVariable", 1, "Content Type", "Standard", "page"]);
+
+  _paq.push(["setCustomVariable", 3, "Navigation Page", "Investors", "page"]);
+
+  _paq.push(["trackPageView"]);
+  _paq.push(["enableLinkTracking"]);
+  (function() {
+    var u="//stats.drivetheweb.com/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", 5575]);
+    var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0];
+    g.type="text/javascript"; g.async=true; g.defer=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript>
+	<img src="https://stats.drivetheweb.com/piwik.php?idsite=5575&rec=1" style="border:0" alt="" />
+</noscript>
+<!-- End Piwik Tracking Code -->
+		
+<!-- end spin_special_output(body_end) -->
+</body></html>

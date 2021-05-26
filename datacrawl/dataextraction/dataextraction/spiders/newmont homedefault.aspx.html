@@ -1,0 +1,1452 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	Newmont Corporation - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":3095,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1" name="viewport" /><meta content="rqEzLg2YEDYufTkbGAcqAz0MzZMURXDO3ePf0ifTTak" name="google-site-verification" /><!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s24.q4cdn.com/382246808/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.newmont.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto:300,300i,400,400i,500,500i,700,700i|Montserrat:300,400,600,700" />
+<link type="image/x-icon" rel="icon" media="" href="//s24.q4cdn.com/382246808/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s24.q4cdn.com/382246808/files/favicon.ico" />
+<link rel="stylesheet" media="print" href="//s24.q4cdn.com/382246808/files/css/print.css" />
+<link id="revsettings" type="text/css" rel="stylesheet" media="all" href="//s24.q4cdn.com/382246808/files/css/revslider/settings.css" />
+<link id="revlayers" type="text/css" rel="stylesheet" media="all" href="//s24.q4cdn.com/382246808/files/css/revslider/layers.css" />
+<link id="revnavigation" type="text/css" rel="stylesheet" media="all" href="//s24.q4cdn.com/382246808/files/css/revslider/navigation.css" />
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s24.q4cdn.com/382246808/files/css/global.css?v=71662" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s24.q4cdn.com/382246808/files/css/client.css?v=70499" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s24.q4cdn.com/382246808/files/css/print.css" /><script type="text/javascript" src="//s24.q4cdn.com/382246808/files/js/q4.core.1.0.8.min.js"></script>
+<script type="text/javascript" src="//s24.q4cdn.com/382246808/files/js/q4.app.1.0.8.min.js"></script>
+<script type="text/javascript" src="https://widgets.q4app.com/widgets/q4.api.1.13.3.min.js"></script>
+<script type="text/javascript" src="//s24.q4cdn.com/382246808/files/js/revslider/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="//s24.q4cdn.com/382246808/files/js/revslider/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="//s24.q4cdn.com/382246808/files/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="https://www.newmont.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+(function ($) {
+    function initGaTracking(isp, org) {
+        isp = isp || '(not set)';
+        org = org || '(not set)';
+        $.each(trackingCodes, function (i, data) {
+            if (data.qualifier === "Q4") {
+                ga('create', data.trackingCode, 'auto'); // Q4 tracker
+                ga('set', { 'dimension1': isp });
+                ga('set', { 'dimension2': org });
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+            } else {
+                ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+                ga(data.qualifier + '.set', 'anonymizeIp', true);
+                ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+            }
+        });
+    }
+
+    var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-138334666-36'}, {qualifier: 'Client', trackingCode: 'UA-5171119-1'}];
+    var ipSessStorageKey = 'ipApiInfo';
+    var ipJsonStringified = sessionStorage.getItem(ipSessStorageKey);
+
+    if (ipJsonStringified) {
+        try {
+            var ipJsonParsed = JSON.parse(ipJsonStringified);
+            initGaTracking(ipJsonParsed.isp, ipJsonParsed.org);
+        } catch (e) {
+            console.error('Failed to JSON parse IP API session storage data\n', e);
+            initGaTracking();
+        }
+    } else {
+        $.getJSON('https://pro.ip-api.com/json/?key=xdjZbj0ZiVVozCo&fields=isp,org')
+            .done(function (ipJson) {
+                sessionStorage.setItem(ipSessStorageKey, JSON.stringify(ipJson));
+                initGaTracking(ipJson.isp, ipJson.org);
+            })
+            .fail(function () {
+                initGaTracking();
+            });
+    }
+})(jQuery);
+</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    <!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MZXVCV"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window, document, 'script', 'dataLayer', 'GTM-MZXVCV');
+</script>
+<!-- End Google Tag Manager -->
+    
+    <div id="pageClass" class="Sectionhome PageDefault PageHome LayoutHomePageLayout Languageen-US">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="layout layout--home">
+    <div class="layout_inner">
+        <div class="layout_header">
+            <div class="pane pane--header grid--no-gutter">
+                <div class="pane_inner clearfix"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="module module-embed module-skip">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a class="module-skip_link" href="#maincontent">Skip to main content</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script type="text/javascript">
+var Q4ApiKey = 'BF185719B0464B3CB809D23926182246';
+</script>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="module module-search module-search--desktop" role="search">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-links-appended list--reset"></div>
+            <div class="module-search_container">
+                <span id="_ctrl0_ctl12_lblSearchText" class="module-search_text"></span>
+                <input name="_ctrl0$ctl12$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl12_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl12$btnSearch&#39;, &#39;&#39;); " />
+                <input type="submit" name="_ctrl0$ctl12$btnSearch" value="Search" id="_ctrl0_ctl12_btnSearch" class="module_button module-search_button" />
+                
+            </div>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv4'><div id="_ctrl0_ctl15_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl15_divModuleContainer" class="module module-links module-links--append list--reset">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl15_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl15_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newmont.com/investors/news-release/default.aspx" id="_ctrl0_ctl15_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Newmont News</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl15_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.newmont.com/blog-stories/default.aspx" id="_ctrl0_ctl15_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Blog Stories</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl15_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newmont.com/about-us/document-library/default.aspx" id="_ctrl0_ctl15_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_self">Document Library</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv5'><div id="_ctrl0_ctl18_divModuleContainer" class="module module-embed module-logo ">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="/"><img src="//s24.q4cdn.com/382246808/files/design/clientlogo1.png" alt="Newmont Corporation Logo"></a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv6'><div id="_ctrl0_ctl21_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_reveal-button">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span class="sr-only">Toggle Button</span>
+</div>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv7'><nav class="nav module-corporate-nav"><ul class="level1">
+	<li class="has-children"><a href="https://www.newmont.com/about-us/default.aspx">About Us</a><ul class="level2">
+		<li><a href="https://www.newmont.com/about-us/strategy/default.aspx">Strategy</a></li><li><a href="https://www.newmont.com/about-us/leadership/default.aspx">Leadership</a></li><li><a href="https://www.newmont.com/about-us/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="https://www.newmont.com/about-us/governance-and-ethics/default.aspx">Governance and Ethics</a></li><li class="has-children"><a href="https://www.newmont.com/about-us/about-mining/default.aspx">About Mining</a><ul class="level3">
+			<li><a href="https://www.newmont.com/about-us/about-mining/life-cycle-of-a-mine/default.aspx">Lifecycle of a Mine</a></li><li><a href="https://www.newmont.com/about-us/about-mining/the-mining-process/default.aspx">The Mining Process</a></li><li><a href="https://www.newmont.com/about-us/about-mining/what-we-mine/default.aspx">What We Mine</a></li><li><a href="https://www.newmont.com/about-us/about-mining/glossary/default.aspx">Glossary</a></li>
+		</ul></li><li><a href="https://www.newmont.com/about-us/contact-us/default.aspx">Contact Us</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newmont.com/operations-and-projects/default.aspx">Operations & Projects</a><ul class="level2">
+		<li><a href="https://www.newmont.com/operations-and-projects/health-and-safety/default.aspx">Health and Safety</a></li><li><a href="https://www.newmont.com/operations-and-projects/reserves-and-resources/default.aspx">Reserves & Resources</a></li><li class="has-children"><a href="https://www.newmont.com/operations-and-projects/global-presence/default.aspx">Global Presence</a><ul class="level3">
+			<li><a href="https://www.newmont.com/operations-and-projects/global-presence/africa/default.aspx">Africa</a></li><li><a href="https://www.newmont.com/operations-and-projects/global-presence/australia/default.aspx">Australia</a></li><li><a href="https://www.newmont.com/operations-and-projects/global-presence/north-america/default.aspx">North America</a></li><li><a href="https://www.newmont.com/operations-and-projects/global-presence/south-america/default.aspx">South America</a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.newmont.com/investors/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.newmont.com/investors/news-release/default.aspx">News Releases</a></li><li><a href="https://www.newmont.com/investors/events-and-presentations/default.aspx">Events & Presentations</a></li><li><a href="https://www.newmont.com/investors/reports-and-filings/default.aspx">Reports & Filings</a></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=NEM&amp;Exchange=NYSE" target="_blank">Interactive Analyst Center</a></li><li><a href="https://www.newmont.com/investors/stock-information/default.aspx">Stock Information</a></li><li><a href="https://www.newmont.com/investors/shareholder-information/default.aspx">Shareholder Information</a></li><li><a href="https://www.newmont.com/investors/goldcorp-archive-documents/default.aspx">Goldcorp Archive Documents</a></li><li><a href="https://www.newmont.com/investors/newmont-goldcorp-transaction-archive/default.aspx">Newmont Transaction Archive</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newmont.com/sustainability/default.aspx">Sustainability</a><ul class="level2">
+		<li><a href="https://www.newmont.com/sustainability/Climate-Change/default.aspx">Climate Change</a></li><li><a href="https://www.newmont.com/sustainability/policies-and-standards/default.aspx">Policies & Standards</a></li><li><a href="https://www.newmont.com/sustainability/environmental-responsibility/default.aspx">Environmental Responsibility</a></li><li><a href="https://www.newmont.com/sustainability/social-responsibility/default.aspx">Social Responsibility</a></li><li><a href="/sustainability/environmental-responsibility/tailings-management/default.aspx">Tailings Management</a></li><li><a href="https://www.newmont.com/sustainability/esg-data-tables/default.aspx">ESG Data Tables</a></li><li><a href="https://www.newmont.com/sustainability/Newmont-Responses/default.aspx">Newmont Responses</a></li><li><a href="https://www.newmont.com/sustainability/sustainability-reporting/default.aspx">Sustainability Reporting</a></li><li><a href="https://www.newmont.com/sustainability/cdp-crr-and-other-reports/default.aspx">CDP, CRR & Other Reports</a></li><li><a href="https://www.newmont.com/sustainability/Economic-Impact-Reports/default.aspx">Economic Impact Reports</a></li>
+	</ul></li><li class="has-children"><a href="https://jobs.newmont.com/" target="_blank">Careers</a><ul class="level2">
+		<li><a href="https://www.newmont.com/careers/why-newmont/default.aspx">Why Newmont</a></li><li><a href="https://www.newmont.com/careers/our-jobs/default.aspx">Our Jobs</a></li><li><a href="https://www.newmont.com/careers/newmont-grad-programs/default.aspx">Graduate Development Program</a></li><li><a href="https://jobs.newmont.com/content/Locations/?locale=en_US" target="_blank">Our Locations</a></li>
+	</ul></li>
+</ul></nav></span><span class='HeaderPaneDiv8'><div id="_ctrl0_ctl27_divModuleContainer" class="module module-embed module-toggle module-toggle--mobile">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <button type="button" class="module-toggle_button">
+    <span class="module-toggle_button-top-line"></span>
+    <span class="module-toggle_button-middle-line"></span>
+    <span class="module-toggle_button-bottom-line"></span>
+    <span class="sr-only"></span>
+</button>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--banner grid--no-gutter">
+                <div class="pane_inner"><span class='HeaderPane2Div9'><div id="_ctrl0_ctl30_divModuleContainer" class="module module-embed module-stock-banner grid_col grid_col--1-of-2 grid_col--md-1-of-1 grid_col--am">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-stock-banner_container">
+    <div class="module-stock-banner_nyse"></div>
+    <div class="module-stock-banner_gold"></div>
+    <div class="module-stock-banner_tse"></div>
+</div>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.11.min.js"></script>
+<script>
+var stockSetting = {
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+
+    loadingMessage:'<p class="module_loader module_loader--stock-header"><i class="q4-icon_spinner"></i><span class="sr-only">Loading ...</span></p>',
+    changeCls: ['module-stock-banner_down', 'module-stock-banner_up'],
+    stockTpl: (
+        /* beautify preserve:start */
+        '{{#.}}' +
+            '<span class="module-stock-banner_description"><span class="module-stock-banner_description-exchange">{{exchange}}:</span> {{symbol}}</span>' +
+            '<span class="module-stock-banner_stock-price">${{tradePrice}}</span>' +
+            '<span class="module-stock-banner_per-change {{uod}}">{{percChange}}%' +
+            '</span>' +
+        '{{/.}}'
+        /* beautify preserve:end */
+    ),
+};
+$('.module-stock-banner_nyse').stockQuote(stockSetting);
+$('.module-stock-banner_gold').stockQuote(stockSetting, {
+    stock: ['USD:XAU', 'Spot Gold'],
+});
+$('.module-stock-banner_tse').stockQuote(stockSetting, {
+    stock: ['TSE:NGT', 'TSX:NGT'],
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='HeaderPane2Div1'><div id="_ctrl0_ctl57_divModuleContainer" class="module module-embed module-slider-banner  module-slider-banner--landing">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script type="text/javascript">
+    function setREVStartSize(e) {
+        try {
+            e.c = jQuery(e.c);
+            var i = jQuery(window).width(),
+                t = 9999,
+                r = 0,
+                n = 0,
+                l = 0,
+                f = 0,
+                s = 0,
+                h = 0;
+            if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) { f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e) }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) { var u = (e.c.width(), jQuery(window).height()); if (void 0 != e.fullScreenOffsetContainer) { var c = e.fullScreenOffsetContainer.split(","); if (c) jQuery.each(c, function(e, i) { u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0)) } f = u } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+            e.c.closest(".rev_slider_wrapper").css({ height: f })
+        } catch (d) { console.log("Failure at Presize of Slider:" + d) }
+    };
+    </script>
+    <div id="rev_slider_96_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-source="gallery" style="background:#091858;padding:0px;">
+        <!-- START REVOLUTION SLIDER 5.4.8.1 fullscreen mode -->
+        <div id="rev_slider_96_1" class="rev_slider fullscreenbanner" style="display:none;" data-version="5.4.8.1">
+            <ul>
+                <!-- SLIDE  -->
+                <li data-index="rs-270" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="DSC_5202 (2)" width="2048" height="1374" data-lazyload="/files/design/banner/homepage/20190102-_SGO6091.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 25 -->
+                    <div class="tp-caption     rev_group" id="slide-266-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','85','0']" data-y="['top','top','top','middle']" data-voffset="['170','170','170','-10']" data-width="['415','406','411','400']" data-height="['272','256','275','284']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 415px; max-width: 415px; max-width: 272px; max-width: 272px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 26 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-266-layer-23" data-x="['left','left','left','left']" data-hoffset="['1','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-width="['450','450','450','390']" data-height="['370','400','400','400']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 27 -->
+                        <div class="tp-caption rev-btn " id="slide-266-layer-27" data-x="['left','left','left','left']" data-hoffset="['49','51','50','38']" data-y="['top','top','top','top']" data-voffset="['250','300','270','270']" data-fontsize="['16','15','14','12']" data-lineheight="['17','17','17','14']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><a href="https://youtu.be/HlVEqclt9o8" data-fancybox style="z-index: 7; min-width: 160px; max-width: 160px; white-space: nowrap; font-size: 13px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">WATCH VIDEO</a> </div>
+                        <!-- LAYER NR. 28 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-24" data-x="['left','left','left','left']" data-hoffset="['50','50','50','38']" data-y="['top','top','top','top']" data-voffset="['54','44','44','34']" data-fontsize="['26','26','26','25']" data-width="['365','365','365','300']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 365px; max-width: 365px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">Despite the challenges of living and working through a global pandemic, Newmont accomplished so much in 2020.</div>
+                        <!-- LAYER NR. 29 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-30" data-x="['left','left','left','left']" data-hoffset="['50','50','50','37']" data-y="['top','top','top','top']" data-voffset="['300','350','350','350']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 30 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-31" data-x="['left','left','left','left']" data-hoffset="['85','85','85','74']" data-y="['top','top','top','top']" data-voffset="['300','350','350','350']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+                
+                <!-- SLIDE  -->
+                <li data-index="rs-272" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="DSC_5202 (2)" width="2048" height="1374" data-lazyload="/files/design/banner/2020/Porcupine-Holinger-2.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 25 -->
+                    <div class="tp-caption     rev_group" id="slide-266-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','85','0']" data-y="['top','top','top','middle']" data-voffset="['170','170','170','-10']" data-width="['415','406','411','400']" data-height="['272','256','275','284']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 415px; max-width: 415px; max-width: 272px; max-width: 272px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 26 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-266-layer-23" data-x="['left','left','left','left']" data-hoffset="['1','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-width="['450','450','450','390']" data-height="['266','266','266','266']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 27 -->
+                        <div class="tp-caption rev-btn " id="slide-266-layer-27" data-x="['left','left','left','left']" data-hoffset="['49','51','50','38']" data-y="['top','top','top','top']" data-voffset="['150','150','150','150']" data-fontsize="['16','15','14','12']" data-lineheight="['17','17','17','14']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"/investors/news-release/news-details/2020/Newmont-Ranked-Top-Gold-Miner-in-DJSI-World-Index/default.aspx","delay":"0"}]' data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">LEARN MORE </div>
+                        <!-- LAYER NR. 28 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-24" data-x="['left','left','left','left']" data-hoffset="['50','50','50','38']" data-y="['top','top','top','top']" data-voffset="['54','44','44','34']" data-fontsize="['26','26','26','25']" data-width="['365','365','365','300']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 365px; max-width: 365px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">Newmont Ranked Top Gold Miner in DJSI World Index</div>
+                        <!-- LAYER NR. 29 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-30" data-x="['left','left','left','left']" data-hoffset="['50','50','50','37']" data-y="['top','top','top','top']" data-voffset="['200','200','200','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 30 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-31" data-x="['left','left','left','left']" data-hoffset="['85','85','85','74']" data-y="['top','top','top','top']" data-voffset="['200','200','200','200']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+                <li data-index="rs-267" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="Kylie Ryan Tanami" width="1440" height="800" data-lazyload="/files/images/2020/11/Sustainability-Report-Environmental-Stewardship-(2).png" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 37 -->
+                    <div class="tp-caption     rev_group" id="slide-268-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','84','0']" data-y="['top','top','top','middle']" data-voffset="['238','196','285','0']" data-width="['393','404','371','333']" data-height="['270','281','291','274']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 393px; max-width: 393px; max-width: 270px; max-width: 270px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 32 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-268-layer-23" data-x="['left','left','left','left']" data-hoffset="['0','-2','0','0']" data-y="['top','top','top','top']" data-voffset="['0','1','0','0']" data-width="['386','402','365','328']" data-height="['266','274','288','270']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 33 -->
+                        <!-- data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"/brand-assets/default.aspx","delay":"0"}]' -->
+                        <div class="tp-caption rev-btn " id="slide-268-layer-27" data-x="['left','left','left','left']" data-hoffset="['40','51','50','36']" data-y="['top','top','top','top']" data-voffset="['121','135','156','140']" data-fontsize="['16','15','15','12']" data-lineheight="['17','17','17','14']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><span style="display: none;">LEARN MORE</span> <a href="https://www.youtube.com/watch?v=i3p9p9YjHuc&feature=youtu.be" data-fancybox style="z-index: 7; min-width: 160px; max-width: 160px; white-space: nowrap; font-size: 13px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">WATCH VIDEO</a></div>
+                        <!-- LAYER NR. 34 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-24" data-x="['left','left','left','left']" data-hoffset="['40','50','50','35']" data-y="['top','top','top','top']" data-voffset="['36','44','44','34']" data-width="['327','311','292','261']" data-height="['none','97','98','97']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 327px; max-width: 327px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">Industry-Leading Climate Targets</div>
+                        <!-- LAYER NR. 35 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-30" data-x="['left','left','left','left']" data-hoffset="['40','50','50','38']" data-y="['top','top','top','top']" data-voffset="['197','210','227','205']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 36 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-31" data-x="['left','left','left','left']" data-hoffset="['82','87','87','75']" data-y="['top','top','top','top']" data-voffset="['197','210','227','205']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+                <li data-index="rs-271" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="Kylie Ryan Tanami" width="1440" height="800" data-lazyload="/files/design/banner/homepage/kylie-ryan-tanami-new.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 37 -->
+                    <div class="tp-caption     rev_group" id="slide-268-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','84','0']" data-y="['top','top','top','middle']" data-voffset="['238','196','285','0']" data-width="['393','404','371','333']" data-height="['270','281','291','274']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 393px; max-width: 393px; max-width: 270px; max-width: 270px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 32 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-268-layer-23" data-x="['left','left','left','left']" data-hoffset="['0','-2','0','0']" data-y="['top','top','top','top']" data-voffset="['0','1','0','0']" data-width="['386','402','365','328']" data-height="['266','274','288','270']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 33 -->
+                        <!-- data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"/brand-assets/default.aspx","delay":"0"}]' -->
+                        <div class="tp-caption rev-btn " id="slide-268-layer-27" data-x="['left','left','left','left']" data-hoffset="['40','51','50','36']" data-y="['top','top','top','top']" data-voffset="['121','135','156','140']" data-fontsize="['16','15','15','12']" data-lineheight="['17','17','17','14']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><span style=""></span> <a href="https://www.youtube.com/watch?v=iKqfa7AzBKU&feature=youtu.be" data-fancybox style="z-index: 7; min-width: 160px; max-width: 160px; white-space: nowrap; font-size: 13px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">WATCH VIDEO</a></div>
+                        <!-- LAYER NR. 34 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-24" data-x="['left','left','left','left']" data-hoffset="['40','50','50','35']" data-y="['top','top','top','top']" data-voffset="['36','44','44','34']" data-width="['327','311','292','261']" data-height="['none','97','98','97']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 327px; max-width: 327px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">Newmont Delivers Solid First Quarter Results </div>
+                        <!-- LAYER NR. 35 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-30" data-x="['left','left','left','left']" data-hoffset="['40','50','50','38']" data-y="['top','top','top','top']" data-voffset="['197','210','227','205']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 36 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-31" data-x="['left','left','left','left']" data-hoffset="['82','87','87','75']" data-y="['top','top','top','top']" data-voffset="['197','210','227','205']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+                
+                <!-- SLIDE  -->
+                <li data-index="rs-266" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="DSC_5202 (2)" width="2048" height="1374" data-lazyload="/files/design/banner/Homepage-Sustainability.png" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 25 -->
+                    <div class="tp-caption     rev_group" id="slide-266-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','85','0']" data-y="['top','top','top','middle']" data-voffset="['170','170','170','-10']" data-width="['415','406','411','400']" data-height="['272','256','275','284']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 415px; max-width: 415px; max-width: 272px; max-width: 272px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 26 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-266-layer-23" data-x="['left','left','left','left']" data-hoffset="['1','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','0']" data-width="['450','450','450','390']" data-height="['370','400','400','400']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 27 -->
+                        <div class="tp-caption rev-btn " id="slide-266-layer-27" data-x="['left','left','left','left']" data-hoffset="['49','51','50','38']" data-y="['top','top','top','top']" data-voffset="['250','300','270','270']" data-fontsize="['16','15','14','12']" data-lineheight="['17','17','17','14']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"/operations-and-projects/health-and-safety/default.aspx","delay":"0"}]' data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">LEARN MORE </div>
+                        <!-- LAYER NR. 28 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-24" data-x="['left','left','left','left']" data-hoffset="['50','50','50','38']" data-y="['top','top','top','top']" data-voffset="['54','44','44','34']" data-fontsize="['26','26','26','25']" data-width="['365','365','365','300']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 365px; max-width: 365px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">In light of the COVID-19 pandemic, we want to keep everyone informed on how we are responding to this situation as an organization.</div>
+                        <!-- LAYER NR. 29 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-30" data-x="['left','left','left','left']" data-hoffset="['50','50','50','37']" data-y="['top','top','top','top']" data-voffset="['300','350','350','350']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 30 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-266-layer-31" data-x="['left','left','left','left']" data-hoffset="['85','85','85','74']" data-y="['top','top','top','top']" data-voffset="['300','350','350','350']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-264" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="Safety_Update" width="1500" height="1000" data-lazyload="/files/design/Penasquito-Komatsu-930-3.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption     rev_group" id="slide-264-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','84','2']" data-y="['top','top','top','middle']" data-voffset="['200','185','276','-4']" data-width="['544','561','470','393']" data-height="['343','338','319','319']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":10,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 544px; max-width: 544px; max-width: 343px; max-width: 343px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-264-layer-23" data-x="['left','left','left','left']" data-hoffset="['-2','0','1','0']" data-y="['top','top','top','top']" data-voffset="['1','0','1','0']" data-width="['350','500','464','390']" data-height="['320','337','312','317']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption rev-btn " id="slide-264-layer-27" data-x="['left','left','left','left']" data-hoffset="['40','31','37','32']" data-y="['top','top','top','top']" data-voffset="['200','200','176','192']" data-fontsize="['15','15','15','12']" data-lineheight="['17','17','17','10']" data-width="['160','none','none','none']" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; min-width: 160px; max-width: 160px; white-space: nowrap; font-size: 15px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><span style="display: none;">LEARN MORE</span> <a href="https://www.youtube.com/watch?v=yOT9CzJ5zvw&feature=youtu.be" data-fancybox style="z-index: 7; min-width: 160px; max-width: 160px; white-space: nowrap; font-size: 13px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"> WATCH HERE </a></div>
+                        <!-- LAYER NR. 4 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-267-layer-24" data-x="['left','left','left','left']" data-hoffset="['45','45','50','38']" data-y="['top','top','top','top']" data-voffset="['44','44','44','34']" data-width="['272','275','336','266']" data-height="['65','65','none','none']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 272px; max-width: 272px; max-width: 65px; max-width: 65px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">Newmont Showcases World-Class Asset: Peñasquito Virtual Site Tour
+                        </div>
+                        <!-- LAYER NR. 5 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-264-layer-30" data-x="['left','left','left','left']" data-hoffset="['41','31','42','33']" data-y="['top','top','top','top']" data-voffset="['272','261','250','254']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 6 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-264-layer-31" data-x="['left','left','left','left']" data-hoffset="['76','67','75','71']" data-y="['top','top','top','top']" data-voffset="['272','261','250','254']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+
+   
+
+           
+                <!-- SLIDE  -->
+                <li data-index="rs-269" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="DSCF6281" width="1440" height="964" data-lazyload="/files/design/banner/homepage/DSCF6281.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 13 -->
+                    <div class="tp-caption     rev_group" id="slide-269-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','83','0']" data-y="['top','top','middle','middle']" data-voffset="['237','186','0','-2']" data-width="['405','342','338','320']" data-height="['283','285','276','257']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 405px; max-width: 405px; max-width: 283px; max-width: 283px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 14 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-269-layer-23" data-x="['left','left','left','left']" data-hoffset="['1','0','0','-1']" data-y="['top','top','top','top']" data-voffset="['0','1','1','0']" data-width="['408','341','332','323']" data-height="['279','280','271','256']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 15 -->
+                        <div class="tp-caption rev-btn " id="slide-269-layer-27" data-x="['left','left','left','left']" data-hoffset="['31','31','26','25']" data-y="['top','top','top','top']" data-voffset="['150','160','151','126']" data-fontsize="['16','15','13','12']" data-lineheight="['16','17','17','14']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"/investors/news-release/news-details/2020/Newmont-Recognized-for-Strong-Environmental-Social-and-Governance-Performance/default.aspx","delay":"0"}]' data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 16px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">LEARN MORE </div>
+                        <!-- LAYER NR. 16 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-269-layer-24" data-x="['left','left','left','left']" data-hoffset="['32','32','29','25']" data-y="['top','top','top','top']" data-voffset="['33','33','32','20']" data-fontsize="['23','22','22','20']" data-lineheight="['32','28','26','24']" data-width="['355','277','275','277']" data-height="['97','none','none','none']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 355px; max-width: 355px; max-width: 97px; max-width: 97px; white-space: normal; font-size: 23px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">Newmont Recognized for Strong Environmental, Social and Governance Performance </div>
+                        <!-- LAYER NR. 17 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-269-layer-30" data-x="['left','left','left','left']" data-hoffset="['32','33','28','26']" data-y="['top','top','top','top']" data-voffset="['214','223','216','192']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 18 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-269-layer-31" data-x="['left','left','left','left']" data-hoffset="['69','71','66','63']" data-y="['top','top','top','top']" data-voffset="['214','223','215','192']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+                <li data-index="rs-265" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="2020_Guidance_Slide" width="1440" height="800" data-lazyload="/files/design/banner/homepage/2020_Guidance_Slide.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 19 -->
+                    <div class="tp-caption     rev_group" id="slide-265-layer-28" data-x="['left','left','left','center']" data-hoffset="['83','84','84','0']" data-y="['top','top','top','middle']" data-voffset="['238','194','282','0']" data-width="['413','408','367','360']" data-height="['301','279','297','297']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 413px; max-width: 413px; max-width: 301px; max-width: 301px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 20 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-265-layer-23" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['0','0','0','-1']" data-width="['412','403','363','357']" data-height="['297','274','292','295']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 21 -->
+                        <div class="tp-caption rev-btn " id="slide-265-layer-27" data-x="['left','left','left','left']" data-hoffset="['40','34','41','35']" data-y="['top','top','top','top']" data-voffset="['156','144','169','167']" data-fontsize="['16','16','15','12']" data-lineheight="['17','17','17','14']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"/investors/news-release/news-details/2020/Newmont-Brings-First-Autonomous-Haulage-Fleet-to-Gold-Mining-Industry/default.aspx","delay":"0"}]' data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">LEARN MORE </div>
+                        <!-- LAYER NR. 22 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-265-layer-24" data-x="['left','left','left','left']" data-hoffset="['38','33','43','35']" data-y="['top','top','top','top']" data-voffset="['44','34','29','29']" data-width="['347','341','283','292']" data-height="['none','none','129','none']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 347px; max-width: 347px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">Newmont Brings First Autonomous Haulage Fleet to Gold Mining Industry </div>
+                        <!-- LAYER NR. 23 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-265-layer-30" data-x="['left','left','left','left']" data-hoffset="['40','35','40','35']" data-y="['top','top','top','top']" data-voffset="['228','213','236','231']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 24 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-265-layer-31" data-x="['left','left','left','left']" data-hoffset="['77','77','79','76']" data-y="['top','top','top','top']" data-voffset="['228','212','236','231']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+                <li data-index="rs-268" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="2020_Creation_Slide_Flipped" width="1440" height="800" data-lazyload="/files/images/2021/05/Discovery_-1920x369_v1.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 31 -->
+                    <div class="tp-caption     rev_group" id="slide-268-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','84','0']" data-y="['top','top','top','middle']" data-voffset="['238','196','285','0']" data-width="['393','404','371','333']" data-height="['270','281','291','274']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 393px; max-width: 393px; max-width: 270px; max-width: 270px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 32 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-268-layer-23" data-x="['left','left','left','left']" data-hoffset="['0','-2','0','0']" data-y="['top','top','top','top']" data-voffset="['0','1','0','0']" data-width="['386','402','365','328']" data-height="['266','274','288','270']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 33 -->
+                        <!-- data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"/brand-assets/default.aspx","delay":"0"}]' -->
+                        <div class="tp-caption rev-btn " id="slide-268-layer-27" data-x="['left','left','left','left']" data-hoffset="['40','51','50','36']" data-y="['top','top','top','top']" data-voffset="['121','135','156','140']" data-fontsize="['16','15','15','12']" data-lineheight="['17','17','17','14']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; white-space: nowrap; font-size: 16px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><span style="display: none;">LEARN MORE</span> <a href="https://www.youtube-nocookie.com/embed/5NIW4xMf_tk" data-fancybox style="z-index: 7; min-width: 160px; max-width: 160px; white-space: nowrap; font-size: 13px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">SEE MORE</a></div>
+                        <!-- LAYER NR. 34 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-24" data-x="['left','left','left','left']" data-hoffset="['40','50','50','35']" data-y="['top','top','top','top']" data-voffset="['36','44','44','34']" data-width="['327','311','292','261']" data-height="['none','97','98','97']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 327px; max-width: 327px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;"><a href="/investors/news-release/news-details/2021/Newmont-Celebrates-100-Years/default.aspx" style="color: rgb(9, 24, 88);">Celebrating 100 Years of Growth and Innovation</a> </div>
+                        <!-- LAYER NR. 35 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-30" data-x="['left','left','left','left']" data-hoffset="['40','50','50','38']" data-y="['top','top','top','top']" data-voffset="['197','210','227','205']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 36 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-268-layer-31" data-x="['left','left','left','left']" data-hoffset="['82','87','87','75']" data-y="['top','top','top','top']" data-voffset="['197','210','227','205']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+                <!-- SLIDE  -->
+
+
+          <!-- SLIDE  -->
+                <li data-index="rs-273" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-delay="9995" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                    <!-- MAIN IMAGE -->
+                    <img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" title="20190102-_SGO6091" width="1224" height="816" data-lazyload="/files/images/2020/11/20190102-_SGO5898.jpg" data-bgposition="center center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="105" data-rotatestart="1" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+                    <!-- LAYER NR. 7 -->
+                    <div class="tp-caption     rev_group" id="slide-270-layer-28" data-x="['left','left','left','center']" data-hoffset="['84','84','84','2']" data-y="['top','top','top','middle']" data-voffset="['200','200','200','-4']" data-width="['443','427','436','390']" data-height="['332','311','311','295']" data-whitespace="nowrap" data-type="group" data-responsive_offset="on" data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; min-width: 443px; max-width: 443px; max-width: 332px; max-width: 332px; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #ffffff; letter-spacing: 0px;">
+                        <!-- LAYER NR. 8 -->
+                        <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-270-layer-23" data-x="['left','left','left','left']" data-hoffset="['-2','0','1','0']" data-y="['top','top','top','top']" data-voffset="['1','0','1','0']" data-width="['444','426','435','388']" data-height="['329','309','311','291']" data-whitespace="nowrap" data-type="shape" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6;background-color:rgba(255,255,255,0.8);"> </div>
+                        <!-- LAYER NR. 9 -->
+                        <div class="tp-caption rev-btn " id="slide-270-layer-27" data-x="['left','left','left','left']" data-hoffset="['40','31','37','32']" data-y="['top','top','top','top']" data-voffset="['183','184','170','168']" data-fontsize="['15','15','15','12']" data-lineheight="['17','17','17','10']" data-width="['170','none','none','none']" data-type="button" data-actions='[{"event":"click","action":"simplelink","target":"_self","url":"/about-us/strategy/default.aspx","delay":"0"}]' data-height="['42','none','none','none']" data-whitespace="nowrap" data-type="button" data-responsive_offset="on" data-responsive="off" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(255,255,255);bs:solid;bw:0 0 0 0;"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,12]" data-paddingright="[35,35,35,35]" data-paddingbottom="[12,12,12,12]" data-paddingleft="[35,35,35,35]" style="z-index: 7; min-width: 160px; max-width: 160px; white-space: nowrap; font-size: 15px; line-height: 17px; font-weight: 600; color: rgba(255,255,255,1); letter-spacing: px;font-family:Open Sans;background-color:#003087;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><span>LEARN MORE</span></div>
+                        <!-- LAYER NR. 10 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-270-layer-24" data-x="['left','left','left','left']" data-hoffset="['40','30','38','30']" data-y="['top','top','top','top']" data-voffset="['33','34','35','34']" data-fontsize="['26','26','26','22']" data-lineheight="['32','32','32','28']" data-width="['378','375','366','344']" data-height="['130','129','none','114']" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; min-width: 378px; max-width: 378px; max-width: 130px; max-width: 130px; white-space: normal; font-size: 26px; line-height: 32px; font-weight: 600; color: #091858; letter-spacing: 0px;font-family:Open Sans;">Our purpose is to create value and improve lives through sustainable and responsible mining.</div>
+                        <!-- LAYER NR. 11 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-270-layer-30" data-x="['left','left','left','left']" data-hoffset="['41','31','40','33']" data-y="['top','top','top','top']" data-voffset="['252','256','249','234']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"previous","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/l-arrow.png" data-no-retina> </div>
+                        <!-- LAYER NR. 12 -->
+                        <div class="tp-caption   tp-resizeme" id="slide-270-layer-31" data-x="['left','left','left','left']" data-hoffset="['76','67','75','73']" data-y="['top','top','top','top']" data-voffset="['252','256','249','234']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-actions='[{"event":"click","action":"jumptoslide","slide":"next","delay":"0"}]' data-responsive_offset="on" data-frames='[{"delay":"+0","speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":0,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]' data-margintop="[0,0,0,0]" data-marginright="[0,0,0,0]" data-marginbottom="[0,0,0,0]" data-marginleft="[0,0,0,0]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10;"><img src="//s24.q4cdn.com/382246808/files/design/dummy.png" alt="" data-ww="['30px','30px','30px','30px']" data-hh="['30px','30px','30px','30px']" data-lazyload="/files/design/r-arrow.png" data-no-retina> </div>
+                    </div>
+                </li>
+            </ul>
+            <script>
+            var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+            var htmlDivCss = "";
+            if (htmlDiv) {
+                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+            } else {
+                var htmlDiv = document.createElement("div");
+                htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+                document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+            }
+            </script>
+            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+        </div>
+        <script>
+        var htmlDivCss = '  #rev_slider_96_1_wrapper .tp-loader.spinner3 div { background-color: #ffffff !important; } ';
+        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+        if (htmlDiv) {
+            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+        } else {
+            var htmlDiv = document.createElement('div');
+            htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+            document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+        }
+        </script>
+        <script>
+        var htmlDivCss = unescape(".hephaistos.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3Argba%28186%2C%20143%2C%200%2C%200.85%29%3B%0A%09width%3A40px%3B%0A%09height%3A40px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A100%3B%0A%20%20%20%20border-radius%3A50%25%3B%0A%7D%0A.hephaistos.tparrows%3Ahover%20%7B%0A%09background%3Argba%289%2C%2024%2C%2088%2C%200.85%29%3B%0A%7D%0A.hephaistos.tparrows%3Abefore%20%7B%0A%09font-family%3A%20%22revicons%22%3B%0A%09font-size%3A18px%3B%0A%09color%3Argb%28255%2C%20255%2C%20255%29%3B%0A%09display%3Ablock%3B%0A%09line-height%3A%2040px%3B%0A%09text-align%3A%20center%3B%0A%7D%0A.hephaistos.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%22%5Ce82c%22%3B%0A%20%20%20%20margin-left%3A-2px%3B%0A%20%20%0A%7D%0A.hephaistos.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%22%5Ce82d%22%3B%0A%20%20%20%20margin-right%3A-2px%3B%0A%7D%0A%0A%0A");
+        var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+        if (htmlDiv) {
+            htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+        } else {
+            var htmlDiv = document.createElement('div');
+            htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+            document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+        }
+        </script>
+    </div>
+    <!-- END REVOLUTION SLIDER -->
+    <script type="text/javascript">
+    if (setREVStartSize !== undefined) setREVStartSize({
+        c: '#rev_slider_16_1',
+        responsiveLevels: [1100, 1024, 778, 480],
+        gridwidth: [1280, 1024, 778, 480],
+        gridheight: [768, 768, 768, 768],
+        sliderLayout: 'fullwidth'
+    });
+    
+    var revapi96,
+        tpj;
+    (function() {
+        if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+        else onLoad();
+    
+        function onLoad() {
+            if (tpj === undefined) { tpj = jQuery; if ("off" == "on") tpj.noConflict(); }
+            if (tpj("#rev_slider_96_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_96_1");
+            } else {
+                revapi96 = tpj("#rev_slider_96_1").show().revolution({
+                    sliderType: "standard",
+                    sliderLayout: "fullwidth",
+                    dottedOverlay: "none",
+                    delay: 5000,
+                    navigation: {
+                        onHoverStop: "on",
+                    },
+                    responsiveLevels: [1100, 1024, 778, 480],
+                    visibilityLevels: [1100, 1024, 778, 480],
+                    gridwidth: [1280, 1024, 778, 480],
+                    gridheight: [768, 768, 768, 768],
+                    lazyType: "all",
+                    shadow: 0,
+                    spinner: "spinner3",
+                    stopLoop: "off",
+                    stopAfterLoops: -1,
+                    stopAtSlide: -1,
+                    shuffle: "off",
+                    autoHeight: "off",
+                    fullScreenAutoWidth: "off",
+                    fullScreenAlignForce: "off",
+                    fullScreenOffsetContainer: "",
+                    fullScreenOffset: "",
+                    disableProgressBar: "on",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
+                    fallbacks: {
+                        simplifyAll: "off",
+                        nextSlideOnWindowFocus: "on",
+                        disableFocusListener: false,
+                    }
+                });
+            }; /* END OF revapi call */
+    
+        }; /* END OF ON LOAD FUNCTION */
+    }()); /* END OF WRAPPING FUNCTION */
+    </script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--navigation">
+                <div class="pane_inner"><span class='NavigationPaneDiv12'><div id="_ctrl0_ctl33_divModuleContainer" class="module module-search module-search-mobile" role="search">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-links-appended list--reset"></div>
+            <div class="module-search_container">
+                <span id="_ctrl0_ctl33_lblSearchText" class="module-search_text"></span>
+                <input name="_ctrl0$ctl33$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl33_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl33$btnSearch&#39;, &#39;&#39;); " />
+                <input type="submit" name="_ctrl0$ctl33$btnSearch" value="Search" id="_ctrl0_ctl33_btnSearch" class="module_button module-search_button" />
+                
+            </div>
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv13'><nav class="nav module-navigation-mobile"><ul class="level1">
+	<li class="has-children"><a href="https://www.newmont.com/about-us/default.aspx">About Us</a><ul class="level2">
+		<li><a href="https://www.newmont.com/about-us/strategy/default.aspx">Strategy</a></li><li><a href="https://www.newmont.com/about-us/leadership/default.aspx">Leadership</a></li><li><a href="https://www.newmont.com/about-us/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="https://www.newmont.com/about-us/governance-and-ethics/default.aspx">Governance and Ethics</a></li><li class="has-children"><a href="https://www.newmont.com/about-us/about-mining/default.aspx">About Mining</a><ul class="level3">
+			<li><a href="https://www.newmont.com/about-us/about-mining/life-cycle-of-a-mine/default.aspx">Lifecycle of a Mine</a></li><li><a href="https://www.newmont.com/about-us/about-mining/the-mining-process/default.aspx">The Mining Process</a></li><li><a href="https://www.newmont.com/about-us/about-mining/what-we-mine/default.aspx">What We Mine</a></li><li><a href="https://www.newmont.com/about-us/about-mining/glossary/default.aspx">Glossary</a></li>
+		</ul></li><li><a href="https://www.newmont.com/about-us/contact-us/default.aspx">Contact Us</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newmont.com/operations-and-projects/default.aspx">Operations & Projects</a><ul class="level2">
+		<li><a href="https://www.newmont.com/operations-and-projects/health-and-safety/default.aspx">Health and Safety</a></li><li><a href="https://www.newmont.com/operations-and-projects/reserves-and-resources/default.aspx">Reserves & Resources</a></li><li class="has-children"><a href="https://www.newmont.com/operations-and-projects/global-presence/default.aspx">Global Presence</a><ul class="level3">
+			<li><a href="https://www.newmont.com/operations-and-projects/global-presence/africa/default.aspx">Africa</a></li><li><a href="https://www.newmont.com/operations-and-projects/global-presence/australia/default.aspx">Australia</a></li><li><a href="https://www.newmont.com/operations-and-projects/global-presence/north-america/default.aspx">North America</a></li><li><a href="https://www.newmont.com/operations-and-projects/global-presence/south-america/default.aspx">South America</a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.newmont.com/investors/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.newmont.com/investors/news-release/default.aspx">News Releases</a></li><li><a href="https://www.newmont.com/investors/events-and-presentations/default.aspx">Events & Presentations</a></li><li><a href="https://www.newmont.com/investors/reports-and-filings/default.aspx">Reports & Filings</a></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=NEM&amp;Exchange=NYSE" target="_blank">Interactive Analyst Center</a></li><li><a href="https://www.newmont.com/investors/stock-information/default.aspx">Stock Information</a></li><li><a href="https://www.newmont.com/investors/shareholder-information/default.aspx">Shareholder Information</a></li><li><a href="https://www.newmont.com/investors/goldcorp-archive-documents/default.aspx">Goldcorp Archive Documents</a></li><li><a href="https://www.newmont.com/investors/newmont-goldcorp-transaction-archive/default.aspx">Newmont Transaction Archive</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newmont.com/sustainability/default.aspx">Sustainability</a><ul class="level2">
+		<li><a href="https://www.newmont.com/sustainability/Climate-Change/default.aspx">Climate Change</a></li><li><a href="https://www.newmont.com/sustainability/policies-and-standards/default.aspx">Policies & Standards</a></li><li><a href="https://www.newmont.com/sustainability/environmental-responsibility/default.aspx">Environmental Responsibility</a></li><li><a href="https://www.newmont.com/sustainability/social-responsibility/default.aspx">Social Responsibility</a></li><li><a href="/sustainability/environmental-responsibility/tailings-management/default.aspx">Tailings Management</a></li><li><a href="https://www.newmont.com/sustainability/esg-data-tables/default.aspx">ESG Data Tables</a></li><li><a href="https://www.newmont.com/sustainability/Newmont-Responses/default.aspx">Newmont Responses</a></li><li><a href="https://www.newmont.com/sustainability/sustainability-reporting/default.aspx">Sustainability Reporting</a></li><li><a href="https://www.newmont.com/sustainability/cdp-crr-and-other-reports/default.aspx">CDP, CRR & Other Reports</a></li><li><a href="https://www.newmont.com/sustainability/Economic-Impact-Reports/default.aspx">Economic Impact Reports</a></li>
+	</ul></li><li class="has-children"><a href="https://jobs.newmont.com/" target="_blank">Careers</a><ul class="level2">
+		<li><a href="https://www.newmont.com/careers/why-newmont/default.aspx">Why Newmont</a></li><li><a href="https://www.newmont.com/careers/our-jobs/default.aspx">Our Jobs</a></li><li><a href="https://www.newmont.com/careers/newmont-grad-programs/default.aspx">Graduate Development Program</a></li><li><a href="https://jobs.newmont.com/content/Locations/?locale=en_US" target="_blank">Our Locations</a></li>
+	</ul></li>
+</ul></nav></span><span class='NavigationPaneDiv14'><div id="_ctrl0_ctl39_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl39_divModuleContainer" class="module module-links module-links-mobile list--reset">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl39_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newmont.com/investors/news-release/default.aspx" id="_ctrl0_ctl39_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Newmont News</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.newmont.com/blog-stories/default.aspx" id="_ctrl0_ctl39_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Blog Stories</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl39_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newmont.com/about-us/document-library/default.aspx" id="_ctrl0_ctl39_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_self">Document Library</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+        <div class="layout_content" id="maincontent">
+                <div class="pane pane--breadcrumb">
+                    <div class="pane_inner"></div>
+                </div>
+                <div class="pane pane--left">
+                    <div class="pane_inner clearfix"><span class='LeftPaneDiv'></span></div>
+                </div>
+                 <div class="pane pane--content">
+                    <div class="pane_inner clearfix"><span class='ContentPaneDiv'><span class='ContentPaneDiv2'><div id="_ctrl0_ctl60_divModuleContainer" class="module module-html module-intro">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-intro_content">
+    <div class="module-intro_block">
+        <div class="module-intro_vertalign">
+            <h1>Newmont has the largest gold reserve base in the industry underpinned by our world-class ore bodies in top tier jurisdictions.</h1>
+            <a class="button" href="/investors/news-release/news-details/2020/Newmont-Reports-2019-Gold-Mineral-Reserves-of-100-Million-Ounces-Largest-in-Company-History/default.aspx">Learn More</a>
+        </div>
+    </div>
+    <div class="module-intro_image">
+        <img src="//s24.q4cdn.com/382246808/files/design/images/Newmont_Core_Samples.jpg" alt="Newmont_Core_Samples">
+    </div>
+</div>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv3'><div id="_ctrl0_ctl63_divModuleContainer" class="module module-html module-block module-home-content">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-block_container">
+    <div class="module-primary-block module-news module-news-latest">
+        <h2 class="module_title">Newmont News</h2>
+        <div class="module-news_subtitle">Latest News</div>
+        <div class="module_container module_container--content"></div>
+    </div>
+    <div class="module-sidebar-block">
+        <div class="module-sidebar-block_downloads">
+            <h2 class="module_title">Quick Links</h2>
+            <div class="module_container module_container--content">
+                <div class="module_item-container"></div>
+            </div>
+        </div>
+                <div class="module-sidebar-block_latest-blog">
+            <h2 class="module_title"><a href="/blog-stories/default.aspx">Latest Blog Stories</a></h2>
+            <div class="module_container module_container--content"></div>
+        </div>
+
+        <div class="module-sidebar-block_grand-program">
+            <h2 class="module_title">Graduate Development Program</h2>
+            <p>Newmont offers university students and recent graduates opportunities to gain real-world experience with a global leader in responsible mining.</p>
+            <a class="button" href="//s24.q4cdn.com/382246808/files/doc_downloads/Graduate_Development_Program_Flyer.pdf" target="_blank">Learn More</a>
+        </div>
+        <!--<div class="module-sidebar-block_lifecycle">
+            <h2 class="module_title">Lifecycle of a Mine</h2>
+            <p>All operating Newmont mines go through six stages during their lifetime.</p>
+            <a class="button" href="/about-us/about-mining/life-cycle-of-a-mine/default.aspx">Lifecycle of a Mine</a>
+        </div>-->
+          
+
+    </div>
+</div>
+        </div>
+    </div>
+</div></span></span></div>
+                </div>
+                <div class="pane pane--right">
+                    <div class="pane_inner clearfix"><span class='RightPaneDiv'><span class='RightPaneDiv4'><div id="_ctrl0_ctl66_divModuleContainer" class="module module-embed module-email-alerts-popup module-email-alerts-popup--home">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-email-alerts-popup_container grid-flex">
+    <div class="module-email-alerts-popup_text">
+        <h3>Stay Informed about Newmont</h3>
+        <div class="module-email-alerts-popup-intro">
+            <p>Receive updates directly to your inbox on financial news, press releases, upcoming events and presentations, performance reports, blog posts and more.</p>
+        </div>
+    </div>
+    <div class="module-email-alerts-popup_input">
+        <button class="module-email-alerts-popup_input-button button" type="button">Sign Up</button>
+    </div>
+</div>
+        </div>
+    </div>
+</div></span><span class='RightPaneDiv5'><div id="_ctrl0_ctl69_divModuleContainer" class="module module-html module-bottom-content module-home-content">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-bottom-content_block">
+    <div class="module-bottom-content_block-wrap">
+        <h2 class="module_title">Document Library</h2>
+        <div class="module-bottom-content_copy">
+            <p>Find all Newmont documents, ranging from fact sheets, policies and standards to reports, presentations and more.</p>
+        </div>
+        <a class="button" href="/about-us/document-library/default.aspx">Document Library</a>
+    </div>
+</div>
+<div class="module-bottom-content_block">
+    <div class="module-bottom-content_block-wrap">
+        <h2 class="module_title">Newmont Blog Stories</h2>
+        <div class="module-bottom-content_copy">
+            <p>Learn about the latest safety, people, sustainability, growth and operational excellence stories.</p>
+        </div>
+        <a class="button" href="/blog-stories/default.aspx">Blog Stories</a>
+    </div>
+</div>
+<div class="module-bottom-content_block">
+    <div class="module-bottom-content_block-wrap">
+        <h2 class="module_title">Newmont Careers</h2>
+        <div class="module-bottom-content_copy">
+            <p>View the latest career opportunities at Newmont, across all offices, facilities and sites. </p>
+        </div>
+        <a class="button" href="https://jobs.newmont.com/content/Locations/?locale=en_US" target="_blank">Newmont's Careers</a>
+    </div>
+</div>
+        </div>
+    </div>
+</div></span></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="layout_footer" role="contentinfo">
+            <div class="pane pane--footer grid--no-gutter">
+                <div class="pane_inner clearfix"><span class='FooterPaneDiv'><span class='FooterPaneDiv23'><div id="_ctrl0_ctl42_divModuleContainer" class="module module-html dark list--reset">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-items">
+    <div class="module-item_row module-item_row--top grid-flex">
+        <div class="module-item_link">
+            <p>Our purpose is to create value and improve lives through sustainable and responsible mining.&nbsp;<a href="/about-us/strategy/default.aspx">Learn more here.</a></p>
+        </div>
+        <div class="module-item_logo-wrap">
+            <div class="module-item_logo">
+                <a href="/"><img src="//s24.q4cdn.com/382246808/files/design/clientlogo1.png" alt="Newmont Corporation Logo"></a>
+            </div>
+            <div class="module-item_social">
+                <ul>
+                    <li><a href="/rss-feeds/default.aspx"><i class="q4-icon_rss-square"></i></a></li>
+                    <li class="module-item_social-twitter"><a href="https://twitter.com/NewmontCorp" target="_blank"><img src="//s24.q4cdn.com/382246808/files/design/social/twitter.png" alt="twitter"></a></li>
+                    <li class="module-item_social-facebook"><a href="https://www.facebook.com/NewmontCorporation/" target="_blank"><img src="//s24.q4cdn.com/382246808/files/design/social/facebook.png" alt="facebook"></a></li>
+                    <li class="module-item_social-youtube"><a href="https://www.youtube.com/c/NewmontCorporation" target="_blank"><img src="//s24.q4cdn.com/382246808/files/design/youtube1.png" alt="youtube"></a></li>
+                    <li class="module-item_social-linkedin"><a href="https://www.linkedin.com/company/newmont/" target="_blank"><img src="//s24.q4cdn.com/382246808/files/design/social/linkedin.png" alt="linkedin"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="module-item_row module-item_row--bottom grid-flex">
+        <div class="module-item_footer-links">
+            <div class="module-item_footer-links-container">
+                <ul>
+                    <li><a href="/about-us/default.aspx">About Us</a></li>
+                    <li><a href="/operations-and-projects/default.aspx">Operations &amp; Projects</a></li>
+                    <li><a href="/investors/default.aspx">Investors</a></li>
+                    <li><a href="/sustainability/default.aspx">Sustainability</a></li>
+                    <li><a href="https://jobs.newmont.com/">Careers</a></li>
+                    <li><a href="/about-us/contact-us/default.aspx">Contact Us</a></li>
+                    <li><a href="/blog-stories/default.aspx">Blog Stories</a></li>
+                    <li><a href="/suppliers-new/default.aspx">Suppliers</a></li>
+                    <li><a href="/legal/default.aspx">Legal</a></li>
+                    <li><a href="/site-map/default.aspx">Site Map</a></li>
+                    <li><a href="/about-us/about-mining/life-cycle-of-a-mine/default.aspx">Lifecycle of a Mine</a></li>
+                    <li><a href="/investors/reports-and-filings/default.aspx">Annual Reports</a></li>
+                    <li><a href="/about-us/document-library/default.aspx">Document Library</a></li>
+                    <li><a href="/investors/shareholder-information/default.aspx">Shareholder Information</a></li>
+                    <li><a href="/sustainability/sustainability-reporting/default.aspx">Sustainability Report</a></li>
+                    <li><a href="http://www.envisionreports.com/nem" target="_blank">2021 Proxy Materials</a></li>
+                    <li><a href="/privacy-statement/default.aspx">Privacy Statement</a></li>
+                    <li><a href="/matching-gifts/default.aspx">Matching Gifts</a></li>
+                    <li><a href="/multimedia/default.aspx">Multimedia</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="module-item_email-alerts">
+            <h3>Stay Informed about Newmont</h3>
+            <div class="module-item_email-alerts-intro">
+                <p>Receive updates directly to your inbox on financial news, press releases, upcoming events and presentations, performance reports, blog posts and more.</p>
+            </div>
+            <div class="module-item_email-alerts_input">
+                <input type="text" maxlength="128" class="module_input" placeholder="Email Address" data-keeper-lock-id="k-9epwn0e1tbn"><button class="module-item_email-alerts_input-button q4-icon_arrow-right-solid" type="button"><span class="sr-only"></span></button>
+            <keeper-lock tabindex="0" id="k-9epwn0e1tbn" class="keeper-lock-disabled" style="background-image: url(&quot;chrome-extension://bfogiafebfohielmmehodmfbbebbbpei/images/ico-field-fill-lock-grey.svg&quot;) !important; background-size: 16px 16px !important; cursor: pointer !important; width: 16px !important; position: absolute !important; opacity: 0 !important; margin-top: auto !important; min-width: 16px !important; top: 7px; left: 229.297px; z-index: 1; height: 16px !important; padding: 0px;"></keeper-lock></div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--footer2">
+                <div class="pane_inner clearfix"></div>
+            </div>
+            <div class="pane pane--credits">
+                <div class="pane_inner clearfix"><span class='Q4FooterDiv24'><div id="_ctrl0_ctl45_divModuleContainer" class="module module-html module-back-to-top">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <button id="myBtn" title="Go to top" style="display: block;" type="button"></button>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv25'><div id="_ctrl0_ctl48_divModuleContainer" class="module module-html copyright">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            © <span class="copyright_year"></span> Newmont Corporation. All rights reserved.
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv26'>
+<div class="module module-q4-credits">
+    <div class="module_container module_container--outer">
+        <div class="module_container module_container--inner">
+            <a href="https://www.q4inc.com/Powered-by-Q4/" id="_ctrl0_ctl51_hrefWebsiteRecording" class="module-q4-credits-link" target="_blank">
+                <span id="_ctrl0_ctl51_lblWebsiteRecording" class="module-q4-credits_powered-text">Powered By Q4 Inc.</span>
+                <span id="_ctrl0_ctl51_lblVersion" class="module-q4-credits_version-text">5.56.0.1</span>
+                <span class="sr-only">(opens in new window)</span>
+            </a>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv27'><div id="_ctrl0_ctl54_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script>
+    var q4App = $.extend(true, q4Defaults, {
+        options: {
+            headerOffset: 140
+        },
+        stickyNavBar: function() {
+            var inst = this,
+                $window = $(window),
+                $layout = $('.layout'),
+                $header = $('.pane--header'),
+                $nav = $('.module-stock-banner .module_container--outer'),
+                $navContainer = $('.module-stock-banner').length ? $('.module-stock-banner') : $('.pane--breadcrumb'),
+                navContainerPos = function() {
+                    return $navContainer.position().top;
+                };
+    
+            $window.on('scroll load resize', function() {
+                if ($window.width() > 720) {
+                    inst.options.headerOffset =  $('.module-nav-sustainability').length ? $('.pane--header').outerHeight() + $('.pane--breadcrumb').outerHeight() - 50 : $('.pane--header').outerHeight();
+                    if ($window.scrollTop() > $('.pane--header .pane_inner').outerHeight()) {
+                        $layout.addClass('js--header-fixed');
+                    } else {
+                        $layout.removeClass('js--header-fixed');
+                    }
+                    $navContainer.css('min-height', $nav.outerHeight());
+    
+                    if ($window.scrollTop() + $header.outerHeight() >= navContainerPos()) {
+                        $layout.addClass('js--sticky');
+                        $nav.css('top', $header.outerHeight());
+                    } else {
+                        $layout.removeClass('js--sticky');
+                        $nav.removeAttr('style');
+                    }
+                } else {
+                    inst.options.headerOffset = 0;
+                    $layout.removeClass('js--sticky');
+                    $nav.removeAttr('style');
+                    $navContainer.removeAttr('style');
+                    $layout.removeClass('js--header-fixed');
+                }
+            });
+            $window.on('resize', function() {
+                if ($window.width() > 720) {
+                    $layout.removeClass('js--sticky');
+                    $navContainer.removeAttr('style').css('min-height', $nav.outerHeight());
+                    $nav.removeAttr('style');
+                } else {
+                    $layout.removeClass('js--sticky');
+                    $nav.removeAttr('style');
+                    $navContainer.removeAttr('style');
+                }
+                $window.trigger('scroll');
+            }).resize();
+        },
+        sections: function() {
+            var hash = window.location.hash.length ? window.location.hash.substring(1) : '';
+            if ($('.module-' + hash).length) {
+                setTimeout(function() {
+                    q4App.scrollTo($('.module-' + hash));
+                }, 1000);
+            }
+        },
+        operationsFunction: function() {
+            $(".Sectionpage-operations-projects:not(.page-no-function) .module-operations").on('click', '.module-map-tooltip_link', function(e) {
+                var section = $(this).attr("href");
+                var hash = section.split('#')[1];
+                if ($('.module-' + hash).length) {
+                    e.preventDefault();
+                    q4App.scrollTo($('.module-' + hash));
+                }
+            });
+        },
+        appendLinksToSearch: function() {
+            $('.module-links--append .module-links_list').appendTo('.module-search--desktop .module-links-appended');
+        },
+        // setTimeoutBanner: function() {
+        //     setTimeout(function() {
+        //             $('.layout').addClass('js--show-banner')
+        //         }, 3000);
+        // },
+        fancyEmailAlert: function($selector, trigger) {
+            $selector.on('click', trigger, function(e) {
+                if (e.keyCode == 13 || e.type == 'click') {
+                    var text = $(this).closest($selector).find('input:text').val();
+                    e.preventDefault();
+                    $.fancybox.open({
+                        type: 'iframe',
+                        src: '/email-alerts-iframe/default.aspx',
+                        opts: {
+                            closeBtn: false,
+                            smallBtn: true,
+                            modal: true,
+                            toggleControls: false,
+                            slideClass: 'fancybox-slide--email-alerts',
+                            parentEl: 'form',
+                            afterLoad: function(instance, current) {
+                                $(current.$content).find('iframe').contents().find('[id*="EmailAddress"] .module_input').val(text);
+                            }
+                        }
+                    });
+                }
+            });
+    
+        },
+        scollingTable: function(selector) {
+            $(selector).not(selector + ' table').wrap('<div class="table-wrapper" />');
+        },
+        _onMobileMenuExpand: function($nav) {
+            // $nav.on('click', 'li.has-children > a', function(e) {
+            $nav.on('touch touchstart', '.level1 > li.has-children > a', function(e) {     
+                e.preventDefault();         
+                var $this = $(this),
+                    $parent = $this.parent();
+                $parent.toggleClass('js--expanded');
+                $parent.siblings().removeClass('js--expanded');
+    
+            });
+        },
+        //remove level3 from Sustainability Reporting
+        removeLevel3: function() {
+            $('.module-corporate-nav .level2 li a:contains("Sustainability Reporting")').next().remove();
+            $('.module-navigation-mobile .level2 li a:contains("Sustainability Reporting")').next().remove();
+            $('.module-navigation-mobile .level2 li a:contains("Sustainability Reporting")').parent().removeClass('has-children');
+        },
+        //duplicate ".level1 > li > a " on mobile
+        duplicateLink: function() {
+            $('.module-navigation-mobile .level1 > li> a').each(function() {
+                var $this = $(this);
+                var $href = $this.attr('href');
+                var $text = $this.text();
+                $this.next().prepend('<li><a href=" ' + $href + ' ">' + $text + '</a></li>');
+            });
+        },
+        //Secondary Nav Sustainability functionality
+        secondaryNav: function() {
+            $('.module-nav-sustainability .level3 li span:contains("Menu")').addClass('js--menu');
+            $('.module-nav-sustainability .level3 li a:contains("Downloads")').addClass('js--downloads');
+            $('.module-nav-sustainability .level3 li a:contains("Case Studies")').addClass('js--case-studies');
+            $('.module-nav-sustainability .level3 li span:contains("Utilities")').addClass('js--utilities');
+            $('.module-nav-sustainability .level4 > li > a:contains("GRI Index")').addClass('js--gridindex');
+            $('.module-nav-sustainability .level4 > li > a:contains("UN Guiding Principles")').addClass('js--unguiding');
+            $('.module-nav-sustainability .level4 > li > a:contains("Data Appendix")').addClass('js--data');
+            $('.module-nav-level-sustainability .level4 > li > a:contains("GRI Index")').addClass('js--gridindex');
+            $('.module-nav-level-sustainability .level4 > li > a:contains("UN Guiding Principles")').addClass('js--unguiding');
+            $('.module-nav-level-sustainability .level4 > li > a:contains("Data Appendix")').addClass('js--data');
+            $('div[class*="PageSustainabilitySustainabilityReporting"] .module-breadcrumb  a').last().addClass('js--hidden');
+
+            $('.module-nav-sustainability .level4').eq(1).prepend('<li><a class="js--gri-toggle" href="#">GRI Indicators</a></li>');
+            $('.module-nav-level-sustainability .level4').eq(1).prepend('<li><a class="js--gri-toggle" href="#">GRI Indicators</a></li>');
+            $('.module-nav-sustainability .level4').eq(1).prepend('<li><a class="js--share" href="#">Share</a></li>');
+            $('.module-nav-level-sustainability .level4').eq(1).prepend('<li><a class="js--share" href="#">Share</a></li>');
+            $('.module-nav-sustainability .level4 > li.has-children').on('click', '> a', function(e) {
+                e.preventDefault();
+                var $this = $(this),
+                    $parent = $this.parent();
+                $parent.toggleClass('js--expanded');
+                $parent.siblings().removeClass('js--expanded');
+            });
+            $('.page-headerblue .module-breadcrumb').each(function() {
+                $(this).html($(this).html().replace(/Menu/g, "<span>Menu</span>"));
+            });
+            $('.module-arrow-nav').on('click', '.module-arrow-nav_dropdown', function() {
+                $('.module-nav-level-sustainability .level5').toggleClass('js--shrunk');
+                $(this).toggleClass('js--rotated');
+            });
+            $('.pane--left').on('click', '.module-sustainability-toggle-menu', function() {
+                $('.module-nav-level-sustainability').toggleClass('js--active');
+            });
+
+            $('.module-nav-sustainability .level4 .js--gri-toggle, .module-nav-level-sustainability .level4 .js--gri-toggle').on("click", function(e) {
+                e.preventDefault();
+                localStorage.griIndicators = !localStorage.griIndicators ? "enabled" : ( localStorage.griIndicators === "enabled" ? "disabled" : "enabled");
+                $(".module-nav-sustainability .level4 .js--gri-toggle, .module-nav-level-sustainability .level4 .js--gri-toggle, body").toggleClass("js--gri-enabled");
+            });
+            /// set class on body if GRI Indicators is enabled
+            if (window.localStorage.griIndicators === "enabled") {
+                $(".module-nav-sustainability .level4 .js--gri-toggle, .module-nav-level-sustainability .level4 .js--gri-toggle, body").addClass("js--gri-enabled");
+            }
+        },
+        // FUNCTIONS FOR MOVING BANNER IMAGES
+        setREVStartSize: function(e) {
+            try {
+                e.c = jQuery(e.c);
+                var i = jQuery(window).width(),
+                    t = 9999,
+                    r = 0,
+                    n = 0,
+                    l = 0,
+                    f = 0,
+                    s = 0,
+                    h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function(e, f) { f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e) }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) { var u = (e.c.width(), jQuery(window).height()); if (void 0 != e.fullScreenOffsetContainer) { var c = e.fullScreenOffsetContainer.split(","); if (c) jQuery.each(c, function(e, i) { u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0)) } f = u } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight);
+                e.c.closest(".rev_slider_wrapper").css({ height: f })
+            } catch (d) { console.log("Failure at Presize of Slider:" + d) }
+        },
+        htmlDivFunc: function(bannerDiv, annimationNum) {
+            // annimationNum can be set to False if the variable is initialized on the page (if the same animation appears on several pages it can be set here and than the function must be called with the corresponding number (EX: q4App.htmlDivFunc('#rev_slider_44_1', 10);)
+            var htmlDivCss = bannerDiv + '_wrapper .tp-loader.spinner3 div { background-color: #FFFFFF !important; } ';
+            var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+            if (htmlDiv) {
+                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+            } else {
+                var htmlDiv = document.createElement('div');
+                htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+            }
+            // 
+            var htmlDiv = document.getElementById("rs-plugin-settings-inline-css");
+            var htmlDivCss = "";
+            if (htmlDiv) {
+                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+            } else {
+                var htmlDiv = document.createElement("div");
+                htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+                document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+            }
+    
+            if (q4App.setREVStartSize !== undefined) q4App.setREVStartSize({ c: bannerDiv, responsiveLevels: [1100, 1024, 778, 480], gridwidth: [1280, 1024, 778, 480], gridheight: [600, 768, 960, 720], sliderLayout: 'fullwidth' });
+            if (annimationNum == 71) {
+                var revapi71,
+                    tpj;
+                (function() {
+                    if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+                    else onLoad();
+    
+                    function onLoad() {
+                        if (tpj === undefined) { tpj = jQuery; if ("off" == "on") tpj.noConflict(); }
+                        if (tpj(bannerDiv).revolution == undefined) {
+                            revslider_showDoubleJqueryError(bannerDiv);
+                        } else {
+                            revapi71 = tpj(bannerDiv).show().revolution({
+                                sliderType: "hero",
+                                // jsFileLocation: "//www.newmontgoldcorp.com/wp-content/plugins/revslider/public/assets/js/",
+                                sliderLayout: "fullwidth",
+                                dottedOverlay: "none",
+                                delay: 0,
+                                responsiveLevels: [1100, 1024, 778, 480],
+                                visibilityLevels: [1100, 1024, 778, 480],
+                                gridwidth: [1280, 1024, 778, 480],
+                                gridheight: [600, 768, 960, 720],
+                                lazyType: "none",
+                                shadow: 0,
+                                spinner: "spinner3",
+                                autoHeight: "off",
+                                disableProgressBar: "on",
+                                hideThumbsOnMobile: "off",
+                                hideSliderAtLimit: 0,
+                                hideCaptionAtLimit: 0,
+                                hideAllCaptionAtLilmit: 0,
+                                debugMode: false,
+                                fallbacks: {
+                                    simplifyAll: "off",
+                                    disableFocusListener: false,
+                                }
+                            });
+                        }; /* END OF revapi call */
+    
+                    }; /* END OF ON LOAD FUNCTION */
+                }()); /* END OF WRAPPING FUNCTION */
+            } else if (annimationNum == 10) {
+                var revapi10,
+                    tpj;
+                (function() {
+                    if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+                    else onLoad();
+    
+                    function onLoad() {
+                        if (tpj === undefined) { tpj = jQuery; if ("off" == "on") tpj.noConflict(); }
+                        if (tpj(bannerDiv).revolution == undefined) {
+                            revslider_showDoubleJqueryError(bannerDiv);
+                        } else {
+                            revapi10 = tpj(bannerDiv).show().revolution({
+                                sliderType: "hero",
+                                sliderLayout: "fullwidth",
+                                dottedOverlay: "none",
+                                delay: 9000,
+                                responsiveLevels: [1100, 1024, 778, 480],
+                                visibilityLevels: [1100, 1024, 778, 480],
+                                gridwidth: [1280, 1024, 778, 480],
+                                gridheight: [600, 768, 960, 720],
+                                lazyType: "none",
+                                parallax: {
+                                    type: "mouse",
+                                    origo: "enterpoint",
+                                    speed: 400,
+                                    speedbg: 0,
+                                    speedls: 0,
+                                    levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 55],
+                                },
+                                shadow: 0,
+                                spinner: "spinner0",
+                                autoHeight: "off",
+                                disableProgressBar: "on",
+                                hideThumbsOnMobile: "off",
+                                hideSliderAtLimit: 0,
+                                hideCaptionAtLimit: 0,
+                                hideAllCaptionAtLilmit: 0,
+                                debugMode: false,
+                                fallbacks: {
+                                    simplifyAll: "off",
+                                    disableFocusListener: false,
+                                }
+                            });
+                        }; /* END OF revapi call */
+    
+                    }; /* END OF ON LOAD FUNCTION */
+                }()); /* END OF WRAPPING FUNCTION */
+            } else if (annimationNum == 57) {
+                var revapi57,
+                    tpj;
+                (function() {
+                    if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad);
+                    else onLoad();
+    
+                    function onLoad() {
+                        if (tpj === undefined) { tpj = jQuery; if ("off" == "on") tpj.noConflict(); }
+                        if (tpj(bannerDiv).revolution == undefined) {
+                            revslider_showDoubleJqueryError(bannerDiv);
+                        } else {
+                            revapi57 = tpj(bannerDiv).show().revolution({
+                                sliderType: "hero",
+                                sliderLayout: "fullwidth",
+                                dottedOverlay: "none",
+                                delay: 9000,
+                                responsiveLevels: [1100, 1024, 778, 480],
+                                visibilityLevels: [1100, 1024, 778, 480],
+                                gridwidth: [1280, 1024, 778, 480],
+                                gridheight: [600, 600, 600, 600],
+                                lazyType: "none",
+                                parallax: {
+                                    type: "mouse",
+                                    origo: "enterpoint",
+                                    speed: 400,
+                                    speedbg: 0,
+                                    speedls: 0,
+                                    levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 500],
+                                },
+                                shadow: 0,
+                                spinner: "spinner3",
+                                autoHeight: "off",
+                                disableProgressBar: "on",
+                                hideThumbsOnMobile: "off",
+                                hideSliderAtLimit: 0,
+                                hideCaptionAtLimit: 0,
+                                hideAllCaptionAtLilmit: 0,
+                                debugMode: false,
+                                fallbacks: {
+                                    simplifyAll: "off",
+                                    disableFocusListener: false,
+                                }
+                            });
+                        }; /* END OF revapi call */
+    
+                    }; /* END OF ON LOAD FUNCTION */
+                }()); /* END OF WRAPPING FUNCTION */
+            }
+        },
+        backToTop: function() {
+            $(window).on('scroll', function() {
+            if ($(this).scrollTop() >= 150) {
+                    $('.module-back-to-top').addClass('js--show');
+                } else {
+                    $('.module-back-to-top').removeClass('js--show');
+                }
+            });
+            $('.module-back-to-top button').on('click', function() {
+                q4App.scrollTo($('.layout '));
+            });
+        },
+
+        androidTap: function (selector) {
+            if (q4App.isMobile.Android() || q4App.isMobile.iOS()) {
+                $(selector).on('touch touchstart', 'li.has-children > a, li.has-children.no-link > span', function (e) {
+                    var $this = $(this),
+                        $parent = $this.parent();
+                    if (!$parent.hasClass('sfHover')) {
+                        e.preventDefault();
+                        $parent.siblings().removeClass('sfHover');
+                        $parent.addClass('sfHover');
+                    }
+                });
+            }
+        },
+
+        appendIndigenousCommunityLinkToNav: function(){
+            var IndigenousCommunityLink = '<li><a href="/IndigenousCommunityRelations/default.aspx">Global Center for Indigenous Community Relations</a></li>';
+            
+            $('.module-corporate-nav .level1 > li.has-children > a').each(function(){
+                if ($(this).text() == 'Sustainability'){
+                    $(this).parent().addClass('has-children--sustainability');
+                    $(IndigenousCommunityLink).appendTo('.has-children--sustainability .level2');
+                }
+            });
+            
+            $('.module-navigation-mobile .level1 > li.has-children > a').each(function(){
+                if ($(this).text() == 'Sustainability'){
+                    $(this).parent().addClass('has-children--sustainabilityM');
+                    $(IndigenousCommunityLink).appendTo('.has-children--sustainabilityM .level2');
+                }
+            });
+        },
+
+        // END FUNCTIONS FOR MOVING BANNER IMAGES
+        init: function() {
+            var app = this;
+            app.cleanUp();
+            app.submitOnEnter('.module-unsubscribe');
+            app.submitOnEnter('.module-search');
+            app.validateSubmit('.module-search');
+            app.superfish($('.module-corporate-nav .level1'), { cssArrows: false });
+            app.mobileMenuToggle($('.layout'), '.pane--navigation', '.module-toggle_button');
+            app.cleanQuickLinks($('.module-links'));
+            app.copyright($('.copyright_year'));
+            app.reveal('.layout', '.module_reveal-button', '.module-search--desktop', false, '', '', 'js--revealed ');
+    
+            app.docTracking();
+            app.fancySignup();
+            app.resetDate(['.nav a[href*="s3.q4web.com"]:not([href$=".pdf"])']);
+            app.previewToolbar();
+            app.sections();          
+            //app.contrast.init();
+            app.stickyNavBar();
+            app.appendLinksToSearch();
+            app.fancyEmailAlert($('.module-email-alerts-popup'), '.module-email-alerts-popup_input-button');
+            app.fancyEmailAlert($('.module-item_email-alerts'), '.module-item_email-alerts_input-button');
+            // app.setTimeoutBanner();
+            app.removeLevel3();
+            app.duplicateLink();
+            app.secondaryNav();
+            app.backToTop();
+            app.operationsFunction();
+            app.appendIndigenousCommunityLinkToNav();
+        }
+    });
+    
+    q4App.init();
+    </script>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv6'><div id="_ctrl0_ctl72_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script type="text/javascript">
+    $('.module-news-latest .module_container--content').news({
+        usePublic: GetViewType() != "0",
+        apiKey: Q4ApiKey,
+        useMoment:true,
+        dateFormat: {
+            date: 'MMM Do',
+            year: 'YYYY'
+        },
+        showAllYears: true,
+        limit: 9,
+        append: false,
+        template: (
+            /* beautify preserve:start */
+            '{{#items}}' +
+                '<div class="module_item">' +
+                    '<div class="module_item-wrap">'+
+                        '<div class="module_date-time">' +
+                            '<div class="module_date-text">{{date.date}} <span>{{date.year}}</span></div>' +
+                        '</div>' +
+                        '<div class="module_headline">' +
+                            '<a class="module_headline-link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>{{title}} {{#blank}}<span class="sr-only">(opens in new window)</span>{{/blank}}</a>' +
+                            '<span class="module_tags">{{tags}}</span>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>'+
+            '{{/items}}'
+            /* beautify preserve:end */
+        ),
+        beforeRender: function(e, data) {
+            $.each(data.items, function(idx, item) {
+                var url = item.url.toLowerCase().split('.');
+    
+                if (url[url.length - 1] == 'pdf') {
+                    item.blank = true;
+                }
+            });
+        }
+    });
+    
+    $('.module-sidebar-block_downloads .module_container--content').downloads({
+        downloadType: 'Quick Links Home',
+        itemContainer: '.module_item-container',
+        loadingMessage: '<p class="module_loader"><i class="q4-icon_spinner"></i><span class="sr-only">Loading news...</span></p>',
+        itemNotFoundMessage: '<div class="module-not-found-message"><i class="q4-icon_warning-line"></i> No items found.</div>',
+        itemTemplate: (
+            /* beautify preserve:start */
+                '<div class="module_item">' +
+                    '<div class="module-downloads_title">' +
+                        '<a class="module_link module-downloads_title-link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>{{title}} {{#blank}} <span class="sr-only">(opens in a new window)</span>{{/blank}}</a>' +
+                    '</div>' +
+                '</div>'
+            /* beautify preserve:end */
+        ),
+        beforeRenderItems: function(e, data) {
+            $.each(data.items, function(idx, item) {
+                var url = item.url.toLowerCase().split('.');
+                if (url[url.length - 1] != 'aspx') {
+                    item.blank = true;
+                }
+            });
+        }
+    });
+    
+     /*Latest Blog Stories*/ 
+    $('.module-sidebar-block_latest-blog .module_container--content').news({
+        usePublic: GetViewType() != "0",
+        apiKey: Q4ApiKey,
+        limit:1,
+        category: '0099a798-83dd-4a0a-a6ce-874b17a000b3',
+        showAllYears: true,
+        loadShortBody: true,
+        shortBodyLength: 150,
+        dateFormat: "M d, yy",
+        append: false,
+        template: (
+            '{{#items}}' +
+                '<div class="module_item">' +
+                    '<div class="module_item-wrap">'+
+                        '{{#media.0.url}}' +
+                            '<div class="module-blog-image">' +
+                                '<img src="{{media.0.url}}" alt="placeholder">' +
+                            '</div>' + 
+                        '{{/media.0.url}}' + 
+                        '<div class="module_date-time">' +
+                            '<div class="module_date-text">{{date}}</div>' +
+                        '</div>' +
+                        '<div class="module_headline">' +
+                            '<a class="module_headline-link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>{{title}} {{#blank}}<span class="sr-only">(opens in new window)</span>{{/blank}}</a>' +
+                        '</div>' +
+                        '<div class="module_body">' +
+                            '<p>{{shortBody}} <a class="module_link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>' +
+                                '<span class="module_link-text">Read more</span>' +
+                                '{{#blank}}<span class="sr-only">(opens in new window)</span>{{/blank}}'+
+                            '</a></p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>'+
+            '{{/items}}'
+        ),
+        beforeRender: function(e, data) {
+            $.each(data.items, function(idx, item) {
+                var url = item.url.toLowerCase().split('.');
+        
+                if (url[url.length - 1] == 'pdf') {
+                    item.blank = true;
+                }
+            });
+        }
+    });
+    </script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

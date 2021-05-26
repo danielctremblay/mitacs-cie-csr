@@ -1,0 +1,644 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+TGOD | Premium Certified Organic Cannabis. | The Green Organic Dutchman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your prescription will expire on . Renew your prescription now.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Login
+
+
+
+
+
+
+
+
+
+TGOD_Detailed_Round_rgb-green
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Our Organic Story
+Who We AreCommunitySustainabilityOur Organic Process
+Our Products
+All Cannabis ProductsThe Green Organic DutchmanTGOD OrganicsRipple by TGOD
+Where to Buy
+Buy MedicalFind a StoreProvincial RetailersFAQ
+Global
+BrandsCorporate InformationInvestors Medical Partners
+customercare@tgod.ca905-304-4201
+
+
+English
+Français
+
+Investors
+Careers
+
+
+
+
+
+Continue Shopping
+
+${ cart.content.item_count }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Total Grams
+
+					${ cart.gramsTotal }g of ${ cart.gramsAllowed }g max
+				
+
+
+
+Total
+${ subtotalPrice() } 
+
+
+Over Limit. Please remove ${ cart.gramsTotal - cart.gramsAllowed }g
+
+
+Checkout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TGOD_Detailed_Round_rgb-green
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+English
+Français
+InvestorsCareers
+Login
+
+
+
+
+
+
+
+
+Our Organic Story 
+
+
+
+
+
+
+                Who We Are
+              
+
+                We're a global leader in cultivating premium, certified organically grown cannabis.
+              
+
+
+
+
+                Community
+              
+
+                Our organic principles work to better the communities where we live and grow.
+              
+
+
+
+
+                Sustainability
+              
+
+                We're defining the industry standard in organic sustainability practices.
+              
+
+
+
+
+                Our Organic Process
+              
+
+                We follow a higher standard of organic growing we call CleanCraft.
+              
+
+
+
+
+
+
+Our Products 
+
+
+
+
+
+
+                All Cannabis Products
+              
+
+                Explore our full collection of certified organically grown cannabis products.
+              
+
+
+
+
+                The Green Organic Dutchman
+              
+
+                TGOD crafts premium quality organic whole cannabis flower.
+              
+
+
+
+
+                TGOD Organics
+              
+
+                Whole leaf teas made with premium organic ingredients and organic cannabis sustainably grown in living soil.
+              
+
+
+
+
+                Ripple
+              
+
+                Instantly transform any drink or food into a THC, CBD or Balanced treat with fast-onset Ripple.
+              
+
+
+
+
+
+
+Where to Buy 
+
+
+
+
+
+
+                Buy Medical
+              
+
+                Learn how to get a prescription, and how to get TGOD medical cannabis products through one of our Medical Cannabis partners.
+              
+
+
+
+
+                Find a Store
+              
+
+                Find a retailer near you that carries 100% certified organically grown TGOD products.
+              
+
+
+
+
+                Provincial Retailers
+              
+
+                Shop our products from online recreational cannabis retailers.
+              
+
+
+
+
+                FAQ
+              
+
+                Everything you need to know about organic cannabis, product specifics and TGOD.
+              
+
+
+
+
+
+
+Global 
+
+
+
+
+
+
+                Brands
+              
+
+                Learn about our international brands that share a passion for organic cannabis.
+              
+
+
+
+
+                Corporate Information
+              
+
+                Everything you need to know about our core values and principles.
+              
+
+
+
+
+                Investors
+              
+
+                Get the latest news, financial updates and other essential investor information.
+              
+
+
+
+
+                Medical Partners
+              
+
+                Learn more about our medical cannabis partners and how you can access The Green Organic Dutchman medical cannabis products.
+              
+
+
+
+
+
+
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quality. Consistency.High Potency.
+Introducing: CleanCraft ™See the DifferencePurchase in store
+
+
+
+
+
+
+
+
+Our philosophy is more than growing certified organic cannabis; it’s cultivating a way of life.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+QUICK DISSOLVING & FAST ONSET RIPPLE
+Dissolvable Cannabis PowderLEARN MORE
+
+
+
+
+
+
+
+
+Organic Starts With Living Soil
+We follow strict standards and sustainability principles for organic growing to offer you lab-tested, quality cannabis that’s free from synthetic fertilizers and chemicals. See what we’re all about.Learn About Our Process
+
+
+
+
+
+
+
+
+Our Commitment to the Community
+Our passion is in nurturing a community who respects a sustainable way of life. Together, we commit to Making Life Better and we can change the world one step at a time.Our Community
+
+
+
+
+
+
+
+
+Invest in a Sustainable Future
+Strategic partnerships, global growth, and a world-class executive team.Investors Information
+
+
+
+
+
+
+
+
+
+
+Join the community
+Sign up for the latest news and product updates so you don't miss out.
+
+
+
+First Name
+
+
+
+Enter Email
+
+
+
+
+
+
+
+
+I agree to receive email communications from The Green Organic Dutchman.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TGOD_Detailed_Round_rgb-green
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Company
+
+Corporate Information
+
+Careers
+
+Global
+
+Good Neighbour
+
+
+Information
+
+Available Provinces
+
+Medical Cannabis
+
+Prescribing TGOD
+
+Investors
+
+
+Support
+
+Shipping & Returns
+
+FAQ
+
+Contact
+
+
+
+Blog
+
+
+
+
+Where to Buy
+
+
+
+
+© 2021 The Green Organic Dutchman HoldingsTerms & ConditionsPrivacy Policy
+
+
+
+
+
+ 
+		This website uses cookies to ensure you get the best experience on our website.
+		Learn More
+
+
+Got it!
+
+
+
+
+
+
+
+
+
+
+
+
+

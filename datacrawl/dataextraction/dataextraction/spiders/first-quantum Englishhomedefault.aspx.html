@@ -1,0 +1,1247 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	First Quantum Minerals Ltd. - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":694,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1" name="viewport" /><meta content="pBzOtx93Q0lHZbMm7_aWr81a_cPu-6oyafhuoGtqmGE" name="google-site-verification" /><!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s24.q4cdn.com/821689673/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.first-quantum.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900|Fira+Sans:300,300i,400,400i,500,500i,700&amp;amp;display=swap" />
+<link type="image/x-icon" rel="icon" media="" href="//s24.q4cdn.com/821689673/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s24.q4cdn.com/821689673/files/favicon.ico" />
+<link rel="stylesheet" media="print" href="//s24.q4cdn.com/821689673/files/css/print.css" />
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s24.q4cdn.com/821689673/files/css/global.css?v=58122" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s24.q4cdn.com/821689673/files/css/client.css?v=57728" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s24.q4cdn.com/821689673/files/css/print.css" /><script type="text/javascript" src="//s24.q4cdn.com/821689673/files/js/GoogleTagManager.js"></script>
+<script type="text/javascript" src="//s24.q4cdn.com/821689673/files/js/GTMNoscript.js"></script>
+<script type="text/javascript" src="//s24.q4cdn.com/821689673/files/js/q4.core.1.0.8.min.js"></script>
+<script type="text/javascript" src="//s24.q4cdn.com/821689673/files/js/q4.app.1.0.8.min.js"></script>
+<script type="text/javascript" src="https://widgets.q4app.com/widgets/q4.api.1.13.3.min.js"></script>
+<script type="text/javascript" src="//s24.q4cdn.com/821689673/files/js/pym.v1.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="https://www.first-quantum.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+(function ($) {
+    function initGaTracking(isp, org) {
+        isp = isp || '(not set)';
+        org = org || '(not set)';
+        $.each(trackingCodes, function (i, data) {
+            if (data.qualifier === "Q4") {
+                ga('create', data.trackingCode, 'auto'); // Q4 tracker
+                ga('set', { 'dimension1': isp });
+                ga('set', { 'dimension2': org });
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+            } else {
+                ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+                ga(data.qualifier + '.set', 'anonymizeIp', true);
+                ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+            }
+        });
+    }
+
+    var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-20533600-40'}];
+    var ipSessStorageKey = 'ipApiInfo';
+    var ipJsonStringified = sessionStorage.getItem(ipSessStorageKey);
+
+    if (ipJsonStringified) {
+        try {
+            var ipJsonParsed = JSON.parse(ipJsonStringified);
+            initGaTracking(ipJsonParsed.isp, ipJsonParsed.org);
+        } catch (e) {
+            console.error('Failed to JSON parse IP API session storage data\n', e);
+            initGaTracking();
+        }
+    } else {
+        $.getJSON('https://pro.ip-api.com/json/?key=xdjZbj0ZiVVozCo&fields=isp,org')
+            .done(function (ipJson) {
+                sessionStorage.setItem(ipSessStorageKey, JSON.stringify(ipJson));
+                initGaTracking(ipJson.isp, ipJson.org);
+            })
+            .fail(function () {
+                initGaTracking();
+            });
+    }
+})(jQuery);
+</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    <!-- Google Tag Manager -->
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NXW6M4X"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window, document, 'script', 'dataLayer', 'GTM-NXW6M4X');
+</script>
+<!-- End Google Tag Manager -->
+    
+    <div id="pageClass" class="Sectionhome PageDefault PageHome LayoutHomePageLayout Languageen-US">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="layout layout--home">
+    <div class="layout_inner">
+        <div class="layout_header">
+            <div class="pane pane--header">
+                <div class="pane_inner clearfix"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="module module-embed module-skip">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a class="module-skip_link" href="#maincontent">Skip to main content</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script type="text/javascript">
+var Q4ApiKey = 'BF185719B0464B3CB809D23926182246';
+</script>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="module module-embed module-logo">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="/English/default.aspx"><img src="//s24.q4cdn.com/821689673/files/design/FirstQuantum-logo.svg" alt="First Quantum Minerals Ltd. logo"></a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv4'><nav class="nav nav--main"><ul class="level1">
+	<li class="has-children"><a href="https://www.first-quantum.com/English/about-us/default.aspx">About Us</a><ul class="level2">
+		<li><a href="https://www.first-quantum.com/English/about-us/at-a-glance/default.aspx">At a Glance</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/about-us/governance/default.aspx">Governance</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/about-us/governance/board/default.aspx">Board</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/corporate-officers/default.aspx">Corporate Officers</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/governance-policies/default.aspx">Governance Policies</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/about-us/governance/committees/default.aspx">Committees</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/about-us/governance/committees/audit-committee/default.aspx">Audit Committee</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/committees/compensation-committee/default.aspx">Compensation Committee</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/committees/nominating-and-governance-committee-and-environment/default.aspx">Nominating and Governance Committee</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/committees/health-and-safety-and-corporate-social-responsibility-committtee/default.aspx">Environment Health and Safety, and Corporate Social Responsibility Committee</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/about-us/what-we-produce/default.aspx">What We Produce</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/about-us/what-we-produce/metal-corp-trading/default.aspx">Metal Corp Trading</a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/our-operations/default.aspx">Our Operations</a><ul class="level2">
+		<li class="no-link has-children"><span>Operating Mines</span><ul class="level3">
+			<li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--cobre">Cobre Panama</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cobre-panama/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cobre-panama/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--kansanshi">Kansanshi</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/kansanshi/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/kansanshi/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--sentinel">Sentinel</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/sentinel/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/sentinel/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--cobre-las-cruces">Cobre Las Cruces</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cobre-las-cruces/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cobre-las-cruces/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--cayeli">Cayeli</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cayeli/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cayeli/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--guelb-moghrein">Guelb Moghrein</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/guelb-moghrein/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/guelb-moghrein/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--ravensthorpe">Ravensthorpe</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/ravensthorpe/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/ravensthorpe/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--pyhasalmi">Pyhasalmi</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/pyhasalmi/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/pyhasalmi/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li>
+		</ul></li><li class="no-link has-children"><span>Development Projects</span><ul class="level3">
+			<li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--enterprise">Enterprise</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/development-projects/enterprise/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li><a href="/English/our-operations/default.aspx#module-operation--haquira">Haquira</a></li><li><a href="/English/our-operations/default.aspx#module-operation--taca-taca">Taca Taca</a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/sustainability/default.aspx">Sustainability</a><ul class="level2">
+		<li class="has-children"><a href="https://www.first-quantum.com/English/sustainability/oversight/default.aspx">Oversight</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/sustainability/oversight/board-responsibilities/default.aspx">Board Responsibilities</a></li><li><a href="https://www.first-quantum.com/English/sustainability/oversight/policies/default.aspx">Policies</a></li><li><a href="https://www.first-quantum.com/English/sustainability/oversight/reporting/default.aspx">Reporting</a></li>
+		</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/sustainability/programs/default.aspx">Programs</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/sustainability/programs/biodiversity/default.aspx">Biodiversity</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/community-development/default.aspx">Community Development</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/environment/default.aspx">Environment</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/human-rights/default.aspx">Human Rights</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/safety/default.aspx">Safety</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/tax-transparency/default.aspx">Tax Transparency</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/covid-19-global-response/default.aspx">COVID-19 Global Response</a></li>
+		</ul></li><li><a href="https://www.first-quantum.com/English/sustainability/case-studies/default.aspx">Case Studies</a></li>
+	</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/investors/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.first-quantum.com/English/investors/interactive-analyst-center/default.aspx">Interactive Analyst Center</a></li><li><a href="https://www.first-quantum.com/English/investors/investor-briefcase/default.aspx">Investor Briefcase</a></li><li><a href="https://www.first-quantum.com/English/investors/financial-information/default.aspx">Financial Information</a></li><li><a href="https://www.first-quantum.com/English/investors/presentations-and-events/default.aspx">Presentations & Events</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/investors/stock-information/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/investors/stock-information/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.first-quantum.com/English/investors/stock-information/dividends/default.aspx">Dividends</a></li>
+		</ul></li>
+	</ul></li><li><a href="https://www.first-quantum.com/English/announcements/default.aspx">Announcements</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/careers/default.aspx">Careers</a><ul class="level2">
+		<li><a href="https://www.first-quantum.com/English/careers/search-jobs/default.aspx">Search Jobs</a></li><li><a href="https://www.first-quantum.com/English/careers/culture/default.aspx">Culture</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/careers/work-and-lifestyle/default.aspx">Work and Lifestyle</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/careers/work-and-lifestyle/australia/default.aspx">Australia</a></li><li><a href="https://www.first-quantum.com/English/careers/work-and-lifestyle/panama/default.aspx">Panama</a></li><li><a href="https://www.first-quantum.com/English/careers/work-and-lifestyle/zambia/default.aspx">Zambia</a></li>
+		</ul></li>
+	</ul></li><li><a href="https://www.first-quantum.com/English/contact-us/default.aspx">Contact Us</a></li>
+</ul></nav></span><span class='HeaderPaneDiv5'><div id="_ctrl0_ctl18_divModuleContainer" class="module module-search" role="search">
+    <div class="module_container module_container--outer">
+        <h2 id="_ctrl0_ctl18_lblTitle" class="module_title"><span id="_ctrl0_ctl18_lblModuleTitle" class="ModuleTitle">Search<i class="q4-icon_search2"></i></span></h2>
+        <div class="module_container module_container--inner">
+            <div class="module-search_inner">
+                <span class="module-search_close q4-icon_close"></span>
+                <span id="_ctrl0_ctl18_lblSearchText" class="module-search_text">Search here</span>
+                <div class="module_inputs-container">
+                    <input name="_ctrl0$ctl18$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl18_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl18$btnSearch&#39;, &#39;&#39;); " />
+                    <input type="submit" name="_ctrl0$ctl18$btnSearch" value="Search" id="_ctrl0_ctl18_btnSearch" class="module_button module-search_button" />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv6'><div id="_ctrl0_ctl21_divContainer" class="LanguageSwitch">
+    <span>
+        
+                
+                
+            
+                
+                <a id="_ctrl0_ctl21_rtrLanguages_ctl01_lnkLanguage" href="https://www.first-quantum.com/Spanish/inicio/default.aspx" href="javascript:__doPostBack(&#39;_ctrl0$ctl21$rtrLanguages$ctl01$lnkLanguage&#39;,&#39;&#39;)">Spanish</a>
+            
+    </span>
+</div></span><span class='HeaderPaneDiv7'><div id="_ctrl0_ctl24_divModuleContainer" class="module module-embed layout_toggle">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <button  type="button" class="q4-icon_hamburger" tabindex="0"></button>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--banner">
+                <div class="pane_inner clearfix"><span class='HeaderPane2Div1'><div id="_ctrl0_ctl60_divModuleContainer" class="module module-embed module-slider dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_container module_container--widget"></div>
+<script>
+$('.module-slider .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Slider',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    showAllYears: true,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content">' +
+            '{{#items}}' +
+                '<div class="module-slider_item" style="background-image: url({{thumb}});">' +
+                    '<div class="module-slider_item-inner">' +
+                        '<div class="module-slider_item-content">' +
+                            '<h1 class="module-slider_title">{{{title}}}</h1>' +
+                            '<div class="module-slider_description">{{{description}}}</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+             '{{/items}}' +
+         '</div>' +
+         '<div class="module-slider_arrows"></div>'
+        /* beautify preserve:end */
+    ),
+    complete: function(e) {
+        $(e.target).find('.module_container--content').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            fade: true,
+            appendArrows: $('.module-slider_arrows')
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--navigation">
+                <div class="pane_inner clearfix"><span class='NavigationPaneDiv10'><div id="_ctrl0_ctl27_divContainer" class="LanguageSwitch">
+    <span>
+        
+                
+                
+            
+                
+                <a id="_ctrl0_ctl27_rtrLanguages_ctl01_lnkLanguage" href="https://www.first-quantum.com/Spanish/inicio/default.aspx" href="javascript:__doPostBack(&#39;_ctrl0$ctl27$rtrLanguages$ctl01$lnkLanguage&#39;,&#39;&#39;)">Spanish</a>
+            
+    </span>
+</div></span><span class='NavigationPaneDiv11'><div id="_ctrl0_ctl30_divModuleContainer" class="module module-embed layout_toggle">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <button  type="button" class="q4-icon_close" tabindex="0"></button>
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv12'><nav class="nav nav--mobile"><ul class="level1">
+	<li class="has-children"><a href="https://www.first-quantum.com/English/about-us/default.aspx">About Us</a><ul class="level2">
+		<li><a href="https://www.first-quantum.com/English/about-us/at-a-glance/default.aspx">At a Glance</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/about-us/governance/default.aspx">Governance</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/about-us/governance/board/default.aspx">Board</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/corporate-officers/default.aspx">Corporate Officers</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/governance-policies/default.aspx">Governance Policies</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/about-us/governance/committees/default.aspx">Committees</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/about-us/governance/committees/audit-committee/default.aspx">Audit Committee</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/committees/compensation-committee/default.aspx">Compensation Committee</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/committees/nominating-and-governance-committee-and-environment/default.aspx">Nominating and Governance Committee</a></li><li><a href="https://www.first-quantum.com/English/about-us/governance/committees/health-and-safety-and-corporate-social-responsibility-committtee/default.aspx">Environment Health and Safety, and Corporate Social Responsibility Committee</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/about-us/what-we-produce/default.aspx">What We Produce</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/about-us/what-we-produce/metal-corp-trading/default.aspx">Metal Corp Trading</a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/our-operations/default.aspx">Our Operations</a><ul class="level2">
+		<li class="no-link has-children"><span>Operating Mines</span><ul class="level3">
+			<li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--cobre">Cobre Panama</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cobre-panama/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cobre-panama/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--kansanshi">Kansanshi</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/kansanshi/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/kansanshi/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--sentinel">Sentinel</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/sentinel/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/sentinel/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--cobre-las-cruces">Cobre Las Cruces</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cobre-las-cruces/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cobre-las-cruces/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--cayeli">Cayeli</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cayeli/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/cayeli/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--guelb-moghrein">Guelb Moghrein</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/guelb-moghrein/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/guelb-moghrein/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--ravensthorpe">Ravensthorpe</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/ravensthorpe/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/ravensthorpe/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--pyhasalmi">Pyhasalmi</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/pyhasalmi/production-statistics/default.aspx">Production Statistics</a></li><li><a href="https://www.first-quantum.com/English/our-operations/operating-mines/pyhasalmi/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li>
+		</ul></li><li class="no-link has-children"><span>Development Projects</span><ul class="level3">
+			<li class="has-children"><a href="/English/our-operations/default.aspx#module-operation--enterprise">Enterprise</a><ul class="level4">
+				<li><a href="https://www.first-quantum.com/English/our-operations/development-projects/enterprise/reserves-and-resources/default.aspx">Reserves & Resources</a></li>
+			</ul></li><li><a href="/English/our-operations/default.aspx#module-operation--haquira">Haquira</a></li><li><a href="/English/our-operations/default.aspx#module-operation--taca-taca">Taca Taca</a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/sustainability/default.aspx">Sustainability</a><ul class="level2">
+		<li class="has-children"><a href="https://www.first-quantum.com/English/sustainability/oversight/default.aspx">Oversight</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/sustainability/oversight/board-responsibilities/default.aspx">Board Responsibilities</a></li><li><a href="https://www.first-quantum.com/English/sustainability/oversight/policies/default.aspx">Policies</a></li><li><a href="https://www.first-quantum.com/English/sustainability/oversight/reporting/default.aspx">Reporting</a></li>
+		</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/sustainability/programs/default.aspx">Programs</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/sustainability/programs/biodiversity/default.aspx">Biodiversity</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/community-development/default.aspx">Community Development</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/environment/default.aspx">Environment</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/human-rights/default.aspx">Human Rights</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/safety/default.aspx">Safety</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/tax-transparency/default.aspx">Tax Transparency</a></li><li><a href="https://www.first-quantum.com/English/sustainability/programs/covid-19-global-response/default.aspx">COVID-19 Global Response</a></li>
+		</ul></li><li><a href="https://www.first-quantum.com/English/sustainability/case-studies/default.aspx">Case Studies</a></li>
+	</ul></li><li class="has-children"><a href="https://www.first-quantum.com/English/investors/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.first-quantum.com/English/investors/interactive-analyst-center/default.aspx">Interactive Analyst Center</a></li><li><a href="https://www.first-quantum.com/English/investors/investor-briefcase/default.aspx">Investor Briefcase</a></li><li><a href="https://www.first-quantum.com/English/investors/financial-information/default.aspx">Financial Information</a></li><li><a href="https://www.first-quantum.com/English/investors/presentations-and-events/default.aspx">Presentations & Events</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/investors/stock-information/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/investors/stock-information/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.first-quantum.com/English/investors/stock-information/dividends/default.aspx">Dividends</a></li>
+		</ul></li>
+	</ul></li><li><a href="https://www.first-quantum.com/English/announcements/default.aspx">Announcements</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/careers/default.aspx">Careers</a><ul class="level2">
+		<li><a href="https://www.first-quantum.com/English/careers/search-jobs/default.aspx">Search Jobs</a></li><li><a href="https://www.first-quantum.com/English/careers/culture/default.aspx">Culture</a></li><li class="has-children"><a href="https://www.first-quantum.com/English/careers/work-and-lifestyle/default.aspx">Work and Lifestyle</a><ul class="level3">
+			<li><a href="https://www.first-quantum.com/English/careers/work-and-lifestyle/australia/default.aspx">Australia</a></li><li><a href="https://www.first-quantum.com/English/careers/work-and-lifestyle/panama/default.aspx">Panama</a></li><li><a href="https://www.first-quantum.com/English/careers/work-and-lifestyle/zambia/default.aspx">Zambia</a></li>
+		</ul></li>
+	</ul></li><li><a href="https://www.first-quantum.com/English/contact-us/default.aspx">Contact Us</a></li>
+</ul></nav></span><span class='NavigationPaneDiv13'><div id="_ctrl0_ctl36_divModuleContainer" class="module module-search" role="search">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-search_inner">
+                <span class="module-search_close q4-icon_close"></span>
+                <span id="_ctrl0_ctl36_lblSearchText" class="module-search_text">Search here</span>
+                <div class="module_inputs-container">
+                    <input name="_ctrl0$ctl36$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl36_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl36$btnSearch&#39;, &#39;&#39;); " />
+                    <input type="submit" name="_ctrl0$ctl36$btnSearch" value="Search" id="_ctrl0_ctl36_btnSearch" class="module_button module-search_button" />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+        <div class="layout_content" id="maincontent">
+            <div class="pane pane--breadcrumb">
+                <div class="pane_inner"></div>
+            </div>
+            <div class="pane pane--left">
+                <div class="pane_inner clearfix"><span class='LeftPaneDiv'></span></div>
+            </div>
+            <div class="pane pane--content">
+                <div class="pane_inner clearfix"><span class='ContentPaneDiv'><span class='ContentPaneDiv2'><div id="_ctrl0_ctl63_divModuleContainer" class="module module-embed module-home-blocks module--no-padding-top">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-home-blocks_items-container grid grid--no-gutter grid--flex">
+    <div class="module-home-blocks_item module-home-blocks_item--links grid_col grid_col--1-of-2 grid_col--lg-1-of-1 grid_col--lc-1-of-1 grid_col--md-1-of-1">
+        <div class="module-home-blocks_boxes grid grid--no-gutter grid--flex">
+            <div class="module-home-blocks_box module-home-blocks_box--csr grid_col grid_col--1-of-3">
+                <div class="module-home-blocks_box--inner">
+                    <a class="module-home-blocks_box-link" href="/English/sustainability/case-studies/default.aspx">Sustainability Case Studies</a>
+                </div>
+            </div>
+            <div class="module-home-blocks_box module-home-blocks_box--reports grid_col grid_col--1-of-3">
+                <div class="module-home-blocks_box--inner">
+                    <a class="module-home-blocks_box-link" href="/English/investors/presentations-and-events/event-details/2021/Q1-2021-Results-Conference-Call--Webcast/default.aspx"> Q1 2021 Results</a>
+                </div>
+            </div>
+            <div class="module-home-blocks_box module-home-blocks_box--stock module-stock-home grid_col grid_col--1-of-3">
+                <div class="module-home-blocks_box--inner">
+                    <div class="module_container module_container--widget"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="module-home-blocks_item module-home-blocks_item--careers module-careers-slider grid_col grid_col--1-of-2 grid_col--lg-1-of-1 grid_col--lc-1-of-1 grid_col--md-1-of-1">
+        <div class="module_container module_container--widget"></div>
+    </div>
+</div>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.13.min.js"></script>
+<script>
+$('.module-stock-home .module_container--widget').stockQuote({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    changeCls: ['module-stock_down', 'module-stock_up'],
+    stockTpl: (
+        /* beautify preserve:start */
+        '<a class="module-stock-home_link" href="/English/investors/stock-information/default.aspx"><span class="sr-only">Read More</span></a>'+
+        '{{#.}}' +
+            '<span class="module-stock-home_description1">{{exchange}}:{{symbol}}</span>' +
+            '<span class="module-stock-home_stock-price">{{tradePrice}}</span>' +
+            '<span class="module-stock-home_change {{uod}}">' +
+                '<span class="module-stock-home_indicator">{{uodSymbol}}</span>{{change}} ({{percChange}}%)' +
+            '</span>' +
+            '<span class="module-stock-home_description3">15-20 min delay</span>' +
+        '{{/.}}'
+          /* beautify preserve:end */
+    )
+});
+$('.module-careers-slider .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Careers',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    showAllYears: true,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content">' +
+            '{{#items}}' +
+                '<div class="module-careers-slider_item">' +
+                    '<div class="module-careers-slider_item-inner">' +
+                        '<div class="module-careers-slider_item-image" style="background-image: url({{thumb}});"></div>' +
+                        '<div class="module-careers-slider_item-content dark">' +
+                            '<h3 class="module-careers-slider_title">{{{title}}}</h3>' +
+                            '<div class="module-careers-slider_description">{{{description}}}</div>' +
+                            '<a href="{{url}}" class="button button--more">Read more</a>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+            '{{/items}}' +
+         '</div>' +
+         '<div class="module_slider-pagination-arrows">' +
+            '<div class="module_slider-pagination">' +
+                '<span class="module_slider-pagination-current-item"></span>' +
+                '<span class="module_slider-pagination-total-items"></span>' +
+            '</div>' +
+             '<div class="module_slider-arrows"></div>' +
+             '<div class="module_slider-dots"></div>' +
+         '</div>'
+        /* beautify preserve:end */
+    ),
+    complete: function(e) {
+        $(e.target).find('.module_container--content').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            fade: true,
+            appendArrows: $(e.target).find('.module_slider-arrows'),
+            appendDots: $(e.target).find('.module_slider-dots')
+        });
+        var activeItem = $(e.target).find('.slick-dots li.slick-active button').text();
+        var totalItems = $(e.target).find('.slick-dots li:last-child button').text();
+        if (activeItem > 1) {
+            $(e.target).find('.module_slider-pagination-current-item').text(activeItem);
+        } else {
+            $(e.target).find('.module_slider-pagination-current-item').text(1);
+        }
+        if (totalItems > 1) {
+            $(e.target).find('.module_slider-pagination-total-items').text(totalItems);
+        } else {
+            $(e.target).find('.module_slider-pagination-total-items').text(1);
+        }
+        $(e.target).find('.module_container--content').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            var newactiveItem = nextSlide + 1;
+            $(e.target).find('.module_slider-pagination-current-item').text(newactiveItem);
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv3'><div id="_ctrl0_ctl66_divModuleContainer" class="module module-embed module-purpose module--thick">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-purpose_items-container grid">
+    <div class="module-purpose_item grid_col grid_col--1-of-3 grid_col--md-1-of-1">
+        <div class="module-purpose_intro">
+            <h2 class="module_title">Unique expertise</h2>
+            <p>We unlock value from complex mineral projects through management, technical and operating skills to deliver rewarding jobs for employees, sustainable development for local communities and returns for our shareholders.</p>
+        </div>
+    </div>
+    <div class="module-purpose_item grid_col grid_col--2-of-3 grid_col--md-1-of-1">
+        <div class="module-downloads-blocks">
+            <div class="module_container module_container--widget"></div>
+        </div>
+    </div>
+</div>
+<script>
+$('.module-downloads-blocks .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Our Purpose',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    showAllYears: true,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content grid grid--flex">' +
+            '{{#items}}' +
+                '<div class="module-downloads-blocks_item grid_col grid_col--1-of-2">' +
+                    '<div class="module-downloads-blocks_item-inner">' +
+                        '<div class="module-downloads-blocks_thumbnail">' +
+                            '<a data-fancybox {{{openVideo}}} class="module-downloads-blocks_thumbnail-link {{#tags}}module-downloads-blocks_thumbnail-link--{{.}} {{/tags}}" href="{{url}}"><img src="{{thumb}}" alt="{{title}}"></a>' +
+                        '</div>' +
+                        '<h3 class="module-downloads-blocks_item-title">{{{title}}}</h3>' +
+                        '<div class="module-downloads-blocks_item-description">{{{description}}}</div>' +
+                    '</div>' +
+                '</div>' +
+             '{{/items}}' +
+         '</div>'
+        /* beautify preserve:end */
+    ),
+    beforeRender: function (e, data) {
+        $.each(data.items, function(i, item) {
+            $.each(item.tags, function (l, tag) {
+                if (tag == 'video') {
+                    item.openVideo = 'data-options=\'{"slideClass": "fancybox-slide--video"}\'';
+                }
+            });
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv4'><div id="_ctrl0_ctl69_divModuleContainer" class="module module-embed module-csr-projects module-no-container">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_container module_container--widget"></div>
+<script>
+$('.module-csr-projects .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'CSR Projects',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    showAllYears: true,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content">' +
+            '{{#items}}' +
+                '<div class="module-csr-projects_item">' +
+                    '<div class="module-csr-projects_item-inner grid grid--no-gutter grid--flex">' +
+                        '<div class="module-csr-projects_thumbnail grid_col grid_col--1-of-2" style="background-image: url({{thumb}});"></div>' +
+                        '<div class="module-csr-projects_item-content grid_col grid_col--1-of-2">' +
+                            '<div class="module-csr-projects_item-content-inner">' +
+                                '<h2 class="module-csr-projects_item_title color--brand no-margin-bottom">{{{title}}}</h2>' +
+                                '<div class="module-csr-projects_item_description">{{{description}}}</div>' +
+                                '<div class="module-csr-projects_more">' +
+                                    '<a href="{{url}}" class="button button--more">Read more</a>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+             '{{/items}}' +
+         '</div>' +
+         '<div class="module_slider-pagination-arrows">' +
+            '<div class="module_slider-pagination">' +
+                '<span class="module_slider-pagination-current-item"></span>' +
+                '<span class="module_slider-pagination-total-items"></span>' +
+            '</div>' +
+             '<div class="module_slider-arrows"></div>' +
+             '<div class="module_slider-dots"></div>' +
+         '</div>'
+        /* beautify preserve:end */
+    ),
+    complete: function(e) {
+        $(e.target).find('.module_container--content').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            autoplay: true,
+            fade: true,
+            appendArrows: $(e.target).find('.module_slider-arrows'),
+            appendDots: $(e.target).find('.module_slider-dots')
+        });
+        var activeItem = $(e.target).find('.slick-dots li.slick-active button').text();
+        var totalItems = $(e.target).find('.slick-dots li:last-child button').text();
+        if (activeItem > 1) {
+            $(e.target).find('.module_slider-pagination-current-item').text(activeItem);
+        } else {
+            $(e.target).find('.module_slider-pagination-current-item').text(1);
+        }
+        if (totalItems > 1) {
+            $(e.target).find('.module_slider-pagination-total-items').text(totalItems);
+        } else {
+            $(e.target).find('.module_slider-pagination-total-items').text(1);
+        }
+        $(e.target).find('.module_container--content').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            var newactiveItem = nextSlide + 1;
+            $(e.target).find('.module_slider-pagination-current-item').text(newactiveItem);
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv5'><div id="_ctrl0_ctl72_divModuleContainer" class="module module-embed module-latest-info">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_container module_container--widget"></div>
+<script>
+$('.module-latest-info .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Latest Information',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    showAllYears: true,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content grid grid--gutter-60 grid--no-space">' +
+            '{{#items}}' +
+                '<div class="module-latest-info_item grid_col grid_col--1-of-3">' +
+                    '<div class="module-latest-info_item-inner">' +
+                        '<h3 class="module-latest-info_item-title">{{{title}}}</h3>' +
+                        '<div class="module-latest-info_item-content">' +
+                            '<div class="module-latest-info_item-description">{{{description}}}</div>' +
+                        '</div>' +
+                        '<div class="module_more">' +
+                            '<a class="button button--more" href="{{url}}">Read more</a>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+             '{{/items}}' +
+         '</div>' +
+         '<div class="module_slider-dots-arrows">' +
+             '<div class="module_slider-dots"></div>' +
+             '<div class="module_slider-arrows"></div>' +
+         '</div>'
+        /* beautify preserve:end */
+    ),
+    complete: function(e) {
+        $(e.target).find('.module_container--content').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            adaptiveHeight: true,
+            autoplay: false,
+            appendArrows: $(e.target).find('.module_slider-arrows'),
+            appendDots: $(e.target).find('.module_slider-dots'),
+            responsive: [{
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv6'><div id="_ctrl0_ctl75_divModuleContainer" class="module module-embed module-explore-operations module-no-container">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="container">
+    <h2 class="module_title">Explore our current operations</h2>
+</div>
+<div class="module_container module_container--widget"></div>
+<div class="module_slider-arrows-dots module_slider-arrows-dots--desktop">
+    <div class="module_slider-dots"></div>
+    <div class="module_slider-arrows"></div>
+</div>
+<script>
+$('.module-explore-operations .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Current operations',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    showAllYears: true,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content desktop-only">' +
+            '{{#itemsNew}}' +
+                '<div class="module_item-wrap">' +
+                    '{{#items}}' +
+                        '<div class="module-explore-operations_item {{#featured}}featured{{/featured}}">' +
+                            '<div class="module-explore-operations_item-inner">' +
+                                '<img src="{{thumb}}" alt="title"/>' +
+                                '<a class="module-explore-operations_link" {{#url}}href="{{url}}"{{/url}}>' +
+                                    '<span class="module-explore-operations_description">{{{description}}}</span>' +
+                                    '<span class="module-explore-operations_title">{{{title}}}</span>' +
+                                '</a>' +
+                            '</div>' +
+                        '</div>' +
+                     '{{/items}}' +
+                 '</div>' +
+             '{{/itemsNew}}' +
+         '</div>' +
+        '<div class="module_container module_container--content mobile-only">' +
+            '{{#items}}' +
+                '<div class="module_item-wrap">' +
+                        '<div class="module-explore-operations_item {{#featured}}featured{{/featured}}" style="background-image: url({{thumb}});">' +
+                            '<div class="module-explore-operations_item-inner">' +
+                                '<a class="module-explore-operations_link" href="{{url}}">' +
+                                    '<span class="module-explore-operations_description">{{{description}}}</span>' +
+                                    '<span class="module-explore-operations_title">{{{title}}}</span>' +
+                                '</a>' +
+                            '</div>' +
+                        '</div>' +
+                 '</div>' +
+             '{{/items}}' +
+         '</div>' +
+         '<div class="module_slider-arrows-dots module_slider-arrows-dots--mobile">' +
+            '<div class="module_slider-dots"></div>' +
+            '<div class="module_slider-arrows"></div>' +
+         '</div>'
+        /* beautify preserve:end */
+    ),
+    beforeRender: function(e, tplData) {
+        tplData.itemsNew = [{ items: [], featured: false }];
+        $.each(tplData.items, function(i, item) {
+            if (item.tags.indexOf("featured") < 0) {
+                if (tplData.itemsNew[tplData.itemsNew.length - 1].items.length < 2 && tplData.itemsNew[tplData.itemsNew.length - 1].featured == false) {
+                    tplData.itemsNew[tplData.itemsNew.length - 1].items.push(item);
+                } else {
+                    tplData.itemsNew.push({ items: [], featured: false });
+                    tplData.itemsNew[tplData.itemsNew.length - 1].items.push(item);
+                }
+            } else {
+                if (tplData.itemsNew[tplData.itemsNew.length - 1].items.length > 0) {
+                    tplData.itemsNew.push({ items: [], featured: true });
+                }
+                tplData.itemsNew[tplData.itemsNew.length - 1].featured = true;
+                tplData.itemsNew[tplData.itemsNew.length - 1].items.push(item);
+            }
+        });
+    },
+    complete: function(e) {
+        var $widget = $(e.target);
+        $widget.find('.module_container--content.desktop-only').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            variableWidth: true,
+            appendArrows: $('.module-explore-operations .module_slider-arrows-dots--desktop').find('.module_slider-arrows'),
+            appendDots: $('.module-explore-operations .module_slider-arrows-dots--desktop').find('.module_slider-dots')
+        });
+        $widget.find('.module_container--content.mobile-only').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            appendArrows: $(e.target).find('.module_slider-arrows-dots--mobile .module_slider-arrows'),
+            appendDots: $(e.target).find('.module_slider-arrows-dots--mobile .module_slider-dots'),
+            responsive: [{
+                breakpoint: 801,
+                settings: {
+                    slidesToShow: 2
+                }
+            }, {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }]
+        });
+        $(window).on('load resize', function() {
+            $widget.find('.module_container--content.desktop-only').on('beforeChange', function(e) {
+                var wItem = $(window).width() / 4,
+                    wFeatured = $(window).width() / 2;
+                $widget.find('.module_container--content.desktop-only .module-explore-operations_item').css('width', wItem + 'px');
+                $widget.find('.module_container--content.desktop-only .module-explore-operations_item.featured').css('width', wFeatured + 'px');
+            }).trigger('beforeChange');
+        }).trigger('resize');
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv7'><div id="_ctrl0_ctl78_divModuleContainer" class="module module-embed module-careers-block">
+    <div class="module_container module_container--outer">
+        <h2 id="_ctrl0_ctl78_lblTitle" class="module_title"><span id="_ctrl0_ctl78_lblModuleTitle" class="ModuleTitle">Careers</span></h2>
+        <div class="module_container module_container--inner">
+            <div class="module-careers-block_items-container grid">
+    <div class="module-careers-block_item module-careers-block_item--image grid_col grid_col--1-of-2">
+        <img src="//s24.q4cdn.com/821689673/files/images/home/FQM-CAREERS-4_1.jpg" alt="careers">
+    </div>
+    <div class="module-careers-block_item module-careers-block_item--content grid_col grid_col--1-of-2">
+        <div class="module-careers-widget">
+            <div class="module_container module_container--widget"></div>
+        </div>
+    </div>
+</div>
+<script>
+$('.module-careers-widget .module_container--widget').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Careers Info',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    showAllYears: true,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content grid grid--gutter-60">' +
+            '{{#items}}' +
+                '<div class="module-careers-widget_item grid_col grid_col--1-of-2 grid_col--md-1-of-1">' +
+                    '<h3 class="module-careers-widget_item-title">{{{title}}}</h3>' +
+                    '<div class="module-careers-widget_item-description">{{{description}}}</div>' +
+                    '<div class="module_more">' +
+                        '<a class="button button--more" href="{{url}}">Read more</a>' +
+                    '</div>' +
+                '</div>' +
+             '{{/items}}' +
+         '</div>'
+        /* beautify preserve:end */
+    )
+});
+</script>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--right">
+                <div class="pane_inner clearfix"><span class='RightPaneDiv'></span></div>
+            </div>
+        </div>
+        <div class="layout_footer" role="contentinfo">
+            <div class="pane pane--footer">
+                <div class="pane_inner clearfix"><span class='FooterPaneDiv'><span class='FooterPaneDiv19'><div id="_ctrl0_ctl39_divModuleContainer" class="module module-embed module-footer-top list--reset dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <h2 class="module_title">Useful Links</h2>
+<div class="module-footer-top_items-container grid">
+    <div class="module-footer-top_item module-footer-top_item--links grid_col grid_col--3-of-4">
+        <div class="grid grid--flex">
+            <div class="grid_col grid_col--1-of-3">
+                <div class="module-footer-top_item-inner">
+                    <h4>Investors</h4>
+                    <ul>
+                        <li><a href="/English/investors/interactive-analyst-center/default.aspx">Interactive Analyst Center</a></li>
+                        <li><a href="/English/investors/financial-information/default.aspx">Financial Information</a></li>
+                        <li><a href="/English/investors/stock-information/default.aspx">Stock information</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid_col grid_col--1-of-3">
+                <div class="module-footer-top_item-inner">
+                    <h4>Sustainability</h4>
+                    <ul>
+                        <li><a href="/English/sustainability/oversight/default.aspx">Oversight</a></li>
+                        <li><a href="/English/sustainability/programs/default.aspx">Programs</a></li>
+                        <li><a href="/English/sustainability/case-studies/default.aspx">Sustainability Case Studies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid_col grid_col--1-of-3">
+                <div class="module-footer-top_item-inner">
+                    <h4>Careers</h4>
+                    <ul>
+                        <li><a href="/English/careers/search-jobs/default.aspx">Search Jobs</a></li>
+                        <li><a href="/English/careers/work-and-lifestyle/default.aspx">Work and Lifestyle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid--flex">
+            <div class="grid_col grid_col--1-of-3">
+                <div class="module-footer-top-downloads module-footer-top-downloads--investor"></div>
+            </div>
+            <div class="grid_col grid_col--1-of-3">
+                <div class="module-footer-top-downloads module-footer-top-downloads--sustainability"></div>
+            </div>
+            <div class="grid_col grid_col--1-of-3"></div>
+            <div class="grid_col grid_col--1-of-3">
+                <h4><i class="q4-icon_rss"></i>RSS Feed</h4>
+                <sup>RSS feeds are best viewed with an RSS Viewer</sup><br><br>
+                <ul>
+                    <li><a href="/rss/PressRelease.aspx?LanguageId=1" target="_blank">Press release</a></li>
+                    <li><a href="/rss/Event.aspx?LanguageId=1" target="_blank">Events</a></li>
+                    <li><a href="/rss/Presentation.aspx?LanguageId=1" target="_blank">Presentations</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="module-footer-top_item module-footer-top_item--video grid_col grid_col--1-of-4">
+        <h4>Ravensthorpe Nickel Operation</h4>
+        <div class="module-footer-video">
+            <div class="module-footer-video_thumbnail">
+                <a href="//s24.q4cdn.com/821689673/files/doc_downloads/2020/FQM-About-RNO.mp4" data-fancybox data-options='{"slideClass" : "fancybox-slide--video"}'>
+                    <img src="//s24.q4cdn.com/821689673/files/design/ravensthorpe.PNG" alt="footer video">
+                </a>
+            </div>
+            <div class="module-footer-video_description">
+                <p>Ravensthorpe Nickel Operation in Australia re-opened in 2020, producing Nickel MHP.</p>
+            </div>
+            <div class="module-footer-video_button text-right">
+                <a href="/English/our-operations/default.aspx#module-operation--ravensthorpe" class="button button--more">Read more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$('.module-footer-top-downloads--investor').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Footer Documents',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    fetchAllYears: true,
+    tags: ['investor-footer'],
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content">' +
+            '{{#items}}' +
+                '<div class="module-footer-top-downloads_item">' +
+                    '<div class="module-footer-top-downloads_item-title">' +
+                        '<a class="module_link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>' +
+                            '<span class="module_link-text">{{{title}}}</span>' +
+                            '{{#blank}}<span class="sr-only">(opens in new window)</span>{{/blank}}'+
+                        '</a>' +
+                    '</div>' +
+                '</div>' +
+             '{{/items}}' +
+         '</div>'
+        /* beautify preserve:end */
+    ),
+    beforeRender: function(e, data) {
+        $.each(data.items, function(idx, item) {
+            var url = item.url.toLowerCase().split('.');
+            if (url[url.length - 1] != 'aspx') {
+                item.blank = true;
+            }
+        });
+    }
+});
+
+$('.module-footer-top-downloads--sustainability').downloads({
+    usePublic: GetViewType() != "0",
+    apiKey: Q4ApiKey,
+    downloadType: 'Footer Documents',
+    loadingMessage: '<p class="loading">Loading...</p>',
+    fetchAllYears: true,
+    tags: ['sustainability-footer'],
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container module_container--content">' +
+            '{{#items}}' +
+                '<div class="module-footer-top-downloads_item">' +
+                    '<div class="module-footer-top-downloads_item-title">' +
+                        '<a class="module_link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>' +
+                            '<span class="module_link-text">{{{title}}}</span>' +
+                            '{{#blank}}<span class="sr-only">(opens in new window)</span>{{/blank}}'+
+                        '</a>' +
+                    '</div>' +
+                '</div>' +
+             '{{/items}}' +
+         '</div>'
+        /* beautify preserve:end */
+    ),
+    beforeRender: function(e, data) {
+        $.each(data.items, function(idx, item) {
+            var url = item.url.toLowerCase().split('.');
+            if (url[url.length - 1] != 'aspx') {
+                item.blank = true;
+            }
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='FooterPaneDiv20'><div id="_ctrl0_ctl42_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl42_divModuleContainer" class="module module-links module-links-footer list--reset dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl42_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.first-quantum.com/English/site-map/default.aspx" id="_ctrl0_ctl42_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Sitemap</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.first-quantum.com/English/privacy-statement/default.aspx" id="_ctrl0_ctl42_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Privacy</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.first-quantum.com/English/legal/default.aspx" id="_ctrl0_ctl42_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_self">Legal</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl03_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.first-quantum.com/English/contact-us/default.aspx" id="_ctrl0_ctl42_QuickLinkList_ctl03_link" class="module-links_list-item-link" target="_self">Contact</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--footer2">
+                <div class="pane_inner clearfix"><span class='FooterPane2Div25'><div id="_ctrl0_ctl57_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=ycpnlztcebw1gxalo0ykqg" async="true"></script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--credits grid grid--no-gutter">
+                <div class="pane_inner clearfix"><span class='Q4FooterDiv21'><div id="_ctrl0_ctl45_divModuleContainer" class="module module-html copyright grid_col grid_col--4-of-5 grid_col--md-1-of-1">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="copyright_items-container">
+    <div class="copyright_item">© <span class="copyright_year"></span> First Quantum Minerals Ltd. <span class="font-extralight">All Rights Reserved.</span></div>
+    <div class="copyright_item">
+        <span class="font-extralight">Made by </span> 
+        <a href="https://www.firefly360.com.au/" target="_blank"><span class="copyright_logo"><img src="//s24.q4cdn.com/821689673/files/design/svg/firefly_logo.svg" alt="Filefly Logo"></span></a>
+    </div>
+    <div class="copyright_item copyright_item--q4-credits"></div>
+</div>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv22'><div id="_ctrl0_ctl48_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl48_divModuleContainer" class="module module-links module-links-social list--reset dark grid_col grid_col--1-of-5 grid_col--md-1-of-1">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl48_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl48_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.linkedin.com/company/firstquantumminerals" id="_ctrl0_ctl48_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_linkedin2"><span class="sr-only">linkedin (opens in a new window)</span></i></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl48_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.facebook.com/FirstQuantumMinerals/" id="_ctrl0_ctl48_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_facebook2"><span class="sr-only">facebook (opens in a new window)</span></i></a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv23'>
+<div class="module module-q4-credits">
+    <div class="module_container module_container--outer">
+        <div class="module_container module_container--inner">
+            <a href="https://www.q4inc.com/Powered-by-Q4/" id="_ctrl0_ctl51_hrefWebsiteRecording" class="module-q4-credits-link" target="_blank">
+                <span id="_ctrl0_ctl51_lblWebsiteRecording" class="module-q4-credits_powered-text">Powered By Q4 Inc.</span>
+                <span id="_ctrl0_ctl51_lblVersion" class="module-q4-credits_version-text">5.56.0.1</span>
+                <span class="sr-only">(opens in new window)</span>
+            </a>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv24'><div id="_ctrl0_ctl54_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script>
+var q4App = $.extend(true, q4Defaults, {
+    options: {
+        headerOffset: $('.pane--header').outerHeight()
+    },
+    scrollingTable: function(selector) {
+        $(selector).not(selector + ' table').wrap('<div class="table-wrapper" />');
+    },
+    mainNav: function() {
+        var navDL = $('<div />').downloads({
+            usePublic: GetViewType() != "0",
+            apiKey: Q4ApiKey,
+            loadingMessage: '',
+            downloadType: "Navigation Description",
+            fetchAllYears: true,
+            beforeRender: function(e, data) {
+                $.each(data.items, function(i, item) {
+                    var $li = $('.nav--main .level1 > li.has-children > a:contains("' + item.title + '")').parent(),
+                        sectionLinkText = $li.find('> a').text();
+                    sectionHref = $li.find('> a').attr('href');
+                    sectionText = $li.find('> a').text().toLowerCase().replace(/\s/g, '');
+
+                    $li.attr('data-section', sectionText).find('>.level2').prepend(
+                        '<div class="nav_downloads nav_downloads--' + sectionText + '"><div class="nav_item">' +
+                        '   <div class="nav_section-text">' + sectionLinkText + '</div>' +
+                        '   <div class="nav_description">' + item.description + '</div>' +
+                        '   <div class="nav_section-more"><a class="button button--more" href="' + sectionHref + '">Read more</a></div>' +
+                        '</div></div>'
+                    ).find('>li').wrapAll('<div class="js--wrap-li"/>');
+
+                    var elements = $li.find(".js--wrap-li > li");
+                    for (var i = 0; i < elements.length; i += 2) {
+                        elements.slice(i, i + 2).wrapAll("<div class='js--column-li'></div>");
+                    }
+                });
+            }
+        });
+    },
+    searchClose: function() {
+        $('.module-search_close').on('click', function() {
+            $('.module-search .module_container--inner').removeClass("js--revealed").attr('aria-hidden', 'true');
+            $('.module-search .module_title').removeClass('js--active');
+        });
+    },
+    unWrapLink: function(selector) {
+        $(selector).replaceWith(function() {
+            return $('<span class="link-removed">' + $(this).html() + '</span>');
+        });
+    },
+    //rewrinting the android tap function in order to work on ios devices
+    androidTap: function(selector) {
+        if (q4App.isMobile.Android() || q4App.isMobile.iOS()) {
+            $(selector).on('touch touchstart', 'li.has-children > a, li.has-children.no-link > span', function(e) {
+                var $this = $(this),
+                    $parent = $this.parent();
+                if (!$parent.hasClass('sfHover')) {
+                    e.preventDefault();
+                    $parent.siblings().removeClass('sfHover');
+                    $parent.addClass('sfHover');
+                }
+            });
+        }
+    },
+    //verify if pane--breadcrumb pane_inner is empty 
+    emptyPane: function() {
+        if ($('.pane--breadcrumb .pane_inner').is(':empty')) {
+            $('.pane--breadcrumb').addClass('js--no-border');
+        }
+    },
+    //addclass on sections page
+    addSectionClass: function() {
+        var sectionName = "Page" + $('.nav--main .level1 > li.selected > a').text().replace(/ /g, '');
+        $("." + sectionName).not('#litPageDiv').addClass('js--section');
+    },
+    customSelect: function() {
+        if (!$('select').hasClass('dropdown--multiple')) {
+            $(".layout_content").find('select').select2({
+                minimumResultsForSearch: Infinity
+            });
+        }
+    },
+    //appending q4 credits link to copyright
+    appendCredits: function() {
+        var creditsLink = $('.module-q4-credits-link').clone();
+        $(creditsLink).appendTo('.copyright_item--q4-credits').addClass('js--append');
+        $('.module-q4-credits').addClass('js--append js--hidden');
+    },
+    customMultipleSelect: function(selectContainer, placeholder) {
+        $(selectContainer).find('select').select2({
+            multiple: true,
+            placeholder: placeholder
+        });
+    },
+    changeAttr: function($elem, attr, value) {
+        $elem.attr(attr, value);
+    },
+    init: function() {
+        var app = this;
+
+        app.cleanUp();
+        app.submitOnEnter('.module-unsubscribe');
+        app.submitOnEnter('.module-search');
+        app.validateSubmit('.module-search');
+        app.mainNav();
+        app.superfish($('.nav--main .level1'), {
+            cssArrows: false,
+            delay: 0
+        });
+        app.mobileMenuToggle($('.layout'), '.pane--navigation', '.layout_toggle button');
+        app.cleanQuickLinks($('.module-links'));
+        app.copyright($('.copyright_year'));
+        app.reveal('.pane--footer .module-subscribe', '.module-subscribe_email', '.module-subscribe_mailing-list, .module_actions', true);
+        app.docTracking();
+        app.fancySignup();
+        app.resetDate(['.nav a[href*="s4.q4web.com"]:not([href$=".pdf"])']);
+        app.previewToolbar();
+        app.sections();
+        app.reveal('.pane--header .module-search', 'h2', '.module_container--inner', false);
+        app.reveal('.pane--left .module-subscribe', '.module-subscribe_email', '.module-subscribe_mailing-list', true);
+        app.searchClose();
+        app.unWrapLink('.pane--banner .module-breadcrumb a:last-of-type');
+        app.reveal('.module-side-widget', 'h2', '.module_container--inner', false);
+        app.emptyPane();
+        app.addSectionClass();
+        app.contrast.init();
+        app.customSelect();
+        app.appendCredits();
+    }
+});
+
+q4App.init();
+</script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

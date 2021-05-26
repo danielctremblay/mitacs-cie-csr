@@ -1,0 +1,995 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	Wheaton Precious Metals Corp. - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":430,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" /><meta content="AcAdeAwrk22LH5M5nbpsYzkpVsk6n1qhtTLmF3C3oC0" name="google-site-verification" /><meta content="default-src https: http: &#39;unsafe-inline&#39;; script-src &#39;unsafe-eval&#39; *.bugherd.com *.cloudfront.net *.jotform.ca *.jotform.io *.jotfor.ms *.jotform.com  *.newrelic.com *.bugherd.com *.q4cdn.com *.q4web.com *.amazonaws.com *.highcharts.com *.adobedtm.com *.google.com *.googletagmanager.com *.tagmanager.com *.nr-data.net *.herokuapp.com *.wheatonpm.com *.twitter.com *.twimg.com *.facebook.net *.googleadservices.com *.google-analytics.com &#39;unsafe-inline&#39; data: *.q4app.com" http-equiv="Content-Security-Policy" /><link type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/266470217/files/css/jquery-ui.css" />
+<link type="image/x-icon" rel="icon" media="" href="//s21.q4cdn.com/266470217/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s21.q4cdn.com/266470217/files/favicon.ico" />
+<link rel="stylesheet" media="print" href="//s21.q4cdn.com/266470217/files/css/print.css" />
+<link type="text/css" rel="stylesheet" media="all" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s21.q4cdn.com/266470217/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.wheatonpm.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/266470217/files/css/global.css?v=34156" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/266470217/files/css/client.css?v=33461" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s21.q4cdn.com/266470217/files/css/print.css" /><script type="text/javascript" src="//s21.q4cdn.com/266470217/files/js/q4.core.js"></script>
+<script type="text/javascript" src="//s21.q4cdn.com/266470217/files/js/q4.app.js"></script>
+<script type="text/javascript" src="//s21.q4cdn.com/266470217/files/js/icheck-min.js"></script>
+<script type="text/javascript" src="//s21.q4cdn.com/266470217/files/js/aos.js"></script>
+<script type="text/javascript" src="//s21.q4cdn.com/266470217/files/js/manual-GTM.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="https://www.wheatonpm.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<meta name="google-site-verification" content="AcAdeAwrk22LH5M5nbpsYzkpVsk6n1qhtTLmF3C3oC0" /><link rel="canonical" href="http://www.wheatonpm.com/Home" /></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="SectionHome PageDefault PageHome LayoutHomePageLayout Languageen-US page-home">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_Home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="LayoutDefault LayoutHomePage">
+	<div class="LayoutDefaultInner">
+		<div class="HeaderContainer">
+			<div class="PaneHeader" role="banner"><div class="Container"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="ModuleContent accSkipLink">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRL9HV3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a href="#maincontent">Skip to main content</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="ModuleContent mobile-logo">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <a href="/Home/default.aspx"><img src="//s21.q4cdn.com/266470217/files/design/WPM_TM_Horizontal_RGB-0617-min.png" alt="Wheaton Precious Metals" style="width: 208px; height: 35px;"></a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="ModuleContent mobile-toggle">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <i class="q4i-icon-menu"></i>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv6'><div id="_ctrl0_ctl54_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div style="visibility: hidden;position: absolute; left: -9999px">
+    <img src="//s21.q4cdn.com/266470217/files/design/2019/Silver.png">
+    <img src="//s21.q4cdn.com/266470217/files/design/2019/gold.png">
+</div>
+        </div>
+    </div>
+</div></span></span></div></div>
+			<div class="PaneNavigation"><div class="Container"><span class='NavigationPaneDiv4'><div id="_ctrl0_ctl15_divModuleContainer" class="ModuleContent logo col-d-first">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <a href="/Home/default.aspx"><img src="//s21.q4cdn.com/266470217/files/design/WPM_TM_Horizontal-0617.png" alt="Wheaton Precious Metals"></a>
+        </div>
+    </div>
+</div>
+</span><span class='NavigationPaneDiv5'><div id="_ctrl0_ctl18_divModuleContainer" class="ModuleContainer ModuleSearch search col-d-last" role="search">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="ModuleContainerInnerTop">
+                <div class="ModuleContentContainer">
+                    <span id="_ctrl0_ctl18_lblSearchText" class="SearchText"></span>
+                    <div class="search-container">
+                        <input name="_ctrl0$ctl18$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl18_txtSearchInput" class="SearchInput" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl18$btnSearch&#39;, &#39;&#39;); " />
+                        <input type="submit" name="_ctrl0$ctl18$btnSearch" value="" id="_ctrl0_ctl18_btnSearch" class="ModuleButton SearchButton" />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv6'>
+<div role="navigation" aria-label="Primary">
+    <i class="q4i-block-exit menu-close"></i>
+    <nav class="navbar-collapse collapse col-d-last"><ul class="level1">
+	<li class="has-children"><a href="https://www.wheatonpm.com/Company/company-profile/default.aspx">Company</a><ul class="level2">
+		<li><a href="https://www.wheatonpm.com/Company/company-profile/default.aspx">Company Profile</a></li><li><a href="https://www.wheatonpm.com/Company/management-and-directors/default.aspx">Management & Directors</a></li><li><a href="https://www.wheatonpm.com/Company/corporate-governance/default.aspx">Corporate Governance</a></li>
+	</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/streams/default.aspx">Streams</a><ul class="level2">
+		<li><a href="https://www.wheatonpm.com/streams/salobo/default.aspx">Salobo</a></li><li><a href="https://www.wheatonpm.com/streams/penasquito/default.aspx">Peñasquito</a></li><li><a href="https://www.wheatonpm.com/streams/antamina/default.aspx">Antamina</a></li><li><a href="https://www.wheatonpm.com/streams/constancia/default.aspx">Constancia</a></li><li><a href="https://www.wheatonpm.com/streams/Stillwater/default.aspx">Stillwater</a></li><li><a href="https://www.wheatonpm.com/streams/san-dimas/default.aspx">San Dimas</a></li><li><a href="https://www.wheatonpm.com/streams/sudbury/default.aspx">Sudbury</a></li><li><a href="https://www.wheatonpm.com/streams/zinkgruvan/default.aspx">Zinkgruvan</a></li><li><a href="https://www.wheatonpm.com/streams/yauliyacu/default.aspx">Yauliyacu</a></li><li><a href="https://www.wheatonpm.com/streams/Cozamin/default.aspx">Cozamin</a></li><li><a href="https://www.wheatonpm.com/streams/neves-corvo/default.aspx">Neves-Corvo</a></li><li><a href="https://www.wheatonpm.com/streams/pascua-lama/default.aspx">Pascua-Lama</a></li><li><a href="https://www.wheatonpm.com/streams/rosemont/default.aspx">Rosemont</a></li><li><a href="https://www.wheatonpm.com/streams/Voiseys-Bay/default.aspx">Voisey's Bay</a></li><li><a href="https://www.wheatonpm.com/streams/other/default.aspx">Other Streams</a></li>
+	</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/Investors/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.wheatonpm.com/Investors/financials/default.aspx">Financials</a></li><li><a href="https://www.wheatonpm.com/Investors/Key-Documents/default.aspx">Key Documents</a></li><li><a href="https://apps.indigotools.com/ir/iac/?ticker=wpm&amp;exchange=NYSE" target="_blank">Interactive Analyst Center</a></li><li><a href="https://www.wheatonpm.com/Investors/reserves-and-resources/default.aspx">Reserves & Resources</a></li><li><a href="https://www.wheatonpm.com/Investors/events-and-webcasts/default.aspx">Events & Webcasts</a></li><li><a href="https://www.wheatonpm.com/Investors/presentations/default.aspx">Presentations</a></li><li><a href="https://www.wheatonpm.com/Investors/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.wheatonpm.com/Investors/stock-information/default.aspx">Stock Information</a></li><li><a href="https://www.wheatonpm.com/Investors/shares-and-warrants/default.aspx">Shares & Warrants</a></li><li><a href="https://www.wheatonpm.com/Investors/dividends/default.aspx">Dividends</a></li><li><a href="https://www.wheatonpm.com/Investors/annual-general-meeting/default.aspx">Annual General Meeting</a></li><li><a href="https://www.wheatonpm.com/Investors/regulatory-filings/default.aspx">Regulatory Filings</a></li><li><a href="https://www.wheatonpm.com/Investors/Metals--Markets-Blog/default.aspx">Metals & Markets Blog</a></li><li><a href="https://www.wheatonpm.com/Investors/LSE-Listing/default.aspx">LSE Listing</a></li>
+	</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/responsibility/approach/default.aspx">Responsibility</a><ul class="level2">
+		<li class="has-children"><a href="https://www.wheatonpm.com/responsibility/approach/default.aspx">Approach</a><ul class="level3">
+			<li><a href="https://www.wheatonpm.com/responsibility/approach/ESG-Policies--Disclosure/default.aspx">ESG Policies & Reports</a></li>
+		</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/responsibility/community-investment/overview/default.aspx">Community Investment</a><ul class="level3">
+			<li><a href="https://www.wheatonpm.com/responsibility/community-investment/partner-csr-program/default.aspx">Partner CSR Program</a></li><li><a href="https://www.wheatonpm.com/responsibility/community-investment/local-csr-program/default.aspx">Local CSR Program</a></li>
+		</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/responsibility/partners/overview/default.aspx">Partners</a><ul class="level3">
+			<li><a href="https://www.wheatonpm.com/responsibility/partners/esg-due-diligence-process/default.aspx">ESG Due Diligence Process</a></li><li><a href="https://www.wheatonpm.com/responsibility/partners/third-party-mine-operators/default.aspx">Third-Party Mine Operators</a></li><li><a href="https://www.wheatonpm.com/responsibility/partners/Tailings-Management/default.aspx">Tailings Management</a></li>
+		</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/responsibility/people/overview/default.aspx">People</a><ul class="level3">
+			<li><a href="https://www.wheatonpm.com/responsibility/people/health-and-safety/default.aspx">Health & Safety</a></li><li><a href="https://www.wheatonpm.com/responsibility/people/diversity-inclusion-and-discrimination/default.aspx">Diversity, Inclusion and Discrimination</a></li>
+		</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/responsibility/environment-and-sustainability/overview/default.aspx">Environment & Sustainability </a><ul class="level3">
+			<li><a href="https://www.wheatonpm.com/responsibility/environment-and-sustainability/carbon-neutral-company/default.aspx">Carbon Neutral Company</a></li><li><a href="https://www.wheatonpm.com/responsibility/environment-and-sustainability/conservation/default.aspx">Conservation  </a></li>
+		</ul></li><li><a href="/Company/corporate-governance/default.aspx">Governance</a></li>
+	</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/news/default.aspx">News</a><ul class="level2">
+		<li><a href="https://www.wheatonpm.com/news/default.aspx">Press Releases</a></li>
+	</ul></li><li class="has-children"><a href="https://www.wheatonpm.com/Contact/default.aspx">Contact</a><ul class="level2">
+		<li><a href="https://www.wheatonpm.com/Contact/request-info/default.aspx">Request Info</a></li><li><a href="https://www.wheatonpm.com/Contact/EmailAlert/default.aspx">Email Alerts</a></li>
+	</ul></li>
+</ul></nav>
+</div></span></div></div>
+			<div class="PaneHeader2"><span class='HeaderPane2Div1'><div id="_ctrl0_ctl39_divModuleContainer" class="ModuleContent module-mobilebanner">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            
+        </div>
+    </div>
+</div>
+</span><span class='HeaderPane2Div2'><div id="_ctrl0_ctl42_divModuleContainer" class="ModuleContent home-banner--text module-banner_txt">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="Container">
+    <div class="banner-text-wrap video_link">
+        <h1>Value <br>through <br> streaming.</h1>
+        <p>Wheaton Precious Metals is one of the world’s largest precious metals streaming companies. We offer investors cost predictability, direct leverage to increasing precious metals prices and a high-quality asset base.</p>
+        <a href="//s21.q4cdn.com/266470217/files/doc_financials/2020/sr/2020-Sustainability-Report-(FINAL-WEB).pdf" target="_blank" class="btn btn-silver responsibility--link"></a>
+        <p>&nbsp;</p>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+</span></div>
+		</div>
+		<div class="PaneContentInner">
+			<main id="maincontent" tabindex="-1">
+				<div class="PaneBreadcrumb"></div>
+				<div class="PaneLeft"><span class='LeftPaneDiv'></span></div>
+				<div class="PaneContent"><span class='ContentPaneDiv'><span class='ContentPaneDiv3'><div id="_ctrl0_ctl45_divModuleContainer" class="ModuleContent three-col-section">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="Container">
+    <div class="grid-no-gutter">
+        <div class="col col-1-of-3 col-md-1-of-3 col-sm-1-of-1 module-box module-news">
+            <h2 class="title"><span>Latest</span>News</h2>
+            <div class="latest-news"></div>
+            <a href="/news/default.aspx" class="btn btn-glod">See All</a>
+        </div>
+        <div class="col col-1-of-3 col-md-1-of-3 col-sm-1-of-1 module-box module-events">
+            <h2 class="title"><span>Events &</span>Webcasts</h2>
+            <div class="events-webcasts"></div>
+            <a href="/Investors/events-and-webcasts/default.aspx" class="btn btn-glod">Events</a>
+        </div>
+        <div class="col col-1-of-3 col-md-1-of-3 col-sm-1-of-1 module-box module-presentations">
+            <h2 class="title"><span>Latest</span>Presentation</h2>
+            <div class="latest-presentations"></div>
+            <a href="/Investors/presentations/default.aspx" class="btn btn-glod">Presentations</a>
+        </div>
+    </div>
+</div>
+<script src="//widgets.q4app.com/widgets/q4.api.1.12.0.min.js"></script>
+<script src="//widgets.q4app.com/widgets/requireslib/moment.min.js"></script>
+<script>
+    /* Latest News */
+    $('.latest-news').news({
+        dateFormat: {
+            date: 'MMMM D, YYYY'
+        },
+        fetchAllYears: true,
+        useMoment: true,
+        limit: 3,
+        loadingMessage: '<div class="loader"><img src="//s21.q4cdn.com/266470217/files/images/loader.gif" alt="Loading..."></div>',
+        template: (
+            '<div class="itemContainer">' +
+                '<ul class="latest-news-list">' +
+                    '{{#items}}' +
+                        '<li>' +
+                            '<p class="news-date">{{date.date}}</p>' +
+                            '<div class="news-title-wrap">' +
+                                '<a href="{{url}}" class="news-link">' +
+                                    '<span class="news-title">{{title}}</span>' +
+                                '</a>' +
+                            '</div>' +
+                        '</li>' +
+                    '{{/items}}' +
+                    '{{^items}}' +
+                       '<li class="no-items">No items found</li>' +
+                    '{{/items}}' +
+                '</ul>' +
+            '</div>'
+        )
+    });
+
+    /* Events & Webcasts */
+    $('.events-webcasts').events({
+        dateFormat: {
+            date: 'MMMM D, YYYY'
+        },
+        useMoment: true,
+        limit: 3,
+        fetchAllYears: true,
+        showPast: false,
+        showFuture: true,
+        sortAscending: true,
+        loadingMessage: '<div class="loader"><img src="//s21.q4cdn.com/266470217/files/images/loader.gif" alt="Loading..."></div>',
+        template: (
+            '<div class="eventRow">' +
+                '<ul class="latest-event-list">' +
+                    '{{#items}}' +
+                        '<li>' +
+                            '<p class="event-date">{{date.date}}</p>' +
+                            '<a href="{{url}}">{{title}}</a>' +
+                        '</li>' +
+                    '{{/items}}' +
+                    '{{^items}}' +
+                       '<li class="no-items">No items found</li>' +
+                    '{{/items}}' +
+                '</ul>' +
+            '</div>'
+        ),
+       // complete: function(a) {$('.eventRow ul').append($('.eventRow ul').find('li').get().reverse());}
+        
+    });
+
+    /* Latest Presentation */
+    $('.latest-presentations').presentations({
+        fetchAllYears: true,
+        limit:1,
+        forceStartYear: true,
+        startYear: new Date().getFullYear(),
+        tags: ['home'],
+        loadingMessage: '<div class="loader"><img src="//s21.q4cdn.com/266470217/files/images/loader.gif" alt="Loading..."></div>',
+        template: (
+            '<div class="presentationRow">' +
+                '{{#items}}' +
+                    '<div class="lists">' +
+                        '<div class="presentation-title-wrap">' +
+                            '<a href="{{docUrl}}" class="presentation-link">' +
+                                '<span class="presentation-title">{{title}}</span>' +
+                            '</a>' +
+                        '</div>' +
+                        '<div>' +
+                            '<a href="{{docUrl}}" target="_blank">View {{docType}} ({{docSize}})</a>' +
+                        '</div>' +
+                    '</div>' +
+                '{{/items}}' +
+                '{{^items}}' +
+                    '<div class="no-items">No items found</div>' +
+                '{{/items}}' +
+            '</div>'
+        ),
+        // beforeRenderItems: function(e, tpl) {
+        //   console.log(tpl);
+        // },
+        complete: function () {
+            $('.latest-presentations .presentationRow').slick({
+                dots: true,
+                arrows: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                speed: 1000
+            });
+        }
+    });
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv4'><div id="_ctrl0_ctl48_divModuleContainer" class="ModuleContent module-featured">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="Container">
+    <div class="grid-no-gutter">
+        <div class="col col-4-of-12 col-md-4-of-12 col-sm-1-of-1 col-am finance-title">
+            <h2><span>Featured</span> Documents</h2>
+        </div>
+        <div class="col col-8-of-12 col-md-8-of-12 col-sm-1-of-1 finance-documents">
+            <div class="inner-wrapper">
+                <div class="finance-result"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//widgets.q4app.com/widgets/requireslib/moment.min.js"></script>
+<script>
+/* Financial Script Start */
+$(function () {
+    $('.finance-result').financials({
+        reportTypes: ['First Quarter', 'Second Quarter', 'Third Quarter', 'Fourth Quarter', 'Annual Report', 'Supplemental Report'],
+        showAllYears: true,
+        limit: 4,
+        tags: ['featured'],
+        docCategories: ["Financial Report"],
+        loadingMessage: '<img src="//s21.q4cdn.com/266470217/files/images/loader.gif" alt="Loading Image">',
+        template: (
+            '<div class="q4-financial-container quarterly">' +
+                '<ul class="q4-items-container grid">' +
+                    '{{#items}}' +
+                        '<li class="col col-1-of-4 col-md-1-of-4 col-sm-1-of-2">' +
+                            '{{#docs}}' +
+                                '<div class="blog-thumb">' +
+                                    '<a href="{{docUrl}}" target="_blank">' +
+                                        '<img class="pic" src="{{docThumb}}">' +
+                                    '</a>' +
+                                    '<a class="annual-report be-pdf" href="{{docUrl}}" target="_blank">' +
+                                        '<span class="doc-title year" style="width:48%">{{docTitle}}</span>' +
+                                    '</a>' +
+                                '</div>' +
+                            '{{/docs}}' +
+                        '</li>' +
+                    '{{/items}}' +
+                    '{{^items}}' +
+                        '<span class="noitemfound"> No items found.</span>' +
+                    '{{/items}}' +
+                '</ul>' +
+            '</div>'
+        )
+    });
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv5'><div id="_ctrl0_ctl51_divModuleContainer" class="ModuleContent module-stock-info">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="Container">
+    <div class="grid-no-gutter">
+        <div class="col col-1-of-2 col-md-1-of-2 col-sm-1-of-1 stock-title">
+            <h2><span>Stock</span> Information</h2>
+        </div>
+        <div class="col col-1-of-2 col-md-1-of-2 col-sm-1-of-1 stock-info">
+            <div class="inner-wrapper">
+                <div class="stockQuotes0"></div>
+                <div class="stockQuotes1"></div>
+                <div class="stockQuotes2"></div>
+                <div class="stockQuotes3 title-head"></div>
+                <div class="stockQuotes4 title-head"></div>
+                <p class="price-delay">Pricing delayed 20 minutes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+</span></span></div>
+				<div class="PaneRight"><span class='RightPaneDiv'></span></div>
+			</main>
+		</div>
+		<div class="FooterContainer">
+			<div class="PaneFooter" role="contentinfo"><span class='FooterPaneDiv'><span class='FooterPaneDiv10'><div id="_ctrl0_ctl24_divModuleContainer" class="ModuleContent module-footer">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="Container">
+    <div class="grid-no-gutter">
+        <div class="col col-1-of-4 col-md-1-of-1 module-footer_logo">
+            <a href="/Home/default.aspx"><img src="//s21.q4cdn.com/266470217/files/design/footer-logo.png" alt="Wheaton Precious Metals" /></a>
+        </div>
+        <div class="col col-1-of-4 col-md-1-of-2 module-footer_navigation">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="/Company/company-profile/default.aspx">Company</a></li>
+                <li><a href="/streams/default.aspx">Streams</a></li>
+                <li><a href="/Investors/default.aspx">Investors</a></li>
+                <li><a href="/responsibility/approach/default.aspx">Responsibility</a></li>
+                <li><a href="/news/default.aspx">News</a></li>
+                <li><a href="/Contact/default.aspx">Contact</a></li>
+				<li><a href="/legal/default.aspx">Legal</a></li>
+				<li><a href="/Site-Map/default.aspx">Site Map</a></li>
+				<li class="archive event-archive"><a href="/Investors/events-and-webcasts/Events-Archive/default.aspx">Archive</a></li>
+				<li class="archive present-archive"><a href="/Investors/presentations/Presentations-Archive/default.aspx">Archive</a></li>
+            </ul>
+        </div>
+        <div class="col col-1-of-4 col-md-1-of-2 module-footer_social-links">
+            <h4>Connect With Us</h4>
+            <ul>
+                <li><a class="twitter q4i-icon-twitter" href="//twitter.com/Wheaton_PM" target="_blank"></a></li>
+                <li><a class="facebook q4i-icon-facebook" href="//www.facebook.com/WheatonPM/" target="_blank"></a></li>
+                <li><a class="linkedin q4i-icon-linkedIn" href="https://www.linkedin.com/company/wheatonpm/" target="_blank"></a></li>
+            </ul>
+        </div>
+        <div class="col col-1-of-4 col-md-1-of-1 module-footer_copy-right">
+            <p class="Copyright"><span>© </span> <span class="year"></span> Wheaton Precious Metals Corp</p>
+        </div>
+    </div>
+	<div id="Disclaimer">
+		<p><strong>Notice on third party links</strong></p>
+		<p>You are now leaving the Wheaton Precious Metals' website to go to an external third-party website.</p>
+		<p>By selecting this link, you will be transferred to a website that is not affiliated with, or under the ownership or control of the Wheaton Precious Metals' site. Proceed at your own risk. We are not responsible or liable for the operation, content or policies of the website to which you are linking, and do not endorse, control, supervise or review its policies, assumptions, content or forward-looking statements. You should address any concerns or questions you may have regarding that website to the site Administrator or Webmaster of that website.</p>
+		<!--company/management-and-directors/default.aspx-->
+		<p>If you are visiting a social media website, please refer to our <a href="/Legal/Social-Media/default.aspx">Social Media Engagement Guidelines.</a></p>
+		<ul class="disclaimerButtons">
+			<li><a target="_blank" id="proceed" href="#" class="btn-primary">Click here to proceed to third party website</a></li>
+			<li><a target="_blank" id="back" href="#" class="btn-primary">Go Back</a></li>
+		</ul>
+	</div>
+</div>
+
+<script>
+    $('.Copyright span.year').html( new Date().getFullYear() );
+</script>
+        </div>
+    </div>
+</div></span><span class='FooterPaneDiv14'><div id="_ctrl0_ctl36_divModuleContainer" class="ModuleContent wheaton-cookie-disclaimer">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <style>
+#popupDiv {
+    display: none;
+    margin: 0px;
+    opacity: 0.9;
+    position: fixed;
+    border-width: 0px;
+    border-style: solid solid none;
+    border-image-source: none;
+    bottom: 0px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2147483647;
+    color: #fefefe;
+    background: none 0% 0% repeat scroll #8b8b8b;
+}
+#popupDiv img {
+    float: right;
+    cursor: pointer;
+    margin: 8px 8px 7px 7px;
+    opacity: 0.75;
+    width: 20px;
+    height: 20px;
+}
+#popupDiv #cookie-text {
+    margin: 15px 35px;
+    text-align: left;
+    font: 12pt inherit;
+    display: inline-block;
+}
+#popupDiv #cookie-text a {
+    color: #ffffff;
+    font-weight: bold;
+}
+    
+.cookie-accept {
+    float: right;
+    display: inline;
+    margin: 12px 26px;
+    margin: 15px 35px;
+    text-align: right;
+    font: 12pt inherit;
+    display: inline-block;
+    cursor: pointer;
+}
+    
+.cookie-accept a {
+     font: 12pt inherit;
+    color: white;
+}
+</style>
+
+<script type="text/javascript" src="//s21.q4cdn.com/266470217/files/js/jquery-cookie.js"></script>
+
+
+<div id="cookie-notice" style="">
+    <div id="popupDiv" style="display: block;"><div class="cookie-accept"><a id="cookie-close">ACCEPT</a></div> <div id="cookie-text">We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies. <a href="/legal/default.aspx" target="_blank">Learn More</a></div> 
+       
+    </div>
+  </div>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+
+    // check for cookie
+    var disclaimer = $.cookie('disclaimer'),
+        date = new Date(),
+        minutes = 1440,
+        onemonth = 30;
+
+    date.setTime(date.getTime() + (minutes * 60 * 1000));
+
+    $('a#cookie-close').click(function() {
+        $.cookie("disclaimer", "agree", {
+            path: '/',
+            expires: date
+        });
+      $('div#cookie-notice').hide()
+    });
+
+    if (disclaimer === undefined) {
+        $('div#cookie-notice').show()
+    } else {
+
+        $('div#cookie-notice').hide()
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='FooterPaneDiv7'><div id="_ctrl0_ctl57_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <style>
+@media screen and (min-width:769px) {
+    .banner-text-wrap p {
+         padding-right: 4em;
+	    }
+    }
+</style>
+        </div>
+    </div>
+</div></span></span></div>
+			<div class="PaneFooter2"><span class='FooterPane2Div11'><div id="_ctrl0_ctl27_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <script src="//widgets.q4app.com/widgets/q4.stockQuote.1.0.1.min.js"></script>
+<script>
+    var stocks = [
+        {
+            exchange: 'NYSE',
+            symbol: 'WPM',
+            selector: '.stockQuotes0',
+        },
+        {
+            exchange: 'TSE',
+            symbol: 'WPM.CA',
+            selector: '.stockQuotes1'
+        },
+        {
+            exchange: 'LSE',
+            symbol: 'WPM',
+            selector: '.stockQuotes2'
+        },
+        {
+            exchange: 'USD',
+            symbol: 'XAG',
+            selector: '.stockQuotes4',
+            title: 'SILVER (SPOT)'
+        },
+        {
+            exchange: 'USD',
+            symbol: 'XAU',
+            selector: '.stockQuotes3',
+            title: 'GOLD (SPOT)'
+        }
+    ];
+
+function createQuote(idx, stock) {
+    
+    $(stock.selector).stockQuote({
+        apiKey: '6BC986E4B66F4F83A451BA6761F9935E',
+        symbol: stock.symbol,
+        exchange: stock.exchange,
+        stockTpl: (
+            '{{#.}}' +
+                '<span class="title">{{title}}</span>' +
+                '<span class="price"><i>{{cursymbol}}</i>{{tradePrice}}</span>' +
+                '<span class="{{uod}} change">' +
+                    '<span class="change-value">{{change}}</span>' +
+                '</span>' +
+                '<span class="{{uod}} perchange">{{percChange}}%</span>' +
+            '{{/.}}'
+        ),
+        beforeRender: function(ev, data) {
+            
+            $.each(data.items, function (itemIdx, item) {
+
+                if (item.exchange == 'LSE'){
+                    item.cursymbol = "£";
+                } else {
+                    item.cursymbol = "$";
+                }
+
+                if (stock.hasOwnProperty('title')) {
+                    item.title = stock.title;
+                } else {
+                    item.title = item.exchange + ': ' + item.symbol;
+                }
+            });
+        }
+    });
+}
+
+$.each(stocks, createQuote);
+</script>
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div13'><div id="_ctrl0_ctl33_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <script type="text/javascript">
+    var q4App = $.extend(q4Defaults, {
+        options: {
+            headerOffset: function () {
+                return 10;
+            },
+            mailingListConfig: {
+                tpl: (
+                    '<div id="SubscriberConfirmation" class="module module-subscribe module-subscribe--fancy module-singup bottom-space">' +
+                    '   <div class="module_container module_container--outer">' +
+                    '       <div class="module_container module_container--inner">' +
+                    '           <p class="module_message module_message--success"></p>' +
+                    '       </div>' +
+                    '   </div>' +
+                    '</div>'
+                ),
+                fancyOpts: {},
+                hideOnConfirmation: '.subscribe-text',
+                submitText: 'Submit' //this will change the text of the submit button on the on the mailing List
+            },
+            mailingListSignupCls: '.module-subscribe--fancy',
+            errorMessage: 'The following errors must be corrected',
+            requiredText: 'is required',
+            invalidText: 'is invalid',
+            errorTpl: (
+                '<p class="module_message module_message--error">{{errorMessage}}</p>' +
+                '<ul>' +
+                '   {{#errors}}' +
+                '       <li>{{name}} {{message}}</li>' +
+                '   {{/errors}}' +
+                '</ul>'
+            )
+        },
+        init: function () {
+            var app = this;
+            app.cleanUp();
+            app.unWrapLink('a.StockPrice');
+            app.submitOnEnter('.ModuleSearch');
+            app.submitOnEnter('.MailingListUnsubscribeContainer');
+            app.validateSubmit('.ModuleSearch');
+            app.icheckBox();
+            app.accessibleNav($('.navbar-collapse'), 'level1');
+            app.onMenuToggle();
+            app.menuTrigger();
+            app.searchCntrl();
+            app.socialLink();
+            app.onMenuExit($('.PaneNavigation .menu-close'));
+            app.reveal('.PaneHeader2', '.module-signup-banner a', '.investor-email-alerts', false);
+            $('.PreviewToolBar').previewToolbar();
+            
+            // $('.MailingListSignupContainer').captcha({
+            //     invalidCaptcha: 'Please provide the code'
+            // });
+            // $(window).load(function () {
+            //     app.confirmationScroll($('.MailingListSignupContainer'), 'strong');
+            // });
+            app.fancySignup();
+            
+            $('.navbar-collapse li.has-children').hover(
+                function() {
+                    $(this).find('>ul').show();
+                },
+                function() {
+                    $(this).find('>ul').hide();
+                }
+            );
+        },
+
+        /*Reveal*/
+        reveal: function(container, trigger, panel, once) {
+            $(trigger).attr('tabindex', '0');
+            $(panel).attr('aria-hidden', 'true');
+            if (once) {
+                $(container).one('click keypress', trigger, function(e) {
+                    if (e.keyCode == 13 || e.type == 'click') {
+                        if ($(trigger).is('a')) e.preventDefault();
+                        $(this).toggleClass('js--active').closest(container).find(panel).toggleClass('js--revealed');
+                        $(panel).attr('aria-hidden', function(i, attr) {
+                            return attr == 'true' ? 'false' : 'true';
+                        });
+                    }
+                });
+            } else {
+                $(container).on('click keypress', trigger, function(e) {
+                    if (e.keyCode == 13 || e.type == 'click') {
+                        if ($(trigger).is('a')) e.preventDefault();
+                        $(this).toggleClass('js--active').closest(container).find(panel).toggleClass('js--revealed');
+                        $(panel).attr('aria-hidden', function(i, attr) {
+                            return attr == 'true' ? 'false' : 'true';
+                        });
+                    }
+                });
+            }
+        },
+        /* Show the dropdown when first click in Ipad */
+        menuTrigger: function () {
+            if ($(window).width() == '1024') {
+                $('.level1 li.has-children').one('click', function (e) {
+                    e.preventDefault();
+                    $('li.has-children').removeClass("focused");
+                    $(this).parent().addClass("focused");
+                });
+            }
+        },
+
+        socialLink: function () {
+            $('.module-footer_social-links a, a.external-link').each(function () {
+                if ($(this)[0].href.length > 0) {
+                    if ($(this)[0].href.indexOf('silverwheaton') == -1 && $(this)[0].href.indexOf('.q4cdn.com') == -1) {
+                        $(this).on('click', function (e) {
+                            $('#proceed').attr('href', $(this).attr('href'));
+                            e.preventDefault();
+                            e.stopPropagation(); // avoid conflict with document tracking script
+                            $.fancybox({
+                                href: '#Disclaimer',
+                                maxWidth: 1200,
+                                maxHeight: 600,
+                                padding: 20
+                            });
+                        });
+                    }
+                }
+            });
+            $('a.external-link-pdf-except').each(function () {
+                if ($(this)[0].href.length > 0) {
+                    if ($(this)[0].href.indexOf('silverwheaton') == -1) {
+                        $(this).on('click', function (e) {
+                            $('#proceed').attr('href', $(this).attr('href'));
+                            e.preventDefault();
+                            e.stopPropagation(); // avoid conflict with document tracking script
+                            $.fancybox({
+                                href: '#Disclaimer',
+                                maxWidth: 1200,
+                                maxHeight: 600,
+                                padding: 20
+                            });
+                        });
+                    }
+                }
+            });
+
+            $('#back').click(function (event) {
+                event.preventDefault();
+                $.fancybox.close();
+            });
+
+        },
+
+        searchCntrl: function () {
+            /* Display Search while clicking the search text in Desktop view */
+            $('.SearchText').click(function () {
+                $('.search-container').slideToggle(500);
+                $(this).toggleClass('close-toggle');
+            });
+            $('.PaneBreadcrumb .Breadcrumb .ModuleInnerContainer a').click(function () {
+                return false;
+            });
+        },
+
+        icheckBox: function () {
+            /* Custom Checkbox */
+            $('.LayoutDefault input[type="checkbox"]').iCheck();
+        },
+
+        _mailingListValidation: function ($el) {
+            var inst = this,
+                errors = [];
+
+            $el.find('.js--invalid').removeClass('js--invalid');
+
+            $el.find('.module_required').each(function () {
+                var $item = $(this).closest('.module-subscribe_table-input'),
+                    message = inst.options.requiredText,
+                    field = $item.find('label:first').text(),
+                    validation = true;
+
+                // Does the input exist?
+                if ($item.find('input').length) {
+                    if ($item.hasClass('module-subscribe_email')) {
+                        // Does the email address contain text?
+                        if (!$item.find('input').val().length) {
+                            validation = false;
+                        }
+                        // Is the email address valid?
+                        else if (!inst.isValidEmailAddress($item.find('input').val())) {
+                            validation = false;
+                            message = inst.options.invalidText;
+                        }
+                    }
+                    // Does the input contain text?
+                    else if (!$item.find('input').val().length) {
+                        validation = false;
+                    }
+                } else if ($item.find('select').length) {
+                    if (!$item.find('select option:selected').index()) {
+                        validation = false;
+                    }
+                } else {
+                    if (!$item.closest('table').find('input[type="checkbox"]:checked').length) {
+                        $item = $item.next();
+                        validation = false;
+                    }
+                }
+
+                if (!validation) {
+                    $item.addClass('js--invalid');
+                    errors.push({
+                        name: field,
+                        message: message
+                    });
+                }
+            });
+
+            if (errors.length) {
+                $el.find('.module_error-container').html(Mustache.render(inst.options.errorTpl, {
+                    errors: errors,
+                    errorMessage: inst.options.errorMessage
+                })).show();
+            } else {
+                $el.find('.module_error-container').html('');
+
+            }
+
+            return errors;
+        },
+        
+        scrollTo: function ($el, duration) {
+            var inst = this,
+                d = duration !== undefined && !isNaN(duration) ? duration : inst.options.scrollSpeed;
+            if ($el.length) {
+                if (history) {
+                    history.scrollRestoration = 'manual';
+                }
+
+                $('html, body').animate({
+                    scrollTop: $el.eq(0).offset().top - inst.options.headerOffset()
+                }, d, function () {
+                    if ($(window).scrollTop() != $el.eq(0).offset().top - inst.options.headerOffset()) {
+                        $('html, body').animate({
+                            scrollTop: $el.eq(0).offset().top - inst.options.headerOffset()
+                        }, d);
+                    }
+                });
+            }
+        },
+
+        isValidEmailAddress: function (emailAddress) {
+            var pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
+            return pattern.test(emailAddress);
+        },
+        
+        fancySignup: function() {
+            var inst = this,
+                validationLock = true,
+                signup = inst.options.mailingListSignupCls,
+                $signup = $(signup),
+                confirm = 'div[id*="SubscriberConfirmation"]',
+                $confirm = $('div[id*="SubscriberConfirmation"]'), // jshint ignore:line
+                footerSuccess = inst.options.mailingListConfig.location + ' ' + confirm + ' .module_message--success',
+                $footerSuccess = $(footerSuccess);
+
+            // Subscriber Confirmation fix
+            if ($confirm.is(':visible')) {
+                if ($confirm.filter(':visible').closest(inst.options.mailingListConfig.location).length) {
+                    var successText = $confirm.filter(':visible').closest(inst.options.mailingListConfig.location).find('.module_message--success').text();
+                    $confirm.filter(':visible').parent().html(inst.options.mailingListConfig.tpl).find('.module_message--success').html(successText);
+                }
+                inst.scrollTo($('div[id*="SubscriberConfirmation"]').filter(':visible'), 0);
+                if (!$footerSuccess.length) {
+                    $('.module-unsubscribe,' + inst.options.mailingListConfig.hideOnConfirmation).addClass('js--hidden');
+                }
+            }
+
+            if (!$signup.length) {
+                return;
+            }
+
+            $signup.each(function() {
+                var $this = $(this);
+
+                // If a confirmation or error message is visible on page load, scroll to the module
+                if ($this.find('input.module_input').length && $this.find('input.module_input').val().length) {
+                    inst.scrollTo($this, 0);
+                }
+                // Create a second submit button to be displayed inside fancybox. Replace input type submit with button
+                var $submit = $this.find('input[type="submit"]');
+                $submit.addClass('js--hidden');
+                $submit[0].outerHTML = $submit[0].outerHTML.replace(/^<input/, '<button') + '<span class="button_text">' + $submit[0].value + '</span></button>';
+                $this.find('.module_actions').append('<button type="submit" class="button module-subscribe_submit-button module-subscribe_submit-button--fancy"><span class="button_text">' + inst.options.mailingListConfig.submitText + '</span></button>');
+
+                $this.on('click', '.module-subscribe_submit-button--fancy', function(e) {
+                    e.preventDefault();
+                    validationLock = false;
+
+                    var $parent = $(this).closest(signup),
+                        errors = inst._mailingListValidation($parent);
+
+                    if (!errors.length) {
+                        $(this).closest(signup).find('.module_actions [type="submit"]').not(this).trigger('click');
+                        return false;
+                    } else {
+                        inst.scrollTo($this.find('.module_error-container'), 0);
+                    }
+
+                    return false;
+                });
+
+                // Run validation on change
+                $this.find('input, select').on('change', function() {
+                    if (!validationLock) {
+                        inst._mailingListValidation($this);
+                    }
+                });
+
+                // Validate submit on enter
+                $this.find('input[type="text"], input[type="email"]').on('keydown', function(e) {
+                    if (e.keyCode == 13) {
+                        e.preventDefault();
+                        $(this).closest(signup).find('.module_actions [type="submit"]').trigger('click');
+                        return false;
+                    }
+                });
+            });
+        }
+        
+    });
+    q4App.init();
+    
+    $(document).ready(function(){
+        $('a.fancybox-v2').fancybox();
+    });
+</script>
+        </div>
+    </div>
+</div></span></div>
+			<div class="PaneQ4Footer"><span class='Q4FooterDiv12'>
+<div class="Q4FooterContainer">
+    <div class="ModuleOuterContainer">
+        <div class="ModuleInnerContainer">
+            <a href="http://q4inc.com/Powered-by-Q4/" id="_ctrl0_ctl30_hrefWebsiteRecording" target="_blank">
+                <span id="_ctrl0_ctl30_lblWebsiteRecording" class="WebsiteRecording">Powered By Q4 Inc.</span> 
+                <span id="_ctrl0_ctl30_lblVersion" class="Version">5.56.0.1</span>
+                <span class="sr-only">(opens in new window)</span>
+            </a>
+        </div>
+    </div>
+</div></span></div>
+		</div>
+	</div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1"><meta name="mobile-web-app-capable" content="yes"><title>Fire & Flower</title><link rel="shortcut icon" href="/favicon.ico"/><meta name="description" content="Fire & Flower, not your typical cannabis dispensary. Order flower, oil, vapes, concentrates & edibles online & pickup in store, or choose home delivery." data-react-helmet="true"/><meta property="og:title" content="Fire & Flower" data-react-helmet="true"/><meta property="og:description" content="Fire & Flower, not your typical cannabis dispensary. Order flower, oil, vapes, concentrates & edibles online & pickup in store, or choose home delivery." data-react-helmet="true"/><meta property="og:image" content="$OG_IMAGE" data-react-helmet="true"/><meta property="og:image:secure_url" content="$OG_IMG_SECURE_URL" data-react-helmet="true"/><meta property="og:image:width" content="$OG_IMG_WIDTH" data-react-helmet="true"/><meta property="og:image:height" content="$OG_IMG_HEIGHT" data-react-helmet="true"/><meta property="og:image:type" content="$OG_IMG_TYPE" data-react-helmet="true"/><meta property="og:image:alt" content="$OG_IMG_ALT" data-react-helmet="true"/><meta property="og:url" content="$OG_URL" data-react-helmet="true"/><meta property="og:type" content="$OG_TYPE" data-react-helmet="true"/></head><body><script>window.prerenderReady=!1</script><div id="app"></div><script>if (!location.host.includes('fireandflower.com') && !location.host.includes('localhost')) {
+        var meta = document.createElement('meta');
+        meta.setAttribute('name', 'robots');
+        meta.setAttribute('content', 'NOINDEX, NOFOLLOW');
+        document.getElementsByTagName('head')[0].appendChild(meta);
+        (function() { var s = document.createElement("script"); s.type = "text/javascript"; s.async = true; s.src = '//api.usersnap.com/load/6d1b2e18-3d65-497a-9617-e75498ecb6a1.js';
+          var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); })();
+      }
+      if (location.host.includes('fireandflower.com')) {
+        const link = document.createElement('link')
+        link.setAttribute('rel', 'stylesheet')
+        link.setAttribute('href', '//hello.myfonts.net/count/37550d')
+        setTimeout(() => {
+          document.head.appendChild(link)
+        }, 1000)
+      }
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister()
+          } 
+        })
+      }</script><script>// Fix iOS issue where site zooms in on active form fields
+      // Checks for iOS device - sets max scale on viewport tag to prevent zoom
+      const scaleVP = () => {
+        const el = document.querySelector('meta[name=viewport]')
+        if (el !== null) {
+          let content = el.getAttribute('content')
+          let re = /maximum\-scale=[0-9\.]+/g
+          if (re.test(content)) {
+            content = content.replace(re, 'maximum-scale=1.0')
+          } else {
+            content = [content, 'maximum-scale=1.0'].join(', ')
+          }
+          el.setAttribute('content', content)
+        }
+      }
+      const checkIsIOS = () => /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+      if (checkIsIOS()) {
+        scaleVP()
+      }</script><script type="text/javascript" src="/runtime~main.c378b70c40dbc0b3ce35.js"></script><script type="text/javascript" src="/vendors~main.fbadddd3c4994ec16042.chunk.js"></script><script type="text/javascript" src="/main.d1ba0a647163859f569f.chunk.js"></script></body></html>

@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"d753ac8d74","applicationID":"357359533","transactionName":"IFYPEBdcXlhVExpRDQ5cTg0LV1dM","queueTime":0,"applicationTime":188,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"d753ac8d74",applicationID:"357359533"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon-0f2916588fdc80217c88d1395cbaee8b2f81532d24aac9347b9f6a68bdd9b3d0.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32-6fed357ab652d9013c202ab72c999dd4b627f9ccc458296c1ceb822a08c75655.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16-98b6a81c6b245ca46706265747698a1c76158154e8b0271c0935abc2723f3b78.png">
+<link rel="manifest" href="/assets/favicon/site-438583936fc2d2fc2bdd2f67f1c30d11ffc1d4784d9377a292465cebfff2169d.webmanifest">
+<link rel="shortcut icon" href="/assets/favicon/favicon-90bb44cb048e299a525f67ab24f600a1ee2ea16f77d460b855c6f480a03c5e7e.ico">
+<meta name="msapplication-TileColor" content="#3A3A37">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig-b859213e9c2cc69d9bc8929f1f8c0adbd7c3e93d17d72830821450e6858f707f.xml">
+<meta name="theme-color" content="#3A3A37">
+
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="vvWZJ6ljMR7fddp5QDIk6Ii367Fzvnzdk5+VwMzFMRTYbnzjFQGBNuGFPcgjT7GLmCpWqIA/iQnSl4J3wxN6cg==" />
+    
+    <link rel="stylesheet" media="all" href="/assets/application-9cc1736b1e149ec6f39fe090599d12d7841edb7a0d598d9c9c846c3bed06db88.css" />
+    <script src="/assets/application-701b20c65a6bff6315e0666f809ae4f8bdabd663b3066c4a52fcd6dd993f1978.js"></script>
+    <script src="/packs/js/application-b4df27ae5f77ac84d388.js"></script>
+    <link rel="stylesheet" media="screen" href="/packs/css/application-137ac160.css" />
+      <title>Earth Intelligence &amp; Space Infrastructure</title>
+      <meta name="description" content="Integrated space infrastructure and Earth intelligence capabilities that make global change visible, information actionable and space accessible." />
+      <meta name="keywords" content="" />
+      <meta property="og:title" content="Earth Intelligence &amp; Space Infrastructure" />
+      <meta property="og:description" content="Integrated space infrastructure and Earth intelligence capabilities that make global change visible, information actionable and space accessible." />
+      <meta property="og:image" content="https://www.maxar.com/assets/og-image-default-de0d015aa2e76201ea64ef3381802ab8fb1cc4d49a983da26d6be8505cd21d3b.jpg" />
+      <meta property="og:type" content="website">
+      <meta name="facebook-domain-verification" content="gz9tihmizr64ykgkdoghvgr04jxvlm" />
+      <!-- Google Tag Manager -->
+<script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TNSRQ8F');
+</script>
+<!-- End Google Tag Manager -->
+
+  </head>
+  <body class="home">
+      <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNSRQ8F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+      <nav class="applicationNavbar">
+  <div class="navbg"></div>
+  <div class="secondaryNav visible">
+    <a class="navbar__link" href="/careers">Careers</a>
+    <a class="navbar__link" href="/sales-inquiries">Sales inquiries</a>
+
+
+
+
+
+  </div>
+  <a href="/"><img class="navbar__brand" src="https://www.maxar.com/assets/navbar/maxar-logo-navbar-b16b65d2d6b07ad4cd5fb17b016835a20a6a359158d832293402e231fca26e13.svg" /></a>
+  <button class="nav-mobile" id="nav-toggle">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 17">
+  <g fill="none" stroke-linecap="round" stroke-width="2">
+    <path class="line1" data-name="Line 5" d="M4.878 1h20.878"/>
+    <path class="line2" data-name="Line 6" d="M1 7h24.757"/>
+    <path class="line3" data-name="Line 7" d="M8.878 13h16.878"/>
+  </g>
+</svg>
+  </button>
+  <div id="navbar" class="navbar" tabindex="0">
+    <form action="/search" method="get">
+      <label for="siteSearch">search</label>
+      <input id="siteSearch--mobile" type="text" name="search_query" placeholder="Looking for something?">
+      <button id="siteSearch--mobile__submit"><img src="https://www.maxar.com/assets/icons/down-arrow-e77b516c78cc91fab42a485500234ea8a03e6e0c39322504a59b6f18ad2510f6.png" /></button>
+    </form>
+    <ul class="navbar__categories" tabindex="0">
+        <li class="navbar__categories__list-item" data-slug="company" tabindex="0">
+            <div class="navbar__multi-col-panel" data-slug="company">
+  <span class="navbar__categories__header" data-slug="company">Company</span>
+  <ul class="navbar__multi-col navbar__category" data-slug="company">
+    <h3>Company</h3>
+    <hr>
+    <div class="navbar__multi-col__shared-background">
+        <li class="navbar__multi-col__container" data-label="About Us">
+            <button class="multi-col__toggler" data-toggle-label="About Us">About Us</button>
+            <ul class="multi-col__category" data-label="About Us">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/about" target="_self">About Us</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/our-purpose" target="_self">Our Purpose</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/constellation" target="_self">Constellation</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/impact" target="_self">Impact</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/corporate-responsibility" target="_self">Corporate Responsibility</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/customers" target="_self">Our Customers</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Careers">
+            <button class="multi-col__toggler" data-toggle-label="Careers">Careers</button>
+            <ul class="multi-col__category" data-label="Careers">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/careers" target="_self">Careers</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/careers/inclusion-and-diversity" target="_self">Inclusion and Diversity</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/careers/early-careers" target="_self">Early Career Opportunities</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/careers/internship-program" target="_self">Internship Program</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/careers/academic-outreach-program" target="_self">Academic Outreach Program</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/careers/military-veterans-talent" target="_self">Military and Veteran Talent Services</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Contact Us">
+          <a href="/contact-us" class="multi-col__toggler no_nested_data" target="_self">Contact Us</a>
+        <li class="navbar__multi-col__container" data-label="History">
+            <button class="multi-col__toggler" data-toggle-label="History">History</button>
+            <ul class="multi-col__category" data-label="History">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/history" target="_self">History</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/award-and-launch-history" target="_self">Award and Launch History</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Leadership">
+          <a href="/leadership" class="multi-col__toggler no_nested_data" target="_self">Leadership</a>
+        <li class="navbar__multi-col__container" data-label="WorldView Legion">
+          <a href="/worldview-legion" class="multi-col__toggler no_nested_data" target="_self">WorldView Legion</a>
+        <li class="navbar__multi-col__container" data-label="Partner Ecosystem">
+            <button class="multi-col__toggler" data-toggle-label="Partner Ecosystem">Partner Ecosystem</button>
+            <ul class="multi-col__category" data-label="Partner Ecosystem">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/partner-ecosystem" target="_self">Partner Ecosystem</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/partner-ecosystem/become-a-partner" target="_self">Become a Partner</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/partner-ecosystem/resellers" target="_self">Reseller</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/partner-ecosystem/product-developers" target="_self">Product Developer</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/partner-ecosystem/solution-integrator" target="_self">Solution Integrators</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/partner-ecosystem/referral-agents" target="_self">Referral Agents</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Earth Intelligence">
+            <button class="multi-col__toggler" data-toggle-label="Earth Intelligence">Earth Intelligence</button>
+            <ul class="multi-col__category" data-label="Earth Intelligence">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/earth-intelligence" target="_self">Earth Intelligence</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/imagery-leadership" target="_self">Imagery Leadership</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="company"href="/geospatial-stories" target="_self">Geospatial Stories</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Space Infrastructure">
+          <a href="/space-infrastructure" class="multi-col__toggler no_nested_data" target="_self">Space Infrastructure</a>
+        <li class="navbar__multi-col__container" data-label="Investors">
+          <a href="http://investor.maxar.com" class="multi-col__toggler no_nested_data" target="_blank">Investors</a>
+    </div>
+  </ul>
+</div>
+
+        <li class="navbar__categories__list-item" data-slug="products" tabindex="0">
+            <div class="navbar__multi-col-panel" data-slug="products">
+  <span class="navbar__categories__header" data-slug="products">Products</span>
+  <ul class="navbar__multi-col navbar__category" data-slug="products">
+    <h3>Products</h3>
+    <hr>
+    <div class="navbar__multi-col__shared-background">
+        <li class="navbar__multi-col__container" data-label="Use Cases">
+          <a href="/products/use-cases" class="multi-col__toggler no_nested_data" target="_self">Use Cases</a>
+        <li class="navbar__multi-col__container" data-label="Product Overview">
+          <a href="/products" class="multi-col__toggler no_nested_data" target="_self">Product Overview</a>
+        <li class="navbar__multi-col__container" data-label="Spacecraft Platforms">
+            <button class="multi-col__toggler" data-toggle-label="Spacecraft Platforms">Spacecraft Platforms</button>
+            <ul class="multi-col__category" data-label="Spacecraft Platforms">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/spacecraft-platforms" target="_self">Spacecraft Platforms Overview</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/1300-class-platform" target="_self">1300-class platform</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Robotics &amp; Servicing">
+          <a href="/products/robotics-and-servicing" class="multi-col__toggler no_nested_data" target="_self">Robotics &amp; Servicing</a>
+        <li class="navbar__multi-col__container" data-label="Satellite Access">
+            <button class="multi-col__toggler" data-toggle-label="Satellite Access">Satellite Access</button>
+            <ul class="multi-col__category" data-label="Satellite Access">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/satellite-access" target="_self">Satellite Access Overview</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/direct-access-program" target="_self">Direct Access Program</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/rapid-access-program" target="_self">Rapid Access Program</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/global-enhanced-GEOINT-delivery" target="_self">Global Enhanced GEOINT Delivery</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Satellite Imagery">
+            <button class="multi-col__toggler" data-toggle-label="Satellite Imagery">Satellite Imagery</button>
+            <ul class="multi-col__category" data-label="Satellite Imagery">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/satellite-imagery" target="_self">Satellite Imagery Overview</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/imagery-basemaps" target="_self">Imagery Basemaps</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/optical-imagery" target="_self">Optical Imagery</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/securewatch" target="_self">SecureWatch</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/analysis-ready-data" target="_self">Analysis-Ready Data</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/spatial-on-demand" target="_self">Spatial on Demand</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/radar-imagery" target="_self">Radar Imagery</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="The Globe in 3D">
+            <button class="multi-col__toggler" data-toggle-label="The Globe in 3D">The Globe in 3D</button>
+            <ul class="multi-col__category" data-label="The Globe in 3D">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/3d-data-suite" target="_self">3D Data Suite Overview</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/telco-suite" target="_self">Telco Suite</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/precision-3d-registration" target="_self">P3DR</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/vricon-explorer" target="_self">Software</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Map Data">
+            <button class="multi-col__toggler" data-toggle-label="Map Data">Map Data</button>
+            <ul class="multi-col__category" data-label="Map Data">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/map-data" target="_self">Map Data Overview</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/basevue-lulc" target="_self">Basevue LULC</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/persistent-change-monitoring" target="_self">Persistent Change Monitoring</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/building-footprints" target="_self">Building Footprints</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/human-landscape" target="_self">Human Landscape</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Analytics">
+            <button class="multi-col__toggler" data-toggle-label="Analytics">Analytics</button>
+            <ul class="multi-col__category" data-label="Analytics">
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/analytics" target="_self">Analytics Overview</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/analytic-reports" target="_self">Analytic Reports</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/awave" target="_self">AWave</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/geohive" target="_self">GeoHIVE</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/weatherdesk" target="_self">WeatherDesk</a>
+                </li>
+                <li class="multi-col__category__item">
+                  <a data-navbar-link="true" data-slug="products"href="/products/seastar-information-service" target="_self">SeaStar Information Service</a>
+                </li>
+            </ul>
+          </li>
+        <li class="navbar__multi-col__container" data-label="Geospatial Services">
+          <a href="/products/geospatial-services" class="multi-col__toggler no_nested_data" target="_self">Geospatial Services</a>
+        <li class="navbar__multi-col__container" data-label="Global Enhanced GEOINT Delivery">
+          <a href="/products/global-enhanced-GEOINT-delivery" class="multi-col__toggler no_nested_data" target="_self">Global Enhanced GEOINT Delivery</a>
+    </div>
+  </ul>
+</div>
+
+        <li class="navbar__categories__list-item" data-slug="industries" tabindex="0">
+            <div class="navbar__single-col-panel" data-slug="industries">
+  <span class="navbar__categories__header" data-slug="industries">Industries</span>
+  <div class="navbar__single-col navbar__category" data-slug="industries">
+    <h3>Industries</h3>
+    <hr>
+    <ul>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries">
+          Industry Overview
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/automotive">
+          Automotive
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/civil-government">
+          Civil Government
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/consumer-mapping">
+          Consumer Mapping
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/defense-and-intelligence">
+          Defense and Intelligence
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/earth-observation">
+          Earth Observation
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/energy">
+          Energy
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/fisheries">
+          Fisheries
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/global-development">
+          Global Development
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/maritime-security">
+          Maritime Security
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/mining">
+          Mining
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/satellite-communications">
+          Satellite Communications
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/telecommunications">
+          Telecommunications
+        </a>
+      </li>
+      <li class="navbar__category__item">
+        <a data-navbar-link="true" data-slug="industries" href="/industries/us-government">
+          U.S. Government
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+        <li class="navbar__categories__list-item" data-slug="news" tabindex="0">
+            <div class="navbar__multi-col-panel" data-slug="news">
+  <span class="navbar__categories__header" data-slug="news">News &amp; Events</span>
+  <ul class="navbar__multi-col navbar__category" data-slug="news">
+    <h3>News &amp; Events</h3>
+    <hr>
+    <div class="navbar__multi-col__shared-background">
+        <li class="navbar__multi-col__container" data-label="Blog">
+          <a href="https://blog.maxar.com" class="multi-col__toggler no_nested_data" target="_blank">Blog</a>
+        <li class="navbar__multi-col__container" data-label="Events">
+          <a href="/events" class="multi-col__toggler no_nested_data" target="_self">Events</a>
+        <li class="navbar__multi-col__container" data-label="Media Coverage">
+          <a href="/media-coverage" class="multi-col__toggler no_nested_data" target="_self">Media Coverage</a>
+        <li class="navbar__multi-col__container" data-label="Press Releases">
+          <a href="/press-releases" class="multi-col__toggler no_nested_data" target="_self">Press Releases</a>
+        <li class="navbar__multi-col__container" data-label="News Bureau">
+          <a href="/news-bureau" class="multi-col__toggler no_nested_data" target="_self">News Bureau</a>
+    </div>
+  </ul>
+</div>
+
+        <li class="navbar__categories__list-item" data-slug="explore" tabindex="0">
+            <div class="navbar__multi-col-panel" data-slug="explore">
+  <span class="navbar__categories__header" data-slug="explore">Explore</span>
+  <ul class="navbar__multi-col navbar__category" data-slug="explore">
+    <h3>Explore</h3>
+    <hr>
+    <div class="navbar__multi-col__shared-background">
+        <li class="navbar__multi-col__container" data-label="Search for Imagery">
+          <a href="https://discover.digitalglobe.com/" class="multi-col__toggler no_nested_data" target="_blank">Search for Imagery</a>
+        <li class="navbar__multi-col__container" data-label="Resources">
+          <a href="/resources" class="multi-col__toggler no_nested_data" target="_self">Resources</a>
+        <li class="navbar__multi-col__container" data-label="Product Samples">
+          <a href="/product-samples" class="multi-col__toggler no_nested_data" target="_self">Product Samples</a>
+        <li class="navbar__multi-col__container" data-label="Open Data Program">
+          <a href="/open-data" class="multi-col__toggler no_nested_data" target="_self">Open Data Program</a>
+        <li class="navbar__multi-col__container" data-label="Stay Curious">
+          <a href="/stay-curious" class="multi-col__toggler no_nested_data" target="_self">Stay Curious</a>
+        <li class="navbar__multi-col__container" data-label="Content Hub">
+          <a href="https://betterworld.maxar.com/" class="multi-col__toggler no_nested_data" target="_blank">Content Hub</a>
+    </div>
+  </ul>
+</div>
+
+        <li class="navbar__categories__list-item" data-slug="login" tabindex="0">
+            <div class="navbar__multi-col-panel" data-slug="login">
+  <span class="navbar__categories__header" data-slug="login">Login</span>
+  <ul class="navbar__multi-col navbar__category" data-slug="login">
+    <h3>Login</h3>
+    <hr>
+    <div class="navbar__multi-col__shared-background">
+        <li class="navbar__multi-col__container" data-label="SecureWatch">
+          <a href="https://access.maxar.com/myDigitalGlobe/login" class="multi-col__toggler no_nested_data" target="_blank">SecureWatch</a>
+        <li class="navbar__multi-col__container" data-label="GeoHive">
+          <a href="https://geohive.maxar.com/geohive/auth/login" class="multi-col__toggler no_nested_data" target="_blank">GeoHive</a>
+        <li class="navbar__multi-col__container" data-label="Global-EGD">
+          <a href="https://evwhs.digitalglobe.com/myDigitalGlobe/login" class="multi-col__toggler no_nested_data" target="_blank">Global-EGD</a>
+        <li class="navbar__multi-col__container" data-label="Search imagery">
+          <a href="https://discover.digitalglobe.com/" class="multi-col__toggler no_nested_data" target="_blank">Search imagery</a>
+        <li class="navbar__multi-col__container" data-label="WeatherDesk">
+          <a href="https://weather.maxar.com/" class="multi-col__toggler no_nested_data" target="_blank">WeatherDesk</a>
+    </div>
+  </ul>
+</div>
+
+      </li>
+
+
+        <button id="siteSearch--desktop">
+      <img src="https://www.maxar.com/assets/navbar/search-3f01e1afe02a0c14b0b49d0d4bbb284c05929b46213aa0bfb38b2bad7b90e2d2.svg" />
+      <img height="16px" width="16px" class="hidden" src="https://www.maxar.com/assets/icons/close-8cf5be0bc0ee0a222933fa562b8dd1aa6035aa1fc45618b505e93c374bf8afae.svg" />
+    </button>
+    <form class="siteSearch--desktop__form" action="/search" method="get" tabindex="-1">
+      <input id="search_query--desktop" type="text" name="search_query" placeholder="Looking for something?" tabindex="-1">
+      <button id="siteSearch__submit" tabindex="-1"><img src="https://www.maxar.com/assets/icons/down-arrow-e77b516c78cc91fab42a485500234ea8a03e6e0c39322504a59b6f18ad2510f6.png" /></button>
+    </form>
+
+
+
+    </ul>
+
+
+
+
+  </div>
+</nav>
+
+    <div class="alerts">
+      
+      
+    </div>
+      <section class="HomeHeroComponent white edge_to_edge" >
+  <div class="HomeHeroComponent__copy">
+    <h1>WorldView Legion</h1>
+    <p>Maxar’s next generation satellites fueling the most advanced Earth Intelligence solutions.</p>
+    <a class='button ' href='https://www.maxar.com/worldview-legion?utm_source=maxar.com-hp-hero&utm_medium=website&utm_campaign=wv-legion-2021' >Coming soon</a>
+  </div>
+  <div class="home_img" data-content="">
+    <img src="https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/655/WVL_GlamourShots_Cam10_v02_845.jpg">
+  </div>
+</section>
+
+  <section class="SpacerComponent white">
+  <div class="spacer x1_space"></div>
+</section>
+
+  <section class="HeadlineCopyComponent dark_grey">
+  <div class="container">
+    <h2 class="rule">See what’s possible</h2>
+  </div>
+</section>
+
+  <section class="MultilinkSlideupComponent dark_grey">
+      <div class="MultilinkSlideupComponent__link">
+        <p class="MultilinkSlideupComponent__link__title">Explore</p>
+        <div><p>Design, build and deploy resilient space infrastructure for any mission</p>
+</div>
+        <a class="button" href="/products/use-cases#explore" >Learn more</a>
+      </div>
+      <div class="MultilinkSlideupComponent__link">
+        <p class="MultilinkSlideupComponent__link__title">Connect</p>
+        <div><p>Deploy cutting-edge systems for communications and data from or across space</p>
+</div>
+        <a class="button" href="/products/use-cases#connect" >Learn more</a>
+      </div>
+      <div class="MultilinkSlideupComponent__link">
+        <p class="MultilinkSlideupComponent__link__title">Access</p>
+        <div><p>Identify, understand and address change with accurate geospatial information</p>
+</div>
+        <a class="button" href="/products/use-cases#access" >Learn more</a>
+      </div>
+      <div class="MultilinkSlideupComponent__link">
+        <p class="MultilinkSlideupComponent__link__title">Map</p>
+        <div><p>Create and customize maps with professional-grade imagery basemaps and information layers</p>
+</div>
+        <a class="button" href="/products/use-cases#map" >Learn more</a>
+      </div>
+      <div class="MultilinkSlideupComponent__link">
+        <p class="MultilinkSlideupComponent__link__title">Analyze</p>
+        <div><p>Reveal patterns, detect objects and extract geospatial insight at scale</p>
+</div>
+        <a class="button" href="/products/use-cases#analyze" >Learn more</a>
+      </div>
+</section>
+
+  <section class="SpacerComponent dark_grey">
+  <div class="spacer x1_space"></div>
+</section>
+
+  <section class="HeadlineCopyComponent white">
+  <div class="container">
+    <h2 class="">What&#39;s new</h2>
+      <div class="copy">
+        <p>Here&rsquo;s the latest in partnerships, products and inspiring innovations that are driving better outcomes for a better world.</p>
+
+      </div>
+  </div>
+</section>
+
+  <section class="MasonryGridComponent white">
+  <div class="MasonryGridComponent__featured">
+    <a class="MasonryGridComponent__card" href="https://www.maxar.com/press-releases/maxar-awarded-contract-to-support-geoint-exploitation-for-u-s-army-and-combatant-commands?utm_source=maxar.com-hp-whatsnew&amp;utm_medium=website&amp;utm_campaign=us-army" target=&quot;_blank&quot;>
+      <div class="masonry_img" data-content="">
+        <img src="https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/641/nuevo_laredo_undermappedRoads__1_.png" />
+      </div>
+      <div class="MasonryGridComponent__card__copy">
+        <h3>Maxar Awarded U.S. Army GEOINT Exploitation Contract</h3>
+        <p>Maxar to provide geospatial predictive analytics to Army and Combatant Commands.</p>
+
+        <p class="highlight">Learn more</p>
+      </div>
+    </a>
+  </div>
+  <div class="MasonryGridComponent__right-column">
+      <a class="MasonryGridComponent__card" href="https://blog.maxar.com/space-infrastructure/2021/inside-perseverance-how-maxar-robotics-will-enable-a-historic-mars-mission?utm_source=maxar.com-hp&amp;utm_medium=blog&amp;utm_campaign=perseverance-rover" target=&quot;_blank&quot;>
+        <div class="masonry_img_0" data-content="">
+          <img src="https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/642/Maxar_SHA_Robotic_Arm2-crop.jpg" />
+        </div>
+        <div class="MasonryGridComponent__card__copy">
+          <h3>Maxar technology enables exploration of Mars in historic NASA mission</h3>
+          <p>With Maxar&rsquo;s robotic arm, Perseverance Rover will collect samples of the Martian core in search of signs of life.</p>
+
+          <p class="highlight">Learn more</p>
+        </div>
+      </a>
+      <a class="MasonryGridComponent__card" href="/about" >
+        <div class="masonry_img_1" data-content="">
+          <img src="https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/643/GettyImages-170026775_540x399.jpg" />
+        </div>
+        <div class="MasonryGridComponent__card__copy">
+          <h3>Improving life on Earth from space</h3>
+          <p>Serving commercial and government missions with trusted Earth Intelligence and Space Infrastructure.</p>
+
+          <p class="highlight">Learn more</p>
+        </div>
+      </a>
+  </div>
+</section>
+
+  <section class="ThreeCardComponent white">
+      <article class="single_image" data-content-type="single_image" data-button-enabled="true" data-href="https://www.maxar.com/impact?utm_source=maxar.com-hp&amp;utm_medium=website&amp;utm_campaign=impact-report-2021" data-link-is-external="true">
+          <img src="https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/652/Impact_2020_Cover_Option.jpg">
+        <div class="ThreeCardComponent__copy">
+          <div>
+            <h4>For A Better World: Fulfilling Our Purpose</h4>
+            <div><p>The 2020 Impact Report details Maxar&rsquo;s efforts to serve our customers and partners while creating positive change on Earth and in space.</p>
+</div>
+          </div>
+            <a href="https://www.maxar.com/impact?utm_source=maxar.com-hp&amp;utm_medium=website&amp;utm_campaign=impact-report-2021" target=&quot;_blank&quot;>Learn more</a>
+        </div>
+      </article>
+      <article class="single_image" data-content-type="single_image" data-button-enabled="true" data-href="https://blog.maxar.com/space-infrastructure/2021/osam-1-passes-accommodation-cdr-propulsion-system-module-complete?utm_source=maxar.com-hp&amp;utm_medium=website&amp;utm_campaign=osam-1" data-link-is-external="true">
+          <img src="https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/653/OSAM-1_A.png">
+        <div class="ThreeCardComponent__copy">
+          <div>
+            <h4>OSAM-1 Passes Critical Design Review, Propulsion System  Module Complete</h4>
+            <div><p>OSAM-1 will be a groundbreaking demonstration of on-orbit assembly, servicing and manufacturing capabilities. This major milestone paves the way to complete the final mechanical build of the spacecraft.</p>
+</div>
+          </div>
+            <a href="https://blog.maxar.com/space-infrastructure/2021/osam-1-passes-accommodation-cdr-propulsion-system-module-complete?utm_source=maxar.com-hp&amp;utm_medium=website&amp;utm_campaign=osam-1" target=&quot;_blank&quot;>Learn more</a>
+        </div>
+      </article>
+      <article class="single_image" data-content-type="single_image" data-button-enabled="true" data-href="https://blog.maxar.com/earth-intelligence/2020/agility-and-access-the-keys-to-collecting-images-for-time-dominant-missions?utm_source=maxar.com-hp&amp;utm_medium=website" data-link-is-external="true">
+          <img src="https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/654/Maxar_-_Sensor_to_Shooter_Graphic_for_PPT_01.png">
+        <div class="ThreeCardComponent__copy">
+          <div>
+            <h4>Collecting  images for time-dominant missions</h4>
+            <div><p>Agility, access and resolution are critical for success.</p>
+</div>
+          </div>
+            <a href="https://blog.maxar.com/earth-intelligence/2020/agility-and-access-the-keys-to-collecting-images-for-time-dominant-missions?utm_source=maxar.com-hp&amp;utm_medium=website" target=&quot;_blank&quot;>Learn more</a>
+        </div>
+      </article>
+</section>
+
+  <section class="SpacerComponent white">
+  <div class="spacer x1_space"></div>
+</section>
+
+  <section data-vue-target="true" class="FlexibleHorizontalCarouselComponent dark_grey" style="padding: 0">
+  <flexible-horizontal-carousel :configuration="[{&quot;heading&quot;:&quot;MAXAR IN THE NEWS&quot;,&quot;subheading&quot;:&quot;&quot;,&quot;body&quot;:&quot;\u003cp\u003eSatellite Images Show Russia\u0026rsquo;s Expanding Ukraine Buildup\u003c/p\u003e\n\n\u003cp\u003eApril 20, 2021\u003c/p\u003e\n\n\u003cp\u003eThe Wall Street Journal\u003c/p\u003e\n&quot;,&quot;buttonEnabled&quot;:true,&quot;buttonText&quot;:&quot;Read&quot;,&quot;buttonLink&quot;:&quot;https://www.wsj.com/articles/satellite-images-show-russias-expanding-ukraine-buildup-11618917238&quot;,&quot;buttonIsExternal&quot;:true,&quot;contentType&quot;:&quot;single_image&quot;,&quot;order&quot;:1,&quot;image&quot;:&quot;https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/1788/Russia_buildup_WSJ_su34_aircraft_morozovsk_airbase_russia_27march2021_crop.jpg&quot;},{&quot;heading&quot;:&quot;FEATURED PRESS RELEASE&quot;,&quot;subheading&quot;:&quot;&quot;,&quot;body&quot;:&quot;\u003cp\u003eMaxar Advances Commitment to Build a Diverse Workforce in St. Louis Supporting Business Growth and Geospatial Tradecraft\u003c/p\u003e\n\n\u003cp\u003eApril 28, 2021\u003c/p\u003e\n&quot;,&quot;buttonEnabled&quot;:true,&quot;buttonText&quot;:&quot;Read&quot;,&quot;buttonLink&quot;:&quot;/press-releases/maxar-advances-commitment-to-build-a-diverse-workforce-in-st-louis-supporting-business-growth-and-geospatial-tradecraft&quot;,&quot;buttonIsExternal&quot;:false,&quot;contentType&quot;:&quot;single_image&quot;,&quot;order&quot;:2,&quot;image&quot;:&quot;https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/1789/St_Louis_MO.jpg&quot;},{&quot;heading&quot;:&quot;MAXAR IN THE NEWS&quot;,&quot;subheading&quot;:&quot;&quot;,&quot;body&quot;:&quot;\u003cp\u003eA Brain, a Body and Courage \u0026mdash; but it\u0026rsquo;s not the Wizard of Oz\u003c/p\u003e\n\n\u003cp\u003eApril 21, 2021\u003c/p\u003e\n\n\u003cp\u003eMedium - The NASA Psyche mission: Journey to Metal World\u003c/p\u003e\n&quot;,&quot;buttonEnabled&quot;:true,&quot;buttonText&quot;:&quot;Read&quot;,&quot;buttonLink&quot;:&quot;https://medium.com/the-nasa-psyche-mission-journey-to-a-metal-world/a-brain-a-body-and-courage-but-its-not-the-wizard-of-oz-8bf3b59930fe &quot;,&quot;buttonIsExternal&quot;:true,&quot;contentType&quot;:&quot;single_image&quot;,&quot;order&quot;:3,&quot;image&quot;:&quot;https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/1868/Medium_PSYCHE_image.jpeg&quot;},{&quot;heading&quot;:&quot;FEATURED BLOG POST&quot;,&quot;subheading&quot;:&quot;&quot;,&quot;body&quot;:&quot;\u003cp\u003ePreparing for Launch: SXM-8 Arrives at Launch Base\u003c/p\u003e\n\n\u003cp\u003eMay 6, 2021\u003c/p\u003e\n&quot;,&quot;buttonEnabled&quot;:true,&quot;buttonText&quot;:&quot;Read&quot;,&quot;buttonLink&quot;:&quot;https://blog.maxar.com/earth-intelligence/2021/preparing-for-launch-sxm-8-arrives-at-launch-base?utm_source=maxar.com-hp\u0026utm_medium=website\u0026utm_campaign=sxm-8&quot;,&quot;buttonIsExternal&quot;:true,&quot;contentType&quot;:&quot;single_image&quot;,&quot;order&quot;:4,&quot;image&quot;:&quot;https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/1794/SXM-8-arriving-at-SpaceX_maxar.jpg&quot;}]" :images="[&quot;https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/1868/Medium_PSYCHE_image.jpeg&quot;,&quot;https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/1788/Russia_buildup_WSJ_su34_aircraft_morozovsk_airbase_russia_27march2021_crop.jpg&quot;,&quot;https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/1789/St_Louis_MO.jpg&quot;,&quot;https://maxarv2-cms-production.s3.amazonaws.com/uploads/image/image_value/1794/SXM-8-arriving-at-SpaceX_maxar.jpg&quot;,null,null,null,null,null,null]"></flexible-horizontal-carousel>
+</section>
+
+  <section class="FullcolorCtaComponent white" id="home-fullcolor_cta_component-6fa7ad89bd575bc5e79f">
+  <div class="FullcolorCtaComponent__container">
+    <h2>Stay Curious</h2>
+    <div class="FullcolorCtaComponent__copy"><p>Get inspired by the latest geospatial breakthroughs from the GISt and/or subscribe to our monthly Maxar Spotlight periodical for in-depth analysis on real-world events.</p>
+
+        <a href="/stay-curious"  class="button gold_grey FullcolorCtaComponent__button">Subscribe</a>
+    </div>
+  </section>
+
+
+      <footer>
+  <div class="footer--mobile">
+    <img class="logo" src="/assets/navbar/maxar-logo-navbar-b16b65d2d6b07ad4cd5fb17b016835a20a6a359158d832293402e231fca26e13.svg" />
+    <div class="links">
+      <a href="/careers">Careers</a>
+      <a href="/contact">Contact</a>
+      <a href="http://investor.maxar.com/overview/default.aspx" target="_blank">Investors</a>
+      <a href="https://blog.maxar.com/" target="_blank">Blog</a>
+    </div>
+    <div class="social">
+      <a href="https://twitter.com/Maxar" target="_blank"><img src="/assets/icons/twitter-icon-07654ff250dd1a447de90a9c9a33bfb71cf8b4d421d11c04699ba91a844489ab.svg" /></a>
+      <a href="https://www.linkedin.com/company/maxar-technologies-ltd/" target="_blank"><img src="/assets/icons/linkedin-icon-18d984068f6cb900b79ec73abb9801ef849557f1f908ec1e97e486d9a345ddba.svg" /></a>
+      <a href="https://www.facebook.com/MaxarTechnologies/" target="_blank"><img src="/assets/icons/facebook-icon-75cc1d7d01f277634cb96cdf67f07b1260a2ec0ffd4cc0ca9b8b358024f63887.svg" /></a>
+      <a href="https://www.instagram.com/maxartechnologies/" target="_blank"><img src="/assets/icons/instagram-icon-2e8026a1f7c7678c872d458e3620d7629511238973408acc34c43227e97d81e5.svg" /></a>
+      <a href="https://www.youtube.com/channel/UCPsjOe5fyZLN6ko3RwbBqYw" target="_blank"><img src="/assets/icons/youtube-icon-6a19d1c9566d76664e91bfae7cc5ff2535751a72fc89d90bb23969679f5d29c5.svg" /></a>
+    </div>
+    <div class="copyright">
+      <p>&#169; Maxar Technologies 2021 | <a href="/legal/privacy-policy">Privacy Policy</a> |<br><a href="/legal/website-terms-of-use">Website Terms of Use</a></p>
+    </div>
+  </div>
+  <div class="footer--desktop">
+      <div class="footer--desktop__column">
+        <h6 class="navbar__link">Company</h6>
+        <ul>
+            <li><a class="footer__link" target="" href="/about">About us</a></li>
+            <li><a class="footer__link" target="" href="/careers">Careers</a></li>
+            <li><a class="footer__link" target="" href="/media-coverage">Media coverage</a></li>
+            <li><a class="footer__link" target="_blank" href="http://investor.maxar.com/overview/default.aspx">Investors</a></li>
+        </ul>
+      </div>
+      <div class="footer--desktop__column">
+        <h6 class="navbar__link">Legal</h6>
+        <ul>
+            <li><a class="footer__link" target="" href="/legal/privacy-policy">Privacy Policy</a></li>
+            <li><a class="footer__link" target="_blank" href="/legal">License Terms</a></li>
+            <li><a class="footer__link" target="" href="/legal">Maxar Policies</a></li>
+            <li><a class="footer__link" target="" href="/legal/website-terms-of-use">Website Terms of Use</a></li>
+        </ul>
+      </div>
+      <div class="footer--desktop__column">
+        <h6 class="navbar__link">Explore</h6>
+        <ul>
+            <li><a class="footer__link" target="_blank" href="https://discover.digitalglobe.com/">Search imagery</a></li>
+            <li><a class="footer__link" target="" href="/resources">Resources</a></li>
+            <li><a class="footer__link" target="" href="/products/use-cases">Use cases</a></li>
+            <li><a class="footer__link" target="_blank" href="https://blog.maxar.com">Blog</a></li>
+            <li><a class="footer__link" target="_blank" href="https://microsites.maxar.com/geospatial-context">Geospatial Context</a></li>
+        </ul>
+      </div>
+      <div class="footer--desktop__column">
+        <h6 class="navbar__link">Get in touch</h6>
+        <ul>
+            <li><a class="footer__link" target="" href="/contact-us">Contact us</a></li>
+            <li><a class="footer__link" target="" href="/sales-inquiries">Sales inquiries</a></li>
+            <li><a class="footer__link" target="" href="/partner-ecosystem/resellers">Find a Reseller</a></li>
+        </ul>
+      </div>
+  </div>
+  <hr>
+  <div class="desktopsocial">
+    <div class="social">
+      <a href="https://twitter.com/Maxar" target="_blank"><img src="/assets/icons/twitter-icon-07654ff250dd1a447de90a9c9a33bfb71cf8b4d421d11c04699ba91a844489ab.svg" /></a>
+      <a href="https://www.linkedin.com/company/maxar-technologies-ltd/" target="_blank"><img src="/assets/icons/linkedin-icon-18d984068f6cb900b79ec73abb9801ef849557f1f908ec1e97e486d9a345ddba.svg" /></a>
+      <a href="https://www.facebook.com/MaxarTechnologies/" target="_blank"><img src="/assets/icons/facebook-icon-75cc1d7d01f277634cb96cdf67f07b1260a2ec0ffd4cc0ca9b8b358024f63887.svg" /></a>
+      <a href="https://www.instagram.com/maxartechnologies/" target="_blank"><img src="/assets/icons/instagram-icon-2e8026a1f7c7678c872d458e3620d7629511238973408acc34c43227e97d81e5.svg" /></a>
+      <a href="https://www.youtube.com/channel/UCPsjOe5fyZLN6ko3RwbBqYw" target="_blank"><img src="/assets/icons/youtube-icon-6a19d1c9566d76664e91bfae7cc5ff2535751a72fc89d90bb23969679f5d29c5.svg" /></a>
+    </div>
+    <div class="copyright">&#169; 2021 Maxar Technologies | <a href="/legal/privacy-policy">Privacy Policy</a> | <a href="/legal/website-terms-of-use">Website Terms of Use</a></div>
+  </div>
+</footer>
+
+      <!-- Save for analytics in the footer -->
+
+      
+      
+  </div>
+</body>
+</html>

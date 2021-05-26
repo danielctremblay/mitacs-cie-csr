@@ -1,0 +1,826 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-CA" xml:lang="en-CA">
+<head><title>
+	Precision Drilling Corporation - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":998,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport" /><link type="text/css" rel="stylesheet" media="screen" href="//s2.q4cdn.com/639056707/files/js/jquery.fancybox.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/639056707/files/css/font-awesome.min.css" />
+<link type="image/x-icon" rel="icon" media="" href="//s2.q4cdn.com/639056707/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s2.q4cdn.com/639056707/files/favicon.ico" />
+<link rel="stylesheet" media="all" href="https://www.precisiondrilling.com/css/default.css" />
+<link rel="stylesheet" media="print" href="//s2.q4cdn.com/639056707/files/css/print.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//use.typekit.net/zps2qca.cs" />
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/639056707/files/css/global.css?v=29169" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/639056707/files/css/client.css?v=28952" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s2.q4cdn.com/639056707/files/css/print.css" /><script type="text/javascript" src="//s2.q4cdn.com/639056707/files/js/q4.core.js"></script>
+<script type="text/javascript" src="https://www.precisiondrilling.com/js/doctracking.js"></script>
+<script type="text/javascript" src="//q4implementation.s3.amazonaws.com/widgets/latest/q4.email-validation.min.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/639056707/files/js/q4.app.1.0.1.min.js"></script>
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+(function ($) {
+    function initGaTracking(isp, org) {
+        isp = isp || '(not set)';
+        org = org || '(not set)';
+        $.each(trackingCodes, function (i, data) {
+            if (data.qualifier === "Q4") {
+                ga('create', data.trackingCode, 'auto'); // Q4 tracker
+                ga('set', { 'dimension1': isp });
+                ga('set', { 'dimension2': org });
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+            } else {
+                ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+                ga(data.qualifier + '.set', 'anonymizeIp', true);
+                ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+            }
+        });
+    }
+
+    var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-62141181-1'}, {qualifier: 'Client', trackingCode: 'UA-16782658-2'}];
+    var ipSessStorageKey = 'ipApiInfo';
+    var ipJsonStringified = sessionStorage.getItem(ipSessStorageKey);
+
+    if (ipJsonStringified) {
+        try {
+            var ipJsonParsed = JSON.parse(ipJsonStringified);
+            initGaTracking(ipJsonParsed.isp, ipJsonParsed.org);
+        } catch (e) {
+            console.error('Failed to JSON parse IP API session storage data\n', e);
+            initGaTracking();
+        }
+    } else {
+        $.getJSON('https://pro.ip-api.com/json/?key=xdjZbj0ZiVVozCo&fields=isp,org')
+            .done(function (ipJson) {
+                sessionStorage.setItem(ipSessStorageKey, JSON.stringify(ipJson));
+                initGaTracking(ipJson.isp, ipJson.org);
+            })
+            .fail(function () {
+                initGaTracking();
+            });
+    }
+})(jQuery);
+</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="SectionHome PageDefault PageHome LayoutHomePageLayout Languageen-CA">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_Home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="LayoutDefault LayoutHomePage">
+	<div class="LayoutDefaultInner">
+		<div class="HeaderContainer">
+			<div class="PaneHeader clearfix">
+				<div class="container clearfix"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="BlankModuleContainer">
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="//s2.q4cdn.com/639056707/files/bootstrap/js/html5shiv.js"></script>
+<![endif]-->
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="ClientLogo"><a href="https://www.precisiondrilling.com/Home/default.aspx" id="_ctrl0_ctl12_hrefLink"><img src="//s2.q4cdn.com/639056707/files/design/Precision-Drilling-Logo.png" id="_ctrl0_ctl12_img1" border="0" alt="Homepage" /></a><br /></div>
+</span><span class='HeaderPaneDiv4'><div id="_ctrl0_ctl15_divModuleContainer" class="BlankModuleContainer">
+    
+    <div class="navbar-header">
+      <button  class="navbar-toggle" type="button">
+        <span class="sr-only">MENU</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+</div>
+</div></span><span class='HeaderPaneDiv5'><div id="_ctrl0_ctl18_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="SQH SQH1 stock-widget"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.min.js"></script>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.11.min.js"></script>
+
+<script>
+    $('.stock-widget').stockQuote({
+       dateFormat: 'M dd, y',
+       changeCls: ['Down', 'Up'],
+       stock: ['NYSE:PDS'],
+       stockTpl: (
+        '{{#.}}' +
+            '<span  class="StockDescription1">NYSE: PDS</span> ' +
+            '<a href="http://www.precisiondrilling.com/investor-relations/stock-information/stock-chart/default.aspx"  class="StockPrice">{{tradePrice}}</a> ' +
+            '<span class="paranthesis">(</span> ' +
+            '<span  class="StockChange StockPrice{{uod}}"><span class="StockIndicator StockIndicator{{uod}}">{{uodSymbol}}</span>{{change}}</span> ' +
+            '<span class="paranthesis">)</span> ' +
+            '<span  class="StockPChange StockPrice{{uod}}"><span class="StockIndicator">{{uod}}</span>{{percChange}}%</span> ' +
+        '{{/.}}'
+       )
+    });
+</script>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv7'><div id="_ctrl0_ctl24_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="SQH SQH2 stock-widget-tsx"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.min.js"></script>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.11.min.js"></script>
+
+<script>
+    $('.stock-widget-tsx').stockQuote({
+       dateFormat: 'M dd, y',
+       changeCls: ['Down', 'Up'],
+       stock: ['TSE:PD.CA'],
+       stockTpl: (
+        '{{#.}}' +
+            '<span  class="StockDescription1">TSX: PD</span> ' +
+            '<a href="http://www.precisiondrilling.com/investor-relations/stock-information/stock-chart/default.aspx"  class="StockPrice">{{tradePrice}}</a> ' +
+            '<span class="paranthesis">(</span> ' +
+            '<span  class="StockChange StockPrice{{uod}}"><span class="StockIndicator StockIndicator{{uod}}">{{uodSymbol}}</span>{{change}}</span> ' +
+            '<span class="paranthesis">)</span> ' +
+            '<span  class="StockPChange StockPrice{{uod}}"><span class="StockIndicator">{{uodSymbol}}</span>{{percChange}}%</span> ' +
+        '{{/.}}'
+       )
+    });
+</script>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv19'><div id="_ctrl0_ctl54_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript">
+ if (location.href.toLowerCase().indexOf('www.precisiondrilling.com/tc/candirectional') > -1){
+          window.location = "http://www.precisiondrilling.com/files/doc_downloads/terms/canada/T-C-Canada-Directional-Drilling-(2014-FINAL).pdf"
+     }
+ if (location.href.toLowerCase().indexOf('www.precisiondrilling.com/tc/canrentals') > -1){
+          window.location = "http://www.precisiondrilling.com/files/doc_downloads/terms/canada/T-C-Canada-Rentals-(2014-FINAL).pdf"
+     }
+ if (location.href.toLowerCase().indexOf('www.precisiondrilling.com/tc/cancamp') > -1){
+          window.location = "http://www.precisiondrilling.com/files/doc_downloads/terms/canada/T-C-Canada-Precision-Camp-Services-(2014-FINAL).pdf"
+     }
+ if (location.href.toLowerCase().indexOf('www.precisiondrilling.com/tc/cancandp') > -1){
+          window.location = "http://www.precisiondrilling.com/files/doc_downloads/terms/canada/T-C-Canada-Completion-and-Production-(FINAL).pdf"
+     }
+ if (location.href.toLowerCase().indexOf('www.precisiondrilling.com/tc/uscandp') > -1){
+          window.location = "http://www.precisiondrilling.com/files/doc_downloads/terms/usa/TC-US-Completion-and-Production-Services.pdf"
+     }
+ if (location.href.toLowerCase().indexOf('www.precisiondrilling.com/tc/usdirectional') > -1){
+          window.location = "http://www.precisiondrilling.com/files/doc_downloads/terms/usa/TC-US-Directional-Drilling.pdf"
+     }
+ if (location.href.toLowerCase().indexOf('www.precisiondrilling.com/tc/usrentals') > -1){
+          window.location = "http://www.precisiondrilling.com/files/doc_downloads/terms/usa/TC-US-Rentals.pdf"
+     }
+</script>
+</div></span></span></div>
+			</div>
+			<div class="PaneNavigation clearfix"><span class='NavigationPaneDiv6'><div id="_ctrl0_ctl21_divModuleContainer" class="HtmlTextContainer close">
+    
+    <div class="ContentContainer">
+        CLOSE
+    </div>
+</div></span><span class='NavigationPaneDiv9'><div id="_ctrl0_ctl30_divModuleContainer" class="ModuleContainer ModuleSearch SearchSiteMain">
+	
+    <div class="ModuleContainerInnerTop">
+        <div class="ModuleContainerInner">
+	        <span id="_ctrl0_ctl30_lblSearchText" class="SearchText"></span><input name="_ctrl0$ctl30$txtSearchInput" type="text" id="_ctrl0_ctl30_txtSearchInput" class="SearchInput" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl30$btnSearch&#39;, &#39;&#39;); " />
+            <input type="submit" name="_ctrl0$ctl30$btnSearch" value="Search" id="_ctrl0_ctl30_btnSearch" class="ModuleButton SearchButton" />
+            
+        </div>
+    </div>
+</div>
+</span><span class='NavigationPaneDiv10'><nav class="navbar-collapse collapse mainNav"><ul class="level1">
+	<li class="has-children"><a href="https://www.precisiondrilling.com/about-us/default.aspx">About Us</a><ul class="level2">
+		<li><a href="https://www.precisiondrilling.com/about-us/precision-drilling-profile/default.aspx">Precision Drilling Profile</a></li><li><a href="https://www.precisiondrilling.com/about-us/our-history/default.aspx">Our History</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/overview/default.aspx">Corporate Governance</a></li><li><a href="https://www.precisiondrilling.com/about-us/contact-us/default.aspx">Contact Us</a></li>
+	</ul></li><li><a href="https://www.precisiondrilling.com/alpha/default.aspx">Alpha</a></li><li><a href="https://www.precisiondrilling.com/corporate-responsibility/default.aspx">Corporate Responsibility</a></li><li><a href="http://rigs.precisiondrilling.com/">Rig Locations</a></li><li class="has-children"><a href="https://www.precisiondrilling.com/service-lines/default.aspx">Service Lines</a><ul class="level2">
+		<li><a href="https://www.precisiondrilling.com/service-lines/canada-drilling/default.aspx">Canada Drilling</a></li><li><a href="https://www.precisiondrilling.com/service-lines/us-drilling/default.aspx">U.S. Drilling</a></li><li><a href="https://www.precisiondrilling.com/service-lines/international-drilling/default.aspx">International Drilling</a></li><li><a href="https://www.precisiondrilling.com/service-lines/directional-drilling/default.aspx">Integrated Directional Drilling</a></li><li><a href="https://www.precisiondrilling.com/service-lines/Catering-and-Camp-Services/default.aspx">Camp and Catering Services</a></li><li><a href="https://www.precisiondrilling.com/service-lines/Oilfield-Equipment-Rentals/default.aspx">Oilfield Equipment Rentals</a></li><li><a href="https://www.precisiondrilling.com/service-lines/completion-and-production/default.aspx">Well Servicing</a></li><li><a href="https://www.precisiondrilling.com/service-lines/operations-support/default.aspx">Operations Support</a></li><li><a href="https://www.precisiondrilling.com/files/doc_downloads/2021/4/2020_03-16_Lighting_System_FINAL_REV8.pdf">Crown Lighting</a></li>
+	</ul></li><li><a href="https://www.precisiondrilling.com/service-lines/international-drilling/default.aspx">International Drilling</a></li><li class="has-children"><a href="https://www.precisiondrilling.com/careers/default.aspx">Careers</a><ul class="level2">
+		<li class="has-children"><a href="https://www.precisiondrilling.com/careers/toughnecks/default.aspx">Toughnecks</a><ul class="level3">
+			<li><a href="https://www.precisiondrilling.com/careers/toughnecks/toughneck-rig-careers/default.aspx">Toughneck Career Profiles</a></li><li><a href="https://www.precisiondrilling.com/careers/toughnecks/take-the-quiz/default.aspx">Take the Quiz</a></li>
+		</ul></li><li><a href="https://www.precisiondrilling.com/careers/corporate/default.aspx">Career Opportunities</a></li>
+	</ul></li><li class="has-children"><a href="https://www.precisiondrilling.com/super-series-rigs/default.aspx">Super Series Rigs</a><ul class="level2">
+		<li><a href="https://www.precisiondrilling.com/super-series-rigs/Super-Single/default.aspx">Super Single</a></li><li><a href="https://www.precisiondrilling.com/super-series-rigs/Super-Triple-ST-1200/default.aspx">Super Triple 1200</a></li><li><a href="https://www.precisiondrilling.com/super-series-rigs/Super-Triple-ST-1500/default.aspx">Super Triple 1500</a></li>
+	</ul></li><li class="has-children"><a href="https://www.precisiondrilling.com/target-zero-and-training/default.aspx">Target Zero & Training</a><ul class="level2">
+		<li><a href="https://www.precisiondrilling.com/target-zero-and-training/target-zero/default.aspx">Target Zero</a></li><li><a href="https://www.precisiondrilling.com/target-zero-and-training/training/default.aspx">Training</a></li>
+	</ul></li><li class="has-children"><a href="https://www.precisiondrilling.com/investor-relations/default.aspx">Investor Relations</a><ul class="level2">
+		<li><a href="http://rigs.precisiondrilling.com/" target="_blank">Rig Locator</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/press-releases/default.aspx">Press Releases</a></li><li class="has-children"><a href="https://www.precisiondrilling.com/investor-relations/stock-information/stock-chart/default.aspx">Stock Information</a><ul class="level3">
+			<li><a href="https://www.precisiondrilling.com/investor-relations/stock-information/stock-chart/default.aspx">Stock Chart</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/stock-information/dividend-history/default.aspx">Dividend History</a></li>
+		</ul></li><li class="has-children"><a href="https://www.precisiondrilling.com/investor-relations/financial-information/annual-reports-and-aif/default.aspx">Financial Information & Public Filings</a><ul class="level3">
+			<li><a href="https://www.precisiondrilling.com/investor-relations/financial-information/annual-reports-and-aif/default.aspx">Annual Filings</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/financial-information/quarterly-results/default.aspx">Quarterly Results</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/financial-information/sedar-filings/default.aspx">SEDAR Filings</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/financial-information/sec-filings/default.aspx">SEC Filings</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/financial-information/fundamentals/default.aspx">Fundamentals</a></li>
+		</ul></li><li><a href="https://www.precisiondrilling.com/investor-relations/analyst-coverage/default.aspx">Analyst Coverage</a></li><li class="has-children"><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/overview/default.aspx">Corporate Governance</a><ul class="level3">
+			<li><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/overview/default.aspx">Overview</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/corporate-governance-guidelines/default.aspx">Corporate Governance Guidelines</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/corporate-officers/default.aspx">Corporate Officers</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/board-committees/default.aspx">Board Committees</a></li><li><a href="//s2.q4cdn.com/639056707/files/doc_downloads/2018/Final-Amendments-to-Precison-By-Law-No.-1-2.pdf">Corporate Bylaws</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/code-of-conduct/default.aspx">Code of Conduct</a></li><li><a href="https://secure.ethicspoint.com/domain/media/en/gui/24444/index.html" target="_blank">Ethics</a></li><li><a href="//s2.q4cdn.com/639056707/files/doc_downloads/2018/Majority-Voting-Policy.pdf">Majority Voting Policy</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/corporate-governance/Comparison-of-NYSE-US-Domestic-Company-Listing-Standards/default.aspx">Comparison of NYSE U.S. Domestic Company Listing Standards</a></li>
+		</ul></li><li><a href="https://www.precisiondrilling.com/investor-relations/webcasts-and-presentations/default.aspx">Webcasts & Presentations</a></li><li><a href="/corporate-responsibility">Corporate Responsibility</a></li><li><a href="https://www.precisiondrilling.com/investor-relations/rss-feeds/default.aspx">RSS Feeds</a></li>
+	</ul></li><li class="has-children"><a href="https://www.precisiondrilling.com/contact-us/default.aspx">Contact Us</a><ul class="level2">
+		<li><a href="https://www.precisiondrilling.com/contact-us/email-alerts/default.aspx">Email Alerts</a></li>
+	</ul></li>
+</ul></nav>
+</span></div>
+			<div class="PaneBreadcrumb">
+				<div class="container clearfix"><span class='BreadcrumbPaneDiv11'><div id="_ctrl0_ctl36_divModuleContainer" class="Breadcrumb"><a href="https://www.precisiondrilling.com/Home/default.aspx" id="_ctrl0_ctl36_hrefHome" class="BreadcrumbHomeLink">Home</a>
+
+<div class="ClearFix"></div>
+</div>
+</span></div>
+			</div>
+			<div class="PaneHeader2 clearfix"><span class='HeaderPane2Div8'><div id="_ctrl0_ctl27_divModuleContainer" class="HeaderImageContainer">
+	<div class="HeaderImage block">
+		<div class="centered">
+			
+		</div>
+	</div>
+</div>
+</span></div>
+		</div>
+		<div class="PaneContentInner">
+			<div class="PaneLeft clearfix"><span class='LeftPaneDiv'></span></div>
+			<div class="PaneContent clearfix"><span class='ContentPaneDiv'><span class='ContentPaneDiv1'><div id="_ctrl0_ctl57_divModuleContainer" class="BlankModuleContainer sliderHome">
+    
+    <div class="slider"></div>
+<script src="//s2.q4cdn.com/639056707/files/js/jquery-cycle2-min.js"></script>
+<script src="//q4widgets.q4web.com/downloads/module/q4.downloads.js"></script>
+<script>
+    var q4Investors = {
+        slider: $('.slider'),
+        isMobile: { 
+            Android: function() { return navigator.userAgent.match(/Android/i); }, 
+            BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); }, 
+            iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, 
+            Opera: function() { return navigator.userAgent.match(/Opera Mini/i); }, 
+            Windows: function() { return navigator.userAgent.match(/IEMobile/i); }, 
+            any: function() { return (this.Android() || this.BlackBerry() || this.iOS() || this.Opera() || this.Windows()); } 
+        },
+        buildSlider: function() {
+            var _ = this;
+            
+            this.slider.downloads({
+                listName: 'Slider',
+                itemTpl: function(inst){
+                    var img = _.isMobile.any() ? 'IconPath' : 'ThumbnailPath';
+
+                    return '{{#GetContentAssetListResult}}' +
+                        '<div data-image-large="{{ThumbnailPath}}" data-image-small="/{{IconPath}}" style="background-image: url({{'+ img +'}});" class="slider-item">' +
+                            '<div class="content-container block">' +
+                                '<h1 class="centered">{{{Title}}}</h1>' +
+                                '{{{Description}}}' +
+                            '</div>' +
+                            '<span class="spacer"></span>' +
+                        '</div>' +
+                    '{{/GetContentAssetListResult}}';
+                },
+                afterLoad: function(){
+                    _.slider.cycle({
+                        timeout: 6000,
+                        slides: '.slider-item',
+                        fx: 'scrollHorz',
+                        easing: 'jswing'
+                    });
+                }
+            });
+        }
+    }
+
+    q4Investors.buildSlider();
+
+</script>
+</div></span><span class='ContentPaneDiv2'><div id="_ctrl0_ctl60_divModuleContainer" class="BlankModuleContainer state-of-art ">
+    
+    <div class="bigContainer">
+    <div class="container clearfix">
+        <div class="mobile_banner-image mobile_banner-image--circle bigContainer">
+    <!-- <img src="//s2.q4cdn.com/639056707/files/design/2019/11/2019_09-16_Homepage_Corp_banner_FINAL2.jpg"> -->
+</div>
+        <div class="fr">
+            <h2 class="homeh2 white">Precision's Alpha™ technologies deliver exceptional value to our customers by reducing risks, time and overall well cost.</h2>
+            <p class="p22 white"><span class="bold">Alpha</span>  drives performance through its core strength of integrating data insights, human ingenuity, automation consistency and smart algorithms.</p>
+            <a class="more" href="/alpha">More</a>
+
+        </div>
+    </div>
+</div>
+
+</div></span><span class='ContentPaneDiv3'><div id="_ctrl0_ctl63_divModuleContainer" class="HtmlTextContainer home-corporate-responsibility ">
+    
+    <div class="ContentContainer">
+        <div class="bigContainer">
+<div class="container clearfix">
+
+<div class="corporate-responsibility-text">
+<div class="mobile_banner-image mobile_banner-image--circle ContentContainer">
+    <!-- <img src="//s2.q4cdn.com/639056707/files/design/2019/11/2019_09-16_Homepage_Corp_banner_FINAL2.jpg"> -->
+</div>
+    <h2 class="homeh2">Corporate Responsibility is an integral part of Precision’s culture, vision, mission and strategy.</h2>
+    <p class="p22">As an energy industry leader, we maintain the highest ethical standards and operate with great care in the communities where we live and work.
+</p>
+    <a class="more" href="/corporate-responsibility/default.aspx">More</a>
+</div>
+
+</div>
+</div>
+    </div>
+</div></span><span class='ContentPaneDiv5'><div id="_ctrl0_ctl69_divModuleContainer" class="BlankModuleContainer bigManualSlider">
+    
+    <div class="ManualSlider"></div>
+<script>
+    var q4Investors = {
+        slider: $('.ManualSlider'),
+        isMobile: { 
+            Android: function() { return navigator.userAgent.match(/Android/i); }, 
+            BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); }, 
+            iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, 
+            Opera: function() { return navigator.userAgent.match(/Opera Mini/i); }, 
+            Windows: function() { return navigator.userAgent.match(/IEMobile/i); }, 
+            any: function() { return (this.Android() || this.BlackBerry() || this.iOS() || this.Opera() || this.Windows()); } 
+        },
+        buildSlider: function() {
+            var _ = this;
+            
+            this.slider.downloads({
+                listName: 'ManualSlider',
+                itemTpl: function(inst){
+                    var img = _.isMobile.any() ? 'ThumbnailPath' : 'ThumbnailPath';
+
+                    return '{{#GetContentAssetListResult}}' +
+                        '<div data-image-large="{{ThumbnailPath}}" data-image-small="{{IconPath}}" style="background-image: url({{'+ img +'}});" class="slider-item">' +
+                           '<div class="container block">' +
+                            '<div class="content-container centered">' +
+                                '<h2>{{Title}}</h2>' +
+                                '<p>{{{Description}}}</p>' +
+                                '<a class="more" href="/careers/default.aspx">More</a>' +
+                             '</div>' +
+                            '</div>' +
+                            '<span class="spacer"></span>' +
+                        '</div>' +
+                    '{{/GetContentAssetListResult}}' +
+                    '<div class="cycle-pager"></div>';
+                },
+                afterLoad: function(){
+                    _.slider.cycle({
+                        timeout: 0,
+                        slides: '.slider-item',
+                        fx: 'scrollHorz',
+                        easing: 'jswing'
+                    });
+                }
+            });
+        }
+    }
+
+    q4Investors.buildSlider();
+
+</script>
+</div></span><span class='ContentPaneDiv6'><div id="_ctrl0_ctl72_divModuleContainer" class="HtmlTextContainer ManualSliderMobile ">
+    
+    <div class="ContentContainer">
+        <div class="bigContainer">
+<div class="container clearfix">
+	<div class="mobile_banner-image mobile_banner-image--circle ContentContainer">
+		 <!-- <img src="//s2.q4cdn.com/639056707/files/design/2019/11/2019_09-16_Homepage_Corp_banner_FINAL2.jpg"> -->
+	</div>
+	<h2 class="homeh2">High Performance requires passionate people</h2>
+    <p class="p22">Discover more about whether Precision Drilling is the right place for your career</p>
+    <a class="more" href="/careers/default.aspx" target="_blank">More</a>
+
+
+</div>
+</div>
+    </div>
+</div></span><span class='ContentPaneDiv7'><span id="_ctrl0_ctl75_lblDisplayType" style="display: none">Normal</span>
+
+<div id="_ctrl0_ctl75_divModuleContainer" class="ModuleContainer ModulePressRelease homePressRelease">
+	<div class="bigContainer">
+	<div class="container">
+    <div class="RssLinkTopContainer">
+        
+    </div>
+    <h1 id="_ctrl0_ctl75_lblTitle"><span id="_ctrl0_ctl75_lblModuleTitle" class="ModuleTitle">Precision Drilling In the News</span></h1>
+    
+    <div class="ModuleContainerInnerTop">
+        <div class="ModuleContainerInner">
+            
+                    
+                    
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl01_divItem" class="ModuleItemRow ModuleItem">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-the-Results-of-the-2021-Annual-Meeting-of-Shareholders/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl01_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>05.13.21</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-the-Results-of-the-2021-Annual-Meeting-of-Shareholders/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl01_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Corporation Announces the Results of the 2021 Annual Meeting of Shareholders</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl01_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-the-Results-of-the-2021-Annual-Meeting-of-Shareholders/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl01_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl02_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl03_divItem" class="ModuleItemRow ModuleItemAlt">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-2021-First-Quarter-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl03_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>04.22.21</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-2021-First-Quarter-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl03_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Corporation Announces 2021 First Quarter Unaudited Financial Results</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl03_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-2021-First-Quarter-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl03_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl04_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl05_divItem" class="ModuleItemRow ModuleItem">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation--2021-First-Quarter-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl05_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>04.06.21</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation--2021-First-Quarter-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl05_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Corporation  2021 First Quarter Results Conference Call and Webcast</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl05_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation--2021-First-Quarter-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl05_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl06_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl07_divItem" class="ModuleItemRow ModuleItemAlt">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Announces-Filing-of-Management-Information-Circular-and-Virtual-Only-Annual-Meeting-of-Shareholders/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl07_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>03.31.21</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Announces-Filing-of-Management-Information-Circular-and-Virtual-Only-Annual-Meeting-of-Shareholders/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl07_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Announces Filing of Management Information Circular and Virtual-Only Annual Meeting of Shareholders</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl07_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Announces-Filing-of-Management-Information-Circular-and-Virtual-Only-Annual-Meeting-of-Shareholders/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl07_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl08_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl09_divItem" class="ModuleItemRow ModuleItem">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-Filing-of-Annual-Disclosure-Documents/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl09_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>03.15.21</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-Filing-of-Annual-Disclosure-Documents/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl09_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Corporation Announces Filing of Annual Disclosure Documents</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl09_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-Filing-of-Annual-Disclosure-Documents/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl09_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl10_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl11_divItem" class="ModuleItemRow ModuleItemAlt">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-2020-Fourth-Quarter-and-Year-End-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl11_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>02.10.21</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-2020-Fourth-Quarter-and-Year-End-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl11_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Corporation Announces 2020 Fourth Quarter and Year End Unaudited Financial Results</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl11_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-Announces-2020-Fourth-Quarter-and-Year-End-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl11_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl12_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl13_divItem" class="ModuleItemRow ModuleItem">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-2020-Fourth-Quarter-and-End-of-Year-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl13_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>01.19.21</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-2020-Fourth-Quarter-and-End-of-Year-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl13_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Corporation 2020 Fourth Quarter and End of Year Results Conference Call and Webcast</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl13_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Corporation-2020-Fourth-Quarter-and-End-of-Year-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl13_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl14_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl15_divItem" class="ModuleItemRow ModuleItemAlt">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Announces-2020-Debt-Repayments-Exceeding-Guidance-and-Increases-Long-Term-Debt-Reduction-Target-Through-2022/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl15_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>01.05.21</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Announces-2020-Debt-Repayments-Exceeding-Guidance-and-Increases-Long-Term-Debt-Reduction-Target-Through-2022/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl15_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Announces 2020 Debt Repayments Exceeding Guidance and Increases Long-Term Debt Reduction Target Through 2022</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl15_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2021/Precision-Drilling-Announces-2020-Debt-Repayments-Exceeding-Guidance-and-Increases-Long-Term-Debt-Reduction-Target-Through-2022/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl15_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl16_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl17_divItem" class="ModuleItemRow ModuleItem">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Announces-Share-Consolidation/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl17_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>10.29.20</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Announces-Share-Consolidation/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl17_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Announces Share Consolidation</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl17_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Announces-Share-Consolidation/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl17_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl18_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl19_divItem" class="ModuleItemRow ModuleItemAlt">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Corporation-Announces-2020-Third-Quarter-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl19_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>10.22.20</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Corporation-Announces-2020-Third-Quarter-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl19_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Corporation Announces 2020 Third Quarter Unaudited Financial Results</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl19_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Corporation-Announces-2020-Third-Quarter-Unaudited-Financial-Results/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl19_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl20_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl21_divItem" class="ModuleItemRow ModuleItem">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Corporation-2020-Third-Quarter-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl21_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>10.05.20</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Corporation-2020-Third-Quarter-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl21_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Drilling Corporation 2020 Third Quarter Results Conference Call and Webcast</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl21_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Drilling-Corporation-2020-Third-Quarter-Results-Conference-Call-and-Webcast/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl21_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <span id="_ctrl0_ctl75_repeaterContent_ctl22_divider" class="ModuleSeparator"></span>
+                
+                    <div id="_ctrl0_ctl75_repeaterContent_ctl23_divItem" class="ModuleItemRow ModuleItemAlt">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Announces-the-Release-of-2020-Corporate-Responsibility-Report/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl23_hrefThumbnail" class="ModuleThumbnailLink"></a>
+                        <span class='ModuleDate'>09.14.20</span>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Announces-the-Release-of-2020-Corporate-Responsibility-Report/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl23_hrefHeadline" class="ModuleHeadlineLink"><span class="ModuleHeadline">Precision Announces the Release of 2020 Corporate Responsibility Report</span></a>
+                        <div class="ModuleBody"><span id="_ctrl0_ctl75_repeaterContent_ctl23_spanEllipse" class="ModuleEllipse"></span></div>
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/press-release-details/2020/Precision-Announces-the-Release-of-2020-Corporate-Responsibility-Report/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl23_hrefMoreLink" class="ModuleMoreLink"></a>                        
+                    </div>
+                
+                    <div class="ModuleFooter">
+                        <a href="https://www.precisiondrilling.com/investor-relations/press-releases/default.aspx" id="_ctrl0_ctl75_repeaterContent_ctl24_hrefViewAllBottom" class="ModuleViewAllLink more"><span id="_ctrl0_ctl75_repeaterContent_ctl24_lblViewAllBottom" class="ModuleViewAllBottomText">More</span></a>
+                    </div>
+                
+
+            <div class="RssLinkBottomContainer">
+                
+            </div>
+            <div class="ModuleNotFound"></div>
+        </div>
+    </div>
+     
+</div>
+</div>
+</div></span></span></div>
+			<div class="PaneRight clearfix"><span class='RightPaneDiv'></span></div>
+		</div>
+		<div class="FooterContainer">
+			<div class="PaneFooter clearfix">
+				<div class="container clearfix"><span class='FooterPaneDiv'><span class='FooterPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript">
+    try {
+        Typekit.load();
+    } catch(e) {
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("a.fancybox").fancybox();
+        $("a.fancy-video").fancybox({
+        	'maxWidth': 960,
+        	'width': '90%',
+        	'autoSize ': false
+        });
+
+        $("a.fancyboxIframe").fancybox({
+        	'maxWidth': 960,
+        	'width': '90%',
+        	'autoSize ': false,
+                 type: 'iframe'
+        });
+
+
+        $("a.fancy-map").fancybox({'padding': 0, 'width':900, 'autoScale':true});
+        $(".IRInside.SecondaryNav").prepend('<a href="/Home/investor-relations/default.aspx" class="more homeir">Back to the IR Homepage</a>');
+        $(".IRLanding.SecondaryNav").prepend('<h3>Explore the IR Site</h3>');
+        $(".StockQuoteNYSE .StockQuoteTitle").text("PDS:");
+        $(".StockHistoricalSelection select").selectbox();
+        //Main Nav stuff
+        $('.PaneNavigation .ModuleSearch .SearchInput').attr('placeholder', 'SEARCH THE SITE...');
+        $('.mainNav ul.level1 > li').addClass('clearfix');
+        $('.navbar-toggle, .close').click(function() {
+            $('.PaneNavigation').toggleClass('open');
+        });
+        $('.mainNav li.has-children a').after('<span class="forward"></span>');
+        $('.mainNav ul.level1 a').each(function() {
+            var pclass = $(this).text().replace(/[\s:&]/g, '');
+            $(this).addClass(pclass);	
+        });
+
+        //level2
+        $('.mainNav > ul.level1 > li').prepend('<span class="back">BACK</span>');
+        $('.mainNav span.forward').on('click', function() {
+            var $this = $(this).prev(), elem = $this.attr('class');
+            $('.mainNav, .PaneNavigation').addClass('openedChildren');
+            $('.mainNav').find('.' + elem).next().addClass('selectedElem').parent().addClass('selectedParent');
+        });
+        $('.mainNav .back').on('click', function() {
+            $(this).parent().removeClass('selectedParent').find('ul').removeClass('     selectedElem');
+            $('.mainNav, .PaneNavigation').removeClass('openedChildren');
+        });
+
+        //level3
+        $('.mainNav ul.level2 > li').prepend('<span class="back">BACK</span>');
+        $('.mainNav .level2 span.forward').on('click', function() {
+            var $this = $(this).prev(), elem = $this.attr('class');
+            $('.mainNav, .PaneNavigation').addClass('openedChildren3');
+            $('.mainNav').find('.' + elem).next().addClass('selectedElem').parent().addClass('selectedParent');
+        });
+        $('.mainNav .level2 .back').on('click', function() {
+            $(this).parent().removeClass('selectedParent').find('ul').removeClass('     selectedElem');
+            $('.mainNav, .PaneNavigation').removeClass('openedChildren3');
+        });
+
+        // Go to top script
+        $('a.goToTop').on('click', function(e) {
+            e.preventDefault();
+            var targetID = $(this).attr('href')
+            var elementPosition = $(targetID).offset().top
+            $('html,body').animate({
+                scrollTop : elementPosition
+            }, 'slow');
+        });
+
+        // transform the img in a background image for the HeaderImage div
+        if ($('.HeaderImageContainer img').length) {
+            $(".HeaderImageContainer").css("background-image", 'url("' + $('.HeaderImageContainer').find('img').attr('src') + '")');
+        }
+
+        // move content of H1(breadcrumb) and Page Description in HeaderImage div
+        $(".PaneBreadcrumb .Breadcrumb").clone().appendTo(".HeaderImage .centered");
+        $(".pageDescription").appendTo(".HeaderImage .centered");
+
+        // set PaneHeader2 with white background if there is no header image for that section
+        if ($('.HeaderImageContainer').css('background-image').indexOf("header_white_en.jpg") >= 0) {
+            $(".PaneHeader2").addClass('whiteBG');
+        }
+
+        //ACCORDION BUTTON ACTION
+        $('.big-link, .PersonContainer h3').click(function() {
+            $(this).next().slideToggle('slow');
+            $(this).toggleClass('active', 'nevermind');
+        });
+
+        //HIDE THE DIVS ON PAGE LOAD
+        $(".FaqAnswer, .PersonDetailsContainer").hide();
+        
+        
+        //remove sidenav if it's not on investors so it fixes the padding issue <,<
+        if ($(".Investors")[0] || $(".SectionInvestors")[0]) {
+        	//nothing
+        } else {
+        	$(".SecondaryNav").parent().remove();
+        }
+        
+        //add title to FAQ accordions
+        $(".contact-info-title").prepend("<h3>Contact information</h3>");
+
+    }); 
+</script>
+</div></span></span></div>
+			</div>
+			<div class="PaneFooter2 clearfix">
+				<div class="container clearfix"><span class='FooterPane2Div13'><div id="_ctrl0_ctl39_divModuleContainer" class="HtmlTextContainer Copyright">
+    
+    <div class="ContentContainer">
+        © Precision drilling corporation
+    </div>
+</div></span><span class='FooterPane2Div14'><div id="_ctrl0_ctl42_divModuleContainer" class="HtmlTextContainer">
+    
+    <div class="ContentContainer">
+        <a href="#pageClass" class="arrow arrow-up goToTop" title="Go To Top"></a>
+<a target="_blank" href="https://www.facebook.com/Precisiondrilling" class="arrow socialLink"><img alt="" src="//s2.q4cdn.com/639056707/files/design/social_facebook.png" /></a>
+<a target="_blank" href="https://www.linkedin.com/company/precision-drilling" class="arrow socialLink"><img alt="" src="//s2.q4cdn.com/639056707/files/design/social_linkedin.png" /></a>
+    </div>
+</div></span><span class='FooterPane2Div15'><div id="_ctrl0_ctl45_RightBlock" class="RightColumnBlock"></div>
+<div id="_ctrl0_ctl45_divModuleContainer" class="FooterLinks">
+	
+	<ul id="_ctrl0_ctl45_qlList" class="FooterLinks">
+		
+				
+				<li class="QuickLinkRow"><a target="_self" href="https://www.precisiondrilling.com/Site-Map/default.aspx">Site Map</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRowAlt"><a target="_self" href="https://www.precisiondrilling.com/legal-notice/default.aspx">Legal Notice</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRow"><a target="_self" href="https://www.precisiondrilling.com/privacy-policy/default.aspx">Privacy Policy</a>
+				
+			
+				<span class='QuickLinkSeparator' style='display:none'>|</span>
+				<li class="QuickLinkRowAlt"><a target="_blank" href="https://secure.ethicspoint.com/domain/media/en/gui/24444/index.html">Ethics</a>
+				
+			
+	</ul>
+</div>
+</span></div>
+			</div>
+			<div class="PaneQ4Footer clearfix"><span class='Q4FooterDiv17'><div id="_ctrl0_ctl48_divModuleContainer" class="HtmlTextContainer">
+    
+    <div class="ContentContainer">
+        <div class="map clearfix" id="map_canada" style="display: none;">
+<img alt="" src="//s2.q4cdn.com/639056707/files/design/fancy_map.jpg">
+<div class="fl">
+<h1>47</h1>
+<p>Canada new builds <br>
+from 2009 – 2016</p>
+</div>
+<div class="fl">
+<h1>64</h1>
+<p>U.S. new builds <br>
+from 2009 – 2016</p>
+</div>
+<div class="fl">
+<h1>28</h1>
+<p>Existing rig upgrades <br>
+from 2009 – 2016</p>
+</div>
+<div class="fl">
+<h1>93% </h1>
+<p>of fleet High Performance Tier 1 Rigs as of Q2, 2016</p>
+</div>
+</div>
+    </div>
+</div></span><span class='Q4FooterDiv18'><div id="_ctrl0_ctl51_divModuleContainer" class="HtmlTextContainer">
+    
+    <div class="ContentContainer">
+        <div class="map clearfix" id="map_global" style="display: none;">
+<img alt="" src="//s2.q4cdn.com/639056707/files/design/fancy_map_global.jpg" />
+<!--<div class="fl">
+<h1>000</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+</div>
+<div class="fl">
+<h1>000</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+</div>
+<div class="fl">
+<h1>000</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+</div>
+<div class="fl">
+<h1>000</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+</div>-->
+</div>
+    </div>
+</div></span><span class='Q4FooterDiv4'><div id="_ctrl0_ctl66_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript" src="//s2.q4cdn.com/639056707/files/js/jquery-appear.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.world-class-support h2').appear();
+		$(document.body).on('appear', '.world-class-support h2', function() {
+           $('.world-class-support').addClass('appeared');
+        });
+	});
+</script>
+
+</div></span><span class='Q4FooterDiv8'><div id="_ctrl0_ctl78_divModuleContainer" class="BlankModuleContainer">
+    
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.0/slick.min.js"></script>
+<script type="text/javascript">
+ $('.homePressRelease .ModuleSeparator,.homePressRelease .ModuleNotFound,.homePressRelease  .RssLinkBottomContainer,.homePressRelease .ModuleFooter ').remove();
+ $('.homePressRelease .ModuleContainerInner .ModuleViewAllLink').appendTo('.homePressRelease .container');
+$(function(){
+         $('.homePressRelease .ModuleContainerInner .ModuleViewAllLink').appendTo('.homePressRelease .container');
+	 $('.homePressRelease .ModuleContainerInner').slick({
+	  dots: false,
+	  infinite: false,
+	  speed: 300,
+	  slidesToShow: 3,
+	  slidesToScroll: 3,
+	  responsive: [
+		{
+		  breakpoint: 1023,
+		  settings: {
+			slidesToShow: 2,
+			slidesToScroll: 2
+		  }
+		},
+		{
+		  breakpoint: 767,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		}
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	  ]
+	});
+});
+</script>
+
+
+</div></span></div>
+		</div>
+	</div>
+</div>
+
+
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

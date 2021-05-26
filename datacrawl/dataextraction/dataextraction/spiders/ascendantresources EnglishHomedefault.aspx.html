@@ -1,0 +1,1281 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	Ascendant Resources Inc. - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":359,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" /><meta content="Ascendant Resources Inc. (TSX: ASND) is a mining company focused on operating its zinc-lead-silver El Mochito Mine in Honduras." name="description" /><meta content="KfDyFASsKSwUIJ1rVFS29ViPDLl9eHAIMX2ZkmBqPwc" name="google-site-verification" /><meta content="v-p7JndCjEhFSL-5mXu9oARsMdVNQrJBGW0SSEUpjjE" name="google-site-verification" /><link type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/765868678/files/css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" />
+<link type="image/x-icon" rel="icon" media="" href="//s21.q4cdn.com/765868678/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s21.q4cdn.com/765868678/files/favicon.ico" />
+<link rel="stylesheet" media="print" href="//s21.q4cdn.com/765868678/files/css/print.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" />
+<!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s21.q4cdn.com/765868678/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.ascendantresources.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/765868678/files/css/global.css?v=30367" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s21.q4cdn.com/765868678/files/css/client.css?v=29710" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s21.q4cdn.com/765868678/files/css/print.css" /><script type="text/javascript" src="//s21.q4cdn.com/765868678/files/js/q4.core.js"></script>
+<script type="text/javascript" src="//s21.q4cdn.com/765868678/files/js/q4.app.js"></script>
+<script type="text/javascript" src="//s21.q4cdn.com/765868678/files/js/icheck-min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="https://www.ascendantresources.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+(function ($) {
+    function initGaTracking(isp, org) {
+        isp = isp || '(not set)';
+        org = org || '(not set)';
+        $.each(trackingCodes, function (i, data) {
+            if (data.qualifier === "Q4") {
+                ga('create', data.trackingCode, 'auto'); // Q4 tracker
+                ga('set', { 'dimension1': isp });
+                ga('set', { 'dimension2': org });
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+            } else {
+                ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+                ga(data.qualifier + '.set', 'anonymizeIp', true);
+                ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+            }
+        });
+    }
+
+    var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-98267483-1'}];
+    var ipSessStorageKey = 'ipApiInfo';
+    var ipJsonStringified = sessionStorage.getItem(ipSessStorageKey);
+
+    if (ipJsonStringified) {
+        try {
+            var ipJsonParsed = JSON.parse(ipJsonStringified);
+            initGaTracking(ipJsonParsed.isp, ipJsonParsed.org);
+        } catch (e) {
+            console.error('Failed to JSON parse IP API session storage data\n', e);
+            initGaTracking();
+        }
+    } else {
+        $.getJSON('https://pro.ip-api.com/json/?key=xdjZbj0ZiVVozCo&fields=isp,org')
+            .done(function (ipJson) {
+                sessionStorage.setItem(ipSessStorageKey, JSON.stringify(ipJson));
+                initGaTracking(ipJson.isp, ipJson.org);
+            })
+            .fail(function () {
+                initGaTracking();
+            });
+    }
+})(jQuery);
+</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    <style>.home-page .ModuleContent .ModuleOuterContainer > h2:after {
+    margin-top: 15px;
+    background: #fec77c;
+    height: 11px;
+    width: 36px;
+}
+
+.slider .content-container.one.slidercontent {
+    width: 90%;
+  /*  max-width: 1170px; */
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0;
+}
+.slider .content-container.one.slidercontent h1 {
+  text-align: center;
+}
+.slider .content-container.one.slidercontent > p {
+    text-align: center;
+    color: #948A54;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+@media(max-width: 1024px){ 
+  .module-trigger-scroll {
+    max-width: 30px;
+  }
+}
+@media(max-width: 768px){
+  .slider .content-container.one.slidercontent h1 {
+    font-size: 32px;
+  }
+  .slider .content-container.one.slidercontent > p {
+    font-size: 24px;
+  }
+}
+
+.slider .content-container p {
+    height: auto;
+}
+
+.slider .content-container h1 {
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px #383838;
+    font-size: 55px !important;
+}
+@media(max-width: 768px){
+    .slider .content-container h1 {
+        font-size: 45px !important;
+    }
+}
+.home-page .PaneContentInner {
+    display: block;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 35px 20px 0;
+}
+.ascendant-slider:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+@media screen and (min-width:1500px) {
+    .slider .content-container {
+        padding: 0;
+    }
+}
+
+.home-page [class*="ContentPaneDiv"] > div {
+  margin-bottom: 30px;
+}
+.module-news-latest .ModuleOuterContainer > h2 {
+    color: #355c64;
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.module-news-latest .module_date-time {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.module-news-latest .module_headline-link {
+    font-size: 18px;
+    color: #959595;
+    line-height: 1.2;
+}
+@media(max-width: 768px){
+  .module-news-latest .module_date-time {
+    margin-bottom: 10px;
+  }
+  .module-news-latest .module_item-wrap {
+    margin-bottom: 25px;
+  }
+}
+.latest-data:not(.latest-data--home) a.js-icon-video:before {
+    margin: 0 5px;
+    content: "";
+    display: inline-block;
+    background: url(/files/icons/video_camera-512.png) no-repeat;
+    height: 26px;
+    width: 26px;
+    vertical-align: middle;
+    position: relative;
+    top: 3px;
+    background-size: contain;
+}
+.home-page .PaneContentInner {
+    display: block;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 35px 20px 0;
+}
+.home-page .slick-slider .slick-list,
+.home-page .slick-slider .slick-track {
+    height: 100%;
+}
+.home-page {
+    overflow: hidden;
+}
+.latest-data--home {
+    border-top: 1px solid #f1f1f1;
+    padding-top: 30px;
+}
+.latest-data--home .ModuleHeadlineLink {
+    font-size: 29px;
+    line-height: 1.2;
+    display: inline-block;
+    color: #598593;
+    text-align: left;
+}
+.latest-data--home .ModuleHeadlineLink:hover {
+    color: #a6adb1;
+}
+.latest-data--home .module-latest-data--icon {
+    max-width: 70px;
+    margin-top: 25px;
+    display: block;    
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+.latest-data--home .module-latest-data--icon.sheet {
+    background-image: url('/files/design/sheet.png');
+}
+.latest-data--home .module-latest-data--icon.sheet:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-image: url('/files/design/sheet-hover.png');
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+.latest-data--home .module-latest-data--icon.presentation {
+    background-image: url('/files/design/presentation.png');
+}
+.latest-data--home .module-latest-data--icon.presentation:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-image: url('/files/design/presentation-hover.png');
+    z-index: 2;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+.latest-data--home .ModuleHeadlineLink:hover .module-latest-data--icon:after {
+    opacity: 1;
+}
+.latest-data--home .grid > .col > .ModuleItemRow {
+    vertical-align: middle;
+    display: inline-block;
+    width: 45%;
+}
+.latest-data--home .grid.items > div {
+    vertical-align: middle;
+} 
+.latest-data--home .col > .ModuleItemRow:nth-child(2) {
+    padding-left: 38px;
+}
+@media(min-width: 769px){
+    .latest-data--home .col > .ModuleItemRow:nth-child(3) {
+        padding-left: 40px;
+    }
+}
+.latest-data--home .ModuleItemRow:last-child {
+    position: relative;
+}
+@media(min-width: 769px){
+    .latest-data--home .col.ModuleItemRow:last-child:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background: #f1f1f1;
+        left: -9%;
+    }
+}
+@media(max-width: 1024px){
+  .latest-data--home .ModuleHeadlineLink {
+        font-size: 18px;
+  }
+  .latest-data--home .module-latest-data--icon {
+        max-width: 50px;
+        height: 70px;
+        margin: 25px auto;
+  }
+  .latest-data--home .col > .ModuleItemRow:nth-child(2) {
+    padding-left: 25px;
+  }
+}
+@media(max-width: 768px){
+  .latest-data--home {
+    text-align: center;
+  }
+  .latest-data--home .grid > .ModuleItemRow:last-child {
+    border: none;
+    margin-top: 25px;
+  }
+  .latest-data--home .col > .ModuleItemRow:nth-child(2) {
+    padding-left: 0;
+  }
+}
+@media(max-width: 480px){
+    .latest-data--home .ModuleHeadlineLink {
+        font-size: 16px;
+    }
+    .latest-data--home .module-latest-data--icon {
+        margin: 10px auto 0;
+        max-width: 35px;
+        height: 50px;
+    }
+    .latest-data--home .ModuleItemRow {
+        margin-bottom: 25px;
+    }
+}
+.slider-wrap {
+    position: relative;
+}
+.module-trigger-scroll {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: 20px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% {
+    -webkit-transform: translate(-50%, 0);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -15px);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -15px);
+  }
+}
+.bounce {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: bounce;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+}
+.module-info-numbers--banner {
+    margin-top: 40px;
+    text-align: left;
+}
+.slider .content-container.one.slidercontent .module-info-numbers--banner .col {
+    text-align: center;
+}
+@media(min-width: 1025px){
+    .module-info-numbers--banner {
+        margin-top: 160px;
+        /*max-width: 1000px;*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .slider .content-container.one.slidercontent .module-info-numbers--banner .col {
+        padding: 0 20px;
+    }
+}
+.slider .content-container.one.slidercontent .module-info-numbers--banner .col > div {
+    text-align: center;
+    display: inline-block;
+}
+.slider .content-container.one.slidercontent .module-info-numbers--banner p {
+    font-size: 14px;
+    text-align: center;
+    text-align: left;
+   /* display: inline-block;*/
+}
+.slider .content-container.one.slidercontent .module-info-numbers--banner p > span {
+    font-size: 12px;
+    display: block;
+    text-align: left;
+}
+.module-info-numbers--banner h3 {
+    font-size: 65px;
+    font-size: 60px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #383838;
+}
+@media(max-width: 1100px){
+    .module-info-numbers--banner h3 {
+        font-size: 42px;
+    }
+}
+@media(max-width: 768px){
+    .module-info-numbers--banner {
+        display: none;
+    }
+}
+.unsub-footer {
+display: none;
+}</style>
+    <div id="pageClass" class="SectionHome PageDefault PageHome LayoutHomePageLayout Languageen-US home-page">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_Home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lnkPostback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="display: none"></a>
+                    
+<div class="LayoutDefault LayoutHomePage">
+	<div class="LayoutDefaultInner">
+		<div class="HeaderContainer">
+			<div class="PaneHeader" role="banner"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="ModuleContent accSkipLink">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <a href="#maincontent">Skip to main content</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="ModuleContent ClientLogo ClientLogo-mobileview">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <a href="/Home/default.aspx"><img src="//s21.q4cdn.com/765868678/files/design/logo.svg" alt="Ascendant"></a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="ModuleContent mobile-toggle">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <i class="q4i-square-menu"></i>
+        </div>
+    </div>
+</div></span></span></div>
+			<div class="PaneNavigation"><span class='NavigationPaneDiv4'><div id="_ctrl0_ctl15_divModuleContainer" class="ModuleContainer ModuleSearch search-wrap" role="search">
+    <div class="ModuleOuterContainer">
+        <h3 id="_ctrl0_ctl15_lblTitle"><span id="_ctrl0_ctl15_lblModuleTitle" class="ModuleTitle">Search Site</span></h3>
+        <div class="ModuleInnerContainer">
+            <div class="ModuleContainerInnerTop">
+                <div class="ModuleContentContainer">
+                    <span id="_ctrl0_ctl15_lblSearchText" class="SearchText"></span>
+                    <input name="_ctrl0$ctl15$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl15_txtSearchInput" class="SearchInput" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl15$btnSearch&#39;, &#39;&#39;); " />
+                    <input type="submit" name="_ctrl0$ctl15$btnSearch" value="Search" id="_ctrl0_ctl15_btnSearch" class="ModuleButton SearchButton" />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv6'><div id="_ctrl0_ctl18_divModuleContainer" class="ModuleContent ClientLogo">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <a href="/Home/default.aspx"><img src="//s21.q4cdn.com/765868678/files/design/logo.svg" alt="Ascendant"></a>
+        </div>
+    </div>
+</div>
+</span><span class='NavigationPaneDiv7'>
+<div role="navigation" aria-label="Primary">
+    <i class="q4i-block-exit menu-close"></i>
+    <nav class="navbar-collapse collapse "><ul class="level1">
+	<li class="selected has-children home"><a href="https://www.ascendantresources.com/English/Home/default.aspx">Home</a><ul class="level2">
+		<li class="has-children"><a href="https://www.ascendantresources.com/English/Company/About-Us/default.aspx">Company</a><ul class="level3">
+			<li><a href="https://www.ascendantresources.com/English/Company/About-Us/default.aspx">About Us</a></li><li><a href="https://www.ascendantresources.com/English/Company/Management/default.aspx">Management</a></li><li><a href="https://www.ascendantresources.com/English/Company/Board-of-Directors/default.aspx">Board</a></li><li><a href="https://www.ascendantresources.com/English/Company/Corporate-Governance/default.aspx">Corporate Governance</a></li>
+		</ul></li><li class="has-children"><a href="https://www.ascendantresources.com/English/Operations/default.aspx">Lagoa Salgada</a><ul class="level3">
+			<li><a href="https://www.ascendantresources.com/English/Operations/Overview/default.aspx">Overview</a></li><li><a href="https://www.ascendantresources.com/English/Operations/History/default.aspx">History</a></li><li><a href="https://www.ascendantresources.com/English/Operations/geology-and-mineralization/default.aspx">Geology and Mineralization</a></li><li><a href="https://www.ascendantresources.com/English/Operations/Exploration/default.aspx">Exploration</a></li><li><a href="https://www.ascendantresources.com/English/Operations/Mineral-Resources/default.aspx">Mineral Resources</a></li><li><a href="https://www.ascendantresources.com/English/Operations/PEA/default.aspx">PEA</a></li><li><a href="https://www.ascendantresources.com/English/Operations/Characteristics-of-VMS-Deposits/default.aspx">Characteristics of VMS Deposits</a></li><li><a href="https://www.ascendantresources.com/English/Operations/Technical-Report-Lagoa/default.aspx">Technical Report</a></li><li><a href="https://www.ascendantresources.com/English/Operations/Photo-Gallery/default.aspx">Photo Gallery</a></li>
+		</ul></li><li class="has-children"><a href="https://www.ascendantresources.com/English/Investors/press-releases/default.aspx">Investors</a><ul class="level3">
+			<li><a href="https://www.ascendantresources.com/English/Investors/press-releases/default.aspx">News</a></li><li><a href="https://www.ascendantresources.com/English/Investors/events/default.aspx">Events</a></li><li><a href="https://www.ascendantresources.com/English/Investors/presentations/default.aspx">Presentation & Materials </a></li><li><a href="https://www.ascendantresources.com/English/Investors/financial-reports/default.aspx">Financial Reports & Filings</a></li><li><a href="https://www.ascendantresources.com/English/Investors/media/default.aspx">Media</a></li><li><a href="https://www.ascendantresources.com/English/Investors/share-performance/default.aspx">Share Performance</a></li><li><a href="https://www.ascendantresources.com/English/Investors/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.ascendantresources.com/English/Investors/AGM-Materials/default.aspx">AGM Materials</a></li>
+		</ul></li><li class="has-children"><a href="https://www.ascendantresources.com/English/Responsibility/default.aspx">Responsibility</a><ul class="level3">
+			<li><a href="https://www.ascendantresources.com/English/Responsibility/ESTMA-Reports/default.aspx">ESTMA Reports</a></li>
+		</ul></li><li><a href="https://www.ascendantresources.com/English/Contact-Us/default.aspx">Contact</a></li>
+	</ul></li>
+</ul></nav>
+</div></span></div>
+			<div class="PaneHeader2"><span class='HeaderPane2Div8'><div id="_ctrl0_ctl24_divModuleContainer" class="ModuleContent inner-page-banner">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            
+        </div>
+    </div>
+</div>
+</span><span class='HeaderPane2Div9'><div id="_ctrl0_ctl27_divModuleContainer" class="ModuleContent stock-out">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <style>
+    /*
+    
+    .stock-out .section-three {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .stock-quote.three {
+        width: 185px;
+        right: 425px;
+    /*    right: 585px;  
+    }
+    .stock-out .stock-quote-gold {
+        width: 150px;
+        right: 620px;
+    }*/
+    
+    .PaneHeader2 .stock-quote {
+        max-width: 400px;
+        text-align: center;
+    }
+    .stock-quote-container {
+        text-align: center;
+        background: rgba(60, 60, 60, 0.67);
+        /* width: 100%; */
+        z-index: 8;
+        display: inline-block;
+        position: relative;
+    }
+    /*
+    .stock-quote.one .stock, .stock-quote.two .stock { 
+        max-width: 65px;
+    }*/
+    
+    .stock-quote-lead .price-stock {
+        margin-left: 20px;
+    }
+    .stock-quote-zinc .price-stock {
+        margin-left: 20px;
+    }
+    .stock-quote-goldv .price-stock {
+        margin-right: 0px; margin-left: 15px;
+    }
+    
+    @media screen and (max-width: 1023px) {
+      .PaneFooter .stock-quote-gold {
+        margin: 0 auto;
+        padding: 10px 0;
+      }
+    }
+    
+    .stock-out .price-stock.StockPriceUp, .stock-out .price-stock.StockPriceDown, .stock-quote-gold .price-stock.StockPriceUp, .stock-quote-gold .price-stock.StockPriceDown {
+        margin-left: 15px;
+        margin-right: 5px; 
+    }
+    
+    @media screen and (max-width: 899px) {
+        .stock-quote-goldv .section-one, .stock-quote-goldv .section-two {
+            vertical-align: middle;
+        }
+        .stock-quote.one .stock {
+            margin-right: 15px;
+        }
+        .stock-quote.one .price-stock {
+            margin: 0 auto;
+        }
+        .stock-quote {
+            width: 450px;
+        }
+        .stock-quote.one {
+            padding: 10px 0;
+        }
+    }
+     
+    </style>
+    <!--<div class="stock-quote stock-quote-tour">
+        <a href="http://www.elmochitotour.com" target="_blank">El Mochito Virtual Tour</a>
+    </div>-->
+    <div class="grid-no-gutter stock-quote-container">
+        <!-- <div class="stock-quote-gold inner-view-gold col-1-of-4"> -->
+        <div class="stock-quote one col-1-of-4 stock-quote-gold inner-view-gold">
+            <a href="/Investors/share-performance/default.aspx"><span class="stock-quote-goldv grid-no-gutter"></span></a>
+        </div>
+        <!-- <div class="stock-quote two col-1-of-4">
+            <span class="stock-quote-ootc grid-no-gutter"></span>
+        </div> -->
+        <div class="stock-quote three col-1-of-4">
+            <span class="stock-quote-zinc grid-no-gutter"></span>
+        </div>
+        <div class="stock-quote four col-1-of-4">
+            <span class="stock-quote-lead grid-no-gutter"></span>
+        </div>
+    </div>
+    <script src="//widgets.q4app.com/widgets/q4.stockQuote.1.0.1.min.js"></script>
+    <script>
+    $('.stock-quote-lead').stockQuote({
+        symbol: '$LLD',
+        exchange: 'Spot Lead',
+        stockTpl: (
+            '{{#.}}' +
+            '<span class="col col-1-of-4 stock" style="max-width: 60px;">LEAD</span>' +
+            // '<span class="col col-2-of-3 dis-clim">*Price per tonne</span>' +
+            '<span class="col col-1-of-4 text-right">' +
+    
+            '<span class="dollar">$</span>' +
+            '<span class="volume">{{tradePrice}}</span>' +
+            '</span>' +
+            '<span class="col col-1-of-8 price-stock {{uod}}"></span>' +
+            '<span class="col col-1-of-8 section-two">' +
+            '<span class="stock-val">{{change}}</span>' +
+            '<span class="val-per">{{percChange}}%</span>' +
+            '</span>' +
+            '{{/.}}'
+        )
+    });
+    
+    
+    
+    
+    $('.stock-quote-zinc').stockQuote({
+        symbol: '$LZZ',
+        exchange: 'Spot Zinc',
+        stockTpl: (
+            '{{#.}}' +
+            '<span class="col col-1-of-4 stock" style="max-width: 60px;">ZINC</span>' +
+            // '<span class="col col-2-of-3 dis-clim">*Price per tonne</span>' +
+            '<span class="col col-1-of-4 text-right">' +
+    
+            '<span class="dollar">$</span>' +
+            '<span class="volume">{{tradePrice}}</span>' +
+            '</span>' +
+            '<span class="col col-1-of-8 price-stock {{uod}}"></span>' +
+            '<span class="col col-1-of-8 section-two">' +
+            '<span class="stock-val">{{change}}</span>' +
+            '<span class="val-per">{{percChange}}%</span>' +
+            '</span>' +
+            '{{/.}}'
+        )
+    });
+    $('.stock-quote-goldv').stockQuote({
+        symbol: 'ASND.CA',
+        exchange: 'TSE',
+        stockTpl: (
+            '{{#.}}' +
+            '<span class="col col-1-of-4 stock" style="max-width: 43px;">TSX: ASND</span>' +
+            '<span class="col col-1-of-4 text-right section-one" style="max-width: 50px;">' +
+            '<span class="dollar">$</span>' +
+            '<span class="volume">{{tradePrice}}</span>' +
+            '</span>' +
+            '<span class="col col-1-of-8 price-stock {{uod}}"></span>' +
+            '<span class="col col-1-of-8 section-two">' +
+            '<span class="stock-val">{{change}}</span>' +
+            '<span class="val-per">{{percChange}}%</span>' +
+            '</span>' +
+            '{{/.}}'
+        )
+    });
+    
+    // $('.stock-quote-ootc').stockQuote({
+    //     symbol: 'ASDRF',
+    //     exchange: 'OOTC',
+    //     stockTpl: (
+    //         '{{#.}}' +
+    //         '<span class="col col-1-of-4 stock" style="max-width: 55px;">OTCQX: ASDRF</span>' +
+    //         '<span class="col col-1-of-4 text-right" style="max-width: 50px;">' +
+    //         '<span class="dollar">$</span>' +
+    //         '<span class="volume">{{tradePrice}}</span>' +
+    //         '</span>' +
+    //         '<span class="col col-1-of-8 price-stock {{uod}}"></span>' +
+    //         '<span class="col col-1-of-8 section-two">' +
+    //         '<span class="stock-val">{{change}}</span>' +
+    //         '<span class="val-per">{{percChange}}%</span>' +
+    //         '</span>' +
+    //         '{{/.}}'
+    //     )
+    // });
+    </script>cs
+        </div>
+    </div>
+</div></span><span class='HeaderPane2Div1'><div id="_ctrl0_ctl48_divModuleContainer" class="ModuleContent slider-wrap home-slider">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="ascendant-slider" style="height: 900px;">
+    <!-- <div class="videoWrapper">
+        <video id="myVideo" preload="auto" autoplay muted loop>
+            <source src="//s21.q4cdn.com/765868678/files/design/ascendant-updated-video.mp4" type="video/mp4" />
+        </video>
+    </div> -->
+    <div class="slider">
+        <div class="slider-item one">
+            <div class="container">
+                <div class="content-container slidercontent one">
+                    <h1 style="font-size: 40px !important;">Advancing a Premier Asset in a World Class Mineral Belt</h1>
+                    <p style="font-size: 30px">Opportunity  • Growth • Value Creation</p>
+                    <a href="/English/Operations/Overview" class="button">Learn More</a>
+<!--                     <div class="module-info-numbers--banner grid">
+                        <div class="col col-1-of-4 col-lc-1-of-3 col-md-1-of-1">
+                            <div>
+                                <p>2018 EBITDA Guidance<span>(US)</span></p>
+                                <h3>$32-40M</h3>
+                            </div>
+                        </div>
+                        <div class="col col-1-of-4 col-lc-1-of-3 col-md-1-of-1">
+                            <div>
+                                <p>2018 Free Cash Flow Guidance<span>(US)</span></p>
+                                <h3>$14-20M</h3>
+                            </div>
+                        </div>
+                        <div class="col col-1-of-4 col-lc-1-of-3 col-md-1-of-1">
+                            <div>
+                                <p>2018 ZnEq Production Guidance<span>&nbsp;</span></p>
+                                <h3>93-109M LBS</h3>
+                            </div>
+                        </div>
+                        <div class="col col-1-of-4 col-lc-1-of-3 col-md-1-of-1">
+                            <div>
+                                <p>Closing Q1 2018 Cash Balance<span>(US)</span></p>
+                                <h3>$13.1M</h3>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <span class="module-trigger-scroll bounce">
+        <img src="//s21.q4cdn.com/765868678/files/design/Arrow.png" alt="scroll arrow">
+    </span>
+</div>
+<script src="//widgets.q4app.com/widgets/q4.api.1.11.9.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.slider').slick({
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        responsive: [{
+            breakpoint: 1160,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows:true
+            }
+        }]
+    });
+    $('.module-trigger-scroll').on('click', function(){
+        var pxToScroll;
+        if($('.mobile-toggle').css("display") === 'none'){
+            pxToScroll = $('.PaneContentInner').offset().top - $('.menu-state').innerHeight()
+        }else{
+            pxToScroll = $('.PaneContentInner').offset().top
+        };
+        $('html, body').animate({
+            scrollTop: pxToScroll},
+            'slow');
+    });
+});
+// window-height-calculate
+$(window).on('load resize', function() {
+    var bannerHeight;
+    if($('.mobile-toggle').css("display") === 'none'){
+        bannerHeight = $(window).innerHeight() - $('.menu-state').innerHeight() + 7;
+    }else{
+        bannerHeight = $(window).innerHeight() - $('.PaneHeader').innerHeight();
+    };
+    $('.ascendant-slider').css('height', bannerHeight);
+});
+</script>
+        </div>
+    </div>
+</div></span></div>
+		</div>
+		<div class="PaneContentInner">
+			<main id="maincontent" tabindex="-1" class="grid-no-gutter">
+				<div class="PaneBreadcrumb col col-12-of-12"></div>
+				<div class="PaneLeft col col-12-of-12"><span class='LeftPaneDiv'></span></div>
+				<div class="PaneContent col col-12-of-12"><span class='ContentPaneDiv'><span class='ContentPaneDiv2'><div id="_ctrl0_ctl51_divModuleContainer" class="ModuleContent latest-data  latest-data--home">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div id='latest'></div>
+<script type="text/javascript" src="//widgets.q4app.com/widgets/q4.apimashup.1.11.2.min.js"></script>
+<script type="text/javascript">
+$('#latest').apiMashup({
+    loadingMessage: '<img src="//s21.q4cdn.com/765868678/files/images/loader.gif" alt="Loading">',
+    fetchAllYears: true,
+    template: (
+        '<div class="items grid">' +
+            '<div class="col col-1-of-2 col-md-1-of-1">'+
+                '{{#contentSources}}' +
+                    '{{#Presentations}}' +
+                        '{{#.}}' +
+                            '{{#docUrl}}' +
+                                '<div class="ModuleItemRow">' +
+                                    '<a class="ModuleHeadlineLink cor-pre" href="{{docUrl}}" target="_blank"><span>Corporate <br><strong>Presentation</strong></span><span class="sr-only">(opens in new window)</span><span class="module-latest-data--icon presentation"></span>'+
+                                    '</a>' +
+                                '</div>' +
+                            '{{/docUrl}}' +
+                        '{{/.}}' +
+                    '{{/Presentations}}' +
+                '{{/contentSources}}' +
+                    // '{{#Financials}}'+
+                        // '{{#.}}'+
+                            '<div class="ModuleItemRow">' +
+                                '<a class="ModuleHeadlineLink annual-report" href="/English/Investors/financial-reports/default.aspx"><span>Financial <br><strong>Reports</strong></span><span class="sr-only">(opens in new window)</span><span class="module-latest-data--icon sheet"></span>'+
+                                '</a>'+
+                            '</div>' +
+                        // '{{/.}}'+
+                    // '{{/Financials}}' +
+                '{{#contentSources}}' +
+                    '{{#FactSheet}}' +
+                        '{{#.}}' +
+                            '<div class="ModuleItemRow">' +
+                                '<a class="ModuleHeadlineLink fact-sheet" href="{{url}}" target="_blank"><span>Fact <br><strong>Sheet</strong></span><span class="sr-only">(opens in new window)</span><span class="module-latest-data--icon sheet"></span>'+
+                                '</a>' +
+                            '</div>' +
+                        '{{/.}}' +
+                    '{{/FactSheet}}' +
+                '{{/contentSources}}' +
+            '</div>'+
+            '<div class="ModuleItemRow col col-1-of-2 col-md-1-of-1">' +
+              '<p>Ascendant Resources Inc. is a Toronto-based mining company focused on the exploration and development of the highly prospective Lagoa Salgada VMS project located on the prolific Iberian Pyrite Belt in Portugal. Through focused exploration and aggressive development plans, the Company aims to unlock the inherent potential of the project, maximizing value creation for shareholders.</p>' +
+              '<p><a href="/English/Company/About-Us/default.aspx">Learn More</a></p>' +
+              // '<p>Lagoa Salgada contains over 12.8 million tonnes of M&I Resources and over 10.3 million tonnes in Inferred Resources and demonstrates typical mineralization characteristics of Iberian Pyrite Belt VMS deposits containing zinc, copper, lead, tin, silver and gold, and demonstrates. Extensive exploration upside potential lies both near deposit and at prospective step-out targets across the large 10,700ha property concession. The project also demonstrates compelling economics with scalability for future resource growth in the results of the Preliminary Economic Assessment completed in 2020. Located just 80km from Lisbon, Lagoa Salgada is easily accessible by road and surrounded by exceptional Infrastructure.</p>' +
+              // '<p>Ascendant holds a 21.25% interest in the Lagoa Salgada project through its 25% position in Redcorp - Empreendimentos Mineiros, Lda, (“Redcorp”) and has an earn-in opportunity to increase its interest in the project to 80%. Mineral & Financial Investments Limited owns the additional 75% of Redcorp. The remaining 15% of the project is held by Empresa de Desenvolvimento Mineiro, S.A. (EDM), a Portuguese Government owned company supporting the strategic development of the country’s mining sector. The Company’s interest in the Lagoa Salgada project offers a low-cost entry to a potentially significant exploration and development opportunity, already demonstrating its mineable scale.</p>' +
+              // '<p>From inception until April 2020, Ascendant owned and operated the El Mochito zinc, lead and silver mine in Honduras. In April 2020, the Company sold the mine in response to market conditions and in order to realign its focus on the development of Lagoa Salgada.  </p>' +
+                // '<a class="ModuleHeadlineLink js-icon-video" href="http://www.elmochitotour.com/" target="_blank">'+
+                //     '<img src="//s21.q4cdn.com/765868678/files/design/virtual-tour.png" alt="Virtual Tour">'+
+                //     '<span class="sr-only">(opens in new window)</span>'+
+                // '</a>'+
+            '</div>' +
+        '</div>'
+    ),
+    contentSources: {
+        'Presentations': {
+            type: 'presentations',
+            limit: 1
+        },
+        'FactSheet': {
+            type: 'downloads',
+            downloadType: 'FactSheet',
+            limit: 1
+        },
+        // 'Financials': {
+        //     type: 'financials',
+        //     tags: ['AR'],
+        //     limit: 1
+        // }
+    },
+    beforeRender: function(e, tpl) {
+        $.each(tpl.contentSources, function(i, source) {
+            var FactSheet = [],
+                Presentations = [],
+                Financials = [];
+            switch (true) {
+                case (source.id == "FactSheet"):
+                    FactSheet.push(source.items);
+                    source.FactSheet = FactSheet;
+                    break;
+                case (source.id == "Presentations"):
+                    Presentations.push(source.items);
+                    source.Presentations = Presentations;
+                    break;
+                // case (source.id == "Financials"):
+                //     var docs = source.items[0].docs;
+                //     Financials.push(source.items);
+                //     $.each(docs, function(){
+                //         if(this.docCategory==="Financial Report"){
+                //             source.items[0].url = this.docUrl;
+                //         }
+                //     });
+                //     source.Financials = Financials;
+            }
+        });
+        return tpl;
+    }
+});
+</script>
+
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv3'><div id="_ctrl0_ctl54_divModuleContainer" class="ModuleContent module-news-latest">
+    <div class="ModuleOuterContainer">
+        <h2 id="_ctrl0_ctl54_lblTitle"><span id="_ctrl0_ctl54_lblModuleTitle" class="ModuleTitle">Latest News.</span></h2>
+        <div class="ModuleInnerContainer">
+            <div class="module_container module_container--content grid"></div>
+
+<script>
+$('.module-news-latest .module_container--content').news({
+    fetchAllYears: true,
+    dateFormat: 'MM dd, yy',
+    limit: 3,
+    append: false,
+    loadingMessage: '<p class="module_loader"><i class="q4-icon_spinner"></i><span class="sr-only">Loading latest news...</span></p>',
+    template: (
+        '{{#items}}' +
+            '<div class="module_item col col-1-of-3 col-md-1-of-1">' +
+                '<div class="module_item-wrap">' +
+                    '<div class="module_date-time">' +
+                        '<span class="module_date-text">{{date}}</span>' +
+                    '</div>' +
+                    '<div class="module_headline">' +
+                        '<a class="module_headline-link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>{{title}}</a>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+        '{{/items}}'
+    ),
+    beforeRender: function(e, data) {
+        $.each(data.items, function(idx, item) {
+            var url = item.url.toLowerCase().split('.');
+
+            if ( url[url.length-1] == 'pdf' ) {
+                item.blank = true;
+            }
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span></span></div>
+				<div class="PaneRight col col-12-of-12"><span class='RightPaneDiv'></span></div>
+			</main>
+		</div>
+		<div class="FooterContainer">
+			<div class="PaneFooter" role="contentinfo"><span class='FooterPaneDiv'><span class='FooterPaneDiv11'><div id="_ctrl0_ctl30_divModuleContainer" class="ModuleContainer ModuleListContainer ModuleDownloadListWithTags download-report">
+    <div class="ModuleOuterContainer">
+        <h2 id="_ctrl0_ctl30_lblTitle" class="ModuleTitle"><span id="_ctrl0_ctl30_lblModuleTitle" class="ModuleTitle">Technical Report</span></h2>
+        <div class="ModuleInnerContainer">
+            <div id="_ctrl0_ctl30_divYears" class="ModuleYearNavContainer">
+                <div class="ModuleYearNavContainerInner">
+                    <span class="sr-only">Download year list</span>
+                    
+                            <a href="https://www.ascendantresources.com/English/Home/2017/default.aspx" id="_ctrl0_ctl30_repeaterYears_ctl00_hrefYear" class="ModuleYearLink">2017</a>
+                        
+                </div>
+            </div>
+            <div class="ModuleContentContainer">
+                
+                        <div class="ModuleHeader">
+                            
+                            <span id="_ctrl0_ctl30_repeaterContent_ctl00_lblHeader1" class="ModuleHeaderText ModuleHeaderText1">Date</span>
+                            <span id="_ctrl0_ctl30_repeaterContent_ctl00_lblHeader2" class="ModuleHeaderText ModuleHeaderText2">Download</span>
+                            <span id="_ctrl0_ctl30_repeaterContent_ctl00_lblDescriptionHeader" class="ModuleHeaderText ModuleHeaderDescription">Description</span>
+                        </div>
+                    
+                        <div class="ModuleFooter">
+                        </div>
+                    
+                <div class="ModuleNotFound">No items found for this year.</div>
+            </div>
+        </div>
+    </div>
+</div></span><span class='FooterPaneDiv13'><div id="_ctrl0_ctl33_divModuleContainer" class="MailingListSignupContainer MailingListForm footer-alerts dark" role="form">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            
+            <table class="MailingListTable" title="Fill out the following information to sign up for e-mail alerts">
+                <tr>
+                    <td colspan="2" class="IntroTextColumn">
+                        <span id="_ctrl0_ctl33_lblIntroText" class="IntroText"></span></td>
+                </tr>
+                <tr id="_ctrl0_ctl33_rowEmailAddress">
+	<td class="MailingListCol1">
+                        <label for="_ctrl0_ctl33_txtEmail" id="_ctrl0_ctl33_lblEmailAddressText">E-mail Address</label>
+                        <span id="_ctrl0_ctl33_lblRequiredEmailAddress" class="RequiredField">*</span></td>
+	<td class="MailingListCol2">
+                        <input name="_ctrl0$ctl33$txtEmail" type="text" maxlength="128" id="_ctrl0_ctl33_txtEmail" placeholder="Your E-mail" />
+                        
+                        
+                    </td>
+</tr>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </table>
+            
+            <br class="NoBr">
+            <div id="_ctrl0_ctl33_UCCaptcha_divModuleContainer" class="CaptchaContainer">
+<table id="_ctrl0_ctl33_UCCaptcha_Table1" cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2"><img src="https://www.ascendantresources.com/q4api/v4/captcha?clientId=_ctrl0_ctl33_UCCaptcha" id="_ctrl0_ctl33_UCCaptcha_Image1" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><b>Enter the code shown above.</b></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input name="_ctrl0$ctl33$UCCaptcha$txtCode" type="text" id="_ctrl0_ctl33_UCCaptcha_txtCode" />
+		</td>
+	</tr>
+</table>
+
+</div>
+            <br class="NoBr" />
+            <div class="GridActions">
+                <input type="submit" name="_ctrl0$ctl33$btnSubmit" value="Subscribe" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctrl0$ctl33$btnSubmit&quot;, &quot;&quot;, true, &quot;1b96b573-1e8f-4363-ab72-8e7776caa38c&quot;, &quot;&quot;, false, false))" id="_ctrl0_ctl33_btnSubmit" class="Button ActionButton" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="_ctrl0_ctl33_divEditSubscriberConfirmation" class="MailingListSignupContainer EditSubscriberConfirmation" style="DISPLAY:none;">
+    
+</div></span><span class='FooterPaneDiv14'><div id="_ctrl0_ctl36_divModuleContainer" class="ModuleContent footer-alerts unsub-footer">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="footer-unsubscribe inner-description">
+<p><a href="/email-alerts/default.aspx#unsubscribe-button" class="unsubscribe-link">Click here to Unsubscribe</a></p>
+</div>
+        </div>
+    </div>
+</div></span></span></div>
+			<div class="PaneFooter2"><span class='FooterPane2Div15'><div id="_ctrl0_ctl39_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="footer-quicklink">
+    <div class="grid-no-gutter">
+        <div class="col col-1-of-2 col-md-1-of-1">
+            <div class="grid-no-gutter">
+                <div class="col col-1-of-3 col-md-1-of-1 footer-img"><a href="/Home/default.aspx"><img src="//s21.q4cdn.com/765868678/files/icons/footer-logo.svg" alt="Ascendant"></a></div>
+                <div class="col col-1-of-3 col-md-1-of-2 col-sm-1-of-2 main-page-links first-sec">
+                    <p><a href="/Home/default.aspx">Home</a></p>
+                    <p><a href="/Company/Company-Profile/default.aspx">Company</a></p>
+                    <p><a href="/Operations/default.aspx">Operations</a></p>
+                </div>
+                <div class="col col-1-of-3 col-md-1-of-2 col-sm-1-of-2 main-page-links second-sec">
+                    <p><a href="/Investors/default.aspx">Investors</a></p>
+                    <p><a href="/Investors/press-releases/default.aspx">News</a></p>
+                    <p><a href="/Contact-Us/default.aspx">Contact</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col col-1-of-2 col-md-1-of-1">
+            <div class="grid-no-gutter social-and-media">
+                <div class="col col-1-of-2">
+                    <div class="Corp-loaction">
+                        <span class="header-social">Corporate Location :</span>
+                        <p class="footer-add-one">
+                            <span>501-110 Yonge Street</span><br>
+                            <span>Toronto, Ontario M5C 1T4</span>
+                        </p>
+                        <p class="footer-add-two">
+                            <span><img src="//s21.q4cdn.com/765868678/files/icons/phone-mobile-icon.jpg"><a href="tel:+1 647-769-0066">+1 647-796-0066</a></span><br>
+                            <span><img src="//s21.q4cdn.com/765868678/files/icons/phone-message-icon.jpg"><a href="mailto:info@ascendantresources.com">info@ascendantresources.com</a></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col col-1-of-2">
+                    <div class="social-links">
+                        <span class="header-social">Connect with Ascendant :</span>
+                        <div class="social-icon">
+                            <p class="footer-add-one"><a href="//twitter.com/AscendantRes" target="_blank"><span class="q4i-icon-twitter"></span></a>
+                            <a href="//www.linkedin.com/company/ascendant-resources-inc." target="_blank"><span class="q4i-icon-linkedIn"></span></a>
+                            <a href="//www.facebook.com/Ascendant-Resources-Inc-1170442393033653/" target="_blank"><span class="q4i-icon-facebook"></span></a>
+                            <a href="//www.instagram.com/ascendant.resources" target="_blank"><span class="q4i-icon-instagram"></span></a>
+                            <a href="//www.youtube.com/channel/UCBVWILN_kvzF3ylu8Wws5zg" target="_blank"><span class="q4i-icon-youtube"></span></a></p>
+
+                            <p class="footer-add-two legal"><a href="/Legal">Legal</a> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+</span><span class='FooterPane2Div16'><div id="_ctrl0_ctl42_divModuleContainer" class="ModuleContent copyright">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <div class="Copyright">Copyright © <span></span> Ascendant Resources Inc.</div>
+<script>
+    $('.Copyright > span').html( new Date().getFullYear() );
+</script>
+        </div>
+    </div>
+</div></span></div>
+			<div class="PaneQ4Footer"><span class='Q4FooterDiv17'><div id="_ctrl0_ctl45_divModuleContainer" class="ModuleContent">
+    <div class="ModuleOuterContainer">
+        
+        <div class="ModuleInnerContainer">
+            <script type="text/javascript">
+var q4App = $.extend(q4Defaults, {
+    init: function() {
+        var app = this;
+        app.cleanUp();
+        app.unWrapLink('a.StockPrice');
+        app.submitOnEnter('.ModuleSearch');
+        app.submitOnEnter('.MailingListUnsubscribeContainer');
+        app.validateSubmit('.ModuleSearch');
+        app.stockPosition();
+        app.search();
+        app.submitAppend();
+        app.commonCall();
+        app.accessibleNav($('.navbar-collapse'), 'level1');
+        app.onMenuToggle();
+        app.menuFix();
+        app.onMenuExit($('.PaneNavigation .menu-close'));
+        app.mobilemenuSecond();
+        app.confirmationScroll($('.MailingListSignupContainer'), 'strong');
+        app.menuTrigger();
+        $('.PreviewToolBar').previewToolbar();
+        $('.MailingListSignupContainer').captcha({});
+        $(window).load(function() {
+            app.emailFunctions();
+        });
+
+        $('.navbar-collapse .level2 .has-children').hover(
+            function() {
+                $(this).addClass('js--hover');
+            },
+            function() {
+                $(this).removeClass('js--hover');
+            }
+        );
+    },
+    /* module search */
+    search: function() {
+        $('.ModuleSearch h3').on('click', function() {
+
+            $(this).parents('.ModuleSearch').find('.ModuleInnerContainer').slideToggle();
+            $(this).parents('.ModuleSearch').toggleClass('active');
+        });
+    },
+    /* Button Name Change */
+    emailFunctions: function() {
+        $(".MailingListSignupContainer .GridActions .ActionButton").val('SUBSCRIBE');
+    },
+    /* Emailalerts Text */
+    submitAppend: function() {
+        $('.footer-alerts .MailingListCol2 input').after($('.footer-alerts .GridActions'));
+    },
+    /* FixedMenu */
+    menuFix: function() {
+        $('.PaneHeader, .PaneNavigation').wrapAll('<div class="menu-state"></div>');
+    },
+    /* Stock position */
+    stockPosition: function() {
+        var searchFlag = false;
+        $(window).on('load resize', function() {
+            if ($('.mobile-toggle').is(':visible')) {
+                if (searchFlag != true) {
+                    $('.ModuleSearch').prependTo('.HeaderPaneDiv');
+                    searchFlag = true;
+                }
+                $('.home-page .PaneHeader2 .stock-quote-gold').insertBefore('.home-page .PaneFooter .latest-data');
+                second();
+            } else {
+                searchFlag = false;
+                second();
+                $('.home-page .PaneFooter .stock-quote-gold').insertBefore('.home-page .PaneHeader2 .stock-quote.one');
+            }
+        });
+
+        function second() {
+            var s = $('.nav-Holder-menu ul.level1 li.has-children > a:contains("Technical Report")');
+            s.click(function(e) { e.preventDefault(); });
+        }
+    },
+    /* Stock position */
+    mobilemenuSecond: function() {
+        $('.PaneHeader2 div[role="navigation"]').before('<span class="nav-Holder">Nav Holder</span>');
+        $('.nav-Holder').on('click', function() {
+            $(this).toggleClass('active');
+            $('.PaneHeader2 div[role="navigation"]').slideToggle();
+        });
+        $('.nav-Holder').text($('.PaneHeader2 .bs-sidenav ul.level1 li.selected a').text());
+        $('.nav-Holder, .PaneHeader2 div[role="navigation"]').wrapAll('<div class="nav-Holder-menu"></div>');
+    },
+    /* Show the dropdown when first click in Ipad */
+    menuTrigger: function() {
+        $('.level1 li.has-children').on('click', function(e) {
+            if ($(window).width() == '1024') {
+                e.preventDefault();
+                $('li.has-children').removeClass("focused");
+                $(this).parent().addClass("focused");
+            }
+        });
+    },
+    /* For iCheck & Email Alert */
+    commonCall: function() {
+        $('.LayoutDefault input[type="checkbox"]').iCheck();
+        $('.MailingListSignupContainer').find('table').removeAttr('title');
+        $('.SecondaryNav li.has-children:contains("Technical Report") > ul > li:contains("Download Report")').each(function() {
+            _this = $(this)
+            $('.download-report .ModuleItemRow').each(function() {
+                var href = $(this).find('.ModuleHeadlineLink').attr('href');
+                size = $(this).find('.ModuleFileSizeText').text();
+                _this.find('a').attr('href', href);
+                _this.find('.file-size').text(size);
+            });
+        });
+    }
+});
+q4App.init();
+
+$('.hide').parent().hide();
+$('.noclick').on('click', function(e) {
+    e.preventDefault();
+});
+$('.bs-sidenav .level2 li a:contains("Begin Virtual Tour")').addClass('js-icon-video');
+$('.navbar-collapse .level3 li a:contains("History of El Mochito")').addClass("js--hidden");
+$('.navbar-collapse .level3 li a:contains("Virtual Tour")').addClass("js--hidden");
+</script>
+        </div>
+    </div>
+</div></span></div>
+		</div>
+	</div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,1113 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	Endeavour Silver - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":968,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1" name="viewport" /><meta content="qwx06ouymsh86vni3x8j29xwc9x54k" name="facebook-domain-verification" /><meta content="h15ah89v5kwzxqy1jbil1sx6uugolq" name="facebook-domain-verification" /><!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s22.q4cdn.com/579360173/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.edrsilver.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" />
+<link type="image/x-icon" rel="icon" media="" href="//s22.q4cdn.com/579360173/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s22.q4cdn.com/579360173/files/favicon.ico" />
+<link rel="stylesheet" media="print" href="//s22.q4cdn.com/579360173/files/css/print.css" />
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s22.q4cdn.com/579360173/files/css/global.css?v=61438" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s22.q4cdn.com/579360173/files/css/client.css?v=60943" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s22.q4cdn.com/579360173/files/css/print.css" /><script type="text/javascript" src="//s22.q4cdn.com/579360173/files/js/q4.core.1.0.0.min.js"></script>
+<script type="text/javascript" src="//s22.q4cdn.com/579360173/files/js/q4.app.1.0.1.min.js"></script>
+<script type="text/javascript" src="https://widgets.q4app.com/widgets/q4.api.1.12.8.min.js"></script>
+<script type="text/javascript" src="//s22.q4cdn.com/579360173/files/js/esc-pixel.js"></script>
+<script type="text/javascript" src="//s22.q4cdn.com/579360173/files/js/google-tag-manager.js"></script>
+<script type="text/javascript" src="//s22.q4cdn.com/579360173/files/js/facebook-pixel.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="https://www.edrsilver.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+(function ($) {
+    function initGaTracking(isp, org) {
+        isp = isp || '(not set)';
+        org = org || '(not set)';
+        $.each(trackingCodes, function (i, data) {
+            if (data.qualifier === "Q4") {
+                ga('create', data.trackingCode, 'auto'); // Q4 tracker
+                ga('set', { 'dimension1': isp });
+                ga('set', { 'dimension2': org });
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+            } else {
+                ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+                ga(data.qualifier + '.set', 'anonymizeIp', true);
+                ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+            }
+        });
+    }
+
+    var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-114515464-1'}];
+    var ipSessStorageKey = 'ipApiInfo';
+    var ipJsonStringified = sessionStorage.getItem(ipSessStorageKey);
+
+    if (ipJsonStringified) {
+        try {
+            var ipJsonParsed = JSON.parse(ipJsonStringified);
+            initGaTracking(ipJsonParsed.isp, ipJsonParsed.org);
+        } catch (e) {
+            console.error('Failed to JSON parse IP API session storage data\n', e);
+            initGaTracking();
+        }
+    } else {
+        $.getJSON('https://pro.ip-api.com/json/?key=xdjZbj0ZiVVozCo&fields=isp,org')
+            .done(function (ipJson) {
+                sessionStorage.setItem(ipSessStorageKey, JSON.stringify(ipJson));
+                initGaTracking(ipJson.isp, ipJson.org);
+            })
+            .fail(function () {
+                initGaTracking();
+            });
+    }
+})(jQuery);
+</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="Sectionhome PageDefault PageHome LayoutHomePageLayout Languageen-US">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lnkPostback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="display: none"></a>
+                    
+<div class="layout layout--home">
+    <div class="layout_inner">
+        <div class="layout_header">
+            <div class="pane pane--header grid--no-gutter">
+                <div class="pane_inner clearfix"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '428940894967527');
+  fbq('track', 'PageView');
+  
+  fbq('track', 'CompleteRegistration');
+
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=428940894967527&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','nz7bp');
+twq('track','PageView');
+</script>
+
+
+<!-- End Twitter universal website tag code -->
+
+
+
+
+
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="module module-embed module-skip">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a class="module-skip_link" href="#maincontent">Skip to main content</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><div id="_ctrl0_ctl12_divModuleContainer" class="module module-html module-social-media right">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="https://www.instagram.com/edrsilvercorp/" target="_blank"><i class="q4-icon_instagram"></i><span class="sr-only">Instagram</span></a>
+<a href="https://www.facebook.com/Endeavour-Silver-Corp-240360929429400/" target="_blank"><i class="q4-icon_facebook"></i><span class="sr-only">Facebook</span></a>
+<a href="https://twitter.com/edrsilvercorp?lang=en" target="_blank"><i class="q4-icon_twitter"></i><span class="sr-only">Twitter</span></a>
+<a href="https://ca.linkedin.com/company/endeavour-silver-corp" target="_blank"><i class="q4-icon_linkedin"></i><span class="sr-only">LinkedIn</span></a>
+<!-- <a href="https://www.youtube.com/channel/UCBL1EFppmbaKFAJU1gocB9A?app=desktop" target="_blank"><i class="q4-icon_youtube"></i><span class="sr-only">YouTube</span></a> -->
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv4'><div id="_ctrl0_ctl15_divContainer" class="right LanguageSwitch">
+    
+            
+            
+        
+            
+            <a id="_ctrl0_ctl15_rtrLanguages_ctl01_lnkLanguage" href="http://www.edrsilver.com/Spanish/home/default.aspx" href="javascript:__doPostBack(&#39;_ctrl0$ctl15$rtrLanguages$ctl01$lnkLanguage&#39;,&#39;&#39;)">Spanish</a>
+        
+</div></span><span class='HeaderPaneDiv5'><div id="_ctrl0_ctl18_divModuleContainer" class="module module-html module-contact-link right">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="/English/investor-info/contact/default.aspx">Contact</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv6'><div id="_ctrl0_ctl21_divModuleContainer" class="module module-subscribe module-subscribe--fancy module-subscribe--header right">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_introduction"><span id="_ctrl0_ctl21_lblIntroText" class="IntroText"><p>To receive notifications via email, enter your email address and select at least one subscription below. After submitting your information, you will receive an email. You must click the link in the email to activate your subscription. You can sign up for additional subscriptions at any time.</p><p class="module_required-text">* Required</p></span></div>
+            
+            <table class="module-subscribe_table module-subscribe_form">
+                
+                
+                <tr id="_ctrl0_ctl21_rowEmailAddress" class="module-subscribe_table-input module-subscribe_email">
+	<td>
+                        <label for="_ctrl0_ctl21_txtEmail" id="_ctrl0_ctl21_lblEmailAddressText">Email Address</label>
+                        <span id="_ctrl0_ctl21_lblRequiredEmailAddress" class="module_required">*</span>
+                        <input name="_ctrl0$ctl21$txtEmail" type="text" maxlength="128" id="_ctrl0_ctl21_txtEmail" class="module_input" placeholder="enter email address" />
+                        
+                        
+                    </td>
+</tr>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </table>
+            
+            <div id="_ctrl0_ctl21_UCCaptcha_divModuleContainer" class="CaptchaContainer">
+<table id="_ctrl0_ctl21_UCCaptcha_Table1" cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2"><img src="https://www.edrsilver.com/q4api/v4/captcha?clientId=_ctrl0_ctl21_UCCaptcha" id="_ctrl0_ctl21_UCCaptcha_Image1" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><b>Enter the code shown above.</b></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input name="_ctrl0$ctl21$UCCaptcha$txtCode" type="text" id="_ctrl0_ctl21_UCCaptcha_txtCode" />
+		</td>
+	</tr>
+</table>
+
+</div>
+            <div class="module_actions">
+                <input type="submit" name="_ctrl0$ctl21$btnSubmit" value="Sign-up for email alerts" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctrl0$ctl21$btnSubmit&quot;, &quot;&quot;, true, &quot;8f5d401d-2e59-4bdf-85cf-4b16104f7e21&quot;, &quot;&quot;, false, false))" id="_ctrl0_ctl21_btnSubmit" class="button module-subscribe_submit-button" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="_ctrl0_ctl21_divEditSubscriberConfirmation" class="module module-subscribe module_confirmation-container" style="DISPLAY:none;">
+    <div class="module_container module_container--outer">
+        <h2 class="module_title">Email Alert Sign Up Confirmation</h2>
+        <div class="module_container module_container--inner">
+            
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv7'><div id="_ctrl0_ctl24_divModuleContainer" class="module module-embed module-stock">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-stock-header">
+    <div class="module-stock-header_silver"></div>
+    <div class="module-stock-header_gold"></div>
+    <div class="module-stock-header_edr"></div>
+    <div class="module-stock-header_nyse"></div>
+</div>
+
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.7.min.js"></script>
+<script type="text/javascript">
+ $('.module-stock-header_silver').stockQuote({
+    stock: ['USD:XAG'],
+    changeCls: ['module-stock-header_down', 'module-stock-header_up'],
+    loadingMessage: '',
+    stockTpl: (
+        '{{#.}}' +
+            '<span class="module-stock-header_description1">Silver Price: </span>' +
+            '<span class="module-stock-header_stock-price">{{tradePrice}}</span>' +
+                '<span class="module-stock-header_change {{uod}}">' +
+                    '<span class="module-stock-header_indicator">{{uodSymbol}}</span>{{change}} ( {{percChange}}% )' +
+                '</span>' +
+            '<span class="module-stock-header_volume-text">Volume: </span>' +
+            '<span class="module-stock-header_volume">{{volume}}</span>' +
+            '<span class="module-stock-header_description3">Pricing delayed by 20 minutes</span>' +
+            '<span class="module-stock-header_date">{{tradeDate}}</span>' +
+        '{{/.}}'
+    ),
+});
+ $('.module-stock-header_gold').stockQuote({
+    stock: ['USD:XAU'],
+    changeCls: ['module-stock-header_down', 'module-stock-header_up'],
+    loadingMessage: '',
+    stockTpl: (
+        '{{#.}}' +
+            '<span class="module-stock-header_description1">Gold Price: </span>' +
+            '<span class="module-stock-header_stock-price">{{tradePrice}}</span>' +
+                '<span class="module-stock-header_change {{uod}}">' +
+                    '<span class="module-stock-header_indicator">{{uodSymbol}}</span>{{change}} ( {{percChange}}% )' +
+                '</span>' +
+            '<span class="module-stock-header_volume-text">Volume: </span>' +
+            '<span class="module-stock-header_volume">{{volume}}</span>' +
+            '<span class="module-stock-header_description3">Pricing delayed by 20 minutes</span>' +
+            '<span class="module-stock-header_date">{{tradeDate}}</span>' +
+        '{{/.}}'
+    ),
+});
+ $('.module-stock-header_edr').stockQuote({
+    stock: ['TSE:EDR'],
+    changeCls: ['module-stock-header_down', 'module-stock-header_up'],
+    loadingMessage: '',
+    stockTpl: (
+        '{{#.}}' +
+            '<span class="module-stock-header_description1">{{exchange}}.{{symbol}}: </span>' +
+            '<span class="module-stock-header_stock-price">{{tradePrice}}</span>' +
+                '<span class="module-stock-header_change {{uod}}">' +
+                    '<span class="module-stock-header_indicator">{{uodSymbol}}</span>{{change}} ( {{percChange}}% )' +
+                '</span>' +
+            '<span class="module-stock-header_volume-text">Volume: </span>' +
+            '<span class="module-stock-header_volume">{{volume}}</span>' +
+            '<span class="module-stock-header_description3">Pricing delayed by 20 minutes</span>' +
+            '<span class="module-stock-header_date">{{tradeDate}}</span>' +
+        '{{/.}}'
+    ),
+});
+$('.module-stock-header_nyse').stockQuote({
+    stock: ['NYSE:EXK'],
+    changeCls: ['module-stock-header_down', 'module-stock-header_up'],
+    loadingMessage: '',
+    stockTpl: (
+        '{{#.}}' +
+            '<span class="module-stock-header_description1">{{exchange}}.{{symbol}}: </span>' +
+            '<span class="module-stock-header_stock-price">{{tradePrice}}</span>' +
+                '<span class="module-stock-header_change {{uod}}">' +
+                    '<span class="module-stock-header_indicator">{{uodSymbol}}</span>{{change}} ( {{percChange}}% )' +
+                '</span>' +
+            '<span class="module-stock-header_volume-text">Volume: </span>' +
+            '<span class="module-stock-header_volume">{{volume}}</span>' +
+            '<span class="module-stock-header_description3">Pricing delayed by 20 minutes</span>' +
+            '<span class="module-stock-header_date">{{tradeDate}}</span>' +
+        '{{/.}}'
+    ),
+});
+
+$('.module-stock-header').slick({
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: false,
+    swipe: false,
+    draggable: true,
+    prevArrow: '<i class="q4-icon_chevron-left slick-prev"></i>',
+    nextArrow: '<i class="q4-icon_chevron-right slick-next"></i>',
+    variableWidth:true,
+    responsive: [
+        {
+          breakpoint: 670,
+          settings: {
+            variableWidth:false,
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            variableWidth:false,
+            slidesToShow: 2
+          }
+        }
+    ]
+});
+</script>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--banner grid--no-gutter">
+                <div class="pane_inner"><span class='HeaderPane2Div8'><div id="_ctrl0_ctl27_divModuleContainer" class="module module-embed module-logo grid_col grid_col--1-of-5 grid_col--lc-1-of-2 grid_col--md-1-of-2 grid_col--sm-3-of-4">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="/English/home/default.aspx"><img src='//s22.q4cdn.com/579360173/files/design/EndeavourSilver-croped.png' alt="Endeavour Silver"></a>
+        </div>
+    </div>
+</div></span><span class='HeaderPane2Div9'><nav class="nav nav--main grid_col grid_col--4-of-5"><ul class="level1">
+	<li class="has-children"><a href="http://www.edrsilver.com/English/about-endeavour/default.aspx">About <br> Endeavour</a><ul class="level2">
+		<li><a href="http://www.edrsilver.com/English/about-endeavour/management/default.aspx">Management</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/directors/default.aspx">Directors</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/corporate-directory/default.aspx">Corporate Directory</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/corporate-governance/default.aspx">Corporate Governance</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/annual-meeting/default.aspx">Annual Meeting</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/icare-values/default.aspx">ICARE Values</a></li>
+	</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/default.aspx">Mining <br> Assets</a><ul class="level2">
+		<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/overview/default.aspx">Operations</a><ul class="level3">
+			<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/overview/default.aspx">Guanacevi</a><ul class="level4">
+				<li><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/history/default.aspx">History</a></li><li><a href="//s22.q4cdn.com/579360173/files/tech_reports/en/2018/Guanacevi_Amended_Mar2017_TechReport_Final.pdf" target="_blank">Technical Reports</a></li><li><a href="https://youtu.be/kg5jBLsrHhI" target="_blank">Mine Video</a></li>
+			</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/operations/bolanitos/overview/default.aspx">Bolanitos</a><ul class="level4">
+				<li><a href="http://www.edrsilver.com/English/mining-assets/operations/bolanitos/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/bolanitos/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/bolanitos/history/default.aspx">History</a></li><li><a href="//s22.q4cdn.com/579360173/files/tech_reports/en/2018/Bolanitos_Amended_Mar2017_TechReport_Final.pdf" target="_blank">Technical Reports</a></li><li><a href="https://youtu.be/oxIExRYdVYk" target="_blank">Mine Video</a></li>
+			</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/operations/el-compas/overview/default.aspx">El Compas</a><ul class="level4">
+				<li><a href="http://www.edrsilver.com/English/mining-assets/operations/el-compas/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/el-compas/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="//s22.q4cdn.com/579360173/files/tech_reports/en/El_Compas_Mar2017_TechReport.pdf" target="_blank">Technical Reports</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/el-compas/updates/default.aspx">Updates</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/development/terronera/default.aspx">Development</a><ul class="level3">
+			<li class="has-children"><a href="/mining-assets/development/terronera/overview">Terronera</a><ul class="level4">
+				<li><a href="http://www.edrsilver.com/English/mining-assets/development/terronera/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/development/terronera/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="//s22.q4cdn.com/579360173/files/doc_downloads/2020/08/2020-Terronera-Technical-Report-final.pdf" target="_blank">2020 Technical Report</a></li><li><a href="//s22.q4cdn.com/579360173/files/doc_downloads/2020/07/PFS-2020_July14-final-(1).pdf">PFS Presentation</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/parral/overview/default.aspx">Exploration</a><ul class="level3">
+			<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/parral/overview/default.aspx">Mexico</a><ul class="level4">
+				<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/parral/overview/default.aspx">Parral</a><ul class="level5">
+					<li><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/parral/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/parral/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="//s22.q4cdn.com/579360173/files/tech_reports/en/2020/RPA-EDR-Parral-Project-NI-43-101-Report-FINAL-March-16-2020.pdf" target="_blank">Technical Reports</a></li>
+				</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/lourdes/overview/default.aspx">Lourdes</a><ul class="level5">
+					<li><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/lourdes/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/lourdes/highlights/default.aspx">Highlights</a></li><li><a href="https://www.edrsilver.com/files/doc_presentations/2020/08/ppp.lourdes.july2020.pdf" target="_blank">Presentation</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/lourdes/maps-and-sections/default.aspx">Maps & Sections</a></li>
+				</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/guadalupe-y-calvo/overview/default.aspx">Guadalupe y Calvo</a><ul class="level5">
+					<li><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/guadalupe-y-calvo/overview/default.aspx">Overview</a></li><li><a href="https://www.edrsilver.com/files/doc_presentations/2020/08/ppp.gyc.july2020.pdf" target="_blank">PRESENTATION</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/guadalupe-y-calvo/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="//s22.q4cdn.com/579360173/files/tech_reports/en/gyc_tech_report_march_2013.pdf" target="_blank">Technical Reports</a></li>
+				</ul></li>
+			</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/cerro-marquez/overview/default.aspx">Chile</a><ul class="level4">
+				<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/cerro-marquez/overview/default.aspx">Cerro Marquez</a><ul class="level5">
+					<li><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/cerro-marquez/overview/default.aspx">Overview</a></li>
+				</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/aida/overview/default.aspx">Aida</a><ul class="level5">
+					<li><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/aida/overview/default.aspx">Overview</a></li>
+				</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/paloma/overview/default.aspx">Paloma</a><ul class="level5">
+					<li><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/paloma/overview/default.aspx">Overview</a></li>
+				</ul></li>
+			</ul></li>
+		</ul></li><li><a href="http://www.edrsilver.com/English/mining-assets/reserves-and-resources/default.aspx">Reserves and <br> Resources</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/photo-gallery/default.aspx">Photo Gallery</a></li>
+	</ul></li><li><a href="http://csr.edrsilver.com/" target="_blank">Sustainability</a></li><li class="has-children"><a href="http://silverhub.edrsilver.com/English/about-silver/silver-updates/default.aspx">About <br> Silver</a><ul class="level2">
+		<li><a href="http://silverhub.edrsilver.com/English/about-silver/silver-updates/default.aspx">Silver Updates</a></li><li><a href="http://silverhub.edrsilver.com/English/about-silver/silver-basics/default.aspx">Silver Basics</a></li>
+	</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/investor-info/default.aspx">Investor <br> Info</a><ul class="level2">
+		<li><a href="http://www.edrsilver.com/English/investor-info/why-invest/default.aspx">Why Invest</a></li><li><a href="http://www.edrsilver.com/English/investor-info/stock-info/default.aspx">Stock Info</a></li><li><a href="http://www.edrsilver.com/English/investor-info/financial-reports/default.aspx">Financial Reports</a></li><li><a href="//s22.q4cdn.com/579360173/files/doc_presentations/2021/05/May-13-2021-website.pdf" target="_blank">Presentation</a></li><li><a href="//s22.q4cdn.com/579360173/files/doc_financials/2021/q1/Endeavour_8.5x11_FactSheet_May-10-2021.pdf" target="_blank">Fact Sheet</a></li><li><a href="http://www.edrsilver.com/English/investor-info/events/default.aspx">Events</a></li><li><a href="http://www.edrsilver.com/English/investor-info/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="http://www.edrsilver.com/English/investor-info/Webcast/default.aspx">Webcasts</a></li><li><a href="http://www.edrsilver.com/English/investor-info/regulatory-filings/default.aspx">Regulatory Filings</a></li><li><a href="http://www.edrsilver.com/English/investor-info/contact/default.aspx">Contact</a></li>
+	</ul></li><li><a href="http://www.edrsilver.com/English/ceo-corner/default.aspx">Chairman <br> Corner</a></li><li><a href="http://www.edrsilver.com/English/news/default.aspx">News</a></li><li><a href="http://www.edrsilver.com/English/careers/default.aspx">Careers</a></li>
+</ul></nav></span><span class='HeaderPane2Div10'><div id="_ctrl0_ctl33_divModuleContainer" class="module module-embed layout_toggle grid_col grid_col--1-of-2 grid_col--sm-1-of-4">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <i class="q4-icon_menu" tabindex="0"></i>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--breadcrumb">
+                <div class="pane_inner"><span class='BreadcrumbPaneDiv1'><div id="_ctrl0_ctl75_divModuleContainer" class="module module-embed module-slider dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <style type="text/css">
+    ul.module-slider_nav {
+        display: none;
+    }
+    ul.module-slider_nav.static-links {
+        display: block;
+        z-index: 999;
+    }
+    </style>
+    <div class="module_container module_container--content"></div>
+    <div class="module-fact-sheet_container"></div>
+    <div class="module-construction-update_container"></div>
+    <script type="text/javascript" src="//widgets.q4app.com/widgets/requireslib/moment.min.js"></script>
+    <script type="text/javascript" src="https://widgets.q4app.com/widgets/q4.apimashup.1.11.6.min.js"></script>
+    <script type="text/javascript">
+    var links = [
+    '    <ul class="module-slider_nav static-links">' +
+    '        <li><a href="/English/investor-info/financial-reports/default.aspx">Financial Reports</a></li>' +
+        // Presentation
+    '        <li><a href="//s22.q4cdn.com/579360173/files/doc_presentations/2021/05/May-13-2021-website.pdf" target="_blank">Investor Presentation</a></li>' +
+    '        <li><a href="//s22.q4cdn.com/579360173/files/doc_downloads/2021/05/ES-Full-Report_210511-01.pdf" target="_blank">Sustainability Report</a></li>' +
+    '        <li><a href="/English/investor-info/stock-info/default.aspx">Stock Info</a></li>' +
+    '        <li><a href="//s22.q4cdn.com/579360173/files/doc_downloads/2020/07/PFS-2020_July14-final-(1).pdf" target="_blank">Terronera Final PFS 2020 Webinar</a></li>' +
+    '    </ul>' ];
+    $('.module-slider').apiMashup({
+        showAllYears: true,
+        itemContainer: '.module_container--content',
+        contentSources: {
+            "downloads": {
+                type: 'downloads',
+                downloadType: 'Slider',
+                template: (
+                   '<div class="module_item" style="background-image: url({{thumb}});" data-source="{{contentSourceID}}"><div class="module_item-wrap">'+
+                        '<div class="module-slider_title"><h1>{{{title}}}</h1></div>'+
+                        '<div class="module-slider_description">{{{description}}}</div>'+
+                    '</div></div>'
+                )
+            }
+        },
+        beforeRenderItems: function(e, data) {
+            $.each(data.items, function(i, item){
+                // add links to description
+                item.description = (item.description + links);
+            });
+        },
+        complete: function(e) {
+            q4App.addToCalendar('[data-source="events"]');
+            // On before slide change
+            $(e.target).find('.module_container--content').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+                $(e.target).find('.slick-dots li').removeClass('slick-active').attr('aria-hidden','true');
+                $(e.target).find('.slick-dots li button').focus(function() {
+                this.blur();
+                });
+            });
+            $(e.target).find('.module_container--content').on('afterChange', function(event, slick, currentSlide, nextSlide){
+              $(e.target).find('.module_container--content .video_player').each(function(i,slide){
+                $(slide)[0].pause();
+                $(slide)[0].currentTime = 0;
+              });
+              $(e.target).find('.module_container--content .slick-current .video_player')[0].play();
+            });
+            $(e.target).find('.module_container--content').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: true,
+                autoplay: true,
+                pauseOnHover: false,
+                pauseOnDotsHover: false,
+                autoplaySpeed: 8000
+            });
+            $('.module-fact-sheet').downloads({
+                fetchAllYears: true,
+                sortAscending: false,
+                loadingMessage: '',
+                limit:1,
+                downloadType: "FactSheet",
+                template: (
+                        '{{#items}}' +
+                            '<a href="{{url}}" target="_blank">Fact Sheet</a>' +
+                        '{{/items}}' 
+                )
+            });
+    
+            $('.module-construction-update').downloads({
+                fetchAllYears: true,
+                sortAscending: false,
+                loadingMessage: '',
+                limit:1,
+                downloadType: "ConstructionUpdate",
+                template: (
+                        '{{#items}}' +
+                            '<a href="{{url}}" target="_blank">Construction Update</a>' +
+                        '{{/items}}' 
+                )
+            });
+           
+    
+            $('.video_player').trigger('play');
+        }
+    });
+    
+    
+    
+    
+    </script>
+    
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--navigation">
+                <div class="pane_inner"><span class='NavigationPaneDiv12'><nav class="nav nav--secondary dark"><ul class="level1">
+	<li class="has-children"><a href="http://www.edrsilver.com/English/about-endeavour/default.aspx">About <br> Endeavour</a><ul class="level2">
+		<li><a href="http://www.edrsilver.com/English/about-endeavour/management/default.aspx">Management</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/directors/default.aspx">Directors</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/corporate-directory/default.aspx">Corporate Directory</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/corporate-governance/default.aspx">Corporate Governance</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/annual-meeting/default.aspx">Annual Meeting</a></li><li><a href="http://www.edrsilver.com/English/about-endeavour/icare-values/default.aspx">ICARE Values</a></li>
+	</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/default.aspx">Mining <br> Assets</a><ul class="level2">
+		<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/overview/default.aspx">Operations</a><ul class="level3">
+			<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/overview/default.aspx">Guanacevi</a><ul class="level4">
+				<li><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/guanacevi/history/default.aspx">History</a></li><li><a href="//s22.q4cdn.com/579360173/files/tech_reports/en/2018/Guanacevi_Amended_Mar2017_TechReport_Final.pdf" target="_blank">Technical Reports</a></li><li><a href="https://youtu.be/kg5jBLsrHhI" target="_blank">Mine Video</a></li>
+			</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/operations/bolanitos/overview/default.aspx">Bolanitos</a><ul class="level4">
+				<li><a href="http://www.edrsilver.com/English/mining-assets/operations/bolanitos/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/bolanitos/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/bolanitos/history/default.aspx">History</a></li><li><a href="//s22.q4cdn.com/579360173/files/tech_reports/en/2018/Bolanitos_Amended_Mar2017_TechReport_Final.pdf" target="_blank">Technical Reports</a></li><li><a href="https://youtu.be/oxIExRYdVYk" target="_blank">Mine Video</a></li>
+			</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/operations/el-compas/overview/default.aspx">El Compas</a><ul class="level4">
+				<li><a href="http://www.edrsilver.com/English/mining-assets/operations/el-compas/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/el-compas/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="//s22.q4cdn.com/579360173/files/tech_reports/en/El_Compas_Mar2017_TechReport.pdf" target="_blank">Technical Reports</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/operations/el-compas/updates/default.aspx">Updates</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/development/terronera/default.aspx">Development</a><ul class="level3">
+			<li class="has-children"><a href="/mining-assets/development/terronera/overview">Terronera</a><ul class="level4">
+				<li><a href="http://www.edrsilver.com/English/mining-assets/development/terronera/overview/default.aspx">Overview</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/development/terronera/maps-and-sections/default.aspx">Maps & Sections</a></li><li><a href="//s22.q4cdn.com/579360173/files/doc_downloads/2020/08/2020-Terronera-Technical-Report-final.pdf" target="_blank">2020 Technical Report</a></li><li><a href="//s22.q4cdn.com/579360173/files/doc_downloads/2020/07/PFS-2020_July14-final-(1).pdf">PFS Presentation</a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/parral/overview/default.aspx">Exploration</a><ul class="level3">
+			<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/parral/overview/default.aspx">Mexico</a><ul class="level4">
+				<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/parral/overview/default.aspx">Parral</a></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/lourdes/overview/default.aspx">Lourdes</a></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/mexico/guadalupe-y-calvo/overview/default.aspx">Guadalupe y Calvo</a></li>
+			</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/cerro-marquez/overview/default.aspx">Chile</a><ul class="level4">
+				<li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/cerro-marquez/overview/default.aspx">Cerro Marquez</a></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/aida/overview/default.aspx">Aida</a></li><li class="has-children"><a href="http://www.edrsilver.com/English/mining-assets/exploration/chile/paloma/overview/default.aspx">Paloma</a></li>
+			</ul></li>
+		</ul></li><li><a href="http://www.edrsilver.com/English/mining-assets/reserves-and-resources/default.aspx">Reserves and <br> Resources</a></li><li><a href="http://www.edrsilver.com/English/mining-assets/photo-gallery/default.aspx">Photo Gallery</a></li>
+	</ul></li><li><a href="http://csr.edrsilver.com/" target="_blank">Sustainability</a></li><li class="has-children"><a href="http://silverhub.edrsilver.com/English/about-silver/silver-updates/default.aspx">About <br> Silver</a><ul class="level2">
+		<li><a href="http://silverhub.edrsilver.com/English/about-silver/silver-updates/default.aspx">Silver Updates</a></li><li><a href="http://silverhub.edrsilver.com/English/about-silver/silver-basics/default.aspx">Silver Basics</a></li>
+	</ul></li><li class="has-children"><a href="http://www.edrsilver.com/English/investor-info/default.aspx">Investor <br> Info</a><ul class="level2">
+		<li><a href="http://www.edrsilver.com/English/investor-info/why-invest/default.aspx">Why Invest</a></li><li><a href="http://www.edrsilver.com/English/investor-info/stock-info/default.aspx">Stock Info</a></li><li><a href="http://www.edrsilver.com/English/investor-info/financial-reports/default.aspx">Financial Reports</a></li><li><a href="//s22.q4cdn.com/579360173/files/doc_presentations/2021/05/May-13-2021-website.pdf" target="_blank">Presentation</a></li><li><a href="//s22.q4cdn.com/579360173/files/doc_financials/2021/q1/Endeavour_8.5x11_FactSheet_May-10-2021.pdf" target="_blank">Fact Sheet</a></li><li><a href="http://www.edrsilver.com/English/investor-info/events/default.aspx">Events</a></li><li><a href="http://www.edrsilver.com/English/investor-info/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="http://www.edrsilver.com/English/investor-info/Webcast/default.aspx">Webcasts</a></li><li><a href="http://www.edrsilver.com/English/investor-info/regulatory-filings/default.aspx">Regulatory Filings</a></li><li><a href="http://www.edrsilver.com/English/investor-info/contact/default.aspx">Contact</a></li>
+	</ul></li><li><a href="http://www.edrsilver.com/English/ceo-corner/default.aspx">Chairman <br> Corner</a></li><li><a href="http://www.edrsilver.com/English/news/default.aspx">News</a></li><li><a href="http://www.edrsilver.com/English/careers/default.aspx">Careers</a></li>
+</ul></nav></span><span class='NavigationPaneDiv13'><div id="_ctrl0_ctl39_divModuleContainer" class="module module-subscribe  module-subscribe--header module-subscribe--fancy">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_introduction"><span id="_ctrl0_ctl39_lblIntroText" class="IntroText"><p>To receive notifications via email, enter your email address and select at least one subscription below. After submitting your information, you will receive an email. You must click the link in the email to activate your subscription. You can sign up for additional subscriptions at any time.</p><p class="module_required-text">* Required</p></span></div>
+            
+            <table class="module-subscribe_table module-subscribe_form">
+                
+                
+                <tr id="_ctrl0_ctl39_rowEmailAddress" class="module-subscribe_table-input module-subscribe_email">
+	<td>
+                        <label for="_ctrl0_ctl39_txtEmail" id="_ctrl0_ctl39_lblEmailAddressText">Email Address</label>
+                        <span id="_ctrl0_ctl39_lblRequiredEmailAddress" class="module_required">*</span>
+                        <input name="_ctrl0$ctl39$txtEmail" type="text" maxlength="128" id="_ctrl0_ctl39_txtEmail" class="module_input" placeholder="enter email address" />
+                        
+                        
+                    </td>
+</tr>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </table>
+            
+            <div id="_ctrl0_ctl39_UCCaptcha_divModuleContainer" class="CaptchaContainer">
+<table id="_ctrl0_ctl39_UCCaptcha_Table1" cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2"><img src="https://www.edrsilver.com/q4api/v4/captcha?clientId=_ctrl0_ctl39_UCCaptcha" id="_ctrl0_ctl39_UCCaptcha_Image1" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><b>Enter the code shown above.</b></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input name="_ctrl0$ctl39$UCCaptcha$txtCode" type="text" id="_ctrl0_ctl39_UCCaptcha_txtCode" />
+		</td>
+	</tr>
+</table>
+
+</div>
+            <div class="module_actions">
+                <input type="submit" name="_ctrl0$ctl39$btnSubmit" value="Sign-up for email alerts" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctrl0$ctl39$btnSubmit&quot;, &quot;&quot;, true, &quot;e0d5b264-17c7-4cd1-9d02-1c3d6b534881&quot;, &quot;&quot;, false, false))" id="_ctrl0_ctl39_btnSubmit" class="button module-subscribe_submit-button" />
+            </div>
+        </div>
+    </div>
+</div>
+<div id="_ctrl0_ctl39_divEditSubscriberConfirmation" class="module module-subscribe module_confirmation-container" style="DISPLAY:none;">
+    <div class="module_container module_container--outer">
+        <h2 class="module_title">Email Alert Sign Up Confirmation</h2>
+        <div class="module_container module_container--inner">
+            
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv14'><div id="_ctrl0_ctl42_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl42_divModuleContainer" class="QuickLinks">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl42_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="http://www.edrsilver.com/English/investor-info/contact/default.aspx" id="_ctrl0_ctl42_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Contact</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv15'><div id="_ctrl0_ctl45_divContainer" class="LanguageSwitch">
+    
+            
+            
+        
+            
+            <a id="_ctrl0_ctl45_rtrLanguages_ctl01_lnkLanguage" href="http://www.edrsilver.com/Spanish/home/default.aspx" href="javascript:__doPostBack(&#39;_ctrl0$ctl45$rtrLanguages$ctl01$lnkLanguage&#39;,&#39;&#39;)">Spanish</a>
+        
+</div></span><span class='NavigationPaneDiv16'><div id="_ctrl0_ctl48_divModuleContainer" class="module module-html module-social-media">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="https://www.instagram.com/edrsilvercorp/" target="_blank"><i class="q4-icon_instagram"></i><span class="sr-only">Instagram</span></a>
+    <a href="https://www.facebook.com/Endeavour-Silver-Corp-240360929429400/" target="_blank"><i class="q4-icon_facebook"></i><span class="sr-only">Facebook</span></a>
+    <a href="https://twitter.com/edrsilvercorp?lang=en" target="_blank"><i class="q4-icon_twitter"></i><span class="sr-only">Twitter</span></a>
+    <a href="https://ca.linkedin.com/company/endeavour-silver-corp" target="_blank"><i class="q4-icon_linkedin"></i><span class="sr-only">LinkedIn</span></a>
+<a href="https://www.youtube.com/channel/UCBL1EFppmbaKFAJU1gocB9A?app=desktop" target="_blank"><i class="q4-icon_youtube"></i><span class="sr-only">YouTube</span></a>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+        <div class="layout_content" id="maincontent">
+            
+            <div class="pane pane--left">
+                <div class="pane_inner"><span class='LeftPaneDiv'></span></div>
+            </div>
+            <div class="pane pane--content">
+                <div class="pane_inner"><span class='ContentPaneDiv'></span></div>
+            </div>
+            <div class="pane pane--right">
+                <div class="pane_inner"><span class='RightPaneDiv'></span></div>
+            </div>
+        </div>
+        <div class="layout_footer" role="contentinfo">
+            <div class="pane pane--footer grid--no-gutter">
+                <div class="pane_inner"><span class='FooterPaneDiv'></span></div>
+            </div>
+            <div class="pane pane--footer2 clearfix">
+                <div class="pane_inner"><span class='FooterPane2Div20'><div id="_ctrl0_ctl51_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl51_divModuleContainer" class="module-quick-links--footer module--desktop-hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl51_qlList" class="module-quick-links--footer module--desktop-hidden">
+                
+                        <li id="_ctrl0_ctl51_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="http://www.edrsilver.com/English/investor-info/contact/default.aspx" id="_ctrl0_ctl51_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Contact</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl51_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="http://www.edrsilver.com/English/email-alerts/default.aspx" id="_ctrl0_ctl51_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Email Alerts</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div21'><div id="_ctrl0_ctl54_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl54_divModuleContainer" class="module-quick-links--footer module--mobile-hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl54_qlList" class="module-quick-links--footer module--mobile-hidden">
+                
+                        <li id="_ctrl0_ctl54_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="http://www.edrsilver.com/English/investor-info/contact/default.aspx" id="_ctrl0_ctl54_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Contact</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl54_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="http://www.edrsilver.com/English/careers/default.aspx" id="_ctrl0_ctl54_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Careers</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl54_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="http://www.edrsilver.com/English/email-alerts/default.aspx" id="_ctrl0_ctl54_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_self">Email Alerts</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div22'><div id="_ctrl0_ctl57_divModuleContainer" class="module module-search" role="search">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <span id="_ctrl0_ctl57_lblSearchText" class="module-search_text"></span>
+            <input name="_ctrl0$ctl57$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl57_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl57$btnSearch&#39;, &#39;&#39;); " />
+            <input type="submit" name="_ctrl0$ctl57$btnSearch" value="" id="_ctrl0_ctl57_btnSearch" class="module_button module-search_button" />
+            
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div23'><div id="_ctrl0_ctl60_divModuleContainer" class="module module-embed module-icon-search">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <span class="q4-icon_seach"></span>
+
+
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div24'><div id="_ctrl0_ctl63_divModuleContainer" class="module module-html copyright right ">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul class="module-quick-links--footer">
+    <li>© <span class="copyright_year"></span> ENDEAVOUR SILVER</li>
+    <li><a href="/site-map/default.aspx">Site Map</a></li>
+    <li><a href="/English/disclaimer/default.aspx">Disclaimer</a></li>
+</ul>
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div25'>
+<div class="module module-q4-credits">
+    <div class="module_container module_container--outer">
+        <div class="module_container module_container--inner">
+            <a href="https://www.q4inc.com/Powered-by-Q4/" id="_ctrl0_ctl66_hrefWebsiteRecording" class="module-q4-credits-link" target="_blank">
+                <span id="_ctrl0_ctl66_lblWebsiteRecording" class="module-q4-credits_powered-text">Powered By Q4 Inc.</span>
+                <span id="_ctrl0_ctl66_lblVersion" class="module-q4-credits_version-text">5.56.0.1</span>
+                <span class="sr-only">(opens in new window)</span>
+            </a>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--credits">
+                <div class="pane_inner"><span class='Q4FooterDiv26'><div id="_ctrl0_ctl69_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script>
+var q4App = $.extend(true, q4Defaults, {
+    options: {
+        mailingListConfig: {
+            tpl: (
+                /* beautify preserve:start */
+                '<div id="SubscriberConfirmation" class="module module-subscribe module-subscribe--fancy">' +
+                    '<div class="module_container--outer">' +
+                        '<h2 class="module_title">Email Alerts</h2>' +
+                        '<div class="module_container--inner">' +
+                            '<p class="module_message module_message--success"></p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>'
+                /* beautify preserve:end */
+            ),
+            location: ".pane--navigation",
+            submitText: "Sign-up"
+
+        }
+    },
+    init: function() {
+        var app = this;
+        app.cleanUp();
+        app.unWrapLink('a.module-stock-header_stock-price');
+        app.submitOnEnter('.module-unsubscribe');
+        app.submitOnEnter('.module-search');
+        app.validateSubmit('.module-search');
+        // app.superfish($('.nav--secondary .level2'), { cssArrows: false });
+        app.mobileMenuToggle($('.layout'), '.pane--navigation', '.layout_toggle i');
+        app.cleanQuickLinks($('.module-links'));
+        app.copyright($('.copyright_year'))
+        app.reveal('.pane--footer .module-subscribe', '.module-subscribe_email', '.module-subscribe_mailing-list, .module_actions', true);
+        app.docTracking();
+        app.fancySignup();
+        app.resetDate(['.nav a[href*="s3.q4web.com"]:not([href$=".pdf"])']);
+        app.previewToolbar();
+        //app.mobileTapSupport('.nav--main .level1');
+        app.scrollToSection();
+        app.hideErrorMessage();
+        app.hideConfirmationMessage();
+        app.showMessageConfirm();
+        app.appendArrow();
+        app.switchEspanol();
+        app.addFancy();
+        app.newsTable();
+        app.searchToggle();
+        app.addClassToItemNav();
+
+        $('.nav--main .has-children').hover(
+            function() {
+                $(this).addClass('js--hover');
+            },
+            function() {
+                $(this).removeClass('js--hover');
+            }
+        );
+    },
+    mobileTapSupport: function(selector) {
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+        if (isAndroid) {
+            $(selector).on('click', 'li.has-children > a', function(e) {
+                var $this = $(this),
+                    $parent = $this.parent();
+                if (!$parent.hasClass('sfHover')) {
+                    e.preventDefault();
+                    $parent.siblings().removeClass('sfHover');
+                    $parent.addClass('sfHover');
+                }
+            });
+        }
+    },
+    // _onMobileMenuExpand: function(a) {
+    //     a.on("click", "li.has-children > a", function(a) {
+    //         var b = $(this),
+    //             c = b.parent();
+    //         c.hasClass("js--expanded") || (a.preventDefault(), c.siblings().removeClass("js--expanded"), c.addClass("js--expanded"))
+    //     });
+    // },
+    _onMobileMenuExpand: function($nav) {
+        $nav.on('click', 'li.has-children:not(.level4 > li) > a', function(e) {
+            var $this = $(this),
+                $parent = $this.parent();
+            if (!$parent.hasClass('js--expanded')) {
+                e.preventDefault();
+                $parent.siblings().removeClass('js--expanded');
+                $parent.addClass('js--expanded');
+            }
+        });
+    },
+    insertImage: function() {
+        $('.module-background--custom').before('<img class="image-background-top" src="//s22.q4cdn.com/579360173/files/design/edr-sidebar-box-top.png">');
+        $('.module-background--custom').after('<img class="image-background-bottom" src="//s22.q4cdn.com/579360173/files/design/edr-sidebar-box-bottom.png">');
+    },
+    scrollToSection: function() {
+        var height = $('.pane--header').outerHeight();
+        $(".anchor-to-section").find("a").click(function(e) {
+            e.preventDefault();
+            var section = $(this).attr("href");
+            q4App.scrollTo($(section), 500);
+        });
+    },
+    hideErrorMessage: function() {
+        $(".layout_header").click(function() {
+            $('.pane--header .module_error-container').hide();
+        });
+    },
+    hideConfirmationMessage: function() {
+        $(".layout_header").click(function() {
+            $('.pane--header .module_confirmation-container').hide();
+        });
+    },
+    showMessageConfirm: function() {
+        if ($('.pane--navigation .module_message.module_message--success').length != 0) {
+            $('.layout').addClass('js--mobile');
+        }
+    },
+    appendArrow: function() {
+        $('.pane--navigation .level2 > li.has-children > a').append('<i class="q4-icon_arrow"></i>');
+    },
+    switchEspanol: function() {
+        $('.LanguageSwitch a').text('Español');
+    },
+    addFancy: function() {
+        $('.module-nav_locations a[href*="youtu"]').attr('data-fancybox', true);
+    },
+    newsTable: function() {
+        $('.module-news-details .module_body table').not('table table').wrap('<div class="responsive-table" />');
+        $('.module-news-details .module_body pre').wrap('<div class="responsive-table" />');
+    },
+    searchToggle: function() {
+        $('.module-icon-search span.q4-icon_seach').on('click', function() {
+            $('.pane--footer2 .module-search').toggleClass('js--active');
+            $(this).toggleClass('js--active');
+        });
+    },
+    addClassToItemNav: function(){
+
+        $('.module-nav_locations .level2 > li.has-children').each(function(){
+            var itemNavVal = $(this).find('>a').text();
+            $(this).addClass(itemNavVal);
+        });
+
+        $('.nav--main .level2 > li.has-children').each(function(){
+            var itemNavVal = $(this).find('>a').text();
+            $(this).addClass(itemNavVal);
+        });
+        $('.nav--secondary .level2 > li.has-children').each(function(){
+            var itemNavVal = $(this).find('>a').text();
+            $(this).addClass(itemNavVal);
+        });
+
+    }
+});
+
+q4App.init();
+
+</script>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv27'><div id="_ctrl0_ctl72_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <style>
+#popupDiv {
+    display: none;
+    margin: 0px;
+    opacity: 0.9;
+    position: fixed;
+    border-width: 0px;
+    border-style: solid solid none;
+    border-image-source: none;
+    bottom: 0px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2147483647;
+    color: #fefefe;
+    background: none 0% 0% repeat scroll #7c303e;
+}
+#popupDiv img {
+    float: right;
+    cursor: pointer;
+    margin: 8px 8px 7px 7px;
+    opacity: 0.75;
+    width: 20px;
+    height: 20px;
+}
+#popupDiv #cookie-text {
+    margin: 15px 35px;
+    text-align: left;
+    font: 8pt Verdana;
+}
+#popupDiv #cookie-text a {
+    color: #ffffff;
+    font-weight: bold;
+}
+</style>
+
+<script type="text/javascript" src="//s22.q4cdn.com/579360173/files/js/jquery-cookie.js"></script>
+
+
+<div id="cookie-notice" style="">
+    <div id="popupDiv" style="display: block;"><a id="cookie-close"><img src="//s22.q4cdn.com/579360173/files/images/2018/ric-close.png" alt="close"></a><div id="cookie-text"> We use cookies to collect data such as IP addresses, cookie identifiers and website activity, and may, from time to time, use the data for advertising purposes. Using this website is considered consent. You may opt-out at any time by changing your cookie settings: <a href="http://optout.networkadvertising.org/#!/" target="_blank">Click Here</a></div></div>
+  </div>
+
+
+
+
+<script type="text/javascript">
+$(function() {
+
+    // check for cookie
+    var disclaimer = $.cookie('disclaimer');
+  //      date = new Date(),
+  //      minutes = 1440,
+   //     onemonth = 30;
+
+    //date.setTime(date.getTime() + (minutes * 60 * 1000));
+
+    $('a#cookie-close').click(function() {
+        $.cookie("disclaimer", "agree", {
+            path: '/'
+        //    expires: date
+        });
+      $('div#cookie-notice').hide()
+
+
+$('.pane--footer2').css({
+'margin-bottom': 'auto',
+'z-index' : 'auto'
+});
+
+
+    });
+
+    if (disclaimer === undefined) {
+        $('div#cookie-notice').show()
+
+$('.pane--footer2').css({
+'margin-bottom': '36px',
+'z-index' : '1'
+});
+$('.pane--credits').css({
+'z-index' : '0'
+});
+
+    } else {
+
+        $('div#cookie-notice').hide()
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv2'><div id="_ctrl0_ctl78_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            
+<script type="text/javascript">
+
+$('.module-fact-sheet').downloads({
+    fetchAllYears: true,
+    sortAscending: false,
+    loadingMessage: '',
+    limit:1,
+    downloadType: "FactSheet",
+    template: (
+            '{{#items}}' +
+                '<a href="{{url}}">Fact Sheet</a>' +
+            '{{/items}}' 
+    ),
+    complete: function(e) {
+    }
+});
+
+$('.module-construction-update').downloads({
+    fetchAllYears: true,
+    sortAscending: false,
+    loadingMessage: '',
+    limit:1,
+    downloadType: "ConstructionUpdate",
+    template: (
+            '{{#items}}' +
+                '<a href="{{url}}">Construction Update</a>' +
+            '{{/items}}' 
+    ),
+    complete: function(e) {
+    }
+});
+
+</script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

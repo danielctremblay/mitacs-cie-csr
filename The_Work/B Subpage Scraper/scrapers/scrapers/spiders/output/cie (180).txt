@@ -1,0 +1,23 @@
+
+        Web packaging format
+      
+        Use Git or checkout with SVN using the web URL.
+    
+      Work fast with our official CLI.
+      .
+    If nothing happens,  and try again.If nothing happens,  and try again.If nothing happens,  and try again.Your codespace will open once ready.There was a problem preparing your codespace, please try again.Not to be confused with , this repository
+holds a collection of specifications aimed at packaging websites. These
+specifications replace the  and will allow people
+to bundle together the resources that make up a website, so they can be shared
+offline, either with or without a proof that they came from the original
+website. A full list of use cases and resulting requirements is available in
+
+().The  walk through how to use these specs to
+achieve the use cases.The specifications come in several layers:A previous draft of the format combined layers 1 and 2 into a single format for
+signed packages:
+
+().
+The DISPATCH WG at IETF99
+ the current
+split.Formatted text and HTML versions of the draft can be built using .This requires that you have software installed as described in
+.Install this with .See  for the usage of the tool.There are sever

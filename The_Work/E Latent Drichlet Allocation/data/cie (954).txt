@@ -1,0 +1,1 @@
+Semantic Scholar is a free, AI-powered research tool for scientific literature, based at the Allen Institute for AI.

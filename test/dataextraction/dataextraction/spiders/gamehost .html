@@ -1,0 +1,922 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>GameHost &mdash; Home</title>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:300,400,900|Oswald:300,400,700"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./assets/fonts/icomoon/style.css" />
+
+		<link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./assets/css/jquery-ui.css" />
+		<link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+
+		<link rel="stylesheet" href="./assets/css/jquery.fancybox.min.css" />
+
+		<link rel="stylesheet" href="./assets/css/bootstrap-datepicker.css" />
+
+		<link
+			rel="stylesheet"
+			href="./assets/fonts/flaticon/font/flaticon.css"
+		/>
+
+		<link rel="stylesheet" href="./assets/css/aos.css" />
+
+		<link rel="stylesheet" href="./assets/css/style.css" />
+
+		<!-- FONTAWESOME -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+			integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+			crossorigin="anonymous"
+		/>
+
+		<!-- BOOTSTRAP FLOAT LABEL -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.0/dist/bootstrap-float-label.min.css"
+		/>
+		<!-- ================================================================================================================================== -->
+		<!--                                                          CANAPP HELPERS                                                            -->
+		<!-- ================================================================================================================================== -->
+		<!-- CANTABS -->
+		<!--<link rel="stylesheet" href="/Portal/Public/css/custom/cantabs.css?v=1.6">-->
+		<!-- EXTENSIONS -->
+		<link
+			rel="stylesheet"
+			href="/Portal/Public/css/custom/extensions.css?v=1.6"
+		/>
+		<!-- FORMS -->
+		<link
+			rel="stylesheet"
+			href="/Portal/Public/css/custom/forms.css?v=1.6s"
+		/>
+		<!-- MISC STYLE -->
+		<link
+			rel="stylesheet"
+			href="/Portal/Public/css/custom/misc.css?v=1.6"
+		/>
+		<!-- ================================================================================================================================== -->
+		<!--JQUERY-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!-- CANTABS -->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="/Portal/Public/css/cantabs-v2.1.min.css"
+		/>
+		<script src="/Portal/Public/js/cantabs-v2.1.min.js"></script>
+
+		<script>
+			var onloadCallback = function () {
+				grecaptcha.render('grecaptcha', {
+					sitekey: '6Lf4y8IZAAAAAHYsw1meOl-ySap86tS_kimNBr6B',
+					callback: function (e) {
+						catchInputChange(e, 'captcha');
+					},
+					'expired-callback': function (e) {
+						catchInputChange(e, 'captcha');
+					},
+				});
+			};
+		</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-159178143-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-159178143-1');
+		</script>
+	</head>
+
+	<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+		<div class="site-wrap">
+			<div class="site-mobile-menu site-navbar-target">
+				<div class="site-mobile-menu-header">
+					<div class="site-mobile-menu-close mt-3">
+						<span class="icon-close2 js-menu-toggle"></span>
+					</div>
+				</div>
+				<div class="site-mobile-menu-body"></div>
+			</div>
+
+			<header
+				class="site-navbar py-4 js-sticky-header site-navbar-target"
+				role="banner"
+			>
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-6 col-xl-2">
+							<h1 class="mb-0 site-logo m-0 p-0">
+								<a href="index.html" class="mb-0">
+									<img
+										width="170"
+										height="92"
+										src="./assets/images/websiteLogo.jpg"
+									/>
+								</a>
+							</h1>
+						</div>
+
+						<div class="col-12 col-md-10 d-none d-xl-block">
+							<nav
+								class="site-navigation position-relative text-right"
+								role="navigation"
+							>
+								<ul
+									class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block"
+								>
+									<li>
+										<a href="#home-section" class="nav-link"
+											>Home</a
+										>
+									</li>
+									<li>
+										<a href="#market-quote" class="nav-link"
+											>Market Quote</a
+										>
+									</li>
+									<li>
+										<a href="#news-section" class="nav-link"
+											>News</a
+										>
+									</li>
+									<!--<li><a href="about.html#about-section" class="nav-link">About</a></li>-->
+									<li class="nav-item dropdown">
+										<a
+											href="#"
+											class="nav-link dropdown-toggle"
+											id="navbarDropdownMenuLink"
+											data-toggle="dropdown"
+											aria-haspopup="true"
+											aria-expanded="false"
+										>
+											About
+										</a>
+										<div
+											class="dropdown-menu"
+											aria-labelledby="navbarDropdownMenuLink"
+										>
+											<a
+												class="dropdown-item"
+												href="about.html#about-section"
+												>GameHost</a
+											>
+											<a
+												class="dropdown-item"
+												href="about.html#management"
+												>Management</a
+											>
+											<a
+												class="dropdown-item"
+												href="about.html#goverance"
+												>Goverance</a
+											>
+										</div>
+									</li>
+									<li>
+										<a
+											href="investor_relations.html#investor-section"
+											class="nav-link"
+											>Investor Relations</a
+										>
+									</li>
+									<li>
+										<a
+											href="properties.html#properties-section"
+											class="nav-link"
+											>Properties</a
+										>
+									</li>
+									<li>
+										<a
+											href="#contact-section"
+											class="nav-link"
+											>Contact</a
+										>
+									</li>
+									<li>
+										<div id="emailsignup">
+											<button
+												type="button"
+												class="btn btn-info btn - lg"
+												data-toggle="modal"
+												data-target="#myModal"
+												id="openModel"
+											>
+												Subscribe
+											</button>
+										</div>
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+						<div
+							class="col-6 d-inline-block d-xl-none ml-md-0 py-3"
+						>
+							<a
+								href="#"
+								class="site-menu-toggle js-menu-toggle text-white float-right"
+							>
+								<span class="icon-menu h3"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="site-block-wrap">
+				<div class="owl-carousel with-dots">
+					<div
+						class="site-blocks-cover overlay overlay-2"
+						style="
+							background-image: url(./assets/images/slide3.jpg);
+						"
+						data-aos="fade"
+						id="home-section"
+					>
+						<div class="container">
+							<div
+								class="row align-items-center justify-content-center"
+							>
+								<div class="col-md-6 mt-lg-5 text-center">
+									<h1 class="text-shadow">Market Quote</h1>
+									<p class="mb-5 text-shadow">
+										Check out the latest market quote.
+									</p>
+									<p>
+										<a
+											href="#market-quote"
+											target="_blank"
+											class="btn btn-primary px-5 py-3"
+										>
+											Market Quote
+										</a>
+									</p>
+									<p>
+										GAMEHOST CASINOS ARE CURRENTLY CLOSED
+										UNDER ORDERS BY ALBERTA’S CHIEF MEDICAL
+										OFFICER OF HEALTH.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="site-blocks-cover overlay overlay-2"
+						style="
+							background-image: url(./assets/images/slide2.jpg);
+						"
+						data-aos="fade"
+						id="home-section"
+					>
+						<div class="container">
+							<div
+								class="row align-items-center justify-content-center"
+							>
+								<div class="col-md-6 mt-lg-5 text-center">
+									<h1 class="text-shadow">Latest News</h1>
+									<p class="mb-5 text-shadow">
+										Check out the latest news and reports
+									</p>
+									<p>
+										<a
+											href="#news-section"
+											target="_blank"
+											class="btn btn-primary px-5 py-3"
+											>News</a
+										>
+									</p>
+									<p>
+										GAMEHOST CASINOS ARE CURRENTLY CLOSED
+										UNDER ORDERS BY ALBERTA’S CHIEF MEDICAL
+										OFFICER OF HEALTH.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							Subscribe Newsletter<button
+								type="button"
+								class="close"
+								data-dismiss="modal"
+							>
+								×
+							</button>
+						</div>
+						<div class="modal-body">
+							E - mail:
+							<input
+								type="email"
+								name="emailaddress"
+							/><br /><br />First Name:
+							<input type="firstname" name="firstname" /> Optional
+							<br />Last Name:
+							<input type="lastname" name="lastname" /> Optional
+							<br /><br />
+							<h6>
+								You can subscribe to one or more of the lists
+								below:
+							</h6>
+							<input
+								type="checkbox"
+								name="Information_Circulars"
+								value="11"
+							/>&nbsp; Information Circulars<br /><input
+								type="checkbox"
+								name="Press_Releases"
+								value="12"
+							/>&nbsp; Press Releases<br /><input
+								type="checkbox"
+								name="Quarterly_and_Annual_Financial_Statements"
+								value="13"
+							/>&nbsp; Quarterly and Annual Financial
+							Statements<br /><input
+								type="checkbox"
+								name="Annual_Information_Form"
+								value="14"
+							/>&nbsp; Annual Information Form<br /><br /><input
+								type="submit"
+								id="emailsubmit"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="site-section" id="market-quote">
+				<div class="container mt-5">
+					<h2 class="section-title mb-3">Market Quote</h2>
+
+					<!-- TradingView Widget BEGIN -->
+					<div class="tradingview-widget-container">
+						<div id="tradingview_d7a0b" style="height: 500px"></div>
+						<div class="tradingview-widget-copyright">
+							<a
+								href="https://www.tradingview.com/symbols/TSX-GH/"
+								rel="noopener"
+								target="_blank"
+								><span class="blue-text">GH Chart</span></a
+							>
+							by TradingView
+						</div>
+						<script
+							type="text/javascript"
+							src="https://s3.tradingview.com/tv.js"
+						></script>
+						<script type="text/javascript">
+							new TradingView.widget({
+								autosize: true,
+								symbol: 'TSX:GH',
+								interval: 'D',
+								timezone: 'Etc/UTC',
+								theme: 'Light',
+								style: '1',
+								locale: 'en',
+								toolbar_bg: '#f1f3f6',
+								enable_publishing: false,
+								allow_symbol_change: true,
+								details: true,
+								container_id: 'tradingview_d7a0b',
+							});
+						</script>
+					</div>
+					<!-- TradingView Widget END -->
+
+					<div style="height: 700px">
+						<!-- TradingView Widget BEGIN -->
+						<div
+							class="tradingview-widget-container"
+							style="height: 700px"
+						>
+							<div
+								class="tradingview-widget-container__widget"
+							></div>
+							<div class="tradingview-widget-copyright">
+								<a
+									href="https://www.tradingview.com/symbols/TSX-GH/"
+									rel="noopener"
+									target="_blank"
+									><span class="blue-text"
+										>GH Fundamental Data</span
+									></a
+								>
+								by TradingView
+							</div>
+							<script
+								type="text/javascript"
+								src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js"
+								async
+							>
+								{
+								    "symbol": "TSX:GH",
+								        "colorTheme": "light",
+								            "isTransparent": false,
+								                "largeChartUrl": "http://localhost:10001/sites/site-gamehost/marketquote.html",
+								                    "displayMode": "regular",
+								                        "width": "100%",
+								                            "height": "100%",
+								                                "locale": "en"
+								}
+							</script>
+						</div>
+						<!-- TradingView Widget END -->
+					</div>
+				</div>
+			</section>
+
+			<section class="site-section" id="news-section">
+				<div class="container mt-5">
+					<h2 class="section-title mb-3">News</h2>
+					<span
+						style="
+							font-size: 12px;
+							font-family: sans-serif;
+							color: black;
+							font-weight: 500;
+							line-height: 0;
+						"
+						>Certain information included in these press releases is
+						forward-looking and is subject to important risks and
+						uncertainties that could cause actual results to differ.
+						These forward-looking statements represent our best
+						judgment as of the date of each press release based in
+						part on preliminary information and certain assumptions
+						which management believes are reasonable. We disclaim
+						any obligation to update these forward-looking
+						statements.</span
+					>
+					<div class="row">
+						<div
+							class="nav flex-column col-md-3 nav-pills"
+							id="news"
+							role="tablist"
+							aria-orientation="vertical"
+						></div>
+						<div
+							class="tab-content col-12 col-md-8"
+							id="newsPillsContent"
+						></div>
+					</div>
+				</div>
+			</section>
+
+			<section
+				class="site-section bg-light bg-image"
+				id="contact-section"
+			>
+				<div class="container mt-5">
+					<h2 class="section-title mb-3">Contact Us</h2>
+					<div class="row mb-5">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9780.04824359098!2d-113.82502932050305!3d52.2068283144926!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537450d6e5df6a07%3A0xaa21deb60423cda!2sGamehost+Inc!5e0!3m2!1sen!2sca!4v1419011546395"
+							width="100%"
+							height="300"
+							frameborder="0"
+							style="border: 0"
+						></iframe>
+						<div class="col-md-7 mb-5">
+							<form
+								action="#"
+								class="p-3 bg-white needs-validation"
+								id="contactForm"
+								novalidate
+							>
+								<div class="form-group col-12 has-float-label">
+									<input
+										type="text"
+										class="form-control contactUs_form"
+										placeholder="Name"
+										error-check-type="name"
+										error-message="Please enter your Name"
+									/>
+									<label class="requiredSpan">Name</label>
+								</div>
+								<div class="form-group col-12 has-float-label">
+									<input
+										type="text"
+										class="form-control contactUs_form"
+										placeholder="Company"
+									/>
+									<label>Company</label>
+								</div>
+								<div class="form-group col-12 has-float-label">
+									<input
+										type="email"
+										class="form-control contactUs_form"
+										placeholder="Email"
+										error-check-type="email"
+										error-message="Please enter a valid Email"
+									/>
+									<label class="requiredSpan">Email</label>
+								</div>
+								<div class="form-group col-12 has-float-label">
+									<input
+										type="number"
+										class="form-control contactUs_form"
+										placeholder="Phone"
+									/>
+									<label>Phone</label>
+								</div>
+								<div class="form-group has-float-label col-12">
+									<textarea
+										type="inquiry"
+										class="form-control contactUs_form"
+										rows="3"
+										placeholder="Inquiry"
+										error-check-type="inquiry"
+										error-message="Inquiry must be between 20 and 500 characters"
+									></textarea>
+									<label class="requiredSpan">Inquiry</label>
+								</div>
+
+								<div
+									id="grecaptcha"
+									class="form-group col-12 requiredSpan captchaRequiredSpan contactUs_form"
+									placeholder="Captcha"
+									error-check-type="captcha"
+									error-message="Captcha must be completed"
+								></div>
+
+								<div class="form-group col-6">
+									<input
+										type="button"
+										value="Send Message"
+										class="btn btn-warning py-2 px-4 text-white"
+										id="contactUs_form_submit"
+									/>
+								</div>
+							</form>
+						</div>
+						<div class="col-md-5">
+							<div class="p-4 mb-3 bg-white">
+								<p class="mb-0 font-weight-bold">Address</p>
+								<p class="mb-4">
+									104, 548 Laura Ave
+									<br />
+									Red Deer County, AB
+									<br />
+									T4E 0A5
+									<br />
+									Canada
+									<br />
+								</p>
+
+								<p class="mb-0 font-weight-bold">Phone</p>
+								<p class="mb-4">
+									<a href="tel:403-346-4545">403.346.4545</a>
+								</p>
+
+								<p class="mb-0 font-weight-bold">Fax</p>
+								<p class="mb-4"><a href="#">403.340.0683</a></p>
+
+								<p class="mb-0 font-weight-bold">Toll Free</p>
+								<p class="mb-4">
+									<a href="tel:+1-877-703-4545"
+										>1.877.703.4545</a
+									>
+								</p>
+
+								<p class="mb-0 font-weight-bold">
+									Information Officers
+								</p>
+								<p class="mb-0">
+									Darcy Will
+									<br />
+									Craig Thomas
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="row">
+								<div class="col-md-3 mx-auto">
+									<h2 class="footer-heading mb-4">
+										Quick Links
+									</h2>
+									<ul class="list-unstyled">
+										<li>
+											<a href="#home-section">Home</a>
+										</li>
+										<li>
+											<a href="#market-quote"
+												>Market Quote</a
+											>
+										</li>
+										<li>
+											<a href="#news-section">News</a>
+										</li>
+										<li>
+											<a href="about.html#about-section"
+												>About</a
+											>
+										</li>
+										<li>
+											<a
+												href="investor_relations.html#investor-section"
+												>Investor Relations</a
+											>
+										</li>
+										<li>
+											<a
+												href="properties.html#properties-section"
+												>Properties</a
+											>
+										</li>
+										<li>
+											<a href="#contact-section"
+												>Contact</a
+											>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-5 mx-auto">
+									<h2 class="footer-heading mb-4">
+										Gamehost Properties
+									</h2>
+									<ul class="list-unstyled">
+										<li>
+											<a
+												href="http://www.boomtowncasino.ca"
+												>Boomtown Casino, Ft.
+												McMurray</a
+											>
+										</li>
+										<li>
+											<a href="http://www.deerfootinn.com"
+												>Deerfoot Inn & Casino,
+												Calgary</a
+											>
+										</li>
+										<li>
+											<a
+												href="http://www.greatnortherncasino.net"
+											>
+												Great Northern Casino, Grande
+												Prairie
+											</a>
+										</li>
+										<li>
+											<a
+												href="http://www.serviceplusinns.com/grande-prairie-hotels.html"
+											>
+												Service Plus Inns & Suites,
+												Grande Prairie
+											</a>
+										</li>
+										<li>
+											<a href="http://encoresuites.ca/">
+												Encore Suites by Service Plus
+												Inns, Grande Prairie
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="mb-4">
+								<h2 class="footer-heading mb-4">
+									Subscribe Newsletter
+								</h2>
+								<div id="emailsignup">
+									<button
+										type="button"
+										class="btn btn-info btn - lg"
+										data-toggle="modal"
+										data-target="#myModal"
+										id="openModel"
+									>
+										Subscribe
+									</button>
+									<div
+										class="modal fade"
+										id="myModal"
+										role="dialog"
+									>
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													Subscribe Newsletter<button
+														type="button"
+														class="close"
+														data-dismiss="modal"
+													>
+														×
+													</button>
+												</div>
+												<div class="modal-body">
+													E - mail:
+													<input
+														type="email"
+														name="emailaddress"
+													/><br /><br />First Name:
+													<input
+														type="firstname"
+														name="firstname"
+													/>
+													Optional <br />Last Name:
+													<input
+														type="lastname"
+														name="lastname"
+													/>
+													Optional <br /><br />
+													<h6>
+														You can subscribe to one
+														or more of the lists
+														below:
+													</h6>
+													<input
+														type="checkbox"
+														name="Information_Circulars"
+														value="11"
+													/>&nbsp; Information
+													Circulars<br /><input
+														type="checkbox"
+														name="Press_Releases"
+														value="12"
+													/>&nbsp; Press Releases<br /><input
+														type="checkbox"
+														name="Quarterly_and_Annual_Financial_Statements"
+														value="13"
+													/>&nbsp; Quarterly and
+													Annual Financial
+													Statements<br /><input
+														type="checkbox"
+														name="Annual_Information_Form"
+														value="14"
+													/>&nbsp; Annual Information
+													Form<br /><br /><input
+														type="submit"
+														id="emailsubmit"
+													/>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br />
+								<a href="/Portal/Login.aspx">Login</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-5 text-center">
+					<div class="col-md-12">
+						<div class="border-top pt-5">
+							<p class="copyright">
+								Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>
+								GameHost Inc. All Rights Reserved
+							</p>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- .site-wrap -->
+
+		<a href="#top" class="gototop"
+			><span class="icon-angle-double-up"></span
+		></a>
+
+		<!--<script src="./assets/js/jquery-3.3.1.min.js"></script>-->
+		<script src="./assets/js/jquery-ui.js"></script>
+		<script src="./assets/js/popper.min.js"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+
+		<script src="./assets/js/owl.carousel.min.js"></script>
+		<script src="./assets/js/jquery.countdown.min.js"></script>
+		<script src="./assets/js/bootstrap-datepicker.min.js"></script>
+		<script src="./assets/js/jquery.easing.1.3.js"></script>
+		<script src="./assets/js/aos.js"></script>
+		<script src="./assets/js/jquery.fancybox.min.js"></script>
+		<script src="./assets/js/jquery.sticky.js"></script>
+
+		<script src="./assets/js/main.js"></script>
+
+		<script>
+			$(function () {
+				//$(document).on('click', '#investorPillsTab a', function () {
+				//    $this = $(this);
+				//    console.log($this);
+				//    var direId = $this.attr('directory-id');
+				//    console.log(direId);
+				//    $.ajaxGET('home.aspx/GetFilesAndFolders?parentDirectoryId=' + direId)
+				//        .then(function (res) {
+				//            PrintFilesAndFolders(res);
+				//            //console.log(res);
+				//        })
+				//})
+				$.ajax({
+					type: 'GET',
+					url: '/portal/sites/site-gamehost/build/index.aspx/GetNews',
+					data: JSON.stringify({}),
+					contentType: 'application/json; charset=utf-8',
+					success: function (ret) {
+						$('#news').append(ret.d[0]);
+						$('#newsPillsContent').append(ret.d[1]);
+					},
+				});
+
+				$.ajax({
+					type: 'GET',
+					url:
+						'/portal/sites/site-gamehost/build/index.aspx/GetGoverance',
+					data: JSON.stringify({}),
+					contentType: 'application/json; charset=utf-8',
+					success: function (ret) {
+						$('#governancePillsTab').append(ret.d[0]);
+						$('#governancePillsContent').append(ret.d[1]);
+					},
+				});
+
+				//console.log(array);
+				//console.log(information_circular);
+				$(document).on('click', '#emailsubmit', function () {
+					var array = [];
+					var checkboxes = document.querySelectorAll(
+						'input[type=checkbox]:checked',
+					);
+					for (var i = 0; i < checkboxes.length; i++) {
+						array.push(checkboxes[i].value);
+					}
+					var email = document.querySelector('input[type=email]')
+						.value;
+					console.log(email);
+					$.ajax({
+						type: 'POST',
+						url:
+							'/portal/sites/site-gamehost/build/index.aspx/AddLinkContact',
+						data: JSON.stringify({
+							listFrontEnd: array,
+							email: email,
+						}),
+						contentType: 'application/json; charset=utf-8',
+						success: function (ret) {
+							alert('done');
+						},
+					});
+				});
+				//$(document).on('click', '#investor1', function () {
+				//    $('body').css( "background-color","red" );
+				//});
+			});
+		</script>
+		<!-- GOOGLE RECAPTCHA -->
+		<script
+			src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+			async
+			defer
+		></script>
+		<!-- ================================================================================================================================== -->
+		<!--                                                          CANAPP HELPERS                                                            -->
+		<!-- ================================================================================================================================== -->
+		<!-- CANTABS -->
+		<!--<script src="/Portal/Public/js/custom/cantabs.js?v=1.6"></script>-->
+		<!-- FORMS -->
+		<script src="/Portal/Public/js/custom/forms.js?v=1.6"></script>
+		<!-- EXTENSIONS -->
+		<script src="/Portal/Public/js/custom/extensions.js?v=1.6"></script>
+		<!-- ================================================================================================================================== -->
+	</body>
+</html>

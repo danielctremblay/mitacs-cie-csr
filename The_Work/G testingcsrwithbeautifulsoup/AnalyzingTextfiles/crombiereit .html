@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang=&quot;en&quot; dir=&quot;ltr&quot;>
+  <head>
+    <meta charset="utf-8" />
+<meta name="title" content="Crombie REIT Homepage | Crombie REIT" />
+<link rel="shortlink" href="http://www.crombiereit.com/" />
+<link rel="canonical" href="http://www.crombiereit.com/" />
+<meta name="description" content="Crombie REIT is one of the country’s leading national retail property landlords. We own, operate, and develop properties across all of Canada." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta content="ie=edge, chrome=1" http-equiv="x-ua-compatible" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a72015ccc9",applicationID:"84131395"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<meta http-equiv="ImageToolbar" content="false" />
+<link rel="shortcut icon" href="/themes/custom/crombie/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="http://www.crombiereit.com/" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <title>Crombie REIT Homepage | Crombie REIT</title>
+    <meta property="og:image" content="/themes/custom/crombie/images/crombielogo.jpg" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5NZKZ4L');</script>
+    <!-- End Google Tag Manager -->  
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />    
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_Tptmz6YS_cml9beM2vhlTRWJgAZdmIjTFrmP643_J5c.css?qpvjo9" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_uVLBR40h2HI5TOUjoW5WThP8ycRC4fCkfwRqvac1iQM.css?qpvjo9" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_jwMUjx5ZBYsAeocnZyG2wIp_zxsptcCgTru7AXYNUtc.css?qpvjo9" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+      <!--[if IE]>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <![endif]-->
+  </head>
+  <body class="lang-en path-frontpage node--type-basic-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NZKZ4L"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->  
+  <a href="http://outdatedbrowser.com/en" class="visually-hidden focusable skip-link">
+    <br>&nbsp;&nbsp;<b>Your browser is not supported...</b>
+    <br>&nbsp;&nbsp;We recommend using the latest version of Chrome, Firefox, IE, Safari.
+  </a>
+  
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="crombie-overlay"></div>
+<div class="off-canvas-wrapper">
+  <div class="inner-wrap off-canvas-wrapper-inner" id="inner-wrap" data-off-canvas-wrapper>
+    <aside id="left-off-canvas-menu" class="off-canvas left-off-canvas-menu position-left" role="complementary" data-off-canvas>
+      
+    </aside>
+
+    <aside id="right-off-canvas-menu" class="off-canvas right-off-canvas-menu position-right" role="complementary" data-off-canvas>
+      
+    </aside>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+                        <div>
+    <nav role="navigation" aria-labelledby="block-crombie-main-menu-menu" id="block-crombie-main-menu" class="block-crombie-main-menu">
+            
+  <h2 class="block-title visually-hidden" id="block-crombie-main-menu-menu">Main navigation</h2>
+  
+
+        
+
+    <div id="top-bar-sticky-container" class="row no-print" data-sticky-container>
+      <div  class="row column sticky large-12" data-sticky data-top-anchor="top-bar-sticky-container" data-btm-anchor="9999999" data-margin-top="0" data-margin-bottom="0" data-options="stickyOn:small">
+      <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+        <button class="menu-icon" type="button" data-toggle></button>
+        <div class="title-bar-title"><a href="/"><img src="../themes/custom/crombie/images/crombie-logo.svg"></a></div>
+      </div>
+      <nav class="top-bar" id="main-menu" role="navigation">
+        <div class="top-bar-wrapper">
+            <div class="top-bar-left hide-for-small-only hide-for-medium-only">
+                <a href="/"><img src="../themes/custom/crombie/images/crombie-logo.svg"></a>
+            </div>
+            <div class="top-bar-right">
+                                  <div class="site-search hide-for-large mobile-search-icon">
+          <div class="search-box show">
+            <input type="text" name="keyword" value="" placeholder="Search the site">
+          </div>
+          <a href="#" class="search-close"><img src="/themes/custom/crombie/images/assets/search-close.svg"></a>
+          <a href="#" class="search-icon"><img src="/themes/custom/crombie/images/assets/icon-search.png"></a>
+        </div>
+        <ul class="menu vertical large-horizontal" data-responsive-menu="drilldown large-dropdown">
+                                  
+        
+        <li class="has-submenu opens-right">
+          <a href="/about-crombie-REIT" data-drupal-link-system-path="node/2">About</a>
+                                              <ul class="submenu menu vertical" data-submenu>
+                                  
+        
+          <li class="hide-for-large">
+              <a href="/about-crombie-REIT" data-drupal-link-system-path="node/2">About Crombie REIT</a>
+                        </li>
+
+        
+                        
+        
+        <li>
+          <a href="/crombie-story" data-drupal-link-system-path="node/7">Our Story</a>
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="/crombie-reit-executive-team" data-drupal-link-system-path="node/8">Executive Management</a>
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="/board-of-trustees" data-drupal-link-system-path="node/9">Board Of Trustees</a>
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="/building-better-communities" data-drupal-link-system-path="node/10">Corporate Social Responsibility</a>
+                  </li>
+
+        
+                        
+        
+          
+          <li data-alignment="left">
+            <a href="/crombie-reit-news" data-drupal-link-system-path="node/11">Crombie News</a>
+                      </li>
+
+        
+    
+          
+    </ul>
+  
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="/properties" data-drupal-link-system-path="node/3">Properties</a>
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="/developments-commercial-real-estate" data-drupal-link-system-path="node/4">Developments</a>
+                  </li>
+
+        
+                        
+        
+        <li class="has-submenu opens-right">
+          <a href="http://ir.crombiereit.com/investors/">Investors</a>
+                                              <ul class="submenu menu vertical" data-submenu>
+                                  
+        
+          <li class="hide-for-large">
+              <a href="http://ir.crombiereit.com/investors/">Investors</a>
+                        </li>
+
+        
+                        
+        
+        <li>
+          <a href="http://ir.crombiereit.com/annual-reports/Index?KeyGenPage=1073743866">Company Documents</a>
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="http://ir.crombiereit.com/press-releases">Press Releases</a>
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="http://ir.crombiereit.com/presentations">Presentations &amp; Events</a>
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="https://ir.crombiereit.com/investors/corporate-governance/documents/default.aspx">Corporate Governance</a>
+                  </li>
+
+        
+                        
+        
+        <li>
+          <a href="http://ir.crombiereit.com/unit-quote">Unit Information</a>
+                  </li>
+
+        
+                        
+        
+          
+          <li data-alignment="left">
+            <a href="http://ir.crombiereit.com/information-request">Request Information</a>
+                      </li>
+
+        
+    
+          
+    </ul>
+  
+                  </li>
+
+        
+                        
+        
+          
+          <li class="has-submenu" data-alignment="left">
+            <a href="/crombie-careers" data-drupal-link-system-path="node/6">Careers</a>
+                                                <ul class="submenu menu vertical" data-submenu>
+                                  
+        
+          <li class="hide-for-large">
+              <a href="/crombie-careers" data-drupal-link-system-path="node/6">Crombie Careers</a>
+                        </li>
+
+        
+                        
+        
+          
+          <li data-alignment="left">
+            <a href="/life-at-crombie" data-drupal-link-system-path="node/20">Life at Crombie</a>
+                      </li>
+
+        
+    
+          
+    </ul>
+  
+                      </li>
+
+        
+    
+                    <li role="menuitem" class="show-for-large">
+            <div class="site-search">
+              <div class="search-box">
+                <input type="text" name="keyword" value="" placeholder="Search the site">
+              </div>
+              <a href="#" class="search-close"><img src="/themes/custom/crombie/images/assets/search-close.svg"></a>
+              <a href="#" class="search-icon"><img src="/themes/custom/crombie/images/assets/icon-search.png"></a>
+            </div>
+          </li>
+          
+    </ul>
+  
+            </div>
+        </div>
+      </nav>
+    </div>
+    </div>
+  
+
+  </nav>
+
+  </div>
+
+
+                          <div class="website-alert no-print" id="alert-sticky-container" data-sticky-container>
+        <div class="website-alert-wrapper" data-sticky data-margin-top="6.250" data-top-anchor="alert-sticky-container" data-stick-to="top" data-sticky-on="small">
+          <div class="website-alert-title">COVID-19</div>
+          <div class="website-alert-content"> <p>COVID-19 has impacted Canadians from coast to coast. The safety of our people, tenants, properties, and communities remains our highest priority. Please visit our <a href="/crombie-reit-news">News page</a> to learn more.</p>
+ </div>
+        </div>
+      </div>
+            <div class="nav-mobile-spacer"></div>
+      <header class="row" role="banner" aria-label="Site header">
+                      </header>
+              <section class="hero-container "  style="background: url('/sites/default/files/styles/hero_style/public/2017-10/Davie%20Rendering_1.jpg?h=8e8c1010&amp;itok=mfu0IkY6') no-repeat center center; background-size: cover;">
+      <div class="hero-overlay"></div>
+      <div class="hero">
+        
+                          <div class="hero-home-content">
+                <div class="title-wrapper">
+                    <h1> Leader in Canadian Real Estate. </h1>
+                </div>
+                <div class="keywords-wrapper">
+                    <div class="keywords-overlay">
+                      <img src="/themes/custom/crombie/images/assets/icon-search.png">
+                    </div>
+                    <input id="keywords" name="keywords" type="text" value="" placeholder="Find your space" autocomplete="off">
+
+                    <div class="filter-location-search-results-container">
+                      <div class="spinner">
+                        <div class="double-bounce1"></div>
+                        <div class="double-bounce2"></div>
+                      </div>
+                      <div class="filter-location-search-results">
+                        <ul>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            
+        
+                    <div class="link-wrapper">
+                <span> Davie Street Safeway, Vancouver, BC. </span>
+                <span><a href="/development/1641-davie-street">See more about this property</a></span>
+            </div>
+        
+      </div>
+    </section>
+      
+      <div class="row">
+                              </div>
+
+      
+      
+      <div class="row">
+        <main id="main" class="large-12 columns" role="main">
+                    <a id="main-content"></a>
+                    <section>
+
+                              <h2 class="yoast_seo__focus_keyword hide">REIT</h2>
+              
+            
+              <div>
+    <div data-drupal-messages-fallback class="hidden"></div><section id="block-crombie-content" class="block-crombie-content">
+  
+  
+    
+
+  
+          <article id="node-1"  data-history-node-id="1" role="article" about="/">
+
+  
+    
+
+    <div class="view-mode-full">
+    <div class="field-wrapper field field-node--field-crombie-page-banner field-name-field-crombie-page-banner field-type-entity-reference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><article class="media media-image view-mode-default">
+  
+      <div class="image field field-media--field-image field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">  <img src="/sites/default/files/2017-10/Davie%20Rendering_1.jpg" width="2040" height="1320" alt="Davie Street " typeof="foaf:Image" />
+
+</div>
+      </div>
+</div>
+
+  </article>
+</div>
+      </div>
+</div>
+
+<div class="field-wrapper field field-node--field-paragraph field-name-field-paragraph field-type-entity-reference-revisions field-label-hidden">
+  <div class="field-items">
+
+    
+                
+            <div class="field-item">  <div class="paragraph paragraph--type--basic-full-width paragraph--view-mode--default">
+                    <p>Crombie REIT is one of Canada’s leading national real estate investment trusts.</p>
+
+<p>We're about more than real estate and solid investments. We're an engaged part of each community in which we operate. Through commercial, retail, and residential developments, we're helping build the future of real estate in Canada. Crombie and our predecessors have owned, operated, and developed real estate since 1964 - our diverse portfolio speaks for itself.</p>
+                    <div class="button-green-anchor"><a href="/about-crombie-REIT">Get To Know Us</a></div>
+            
+  </div>
+</div>
+                  
+            <div class="field-item">  <div class="paragraph paragraph--type--three-columns-with-icons paragraph--view-mode--default">
+        <div class="field-wrapper field field-paragraph--field-paragraph-icon field-name-field-paragraph-icon field-type-entity-reference field-label-hidden">
+
+    <div class="field-items">
+        
+                          <div class="columns large-4 medium-4">
+<div about="/taxonomy/term/1">
+          <span class="kpi"><img src="/sites/default/files/2017-10/properties-icon.svg" /></span>
+    
+      <div class="paragraph-icon-content">
+      <div class="field-wrapper field field-taxonomy-term--description field-name-description field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>284</p></div>
+      </div>
+</div>
+
+      <div class="field-wrapper field field-taxonomy-term--name field-name-name field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Properties</div>
+      </div>
+</div>
+
+    </div>
+  
+</div>
+
+
+
+</div>
+           
+
+        
+                          <div class="columns large-4 medium-4">
+<div about="/taxonomy/term/2">
+          <span class="kpi"><img src="/sites/default/files/2017-10/sq-ft-icon_0.svg" /></span>
+    
+      <div class="paragraph-icon-content">
+      <div class="field-wrapper field field-taxonomy-term--description field-name-description field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>18.0m</p></div>
+      </div>
+</div>
+
+      <div class="field-wrapper field field-taxonomy-term--name field-name-name field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">sq. feet of GLA</div>
+      </div>
+</div>
+
+    </div>
+  
+</div>
+
+
+
+</div>
+           
+
+        
+                          <div class="columns large-4 medium-4">
+<div about="/taxonomy/term/3">
+          <span class="kpi"><img src="/sites/default/files/2017-10/enterprise-icon.svg" /></span>
+    
+      <div class="paragraph-icon-content">
+      <div class="field-wrapper field field-taxonomy-term--description field-name-description field-type-text-long field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><p>$4.7b</p></div>
+      </div>
+</div>
+
+      <div class="field-wrapper field field-taxonomy-term--name field-name-name field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">Enterprise Value</div>
+      </div>
+</div>
+
+    </div>
+  
+</div>
+
+
+
+</div>
+           
+
+            </div>
+</div>
+
+      </div>
+</div>
+                  
+            <div class="field-item">  <div class="paragraph row paragraph--type--half-basic paragraph--view-mode--default">
+    
+        <section class="basic">
+        <div class="columns large-4 medium-4 small-12">
+              <img src="/sites/default/files/2017-11/Marpole3_0.png" width="1736" height="2008" alt="Thumbnail" title="Marpole Safeway at Night" typeof="foaf:Image" />
+
+
+        </div>
+        <div class="columns large-8 medium-4 small-12">
+            <div class="content-wrapper">
+                <span>Properties</span>
+                <h2>Commercial and Residential Spaces Where You Want To Be</h2>
+                <p>Our extensive portfolio focuses on high-traffic locations in top urban and suburban markets. We own, operate, and develop commercial and residential real estate properties across all of Canada.</p>
+                                <div class="button-green-anchor"><a href="/properties">Find a Property</a></div>
+                            </div>
+        </div>
+    </section>
+    
+
+      </div>
+</div>
+                  
+            <div class="field-item">  <div class="paragraph paragraph--type--custom-view paragraph--view-mode--default">
+          <div class="field-wrapper field field-paragraph--field-views-reference field-name-field-views-reference field-type-viewsreference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><div class="views-element-container"><div class="js-view-dom-id-2c1427154e962d55a4dca863637df495ef143eff9cfe057ed1f6453deafa8bac">
+
+
+  <section class="view-developments-teaser outer">
+
+    <div class="row heading-area content-wrapper">
+      <div class="columns large-6 medium-6 ">
+        <h2 >Developments</h2>
+      </div>
+      <div class="columns large-6 medium-6 btn-container">
+        <button onclick="location.href='/developments-commercial-real-estate'" class="view-all">VIEW ALL<br>DEVELOPMENTS</button>
+      </div>
+    </div>
+
+    <div class="row content-wrapper" data-equalizer>
+          <div class="columns medium-6 large-4 views-row"><article id="node-385"  data-history-node-id="385" role="article" about="/development/le-duke" class="property-teaser" data-equalizer-watch>
+  <a href="/development/le-duke">
+    <div class="image">
+              <article class="media media-image view-mode-property-teaser-crop">
+  
+      <div class="image field field-media--field-image field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">  <img src="/sites/default/files/styles/property_teaser_style/public/2021-04/2021-03-05%286%29.jpg?itok=fp3u95Hu" width="400" height="320" alt="le duke" typeof="foaf:Image" />
+
+
+</div>
+      </div>
+</div>
+
+  </article>
+
+          </div>
+  </a>
+  <div class="information">
+        <div class="location">
+              Montreal ,
+            QC
+    </div>
+      <div class="status">Active Development</div>
+        <a href="/development/le-duke"><h3><span class="field-wrapper">Le Duke</span>
+</h3></a>
+    <div class="row">
+      <div class="column small-5 medium-5 large-6">
+        <div class="stat-name">Category</div>
+        <div class="stat-value">Mixed Use</div>
+      </div>
+      <div class="column small-7 medium-7 large-6">
+          <div class="stat-name">Completion Date</div>
+          <div class="stat-value">2021</div>
+      </div>
+    </div>
+    <div class="description truncate" data-truncate="200">
+              <p><span><span>A joint venture project with PrinceDev, the new Le Duke mixed-use development is adjacent to the Bonaventure Greenway in Old Montreal. This estimated $127 million investment includes a 25 storey mixed-use tower with 390 residential rental units, a 25,000 sq. ft. IGA grocery store, a 1,000 sq. ft. retail space, and 300 underground parking stalls. The heritage building that was previously on site has been integrated into two story façade. This redevelopment began in late 2017 and will be complete in 2020.
+          </div>
+    <a href="#" class="btn-read-more">Read more</a>
+  </div>
+
+</article>
+</div>
+    <div class="columns medium-6 large-4 views-row"><article id="node-356"  data-history-node-id="356" role="article" about="/belmont" class="property-teaser" data-equalizer-watch>
+  <a href="/belmont">
+    <div class="image">
+              <article class="media media-image view-mode-property-teaser-crop">
+  
+      <div class="image field field-media--field-image field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">  <img src="/sites/default/files/styles/property_teaser_style/public/2017-10/LANJACR.jpg.jpg?h=a6fd7fc8&amp;itok=9g0RpDsQ" width="400" height="300" alt="Belmont Rendering" typeof="foaf:Image" />
+
+
+</div>
+      </div>
+</div>
+
+  </article>
+
+          </div>
+  </a>
+  <div class="information">
+        <div class="location">
+              Langford,
+            BC
+    </div>
+      <div class="status">Active Development</div>
+        <a href="/belmont"><h3><span class="field-wrapper">Belmont Market</span>
+</h3></a>
+    <div class="row">
+      <div class="column small-5 medium-5 large-6">
+        <div class="stat-name">Category</div>
+        <div class="stat-value">Mixed Use</div>
+      </div>
+      <div class="column small-7 medium-7 large-6">
+          <div class="stat-name">Completion Date</div>
+          <div class="stat-value">2021</div>
+      </div>
+    </div>
+    <div class="description truncate" data-truncate="200">
+              <p><span><span>Developed as a highly desirable, grocery anchored, mixed use centre in Langford, BC, Belmont Market is under active development. The centre is currently estimated at 160,000 sq. ft and includes a 53,000 sq. ft. Thrifty Foods, which opened May 2019. 16,000 sq. ft. is currently available for lease, in addition 17,000 sq. ft. to be built in the future. The site neighbours the Galloping Goose trail and numerous parks and lakes, and is pedestrian and cyclist friendly.</span></span></p>
+          </div>
+    <a href="#" class="btn-read-more">Read more</a>
+  </div>
+
+</article>
+</div>
+    <div class="columns medium-6 large-4 views-row"><article id="node-336"  data-history-node-id="336" role="article" about="/development/bronte-village" class="property-teaser" data-equalizer-watch>
+  <a href="/development/bronte-village">
+    <div class="image">
+              <article class="media media-image view-mode-property-teaser-crop">
+  
+      <div class="image field field-media--field-image field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">  <img src="/sites/default/files/styles/property_teaser_style/public/2018-02/Bronte%20Feb%202018.jpg?itok=tPLCBqQb" width="400" height="267" alt="Bronte Redevelopment" typeof="foaf:Image" />
+
+
+</div>
+      </div>
+</div>
+
+  </article>
+
+          </div>
+  </a>
+  <div class="information">
+        <div class="location">
+              Oakville,
+            ON
+    </div>
+      <div class="status">Active Development</div>
+        <a href="/development/bronte-village"><h3><span class="field-wrapper">Bronte Village</span>
+</h3></a>
+    <div class="row">
+      <div class="column small-5 medium-5 large-6">
+        <div class="stat-name">Category</div>
+        <div class="stat-value">Mixed Use</div>
+      </div>
+      <div class="column small-7 medium-7 large-6">
+          <div class="stat-name">Completion Date</div>
+          <div class="stat-value">2021</div>
+      </div>
+    </div>
+    <div class="description truncate" data-truncate="200">
+              <p>This joint venture redevelopment project with PrinceDev is nearing completion. Shadow-anchored by Farm Boy (opening soon) and Rexall (now open), The Village at Bronte Harbour is comprised of two luxury rental residential towers (10 and 14 storeys) with 483 units, 614 underground parking spaces, and 13,500 sq. ft. of new complementary retail space on the ground floor.</p>
+          </div>
+    <a href="#" class="btn-read-more">Read more</a>
+  </div>
+
+</article>
+</div>
+
+      <div class="columns large-6 medium-6 btn-container">
+        <button onclick="location.href='/developments-commercial-real-estate'" class="view-all is-mobile" style="display: none">VIEW ALL<br>DEVELOPMENTS</button>
+      </div>
+    </div>
+  </section>
+  
+  
+
+  
+  
+
+  
+</div>
+</div>
+</div>
+      </div>
+</div>
+
+      </div>
+</div>
+                  
+            <div class="field-item">
+  <div class="paragraph paragraph--type--half-overlay paragraph--view-mode--default">
+          <section class="half-overlay" style="background-image: url('/sites/default/files/styles/media_crop/public/2017-10/CrombieInteriorWithStaff_FINAL_9983.jpg?h=909f5da5&amp;itok=Y1R1sTSt')">
+        <div class="overlay-blue"></div>
+        <div class="row">
+            <div class="content-wrapper">
+                <div class="columns large-6">
+                    <span>Careers</span>
+                    <h2>Build Your Career With Crombie</h2>
+                    <p>Why work for Crombie? We're not your typical REIT, and have career opportunities as diverse as our portfolio. Whether you're a numbers expert trying to find your dream finance job, an experienced property manager in search of the next great location, or a paralegal looking for a less rigid corporate environment, Crombie's looking for your skill set.</p>
+                                        <div class="inline-block">
+                        <div class="button-green-anchor"><a href="/crombie-careers">Current Opportunities</a></div>
+                    </div>
+                                                        </div>
+                <!-- <div class="columns large-6">
+                </div> -->
+            </div>
+        </div>
+    </section>
+      </div>
+</div>
+                  
+          
+
+    
+    
+    
+
+    
+              <div class="quote-container" style="background-image: url('../themes/custom/crombie/images/assets/light-blue-strap-pattern.png')">
+        <div class="slick-quote row">
+            <div class="field-item">  <div class="paragraph row paragraph--type--quote paragraph--view-mode--default">
+          <div class="show-for-large columns small-12 medium-12 large-2 pull-quote-image">
+        <img src="../themes/custom/crombie/images/assets/quote.png" />
+      </div>
+      <div class="columns small-12 medium-12 large-9 quote__text">
+        <p>“As I look back on Crombie's progress over the past 11 years, I cannot help but be proud of how far we’ve come. In that time we have grown from a small Atlantic Canadian organization into a leading national REIT with assets of $4.6 billion and a significant development potential over the next 10 to 15 years. With the continued support of Crombie’s employees and investors, I am confident we will continue to be building a better REIT for many years to come.”</p>
+        <div class="quote__person">
+          <span class="quote-fullname">DONALD E. CLOW</span>
+          <span>President and Chief Executive Officer</span>
+        </div>
+      </div>
+      <div class="hide-for-large columns small-12 medium-12 large-2 pull-quote-image">
+        <img src="../themes/custom/crombie/images/assets/quote.png" />
+      </div>
+      <div class="columns small-12 medium-12 large-3 round-image quote__image">
+                      <article class="media media-image view-mode-contact-crop">
+  
+      <div class="image field field-media--field-image field-name-field-image field-type-image field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">  <img src="/sites/default/files/styles/contact_style/public/2017-10/don-clow-400x400_1.jpg?itok=ockSuywP" width="300" height="300" alt="Don Clow Headshot" typeof="foaf:Image" />
+
+
+</div>
+      </div>
+</div>
+
+  </article>
+
+                </div>
+      <!-- <div class="small-12 medium-12 large-8 large-centered columns quote__person">
+          <span class="quote-fullname">DONALD E. CLOW</span>
+          <span>President and Chief Executive Officer</span>
+      </div> -->
+      </div>
+</div>
+      
+
+      
+
+
+  </div>
+</div>
+
+
+
+
+
+  </div>
+
+  
+  
+  
+</article>
+
+    
+    
+  </section>
+
+  </div>
+
+                          <div class="row front-footer" data-equalizer>
+                <div class="column medium-4 padded" data-equalizer-watch>
+                  <h4>Latest News</h4>
+                    <div class="views-element-container"><div class="js-view-dom-id-59eab5a0b4d913148c305f73c4e6a21baddd7660def4812828946bed7b989a30">
+  
+  
+  
+
+  
+  
+  
+
+      <div class="views-row"><div class="views-field views-field-created"><span class="field-content">May 17, 2021</span></div><div class="views-field views-field-title"><span class="field-content"><a href="/article/mural-dedicated-essential-workers-unveiled-avalon-mall" hreflang="en">Mural Dedicated To Essential Workers Unveiled At Avalon Mall</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-created"><span class="field-content">May 10, 2021</span></div><div class="views-field views-field-title"><span class="field-content"><a href="/article/welcome-2021-summer-students" hreflang="en">Welcome 2021 Summer Students!</a></span></div></div>
+    <div class="views-row"><div class="views-field views-field-created"><span class="field-content">April 29, 2021</span></div><div class="views-field views-field-title"><span class="field-content"><a href="/article/crombie-reit-fiscal-2020-annual-general-and-special-meeting-and-q1-fiscal-2021-conference" hreflang="en">Crombie REIT Fiscal 2020 Annual General and Special Meeting and Q1 Fiscal 2021 Conference Call</a></span></div></div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+                  <div class="button-green-anchor"><a href="/crombie-reit-news">View All</a> </div>
+                </div>
+                <div class="column medium-4 padded" data-equalizer-watch>
+                  <h4>Press Releases</h4>
+                                      <div class="news-date">May 14, 2021</div>
+                    <div class="news-title"><a href="https://ir.crombiereit.com//investors/press-releases/news-details/2021/Crombie-REIT-Announces-May-2021-Monthly-Distribution/default.aspx" target="_blank">Crombie REIT Announces May 2021 Monthly Distribution</a></div>
+                                      <div class="news-date">May 10, 2021</div>
+                    <div class="news-title"><a href="https://ir.crombiereit.com//investors/press-releases/news-details/2021/CROMBIE-REIT-ANNOUNCES-100-MILLION-EQUITY-FINANCING/default.aspx" target="_blank">Crombie REIT Announces $100 Million Equity Financing </a></div>
+                                      <div class="news-date">May 07, 2021</div>
+                    <div class="news-title"><a href="https://ir.crombiereit.com//investors/press-releases/news-details/2021/Crombie-REIT-Announces-Voting-Results-and-Election-of-Trustees/default.aspx" target="_blank">Crombie REIT Announces Voting Results and Election of Trustees</a></div>
+                                    <div class="button-green-anchor">
+                    <a href="https://ir.crombiereit.com/investors/press-releases/default.aspx">View All</a>
+                  </div>
+                </div>
+                <div class="column medium-4 stock-quote" data-equalizer-watch>
+                  <h4>Market Summary</h4>
+                  <table border="1" cellpadding="2" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <td>Price ($):</td>
+                        <td align="right">17.09</td>
+                      </tr>
+                      <tr>
+                        <td>Change ($):</td>
+                        <td align="right">0.01</td>
+                      </tr>
+                      <tr>
+                        <td>Change (%):</td>
+                        <td align="right">0.059</td>
+                      </tr>
+                      <tr>
+                        <td>Volume:</td>
+                        <td align="right">153331</td>
+                      </tr>
+                      <tr>
+                        <td>High ($):</td>
+                        <td align="right">17.12</td>
+                      </tr>
+                      <tr>
+                        <td>Low ($):</td>
+                        <td align="right">17</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="row">
+                    <div class="column small-9 quote-date">
+                      <div>As of May 17, 2021 04:00 pm<br />Minimum 20 minute delay</div>
+                    </div>
+                    <div class="column small-3 refresh-icon">
+                      <a class="reload-quote" href="https://ir.crombiereit.com/investors/unit-information/unit-quote/default.aspx" target="_blank"><img src="themes/custom/crombie/images/assets/reload.png" alt="Reload" /></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+          </section>
+        </main>
+                      </div>
+              <footer class="footer-wrapper no-print">
+            <div class="row">
+                            <div id="footer-first" class="large-3 small-12 medium-3 columns">
+                  <div>
+    <section id="block-footeraddressblock" class="block-footeraddressblock">
+  
+  
+    
+
+  
+          <div class="field-wrapper field field-block-content--field-address-1 field-name-field-address-1 field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">610 East River Rd, Suite 200</div>
+      </div>
+</div>
+<div class="field-wrapper field field-block-content--field-address-2 field-name-field-address-2 field-type-string field-label-hidden">
+    <div class="field-items">
+          <div class="field-item">New Glasgow, NS B2H 3S2</div>
+      </div>
+</div>
+<div class="field-wrapper field field-block-content--field-telephone field-name-field-telephone field-type-telephone field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><a href="tel:%28902%29755-8100">(902) 755-8100</a></div>
+      </div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+                </div>
+                                        <div id="footer-middle" class="large-6 small-12 medium-6 columns">
+                  <div>
+    <section id="block-footerlinksblock" class="block-footerlinksblock">
+  
+  
+          <div class="js-contact js-button"><form action="/contact-us"><button>CONTACT US</button></form></div>
+      <div class="js-button"><form action="http://ir.crombiereit.com/email-notification"><button>SIGN UP FOR<br>PRESS RELEASES</button></form></div>
+        
+  </section>
+
+  </div>
+
+                </div>
+                                        <div id="footer-last" class="large-3 small-12 medium-3 columns">
+                  <div>
+    <section id="block-footersocialmediablock" class="block-footersocialmediablock">
+  
+  
+    
+
+  
+          <div class="field-wrapper field field-block-content--field-social-media-link field-name-field-social-media-link field-type-entity-reference field-label-hidden">
+    <div class="field-items">
+          <div class="field-item"><div about="/taxonomy/term/5">
+<div class="social-icons-wrapper">
+  <a href="https://twitter.com/CrombieREIT" target="_blank"><img src="../themes/custom/crombie/images/assets/footer/icon_twitter.png" alt="icon_twitter"></a>
+</div>
+</div>
+</div>
+          <div class="field-item"><div about="/taxonomy/term/6">
+<div class="social-icons-wrapper">
+  <a href="https://www.linkedin.com/company/838851/" target="_blank"><img src="../themes/custom/crombie/images/assets/footer/icon_linkedin.png" alt="icon_linkedin"></a>
+</div>
+</div>
+</div>
+      </div>
+</div>
+
+    
+    
+  </section>
+
+  </div>
+
+                </div>
+            </div>
+            <div class="bottom-bar panel">
+                <hr>
+            <div class="row footer-bottom">
+                <div class="large-4 small-12 columns">
+                    <span class="realpac"><img src="../themes/custom/crombie/images/assets/footer/logo_realpac.png"></span>
+                </div>
+                <div class="large-8 small-12 columns">
+                    <span class="footer-hyperlink"><a href="/sites/default/files/2019-10/Code%20of%20Conduct%20Booklet.pdf" target="_blank">Code of Conduct</a></span>
+                    <span class="footer-hyperlink"><a href="/ohs-policy">OHS Policy</a></span>
+                    <span class="footer-hyperlink"><a href="/crombie-privacy-policy">Privacy Policy</a></span>
+                    <span class="footer-hyperlink"><a href="/disclaimer">Disclaimer</a></span>
+                    &copy; 2021 Crombie REIT All rights reserved.
+                </div>
+            </div>
+                    <form id="subscribe-user" class="footer-subscribe-form" action="/mail/subscribe/" method="post" data-abide novalidate>
+                <span class="btn-close"><img src="/themes/custom/crombie/images/search-close.svg" alt="close button"></span>
+                <div class="form-data">
+                  <h1>Sign up to receive Crombie press releases</h1>
+                  <input type="text" name="full_name" placeholder="Full name" class="crombie-input-text" required>
+                  <input type="email" name="email" placeholder="Email address" class="crombie-input-text" required>
+                  <input type="submit" class="crombie-button-green " value="Subscribe">
+                </div>
+                <div class="thank-you">
+                  <h1>Thank you!</h1>
+                  <p>Thank you for signing up! You will now receive messages from our mailing list</p>
+                  <button class="crombie-button-green">OK</button>
+                </div>
+          </form>
+        </footer>
+          </div>
+  </div>
+</div>
+
+  </div>
+
+  
+  <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/1","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","crombie_global_cfg":{"zoom_level":6,"alberta_lat":"51.0130333","alberta_lng":"-114.2142372","bc_lat":"49.2577143","bc_lng":"-123.1939434","sk_lat":"52.1396338","sk_lng":"-106.7167664","ns_lat":"44.6492457","ns_lng":"-63.6920138","nl_lat":"47.4818261","nl_lng":"-52.9677836","nb_lat":"45.1099495","nb_lng":"-66.3220257","qc_lat":"45.5579564","qc_lng":"-73.8703849","manitoba_lat":"49.8537377","manitoba_lng":"-97.2923069","ontario_lat":"43.6567919","ontario_lng":"-79.4609327","pei_lat":46.2619559,"pei_lng":-63.1709093},"crombie_mail_cfg":{"contact_us_subject_text":"There is a new submission from Contact Us form","contact_us_confirmation_heading":"Thank you!","contact_us_confirmation_text":"Your message has been successfully sent and we appreciate you contacting us. We will be in touch soon.","leasing_inquiry_subject_text":"There is a new submission from Leasing Inquiry form","leasing_inquiry_confirmation_heading":"Thank you!","leasing_inquiry_confirmation_text":"Your message has been successfully sent and we appreciate you contacting us. We will be in touch soon."},"user":{"uid":0,"permissionsHash":"88d24ae4adfbca83e035ffdb48852754ff8c2f8731f317c22ae550611687e0b0"}}</script>
+<script src="/sites/default/files/js/js_c6sBYcgPYd3dKKsqe7iP6GIHZvyCj-q66Ny81NMgZ7U.js"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_0dlDptzuIvI_rCnmAKDTl24tY3Wb9OLOV_o_-ByrkTc.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+<script src="/sites/default/files/js/js_4dhnDsvQVichCeV7YKP8NSzPYQwQEPUyEK11RVsNPQM.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?&amp;v=3.31&amp;key=AIzaSyBTQN3EA2Jf7aTa_uo6whlsubYr0Q3Q838"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/enquire.js/2.1.6/enquire.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script src="/sites/default/files/js/js_TcpESIfCy8JpmigCTvO4EBB0X9l1ArHyFpZcUhvzSAI.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="/sites/default/files/js/js_jFw0oGzg0tpTjPcZFzFRVh84TWr2xDRVog-jD_qhR6k.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a72015ccc9","applicationID":"84131395","transactionName":"MVZaYENZWUBXVBVZCQgceVdFUVhdGUcAVwM5UFlXWV0=","queueTime":0,"applicationTime":14,"atts":"HRFZFgtDSk4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+  <script>
+    navigator.detect= (function(){
+      var ua= navigator.userAgent, tem,
+          M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+      if(/trident/i.test(M[1])){
+        tem=  /\brv[ :]+(\d+)/g.exec(ua) || [];
+        return 'IE '+(tem[1] || '');
+      }
+      if(M[1]=== 'Chrome'){
+        tem= ua.match(/\b(OPR|Edge)\/(\d+)/);
+        if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+      }
+      M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+      if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1]);
+      return M.join(' ');
+    })();
+    console.info('Navigator detect() : ' + navigator.detect);
+    var unsupported_browsers = [ 'Safari 9', 'Safari 8', 'Safari 7', 'Safari 6', 'Safari 5' ];
+    if ( unsupported_browsers.indexOf( navigator.detect ) > -1 ) {
+
+        var body = document.getElementsByTagName("BODY")[0];
+        var offCanvasWrapper = document.getElementsByClassName("off-canvas-wrapper")[0];
+        var skipLink = document.getElementsByClassName("skip-link")[0];
+        offCanvasWrapper.classList.add("hide");
+        skipLink.classList.remove("visually-hidden");
+
+    }
+  </script>
+</html>

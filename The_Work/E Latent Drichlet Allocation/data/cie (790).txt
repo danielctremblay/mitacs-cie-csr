@@ -1,0 +1,22 @@
+A|AGILENT TECH INC|BMOC|BMO Capital Markets Corp.|100
+A|AGILENT TECH INC|DBAB|Deutsche Bank Securities Inc.|22162
+A|AGILENT TECH INC|JPMS|J.P. Morgan Securities LLC|75944
+A|AGILENT TECH INC|LEHM|Barclays Capital Inc./Le|83634
+A|AGILENT TECH INC|LSCI|Lek Securities Corporation|9100
+A|AGILENT TECH INC|NITE|Knight Capital Americas LLC|9786
+A|AGILENT TECH INC|SBSH|Citigroup Global Markets Inc.|4971
+A|AGILENT TECH INC|UBSS|UBS Securities LLC|150994
+A|AGILENT TECH INC|WCHV|Wells Fargo Securities, LLC.|100
+AA|ALCOA INC|DBAB|Deutsche Bank Securities Inc.|136666
+AA|ALCOA INC|JPMS|J.P. Morgan Securities LLC|251581
+AA|ALCOA INC|LEHM|Barclays Capital Inc./Le|167376
+AA|ALCOA INC|NITE|Knight Capital Americas LLC|35841
+AA|ALCOA INC|SBSH|Citigroup Global Markets Inc.|45995
+AA|ALCOA INC|SUSQ|Susquehanna Capital Group|7200
+AA|ALCOA INC|UBSS|UBS Securities LLC|146512
+AA|ALCOA INC|WCHV|Wells Fargo Securities, LLC.|4881
+AA$B|ALCOA INC|LSCI|Lek Securities Corporation|100
+AA$B|ALCOA INC|NITE|Knight Capital Americas LLC|100
+AAAP|ADVANCED ACCELE. ADS|DBAB|Deutsche Bank Securities Inc.|381
+AAAP|ADVANCED ACCELE. ADS|JPMS|J.P. Morgan Securities LLC|3408
+AAAP|ADVANCED ACCELE. ADS|LEHM|Barc

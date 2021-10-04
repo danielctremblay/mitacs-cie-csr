@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"35893545"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="shortlink" href="http://ir.bellushealth.com/" />
+<meta property="og:site_name" content="BELLUS Health" />
+<link rel="canonical" href="https://ir.bellushealth.com/investors-media/" />
+<meta property="og:type" content="website" />
+<meta name="description" content="The Investor Relations website contains information about BELLUS Health&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta property="og:url" content="https://ir.bellushealth.com/investors-media" />
+<meta property="og:title" content="Investors &amp; Media | BELLUS Health" />
+<meta name="referrer" content="no-referrer" />
+<meta property="og:description" content="The Investor Relations website contains information about BELLUS Health&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/g/files/knoqqb53211/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://ir.bellushealth.com/investors-media" />
+<link rel="revision" href="https://ir.bellushealth.com/investors-media" />
+
+    <title>Investors &amp; Media | BELLUS Health</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb53211/files/css/css_rfjm6CJ_0NMC2yDcg2-ndYMEx1qfufTwwHO3KArx5Oc.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb53211/files/css/css__bZjEazEXM_RDyvBZgn3s1cPAXMjsOByAKtY9L-3Qc0.css" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb53211/files/css/css_YiL-7BVLvKSC9pd7RGGAkfkckGD8Ayqw-2GlDDZ0V8Y.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb53211/files/css/css_Ms-etzD2zW-xPlQHJ67ZgZbe_pMCukQfGeiVvyS6XcI.css" />
+<link rel="stylesheet" media="screen" href="/sites/g/files/knoqqb53211/files/css/css_m5KPQKPbGrcakB2oRjMAw3P50CEzMdIxE1TFr6nYXu8.css" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb53211/files/css/css_f463eMEn8vv-iBhdAWSKXtNcMGaIEaxB-LN-ZNsME4g.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb53211/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+<script src="/sites/g/files/knoqqb53211/files/js/js_xuMa8-nCMB2udOxawYQydNRDTfNg8W8GSDYka0iUn2o.js"></script>
+
+    
+  </head>
+  <body class="body-sidebars-none nir-node nir-node--type-nir-landing-page nir-node--5806 path-frontpage page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#main-menu">
+        Skip to main navigation
+      </a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="page-wrapper">
+    <a id="top" class="anchor">&nbsp;</a>
+
+    <header id="masthead" class="animated slideInDown clearfix">
+
+        <div id="header-widgets" class="no-mobile"><div class="container"><div class="row justify-content-end"><div id="header-widget-2" class="col-12 col-md-8 justify-content-end"><div id="nav_menu-3" class="widget-odd widget-first widget-1 widget widget_nav_menu"><div class="menu-top-links-container"><ul id="menu-top-links" class="menu"><li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="https://bellushealth.com/about-us/contact-us/">Contact Us</a></li><li id="menu-item-wpml-ls-17-en" class="menu-item wpml-ls-slot-17 wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-17-en"><a title="EN" href="/"><span class="wpml-ls-display">EN</span></a></li></ul></div></div><div id="nav_menu-2" class="widget-even widget-last widget-2 widget widget_nav_menu"><div class="menu-top-links-icons-container"><ul id="menu-top-links-icons" class="menu"><li id="menu-item-110" class="menu-item menu-item-type-gs_sim menu-item-object-gs_sim menu-item-110"><div class="menu-search"><form role="search" method="get" action="https://bellushealth.com/" class="searchform search-dropdown"><label class="screen-reader-text" for="s">Search:</label><div class="search-wrap"><input type="text" value="" name="s" class="s" placeholder="Search..." /><button type="submit" class="searchsubmit"><i class="far fa-search"></i></button></div></form><a class="search-toggle" href="#"><i class="far fa-search"></i></a></div></li><li id="menu-item-68" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-68"><a href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fir.bellushealth.com%2Finvestors-media" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a></li><li id="menu-item-69" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-69"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fir.bellushealth.com%2Finvestors-media" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a></li><li id="menu-item-111" class="menu-item menu-item-type-gs_sim menu-item-object-gs_sim menu-item-111"><div class="printfriendly"><a href="#" rel="nofollow" onclick="window.print(); return false;" class="noslimstat" title="Printer Friendly, PDF & Email"><i class="far fa-print"></i></a></div></li></ul></div></div></div></div></div></div>
+        
+        
+                    <div class="container" id="mainnav-container">
+                <nav id="mainNav" class="navbar navbar-expand-md clearfix">
+                    <div class="container">
+                        <span class="navbar-brand">
+                            <a href="https://bellushealth.com/" class="custom-logo-link scroll-top" rel="home">
+                                <img width="170" height="70" src="/sites/g/files/knoqqb53211/themes/site/nir_pid3428/client/images/logo-bellus-header-min.jpg" class="custom-logo img-fluid" alt="Bellus Health care" />
+                            </a>
+                        </span>
+                        <button type="button" id="nav-icon" class="navbar-toggle navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-controls="navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="sr-only">Toggle Navigation</span>
+                        </button>
+                        <div id="navbarCollapse" class="collapse navbar-collapse">
+                            <ul id="menu-main-nav" class="nav navbar-nav ml-auto">
+                                <li class="nav-search mobile-only">
+                                    <form role="search" method="get" id="searchform" action="https://bellushealth.com/">
+                                        <div>
+                                            <label class="screen-reader-text" for="s">Search:</label>
+                                            <div class="search-wrap">
+                                                <input type="text" value="" name="s" class="s" placeholder="Search..." />
+                                                <button type="submit" class="searchsubmit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="lang" value="en" />
+                                    </form>
+                                </li>
+                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-179" class="mobile-only menu-item menu-item-type-gs_sim menu-item-object-gs_sim menu-item-179 nav-item">
+                                    <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-horizontal">
+                                        <ul>
+                                            <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+                                                <a href="/" class="wpml-ls-link"><span class="wpml-ls-native">EN</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                
+                        
+    <h2 class="visually-hidden">Main navigation</h2>
+    
+
+                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown dropdown nav-item levelOneWithChildren"><a title="About Us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="" class="dropdown-toggle nav-link" href="https://bellushealth.com/about-us/">About Us</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="follow-link menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-itemlevelTwoWithChildren"><a title="Our Company" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" target="" href="https://bellushealth.com/about-us/our-company/">Our Company</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Management Team" class="dropdown-item" target="" href="https://bellushealth.com/about-us/our-company/#management-team">Management Team</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Board of Directors" class="dropdown-item" target="" href="https://bellushealth.com/about-us/our-company/#board-of-directors">Board of Directors</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Clinical Advisory Boards" class="dropdown-item" target="" href="https://bellushealth.com/about-us/our-company/#clinical-advisory-board">Clinical Advisory Boards</a></li></ul></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Contact Us" class="dropdown-item" target="" href="https://bellushealth.com/about-us/contact-us/">Contact Us</a></li></ul></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown dropdown nav-item levelOneWithChildren"><a title="Pipeline" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="" class="dropdown-toggle nav-link" href="https://bellushealth.com/pipeline/">Pipeline</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="follow-link menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-itemlevelTwoWithChildren"><a title="BLU-5937" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" target="" href="https://bellushealth.com/pipeline/blu-5937/">BLU-5937</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Chronic Cough" class="dropdown-item" target="" href="https://bellushealth.com/pipeline/blu-5937/#chronic-cough">Chronic Cough</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Chronic Pruritus" class="dropdown-item" target="" href="https://bellushealth.com/pipeline/blu-5937/#chronic-pruritis">Chronic Pruritus</a></li></ul></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Clinical Trials" class="dropdown-item" target="" href="https://bellushealth.com/pipeline/clinical-trials/">Clinical Trials</a></li></ul></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown dropdown nav-item levelOneWithChildren"><a title="Science" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="" class="dropdown-toggle nav-link" href="https://bellushealth.com/science/">Science</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="P2X3 Inhibition" class="dropdown-item" target="" href="https://bellushealth.com/science/p2x3-inhibition/">P2X3 Inhibition</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Scientific Publications" class="dropdown-item" target="" href="https://bellushealth.com/science/scientific-publications/">Scientific Publications</a></li></ul></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown dropdown nav-item levelOneWithChildren"><a title="Investors &amp; Media" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="" class="dropdown-toggle nav-link" href="https://ir.bellushealth.com/">Investors &amp; Media</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Investors Home" class="dropdown-item" target="" href="https://ir.bellushealth.com/">Investors Home</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Press Releases" class="dropdown-item" target="" href="/press-releases">Press Releases</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Events &amp; Presentations" class="dropdown-item" target="" href="https://ir.bellushealth.com/events-presentations">Events &amp; Presentations</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="follow-link menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-itemlevelTwoWithChildren"><a title="Financial Reports &amp; Other" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" target="" href="https://ir.bellushealth.com/financial-reports-other/sec-filings">Financial Reports &amp; Other</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="SEC Filings" class="dropdown-item" target="" href="https://ir.bellushealth.com/financial-reports-other/sec-filings">SEC Filings</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Other Filings" class="dropdown-item" target="" href="/financial-reports-other/other-filings">Other Filings</a></li></ul></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="follow-link menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-itemlevelTwoWithChildren"><a title="Stock Information" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" target="" href="https://ir.bellushealth.com/stock-information/stock-quote-chart">Stock Information</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Stock Quote &amp; Chart" class="dropdown-item" target="" href="https://ir.bellushealth.com/stock-information/stock-quote-chart">Stock Quote &amp; Chart</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Analyst Coverage" class="dropdown-item" target="" href="https://ir.bellushealth.com/stock-information/analyst-coverage">Analyst Coverage</a></li></ul></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="follow-link menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-itemlevelTwoWithChildren"><a title="Corporate Governance" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" target="" href="/corporate-governance/documents-charters">Corporate Governance</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Documents &amp; Charters" class="dropdown-item" target="" href="/corporate-governance/documents-charters">Documents &amp; Charters</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Management" class="dropdown-item" target="" href="https://bellushealth.com/about-us/our-company/#management-team">Management</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Board of Directors" class="dropdown-item" target="" href="https://bellushealth.com/about-us/our-company/#board-of-directors">Board of Directors</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Clinical Advisory Boards" class="dropdown-item" target="" href="https://bellushealth.com/about-us/our-company/#clinical-advisory-board">Clinical Advisory Boards</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Committee Composition" class="dropdown-item" target="" href="/corporate-governance/committee-composition">Committee Composition</a></li></ul></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="follow-link menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-itemlevelTwoWithChildren"><a title="Investor Resources" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" target="" href="https://ir.bellushealth.com/investor-resources/investor-contact">Investor Resources</a><ul class="dropdown-menu" role="menu"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Investor Contact" class="dropdown-item" target="" href="https://ir.bellushealth.com/investor-resources/investor-contact">Investor Contact</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="FAQs" class="dropdown-item" target="" href="https://ir.bellushealth.com/investor-resources/faqs">FAQs</a></li><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"  class="menu-item menu-item-type-post_type menu-item-object-page nav-item levelTwoNoChildren"><a title="Email Alerts" class="dropdown-item" target="" href="https://ir.bellushealth.com/investor-resources/email-alerts">Email Alerts</a></li></ul></li></ul></li>
+    
+
+                                                                <li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-178" class="mobile-only mobile-social-menu-item menu-item menu-item-type-gs_sim menu-item-object-gs_sim menu-item-178 nav-item">
+                                    <div id="mobileShare" class="mobile-icons">
+                                        <a href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fir.bellushealth.com%2Finvestors-media" title="Share on Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fir.bellushealth.com%2Finvestors-media" title="Share on LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                        <div class="printfriendly">
+                                            <a href="#" rel="nofollow" onclick="window.print(); return false;" class="noslimstat" title="Printer Friendly, PDF & Email"><i class="far fa-print"></i></a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            </header>
+
+    <section class="como-page-head">
+        <div id="subpage-header" class="head-image">
+            <img width="1867" height="600" src="/sites/g/files/knoqqb53211/themes/site/nir_pid3428/client/images/header-about-min-1-1867x600.jpg" class="attachment-page-header size-page-header" alt="Bellus Health" srcset="/sites/g/files/knoqqb53211/themes/site/nir_pid3428/client/images/header-about-min-1-1867x600.jpg 1867w, /sites/g/files/knoqqb53211/themes/site/nir_pid3428/client/images/header-about-min-1-300x96.jpg 300w, /sites/g/files/knoqqb53211/themes/site/nir_pid3428/client/images/header-about-min-1-768x247.jpg 768w, /sites/g/files/knoqqb53211/themes/site/nir_pid3428/client/images/header-about-min-1-1024x329.jpg 1024w, images/header-about-min-1-400x129.jpg 400w" sizes="(max-width: 1867px) 100vw, 1867px" />
+            <div class="title-container">
+                <div class="container">
+                    <div class="title-wrap">
+                                                    <p class="header-parent-title">Investors &#038; Media</p>
+                        
+                        <p class="header-title">
+                                                            Investors Home
+                                                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="content-wrap" class="page-sectional-menu">
+        <section id="investor-home-intro" class="page-section  light no-title clearfix" style="background-color: #fff;">
+            <div class="container main">
+                <div class="row">
+                    <div class="col-12 offset-0 order-1 col-xxs-12 col-xs-12 col-sm-12 col-md-8 order-md-12 col-lg-9 col-xl-8 offset-xl-1 col-xxl-8 content">
+                        <div id="ndq-content" class="pf-content ndq-5806">
+
+                            
+                                
+                                                                            
+      <div id="block-nir-pid3428-websitenoticeblock" class="block--website-notice-block block--website-notice-block--5806 block--content--website-notice-block block--content--website-notice-block--5806 block--9a90e9f5-08fd-419f-bf97-9319ff396fda block--9a90e9f5-08fd-419f-bf97-9319ff396fda--5806 block block-nir-website-notices block-website-notice-block">
+  
+    
+      
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-nir-pid3428-content" class="block--system-main-block block--system-main-block--5806 block--content--system-main-block block--content--system-main-block--5806 block--64943188-84da-4862-8463-8ba98c407095 block--64943188-84da-4862-8463-8ba98c407095--5806 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              Investors &amp; Media
+          </h1>
+    
+
+  <div>
+    
+<div class="panel-display sutro-double clearfix " >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-header panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-header">
+  
+      <h3 class="section-subtitle">Corporate Profile</h3>
+    
+      
+            <div class="field field--name-field-nir-lp-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-lp-block-body field--type-text-long field--label-hidden field__item"><p class="larger">BELLUS Health is a clinical-stage biopharmaceutical company developing novel therapeutics for the treatment of chronic cough and other hypersensitization-related disorders.</p>
+</div>
+      
+</div>
+      
+  </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 radix-layouts-middle panel-panel">
+        <div class="panel-panel-inner">
+          
+          <ul class="tab-links">
+            <li><a href="#tab-1">NASDAQ</a></li>
+            <li><a href="#tab-2">TSX</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row tabs" id="tab-1">
+      <div class="col-md-6 radix-layouts-column1 panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-column1"><div data-storage-id="node:5806:full:18616" data-uuid="ef6147b4-5c48-4bb5-a249-efadc198f426" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--5806 block--column1--market-data-block__stock-quote block--column1--market-data-block__stock-quote--5806 block--ef6147b4-5c48-4bb5-a249-efadc198f426 block--ef6147b4-5c48-4bb5-a249-efadc198f426--5806 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+    
+      <div class="home-quote user-toggle-off">
+  <div class="quote-wrapper">               <span class="home-quote-symbol"></span>
+      <span class="home-quote-date">May 18, 2021</span>
+      <span class="home-quote-price-change">
+        <span class="home-quote-price">
+          </span> / <span class="home-quote-change"></span>
+      </span>
+    </div>
+</div>
+  </div>
+<div class="block--attribution-block__stock-info-attribution__thomson-reuters block--attribution-block__stock-info-attribution__thomson-reuters--5806 block--column1--attribution-block__stock-info-attribution__thomson-reuters block--column1--attribution-block__stock-info-attribution__thomson-reuters--5806 block--2f58128a-1a49-4441-8f00-f948675b17d4 block--2f58128a-1a49-4441-8f00-f948675b17d4--5806 block block-nir-attribution-block block-attribution-block__stock-info-attribution__thomson-reuters">
+  
+    
+      <p>
+  Data Provided by Refinitiv. Minimum 15 minutes delayed.</p>
+
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="col-md-6 radix-layouts-column2 panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-column2"><div class="block--nir-stock-chart block--nir-stock-chart--5806 block--column2--nir-stock-chart block--column2--nir-stock-chart--5806 block--5a39ad4a-7f35-4c21-8ad4-e06cc745cf57 block--5a39ad4a-7f35-4c21-8ad4-e06cc745cf57--5806 block block-nir-stock-chart">
+  
+    
+      
+<img src="https://api.nasdaqomx.wallst.com/api/chart?theme=narrow&display=line&symbol=BLU.O-BLU&scale=logarithmic&duration=1dy&frequency=15min&gridLine=h&bgColor=385a95&lineColor=cc9a30&fillcolor=cc9a30|cc9a30&width=700&height=240&headerType=none&amp;bdrColor=385a95&amp;gridLineColor=ffffff&amp;font=5&amp;fontColor=FFFFFF&amp;fontSize=12&amp;fontStyle=1&amp;volume=0&amp;lineSizePrimary=4" width="700" height="240" ></img>
+
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row tabs" id="tab-2">
+      <div class="col-md-6 radix-layouts-secondcolumn1 panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-secondcolumn1"><div data-storage-id="node:5806:full:18616" data-uuid="3c2181aa-1506-4b51-851b-caa97e26127b" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--5806 block--secondcolumn1--market-data-block__stock-quote block--secondcolumn1--market-data-block__stock-quote--5806 block--3c2181aa-1506-4b51-851b-caa97e26127b block--3c2181aa-1506-4b51-851b-caa97e26127b--5806 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+    
+      <div class="home-quote user-toggle-off">
+  <div class="quote-wrapper">               <span class="home-quote-symbol"></span>
+      <span class="home-quote-date">May 18, 2021</span>
+      <span class="home-quote-price-change">
+        <span class="home-quote-price">
+          </span> / <span class="home-quote-change"></span>
+      </span>
+            <span class="home-quote-symbol"></span>
+      <span class="home-quote-date">May 18, 2021</span>
+      <span class="home-quote-price-change">
+        <span class="home-quote-price">
+          </span> / <span class="home-quote-change"></span>
+      </span>
+    </div>
+</div>
+  </div>
+<div class="block--attribution-block__stock-info-attribution__thomson-reuters block--attribution-block__stock-info-attribution__thomson-reuters--5806 block--secondcolumn1--attribution-block__stock-info-attribution__thomson-reuters block--secondcolumn1--attribution-block__stock-info-attribution__thomson-reuters--5806 block--2b59bba5-bf41-40c1-a978-6c5f1aa93395 block--2b59bba5-bf41-40c1-a978-6c5f1aa93395--5806 block block-nir-attribution-block block-attribution-block__stock-info-attribution__thomson-reuters">
+  
+    
+      <p>
+  Data Provided by Refinitiv. Minimum 15 minutes delayed.</p>
+
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="col-md-6 radix-layouts-secondcolumn2 panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-secondcolumn2"><div class="block--nir-stock-chart block--nir-stock-chart--5806 block--secondcolumn2--nir-stock-chart block--secondcolumn2--nir-stock-chart--5806 block--dd9af021-aa1d-43ce-895e-c76d23e0b5a8 block--dd9af021-aa1d-43ce-895e-c76d23e0b5a8--5806 block block-nir-stock-chart">
+  
+    
+      
+<img src="https://api.nasdaqomx.wallst.com/api/chart?display=line&symbol=BLU.TO&scale=logarithmic&duration=1dy&frequency=15min&gridLine=h&bgColor=385a95&lineColor=cc9a30&fillcolor=cc9a30|cc9a30&width=700&height=240&headerType=none&amp;bdrColor=385a95&amp;gridLineColor=ffffff&amp;font=5&amp;fontColor=FFFFFF&amp;fontSize=12&amp;fontStyle=1&amp;volume=0&amp;lineSizePrimary=4" width="700" height="240" ></img>
+
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+
+    <div class="row">
+      <div class="col-md-12 radix-layouts-footer panel-panel">
+        <div class="panel-panel-inner">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.sutro-double -->
+
+  </div>
+</article>
+
+  </div>
+
+  
+                                    
+                            
+                        </div>
+                    </div>
+
+                                            <aside class="aside col-12 order-12 col-xxs-12 col-xs-12 col-sm-12 col-md-4 order-md-1 col-lg-3 col-xl-3 col-xxl-3 sidebar aside-menu">
+                            <div class="pf-content">
+                                <div id="nav_menu-6" class="widget-odd widget-last widget-first widget-1 sidebar-menu-widget widget widget_nav_menu">
+                                    
+            
+    <h2 class="widgettitle">Investors &amp; Media</h2>
+    
+
+                <div class="menu-investors-menu-container"><ul id="menu-investors-menu" class="menu"><li  class="menu-item menu-item-type-post_type menu-item-object-page page_item levelOneNoChildren current-menu-item current_page_item active-levelOneNoChildren"><a target="" href="/">Investors Home</a></li><li  class="menu-item menu-item-type-post_type menu-item-object-page page_item levelOneNoChildren"><a target="" href="/press-releases">Press Releases</a></li><li  class="menu-item menu-item-type-post_type menu-item-object-page page_item levelOneNoChildren"><a target="" href="/events-presentations">Events &amp; Presentations</a></li><li  class="menu-item menu-item-type-post_type menu-item-object-page page_item levelOneNoChildren"><a target="" href="/financial-reports-other/sec-filings">Financial Reports &amp; Other</a></li><li  class="menu-item menu-item-type-post_type menu-item-object-page page_item levelOneNoChildren"><a target="" href="/stock-information/stock-quote-chart">Stock Information</a></li><li  class="menu-item menu-item-type-post_type menu-item-object-page page_item levelOneNoChildren"><a target="" href="/corporate-governance/documents-charters">Corporate Governance</a></li><li  class="menu-item menu-item-type-post_type menu-item-object-page page_item levelOneNoChildren"><a target="" href="/investor-resources/investor-contact">Investor Resources</a></li></ul></div>
+    
+
+                                                                    </div>
+                            </div>
+                        </aside>
+                                    </div>
+            </div>
+        </section>
+
+                    <section class="page-section bg-left  light clearfix" >
+                <div class="section-content main">
+                    <div class="container main">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12 offset-0 col-xxs-12 col-xs-12 col-sm-12 offset-md-1 col-md-11 col-lg-11 offset-lg-0 offset-xl-1 col-xl-10 col-xxl-10 content">
+                                <div id="block-widgetnewsv2" class="block--home-news block--nir-news__widget block--nir-news__widget--5806 block--home-news--nir-news__widget block--home-news--nir-news__widget--5806 block--ae88522e-01fe-46a5-8d24-ad008c86d0a2 block--ae88522e-01fe-46a5-8d24-ad008c86d0a2--5806 block block-nir-news block-nir-news__widget">
+  
+    
+        <header class="section-header">
+    <h2 class="section-title ">Recent News</h2>
+  </header>
+<div class="pf-content">
+      <ul class="investor-feed-list">
+        
+<li class="row justify-content-center feed-item">
+      <div class="col col-12 col-xs-12 col-sm-3 col-md-3 col-lg-2 pl-lg-0 col-xl-3 pr-xl-0 col-xxl-1 feed-date-col">
+        <h3 class="feed-date">5/12/21</h3>
+    </div>
+    <div class="col col-12 col-xs-12 col-xs-8 col-sm-9 col-md-9 pl-md-4 col-lg-8 pl-lg-0 col-xl-8 pl-xl-0 offset-xxl-1 col-xxl-8 pl-xxl-1 feed-content">
+          <h4 class="feed-title">
+        <a href="/news-releases/news-release-details/bellus-health-participate-2021-rbc-capital-markets-global" title="BELLUS Health to Participate in the 2021 RBC Capital Markets Global Healthcare Conference">BELLUS Health to Participate in the 2021 RBC Capital Markets Global Healthcare Conference</a>
+      </h4>
+               <span class="feed-subtitle">LAVAL, Quebec --(BUSINESS WIRE)--May 12, 2021-- BELLUS Health Inc. (Nasdaq:BLU; TSX:BLU) (“BELLUS Health” or the “Company”), a clinical-stage biopharmaceutical company developing novel therapeutics for the treatment of refractory chronic cough ("RCC") and other hypersensitization-related disorders,...</span>
+                  <p class="feed-more-link"><a href="/news-releases/news-release-details/bellus-health-participate-2021-rbc-capital-markets-global" class="read-more">Read More</a></p>
+      </div>
+</li>
+<li class="row justify-content-center feed-item">
+      <div class="col col-12 col-xs-12 col-sm-3 col-md-3 col-lg-2 pl-lg-0 col-xl-3 pr-xl-0 col-xxl-1 feed-date-col">
+        <h3 class="feed-date">5/10/21</h3>
+    </div>
+    <div class="col col-12 col-xs-12 col-xs-8 col-sm-9 col-md-9 pl-md-4 col-lg-8 pl-lg-0 col-xl-8 pl-xl-0 offset-xxl-1 col-xxl-8 pl-xxl-1 feed-content">
+          <h4 class="feed-title">
+        <a href="/news-releases/news-release-details/bellus-health-reports-first-quarter-2021-financial-results-and" title="BELLUS Health Reports First Quarter 2021 Financial Results and Business Highlights">BELLUS Health Reports First Quarter 2021 Financial Results and Business Highlights</a>
+      </h4>
+               <span class="feed-subtitle">- Phase 2b SOOTHE and Phase 2a BLUEPRINT clinical trials on track, with topline results expected Q4 2021 - - Ended quarter with US$81.9 million in cash, cash equivalents and short-term investments; current cash position expected to be sufficient to fund operating plan until end of 2022 - LAVAL,...</span>
+                  <p class="feed-more-link"><a href="/news-releases/news-release-details/bellus-health-reports-first-quarter-2021-financial-results-and" class="read-more">Read More</a></p>
+      </div>
+</li>
+<li class="row justify-content-center feed-item">
+      <div class="col col-12 col-xs-12 col-sm-3 col-md-3 col-lg-2 pl-lg-0 col-xl-3 pr-xl-0 col-xxl-1 feed-date-col">
+        <h3 class="feed-date">5/10/21</h3>
+    </div>
+    <div class="col col-12 col-xs-12 col-xs-8 col-sm-9 col-md-9 pl-md-4 col-lg-8 pl-lg-0 col-xl-8 pl-xl-0 offset-xxl-1 col-xxl-8 pl-xxl-1 feed-content">
+          <h4 class="feed-title">
+        <a href="/news-releases/news-release-details/bellus-health-present-american-thoracic-society-2021" title="BELLUS Health to Present at the American Thoracic Society 2021 International Conference">BELLUS Health to Present at the American Thoracic Society 2021 International Conference</a>
+      </h4>
+               <span class="feed-subtitle">LAVAL, Quebec --(BUSINESS WIRE)--May 10, 2021-- BELLUS Health Inc. (Nasdaq:BLU; TSX:BLU) (“BELLUS Health” or the “Company”), a clinical-stage biopharmaceutical company developing novel therapeutics for the treatment of refractory chronic cough (“RCC”) and other hypersensitization-related disorders,...</span>
+                  <p class="feed-more-link"><a href="/news-releases/news-release-details/bellus-health-present-american-thoracic-society-2021" class="read-more">Read More</a></p>
+      </div>
+</li>
+    </ul>
+  </div>
+  </div>
+
+                        
+    <h2 class="visually-hidden">z - Home &gt;&gt; Recent News &gt; Button</h2>
+    
+
+                <div class="feed-item feed-more-link text-center"><a class="btn btn-outline btn-blue" target="" href="/press-releases" title="More News">More News</a></div>
+    
+
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+                    <section id="upcoming-events" class="page-section bg-right  clearfix" >
+                <div class="section-content main">
+                    <div class="container main">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-12 offset-0 col-xxs-12 col-xs-12 col-sm-12 offset-md-1 col-md-11 col-lg-11 offset-lg-0 offset-xl-1 col-xl-10 col-xxl-10 content">
+                                <div id="block-widgeteventsv2" class="block--home-events block--nir-events__widget block--nir-events__widget--5806 block--home-events--nir-events__widget block--home-events--nir-events__widget--5806 block--4342084e-1d43-4c14-89cf-396106a1861c block--4342084e-1d43-4c14-89cf-396106a1861c--5806 block block-nir-events block-nir-events__widget">
+  
+    
+        <header class="section-header">
+    <h2 class="section-title ">Upcoming Events</h2>
+  </header>
+<div class="pf-content">
+      <ul class="investor-feed-list">
+        
+<li class="row justify-content-center feed-item">
+      <div class="col col-12 col-xs-12 col-sm-3 col-md-3 col-lg-2 pl-lg-0 col-xl-3 pr-xl-0 col-xxl-1 feed-date-col">
+        <h3 class="feed-date">  5/19/21
+</h3>
+    </div>
+    <div class="col col-12 col-xs-12 col-xs-8 col-sm-9 col-md-9 pl-md-4 col-lg-8 pl-lg-0 col-xl-8 pl-xl-0 offset-xxl-1 col-xxl-8 pl-xxl-1 feed-content">
+          <h4 class="feed-title">
+        <a href="/events/event-details/2021-rbc-capital-markets-global-healthcare-conference" title="2021 RBC Capital Markets Global Healthcare Conference">2021 RBC Capital Markets Global Healthcare Conference</a>
+      </h4>
+                  <p class="feed-more-link"><a href="/events/event-details/2021-rbc-capital-markets-global-healthcare-conference" class="read-more">Learn More</a></p>
+      </div>
+</li>
+    </ul>
+  </div>
+  </div>
+
+                        
+    <h2 class="visually-hidden">z - Home &gt;&gt; Upcoming Events &gt; Button</h2>
+    
+
+                <div class="feed-item feed-more-link text-center"><a class="btn btn-outline btn-blue" target="" href="/events-presentations" title="More Events">More Events</a></div>
+    
+
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+                    <section class="page-section clearfix" >
+                <div class="section-content main">
+                    <div class="container main">
+                        <div class="row justify-content-xl-center">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1 col-xl-1 col-xxl-1 col-xxxl-1"></div>
+                            <div class="col-xs-12 offset-0 col-sm-12 col-md-11 offset-md-1 col-lg-10 offset-lg-0 col-xl-9 col-xxl-9 col-xxxl-9 content">
+                                <div id="block-widgetassetsv2" class="block--home-pres block--nir-assets__widget block--nir-assets__widget--5806 block--home-pres--nir-assets__widget block--home-pres--nir-assets__widget--5806 block--7e76928d-3f6b-428e-8600-c6893d294960 block--7e76928d-3f6b-428e-8600-c6893d294960--5806 block block-nir-assets block-nir-assets__widget">
+  
+    
+        <header class="section-header">
+    <h2 class="section-title ">Corporate Presentation</h2>
+  </header>
+<div class="pf-content">
+      
+  <p class="text-center"><a target="_blank" href="https://ir.bellushealth.com/static-files/961f809c-cef0-46c4-b399-2a3f8b2f1bd7" class="btn btn-outline btn-blue">View</a></p>
+
+  </div>
+  </div>
+
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+
+    <footer id="site-footer">
+        
+  
+    
+      
+              
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="global-block-content" id="footer-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 left">
+                <div class="widget-odd widget-last widget-first widget-1 footer-logo widget widget_media_image" id="media_image-2">
+                    <img alt="Bellus Health Care" class="image wp-image-106 attachment-full size-full" data-entity-type="file" data-entity-uuid="9c29dbf3-66ec-4573-9720-d0f4a48f26fb" height="70" src="/system/files-encrypted/nasdaq_kms/inline-images/logo-bellus-footer-min.png" style="max-width: 100%; height: auto;" width="168" /></div>
+            </div>
+
+            <div class="col-12 col-xxs-12 col-xs-6 offset-xs-1 col-sm-4 col-md-3 col-lg-2 col-xl-2 center address">
+                <div class="widget_text widget-odd widget-last widget-first widget-1 address widget widget_custom_html" id="custom_html-2">
+                    <div class="textwidget custom-html-widget">
+                        <p>
+                            BELLUS Health Inc.
+                            <br />
+                            275 Armand-Frappier Blvd.
+                            <br />
+                            Laval, Quebec
+                            <br />
+                            Canada H7V 4A7
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-xxs-12 col-xs-5 col-sm-4 col-md-5 col-lg-3 col-xl-3 left contact">
+                <div class="widget_text widget-odd widget-last widget-first widget-1 phone widget widget_custom_html" id="custom_html-3">
+                    <div class="textwidget custom-html-widget">
+                        <p>
+                            Tel.: <a class="phoneLink" href="tel:+14506804500">(450) 680-4500</a>
+                            <br />
+                            Fax: (450) 680-4501
+                            <br /><a href="mailto:webinfo@bellushealth.com">webinfo@bellushealth.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div>
+      
+
+      
+  
+        
+                    <div id="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        
+                        
+    <h2 class="visually-hidden">Footer Nav</h2>
+    
+
+                <div class="col-12 col-sm-12 order-1 order-md-12 col-md-6 right"><div id="nav_menu-4" class="widget-odd widget-last widget-first widget-1 widget widget_nav_menu"><div class="menu-footer-nav-container"><ul id="menu-footer-nav" class="menu"><li  class="menu-item menu-item-type-post_type menu-item-object-page levelOne"><a target="" href="https://bellushealth.com/privacy-policy/">Privacy Policy</a></li><li  class="menu-item menu-item-type-post_type menu-item-object-page levelOne"><a target="" href="https://bellushealth.com/legal-disclaimer/">Legal Disclaimer</a></li><li  class="menu-item menu-item-type-post_type menu-item-object-page levelOne"><a target="" href="https://bellushealth.com/site-map/">Site Map</a></li></ul></div></div></div>
+    
+
+  
+    
+      
+              
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="col-12 col-sm-12 order-12 order-md-1 col-md-6 left global-block-content">
+<p id="copyright">© <script>
+<!--//--><![CDATA[// ><!--
+document.write((new Date()).getFullYear());
+//--><!]]>
+</script> BELLUS Health. All Rights Reserved.</p>
+</div>
+</div>
+      
+
+      
+  
+                                                                    </div>
+                </div>
+            </div>
+            </footer>
+</div>
+
+  </div>
+
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgbellushealth";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5806","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en","themeUrl":"sites\/g\/files\/knoqqb53211\/themes\/site\/nir_pid3428"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"core\/html5shiv,nir_analytics\/nir_analytics.adobe_launch,nir_analytics\/nir_analytics.adobe_prod,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_market_data_block\/nir_market_data_block.command,nir_market_data_block\/nir_market_data_block.stockQuote,nir_multimedia\/nir_multimedia,nir_pid3428\/client-footer,nir_pid3428\/client-header,nir_pid3428\/override,nir_pid3428\/to-specific-page (project),nir_pid3428\/vendor,nir_stock_chart\/nir_stock_chart.stockChartStyling,nir_website_notices\/nir_website_notices.notices,radix_layouts\/radix_layouts,system\/base","theme":"nir_pid3428","theme_token":null},"ajaxTrustedUrl":[],"user":{"uid":0,"permissionsHash":"c15a223ac077493ff059002270d676fbba4fde0a526dbe0c2798ce6a91d9d393"}}</script>
+<script src="/sites/g/files/knoqqb53211/files/js/js_P9wG0OXlKRYCLf8pROda86sZmH51FqxpV5QpOc92FJg.js"></script>
+<script src="//cdn.printfriendly.com/printfriendly.js"></script>
+<script src="/sites/g/files/knoqqb53211/files/js/js_GA0RIWKL35X7aKe0WMJOIpTNvO0BW98y0OkFMj26fjY.js"></script>
+<script src="//assets.adobedtm.com/898335afd880/c52ee8aa1e90/launch-5ef258dce664.min.js" async></script>
+
+    
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"761e715901","applicationID":"35893545,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH3xCFkBQXGlbCgVQaXNXXhdCXlxZUBc9e1pUXWYKVUZzWlsRE1pZXF1CTg5HWVBC","queueTime":0,"applicationTime":880,"atts":"ShJUF18aSEg=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

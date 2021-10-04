@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html ng-app="wtl">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <base href="/" /> -->
+    <title>Westshore Terminals Ltd.</title>
+    <!-- Google Roboto font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic|Roboto+Condensed:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="SHORTCUT ICON" href="favicon.ico">
+    <!-- Bootstrap 3.0 -->
+    <link rel="stylesheet" href="https://www.westshore.com/css/normalize.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="https://www.westshore.com/css/site.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM=" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" crossorigin="anonymous"></script>
+    <script integrity="sha256-1f0XPQDZczkAg04OEIPehrUy4EixXAQgulwtsGI2RLg=" type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!-- TMX -->
+    <script type="text/javascript" src='https://app.quotemedia.com/quotetools/jsVarsQuotesSpan.go?webmasterId=101341&symbol=WTE&df=MMMM d, yyyy h:mm a z'></script>
+    <!-- Google analytics -->
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    </script>
+</head>
+<body>
+
+<!-- Navbar Begin -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/"><img src="https://www.westshore.com/images/logo.png" alt="WTL"/></a>
+        </div>
+        <div class="collapse navbar-collapse" id="nav-main">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#/aboutus" class="dropdown-toggle" role="button" aria-expanded="false">Who We Are <span class="caret"></span></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <!--<li><a href="/aboutus">Who We Are</a></li> -->
+                        <li><a href="#/executive">Leadership</a></li>
+                        <li><a href="#/partners">Partners</a></li>
+                        <li><a href="#/contactus">Contact Us</a></li>
+                        <li><a href="#/workwithus">Work with Us</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#/whatwedo" class="dropdown-toggle" role="button" aria-expanded="false">What We Do <span class="caret"></span></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <!-- <li><a href="/whatwedo">What We Do</a></li> -->
+                        <li><a href="#/coalchain">The Coal Chain</a></li>
+                        <li><a href="#/dayinlife">A Day in the Life</a></li>
+                        <li><a href="#/bynumbers">By the Numbers</a></li>
+                        <li><a href="#/upgrade">Terminal Upgrade Project</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#/wherewework" class="dropdown-toggle" role="button" aria-expanded="false">Where We Live</a>
+                    <!--<ul class="dropdown-menu" role="menu">
+                        <li><a href="/wherewework">Where We Live</a></li>
+                        <li><a href="/community">Community Relationships</a></li>
+                    </ul>-->
+                </li>
+                <li class="dropdown">
+                    <a href="#/hwork" class="dropdown-toggle" role="button" aria-expanded="false">How We Work <span class="caret"></span></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <!--<li><a href="/hwork">How We Work</a></li>-->
+                        <!--<li><a href="#/enviro">Environmental Commitment</a></li> -->
+                        <li><a href="#/air">Air Quality</a></li>
+                        <li><a href="#/water">Water Usage, Noise and Light</a></li>
+                        <li><a href="#/safety">Safety and People</a></li>
+                        <li><a href="#/green">Green Marine</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#/investors" class="dropdown-toggle" role="button" aria-expanded="false">Investors <span class="caret"></span></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <!--<li><a href="#/finfo">Financial Information</a></li>-->
+                        <li><a href="#/financenews">News Releases</a></li>
+                        <li><a href="#/financereports">Financial Reports</a></li>
+                        <li><a href="#/presentations">Presentations and Videos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+<!-- Body Begin -->
+<div ng-view autoscroll="true"></div>
+<!-- Body End -->
+
+<!-- Footer Begin -->
+<nav class="navbar navbar-inverse navbar-bottom wtl-footer" style="border-radius: 0; ">
+    <div class="container-fluid">
+        <div class="row wtl-section-no-pad-bottom">
+            <div class="col-sm-12 text-center">
+                <img src="https://www.westshore.com/images/footer-logo.png" alt="Westshore" class="footer-logo" />
+            </div>
+        </div>
+        <div class="row padding-top-20">
+            <div class="col-sm-12 text-center">
+                <span>Scan to complete Westshore's COVID questionnaire</span>
+            </div>
+        </div>
+        <div class="row padding-bottom-20">
+            <div class="col-sm-12 text-center">
+                <a href="https://forms.monday.com/forms/b88b3d24b413076f7a96b7e743c97ff9"><img src="images/covid-question.jpg"></a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <address class="wtl-address">1 Roberts Bank, Delta, BC, V4M4G5</address>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <p><a href="mailto:info@westshore.com"><span class="glyphicon glyphicon-envelope"></span> info@westshore.com</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a href="/pdf/misc/term.pdf">Terms and Conditions</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Footer End -->
+
+<script integrity="sha256-vCJY79j8f3kuDmzPAzJnzDkyCC7lwUWtIRSv5kBglC8=" crossorigin="anonymous" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script integrity="sha256-tV1S2wRBBEvNksL3iaLfdylSVcDRHzbj8zXT0QF1fSo=" crossorigin="anonymous" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+<script integrity="sha256-PSUV2KAa3jkvQsd4iKVioa7C0xyaZrWos9b8QtIRoC4=" crossorigin="anonymous" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-resource.min.js"></script>
+<script type="text/javascript" src="https://www.westshore.com/js/app.js"></script>
+<script type="text/javascript" src="https://www.westshore.com/js/controllers.js"></script>
+<script type="text/javascript" src="https://www.westshore.com/js/filters.js"></script>
+<script type="text/javascript" src="https://www.westshore.com/js/pagination.js"></script>
+
+</body>
+</html>

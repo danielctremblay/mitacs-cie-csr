@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 lt-ie10" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+    
+        <meta charset="utf-8">
+        
+            
+        <title>Oncolytics Biotech, Inc. (ONCY)</title>
+        
+        
+            
+        
+    <meta property="og:site_name" content="Oncolytics Biotech, Inc.">
+    <meta property="og:title" content="Oncolytics Biotech, Inc. (ONCY)">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/logo.png">
+    <meta property="og:url" content="https://www.oncolyticsbiotech.com">
+
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+                
+                <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900" rel="stylesheet">
+        
+                    <link rel="stylesheet" href="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/css/style.css">
+                
+                <link rel="shortcut icon" href="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/favicons/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/favicons/manifest.json">
+        <link rel="mask-icon" href="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/favicons/safari-pinned-tab.svg">
+        <meta name="theme-color" content="#ffffff">  
+                
+        
+    
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-100764900-1', 'oncolyticsbiotech.com');
+    
+    (function() {
+        var opts = {};
+        var prefix = "/investors";
+        if (location.hostname.indexOf('stockpr.com') == 0) {
+            opts.cookiePath = location.pathname.substring(0, location.pathname.indexOf('/', 1) + 1)
+            opts.page = prefix + location.pathname.substring(location.pathname.indexOf('/', 1));
+        } else if (location.hostname.match(/^ir\./)) {
+            opts.page = prefix + location.pathname;
+        }
+        ga('send', 'pageview', opts);
+    })();
+    
+    /**
+        * Function that tracks a click on an outbound link in Analytics.
+        * This function takes a valid URL string as an argument, and uses that URL string
+        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+        * using 'navigator.sendBeacon' in browser that support it.
+        */
+        var trackOutboundLink = function(url,category) {
+            if (!category) category = 'outbound';
+           ga('send', 'event', category, 'click', url, {
+             'transport': 'beacon'
+           });
+        }
+        
+         window.onload = function() {
+            // Add outbound link tracking in GA
+            jq('a').not('.fancybox').each(function(){
+                var href = jq(this).attr('href');
+                if (typeof href === "undefined") return;
+                if (href.indexOf('http') >= 0 
+                    && ( href.indexOf(website_base_url) < 0 && href.indexOf(ir_base_url) < 0 && href.indexOf('eqcdn') < 0 && href.indexOf('amazonaws') < 0)) {
+                    jq(this).attr('onclick', 'trackOutboundLink("' + href + '")');    
+                }else {
+                    // It's not an outbound link, but if it's a link to a file, we want to track that.
+                    if (href.match(/(\.pdf|\.jpg|\.png|\.gif|\.ppt|\.jpeg|\.mp3|\.mp4|\.wav|\.docx|\.doc|\.xsl|\.cslx)/g)) {
+                        jq(this).attr('onclick', 'trackOutboundLink("' + href + '", "documents-and-files")');
+                    }
+                }
+            });
+        };
+</script>
+    
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '435558316617385'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=435558316617385&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Global site tag (gtag.js) - AdWords: 862544799 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-862544799"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-862544799');
+</script>
+    
+    <!-- Clicky Site Code -->
+<script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101245895);</script>
+<script async src="//static.getclicky.com/js"></script>
+    
+    </head>
+<body class="pg-1 page-type-home pg-overview-overview home">
+	<div class="general-wrapper">
+
+    	
+<header class="affixed">
+        <div class="container">
+		<h1 class="logo">
+	        <a href="/">
+	            <img src="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/logo-large.png" 
+                width="231"
+                height="61"
+                alt="Oncolytics Biotech, Inc.">
+           </a>
+		</h1>
+		<div class="social-links">
+		    <a href="https://twitter.com/oncolytics" target="_blank" rel="nofollow"><img src="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/twitter-logo-white.png" alt="Twitter"></a>
+		    		    <a href="https://www.linkedin.com/company/oncolytics-biotech-inc./" target="_blank" rel="nofollow"><img src="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/linkedin-logo-white.png" alt="LinkedIn"></a>
+		</div>
+        <a class="visible-xs visible-sm mobile-nav-trigger" id="showRight">
+            <div class="meat"></div>
+            <div class="meat"></div>
+            <div class="meat"></div>
+        </a>
+		<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right main-nav" id="mobile-nav">
+		    			<ul class="main-menu">
+    <li class="sr-only"><a href="/">Home</a></li>
+            <li class="has-children " data-submenu-id="submenu-about">
+    <a  href="/about">About</a>
+            <ul id="submenu-about">
+                                                    <li class="  "><a  href="/about">Our Company</a></li>
+                                                    <li class="  "><a  href="/about/management-team">Management Team</a></li>
+                                                    <li class="  "><a  href="/about/board-of-directors">Board of Directors</a></li>
+                    </ul>
+    </li>            <li class="has-children " data-submenu-id="submenu-technology">
+    <a  href="/technology">Technology</a>
+            <ul id="submenu-technology">
+                                                    <li class="  "><a  href="/technology">What is Pelareorep?</a></li>
+                                                    <li class="  "><a  href="/technology/does-pelareorep-do">What Does Pelareorep Do?</a></li>
+                                                    <li class="  "><a  href="/technology/delivery">Delivery</a></li>
+                                                    <li class="  "><a  href="/technology/intellectual-property">Intellectual Property</a></li>
+                                                    <li class="  "><a  href="/technology/posters-publications">Posters & Publications</a></li>
+                                                    <li class="  "><a  href="/technology/manufacturing">Manufacturing</a></li>
+                    </ul>
+    </li>            <li class="has-children " data-submenu-id="submenu-clinical-trials">
+    <a  href="/clinical-trials">Clinical Trials</a>
+            <ul id="submenu-clinical-trials">
+                                                    <li class="  "><a  href="/clinical-trials/clinical-development-plan">Clinical Development Plan</a></li>
+                                                    <li class="  "><a  href="/clinical-trials/collaborators">Collaborators</a></li>
+                                                    <li class="  "><a  href="/clinical-trials/pipeline">Pipeline</a></li>
+                    </ul>
+    </li>            <li class="has-children " data-submenu-id="submenu-press-releases">
+    <a  href="/press-releases">Media</a>
+            <ul id="submenu-press-releases">
+                                                    <li class="  "><a  href="/press-releases/press-releases">Press Releases</a></li>
+                                                    <li class="  "><a  href="/press-releases/insights">Insights</a></li>
+                    </ul>
+    </li>            <li class="has-children " data-submenu-id="submenu-investors">
+    <a  href="/investors">Investors</a>
+            <ul id="submenu-investors">
+                                                    <li class="  "><a  href="/investors/_">Overview</a></li>
+                                                    <li class="  "><a  href="/investors/press-releases">Press Releases</a></li>
+                                                    <li class="has-children  "><a  href="/investors/events-presentations">Events & Presentations</a></li>
+                                                    <li class="has-children  "><a  href="/investors/stock-information">Stock Information</a></li>
+                                                    <li class="has-children  "><a  href="/investors/filings-financials">Filings & Financials</a></li>
+                                                    <li class="has-children  "><a  href="/investors/corporate-governance">Corporate Governance</a></li>
+                                                    <li class="has-children  "><a  href="/investors/faqs">FAQs</a></li>
+                                                    <li class="has-children  "><a  href="/investors/email-alerts">Email Alerts</a></li>
+                                                    <li class="has-children  "><a  href="/investors/ir-contacts">IR Contacts</a></li>
+                    </ul>
+    </li>            <li class=" " data-submenu-id="submenu-contact">
+    <a  href="/contact">Contact</a>
+    </li>            <li class=" " data-submenu-id="submenu-careers">
+    <a  href="/careers">Careers</a>
+    </li>    </ul>
+		</nav>
+    </div>
+</header>
+
+<div class="page-banner overlay dark home-hero" style="background: url(https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/db/305/1766/image_home.jpg);background-position: 50% 50%;background-repeat: no-repeat;background-size: cover;">
+    <div class="vertical-element">
+    	<div class="container">
+    	    <div class="row">
+    	        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    	            <div class="text center">
+                        <h2>Innately Adaptive™</h2>
+                                                    <p>Oncolytics Biotech Inc. is developing pelareorep, a safe and well-tolerated intravenously delivered immuno-oncolytic virus (IOV) that kills cancer through a unique mechanism of action with two components, selective tumor lysis and activation of the innate and adaptive immune systems, creating an inflamed phenotype to treat a variety of solid tumors and hematological malignancies.</p>
+                                                            		</div>
+    	        </div>
+    	    </div>
+        </div>
+    </div>
+</div><div class="module module--home-news side-bg-image " data-nav-title="Latest News">
+    <div class="container">
+        <div class="row js-same-height-row">
+                            <div class="col-md-4 js-same-height image-col">
+                    <div class="text">
+                        <h2>Corporate Presentation</h2>    
+                        <a href="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/db/300/2536/pdf/Oncolytics+Corporate+Presentation+March+-+v6.pdf" target="_blank" ><figure class="module-image"><img src="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/images/ir-laptop.png" alt="Corporate Presentation"></figure></a>
+                    </div>
+                </div>
+                            		<div class="col-md-4 js-same-height image-col">
+    		    <div class="text">
+        		    <h2>An Introduction to Pelareorep and Immunotherapy</h2>
+        		    <a href="https://d1io3yog0oux5.cloudfront.net/oncolyticsbiotech/files/videos/OncolyticsBiotechDemoWEB.mp4" class="fancybox fancybox.iframe video-link">
+        		        <img src="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/db/347/2487/image_resized.jpg" alt="" class="thumbnail" />
+    		        </a>
+		        </div>
+    		</div>
+    		    		<div class="col-md-4 js-same-height ">
+                <div class="text">
+                    <h2>Latest News</h2>                                            <span class="date">May 13, 2021</span>
+                        <p><a href="https://www.oncolyticsbiotech.com/press-releases/detail/540/oncolytics-biotech-to-participate-in-virtual-fireside">Oncolytics Biotech® to Participate in Virtual Fireside Chat at the 2021 RBC Capital Markets Global Healthcare Conference</a></p>
+                                            <span class="date">May 10, 2021</span>
+                        <p><a href="https://www.oncolyticsbiotech.com/press-releases/detail/539/oncolytics-biotech-announces-voting-results-from-the">Oncolytics Biotech® Announces Voting Results from the Annual General Meeting of Shareholders</a></p>
+                                            <span class="date">May 7, 2021</span>
+                        <p><a href="https://www.oncolyticsbiotech.com/press-releases/detail/538/oncolytics-biotech-reports-2021-first-quarter-development">Oncolytics Biotech® Reports 2021 First Quarter Development Highlights and Financial Results</a></p>
+                                        <a href="/press-releases" class="btn">View All News</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="module module-default text-left gray no-padding">
+	<div class="container">
+		<div class="row js-same-height-row">
+					<div class="col-sm-8  col-sm-offset-2">
+			    <div class="module-content">
+			        <div class="vertical-align js-height js-same-height">
+			            <div class="wrapper">
+            				<h2>Our Focus: Immunotherapy Combinations</h2>
+            				<p>Oncolytics is currently focused on immunotherapy combinations, including our studies with Bavencio®, Keytruda®, Opdivo®, Tecentriq®, and Retifanlimab.</p>
+<p>Cancers grow in our bodies because our immune systems do not recognize these tumors as foreign or as a threat. They do this by applying the brakes to our immune systems – notably T cells – through receptors called checkpoints. Immunotherapies, including checkpoint inhibitors, help our immune systems to recognize and kill cancer. Instead of attacking the tumor directly, checkpoint inhibitors work to prevent tumors from suppressing our immune systems. For some patients the effects are profound, <strong>but as low as 1-in-5 patients will respond to checkpoint blockade depending on the indication</strong>.&nbsp; Responses are limited by when tumors do not have the key elements required for checkpoint blockade:</p>
+<ul class="focus-list">
+<li>The presence of T cells</li>
+<li>An inflamed tumor</li>
+<li>Expression of checkpoints</li>
+</ul>
+<p>Pelareorep has demonstrated the ability to create this tumor environment and conditions the tumor for multiple treatment combinations including checkpoint inhibitors and potentially other immuno-oncology drugs.&nbsp; Pelareorep creates a new army of tumor-reactive T cells, causes these cells to infiltrate the tumor through an inflammatory process, and promotes the overexpression of checkpoints, including PD-1/PD-L1. By priming the immune system before checkpoint blockade, we believe we can increase the percentage of patients who respond to checkpoint inhibitors and open up new indications where checkpoint blockade has been ineffective to date. This vast opportunity underlines the importance of our collaborations with Merck, Bristol-Myers Squibb, Roche, Incyte, and the Pfizer/Merck KGaA alliance in a variety of solid and hematological tumor targets.</p>            			            		    </div>
+                    </div>
+    		    </div>
+			</div>
+		</div>				
+	</div>
+</div>
+
+<footer>
+	<div class="container">
+		<div class="copyright">
+			&copy; 2021 <a href="/">Oncolytics Biotech, Inc.</a> All Rights Reserved.
+		</div>
+		<div class="footer-links">
+			    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/sitemap">Sitemap</a>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript">
+_linkedin_partner_id = "522042";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=522042&fmt=gif" />
+</noscript>
+
+<!-- Twitter universal website tag code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','o0en1');
+twq('track','PageView');
+</script>
+
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+// Insert Twitter Pixel ID and Standard Event data below
+twq('init','o1vv8');
+twq('track','PageView');
+</script>
+<!-- End Twitter universal website tag code -->
+
+<script>
+    var asset_url = 'https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech';
+    var website_base_url = 'https://www.oncolyticsbiotech.com';
+    var ir_base_url = 'https://ir.oncolyticsbiotech.com';
+</script>
+<script src="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/js/_js/all.js"></script>
+
+
+
+<script src="https://d1io3yog0oux5.cloudfront.net/_77cc0f1eba8f022950e1738a0059cb43/oncolyticsbiotech/files/theme/js/aside/_js/browser-check.min.js" async></script>
+    	
+    </div><!-- //general-wrapper -->
+</body>

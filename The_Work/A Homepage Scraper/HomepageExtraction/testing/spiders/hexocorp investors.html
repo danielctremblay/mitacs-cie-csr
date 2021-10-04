@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"5241e698d3",applicationID:"125510771"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://www.hexocorp.com/xmlrpc.php">
+	<title>Investors &#8211; HEXO Corp</title>
+<link rel="alternate" hreflang="en" href="https://www.hexocorp.com/investors/" />
+<link rel="alternate" hreflang="fr" href="https://www.hexocorp.com/fr/investisseurs/" />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="HEXO Corp &raquo; Feed" href="https://www.hexocorp.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="HEXO Corp &raquo; Comments Feed" href="https://www.hexocorp.com/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.hexocorp.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.hexocorp.com/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://www.hexocorp.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='gdlr-core-google-font-css'  href='https://fonts.googleapis.com/css?family=Raleway%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%7CMontserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=latin%2Clatin-ext%2Ccyrillic-ext%2Cvietnamese%2Ccyrillic%2Cgreek-ext%2Cgreek&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='gdlr-core-plugin-css'  href='https://www.hexocorp.com/wp-content/plugins/goodlayers-core/plugins/combine/style.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='gdlr-core-page-builder-css'  href='https://www.hexocorp.com/wp-content/plugins/goodlayers-core/include/css/page-builder.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpml-menu-item-0-css'  href='//www.hexocorp.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.css?ver=1' type='text/css' media='all' />
+<style id='wpml-menu-item-0-inline-css' type='text/css'>
+.wpml-ls-slot-21, .wpml-ls-slot-21 a, .wpml-ls-slot-21 a:visited{color:#001a66;}.wpml-ls-slot-21:hover, .wpml-ls-slot-21:hover a, .wpml-ls-slot-21 a:hover{color:#001a66;}.wpml-ls-slot-21.wpml-ls-current-language, .wpml-ls-slot-21.wpml-ls-current-language a, .wpml-ls-slot-21.wpml-ls-current-language a:visited{color:#001a66;}.wpml-ls-slot-21.wpml-ls-current-language:hover, .wpml-ls-slot-21.wpml-ls-current-language:hover a, .wpml-ls-slot-21.wpml-ls-current-language a:hover{color:#001a66;}
+</style>
+<link rel='stylesheet' id='wpml-tm-admin-bar-css'  href='https://www.hexocorp.com/wp-content/plugins/wpml-translation-management/res/css/admin-bar-style.css?ver=2.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='cms-navigation-style-base-css'  href='https://www.hexocorp.com/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation-base.css?ver=1.5.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='cms-navigation-style-css'  href='https://www.hexocorp.com/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation.css?ver=1.5.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='financity-style-core-css'  href='https://www.hexocorp.com/wp-content/themes/financity/css/style-core.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='financity-custom-style-css'  href='https://www.hexocorp.com/wp-content/uploads/financity-style-custom.css?1614797818&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='evcal_google_fonts-css'  href='//fonts.googleapis.com/css?family=Oswald%3A400%2C300%7COpen+Sans%3A700%2C400%2C400i%7CRoboto%3A700%2C400&#038;ver=5.3.2' type='text/css' media='screen' />
+<link rel='stylesheet' id='evcal_cal_default-css'  href='//www.hexocorp.com/wp-content/plugins/eventON/assets/css/eventon_styles.css?ver=2.6.17' type='text/css' media='all' />
+<link rel='stylesheet' id='evo_font_icons-css'  href='//www.hexocorp.com/wp-content/plugins/eventON/assets/fonts/font-awesome.css?ver=2.6.17' type='text/css' media='all' />
+<link rel='stylesheet' id='eventon_dynamic_styles-css'  href='//www.hexocorp.com/wp-content/plugins/eventON/assets/css/eventon_dynamic_styles.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='mediaelement-css'  href='https://www.hexocorp.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.13-9993131' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css'  href='https://www.hexocorp.com/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='views-pagination-style-css'  href='https://www.hexocorp.com/wp-content/plugins/wp-views/embedded/res/css/wpv-pagination.css?ver=2.9.4-lite' type='text/css' media='all' />
+<style id='views-pagination-style-inline-css' type='text/css'>
+.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default > span.wpv-sort-list,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default .wpv-sort-list-item {border-color: #cdcdcd;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default .wpv-sort-list-item a {color: #444;background-color: #fff;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default a:hover,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default a:focus {color: #000;background-color: #eee;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-default .wpv-sort-list-item.wpv-sort-list-current a {color: #000;background-color: #eee;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey > span.wpv-sort-list,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey .wpv-sort-list-item {border-color: #cdcdcd;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey .wpv-sort-list-item a {color: #444;background-color: #eeeeee;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey a:hover,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey a:focus {color: #000;background-color: #e5e5e5;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-grey .wpv-sort-list-item.wpv-sort-list-current a {color: #000;background-color: #e5e5e5;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue > span.wpv-sort-list,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue .wpv-sort-list-item {border-color: #0099cc;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue .wpv-sort-list-item a {color: #444;background-color: #cbddeb;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue a:hover,.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue a:focus {color: #000;background-color: #95bedd;}.wpv-sort-list-dropdown.wpv-sort-list-dropdown-style-blue .wpv-sort-list-item.wpv-sort-list-current a {color: #000;background-color: #95bedd;}
+</style>
+<link rel='stylesheet' id='evo_fc_styles-css'  href='https://www.hexocorp.com/wp-content/plugins/eventon-full-cal/assets/fc_styles.css?ver=1.1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='bfa-font-awesome-css'  href='//cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.hexocorp.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-content/themes/financity/js/html5.js?ver=5.3.2'></script>
+<![endif]-->
+<link rel='https://api.w.org/' href='https://www.hexocorp.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hexocorp.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.hexocorp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="https://www.hexocorp.com/investors/" />
+<link rel='shortlink' href='https://www.hexocorp.com/?p=2052' />
+<link rel="alternate" type="application/json+oembed" href="https://www.hexocorp.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hexocorp.com%2Finvestors%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.hexocorp.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hexocorp.com%2Finvestors%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.3.10 stt:1,4;" />
+
+<!-- Google Tag Manager -->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-TNMRBZG');</script>
+
+<!-- End Google Tag Manager -->
+<script id="qmod" type="application/javascript" src="//qmod.quotemedia.com/js/qmodLoader.js" data-qmod-wmid="101341" data-qmod-env="app" async data-qmod-version="v1.0.26"></script>
+
+
+<!-- EventON Version -->
+<meta name="generator" content="EventON 2.6.17" />
+
+<link rel="icon" href="https://www.hexocorp.com/wp-content/uploads/2018/11/cropped-Hexo_Site_icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.hexocorp.com/wp-content/uploads/2018/11/cropped-Hexo_Site_icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.hexocorp.com/wp-content/uploads/2018/11/cropped-Hexo_Site_icon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.hexocorp.com/wp-content/uploads/2018/11/cropped-Hexo_Site_icon-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.financity-main-menu-search{float: left;margin-top: -4px;margin-left: 25px;
+color:#001a66;}
+.financity-main-menu-search i{font-size: 22px;margin-top: 0px;cursor: pointer; color:#001a66;}
+.financity-dropdown-wpml-flag .financity-dropdown-wpml-list{
+	position: absolute;
+	left: 0px;
+	min-width: 120px;
+	top: 100%;
+	z-index: 99;
+	padding: 0; 
+	display: none;
+	}
+.financity-dropdown-wpml-flag{position: relative;padding-top: 19px; padding-bottom: 0px; }
+.financity-dropdown-wpml-flag .financity-dropdown-wpml-flag-background{position: absolute;top: 0px;bottom: 0px; left: 0px; right: 0px;}
+.financity-single-nav-area{
+	display:none
+}
+.investors-table-header{
+	color:white!important;
+}
+.gdlr-core-page-builder-body p{margin-top: 0px;margin-bottom: 16px;font-size: inherit;}
+input, textarea{border-width: 1px;border-style: solid;margin-left: 20px;padding: 5px 5px 5px 10px;}
+.financity-footer-wrapper a{color: #ffffff;line-height: 2.2;}
+.Rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+}
+.top-row{
+	font-weight:bold;
+}
+.Rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border: solid 2px white;
+  background: rgba(112, 128, 144, 0.2);
+}
+.Rtable-cell > h1,
+.Rtable-cell > h2,
+.Rtable-cell > h3,
+.Rtable-cell > h4,
+.Rtable-cell > h5,
+.Rtable-cell > h6 {
+  margin: 0;
+}
+/* Table column sizing
+================================== */
+.Rtable--2cols > .Rtable-cell {
+  width: 50%;
+}
+.Rtable--3cols > .Rtable-cell {
+  width: 33.33%;
+}
+.Rtable--4cols > .Rtable-cell {
+  width: 25%;
+}
+.Rtable--5cols > .Rtable-cell {
+  width: 20%;
+}
+.Rtable--6cols > .Rtable-cell {
+  width: 16.6%;
+}
+
+/* Apply styles
+================================== */
+.Rtable {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.Rtable-cell {
+  margin: -3px 0 0 -3px;
+  background-color: white;
+  border-color: #e2e6e9;
+}
+/* Cell styles
+================================== */
+.Rtable-cell--dark {
+  background-color: slategrey;
+  border-color: #5a6673;
+  color: white;
+}
+.Rtable-cell--dark > h1,
+.Rtable-cell--dark > h2,
+.Rtable-cell--dark > h3,
+.Rtable-cell--dark > h4,
+.Rtable-cell--dark > h5,
+.Rtable-cell--dark > h6 {
+  color: white;
+}
+.Rtable-cell--medium {
+  background-color: #b8c0c8;
+  border-color: #a9b3bc;
+}
+.Rtable-cell--light {
+  background-color: white;
+  border-color: #e2e6e9;
+}
+.Rtable-cell--highlight {
+  background-color: lightgreen;
+  border-color: #64e764;
+}
+.Rtable-cell--alert {
+  background-color: darkorange;
+  border-color: #cc7000;
+  color: white;
+}
+.Rtable-cell--alert > h1,
+.Rtable-cell--alert > h2,
+.Rtable-cell--alert > h3,
+.Rtable-cell--alert > h4,
+.Rtable-cell--alert > h5,
+.Rtable-cell--alert > h6 {
+  color: white;
+}
+.Rtable-cell--head {
+  background-color: #001a66;
+  border-color: #0b7c9c;
+  color: white;
+}
+.Rtable-cell--head > h1,
+.Rtable-cell--head > h2,
+.Rtable-cell--head > h3,
+.Rtable-cell--head > h4,
+.Rtable-cell--head > h5,
+.Rtable-cell--head > h6 {
+  color: white;
+}
+.top-row{
+	color: #001a66;
+}
+/* Responsive
+==================================== */
+/* SUPERSMALL Mobile */
+@media all and (max-width: 767px) {
+  .Rtable--collapse {
+    display: block;
+    max-width: 535px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .Rtable--collapse > .Rtable-cell {
+    width: 100% !important;
+  }
+  .Rtable--collapse > .Rtable-cell--foot {
+    margin-bottom: 1em;
+  }
+  .Rtable-cell--head {
+    text-align: center;
+  }
+  .top-row {
+    display: none;
+  }
+  .inner-row {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .link-wrapper{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  section{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  button{
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    width: 10rem;
+    height: 3rem;
+    border-width: 1px;
+    border-radius: 50px;
+    border-color: #001a66;
+    background-color: #001a66;
+    color: white;
+    transition: 0.25s ease;
+  }
+}
+/* LARGE Tablet */
+@media all and (min-width: 768px) and (max-width: 1299px){
+  .inner-row{
+		display: none;
+	}
+	.Rtable-cell{
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	.Rtable-cell--head{
+		text-align: left;
+	}
+	.inner-row {
+		text-align: center;
+		margin-bottom: 1rem;
+  }
+  .link-wrapper{
+  	text-align: center;
+  }
+  button{
+  	margin-bottom: 0.5rem;
+  	margin-right: 0.1rem;
+  	margin-left: 0.1rem;
+  	width: 3.2rem;
+  	height: 2rem;
+  	border-width: 1px;
+  	border-radius: 50px;
+  	border-color: #001a66;
+  	background-color: #001a66;
+  	color: white;
+  	transition: 0.25s ease;
+  }
+	.investors-table-header{
+		font-size:1.1rem!important;
+	}
+}
+/* LARGE Desktop */
+@media all and (min-width: 1300px){
+  .inner-row{
+    display: none;
+  }
+  .Rtable-cell{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .Rtable-cell--head{
+    justify-content: space-evenly;
+  }
+  .inner-row {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .link-wrapper{
+    text-align: center;
+  }
+  button{
+    margin-bottom: 0.5rem;
+    margin-right: 0.1rem;
+    margin-left: 0.1rem;
+    width: 3.5rem;
+    height: 2rem;
+    border-width: 1px;
+    border-radius: 50px;
+    border-color: #001a66;
+    background-color: #001a66;
+    color: white;
+    transition: 0.25s ease;
+  }
+  button:hover{
+    background-color: white;
+    color: #001a66;
+  }
+}
+.no-flexbox .Rtable {
+  display: block;
+}
+.no-flexbox .Rtable > .Rtable-cell {
+  width: 100%;
+}
+.no-flexbox .Rtable > .Rtable-cell--foot {
+  margin-bottom: 1em;
+}		</style>
+		</head>
+
+<body class="page-template-default page page-id-2052 gdlr-core-body financity-body financity-body-front financity-full  financity-with-sticky-navigation gdlr-core-link-to-lightbox ">
+<!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TNMRBZG"
+
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- End Google Tag Manager (noscript) -->
+<br style="display:none">
+<div class="financity-mobile-header-wrap" ><div class="financity-mobile-header financity-header-background financity-style-slide" id="financity-mobile-header" ><div class="financity-mobile-header-container financity-container" ><div class="financity-logo  financity-item-pdlr"><div class="financity-logo-inner"><a href="https://www.hexocorp.com/" ><img src="https://www.hexocorp.com/wp-content/uploads/2019/02/CORP-Logo-160H.png" alt="" width="746" height="160" title="CORP-Logo-160H" /></a></div></div><div class="financity-mobile-menu-right" ><div class="financity-main-menu-search" id="financity-mobile-top-search" ><i class="fa fa-search" ></i></div><div class="financity-top-search-wrap" >
+	<div class="financity-top-search-close" ></div>
+
+	<div class="financity-top-search-row" >
+		<div class="financity-top-search-cell" >
+			<form role="search" method="get" class="search-form" action="https://www.hexocorp.com/">
+	<input type="text" class="search-field financity-title-font" placeholder="Search..." value="" name="s">
+	<div class="financity-top-search-submit"><i class="fa fa-search" ></i></div>
+	<input type="submit" class="search-submit" value="Search">
+	<div class="financity-top-search-close"><i class="icon_close" ></i></div>
+</form>
+		</div>
+	</div>
+
+</div>
+<div class="financity-overlay-menu financity-mobile-menu" id="financity-mobile-menu" ><a class="financity-overlay-menu-icon financity-mobile-menu-button financity-mobile-button-hamburger" href="#" ><span></span></a><div class="financity-overlay-menu-content financity-navigation-font" ><div class="financity-overlay-menu-close" ></div><div class="financity-overlay-menu-row" ><div class="financity-overlay-menu-cell" ><ul id="menu-mobile-menu" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3524"><a href="https://event.on24.com/eventRegistration/EventLobbyServlet?target=lobby20.jsp&#038;eventid=2948058&#038;sessionid=1&#038;key=C229CDF2D3B1E49A664CAA0768E4F4B2&#038;eventuserid=418469859">Q2 Earnings Webcast</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1278"><a href="#">About</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1280"><a href="https://www.hexocorp.com/our-story/">Our Story</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1281"><a href="https://www.hexocorp.com/videos/">Videos</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1279"><a href="https://www.hexocorp.com/home/management/">Management</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-4242"><a>Investors</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2347"><a href="https://www.hexocorp.com/investors#ticker" aria-current="page">Stock Quote</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2207"><a href="https://www.hexocorp.com/investors#financial" aria-current="page">Financial Information</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2208"><a href="https://www.hexocorp.com/investors#presentation" aria-current="page">Corporate Presentation</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2209"><a href="https://www.hexocorp.com/investors#analyst" aria-current="page">Analyst Coverage</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2210"><a target="_blank" rel="noopener noreferrer" href="https://www.sedar.com/DisplayCompanyDocuments.do?lang=EN&#038;issuerNo=00036235">SEDAR Filing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3892"><a href="https://www.hexocorp.com/event-directory/">Events</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3894"><a href="https://www.hexocorp.com/faq/">FAQ</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3893"><a href="https://www.hexocorp.com/governance/">Governance</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4227"><a href="https://www.hexocorp.com/brands/">Brands</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1284"><a href="https://www.hexocorp.com/press-releases/">Press Releases</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4127"><a href="https://www.hexocorp.com/careers/">Careers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1277"><a href="https://www.hexocorp.com/social-responsibility/">Corporate Social Responsibility</a></li>
+<li class="menu-item wpml-ls-slot-21 wpml-ls-item wpml-ls-item-fr wpml-ls-menu-item wpml-ls-first-item wpml-ls-last-item menu-item-type-wpml_ls_menu_item menu-item-object-wpml_ls_menu_item menu-item-wpml-ls-21-fr"><a title="Français" href="https://www.hexocorp.com/fr/investisseurs/"><span class="wpml-ls-native" lang="fr">Français</span></a></li>
+</ul></div></div></div></div></div></div></div></div><div class="financity-body-outer-wrapper ">
+		<div class="financity-body-wrapper clearfix  financity-with-frame">
+	<div class="financity-top-bar" ><div class="financity-top-bar-background" ></div><div class="financity-top-bar-container clearfix financity-container  financity-no-divider" ><div class="financity-top-bar-left financity-item-pdlr"><span class="financity-dropdown-wpml-flag" id="financity-dropdown-wpml-flag" ><span class="financity-dropdown-wpml-flag-background" ></span><span class="financity-dropdown-wpml-current-language" >English</span><span class="financity-dropdown-wpml-list" ><span class="financity-dropdown-wpml-item" ><a href="https://www.hexocorp.com/fr/investisseurs/" >Français</a></span></span></span><span class="financity-top-bar-divider financity-right-margin" ></span><a href="https://event.on24.com/eventRegistration/EventLobbyServlet?target=reg20.jsp&referrer=https%3A%2F%2Fwww.hexocorp.com%2F&eventid=2948058&sessionid=1&key=C229CDF2D3B1E49A664CAA0768E4F4B2&regTag=&V2=false&sourcepage=register">Q2 Earnings Webcast</a></div><div class="financity-top-bar-right financity-item-pdlr"><div class="financity-top-bar-right-text"><a id="menu_events" href="https://www.hexocorp.com/faq/"> FAQ</a>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp
+
+<a id="menu_contactus" href="https://www.hexocorp.com/contact-us/"> Contact Us</a></div></div></div></div>	
+<header class="financity-header-wrap financity-header-style-plain  financity-style-center-logo financity-sticky-navigation financity-style-slide" data-navigation-offset="75px"  >
+	<div class="financity-header-background" ></div>
+	<div class="financity-header-container  financity-container">
+			
+		<div class="financity-header-container-inner clearfix">
+			<div class="financity-logo  financity-item-pdlr"><div class="financity-logo-inner"><a href="https://www.hexocorp.com/" ><img src="https://www.hexocorp.com/wp-content/uploads/2019/02/CORP-Logo-160H.png" alt="" width="746" height="160" title="CORP-Logo-160H" /></a></div></div>			<div class="financity-navigation financity-item-pdlr clearfix financity-navigation-submenu-indicator " >
+			<div class="financity-main-menu" id="financity-main-menu" ><ul id="menu-top-menu" class="sf-menu"><li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-708 financity-normal-menu"><a href="/our-story" class="sf-with-ul-pre">About</a>
+<ul class="sub-menu">
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74" data-size="60"><a href="https://www.hexocorp.com/our-story/">Our Story</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-75" data-size="60"><a href="https://www.hexocorp.com/videos/">Videos</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65" data-size="60"><a href="https://www.hexocorp.com/home/management/">Management</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3632" data-size="60"><a href="https://www.hexocorp.com/mission-vision-values/">Mission, Vision, Values</a></li>
+</ul>
+</li>
+<li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2052 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-2056 financity-normal-menu"><a href="https://www.hexocorp.com/investors/" class="sf-with-ul-pre">Investors</a>
+<ul class="sub-menu">
+	<li  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2346" data-size="60"><a href="https://www.hexocorp.com/investors#ticker">Stock Quote</a></li>
+	<li  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2112" data-size="60"><a href="https://www.hexocorp.com/investors#financial">Financial Information</a></li>
+	<li  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2113" data-size="60"><a href="https://www.hexocorp.com/investors#presentation">Corporate Presentation</a></li>
+	<li  class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2114" data-size="60"><a href="https://www.hexocorp.com/investors#analyst">Analyst Coverage</a></li>
+	<li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2057" data-size="60"><a target="_blank" href="https://www.sedar.com/DisplayCompanyDocuments.do?lang=EN&#038;issuerNo=00036235">SEDAR Filing</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3886" data-size="60"><a href="https://www.hexocorp.com/event-directory/">Events</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3885" data-size="60"><a href="https://www.hexocorp.com/faq/">FAQ</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3238" data-size="60"><a href="https://www.hexocorp.com/governance/">Governance</a></li>
+</ul>
+</li>
+<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4226 financity-normal-menu"><a href="https://www.hexocorp.com/brands/">Brands</a></li>
+<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82 financity-normal-menu"><a href="https://www.hexocorp.com/press-releases/">Press Releases</a></li>
+<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4109 financity-normal-menu"><a href="https://www.hexocorp.com/careers/">Careers</a></li>
+<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30 financity-normal-menu"><a href="https://www.hexocorp.com/social-responsibility/">Corporate Social Responsibility</a></li>
+</ul></div><div class="financity-main-menu-right-wrap clearfix  financity-item-mglr financity-navigation-top" ><div class="financity-main-menu-search" id="financity-top-search" ><i class="fa fa-search" ></i></div><div class="financity-top-search-wrap" >
+	<div class="financity-top-search-close" ></div>
+
+	<div class="financity-top-search-row" >
+		<div class="financity-top-search-cell" >
+			<form role="search" method="get" class="search-form" action="https://www.hexocorp.com/">
+	<input type="text" class="search-field financity-title-font" placeholder="Search..." value="" name="s">
+	<div class="financity-top-search-submit"><i class="fa fa-search" ></i></div>
+	<input type="submit" class="search-submit" value="Search">
+	<div class="financity-top-search-close"><i class="icon_close" ></i></div>
+</form>
+		</div>
+	</div>
+
+</div>
+</div>			</div><!-- financity-navigation -->
+
+		</div><!-- financity-header-inner -->
+	</div><!-- financity-header-container -->
+</header><!-- header --><div class="financity-page-title-wrap  financity-style-custom financity-center-align" style="background-image: url(https://www.hexocorp.com/wp-content/uploads/2018/12/IR-page-headers-1920x250.png) ;" ><div class="financity-header-transparent-substitute" ></div><div class="financity-page-title-overlay"  ></div><div class="financity-page-title-container financity-container" ><div class="financity-page-title-content financity-item-pdlr"  ><h1 class="financity-page-title"  >Investors</h1><div class="financity-page-caption"  >INVESTING IN THE FUTURE, TODAY.</div></div></div></div>	<div class="financity-page-wrapper" id="financity-page-wrapper" ><div class="gdlr-core-page-builder-body"><div class="gdlr-core-pbf-wrapper " ><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-alert-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align gdlr-core-no-icon"  ><div class="gdlr-core-alert-box-item-inner gdlr-core-skin-e-background gdlr-core-skin-border" style="background-color: #ffffff ;border-color: #001a66 ;border-width: 3px;" ><div class="gdlr-core-alert-box-remove gdlr-core-js" ><i class="fa fa-remove" ></i></div><div class="gdlr-core-alert-box-item-head"><h3 class="gdlr-core-alert-box-item-title gdlr-core-skin-title" style="color: #001a66 ;"  >COVID-19 UPDATE:</h3></div><div class="gdlr-core-alert-box-item-content gdlr-core-skin-e-content" style="color: #001a66 ;"  ><p><a href="https://www.globenewswire.com/news-release/2020/03/24/2005873/0/en/HEXO-Corp-provides-COVID-19-update.html">How we’re putting the health and safety of our employees first.</a></p>
+</div></div></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 100px 0px;" data-skin="White Text"  id="presentation" ><div class="gdlr-core-pbf-background-wrap" style="background-color: #001a66 ;"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 40px ;"  id="gdlr-core-title-item-1"  ><div class="gdlr-core-title-item-title-wrap "  ><h2 class="gdlr-core-title-item-title gdlr-core-skin-title " style="color: #ffffff ;"  >Corporate Presentation<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h2></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-10 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-40" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-script-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"  ><div class="gdlr-core-text-script-item-content"  ><iframe src="//www.slideshare.net/slideshow/embed_code/key/uRq7CFUKJi6me1" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/HexoCan/hexo-corp-2021-q2-investor-deck-5142021" title="Hexo Corp 2021 Q2 investor deck - 5.14.2021" target="_blank">Hexo Corp 2021 Q2 investor deck - 5.14.2021</a> </strong> from <strong><a href="https://www.slideshare.net/HexoCan" target="_blank">Hexo Corp</a></strong> </div></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-10" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"  ><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-with-border" href="https://staticproduction.s3.amazonaws.com/financial-statements/2021/IR+Deck+FY21Q2+-+April+2021+5-14-2021.pdf"  id="gdlr-core-button-id-33472"  ><span class="gdlr-core-content" >Download Corporate Presentation</span></a></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"  ><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-with-border" href="https://staticproduction.s3.amazonaws.com/financial-statements/2021/Investor+Decks/HEXO+ZENA+Acquisition+EN.pdf"  id="gdlr-core-button-id-86427"  ><span class="gdlr-core-content" >HEXO ZENA Acquisition</span></a></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 100px 0px;" data-skin="policy"  id="financial" ><div class="gdlr-core-pbf-background-wrap" style="background-color: #ffffff ;"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 40px ;"  id="gdlr-core-title-item-2"  ><div class="gdlr-core-title-item-title-wrap "  ><h2 class="gdlr-core-title-item-title gdlr-core-skin-title " style="color: #001a66 ;"  >Financial Information<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h2></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-script-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align fin_table_2"  ><div class="gdlr-core-text-script-item-content"  ><div class="Rtable Rtable--6cols Rtable--collapse">
+	<!-- TOP ROW -->
+  <div class="Rtable-cell Rtable-cell--head top-row"></div>
+  <div class="Rtable-cell top-row">2021</div>
+  <div class="Rtable-cell top-row">2020</div>
+  <div class="Rtable-cell top-row">2019</div>
+  <div class="Rtable-cell top-row">2018</div>
+  <div class="Rtable-cell top-row">2017</div>
+	
+	<!-- MD & A -->
+  <div class="Rtable-cell Rtable-cell--head"><h6 class="investors-table-header">Management's Discussion & Analysis</h6></div>
+      <div class="Rtable-cell"><section class="inner-row">2021</section>
+		<section class="link-wrapper">
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2021/Q1+FY21+MDA+FINAL.pdf" target="_blank" class="q-links"><button>Q1</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2021/Q2+FY21+MDA.pdf" target="_blank" class="q-links"><button>Q2</button></a>
+			<a href="" target="_blank" class="q-links" style="visibility:hidden;"><button>Q3</button></a>
+			<a href="" target="_blank" class="q-links" style="visibility:hidden;"><button>Q4</button></a>
+		</section>
+    </div>
+    <div class="Rtable-cell"><section class="inner-row">2020</section>
+		<section class="link-wrapper">
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/restated/new/FY20+Q1+MDA+Interim+EN.pdf" target="_blank" class="q-links"><button>Q1</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q2/FY_2020_Q2_MD%26A.pdf" target="_blank" class="q-links"><button>Q2</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q3/Q3+FY20+MDA+FINAL.pdf" target="_blank" class="q-links"><button>Q3</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q4/FY20+MDA+FINAL.pdf" target="_blank" class="q-links"><button>Q4</button></a>
+		</section>
+  </div>
+  <div class="Rtable-cell"><section class="inner-row">2019</section>
+		<section class="link-wrapper">
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/2019/MD%26A/Q1+MDA+EN.pdf" target="_blank" class="q-links"><button>Q1</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/2019/MD%26A/Q2+MDA+EN.pdf" target="_blank" class="q-links"><button>Q2</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2019/MD%26A/Q3+MDA+EN.pdf" target="_blank" class="q-links"><button>Q3</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/restated/new/FY19+Q4+MDA+Restated+EN.pdf" target="_blank" class="q-links"><button>Q4</button></a>
+		</section>
+  </div>
+  <div class="Rtable-cell"><section class="inner-row">2018</section>
+  	<section class="link-wrapper">
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/MD%26A+for+Q1+FY+2018.pdf" target="_blank" class="q-links"><button>Q1</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/MD%26A+for+Q2+2018.pdf" target="_blank" class="q-links"><button>Q2</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/MDA_Q3_2018.pdf" target="_blank" class="q-links"><button>Q3</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/HEXO_2018_AR_EN.pdf" target="_blank" class="q-links"><button>Q4</button></a>
+		</section>
+  </div>
+  <div class="Rtable-cell Rtable-cell--foot"><section class="inner-row">2017</section>
+  	<section class="link-wrapper">
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/MD%26A+For+Q3+FY17.pdf" target="_blank" class="q-links"><button>Q3</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/MD%26A+for+Q4+2017.pdf" target="_blank" class="q-links"><button>Q4</button></a>
+<a href="https://www.youtube.com/watch?v=p63gM8aByjo" target="_blank" class="q-links" style="visibility: hidden;"><button>Q3</button></a>
+<a href="#" target="_blank" class="q-links" style="visibility: hidden;"><button>Q4</button></a>
+		</section>
+  </div>
+	
+	<!-- FINANCIAL STATEMENTS -->
+  <div class="Rtable-cell Rtable-cell--head" id="fs-head"><h6 class="investors-table-header">Financial Statements</h6></div>
+    <div class="Rtable-cell"><section class="inner-row">2021</section>
+		<section class="link-wrapper">
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2021/Q1+FY21+Interim+Financial+Statements+FINAL.pdf" target="_blank" class="q-links"><button>Q1</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2021/Q2+FY21+Interim+FS.pdf" target="_blank" class="q-links"><button>Q2</button></a>
+			<a href="" target="_blank" class="q-links" style="visibility:hidden;"><button>Q3</button></a>
+			<a href="" target="_blank" class="q-links" style="visibility:hidden;"><button>Q4</button></a>
+		</section>
+    </div>
+    <div class="Rtable-cell"><section class="inner-row">2020</section>
+		<section class="link-wrapper">
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/restated/FS_EN_Q1_2020.pdf" target="_blank" class="q-links"><button>Q1</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q2/FY_2020_Q2_FS.pdf" target="_blank" class="q-links"><button>Q2</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q3/Q3+FY20+FS+FINAL.pdf" target="_blank" class="q-links"><button>Q3</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q4/FY20+ANNUAL+FS+MASTER+FINAL.pdf" target="_blank" class="q-links"><button>Q4</button></a>
+		</section>
+  </div>
+  <div class="Rtable-cell"><section class="inner-row">2019</section>
+		<section class="link-wrapper">
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/2019/Financials/Q1+FS+EN.pdf" target="_blank" class="q-links"><button>Q1</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/2019/Financials/Q2+FS+EN.pdf" target="_blank" class="q-links"><button>Q2</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2019/Financials/Q3+FS+EN.pdf" target="_blank" class="q-links"><button>Q3</button></a>
+			<a href="https://staticproduction.s3.amazonaws.com/financial-statements/restated/FS_EN_FY2019.pdf" target="_blank" class="q-links"><button>Q4</button></a>
+		</section>
+  </div>
+  <div class="Rtable-cell"><section class="inner-row">2018</section>
+		<section class="link-wrapper">
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/Financial+Statements+for+Q1+FY+2018.pdf" target="_blank" class="q-links"><button>Q1</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/Financial+Statements+for+Q2+2018.pdf" target="_blank" class="q-links"><button>Q2</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/Financials_Q3_2018.pdf" target="_blank" class="q-links"><button>Q3</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/HEXO_2018_AR_EN.pdf" target="_blank" class="q-links"><button>Q4</button></a>
+		</section>
+  </div>
+  <div class="Rtable-cell Rtable-cell--foot"><section class="inner-row">2017</section>
+		<section class="link-wrapper">
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/Financial+Statements+for+Q3+FY2017.pdf" target="_blank" class="q-links"><button>Q3</button></a>
+			<a href="https://s3.amazonaws.com/staticproduction/financial-statements/Financial+Statements+for+Q4+FY+2017.pdf" target="_blank" class="q-links"><button>Q4</button></a>
+<a href="#" target="_blank" class="q-links" style="visibility: hidden;"><button>Q3</button></a>
+<a href="#" target="_blank" class="q-links" style="visibility: hidden;"><button>Q4</button></a>
+		</section>
+  </div>
+</div></div></div></div></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"  ><div class="gdlr-core-text-box-item-content" style="text-transform: none ;"  ><p>HEXO shareholders may request to receive hard copies of the company’s interim and annual financial statements by contacting HEXO’s transfer agent, TSX Trust Company, by telephone at 1-866-600-5869 or e-mail at <a href="mailto:TMXEInvestorServices@tmx.com">TMXEInvestorServices@tmx.com</a>.</p>
+</div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-10 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-40" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 20px ;"  ><div class="gdlr-core-title-item-title-wrap "  ><h5 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 600 ;"  >More documents<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h5></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-10" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-script-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"  ><div class="gdlr-core-text-script-item-content"  > <a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q4/FY20+AIF+FINAL.pdf"target="_blank">Annual Information Form</a></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-script-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align"  ><div class="gdlr-core-text-script-item-content"  ><a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q4/2020+MIC+(December+11%2C+2020+AG+and+Special+Meeting).pdf" target="_blank">Management Information Circular</a></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;"  ><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-with-border" href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/Q4/FY20+ANNUAL+REPORT+FINAL.pdf" target="_blank"  id="gdlr-core-button-id-75354"  ><span class="gdlr-core-content" >2020 Annual Report</span></a></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-space-item gdlr-core-item-pdlr " style="padding-top: 30px ;"  ></div></div><div class="gdlr-core-pbf-column gdlr-core-column-10 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-40" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 20px ;"  ><div class="gdlr-core-title-item-title-wrap "  ><h5 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 20px ;font-weight: 600 ;"  >Form 40-F's<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h5></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-10" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-accordion-item gdlr-core-item-pdlr gdlr-core-item-pdb  gdlr-core-accordion-style-box-icon gdlr-core-allow-close-all"  ><div class="gdlr-core-accordion-item-tab clearfix " ><div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon  gdlr-core-skin-e-background gdlr-core-skin-border" ></div><div class="gdlr-core-accordion-item-content-wrapper"><h4 class="gdlr-core-accordion-item-title gdlr-core-js "  >2020</h4><div class="gdlr-core-accordion-item-content"><p><a href="https://staticproduction.s3.amazonaws.com/financial-statements/2020/40-f/HEXO+Form+40-F+July+31+2020.pdf">HEXO Form 40-F July 31 2020</a></p>
+</div></div></div><div class="gdlr-core-accordion-item-tab clearfix " ><div class="gdlr-core-accordion-item-icon gdlr-core-js gdlr-core-skin-icon  gdlr-core-skin-e-background gdlr-core-skin-border" ></div><div class="gdlr-core-accordion-item-content-wrapper"><h4 class="gdlr-core-accordion-item-title gdlr-core-js "  >2019</h4><div class="gdlr-core-accordion-item-content"><p><a href="https://staticproduction.s3.amazonaws.com/financial-statements/2019/40-f/HEXO+Form+40-F+July+31+2019.pdf">HEXO Form 40-F July 31 2019</a><br />
+<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2019/40-f/HEXO+Form+40-F_A+July+31+2019+Ammed.+No.1.pdf">HEXO Form 40-F_A July 31 2019 Amend. No.1</a><br />
+<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2019/40-f/HEXO+Form+40-F_A+July+31+2019+Ammed.+No.2.pdf">HEXO Form 40-F_A July 31 2019 Amend. No.2</a><br />
+<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2019/40-f/HEXO+Form+40-F_A+July+31+2019+Ammed.+No.3.pdf">HEXO Form 40-F_A July 31 2019 Amend. No.3</a><br />
+<a href="https://staticproduction.s3.amazonaws.com/financial-statements/2019/40-f/HEXO+Form+40-F_A+July+31+2019+Ammed.+No.4.pdf">HEXO Form 40-F_A July 31 2019 Amend. No.4</a></p>
+</div></div></div></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 100px 0px;" data-skin="White Text"  id="services" ><div class="gdlr-core-pbf-background-wrap" style="background-color: #001a66 ;"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr"  id="gdlr-core-title-item-3"  ><div class="gdlr-core-title-item-title-wrap "  ><h2 class="gdlr-core-title-item-title gdlr-core-skin-title "  >A Trusted Partner in Cannabis<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h2></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-30" data-skin="home faq" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js " style="padding: 15px 0px 0px 10px;"   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"  ><div class="gdlr-core-text-box-item-content" style="text-transform: none ;"  ><p>Ever since HEXO Corp was incorporated in 2013 and became a publicly listed company in Canada in 2017, we have constantly expanded, grown and performed as a valued investment. Our company was built on being trusted, innovative and visionary – ideals we continue to uphold now and into the future.</p>
+</div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 100px 0px;"  id="ticker" ><div class="gdlr-core-pbf-background-wrap"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-pbf-wrapper-full-no-space" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"  id="gdlr-core-title-item-4"  ><div class="gdlr-core-title-item-title-wrap "  ><h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 46px ;letter-spacing: 0px ;text-transform: none ;color: #001a66 ;"  >HEXO STOCK PRICING<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="color: #001a66 ;"  >Stock pricing delayed by 15 minutes.</span></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js  ticker-wrapper" style="margin: 10px 5px 10px 5px;padding: 0px 0px 0px 0px;"   ><div class="gdlr-core-pbf-background-wrap" style="background-color: #ffffff ;"  ></div><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " style="max-width: 400px ;"   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-script-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;"  ><div class="gdlr-core-text-script-item-content"  ><div class="qmContainer">
+
+            <div data-qmod-tool="quotehead" data-qmod-params='{ "symbol" : "HEXO:CA" }' class="qtool">
+
+                <script type="script/template">
+
+                    <div class="qmod-quotehead qmod-ui-tool">
+
+                        <div class="qmContainer">
+
+                            <div class="qmOuterFrame">
+
+                                <div rv-unless="data.datatype | = 'n/a'" class="qmInnerFrame">
+
+                                    <div class="qmSymbol">
+
+                                        <span class="qmSymbolText">TSX:HEXO</span>
+
+                                    </div>
+
+                                    <div class="qmStackedData qmLast">
+
+                                        <span>$</span>
+
+                                        <span rv-html="data.pricedata.last | numeraljs '0.00' | asQHLast tLang"></span>
+
+                                    </div>
+
+                                    <div class="qmStackedData qmChange">
+
+                                        <span rv-qmodchange="data.pricedata.change">
+
+                                          <span rv-qmodchangeicon="data.pricedata.change" class="qmod-change-icon fa"></span>
+
+                                          <span rv-html="data.pricedata.change | numeraljs '0.00' | asQHLast tLang"></span>
+
+                                          <span class="qmod-pipe-sep"> | </span>
+
+                                          <span rv-html="data.pricedata.changepercent | numeraljs '0.00' | postFix '%'"></span>
+
+                                        </span>
+
+                                    </div>
+
+                                      <div rv-if="data.pricedata.lasttradedatetime" class="qmDate">
+
+                                        <span>As of </span>
+
+                                        <span rv-html="data.pricedata.lasttradedatetime | momentjs 'true' 'LLL' tLang"></span>
+
+                                        <span> EDT</span>
+
+                                      </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </script>
+
+            </div>
+
+        </div></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js  ticker-wrapper" style="margin: 10px 5px 10px 5px;padding: 0px 0px 0px 0px;"   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " style="max-width: 400px ;"   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-script-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;"  ><div class="gdlr-core-text-script-item-content"  ><div class="qmContainer">
+
+            <div data-qmod-tool="quotehead" data-qmod-params='{ "symbol" : "HEXO:US" }' class="qtool">
+
+                <script type="script/template">
+
+                    <div class="qmod-quotehead qmod-ui-tool">
+
+                        <div class="qmContainer">
+
+                            <div class="qmOuterFrame">
+
+                                <div rv-unless="data.datatype | = 'n/a'" class="qmInnerFrame">
+
+                                    <div class="qmSymbol">
+
+                                        <span class="qmSymbolText">NYSE:HEXO</span>
+
+                                    </div>
+
+                                    <div class="qmStackedData qmLast">
+
+                                        <span>$</span>
+
+                                        <span rv-html="data.pricedata.last | numeraljs '0.00' | asQHLast tLang"></span>
+
+                                    </div>
+
+                                    <div class="qmStackedData qmChange">
+
+                                        <span rv-qmodchange="data.pricedata.change">
+
+                                          <span rv-qmodchangeicon="data.pricedata.change" class="qmod-change-icon fa"></span>
+
+                                          <span rv-html="data.pricedata.change | numeraljs '0.00' | asQHLast tLang"></span>
+
+                                          <span class="qmod-pipe-sep"> | </span>
+
+                                          <span rv-html="data.pricedata.changepercent | numeraljs '0.00' | postFix '%'"></span>
+
+                                        </span>
+
+                                    </div>
+
+                                      <div rv-if="data.pricedata.lasttradedatetime" class="qmDate">
+
+                                        <span>As of </span>
+
+                                        <span rv-html="data.pricedata.lasttradedatetime | momentjs 'true' 'LLL' tLang"></span>
+
+                                        <span> EDT</span>
+
+                                      </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </script>
+
+            </div>
+
+        </div></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-button-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align" style="padding-bottom: 0px ;margin-top: 20px ;"  ><a class="gdlr-core-button  gdlr-core-button-solid gdlr-core-button-with-border" href="https://web.tmxmoney.com/quote.php?qm_symbol=HEXO&#038;locale=EN" target="_blank"  id="gdlr-core-button-id-73570"  ><span class="gdlr-core-content" >Toronto Stock Exchange</span></a></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " data-skin="policy" ><div class="gdlr-core-pbf-background-wrap" style="background-color: #ffffff ;"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-space-item gdlr-core-item-pdlr " style="padding-top: 30px ;"  ></div></div><div class="gdlr-core-pbf-column gdlr-core-column-60 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr"  id="gdlr-core-title-item-5"  ><div class="gdlr-core-title-item-title-wrap "  ><h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="color: #001a66 ;"  >Investors Newsletter<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-10 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"  ><div class="gdlr-core-text-box-item-content" style="text-transform: none ;"  ><p>Our Investors newsletter allows you to keep up to date on Press Releases, milestones, and important HEXO Corp. events. You can unsubscribe anytime from this newsletter.</p>
+</div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-24" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-widget-item gdlr-core-item-pdlr gdlr-core-item-pdb "  ><div id="mc4wp_form_widget-4" class="widget widget_mc4wp_form_widget financity-widget"><script>(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.7.5 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-633" method="post" data-id="633" data-name="Hexo IR Newsletter" ><div class="mc4wp-form-fields"><left>
+<p>
+    <label>First Name:</label>
+    <input style="float:right;width:65%;" type="text" name="FNAME"placeholder="Your first name" required>
+</p>
+  
+  <p>
+    <label>Last Name:</label>
+    <input style="float:right;width:65%;" type="text" name="LNAME"placeholder="Your last name" required>
+</p>
+
+
+<p>
+	<label>Email: </label>
+	<input style="float:right; width:65%;" type="email" name="EMAIL" placeholder="Your email address" required />
+</p>
+<p>
+    <label>Language</label>
+	<select style="float:right; width:65%; color: #001a66;" select name="MMERGE5" required="">
+        <option value="English" selected="true">English</option>
+        <option value="Français">Français</option>
+    </select>
+</p>
+<p>
+ 	<input class="gdlr-core-button gdlr-core-button-solid gdlr-core-button-with-border" style="float:left;width:100%;margin-bottom:20px; border-width: 2px; border-color: #001a66" type="submit" value="Subscribe"/>
+  </p>  
+  <p>
+    <label> 
+        <input style="float:left;margin-right:10px;"  name="AGREE_TO_TERMS" type="checkbox" value="1" required><small>I am over the age of 19, and agree to be contacted by HEXO.</small></label>
+</p>
+</left></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1621341073" /><input type="hidden" name="_mc4wp_form_id" value="633" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin --></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-10" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-element" ><div class="gdlr-core-space-item gdlr-core-item-pdlr " style="padding-top: 30px ;"  ></div></div></div></div></div><div class="gdlr-core-pbf-section" ><div class="gdlr-core-pbf-section-container gdlr-core-container clearfix" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-divider-item gdlr-core-divider-item-normal gdlr-core-item-pdlr gdlr-core-center-align" style="margin-bottom: 50px ;"  ><div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-width: 2px;" ></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 100px 0px;" data-skin="policy"  id="analyst" ><div class="gdlr-core-pbf-background-wrap" style="background-color: #ffffff ;"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 40px ;"  id="gdlr-core-title-item-6"  ><div class="gdlr-core-title-item-title-wrap "  ><h2 class="gdlr-core-title-item-title gdlr-core-skin-title " style="color: #001a66 ;"  >analyst Coverage<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h2></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-30" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-script-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align fin_table"  ><div class="gdlr-core-text-script-item-content"  ><table> 
+<tbody>
+  <tr>
+    <th align="left"><b>FIRM</b></th>
+    <th align="left"><b>ANALYST<b/></th>
+  </tr>
+ <tr>
+    <td align="left">Alliance Global Partners</td>
+    <td align="left"><a href= mailto:"agrey@allianceg.com">Aaron Grey</a></td>
+  </tr>
+ <tr>
+    <td align="left">Alta Corp Capital</td>
+    <td align="left"><a href= mailto:"dkideckel@altacorpcapital.com">David Kideckel</a></td>
+  </tr>
+<tr>
+    <td align="left">BMO</td>
+    <td align="left"><a href= mailto:"tamy.chen@bmo.com">Tamy Chen</a></td>
+  </tr>
+<tr>
+    <td align="left">Bryan Garnier</td>
+    <td align="left"><a href= mailto:"nfaes@bryangarnier.com">Nikolaas Faes</a></td>
+  </tr>
+ <tr>
+    <td align="left">Canaccord </td>
+    <td align="left"><a href= mailto:"mbottomley@canaccordgenuity.com">Matt Bottomley</a></td>
+  </tr>
+ <tr>
+    <td align="left">Cantor Fitzgerald</td>
+    <td align="left"><a href= mailto:"Pablo.zuanic@cantor.com">Pablo Zuanic</a></td>
+  </tr>
+ <tr>
+    <td align="left">CIBC</td>
+    <td align="left"><a href= mailto:"John.Zamparo@cibc.com">John Zamparo</a></td>
+ </tr>
+ <tr>
+    <td align="left">Cormark</td>
+    <td align="left"><a href= mailto:"jpytlak@cormark.com">Jesse Pytlak</a></td>
+  </tr>
+ <tr>
+    <td align="left">Desjardins</td>
+    <td align="left"><a href= mailto:"john.chu@desjardins.com">John Chu</a></td>
+  </tr>
+ <tr>
+    <td align="left">Eight Capital</td>
+    <td align="left"><a href= mailto:"gkreindler@viiicapital.com">Graeme Kreindler</a></td>
+  </tr>
+ <tr>
+    <td align="left">Jefferies Group LLC</td>
+    <td align="left"><a href= mailto:"obennett@jefferies.com">Owen Bennett</a></td>
+  </tr>
+<tr>
+    <td align="left">MKM Partners</td>
+    <td align="left"><a href= mailto:"bkirk@mkmpartners.com">Bill Kirk</a></td>
+  </tr>
+ <tr>
+    <td align="left">Oppenheimer & CO</td>
+    <td align="left"><a href= mailto:"Rupesh.Parikh@opco.com">Rupesh Parikh</a></td>
+ </tr>
+ <tr>
+    <td align="left">RBC</td>
+    <td align="left"><a href= mailto:"douglas.miehm@rbccm.com">Douglas Miehm</a></td>
+ </tr>
+ <tr>
+    <td align="left">Roth Capital Partners</td>
+    <td align="left"><a href= mailto:"sfortune@roth.com">Scott Fortune</a></td>
+ </tr>
+ <tr>
+    <td align="left">Scotiabank</td>
+    <td align="left"><a href= mailto:"adam.buckham@scotiabank.com">Adam Buckham</a></td>
+  </tr>
+ <tr>
+    <td align="left">Stifel</td>
+    <td align="left"><a href= mailto:"carterw@stifel.com">W. Andrew Carter</a></td>
+  </tr>
+</tbody>
+</table></div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-30" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"  ><div class="gdlr-core-text-box-item-content" style="font-size: 14px ;text-transform: none ;"  ><p>Hexo Corp. is followed by the analysts listed above. Please note that any opinions, estimates or forecasts regarding Hexo Corp.’s performance made by these analysts are theirs alone and do not represent opinions, forecasts or predictions of HEXO Corp. or its management. HEXO Corp. does not by its reference above or distribution imply its endorsement of or concurrence with such information, conclusions or recommendations.</p>
+</div></div></div></div></div></div><div class="gdlr-core-pbf-column gdlr-core-column-15" ><div class="gdlr-core-pbf-column-content-margin gdlr-core-js "   ><div class="gdlr-core-pbf-column-content clearfix gdlr-core-js "   ></div></div></div></div></div></div><div class="gdlr-core-pbf-wrapper " style="padding: 30px 0px 0px 0px;" ><div class="gdlr-core-pbf-background-wrap" style="background-color: #91ccc7 ;"  ></div><div class="gdlr-core-pbf-wrapper-content gdlr-core-js "   ><div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container" ><div class="gdlr-core-pbf-element" ><div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-center-align gdlr-core-item-pdlr"  ><a href="https://www.facebook.com/HexoCorp/" target="_blank" class="gdlr-core-social-network-icon" title="facebook" style="font-size: 25px ;color: #001a66 ;"  ><i class="fa fa-facebook" ></i></a><a href="https://www.linkedin.com/company/hexo-corp/" target="_blank" class="gdlr-core-social-network-icon" title="linkedin" style="font-size: 25px ;color: #001a66 ;margin-left: 40px ;"  ><i class="fa fa-linkedin" ></i></a><a href="https://twitter.com/Hexocorp" target="_blank" class="gdlr-core-social-network-icon" title="twitter" style="font-size: 25px ;color: #001a66 ;margin-left: 40px ;"  ><i class="fa fa-twitter" ></i></a><a href="https://www.instagram.com/hexocorporation/" target="_blank" class="gdlr-core-social-network-icon" title="instagram" style="font-size: 25px ;color: #001a66 ;margin-left: 40px ;"  ><i class="fa fa-instagram" ></i></a></div></div></div></div></div></div></div><footer><div class="financity-footer-wrapper  financity-with-column-divider" ><div class="financity-footer-container financity-container clearfix" ><div class="financity-footer-column financity-item-pdlr financity-column-15" ><div id="custom_html-3" class="widget_text widget widget_custom_html financity-widget"><div class="textwidget custom-html-widget"><center>
+<h6>
+	Brands 
+</h6>
+<a href="https://hexo.com/" target="_blank" rel="noopener noreferrer">Adult-Use</a> <br>
+<a href="https://thehydropothecary.com/" target="_blank" rel="noopener noreferrer">Medical</a> <br>
+
+</center>
+
+</div></div></div><div class="financity-footer-column financity-item-pdlr financity-column-15" ><div id="custom_html-4" class="widget_text widget widget_custom_html financity-widget"><div class="textwidget custom-html-widget"><center>
+<h6>
+	Resources
+</h6>
+<a href="/faq">FAQ</a> <br>
+<a href="/terms-of-use">Terms of Use</a> <br>
+<a href="/privacy-policy">Privacy Policy</a> <br>
+<a href="/social-media-policy">Social Media Policy</a> <br>
+</center>
+</div></div></div><div class="financity-footer-column financity-item-pdlr financity-column-15" ><div id="custom_html-5" class="widget_text widget widget_custom_html financity-widget"><div class="textwidget custom-html-widget"><center>
+<h6>
+	Company
+</h6>
+<a href="/management">Management</a> <br>
+<a href="/contact-us">Contact Us</a> <br>
+</center></div></div></div><div class="financity-footer-column financity-item-pdlr financity-column-15" ><div id="custom_html-6" class="widget_text widget widget_custom_html financity-widget"><div class="textwidget custom-html-widget"><center>
+<h6>
+	Investors
+</h6>
+<a href="/investors#financial">Financial Information</a> <br>
+<a href="/investors#analyst">Analyst Coverage</a> <br>
+<a href="https://www.sedar.com/DisplayCompanyDocuments.do?lang=EN&issuerNo=00036235" target="_blank" rel="noopener noreferrer">SEDAR Filing</a> <br>
+<a href="/governance">Governance</a><br>
+</center></div></div></div></div></div><div class="financity-copyright-wrapper" ><div class="financity-copyright-container financity-container"><div class="financity-copyright-text financity-item-pdlr">© 2021 HEXO Corp. <br> <div class="qm_copyright">Market Data copyright © 2018 QuoteMedia. Data delayed 15 minutes unless otherwise indicated. Market Data powered by QuoteMedia. <a href="http://www.quotemedia.com/legal/tos" target="_blank">Terms of Use.</a> </div></div></div></div></footer></div></div><a href="#financity-top-anchor" class="financity-footer-back-to-top-button" id="financity-footer-back-to-top-button"><i class="fa fa-angle-up" ></i></a>
+		<script type="text/javascript" alt='evo_map_styles'>
+		/*<![CDATA[*/
+		var gmapstyles = 'default';
+		/* ]]> */
+		</script>		
+		<style>@media only screen and (max-width: 999px){#gdlr-core-title-item-1 .gdlr-core-title-item-title{font-size: 24px  !important;}}#gdlr-core-button-id-33472{color: #ffffff ;border-radius: 30px;-moz-border-radius: 30px;-webkit-border-radius: 30px;background: #001a66 ;border-width: 2px 2px 2px 2px;}#gdlr-core-button-id-33472:hover{color: #001a66 ;border-color: #001a66 ;background-color: #ffffff ;}#gdlr-core-button-id-33472 i{color: #ffffff ;}#gdlr-core-button-id-33472:hover i{color: #001a66 ;}#gdlr-core-button-id-86427{color: #ffffff ;border-radius: 30px;-moz-border-radius: 30px;-webkit-border-radius: 30px;background: #001a66 ;border-width: 2px 2px 2px 2px;}#gdlr-core-button-id-86427:hover{color: #001a66 ;border-color: #001a66 ;background-color: #ffffff ;}#gdlr-core-button-id-86427 i{color: #ffffff ;}#gdlr-core-button-id-86427:hover i{color: #001a66 ;}@media only screen and (max-width: 999px){#gdlr-core-title-item-2 .gdlr-core-title-item-title{font-size: 24px  !important;}}#gdlr-core-button-id-75354{font-size: 13px ;color: #001a66 ;border-radius: 30px;-moz-border-radius: 30px;-webkit-border-radius: 30px;background: #ffffff ;border-width: 2px 2px 2px 2px;border-color: #001a66 ;}#gdlr-core-button-id-75354:hover{color: #ffffff ;background-color: #001a66 ;}@media only screen and (max-width: 999px){#gdlr-core-title-item-3 .gdlr-core-title-item-title{font-size: 24px  !important;}}@media only screen and (max-width: 999px){#gdlr-core-title-item-4 .gdlr-core-title-item-title{font-size: 24px  !important;}}#gdlr-core-button-id-73570{font-size: 13px ;color: #ffffff ;border-radius: 30px;-moz-border-radius: 30px;-webkit-border-radius: 30px;background: #001a66 ;border-width: 2px 2px 2px 2px;}#gdlr-core-button-id-73570:hover{color: #001a66 ;border-color: #001a66 ;background-color: #ffffff ;}#gdlr-core-button-id-73570 i{color: #ffffff ;}#gdlr-core-button-id-73570:hover i{color: #001a66 ;}@media only screen and (max-width: 999px){#gdlr-core-title-item-5 .gdlr-core-title-item-title{font-size: 24px  !important;}}@media only screen and (max-width: 999px){#gdlr-core-title-item-6 .gdlr-core-title-item-title{font-size: 24px  !important;}}</style><script>(function() {function maybePrefixUrlField() {
+	if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
+		this.value = "http://" + this.value;
+	}
+}
+
+var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
+if (urlFields) {
+	for (var j=0; j < urlFields.length; j++) {
+		urlFields[j].addEventListener('blur', maybePrefixUrlField);
+	}
+}
+})();</script><div class='evo_lightboxes' style='display:block'>					<div class='evo_lightbox eventcard eventon_events_list' id='' >
+						<div class="evo_content_in">													
+							<div class="evo_content_inin">
+								<div class="evo_lightbox_content">
+									<a class='evolbclose '>X</a>
+									<div class='evo_lightbox_body eventon_list_event evo_pop_body evcal_eventcard'> </div>
+								</div>
+							</div>							
+						</div>
+					</div>
+					</div><script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.hexocorp.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.6'></script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-content/plugins/goodlayers-core/plugins/combine/script.js?ver=5.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gdlr_core_pbf = {"admin":"","video":{"width":"640","height":"360"},"ajax_url":"https:\/\/www.hexocorp.com\/wp-admin\/admin-ajax.php?lang=en","ilightbox_skin":"dark"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-content/plugins/goodlayers-core/include/js/page-builder.js?ver=1.3.9'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LchObQUAAAAALCsmHQUwIl-l2VDWx9igKSyPKFt&#038;ver=3.0'></script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var financity_script_core = {"home_url":"https:\/\/www.hexocorp.com\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-content/themes/financity/js/script-core.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+jQuery(function() {
+
+    if (document.location.pathname == "/" || document.location.pathname == "/fr/" || document.location.pathname.toLowerCase().indexOf("/investors/") !== -1 || document.location.pathname.toLowerCase().indexOf("/fr/investisseurs/") !== -1) {
+        //do nothing
+    } else {
+        jQuery(".qm_copyright").hide()
+    }
+
+  	if (document.location.pathname.indexOf('/fr/') !== -1){
+    jQuery('#menu_events').prop("href","https://www.hexocorp.com/fr/faq/");
+    jQuery('#menu_contactus').prop("href", "https://www.hexocorp.com/fr/contactez-nous/");
+    }
+
+});
+</script>
+<script type='text/javascript' src='//www.hexocorp.com/wp-content/plugins/eventON/assets/js/eventon_functions.js?ver=2.6.17'></script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-content/plugins/eventON/assets/js/handlebars.js?ver=2.6.17'></script>
+<script type='text/javascript' src='//www.hexocorp.com/wp-content/plugins/eventON/assets/js/jquery.mobile.min.js?ver=2.6.17'></script>
+<script type='text/javascript' src='//www.hexocorp.com/wp-content/plugins/eventON/assets/js/jquery.mousewheel.min.js?ver=2.6.17'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var the_ajax_script = {"ajaxurl":"https:\/\/www.hexocorp.com\/wp-admin\/admin-ajax.php","postnonce":"f74b9a2ec4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.hexocorp.com/wp-content/plugins/eventON/assets/js/eventon_script.js?ver=2.6.17'></script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-includes/js/wp-embed.min.js?ver=5.3.2'></script>
+<script type='text/javascript' src='https://www.hexocorp.com/wp-content/plugins/mailchimp-for-wp/assets/js/forms.min.js?ver=4.7.5'></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey, actions ) {
+
+	var wpcf7recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeOnHomepage: function() {
+			wpcf7recaptcha.execute( actions[ 'homepage' ] );
+		},
+
+		executeOnContactform: function() {
+			wpcf7recaptcha.execute( actions[ 'contactform' ] );
+		},
+
+	};
+
+	grecaptcha.ready(
+		wpcf7recaptcha.executeOnHomepage
+	);
+
+	document.addEventListener( 'change',
+		wpcf7recaptcha.executeOnContactform, false
+	);
+
+	document.addEventListener( 'wpcf7submit',
+		wpcf7recaptcha.executeOnHomepage, false
+	);
+
+} )(
+	grecaptcha,
+	'6LchObQUAAAAALCsmHQUwIl-l2VDWx9igKSyPKFt',
+	{"homepage":"homepage","contactform":"contactform"}
+);
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5241e698d3","applicationID":"125510771","transactionName":"NgBUN0ZXWUpTUkAKDQ9KdwBAX1hXHUFVBAc=","queueTime":0,"applicationTime":412,"atts":"GkdXQQ5NSkQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,8 @@
+Wikimedia wikis are organized by language. To see available Wikiversity languages, visit . Additional languages are supported at .
+Contributions to the English Wikiversity must be in English, unless teaching another language to English-speaking learners. There is a  template available that allows for translations of English content to other languages to be added as subpages. There is no automatic translation, but translated-language subpages may be added as desired.
+Some learning resources need to be multilingual. 
+Care must be taken when deciding whether to provide a translation/localisation of a page or of a course etc.
+If translations of a page are appropriate, {{}} may be useful.
+Otherwise consider creating the course on the appropriate Wikiversity site such as:
+and cross reference - e.g. on the English page for  insert
+(etc. if it exists in other languages) which will add a link at the bottom of the left panel on a Wikiversity page.

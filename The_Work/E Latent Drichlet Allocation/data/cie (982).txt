@@ -1,0 +1,6 @@
+ to learn, share knowledge, and build your career.Q&A for workConnect and share knowledge within a single location that is structured and easy to search.I have a question regarding the latest core web vitals. How exactly it works on a HTML static website with a lot of pages? I made some , but the results which I get are really weird. Are these results related to the whole website or only to that page, in my case the frontpage? I also removed a lot of elements to test that, but the result wasn't changes.And another thing which confuse me .. on one side, google recommend to avoid shifts, but when there are adsense (which is also a product from google), there must be a shift. So, how you are handling that?Thanks for contributing an answer to Stack Overflow!But  …To learn more, see our .Required, but never shownRequired, but never shown
+                                                By clicking “Post Your Answer”, you agree to our ,  and 
+                                            To subscribe to this RSS feed, copy and paste this URL into your RSS reader.
+site design / logo © 2021 Stack Exchange Inc; user contributions licensed under .                    
+                
+     

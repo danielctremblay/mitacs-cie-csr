@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie ie6 " lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 7]>    <html class="ie ie7 " lang="en" dir="ltr"> <![endif]-->
+<!--[if IE 8]>    <html class="ie ie8 " lang="en" dir="ltr"> <![endif]-->
+<!--[if gt IE 8]> <!--> <html class="" lang="en" dir="ltr"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://www.cmgl.ca/sites/default/files/CMG.ico" type="image/vnd.microsoft.icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="CMG provides reservoir simulation software, including thermal, compositional, black oil and enhanced oil recovery processes, that helps oil and gas companies reduce risk and maximize recovery." />
+<meta name="abstract" content="CMG is a reservoir simulation software provider, including thermal, compositional, black oil and enhanced oil recovery processes, that helps oil and gas companies reduce risk and maximize recovery." />
+<meta name="keywords" content="CMG, computer modelling group, reservoir simulation, CMG software, reservoir modeling, thermal, compositional, black oil, enhanced oirl recovery, EOR, oil, gas" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://www.cmgl.ca/" />
+<link rel="shortlink" href="https://www.cmgl.ca/" />
+<meta property="og:site_name" content="Computer Modelling Group Ltd." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.cmgl.ca/home" />
+<meta property="og:title" content="Home" />
+<title>Computer Modelling Group Ltd. | Reservoir Simulation Software</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- Call bootstrap.css before $scripts to resolve @import conflict with respond.js -->
+<link rel="stylesheet" href="/sites/all/themes/Porto/vendor/bootstrap/bootstrap.css">
+
+<link rel="stylesheet" href="/sites/all/libraries/mediaelement/mediaelementplayer.css">
+<style type="text/css" media="all">
+@import url("https://www.cmgl.ca/modules/system/system.base.css?qta0hg");
+@import url("https://www.cmgl.ca/modules/system/system.menus.css?qta0hg");
+@import url("https://www.cmgl.ca/modules/system/system.messages.css?qta0hg");
+@import url("https://www.cmgl.ca/modules/system/system.theme.css?qta0hg");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.cmgl.ca/sites/all/modules/calendar/css/calendar_multiday.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/modules/date/date_repeat_field/date_repeat_field.css?qta0hg");
+@import url("https://www.cmgl.ca/modules/field/theme/field.css?qta0hg");
+@import url("https://www.cmgl.ca/modules/node/node.css?qta0hg");
+@import url("https://www.cmgl.ca/modules/search/search.css?qta0hg");
+@import url("https://www.cmgl.ca/modules/user/user.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/modules/views/css/views.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/modules/ckeditor/css/ckeditor.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/modules/media/modules/media_wysiwyg/css/media_wysiwyg.base.css?qta0hg");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.cmgl.ca/sites/all/modules/ctools/css/ctools.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/modules/md_slider/css/animate.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/modules/md_slider/css/md-slider.css?qta0hg");
+</style>
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+.md-objects .md-object.md-layer-1-0-0{z-index:996 !important;}.md-objects .md-object.md-layer-1-0-1{z-index:999 !important;color:#ffffff !important;font-size:3.08333333333em;}.md-objects .md-object.md-layer-1-0-2{z-index:997 !important;color:#ffffff !important;font-size:4.16666666667em;}.md-objects .md-object.md-layer-1-0-3{z-index:994!important;}.md-objects .md-object.md-layer-1-0-4{z-index:995 !important;}.md-objects .md-object.md-layer-1-0-5{z-index:998 !important;color:#ffffff !important;font-size:3.75em;}.md-objects .md-object.md-layer-1-0-6{z-index:1000!important;}.md-objects .md-object.md-layer-1-1-0{z-index:997 !important;}.md-objects .md-object.md-layer-1-1-1 a{color:#ffffff !important;font-size:2.83333333333em;}.md-objects .md-object.md-layer-1-1-1{z-index:998!important;}.md-objects .md-object.md-layer-1-1-2{z-index:999 !important;color:#ffffff !important;font-size:4.16666666667em;}.md-objects .md-object.md-layer-1-1-3{z-index:1000!important;}.md-objects .md-object.md-layer-1-1-4{z-index:996 !important;}.md-objects .md-object.md-layer-1-2-0{z-index:997 !important;}.md-objects .md-object.md-layer-1-2-1{z-index:998 !important;color:#ffffff !important;font-size:3.08333333333em;}.md-objects .md-object.md-layer-1-2-2{z-index:999 !important;color:#ffffff !important;font-size:4.16666666667em;}.md-objects .md-object.md-layer-1-2-3{z-index:1000!important;}.md-objects .md-object.md-layer-1-2-4{z-index:996 !important;}.md-objects .md-object.md-layer-1-2-5{z-index:2 !important;color:#ffffff !important;font-size:3.75em;}.md-objects .md-object.md-layer-1-3-0{z-index:996 !important;}.md-objects .md-object.md-layer-1-3-1{z-index:997 !important;}.md-objects .md-object.md-layer-1-3-2{z-index:998 !important;color:#ffffff !important;font-size:2.33333333333em;}.md-objects .md-object.md-layer-1-3-3{z-index:999 !important;color:#ffffff !important;font-size:3.75em;}.md-objects .md-object.md-layer-1-3-4{z-index:1000!important;}.md-objects .md-object.md-layer-1-4-0{z-index:997 !important;}.md-objects .md-object.md-layer-1-4-1{z-index:998 !important;color:#00968f !important;font-size:4.16666666667em;}.md-objects .md-object.md-layer-1-4-2{z-index:999 !important;color:#00968f !important;font-size:3em;}.md-objects .md-object.md-layer-1-4-3{z-index:1000!important;}.md-objects .md-object.md-layer-1-4-4{z-index:996 !important;}.md-objects .md-object.md-layer-1-5-0{z-index:997 !important;}.md-objects .md-object.md-layer-1-5-1{z-index:998 !important;color:#ffffff !important;font-size:3em;}.md-objects .md-object.md-layer-1-5-2{z-index:999 !important;color:#ffffff !important;font-size:3.91666666667em;}.md-objects .md-object.md-layer-1-5-3{z-index:1000!important;}.md-objects .md-object.md-layer-1-5-4{z-index:996 !important;}.md-objects .md-object.md-layer-1-6-0{z-index:996 !important;}.md-objects .md-object.md-layer-1-6-1{z-index:998 !important;color:#ffffff !important;font-size:2.83333333333em;}.md-objects .md-object.md-layer-1-6-2{z-index:997 !important;color:#ffffff !important;font-size:4.16666666667em;}.md-objects .md-object.md-layer-1-6-3{z-index:999!important;}.md-objects .md-object.md-layer-1-6-4{z-index:995 !important;}.md-objects .md-object.md-layer-1-7-0{z-index:998 !important;}.md-objects .md-object.md-layer-1-7-1{z-index:999 !important;color:#ffffff !important;font-size:3em;}.md-objects .md-object.md-layer-1-7-2{z-index:1000 !important;color:#ffffff !important;font-size:3.91666666667em;}.md-objects .md-object.md-layer-1-7-3{z-index:996!important;}.md-objects .md-object.md-layer-1-7-4{z-index:997 !important;}.md-objects .md-object.md-layer-1-8-0{z-index:997 !important;}.md-objects .md-object.md-layer-1-8-1{z-index:998 !important;color:#ffffff !important;font-size:3.08333333333em;}.md-objects .md-object.md-layer-1-8-2{z-index:1000 !important;color:#ffffff !important;font-size:4.58333333333em;}.md-objects .md-object.md-layer-1-8-3{z-index:999!important;}.md-objects .md-object.md-layer-1-8-4{z-index:996 !important;}.md-objects .md-object.md-layer-1-9-0{z-index:997 !important;color:#ffffff !important;font-size:4.16666666667em;font-weight:500;text-decoration:none;}.md-objects .md-object.md-layer-1-9-1{z-index:998 !important;color:#ffffff !important;font-size:3.08333333333em;font-weight:500;text-decoration:none;}.md-objects .md-object.md-layer-1-9-2{z-index:996 !important;}.md-objects .md-object.md-layer-1-9-3{z-index:1000!important;}.md-objects .md-object.md-layer-1-9-4{z-index:999 !important;}.md-objects .md-object.md-layer-1-10-0{z-index:998 !important;color:#ffffff !important;font-size:5em;}.md-objects .md-object.md-layer-1-10-1{z-index:997 !important;color:#ffffff !important;font-size:3.33333333333em;}.md-objects .md-object.md-layer-1-10-2{z-index:1000!important;}.md-objects .md-object.md-layer-1-10-3{z-index:988 !important;}.md-objects .md-object.md-layer-1-10-4{z-index:989 !important;}.md-objects .md-object.md-layer-1-10-5{z-index:990 !important;}.md-objects .md-object.md-layer-1-10-6{z-index:991 !important;}.md-objects .md-object.md-layer-1-10-7{z-index:992 !important;}.md-objects .md-object.md-layer-1-10-8{z-index:995 !important;}.md-objects .md-object.md-layer-1-10-9{z-index:996 !important;}.md-objects .md-object.md-layer-1-10-10{z-index:993 !important;}.md-objects .md-object.md-layer-1-10-11{z-index:994 !important;}.md-objects .md-object.md-layer-1-10-12{z-index:999 !important;}.md-objects .md-object.md-layer-1-11-0{z-index:998 !important;color:#ffffff !important;font-size:6.25em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-11-1{z-index:999 !important;color:#ffffff !important;font-size:4.58333333333em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-11-2{z-index:997 !important;}.md-objects .md-object.md-layer-1-11-3{z-index:1000!important;}.md-objects .md-object.md-layer-1-12-0{z-index:998 !important;}.md-objects .md-object.md-layer-1-12-1{z-index:999 !important;color:#ffffff !important;text-align:center;font-size:2.08333333333em;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-12-2{z-index:1000 !important;color:#ffffff !important;text-align:center;font-size:4.16666666667em;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-12-3{z-index:997!important;}.md-objects .md-object.md-layer-1-13-0{z-index:996 !important;}.md-objects .md-object.md-layer-1-13-1{z-index:997 !important;}.md-objects .md-object.md-layer-1-13-2{z-index:998 !important;color:#ffffff !important;font-size:4.16666666667em;font-weight:300;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-13-3{z-index:999 !important;color:#ffffff !important;font-size:2.16666666667em;font-weight:300;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-13-4{z-index:1000!important;}.md-objects .md-object.md-layer-1-14-0{z-index:995 !important;color:#ffffff !important;text-align:center;font-size:5em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-14-1{z-index:999 !important;color:#ffffff !important;text-align:center;font-size:4.16666666667em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-14-2{z-index:996 !important;}.md-objects .md-object.md-layer-1-14-3{z-index:998 !important;}.md-objects .md-object.md-layer-1-14-4{z-index:997 !important;}.md-objects .md-object.md-layer-1-14-5{z-index:1000!important;}.md-objects .md-object.md-layer-1-15-0{z-index:998 !important;color:#ffffff !important;font-size:4.16666666667em;font-weight:300;}.md-objects .md-object.md-layer-1-15-1{z-index:997 !important;color:#ffffff !important;font-size:2.66666666667em;font-weight:400;}.md-objects .md-object.md-layer-1-15-2{z-index:999!important;}.md-objects .md-object.md-layer-1-15-3{z-index:995 !important;}.md-objects .md-object.md-layer-1-15-4{z-index:996 !important;}.md-objects .md-object.md-layer-1-16-0{z-index:998 !important;color:#ffffff !important;font-size:4.16666666667em;font-weight:300;}.md-objects .md-object.md-layer-1-16-1{z-index:999 !important;color:#ffffff !important;font-size:3.33333333333em;font-weight:400;}.md-objects .md-object.md-layer-1-16-2{z-index:1000!important;}.md-objects .md-object.md-layer-1-16-3{z-index:996 !important;}.md-objects .md-object.md-layer-1-16-4{z-index:997 !important;}.md-objects .md-object.md-layer-1-17-0{z-index:997 !important;color:#ffffff !important;font-size:2.5em;font-weight:300;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-17-1{z-index:999 !important;color:#ffffff !important;font-size:2.5em;font-weight:300;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-17-2{z-index:996 !important;}.md-objects .md-object.md-layer-1-17-3{z-index:998 !important;}.md-objects .md-object.md-layer-1-17-4{z-index:995 !important;}.md-objects .md-object.md-layer-1-17-5{z-index:1000!important;}.md-objects .md-object.md-layer-1-18-0{z-index:997 !important;color:#ffffff !important;font-size:2.08333333333em;font-weight:300;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-18-1{z-index:998 !important;color:#ffffff !important;font-size:5em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-18-2{z-index:999 !important;color:#ffffff !important;font-size:4.16666666667em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-18-3{z-index:993!important;}.md-objects .md-object.md-layer-1-18-4{z-index:994 !important;}.md-objects .md-object.md-layer-1-18-5{z-index:995 !important;}.md-objects .md-object.md-layer-1-18-6{z-index:996 !important;}.md-objects .md-object.md-layer-1-18-7{z-index:1000!important;}.md-objects .md-object.md-layer-1-19-0{z-index:999 !important;color:#ffffff !important;font-size:6.25em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-19-1{z-index:998 !important;color:#ffffff !important;font-size:4.58333333333em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-19-2{z-index:997 !important;}.md-objects .md-object.md-layer-1-19-3{z-index:1000!important;}.md-objects .md-object.md-layer-1-20-0{z-index:987 !important;}.md-objects .md-object.md-layer-1-20-1{z-index:988 !important;color:#ffffff !important;font-size:1.66666666667em;font-weight:300;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-20-2{z-index:989 !important;color:#ffffff !important;font-size:4.16666666667em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-20-3{z-index:991 !important;}.md-objects .md-object.md-layer-1-20-4{z-index:992 !important;color:#00968f !important;text-align:center;font-size:1.16666666667em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;text-transform:none;}.md-objects .md-object.md-layer-1-20-5{z-index:993 !important;color:#00968f !important;text-align:center;font-size:2.66666666667em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;text-transform:none;}.md-objects .md-object.md-layer-1-20-6{z-index:994 !important;color:#00968f !important;text-align:center;font-size:1.08333333333em;font-weight:600;font-family:"Hind Vadodara";text-decoration:none;text-transform:none;}.md-objects .md-object.md-layer-1-20-7{z-index:995 !important;color:#000000 !important;text-align:center;font-size:1.08333333333em;font-weight:400;font-family:"Hind Vadodara";text-decoration:none;text-transform:none;}.md-objects .md-object.md-layer-1-20-8{z-index:996 !important;}.md-objects .md-object.md-layer-1-20-9{z-index:997 !important;color:#00968f !important;text-align:center;font-size:1.16666666667em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;text-transform:none;}.md-objects .md-object.md-layer-1-20-10{z-index:998 !important;color:#00968f !important;text-align:center;font-size:2.66666666667em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;text-transform:none;}.md-objects .md-object.md-layer-1-20-11{z-index:999 !important;color:#00968f !important;text-align:center;font-size:1.08333333333em;font-weight:600;font-family:"Hind Vadodara";text-decoration:none;text-transform:none;}.md-objects .md-object.md-layer-1-20-12{z-index:1000 !important;color:#000000 !important;text-align:center;font-size:1.08333333333em;font-weight:400;font-family:"Hind Vadodara";text-decoration:none;text-transform:none;}.md-objects .md-object.md-layer-1-21-0{z-index:1000 !important;color:#ffffff !important;font-size:1.66666666667em;font-weight:300;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-21-1{z-index:999 !important;color:#ffffff !important;font-size:4.16666666667em;font-weight:500;font-family:"Hind Vadodara";text-decoration:none;}.md-objects .md-object.md-layer-1-21-2{z-index:976 !important;}.md-objects .md-object.md-layer-1-21-3{z-index:981 !important;color:#00968f !important;text-align:center;font-size:1em;font-weight:500;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-21-4{z-index:982 !important;color:#00968f !important;text-align:center;font-size:1em;font-weight:500;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-21-5{z-index:983 !important;color:#00968f !important;text-align:center;font-size:1em;font-weight:500;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-21-6{z-index:984 !important;color:#00968f !important;text-align:center;font-size:1em;font-weight:500;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-21-7{z-index:985 !important;color:#00968f !important;text-align:center;font-size:1em;font-weight:500;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-21-8{z-index:986 !important;color:#00968f !important;text-align:center;font-size:1em;font-weight:500;font-family:"Hind Vadodara";}.md-objects .md-object.md-layer-1-21-9{z-index:975 !important;}.md-objects .md-object.md-layer-1-21-10{z-index:993 !important;}.md-objects .md-object.md-layer-1-21-11{z-index:996 !important;}.md-objects .md-object.md-layer-1-21-12{z-index:994 !important;}.md-objects .md-object.md-layer-1-21-13{z-index:995 !important;}.md-objects .md-object.md-layer-1-21-14{z-index:978 !important;}.md-objects .md-object.md-layer-1-21-15{z-index:977 !important;}.md-objects .md-object.md-layer-1-21-16{z-index:974 !important;}.md-objects .md-object.md-layer-1-21-17{z-index:980 !important;}.md-objects .md-object.md-layer-1-21-18{z-index:972 !important;}.md-objects .md-object.md-layer-1-21-19{z-index:987 !important;}.md-objects .md-object.md-layer-1-21-20{z-index:988 !important;}.md-objects .md-object.md-layer-1-21-21{z-index:989 !important;}.md-objects .md-object.md-layer-1-21-22{z-index:990 !important;}.md-objects .md-object.md-layer-1-21-23{z-index:991 !important;}.md-objects .md-object.md-layer-1-21-24{z-index:992 !important;}.md-objects .md-object.md-layer-1-21-25{z-index:998 !important;}.md-objects .md-object.md-layer-1-21-26{z-index:979 !important;}.md-objects .md-object.md-layer-1-21-27{z-index:997 !important;}.md-objects .md-object.md-layer-1-21-28{z-index:973 !important;}.md-objects .md-object.md-layer-1-22-0{z-index:2 !important;}.md-objects .md-object.md-layer-1-22-1{z-index:2 !important;color:#00968f !important;font-size:4.16666666667em;}.md-objects .md-object.md-layer-1-22-2{z-index:2 !important;color:#00968f !important;font-size:3em;}.md-objects .md-object.md-layer-1-22-3{z-index:2!important;}.md-objects .md-object.md-layer-1-22-4{z-index:2 !important;}
+
+/*]]>*/-->
+</style>
+<style type="text/css" media="all">
+@import url("https://www.cmgl.ca/sites/all/modules/md_slider/css/md-slider-style.css?qta0hg");
+</style>
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+@media (max-width:460px){.hideonmobile{display:none !important;}}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Hind+Vadodara:300,400,500,600,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i|Shadows+Into+Light|Open+Sans:400,600,700,800" media="all" />
+<style type="text/css" media="all">
+@import url("https://www.cmgl.ca/sites/all/modules/eu_cookie_compliance/css/eu_cookie_compliance.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/modules/drop_down_login/theme/drop_down_login.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/default/files/ctools/css/c0306d7525a666b94167b93829af46d0.css?qta0hg");
+</style>
+<style type="text/css" media="all">
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/vendor/owlcarousel/owl.carousel.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/vendor/fontawesome/css/font-awesome-legacy.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/vendor/fontawesome/css/font-awesome.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/vendor/simple-line-icons/css/simple-line-icons.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/vendor/owlcarousel/owl.theme.default.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/vendor/circle-flip-slideshow/css/component.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/vendor/magnific-popup/magnific-popup.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/css/theme.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/css/theme-elements.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/css/theme-animate.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/css/theme-blog.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/css/theme-shop.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/Porto/css/drupal-styles.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/default/files/less/skin.Pp_urL3aeQfMnUk1lGjQPJiactnndaOqjygEagCpBH0.css?qta0hg");
+@import url("https://www.cmgl.ca/sites/all/themes/cmg2019/css/custom.css?qta0hg");
+</style>
+<script type="text/javascript" defer="defer" src="https://www.cmgl.ca/sites/default/files/google_tag/google_tag.script.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/jquery_update/replace/jquery/1.10/jquery.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/misc/jquery-extend-3.4.0.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.10.2"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/misc/drupal.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/eu_cookie_compliance/js/jquery.cookie-1.4.1.min.js?v=1.4.1"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/misc/ajax.js?v=7.80"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/md_slider/js/jquery.touchwipe.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/md_slider/js/modernizr.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/md_slider/js/jquery-migrate-1.2.1.min.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/md_slider/js/jquery.easing.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/md_slider/js/md-slider.js?qta0hg"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function($) {
+      $(document).ready(function() {
+          effectsIn = Drupal.settings.inEffects;
+          effectsOut = Drupal.settings.outEffects;
+          var options_1 = Drupal.settings.md_slider_options_1;
+          if(!window.listMegaSlide){window.listMegaSlide = [];} $('.md-slide-items').each(function(index, item){
+            if($(item).attr('id') == 'md-slider-1-block'){
+              listMegaSlide[index] = $('#md-slider-1-block').mdSlider(options_1);
+            }
+          });
+      });
+    })(jQuery);
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/google_analytics/googleanalytics.js?qta0hg"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-26258686-4", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/drop_down_login/theme/drop_down_login.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/misc/progress.js?v=7.80"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/modules/ng_lightbox/js/ng-lightbox.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/modernizr/modernizr.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jquery.appear/jquery.appear.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jquery.easing/jquery.easing.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jquery-cookie/jquery-cookie.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/bootstrap/bootstrap.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/common/common.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jquery.validation/jquery.validation.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jquery.stellar/jquery.stellar.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jquery.gmap/jquery.gmap.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jquery.lazyload/jquery.lazyload.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/isotope/jquery.isotope.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/owlcarousel/owl.carousel.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/jflickrfeed/jflickrfeed.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/magnific-popup/jquery.magnific-popup.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/vide/vide.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/vendor/circle-flip-slideshow/js/jquery.flipshow.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/cmg2019/js/custom.js?qta0hg"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"cmg2019","theme_token":"SONfCvP_UDdsCZEe1oC_OSmKPN5STKQf_Mp9kV78SXI","jquery_version":"1.10","js":{"0":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"sites\/all\/themes\/Porto\/js\/theme.js":1,"sites\/all\/themes\/Porto\/js\/theme.init.js":1,"sites\/all\/themes\/Porto\/js\/views\/view.home.js":1,"public:\/\/google_tag\/google_tag.script.js":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/eu_cookie_compliance\/js\/jquery.cookie-1.4.1.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/md_slider\/js\/jquery.touchwipe.js":1,"sites\/all\/modules\/md_slider\/js\/modernizr.js":1,"sites\/all\/modules\/md_slider\/js\/jquery-migrate-1.2.1.min.js":1,"sites\/all\/modules\/md_slider\/js\/jquery.easing.js":1,"sites\/all\/modules\/md_slider\/js\/md-slider.js":1,"1":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/modules\/drop_down_login\/theme\/drop_down_login.js":1,"misc\/progress.js":1,"sites\/all\/modules\/ng_lightbox\/js\/ng-lightbox.js":1,"sites\/all\/themes\/Porto\/vendor\/modernizr\/modernizr.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.appear\/jquery.appear.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.easing\/jquery.easing.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery-cookie\/jquery-cookie.js":1,"sites\/all\/themes\/Porto\/vendor\/bootstrap\/bootstrap.js":1,"sites\/all\/themes\/Porto\/vendor\/common\/common.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.validation\/jquery.validation.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.stellar\/jquery.stellar.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.easy-pie-chart\/jquery.easy-pie-chart.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.gmap\/jquery.gmap.js":1,"sites\/all\/themes\/Porto\/vendor\/jquery.lazyload\/jquery.lazyload.js":1,"sites\/all\/themes\/Porto\/vendor\/isotope\/jquery.isotope.js":1,"sites\/all\/themes\/Porto\/vendor\/owlcarousel\/owl.carousel.js":1,"sites\/all\/themes\/Porto\/vendor\/jflickrfeed\/jflickrfeed.js":1,"sites\/all\/themes\/Porto\/vendor\/magnific-popup\/jquery.magnific-popup.js":1,"sites\/all\/themes\/Porto\/vendor\/vide\/vide.js":1,"sites\/all\/themes\/Porto\/vendor\/circle-flip-slideshow\/js\/jquery.flipshow.js":1,"sites\/all\/themes\/cmg2019\/js\/custom.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/md_slider\/css\/animate.css":1,"sites\/all\/modules\/md_slider\/css\/md-slider.css":1,"0":1,"sites\/all\/modules\/md_slider\/css\/md-slider-style.css":1,"1":1,"\/\/fonts.googleapis.com\/css?family=Hind+Vadodara:300,400,500,600,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i|Shadows+Into+Light|Open+Sans:400,600,700,800":1,"sites\/all\/modules\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"sites\/all\/modules\/drop_down_login\/theme\/drop_down_login.css":1,"public:\/\/ctools\/css\/c0306d7525a666b94167b93829af46d0.css":1,"sites\/all\/themes\/Porto\/vendor\/owlcarousel\/owl.carousel.css":1,"sites\/all\/themes\/Porto\/vendor\/fontawesome\/css\/font-awesome-legacy.css":1,"sites\/all\/themes\/Porto\/vendor\/fontawesome\/css\/font-awesome.css":1,"sites\/all\/themes\/Porto\/vendor\/simple-line-icons\/css\/simple-line-icons.css":1,"sites\/all\/themes\/Porto\/vendor\/owlcarousel\/owl.theme.default.css":1,"sites\/all\/themes\/Porto\/vendor\/prettyPhoto\/css\/prettyPhoto.css":1,"sites\/all\/themes\/Porto\/vendor\/circle-flip-slideshow\/css\/component.css":1,"sites\/all\/themes\/Porto\/vendor\/magnific-popup\/magnific-popup.css":1,"sites\/all\/themes\/Porto\/vendor\/isotope\/jquery.isotope.css":1,"sites\/all\/themes\/Porto\/css\/theme.css":1,"sites\/all\/themes\/Porto\/css\/theme-elements.css":1,"sites\/all\/themes\/Porto\/css\/theme-animate.css":1,"sites\/all\/themes\/Porto\/css\/theme-blog.css":1,"sites\/all\/themes\/Porto\/css\/theme-shop.css":1,"sites\/all\/themes\/Porto\/css\/drupal-styles.css":1,"sites\/all\/themes\/Porto\/css\/less\/skin.less":1,"sites\/all\/themes\/cmg2019\/css\/custom.css":1}},"urlIsAjaxTrusted":{"\/home?destination=node\/1":true,"\/":true},"inEffects":["bounceIn","bounceInDown","bounceInUp","bounceInLeft","bounceInRight","fadeIn","fadeInUp","fadeInDown","fadeInLeft","fadeInRight","fadeInUpBig","fadeInDownBig","fadeInLeftBig","fadeInRightBig","flipInX","flipInY","foolishIn","lightSpeedIn","puffIn","rollIn","rotateIn","rotateInDownLeft","rotateInDownRight","rotateInUpLeft","rotateInUpRight","twisterInDown","twisterInUp","swap","swashIn","tinRightIn","tinLeftIn","tinUpIn","tinDownIn","vanishIn"],"outEffects":["bombRightOut","bombLeftOut","bounceOut","bounceOutDown","bounceOutUp","bounceOutLeft","bounceOutRight","fadeOut","fadeOutUp","fadeOutDown","fadeOutLeft","fadeOutRight","fadeOutUpBig","fadeOutDownBig","fadeOutLeftBig","fadeOutRightBig","flipOutX","flipOutY","foolishOut","hinge","holeOut","lightSpeedOut","puffOut","rollOut","rotateOut","rotateOutDownLeft","rotateOutDownRight","rotateOutUpLeft","rotateOutUpRight","rotateDown","rotateUp","rotateLeft","rotateRight","swashOut","tinRightOut","tinLeftOut","tinUpOut","tinDownOut","vanishOut"],"md_slider_options_1":{"fullwidth":true,"transitionsSpeed":0,"width":"1170","height":"435","enableDrag":true,"responsive":true,"pauseOnHover":true,"loop":true,"showLoading":false,"loadingPosition":"bottom","showArrow":true,"showBullet":true,"showNavigationLinks":false,"posBullet":"2","showThumb":false,"posThumb":"1","slideShowDelay":"6000","slideShow":true,"styleBorder":"0","styleShadow":"0","videoBox":false,"autoplayVideo":false},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":1,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Cspan class=\u0022hind-400\u0022\u003EWe use cookies to ensure you receive the best browsing experience.\u003Cbr\u003EIf you continue, without changing your browser settings, you are agreeing with CMG\u2019s cookie policy.\u003C\/span\u003E              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EMore Details Please\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I Agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n                    \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EMore Details Please\u003C\/button\u003E\n          \u003C\/div\u003E\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EOK, I Agree\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","mobile_breakpoint":"768","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button-thank-you\u0022 \u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/policies-governance","popup_link_new_window":1,"popup_position":null,"fixed_top_position":1,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":0,"reload_page":0,"domain":"","domain_all_sites":null,"popup_eu_only_js":0,"cookie_lifetime":"100","cookie_session":false,"disagree_do_not_show_popup":0,"method":"default","allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","withdraw_enabled":false,"withdraw_button_on_info_popup":0,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":1,"cookie_name":"CMG-cookies","containing_element":"body","automatic_cookies_removal":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+
+
+
+<!-- IE Fix for HTML5 Tags -->
+<!--
+[if lt IE 9]>
+  <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--[if IE]>
+  <link rel="stylesheet" href="/sites/all/themes/Porto/css/ie.css">
+<![endif]-->
+
+<!--[if lte IE 8]>
+  <script src="/sites/all/themes/Porto/vendor/respond.js"></script>
+<![endif]-->
+
+<!-- Web Fonts  -->
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext" type="text/css" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+
+<!-- User defined CSS --><style type='text/css'>settings[ribbon] = 1</style><!-- End user defined CSS -->
+
+
+</head>
+<meta name="google-site-verification" content="ejzoY5r_ZuI0tFCxdeBpR8jHstM-bhXAhI8BOLfZRuE" />
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-page role-anonymous-user">
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T599BNV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- start page.tpl.php -->
+<div class="body">
+            <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
+            <div class="header-body">
+                <div class="header-container container">
+                    <div class="header-row">
+                        <div class="header-column">
+
+                            
+                                                            <div class="header-logo">
+                                    <a href="/" title="Home" rel="home" id="logo">
+                                        <img src="https://www.cmgl.ca/sites/default/files/CMGlogo_main.png" alt="Home" height="45" data-sticky-height="40" data-sticky-top="33" />
+                                    </a>
+                                </div>
+                            
+                                                            <div id="name-and-slogan"  class="hidden">
+
+                                                                                                                        <h1 id="site-name"  class="hidden">
+                                                <a href="/" title="Home" rel="home"><span>Computer Modelling Group Ltd.</span></a>
+                                            </h1>
+                                                                            
+                                                                            <div id="site-slogan"  class="hidden">
+                                        Reservoir Simulation Software                                        </div>
+                                                                    </div> <!-- /#name-and-slogan -->
+                                                    </div>
+
+                        <div class="header-column header-column-valign-top">
+                                                            <div class="header-search hidden-xs">
+                                      
+<form onsubmit="if(this.search_block_form.value==&#039;Search&#039;){ alert(&#039;Please enter a search&#039;); return false; }" action="/" method="post" id="search-block-form" accept-charset="UTF-8"><div>
+<div class="input-group"> 
+  <input title="Enter the terms you wish to search for." class="form-control search form-text" onblur="if (this.value == &#039;&#039;) {this.value = &#039;Search&#039;;}" onfocus="if (this.value == &#039;Search&#039;) {this.value = &#039;&#039;;}" placeholder="Search" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="40" maxlength="128" /><span class="input-group-btn"><button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button></span><input type="hidden" name="form_build_id" value="form-BnmY35AoBZzT_Y0lOk_gBnc_1dNOutpkW96s8qgEqn8" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form>                                </div>
+                                                          <div class="region region-header-top">
+    <div id="block-block-1" class="block block-block">
+
+    
+  <div class="content">
+    <nav class="header-nav-top">
+	<ul class="nav nav-pills">
+		<li class="hidden-xs">
+			<a href="/contact"><i class="fa fa-phone"></i> Contact Us</a>
+		</li>
+		<li class="hidden-xs">
+			<a href="/user"><i class="fa fa-lock"></i> My Account</A>
+		</li>
+	</ul>
+</nav>  </div>
+</div>
+  </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-container container header-nav header-nav-push-top">
+                    <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                      
+<ul class="header-icons hidden-xs">
+	<li><A href="/customer-support" class="facircle-link-imex hind-500 ten"  style="font-size:12px;" title="Support"><i class="fa fa-comments-o twenty facircle-header-actions grey"></i></A></li>
+	<li><A href="/contact" class="facircle-link-imex hind-500 ten" title="Contact"><i class="fa fa-phone twenty facircle-header-actions grey"></i></A></li>
+</ul>
+<div class="drop-down-login-container cmg" id="drop-down-login-wrapper">
+<A href="/user" class="facircle-link-cmg hind-500 ten login button" title="Login to My Account"><i class="fa fa-lock twenty facircle-header-actions"></i></A>
+  
+  <div class="dropdown" style="display: none;">
+          <form action="/home?destination=node/1" method="post" id="user-login-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">E-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input type="text" id="edit-name" name="name" value="" size="15" maxlength="60" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+ <input type="password" id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required" />
+</div>
+<ul><li><a href="/user/register" title="Create a new user account.">Create new account</a></li>
+<li><a href="/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul><input type="hidden" name="form_build_id" value="form-VTYI0-jHoGaskXoji4H2EYBjPqop7okWFv6MGPCAl1w" />
+<input type="hidden" name="form_id" value="user_login_block" />
+<div class="form-actions form-wrapper" id="edit-actions--2"><input type="submit" id="edit-submit--2" name="op" value="Log in" class="btn-primary btn form-submit" /></div></div></form>      </div>
+</div>
+                    <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                        <nav class="nav-main">
+                              
+<ul class="nav nav-pills nav-main" id="mainMenu"><li class="active"><a href="/" class="active">Home</a></li><li class="dropdown 3308"><a href="/software" class="dropdown-toggle disabled">Software</a><ul class="dropdown-menu"><li><a href="/general-release-2020">Latest Release</a></li><li><a href="/software" title="">Software Overview</a></li><li><a href="/cmost-ai">CMOST-AI</a></li><li><a href="/imex" title="IMEX, Black Oil &amp; Unconventional Reservoir Simulator">IMEX</a></li><li><a href="/gem" title="GEM: Compositional &amp; Unconventional Reservoir Simulation">GEM</a></li><li><a href="/stars" title="STARS: Thermal &amp; Advanced Processes Reservoir Simulator">STARS</a></li><li><a href="/coflow" title="CoFlow: Integrated Reservoir &amp; Production System Modelling">CoFlow</a></li><li><a href="/builder" title="Builder: Pre-Processor, Simulation Model Building Tool">Builder</a></li><li><a href="/results" title="Results: Post-Processor, Visualization &amp; Analysis">Results</a></li><li><a href="/winprop" title="WinProp: Phase Behaviour &amp; Fluid Property Program">WinProp</a></li><li class="dropdown-submenu"><a href="/resources">Resources</a><ul class="dropdown-menu"><li><a href="/resources/case-studies-brochures">Case Studies &amp; Brochures</a></li><li><a href="https://www.cmgl.ca/events" title="">Events &amp; Webinars</a></li><li><a href="https://www.cmgl.ca/resources/how-to-videos" title="">How-to Videos</a></li><li><a href="https://www.cmgl.ca/resources/technical-papers?field_tp_themes_value=All&amp;field_tp_product_categories_value=All" title="">Technical Papers</a></li><li><a href="https://www.cmgl.ca/resources/tip-tuesday" title="">Tip Tuesday</a></li><li><a href="https://www.cmgl.ca/sites/default/files/sites/default/files/uploads/docs/CMG_Training_Catalogue_March2019.pdf" title="">Training Catalogue</a></li><li><a href="https://www.cmgl.ca/resources/videos" title="">Videos</a></li></ul></li></ul></li><li class="dropdown 4083"><a href="/autotune-ai" class="dropdown-toggle disabled">Solutions</a><ul class="dropdown-menu"><li><a href="/autotune-ai" title="Autotune-AI is an artificial intelligence-based algorithm designed to speed-up simulation run-times, using only one keyword.">Autotune-AI</a></li><li><a href="https://www.cmgl.ca/cloud">Cloud</a></li><li><a href="https://www.cmgl.ca/performance">Performance</a></li><li><a href="/unconventional">Unconventional</a></li><li><a href="/energy-transition">Energy Transition</a></li></ul></li><li><a href="/customer-support">Support</a></li><li class="dropdown 2671"><a href="/training" class="dropdown-toggle disabled">Training</a><ul class="dropdown-menu"><li><a href="/training" title="">Training Overview</a></li><li class="dropdown-submenu"><a href="/training/online">Online Training</a><ul class="dropdown-menu"><li><a href="/training/online">Upcoming Online Training</a></li><li><a href="/training/online/previous">Previous Online Training</a></li></ul></li><li class="dropdown-submenu"><a href="/training/builder-results-training">Builder and Results Training</a><ul class="dropdown-menu"><li><a href="/training/geomodelling-reservoir-engineers">Geomodelling for Reservoir Engineers</a></li><li><a href="/training/introduction-cmg-modelling-workflows">Introduction to CMG&#039;s Modelling Workflows</a></li></ul></li><li class="dropdown-submenu"><a href="/training/IMEX-training">IMEX Training</a><ul class="dropdown-menu"><li><a href="/training/assisted-history-matching-optimization-uncertainty-analysis-imex" title="">Assisted History Matching Optimization Uncertainty Analysis Using IMEX</a></li></ul></li><li class="dropdown-submenu"><a href="/training/GEM-training">GEM Training</a><ul class="dropdown-menu"><li><a href="/training/co2-eor-modelling">CO2 EOR Modelling</a></li><li><a href="/training/eor-modelling-tight-reservoirs">EOR Modelling in Tight Reservoirs</a></li><li><a href="/training/geomechanics-gem-stars">Geomechanics in GEM and STARS</a></li><li><a href="/training/modelling-low-salinity-water-flood">Modelling of Low Salinity Water Flooding using STARS and GEM</a></li><li><a href="/training/modelling-shale-tight-oil-gas-reservoirs">Modelling of Shale, Tight Oil and Gas Reservoirs</a></li><li><a href="/training/co2-sequestration-using-gem">CO2 Sequestration Using GEM</a></li></ul></li><li class="dropdown-submenu"><a href="/training/STARS-training">STARS Training</a><ul class="dropdown-menu"><li><a href="/training/advanced-wellbore-modelling-stars">Advanced Wellbore Modelling using STARS</a></li><li><a href="/training/air-injection-modelling-stars">Air Injection Modelling using STARS</a></li><li><a href="/training/best-practices-sagd-simulation">Best Practices for SAGD Simulation</a></li><li><a href="/training/chemical-eor-modelling-stars">Chemical EOR Modelling using STARS</a></li><li><a href="/training/chemical-flooding-stars">Chemical Flooding using STARS</a></li><li><a href="/training/foamy-oil-modelling-stars">Foamy Oil Modelling using STARS</a></li><li><a href="/training/introduction-thermal-eor-modelling">Introduction to Thermal EOR Modelling</a></li><li><a href="/training/modelling-carbonate-naturally-fractured-reservoirs">Modelling of Carbonate Naturally Fractured Reservoirs</a></li><li><a href="/training/numerical-tuning-cmg-simulators">Numerical Tuning Techniques for CMG Simulators</a></li><li><a href="/training/practical-scal-data-heavy-oil-reservoirs">Practical SCAL Data for Heavy Oil Reservoirs</a></li><li><a href="/training/sagd-simulation-stars">SAGD Simulation using STARS</a></li><li><a href="/training/solvents-additives-eor-modelling-stars">Solvents - Additives EOR Modelling using STARS</a></li><li><a href="/training/thermal-advanced-processes-simulation">Thermal &amp; Advanced Processes Simulation</a></li><li><a href="/training/modelling-aquathermolysis-stars">Modelling of Aquathermolysis using STARS</a></li></ul></li><li class="dropdown-submenu"><a href="/training/cmost-ai-training">CMOST-AI Training</a><ul class="dropdown-menu"><li><a href="/training/assisted-history-matching-optimization-uncertainty-analysis-imex">Assisted History Matching, Optimization &amp; Uncertainty Analysis using IMEX</a></li><li><a href="/training/cmost-conventional-tight-reservoirs">CMOST for Conventional and Tight Reservoirs</a></li><li><a href="/training/cmost-thermal-applications">CMOST for Thermal Applications</a></li></ul></li><li class="dropdown-submenu"><a href="/training/WinProp-training" title="">WinProp Training</a><ul class="dropdown-menu"><li><a href="/training/phase-behaviour-modelling-pvt-creation-winprop">Phase Behaviour Modelling &amp; PVT Creation using WinProp</a></li></ul></li><li><a href="/training/fundamentals-reservoir-simulation">Fundamentals of Reservoir Simulation</a></li></ul></li><li class="dropdown 3342"><a href="/consulting" class="dropdown-toggle disabled">Consulting</a><ul class="dropdown-menu"><li><a href="/consulting" title="">Consulting Overview</a></li></ul></li><li class="dropdown 3344"><a href="/investors" class="dropdown-toggle disabled">Investors</a><ul class="dropdown-menu"><li><a href="/investors" title="">Investors Overview</a></li><li><a href="/interim-annual-reports">Interim &amp; Annual Reports</a></li><li><a href="/investors/dividend-history">Dividend History</a></li><li><a href="/investors/agm">AGM</a></li></ul></li><li class="dropdown 2083"><a href="/about" class="dropdown-toggle disabled">About</a><ul class="dropdown-menu"><li><a href="/events">Events &amp; Webinars</a></li><li class="dropdown-submenu"><a href="https://www.cmgl.ca/resources" title="">Resources</a><ul class="dropdown-menu"><li><a href="https://www.cmgl.ca/resources/case-studies-brochures" title="">Case Studies &amp; Product Brochures</a></li><li><a href="https://www.cmgl.ca/events" title="">Events &amp; Webinars</a></li><li><a href="https://www.cmgl.ca/resources/how-to-videos" title="">How-to Videos</a></li><li><a href="https://www.cmgl.ca/resources/technical-papers?field_tp_themes_value=All&amp;field_tp_product_categories_value=All" title="">Technical Papers</a></li><li><a href="/resources/tip-tuesday">Tip Tuesday</a></li><li><a href="https://www.cmgl.ca/sites/default/files/sites/default/files/uploads/docs/CMG_Training_Catalogue_March2019.pdf" title="">Training Catalogue</a></li><li><a href="https://www.cmgl.ca/resources/videos" title="">Videos</a></li></ul></li><li><a href="/cmg-news">CMG News</a></li><li><a href="/why-cmg">Why CMG?</a></li><li><a href="/about">CMG History</a></li><li><a href="/about/careers">Careers</a></li><li><a href="/team">Leadership Team</a></li><li><a href="/partners">Partners</a></li><li><a href="/policies-governance">Policies &amp; Governance</a></li><li><a href="/contact">Contact Us</a></li></ul></li></ul>                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+    
+    <div role="main" class="main">
+                  <div class="region region-before-content">
+    <div id="block-md-slider-front-page" class="block block-md-slider">
+
+    
+  <div class="content">
+    <div id="md-slider-1-block" class="md-slide-items" data-thumb-width='100' data-thumb-height='75' style='min-height:435px;'>
+    <div class="wrap-loader-slider animated">
+        <div class="wrap-cube">
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </div>
+          
+  <div class="md-slide-item slide-1" data-timeout='8000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(0, 0, 0)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(0, 0, 0)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-0-0 fdsfds" data-x='0' data-y='142' data-width='71' data-height='104' data-start='1000' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows.png" alt="arrows.png" />
+              </div>
+                <div class="md-object md-layer-1-0-1 cmg futura-light" data-x='0' data-y='312' data-width='851' data-height='63' data-start='2000' data-stop='7986' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Discover the Future of Simulation
+              </div>
+                <div class="md-object md-layer-1-0-2 futura-book" data-x='101' data-y='138' data-width='968' data-height='76' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        General Release              </div>
+                <div class="md-object md-layer-1-0-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/events"></a>
+              </div>
+                <div class="md-object md-layer-1-0-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/Home_Page_Slider_GR_2020.jpg" alt="Home_Page_Slider_GR_2020.jpg" />
+              </div>
+                <div class="md-object md-layer-1-0-5 cmg futura-light" data-x='105' data-y='205' data-width='310' data-height='63' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        2020.10              </div>
+                <div class="md-object md-layer-1-0-6 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/general-release-2020"></a>
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-2" data-timeout='8000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(0, 150, 143)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(0, 150, 143)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-1-0 fdsfds" data-x='0' data-y='160' data-width='71' data-height='104' data-start='1000' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows.png" alt="arrows.png" />
+              </div>
+                <div class="md-object md-layer-1-1-1 cmg futura-light" data-x='107' data-y='298' data-width='1021' data-height='66' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <a href="https://www.cmgl.ca/ts-2021">Click Here to Learn More!
+</a>
+              </div>
+                <div class="md-object md-layer-1-1-2 futura-book" data-x='102' data-y='161' data-width='968' data-height='76' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        CMG's Virtual Technical Symposium Series Continues!              </div>
+                <div class="md-object md-layer-1-1-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/ts-2021"></a>
+              </div>
+                <div class="md-object md-layer-1-1-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/Home_Page_Slider_TS_2021_0.jpg" alt="Home_Page_Slider_TS_2021.jpg" />
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-3" data-timeout='8000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(0, 0, 0)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(0, 0, 0)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-2-0 fdsfds" data-x='0' data-y='142' data-width='71' data-height='104' data-start='1000' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows.png" alt="The Future of Simulation
+" />
+              </div>
+                <div class="md-object md-layer-1-2-1 cmg futura-light" data-x='0' data-y='312' data-width='851' data-height='63' data-start='2000' data-stop='7986' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        The Future of Simulation
+              </div>
+                <div class="md-object md-layer-1-2-2 futura-book" data-x='101' data-y='138' data-width='800' data-height='152' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Rewatch Webinar: What's New in GR 2020              </div>
+                <div class="md-object md-layer-1-2-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/events"></a>
+              </div>
+                <div class="md-object md-layer-1-2-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/WhatsNew2020_HomepageSlider_0.jpg" alt="WhatsNew2020_HomepageSlider.jpg" />
+              </div>
+                <div class="md-object md-layer-1-2-5 cmg futura-light" data-x='105' data-y='205' data-width='310' data-height='63' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        2020.1              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-4" data-timeout='8000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(0, 150, 143)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(0, 150, 143)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-3-0 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/susan-banner.jpg" alt="susan-banner.jpg" />
+              </div>
+                <div class="md-object md-layer-1-3-1 fdsfds" data-x='0' data-y='170' data-width='71' data-height='104' data-start='1000' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows.png" alt="arrows.png" />
+              </div>
+                <div class="md-object md-layer-1-3-2 futura-book" data-x='99' data-y='178' data-width='926' data-height='57' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Read the Latest Article in GEO ExPro Magazine: 
+              </div>
+                <div class="md-object md-layer-1-3-3 futura-book" data-x='96' data-y='226' data-width='968' data-height='76' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Reservoir Modelling in 3D -  Susan Fellows               </div>
+                <div class="md-object md-layer-1-3-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/blog/cmgs-susan-fellows-featured-geo-expro-magazine"></a>
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-5" data-timeout='6000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(233, 233, 233)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(233, 233, 233)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-4-0 fdsfds" data-x='0' data-y='152' data-width='70' data-height='102' data-start='0' data-stop='6000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows-teal.png" alt="arrows-teal.png" />
+              </div>
+                <div class="md-object md-layer-1-4-1 futura-book" data-x='98' data-y='148' data-width='800' data-height='132' data-start='786' data-stop='5971' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Continue Learning              </div>
+                <div class="md-object md-layer-1-4-2 cmg futura-light" data-x='99' data-y='221' data-width='510' data-height='96' data-start='786' data-stop='5971' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Online Training Schedule Available Now!              </div>
+                <div class="md-object md-layer-1-4-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='6000'>
+                        <a href="https://www.cmgl.ca/training/online/"></a>
+              </div>
+                <div class="md-object md-layer-1-4-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='6000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/Home_Page_Slider_Training_August.jpg" alt="Home_Page_Slider_Training_August.jpg" />
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-6" data-timeout='8000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(5, 61, 92)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(5, 61, 92)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-5-0 fdsfds" data-x='0' data-y='170' data-width='71' data-height='104' data-start='1000' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows.png" alt="arrows.png" />
+              </div>
+                <div class="md-object md-layer-1-5-1  cmg futura-light" data-x='103' data-y='239' data-width='926' data-height='57' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Click Here for an Update
+              </div>
+                <div class="md-object md-layer-1-5-2 futura-book" data-x='99' data-y='169' data-width='968' data-height='76' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        CMG is Here & Ready to Help              </div>
+                <div class="md-object md-layer-1-5-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/blog/covid-19-cmg-here-and-ready-help"></a>
+              </div>
+                <div class="md-object md-layer-1-5-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/Home_Page_Slider_COVID_2020.jpg" alt="Home_Page_Slider_COVID_2020.jpg" />
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-7" data-timeout='8000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(0, 150, 143)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(0, 150, 143)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-6-0 fdsfds" data-x='0' data-y='170' data-width='71' data-height='104' data-start='1000' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows.png" alt="arrows.png" />
+              </div>
+                <div class="md-object md-layer-1-6-1 cmg futura-light" data-x='104' data-y='240' data-width='1021' data-height='66' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Learn More About the Most Advanced Simulation Tools Available
+              </div>
+                <div class="md-object md-layer-1-6-2 futura-book" data-x='102' data-y='172' data-width='968' data-height='76' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Events & Webinars              </div>
+                <div class="md-object md-layer-1-6-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/events"></a>
+              </div>
+                <div class="md-object md-layer-1-6-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/Home_Page_Slider_Events_2020.jpg" alt="Home_Page_Slider_Events_2020.jpg" />
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-8" data-timeout='8000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(32, 22, 70)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(32, 22, 70)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-7-0 fdsfds" data-x='0' data-y='170' data-width='71' data-height='104' data-start='1000' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows.png" alt="arrows.png" />
+              </div>
+                <div class="md-object md-layer-1-7-1  cmg futura-light" data-x='99' data-y='238' data-width='926' data-height='57' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Go Beyond Today’s Reservoir Simulation Workflow 
+              </div>
+                <div class="md-object md-layer-1-7-2 futura-book" data-x='99' data-y='172' data-width='968' data-height='76' data-start='1500' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        AI & Machine Learning Enabled: CMOST-AI              </div>
+                <div class="md-object md-layer-1-7-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/cmost-ai"></a>
+              </div>
+                <div class="md-object md-layer-1-7-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/Home_Page_Slider_COVID_2020_V2.jpg" alt="Home_Page_Slider_COVID_2020_V2.jpg" />
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-9" data-timeout='8000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(4, 98, 64)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(4, 98, 64)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-8-0 fdsfds" data-x='0' data-y='157' data-width='71' data-height='104' data-start='1000' data-stop='8000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/arrows.png" alt="arrows.png" />
+              </div>
+                <div class="md-object md-layer-1-8-1 cmg futura-light" data-x='113' data-y='227' data-width='1021' data-height='66' data-start='1586' data-stop='7971' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Practical Solution. Proven Results.
+              </div>
+                <div class="md-object md-layer-1-8-2 futura-book" data-x='108' data-y='156' data-width='968' data-height='64' data-start='1586' data-stop='7971' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Unconventional Reservoir Modelling              </div>
+                <div class="md-object md-layer-1-8-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <a href="https://www.cmgl.ca/unconventional"></a>
+              </div>
+                <div class="md-object md-layer-1-8-4 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='8000'>
+                        <img src="https://www.cmgl.ca/sites/default/files/Home_Page_Slider_UnconventionalModelling_2020_0.jpg" alt="Home_Page_Slider_UnconventionalModelling_2020.jpg" />
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-10" data-timeout='10000' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(0, 45, 75)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(0, 45, 75)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object none md-layer-1-9-0 futura-book" data-x='115' data-y='109' data-width='863' data-height='281' data-start='586' data-stop='9986' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Performance<br>Enhancement<br>Technology              </div>
+                <div class="md-object none md-layer-1-9-1 cmg futura-light" data-x='0' data-y='320' data-width='945' data-height='106' data-start='1286' data-stop='9986' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        Up to 12x Faster Simulation Runs!              </div>
+                <div class="md-object md-layer-1-9-2 fdsfds" data-x='0' data-y='0' data-width='1164.64530892' data-height='435' data-start='0' data-stop='10000' data-easein='fadeIn' data-easeout='fadeOut'>
+                        <img src="https://www.cmgl.ca/sites/default/files/GR2018_homepage_PET.jpg" alt="GR2018_homepage_PET.jpg" />
+              </div>
+                <div class="md-object md-layer-1-9-3 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='10000'>
+                        <a href="https://www.cmgl.ca/performance" target='_blank'></a>
+              </div>
+                <div class="md-object md-layer-1-9-4 fdsfds" data-x='0' data-y='106' data-width='80' data-height='114' data-start='0' data-stop='10000' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/White_Arrows.png" alt="White_Arrows.png" />
+              </div>
+          </div>    
+  </div>
+          
+  <div class="md-slide-item slide-11" data-timeout='10100' data-transition="fade" data-thumb-type='color' data-thumb='height: 75px; width: 100px; background-color: rgb(0, 150, 143)'>
+    <div class="md-mainimg" style="height: 100%; width: 100%; background-color: rgb(0, 150, 143)">
+          </div>
+            <div class="md-objects"
+          >
+                <div class="md-object md-layer-1-10-0 futura-book" data-x='128' data-y='125' data-width='501' data-height='91' data-start='600' data-stop='7800' data-easein='fadeIn' data-easeout='fadeOut'>
+                        CMG Cloud:              </div>
+                <div class="md-object md-layer-1-10-1  cmg futura-light" data-x='131' data-y='201' data-width='618' data-height='84' data-start='3900' data-stop='7800' data-easein='fadeIn' data-easeout='fadeOut'>
+                        Simulation on Demand              </div>
+                <div class="md-object md-layer-1-10-2 fdsfds" data-x='0' data-y='0' data-width='1170' data-height='435' data-start='0' data-stop='10100'>
+                        <a href="https://www.cmgl.ca/cloud" target='_blank'>
+                <img src="https://www.cmgl.ca/sites/default/files/Link_4.png" alt="Link.png" />
+            </a>
+              </div>
+                <div class="md-object md-layer-1-10-3 fdsfds" data-x='0' data-y='0' data-width='1164.64530892' data-height='435' data-start='0' data-stop='10100' data-easeout='keep'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_back.jpg" alt="home_banner_cloud_back.jpg" />
+              </div>
+                <div class="md-object md-layer-1-10-4 fdsfds" data-x='100' data-y='169' data-width='297' data-height='200' data-start='1100' data-stop='2300' data-easein='fadeInLeftBig' data-easeout='fadeOut'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_blur_back.png" alt="home_banner_cloud_blur_back.png" />
+              </div>
+                <div class="md-object md-layer-1-10-5 fdsfds" data-x='100' data-y='175' data-width='334' data-height='190' data-start='2300' data-stop='3400' data-easein='fadeIn' data-easeout='fadeOutRightBig'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_shape.png" alt="home_banner_cloud_shape.png" />
+              </div>
+                <div class="md-object md-layer-1-10-6 fdsfds" data-x='694' data-y='20' data-width='297' data-height='200' data-start='3400' data-stop='4500' data-easein='fadeInLeftBig' data-easeout='fadeOut'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_blur_back.png" alt="home_banner_cloud_blur_back.png" />
+              </div>
+                <div class="md-object md-layer-1-10-7 fdsfds" data-x='698' data-y='25' data-width='334' data-height='190' data-start='4500' data-stop='5600' data-easein='fadeIn' data-easeout='fadeOutRightBig'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_shape.png" alt="home_banner_cloud_shape.png" />
+              </div>
+                <div class="md-object md-layer-1-10-8 fdsfds" data-x='400' data-y='112' data-width='350' data-height='235' data-start='7800' data-stop='9000' data-easein='fadeInLeftBig' data-easeout='fadeOut'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_blur_back.png" alt="home_banner_cloud_blur_back.png" />
+              </div>
+                <div class="md-object md-layer-1-10-9 fdsfds" data-x='415' data-y='123' data-width='370' data-height='210' data-start='9000' data-stop='10100' data-easein='fadeIn' data-easeout='fadeOutRightBig'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_shape.png" alt="home_banner_cloud_shape.png" />
+              </div>
+                <div class="md-object md-layer-1-10-10 fdsfds" data-x='611' data-y='214' data-width='297' data-height='200' data-start='5600' data-stop='6700' data-easein='fadeInLeftBig' data-easeout='fadeOut'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_blur_back.png" alt="home_banner_cloud_blur_back.png" />
+              </div>
+                <div class="md-object md-layer-1-10-11 fdsfds" data-x='614' data-y='219' data-width='334' data-height='190' data-start='6700' data-stop='7800' data-easein='fadeIn' data-easeout='fadeOutRightBig'>
+                        <img src="https://www.cmgl.ca/sites/default/files/home_banner_cloud_shape.png" alt="home_banner_cloud_shape.png" />
+              </div>
+                <div class="md-object md-layer-1-10-12 fdsfds" data-x='12' data-y='125' data-width='80' data-height='114' data-start='0' data-stop='10100' data-easein='fadeInLeft' data-easeout='fadeOutRight'>
+                        <img src="https://www.cmgl.ca/sites/default/files/White_Arrows_0.png" alt="White_Arrows.png" />
+              </div>
+          </div>    
+  </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+    </div>
+  </div>
+</div>
+<div id="block-block-3" class="block block-block">
+
+    
+  <div class="content">
+    <div class="home-intro">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-7">
+				<p class="futura-light light-grey" style="margin-top:10px;">CMG's focus on reservoir simulation places us at the forefront of simulating new recovery methods and developing innovative ways to help you overcome existing technological barriers.</p>
+			</div>
+			<div class="col-md-5">
+				<div class="get-started">
+					<a href="software" class="btn btn-lg btn-primary" >Learn More...</a>
+									</div>
+			</div>
+		</div>
+
+	</div>
+</div>  </div>
+</div>
+  </div>
+                    <div id="content" class="content full">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                                                    </div>
+                                                                        <div class="col-md-12">
+                                                                                                                  <div class="region region-content">
+    <div id="node-1" class="node node-page clearfix" about="/home" typeof="foaf:Document">
+
+  
+      <span property="dc:title" content="Home" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><div class="row">
+	<div class="col-md-3">
+	  <div class="homepage-box" style="height:375px;">
+		<div class="box-content">
+			<a href="/builder"><img src="/sites/default/files/sites/default/files/uploads/graphics/images/home_design-V2.jpg" alt="Home design" width="100%"></a>
+			   <center><a href="builder"><H4 class="grey futura-light forty">Design</H4></a></center>
+			<center><span style="font-size:17px;line-height:22px">Your simulation using CMG's workflow-based model creation process</span></center>
+		</div>
+	  </div>
+	</div>
+
+	<div class="col-md-3">
+	  <div class="homepage-box" style="height:375px;">
+		<div class="box-content">
+			<a href="/software"><img src="/sites/default/files/sites/default/files/uploads/graphics/images/home_plan-V3.jpg" alt="Home plan" width="100%"></a>
+			   <center><a href="software"><H4 class="grey futura-light forty">Plan</H4></a></center>
+<center><span style="font-size:17px;line-height:22px">Reservoir specific recovery process and field development strategy</span></center>
+			
+		</div>
+	  </div>
+	</div>
+	
+	<div class="col-md-3">
+	  <div class="homepage-box" style="height:375px;">
+		<div class="box-content">
+			<a href="/cmost"><img src="/sites/default/files/sites/default/files/uploads/graphics/images/home_analyze2.jpg" alt="Home analyze" width="100%"></a>
+			   <center><a href="cmost"><H4 class="grey futura-light forty">Analyze</H4></a></center>
+			<center><span style="font-size:17px;line-height:22px">Operational and completion strategies to optimize asset value</span></center>
+		</div>
+	  </div>
+	</div>
+	
+	<div class="col-md-3">
+	  <div class="homepage-box" style="height:375px;">
+		<div class="box-content">
+			<a href="/software"><img src="/sites/default/files/sites/default/files/uploads/graphics/images/home_execute-V2.jpg" alt="Home execute" width="100%"></a>
+			<center><a href="software"><H4 class="grey futura-light forty">Execute</H4></a></center>
+			<center><span style="font-size:17px;line-height:22px">Project with confidence and realize increased production, NPV and ultimate recovery</span></center>
+		</div>
+	  </div>
+	</div>
+
+</div>
+<hr class="short">
+
+<div class="row">
+	<div class="col-md-6">
+		<span style="font-size:17px;line-height:22px"><i>"Our entire organization is focused on reservoir simulation R&D, and the subsequent delivery of sound, physics based, technical solutions to the global market. <b>No distractions, no sidelines, 100% commitment</b>."</i><br>
+		<div style="text-align:right;">- Susan Fellows, CMG, London UK</span></div> 
+	</div>
+	<div class="col-md-6">
+		<span style="font-size:17px;line-height:22px"><i>"CMG is the largest 'pure play' reservoir simulation company in the world. This allows us to <b>focus on one thing and do it incredibly well</b>."</i><br>
+		<div style="text-align:right;">- Owen Sigurdson, CMG, Calgary, Canada</span></div> 
+	</div>
+<!--
+	<div class="col-md-4">
+		<span style="font-size:17px;line-height:22px"><i>"CMG's most important contribution has been its impact and support for the scientific community, such as universities, that has set the course for innovative research, leading to <b>building the future of reservoir simulation</b>."</i><br>
+		<div style="text-align:right;">- Mohammad Khoskbarchi, CMG, Calgary, Canada</span></div> 
+	</div>
+-->
+</div>
+<hr class="short">
+<br><br></div></div></div>  </div>
+
+  
+  
+</div>
+  </div>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+    </div> <!-- /.main -->
+
+    
+    <footer id="footer">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                          <div class="region region-footer-bottom-left">
+    <div id="block-block-14" class="block block-block">
+
+    
+  <div class="content">
+    <a class="footer-logo" href="/home"><img alt="Computer Modelling Group Ltd." src="/sites/default/files/CMGlogo_grey.png" /></a>
+<p style="clear:both;margin-top:10px;font-size:90%;">&copy; Copyright 2021 Computer Modelling Group Ltd.
+  </div>
+</div>
+  </div>
+                    </div>
+                    <div class="col-md-6">
+                          <div class="region region-footer-bottom-right">
+    <div id="block-block-15" class="block block-block">
+
+    
+  <div class="content">
+    <nav id="sub-menu">
+	<ul>
+<li><a href="https://www.youtube.com/user/compmodgr"><i class="fa fa-youtube-play twenty facircle-prod-actions-grey"></a></i>
+<li><a href="https://www.linkedin.com/company/computer-modelling-group-ltd"><i class="fa fa-linkedin twenty facircle-prod-actions-grey"></a></i>
+<li><a href="https://twitter.com/CMG_software"><i class="fa fa-twitter twenty facircle-prod-actions-grey"></a></i>
+		<li><a href="/resources">Resources</a></li>
+		<li><a href="/legal-notice">Legal Notice</a></li>
+		<li><a href="/customer-support">Support</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+</nav>  </div>
+</div>
+  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+<!-- end page.tpl.php --><script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.eu_cookie_compliance_cookie_name = "CMG-cookies";
+//--><!]]>
+</script>
+<script type="text/javascript" defer="defer" src="https://www.cmgl.ca/sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/js/theme.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/js/theme.init.js?qta0hg"></script>
+<script type="text/javascript" src="https://www.cmgl.ca/sites/all/themes/Porto/js/views/view.home.js?qta0hg"></script>
+<!-- /$page_bottom -->
+
+
+<script type="text/javascript" src="https://analytics.clickdimensions.com/ts.js" ></script>
+
+
+<script type="text/javascript"> 
+   var cdAnalytics = new clickdimensions.Analytics('analytics.clickdimensions.com'); 
+   cdAnalytics.setAccountKey('aKiDAcXP0i6yXZzKyST8w'); 
+   cdAnalytics.setDomain('cmgl.ca'); 
+   cdAnalytics.setScore(typeof(cdScore) == "undefined" ? 0 : (cdScore == 0 ? null : cdScore)); 
+   cdAnalytics.trackPage(); 
+ </script>
+
+ 
+<!--  /html.tpl.php  -->
+</body>
+</html>

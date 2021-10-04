@@ -1,0 +1,18 @@
+Structured data tells Google about the type of content you're creating, so we
+can present it to users in an interactive way. In addition to presenting your
+content as a rich result on Google Search, we can read your markup to
+automatically build an Action that presents your content on the Google Assistant
+and creates an entry in the .
+When users ask the Assistant for one of the available content types, we may
+show your Action.If you're just getting started, learn more about how
+ works.Google can generate a variety of Actions based on web content that you provide.
+Refer to the following list of supported content types to learn about creating
+Actions for each type:Users can find your podcast in the Assistant directory and play episodes
+    on their devices using the Google Assistant. Create an RSS feed for your
+    podcast and we can auto-generate an Action for it.
+    For more information on setting up your podcast feed, see the
+     documentation.
+    Users can follow your recipes through rich cards
+    presented in the Google Assistant and learn about your content on the
+    Assistant directory. Create markup for your recipes and we can auto-generate
+      an Action for them.For i

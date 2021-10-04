@@ -1,0 +1,10 @@
+El software MediaWiki es utilizado por  y .
+Wikipedia y este sitio web funcionan gracias a él.
+MediaWiki te ayuda recogiendo y organizando el conocimiento, haciéndolo accesible para la gente.
+Es potente, , , extensible, personalizable, fiable y totalmente gratuito.
+ y .
+¿Nuevo como desarrollador?
+¿Ya eres desarrollador?
+		
+		
+

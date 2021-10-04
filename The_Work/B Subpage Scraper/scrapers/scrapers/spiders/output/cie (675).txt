@@ -1,0 +1,9 @@
+If your library allows you to, you can place call slip requests for 
+ certain items retrieved from the Public Access catalog that are not readily 
+ available to the public. For example, you may need to place a call slip 
+ request for an item that resides in a closed stacks area. A call slip 
+ request can be made only from an item's Record Display. You must 
+ log in before you can place a call slip request.Search for an item that you want to place a call slip request for.View the  of the item.Click the link on the right side of the screen. If you have not previously 
+	logged in, the screen displays. Enter your patron information in the appropriate fields 
+	and then click the  button.Select the desired  from the list.Select the copy of the item that you want to request from the This Copy drop-down menu. If your library allows you to, you can place a call slip request that is not linked to an item by clicking the 
+	Specify an issue radio button. Enter the appropriate information in the fields.If your library requires it, enter your barcode in the Barcode field.Enter any comments that you want your institution's circulation staff to view in the Comment text box.Select the location wher

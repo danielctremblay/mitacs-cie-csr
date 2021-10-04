@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="path-node path-investors">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"bdee752115",applicationID:"590259294"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143527409-1"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments)};gtag("js", new Date());gtag("config", "UA-143527409-1", {"groups":"default","anonymize_ip":true,"allow_ad_personalization_signals":false});</script>
+<script src="/sites/default/files/hotjar/hotjar.script.js?qpqptk"></script>
+<link rel="shortlink" href="https://www.kelsotech.com/investors" />
+<meta name="robots" content="index, follow" />
+<meta property="og:site_name" content="Kelso" />
+<link rel="canonical" href="https://www.kelsotech.com/investors" />
+<meta property="og:type" content="Page" />
+<meta name="description" content="Kelso Technologies Inc.
+Unites States: NYSE American: KIQ
+Canada: TSX: KLS
+
+
+
+
+INDUSTRY
+
+
+Railway equipment supply; engineering services for transportation
+
+
+
+
+TECHNOLOGIES
+
+
+Rail tank car components; road tank trailer components; rail emergency response; gyroscopic vehicle suspension" />
+<meta property="og:url" content="https://www.kelsotech.com/investors" />
+<meta name="abstract" content="Kelso Technologies Inc.
+Unites States: NYSE American: KIQ
+Canada: TSX: KLS
+
+
+
+
+INDUSTRY
+
+
+Railway equipment supply; engineering services for transportation
+
+
+
+
+TECHNOLOGIES
+
+
+Rail tank car components; road tank trailer components; rail emergency response; gyroscopic vehicle suspension" />
+<meta property="og:title" content="Investors" />
+<link rel="image_src" href="https://www.kelsotech.com/sites/default/files/2020-07/Stock%20exchange%20stock%20photo.jpg" />
+<meta property="og:description" content="Kelso Technologies Inc.
+Unites States: NYSE American: KIQ
+Canada: TSX: KLS
+
+
+
+
+INDUSTRY
+
+
+Railway equipment supply; engineering services for transportation
+
+
+
+
+TECHNOLOGIES
+
+
+Rail tank car components; road tank trailer components; rail emergency response; gyroscopic vehicle suspension" />
+<meta property="og:image" content="https://www.kelsotech.com/sites/default/files/2020-07/Stock%20exchange%20stock%20photo.jpg" />
+<meta property="og:updated_time" content="2021-05-11T17:42:01+0000" />
+<meta property="article:section" content="Page" />
+<meta property="article:published_time" content="2020-06-10T23:46:27+0000" />
+<meta property="article:modified_time" content="2021-05-11T17:42:01+0000" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "name": "Investors",
+            "headline": "Investors",
+            "description": "Kelso Technologies Inc.\nUnites States: NYSE American: KIQ\nCanada: TSX: KLS\n\n\n\n\nINDUSTRY\n\n\nRailway equipment supply; engineering services for transportation\n\n\n\n\nTECHNOLOGIES\n\n\nRail tank car components; road tank trailer components; rail emergency response; gyroscopic vehicle suspension",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://www.kelsotech.com/sites/default/files/2020-07/Stock%20exchange%20stock%20photo.jpg"
+            },
+            "datePublished": "2020-06-10T23:46:27+0000",
+            "dateModified": "2021-05-11T17:42:01+0000",
+            "author": {
+                "@type": "Organization",
+                "@id": "https://www.kelsotech.com/investors",
+                "name": "Kelso",
+                "url": "https://www.kelsotech.com/investors"
+            },
+            "mainEntityOfPage": "https://www.kelsotech.com/investors"
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.kelsotech.com/investors",
+            "description": "Kelso Technologies Inc.\nUnites States: NYSE American: KIQ\nCanada: TSX: KLS\n\n\n\n\nINDUSTRY\n\n\nRailway equipment supply; engineering services for transportation\n\n\n\n\nTECHNOLOGIES\n\n\nRail tank car components; road tank trailer components; rail emergency response; gyroscopic vehicle suspension",
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.kelsotech.com/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Investors",
+                        "item": "https://www.kelsotech.com/investors"
+                    }
+                ]
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.kelsotech.com/investors",
+                "name": "Kelso",
+                "url": "https://www.kelsotech.com/investors"
+            }
+        }
+    ]
+}</script>
+<link rel="shortcut icon" href="/themes/custom/kelso_tech/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.kelsotech.com/investors" />
+<link rel="revision" href="https://www.kelsotech.com/investors" />
+<script src="/sites/default/files/google_tag/google_tag/default/google_tag.script.js?qpqptk" defer></script>
+
+    <title>Investors | Kelso</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_O1Eh_l_gnA4iwPp4LiP6Mp4iQhBOrTC3mt7Eu8CmSFM.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_u-Yzvo3fy1_k8pUksjr-y00w6d9veoqUQRoq4crtAm8.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_qTiIq405Le6ZU0ACBTVaD7u433k5B_SjKe13qzWzEds.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-node page-node-type-page page-title-investors path-investors">
+    <div id="mobile-overlay"></div>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+            <div class="mobile-nav-overlay mobile-overlay">
+      <div class="mobile-nav-overlay__content mobile-overlay__content clearfix">
+        <div class="mobile-nav">
+            <div class="region region-mobile-nav">
+    <nav role="navigation" aria-labelledby="block-kelso-tech-mobile-primary-navigation-menu" id="block-kelso-tech-mobile-primary-navigation" class="block block-menu navigation menu--main">
+  
+    
+
+      
+                  <ul class="menu menu--parent menu--main menu--level-0">
+                          <li class="menu__item menu__item--company menu__item--expanded">
+        <a href="/company" class="menu__link" data-drupal-link-system-path="node/8">Company</a>
+                                    <ul class="menu--main menu menu--child menu--level-1">
+                          <li class="menu__item menu__item--directors-and-officers">
+        <a href="/company/directors-and-officers" class="menu__link" data-drupal-link-system-path="node/12">Directors and Officers</a>
+              </li>
+                      <li class="menu__item menu__item--key-management">
+        <a href="/company/key-management" class="menu__link" data-drupal-link-system-path="node/13">Key Management</a>
+              </li>
+                      <li class="menu__item menu__item--locations">
+        <a href="/company/locations" class="menu__link" data-drupal-link-system-path="node/14">Locations</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--products menu__item--expanded">
+        <a href="/products" class="menu__link" data-drupal-link-system-path="node/9">Products</a>
+                                    <ul class="menu--main menu--child menu menu--level-1">
+                          <li class="menu__item menu__item--rail menu__item--expanded">
+        <a href="/products/railway-equipment" class="menu__link" data-drupal-link-system-path="node/41">RAIL</a>
+                                    <ul class="menu--main menu--child menu menu--level-2">
+                          <li class="menu__item menu__item--bottom-outlet-valve">
+        <a href="/products/rail/bottom-outlet-valve" title="rail tank car bottom outlet valve" class="menu__link" data-drupal-link-system-path="node/50">Bottom Outlet Valve</a>
+              </li>
+                      <li class="menu__item menu__item--pressure-relief-valve">
+        <a href="/products/rail/pressure-relief-valve" title="rail tank car pressure relief valve" class="menu__link" data-drupal-link-system-path="node/52">Pressure Relief Valve</a>
+              </li>
+                      <li class="menu__item menu__item--vacuum-relief-valve">
+        <a href="/products/rail/vacuum-relief-valve" title="rail tank car vacuum relief valve" class="menu__link" data-drupal-link-system-path="node/54">Vacuum Relief Valve</a>
+              </li>
+                      <li class="menu__item menu__item--one-bolt-manway menu__item--expanded">
+        <a href="/products/rail/one-bolt-manway" title="rail tank car one-bolt manway" class="menu__link" data-drupal-link-system-path="node/55">One-bolt Manway</a>
+                                    <ul class="menu--main menu--child menu menu--level-3">
+                          <li class="menu__item menu__item--universal-manway-adapter">
+        <a href="/products/rail/one-bolt-manway/universal-manway-adapter" title="rail tank car universal manway adapter" class="menu__link" data-drupal-link-system-path="node/56">Universal Manway Adapter</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--pressure-cars">
+        <a href="/products/rail/pressure-cars" title="pressure car components" class="menu__link" data-drupal-link-system-path="node/61">Pressure Cars</a>
+              </li>
+                      <li class="menu__item menu__item--pressure-differential">
+        <a href="/products/rail/pressure-differential-parts" title="PD Butterfly Valves, Multi-Angle Valve Extensions, PD Pressure Relief Valves, Check Valves &amp; Aeration Systems" class="menu__link" data-drupal-link-system-path="node/59">Pressure Differential</a>
+              </li>
+                      <li class="menu__item menu__item--rail-products---mgm">
+        <a href="/products/rail/check-valves-tank-gauges-laboratory-test-equipment" title="Check Valves, Tank Gauges and Laboratory Test Equipment" class="menu__link" data-drupal-link-system-path="node/58">Rail products - MGM</a>
+              </li>
+                      <li class="menu__item menu__item--wheel-cleaner">
+        <a href="/products/rail/rail-wheel-cleaner" title="rail wheel cleaner" class="menu__link" data-drupal-link-system-path="node/60">Wheel Cleaner</a>
+              </li>
+                      <li class="menu__item menu__item--service-bulletins">
+        <a href="/products/rail/service-bulletins" class="menu__link" data-drupal-link-system-path="node/22">Service Bulletins</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--emergency-response-kit">
+        <a href="/products/emergency-response-kit" class="menu__link" data-drupal-link-system-path="node/38">EMERGENCY RESPONSE KIT</a>
+              </li>
+                      <li class="menu__item menu__item--fueling-valves">
+        <a href="/products/fueling-valves" class="menu__link" data-drupal-link-system-path="node/40">FUELING VALVES</a>
+              </li>
+                      <li class="menu__item menu__item--trucking">
+        <a href="/products/equipment-tank-trailers" class="menu__link" data-drupal-link-system-path="node/39">TRUCKING</a>
+              </li>
+                      <li class="menu__item menu__item--kxi-suspension">
+        <a href="/products/kxi-suspension" title="gyroscopic suspension for fleet vehicles" class="menu__link" data-drupal-link-system-path="node/42">KXI SUSPENSION</a>
+              </li>
+                      <li class="menu__item menu__item--installation-manual-updates">
+        <a href="/products/installation-manual-updates" class="menu__link" data-drupal-link-system-path="node/23">Installation Manual Updates</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--investors menu__item--expanded menu__item--active-trail">
+        <a href="/investors" class="menu__link menu__link--active-trail is-active" data-drupal-link-system-path="node/10">Investors</a>
+                                    <ul class="menu--main menu--child menu--level-3 menu menu--level-1">
+                          <li class="menu__item menu__item--financial-statements menu__item--expanded">
+        <a href="/investors/financial-statements" class="menu__link" data-drupal-link-system-path="node/16">Financial Statements</a>
+                                    <ul class="menu--main menu--child menu--level-3 menu menu--level-2">
+                          <li class="menu__item menu__item--xbrl-documents">
+        <a href="/investors/financial-statements/xbrl-documents" class="menu__link" data-drupal-link-system-path="node/34">XBRL Documents</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--corporate-presentation">
+        <a href="/investors/corporate-presentation" class="menu__link" data-drupal-link-system-path="node/26">Corporate Presentation</a>
+              </li>
+                      <li class="menu__item menu__item--corporate-information">
+        <a href="/investors/corporate-information" class="menu__link" data-drupal-link-system-path="node/27">Corporate Information</a>
+              </li>
+                      <li class="menu__item menu__item--corporate-governance">
+        <a href="/investors/corporate-governance" class="menu__link" data-drupal-link-system-path="node/28">Corporate Governance</a>
+              </li>
+                      <li class="menu__item menu__item--shareholders">
+        <a href="/investors/shareholders" class="menu__link" data-drupal-link-system-path="node/29">Shareholders</a>
+              </li>
+                      <li class="menu__item menu__item--news">
+        <a href="/investors/news" class="menu__link" data-drupal-link-system-path="node/30">News</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--media menu__item--expanded">
+        <a href="/media" class="menu__link" data-drupal-link-system-path="node/11">Media</a>
+                                    <ul class="menu--main menu--child menu--level-3 menu--level-2 menu menu--level-1">
+                          <li class="menu__item menu__item--image-gallery">
+        <a href="/image-gallery" class="menu__link" data-drupal-link-system-path="node/17">Image Gallery</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--contact-us menu__item--expanded">
+        <a href="/contact-us" class="menu__link" data-drupal-link-system-path="node/5">Contact Us</a>
+                                    <ul class="menu--main menu--child menu--level-3 menu--level-2 menu menu--level-1">
+                          <li class="menu__item menu__item--corporate">
+        <a href="/contact-us/corporate" class="menu__link" data-drupal-link-system-path="node/18">Corporate</a>
+              </li>
+                      <li class="menu__item menu__item--employment">
+        <a href="/contact-us/employment-opportunities" class="menu__link" data-drupal-link-system-path="node/19">Employment</a>
+              </li>
+                      <li class="menu__item menu__item--operations">
+        <a href="/contact-us/operations" class="menu__link" data-drupal-link-system-path="node/20">Operations</a>
+              </li>
+                      <li class="menu__item menu__item--sales">
+        <a href="/contact-us/sales" class="menu__link" data-drupal-link-system-path="node/21">Sales</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+        </div>
+      </div>
+    </div>
+    
+  <header class="site-header">
+          <div class="above-site">
+          <div class="region region-above-site">
+    <div id="block-covid19notice" class="block block-block-content block-block-content4ff2eea0-1a5d-42ed-a61d-5cf001b121d3">
+  
+    
+      
+            <div class="field field--name-field-paragraph field--type-entity-reference-revisions field--label-hidden field__item">
+
+      
+
+          <style type="text/css">
+    #paragraph-11-color h1,#paragraph-11-color h2,#paragraph-11-color h3,#paragraph-11-color h4,#paragraph-11-color h5,#paragraph-11-color h6,#paragraph-11-color h7,#paragraph-11-color h8,#paragraph-11-color div,#paragraph-11-color span,#paragraph-11-color p,#paragraph-11-color a,#paragraph-11-color blockquote,#paragraph-11-color ul,#paragraph-11-color ol,#paragraph-11-color label,#paragraph-11-color table,#paragraph-11-color tr,#paragraph-11-color td,#paragraph-11-color .base-accordion__header::before,#paragraph-11-color .component-notice-strap__close {
+      color: #FFFFFF;
+    }
+  </style>
+
+
+  <div style="background-color: #BA0B28;" data-component-id="11" class="component-notice-strap component-notice-strap--close paragraph paragraph--type--notice-strap paragraph--view-mode--default">
+                      <div class="container component-notice-strap__container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="component-notice-strap__content">
+                <div id="paragraph-11-color" class="component-notice-strap--color-override component-notice-strap__body">
+                                                                            <a href="#" title="Close" aria-label="Close" class="component-notice-strap__close"></a>
+                                    
+                                      <div class="component-notice-strap__link">
+                      <a href="/investors/news/covid-19-impact-kelso-rail-operations">Read Latest Update On COVID-19</a>
+                    </div>
+                                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            </div>
+</div>
+      
+  </div>
+
+  </div>
+
+      </div>
+        <div class="site-header__top container">
+      <div class="row">
+        <div class="col-md-12">
+                    <div class="site-header__content">
+            <div class="site-header__logo">
+                              <a href="/">
+                  <img src="/themes/custom/kelso_tech/gfx/logo-kelso.png" alt="Kelso" />
+                </a>
+                          </div>
+
+            <div class="site-header__nav">
+                              <div class="primary-nav">
+                    <div class="region region-primary-nav">
+    <nav role="navigation" aria-labelledby="block-kelso-tech-primary-navigation-menu" id="block-kelso-tech-primary-navigation" class="block block-menu navigation menu--main">
+  
+    
+
+      
+                  <ul class="menu menu--parent menu--main menu--level-0">
+                          <li class="menu__item menu__item--company menu__item--expanded">
+        <a href="/company" class="menu__link" data-drupal-link-system-path="node/8">Company</a>
+                                    <ul class="menu--main menu menu--child menu--level-1">
+                          <li class="menu__item menu__item--directors-and-officers">
+        <a href="/company/directors-and-officers" class="menu__link" data-drupal-link-system-path="node/12">Directors and Officers</a>
+              </li>
+                      <li class="menu__item menu__item--key-management">
+        <a href="/company/key-management" class="menu__link" data-drupal-link-system-path="node/13">Key Management</a>
+              </li>
+                      <li class="menu__item menu__item--locations">
+        <a href="/company/locations" class="menu__link" data-drupal-link-system-path="node/14">Locations</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--products menu__item--expanded">
+        <a href="/products" class="menu__link" data-drupal-link-system-path="node/9">Products</a>
+                                    <ul class="menu--main menu--child menu menu--level-1">
+                          <li class="menu__item menu__item--rail menu__item--expanded">
+        <a href="/products/railway-equipment" class="menu__link" data-drupal-link-system-path="node/41">RAIL</a>
+                                    <ul class="menu--main menu--child menu menu--level-2">
+                          <li class="menu__item menu__item--bottom-outlet-valve">
+        <a href="/products/rail/bottom-outlet-valve" title="rail tank car bottom outlet valve" class="menu__link" data-drupal-link-system-path="node/50">Bottom Outlet Valve</a>
+              </li>
+                      <li class="menu__item menu__item--pressure-relief-valve">
+        <a href="/products/rail/pressure-relief-valve" title="rail tank car pressure relief valve" class="menu__link" data-drupal-link-system-path="node/52">Pressure Relief Valve</a>
+              </li>
+                      <li class="menu__item menu__item--vacuum-relief-valve">
+        <a href="/products/rail/vacuum-relief-valve" title="rail tank car vacuum relief valve" class="menu__link" data-drupal-link-system-path="node/54">Vacuum Relief Valve</a>
+              </li>
+                      <li class="menu__item menu__item--one-bolt-manway menu__item--expanded">
+        <a href="/products/rail/one-bolt-manway" title="rail tank car one-bolt manway" class="menu__link" data-drupal-link-system-path="node/55">One-bolt Manway</a>
+                                    <ul class="menu--main menu--child menu menu--level-3">
+                          <li class="menu__item menu__item--universal-manway-adapter">
+        <a href="/products/rail/one-bolt-manway/universal-manway-adapter" title="rail tank car universal manway adapter" class="menu__link" data-drupal-link-system-path="node/56">Universal Manway Adapter</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--pressure-cars">
+        <a href="/products/rail/pressure-cars" title="pressure car components" class="menu__link" data-drupal-link-system-path="node/61">Pressure Cars</a>
+              </li>
+                      <li class="menu__item menu__item--pressure-differential">
+        <a href="/products/rail/pressure-differential-parts" title="PD Butterfly Valves, Multi-Angle Valve Extensions, PD Pressure Relief Valves, Check Valves &amp; Aeration Systems" class="menu__link" data-drupal-link-system-path="node/59">Pressure Differential</a>
+              </li>
+                      <li class="menu__item menu__item--rail-products---mgm">
+        <a href="/products/rail/check-valves-tank-gauges-laboratory-test-equipment" title="Check Valves, Tank Gauges and Laboratory Test Equipment" class="menu__link" data-drupal-link-system-path="node/58">Rail products - MGM</a>
+              </li>
+                      <li class="menu__item menu__item--wheel-cleaner">
+        <a href="/products/rail/rail-wheel-cleaner" title="rail wheel cleaner" class="menu__link" data-drupal-link-system-path="node/60">Wheel Cleaner</a>
+              </li>
+                      <li class="menu__item menu__item--service-bulletins">
+        <a href="/products/rail/service-bulletins" class="menu__link" data-drupal-link-system-path="node/22">Service Bulletins</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--emergency-response-kit">
+        <a href="/products/emergency-response-kit" class="menu__link" data-drupal-link-system-path="node/38">EMERGENCY RESPONSE KIT</a>
+              </li>
+                      <li class="menu__item menu__item--fueling-valves">
+        <a href="/products/fueling-valves" class="menu__link" data-drupal-link-system-path="node/40">FUELING VALVES</a>
+              </li>
+                      <li class="menu__item menu__item--trucking">
+        <a href="/products/equipment-tank-trailers" class="menu__link" data-drupal-link-system-path="node/39">TRUCKING</a>
+              </li>
+                      <li class="menu__item menu__item--kxi-suspension">
+        <a href="/products/kxi-suspension" title="gyroscopic suspension for fleet vehicles" class="menu__link" data-drupal-link-system-path="node/42">KXI SUSPENSION</a>
+              </li>
+                      <li class="menu__item menu__item--installation-manual-updates">
+        <a href="/products/installation-manual-updates" class="menu__link" data-drupal-link-system-path="node/23">Installation Manual Updates</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--investors menu__item--expanded menu__item--active-trail">
+        <a href="/investors" class="menu__link menu__link--active-trail is-active" data-drupal-link-system-path="node/10">Investors</a>
+                                    <ul class="menu--main menu--child menu--level-3 menu menu--level-1">
+                          <li class="menu__item menu__item--financial-statements menu__item--expanded">
+        <a href="/investors/financial-statements" class="menu__link" data-drupal-link-system-path="node/16">Financial Statements</a>
+                                    <ul class="menu--main menu--child menu--level-3 menu menu--level-2">
+                          <li class="menu__item menu__item--xbrl-documents">
+        <a href="/investors/financial-statements/xbrl-documents" class="menu__link" data-drupal-link-system-path="node/34">XBRL Documents</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--corporate-presentation">
+        <a href="/investors/corporate-presentation" class="menu__link" data-drupal-link-system-path="node/26">Corporate Presentation</a>
+              </li>
+                      <li class="menu__item menu__item--corporate-information">
+        <a href="/investors/corporate-information" class="menu__link" data-drupal-link-system-path="node/27">Corporate Information</a>
+              </li>
+                      <li class="menu__item menu__item--corporate-governance">
+        <a href="/investors/corporate-governance" class="menu__link" data-drupal-link-system-path="node/28">Corporate Governance</a>
+              </li>
+                      <li class="menu__item menu__item--shareholders">
+        <a href="/investors/shareholders" class="menu__link" data-drupal-link-system-path="node/29">Shareholders</a>
+              </li>
+                      <li class="menu__item menu__item--news">
+        <a href="/investors/news" class="menu__link" data-drupal-link-system-path="node/30">News</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--media menu__item--expanded">
+        <a href="/media" class="menu__link" data-drupal-link-system-path="node/11">Media</a>
+                                    <ul class="menu--main menu--child menu--level-3 menu--level-2 menu menu--level-1">
+                          <li class="menu__item menu__item--image-gallery">
+        <a href="/image-gallery" class="menu__link" data-drupal-link-system-path="node/17">Image Gallery</a>
+              </li>
+        </ul>
+  
+              </li>
+                      <li class="menu__item menu__item--contact-us menu__item--expanded">
+        <a href="/contact-us" class="menu__link" data-drupal-link-system-path="node/5">Contact Us</a>
+                                    <ul class="menu--main menu--child menu--level-3 menu--level-2 menu menu--level-1">
+                          <li class="menu__item menu__item--corporate">
+        <a href="/contact-us/corporate" class="menu__link" data-drupal-link-system-path="node/18">Corporate</a>
+              </li>
+                      <li class="menu__item menu__item--employment">
+        <a href="/contact-us/employment-opportunities" class="menu__link" data-drupal-link-system-path="node/19">Employment</a>
+              </li>
+                      <li class="menu__item menu__item--operations">
+        <a href="/contact-us/operations" class="menu__link" data-drupal-link-system-path="node/20">Operations</a>
+              </li>
+                      <li class="menu__item menu__item--sales">
+        <a href="/contact-us/sales" class="menu__link" data-drupal-link-system-path="node/21">Sales</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+                </div>
+              
+              <div class="mobile-control-nav">
+                <ul class="menu clearfix">
+                                      <li class="menu__item menu__item--search">
+                      <a href="#" class="menu__link js-site-header-search-toggle" aria-label="Site Search" title="Site Search"></a>
+                      <div class="site-header__search-form">
+                          <div class="region region-site-search">
+    <div class="views-exposed-form bef-exposed-form block block-views block-views-exposed-filter-blocksite-search-site-search" data-drupal-selector="views-exposed-form-site-search-site-search" id="block-kelso-tech-site-search-block">
+  
+    
+      <form action="/search" method="get" id="views-exposed-form-site-search-site-search" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-site-keyword js-form-item-site-keyword">
+          <label data-element-type="textfield" for="edit-site-keyword" class="control-label">Search
+                  <span class="form-optional "> - Optional</span>
+            </label>
+
+  
+  
+  
+  <input placeholder="Enter a keyword..." data-drupal-selector="edit-site-keyword" type="text" id="edit-site-keyword" name="site_keyword" value="" size="30" maxlength="128" class="form-text form-control" />
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-site-search" type="submit" id="edit-submit-site-search" value="Search" class="button js-form-submit form-submit btn" /><button type="button" class="form-submit--trigger"><span>Search</span></button></div>
+
+</div>
+
+</form>
+
+  </div>
+
+  </div>
+
+                      </div>
+                    </li>
+                                    <li class="menu__item menu__item--menu">
+                    <button class="hamburger hamburger--squeeze" type="button" aria-label="Menu" title="Menu">
+                      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+      
+    
+              
+  <div class="site-content">
+    <div class="site-content__inner">
+      <div class="container">
+                          <div class="row">
+            <div class="col-md-12">
+              <div class="page-header-image">
+                
+            <div class="field field--name-field-media-item field--type-entity-reference field--label-hidden field__item">  <img src="/sites/default/files/styles/banner/public/2020-07/Stock%20exchange%20stock%20photo.jpg?itok=NP8Ie5fj" width="1530" height="400" alt="stock exchange board" typeof="foaf:Image" class="image-style-banner" />
+
+
+</div>
+      
+              </div>
+            </div>
+          </div>
+                
+        
+        <div class="row">
+                                <div class="col-lg-4 col-xl-3 hidden-xs hidden-sm hidden-md">
+              <aside class="site-sidebar site-sidebar--left" role="complementary">
+                  <div class="region region-left-sidebar">
+    <nav role="navigation" aria-labelledby="block-kelso-tech-main-sub-navigation-menu" id="block-kelso-tech-main-sub-navigation" class="block block-menu navigation menu--main">
+  
+    
+
+      
+                  <ul class="menu menu--parent menu--main menu--level-0">
+                          <li class="menu__item menu__item--financial-statements">
+        <a href="/investors/financial-statements" class="menu__link" data-drupal-link-system-path="node/16">Financial Statements</a>
+              </li>
+                      <li class="menu__item menu__item--corporate-presentation">
+        <a href="/investors/corporate-presentation" class="menu__link" data-drupal-link-system-path="node/26">Corporate Presentation</a>
+              </li>
+                      <li class="menu__item menu__item--corporate-information">
+        <a href="/investors/corporate-information" class="menu__link" data-drupal-link-system-path="node/27">Corporate Information</a>
+              </li>
+                      <li class="menu__item menu__item--corporate-governance">
+        <a href="/investors/corporate-governance" class="menu__link" data-drupal-link-system-path="node/28">Corporate Governance</a>
+              </li>
+                      <li class="menu__item menu__item--shareholders">
+        <a href="/investors/shareholders" class="menu__link" data-drupal-link-system-path="node/29">Shareholders</a>
+              </li>
+                      <li class="menu__item menu__item--news">
+        <a href="/investors/news" class="menu__link" data-drupal-link-system-path="node/30">News</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+              </aside>
+            </div>
+                    
+                    <div class="col-lg-8 col-xl-9">
+            <main class="content__main-content clearfix" role="main">
+              <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
+                                <div class="region region-highlighted">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+                                              <div class="region region-above-content">
+    <div id="block-kelso-tech-pagetitle" class="block block-core block-page-title-block">
+  
+    
+      
+  <h1 class="page-title"><span class="field field--name-title field--type-string field--label-hidden">Investors</span>
+</h1>
+
+
+  </div>
+
+  </div>
+
+                                              <div class="region region-content">
+    <div id="block-kelso-tech-mainpagecontent" class="block block-system block-system-main-block">
+  
+    
+      <article data-history-node-id="10" role="article" about="/investors" class="node node--type-page node--view-mode-full clearfix">
+  <div class="node__content clearfix">
+    
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><h3>Kelso Technologies Inc.</h3>
+<p>Unites States: NYSE American: KIQ<br />
+Canada: TSX: KLS</p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="width: 244px;">
+<p>INDUSTRY</p>
+</td>
+<td style="width: 456px;">
+<p>Railway equipment supply; engineering services for transportation</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>TECHNOLOGIES</p>
+</td>
+<td style="width: 456px;">
+<p>Rail tank car components; road tank trailer components; rail emergency response; gyroscopic vehicle suspension</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>SUBSIDIARIES (wholly-owned)</p>
+</td>
+<td style="width: 456px;">
+<p>Kelso Technologies (USA) Inc.</p>
+<p>Kel-flo Industries Inc.</p>
+<p>Kiq X Industries Inc.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>OFFICERS AND DIRECTORS</p>
+</td>
+<td style="width: 456px;">
+<p>James (Rik) Bond – CEO, President and Director</p>
+<p>Richard Lee – CFO</p>
+<p>Tony Andrukaitis – COO and Director</p>
+<p><span style="background-color: transparent;">Peter Hughes – Independent Director</span></p>
+<p><span style="background-color: transparent;">Paul Cass</span> - Independent Director</p>
+<p><span style="background-color: transparent;">Laura B. Roach</span> - Independent Director</p>
+<p>Jesse V. Crews - Independent Director</p>
+<p>Frank Busch - Independent Director</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>PATENTED PRODUCTS</p>
+</td>
+<td style="width: 456px;">
+<p>RAILWAY: pressure relief valves; o<span style="background-color: transparent;">ne-bolt manway; </span><span style="background-color: transparent;">b</span><span style="background-color: transparent;">ottom outlet valve; v</span><span style="background-color: transparent;">acuum relief valve; top ball valve; emergency response kit; rail wheel cleaner; fueling valve</span></p>
+<p><span style="background-color: transparent;">EMERGENCY: Emergency response kit; personal survival pack; gyroscopic vehicle suspension</span></p>
+<p><span style="background-color: transparent;">TRUCKING: pressure/vacuum valve; one-bolt truck manway</span></p>
+<p><span style="background-color: transparent;">MILITARY/SECURITY: gyroscopic vehicle suspension </span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>PRODUCTION PLANTS</p>
+</td>
+<td style="width: 456px;">
+<p>Bonham, Texas</p>
+<p>Kelowna, British Columbia</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>MARKET FOCUS</p>
+</td>
+<td style="width: 456px;">
+<p>Railway - tank car OEMs; retrofit and repair shops</p>
+<p>Railroads - Class I</p>
+<p>Roads - tank truck/trailer OEM</p>
+<p>Emergency - police; border patrol; search &amp; rescue; FEMA</p>
+<p>Military/government</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>ADDITIONAL MARKETS</p>
+</td>
+<td style="width: 456px;">
+<p>ISO tanks; pipelines; international</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>GROSS PROFIT TARGETS</p>
+</td>
+<td style="width: 456px;">
+<p>30%</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px; height: 40px;">
+<p>SHARE STRUCTURE</p>
+<p>(at Mar 31, 2021)</p>
+</td>
+<td style="width: 456px; height: 40px;">
+<p>Outstanding common shares: 54,270,086 </p>
+<p>Distribution: widely held, no shareholder with &gt;10%</p>
+<p>Fully diluted: 58,765,086</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>YEAR END</p>
+</td>
+<td style="width: 456px;">
+<p>December 31 </p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>MARKET CAP </p>
+<p><span style="background-color: transparent;">(at Mar 31, 2021)</span></p>
+</td>
+<td style="width: 456px;">
+<p>$78.1<font color="#323a42" face="Arial, Helvetica, Verdana, Geneva, sans-serif"> million</font> Canadian</p>
+<p>$63.5 million US</p>
+</td>
+</tr>
+<tr>
+<td style="width: 244px;">
+<p>WORKING CAPITAL </p>
+</td>
+<td style="width: 456px;">
+<p>$10.2 million US</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>For further information, please contact:</h3>
+<table border="0" cellpadding="0" cellspacing="0" height="120" width="707">
+<tbody>
+<tr>
+<td style="width:210px;">
+<p>James R. Bond, CEO and President</p>
+</td>
+<td style="width:218px;">
+<p>Richard Lee, Chief Financial Officer</p>
+</td>
+<td style="width:194px;">
+<p style="margin-left:5.3pt;">Maureen O’Hanley Doucette, Media &amp; Communications</p>
+</td>
+</tr>
+<tr>
+<td style="width:210px;">
+<p>Email:  <a href="mailto:bond@kelsotech.com">bond@kelsotech.com</a></p>
+</td>
+<td style="width:218px;">
+<p>Email:  <a href="mailto:lee@kelsotech.com">lee@kelsotech.com</a></p>
+</td>
+<td style="width:194px;">
+<p style="margin-left:5.3pt;">Email: <a href="mailto:ohanley@kelsotech.com">ohanley@kelsotech.com</a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-size:9px;">Updated May 11, 2021</span></p>
+</div>
+      
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+                                        </main>
+          </div>
+          
+                                      </div>
+      </div>
+    </div>
+  </div>
+
+      
+  <a href="#" class="b-page-scroll-to-top" title="Scroll To Top" aria-label="Scroll To Top" role="button" tabIndex="-1"></a>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="site-footer__content">
+            <div class="site-footer__logo">
+                              <a href="/">
+                  <img src="/themes/custom/kelso_tech/gfx/logo-kelso.png" alt="Kelso" />
+                </a>
+                          </div>
+
+                          <div class="site-footer__body">
+                  <div class="region region-footer">
+    <div id="block-footercompanyinformation" class="block block-block-content block-block-content977441b7-bda9-49d0-b172-ff0f7f62d598">
+  
+    
+  
+          <a class="hidden">test</a>
+      
+      <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="component-standard-content component-bottom-margin--none paragraph paragraph--type--standard-content component-standard-content--default">
+                  
+            <div class="clearfix text-formatted field field--name-field-text-long field--type-text-with-summary field--label-hidden field__item"><p><strong>Kelso Technologies Inc.</strong><br />
+1526 Texas Avenue<br />
+Bonham, TX 75418<br />
+USA</p>
+</div>
+      
+            </div>
+</div>
+          </div>
+  
+      </div>
+<div id="block-footercontactlinks" class="block block-block-content block-block-contenta4ca4edf-46dc-4d11-a90b-72abcee3fd59">
+  
+    
+  
+          <a class="hidden">test</a>
+      
+      <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="component-standard-content component-bottom-margin--none paragraph paragraph--type--standard-content component-standard-content--default">
+                  
+            <div class="clearfix text-formatted field field--name-field-text-long field--type-text-with-summary field--label-hidden field__item"><ul class="list-contact-links">
+<li><a href="tel:19035839200"><i class="fas fa-phone-alt"></i> 1.903.583.9200</a></li>
+<li><a href="mailto:info@kelsotech.com"><i class="fas fa-envelope"></i> info@kelsotech.com</a></li>
+<li><a href="http://www.linkedin.com/groups/Kelso-Technologies-Inc-7486239?trk=my_groups-b-grp-v"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+</ul>
+</div>
+      
+            </div>
+</div>
+          </div>
+  
+      </div>
+<nav role="navigation" aria-labelledby="block-footernavigation-menu" id="block-footernavigation" class="block block-menu navigation menu--footer">
+  
+    
+
+      
+                  <ul class="menu menu--parent menu--footer menu--level-0">
+                          <li class="menu__item menu__item--contact-us">
+        <a href="/contact-us" class="menu__link" data-drupal-link-system-path="node/5">Contact Us</a>
+              </li>
+                      <li class="menu__item menu__item--investors menu__item--active-trail">
+        <a href="/investors" class="menu__link menu__link--active-trail is-active" data-drupal-link-system-path="node/10">Investors</a>
+              </li>
+                      <li class="menu__item menu__item--image-gallery">
+        <a href="/image-gallery" class="menu__link" data-drupal-link-system-path="node/17">Image Gallery</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-madeinnorthamerica" class="block block-block-content block-block-content7c8bdeaa-0a8d-4576-bc28-176fe8c77b34">
+  
+    
+  
+          <a class="hidden">test</a>
+      
+      <div class="field field--name-field-paragraphs field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item">  <div class="component-standard-content component-bottom-margin--none paragraph paragraph--type--standard-content component-standard-content--default">
+                  
+            <div class="clearfix text-formatted field field--name-field-text-long field--type-text-with-summary field--label-hidden field__item"><p class="footer-made-in-north-america"><img alt="Made In North America" src="/themes/custom/kelso_tech/gfx/logo-made-in-north-america.png" style="max-width: 98px;" /></p>
+</div>
+      
+            </div>
+</div>
+          </div>
+  
+      </div>
+
+  </div>
+
+              </div>
+                      </div>
+
+          <div class="site-footer__bottom">
+            <div class="site-footer__copyright">
+              Copyright &copy; 2021 <a href="/">Kelso Technologies Inc</a>.  All rights reserved.
+            </div>
+
+                          <div class="footer-bottom-nav">
+                  <div class="region region-footer-bottom-nav">
+    <nav role="navigation" aria-labelledby="block-footer-bottom-navigation-menu" id="block-footer-bottom-navigation" class="block block-menu navigation menu--footer-bottom">
+  
+    
+
+      
+                  <ul class="menu menu--parent menu--footer-bottom menu--level-0">
+                          <li class="menu__item menu__item--privacy-policy">
+        <a href="/privacy-policy" class="menu__link" data-drupal-link-system-path="node/6">Privacy Policy</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+              </div>
+                      </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/10","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"ajax_loader\/ajax_loader.throbber,better_exposed_filters\/general,core\/html5shiv,fontawesome\/fontawesome.webfonts,google_analytics\/google_analytics,kelso_tech\/global-styling,kelso_tech\/paragraph-notice-strap,orange_framework\/bootstrap,orange_framework\/global-styling,paragraphs\/drupal.paragraphs.unpublished,system\/base","theme":"kelso_tech","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"ajaxLoader":{"markup":"\u003Cdiv class=\u0022ajax-throbber sk-circle\u0022\u003E\n              \u003Cdiv class=\u0022sk-circle1 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle2 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle3 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle4 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle5 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle6 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle7 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle8 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle9 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle10 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle11 sk-child\u0022\u003E\u003C\/div\u003E\n              \u003Cdiv class=\u0022sk-circle12 sk-child\u0022\u003E\u003C\/div\u003E\n            \u003C\/div\u003E","hideAjaxMessage":true,"alwaysFullscreen":true,"throbberPosition":"body"},"google_analytics":{"account":"UA-143527409-1","trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"user":{"uid":0,"permissionsHash":"62f08f127fcd6986fd6acac5dca82d2a3fe084df1bfa8c9b57b0b827615930b5"}}</script>
+<script src="/sites/default/files/js/js_M6TOSXKLizYBBKoO3B3KSU3ye9CHiULELtOEqBcFaoA.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"bdee752115","applicationID":"590259294","transactionName":"ZQdaNkRVXhUCBxVaVlxNeQFCXV8ITBQAVFxtAVkBXlE=","queueTime":0,"applicationTime":18,"atts":"SUBZQAxPTRs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

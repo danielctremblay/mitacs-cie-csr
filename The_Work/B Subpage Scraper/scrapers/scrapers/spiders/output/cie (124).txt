@@ -1,0 +1,5 @@
+The customizable e-mail, newsgroup, and rss client just like you remember itInterlink Mail & News is a free e-mail client based on open source community code built on the . It is available for Microsoft Windows and Linux (with other operating systems in development). The client focuses on efficiency with carefully selected features and optimizations to improve stability and user experience, while offering full customization and a growing collection of extensions and themes to make the client truly your own.
+      The Binary Outcast name and related Site Designs, Logos, and Artwork are Copyright Matt A. Tobin.
+      Any other content is copyright or trademark to their respective owners.
+      - Binary Outcast v27 - Aura][ -
+    

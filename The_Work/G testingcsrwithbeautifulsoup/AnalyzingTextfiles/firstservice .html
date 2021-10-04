@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!--
+#######################################
+	- THE HEAD PART -
+######################################
+-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	<title>FirstService Corporation</title>
+
+	<!-- get jQuery from the google apis -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.js"></script>
+
+
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <link rel="stylesheet" type="text/css" href="/slider/css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/slider/css/settings.css" media="screen" />
+    <script type="text/javascript" src="/slider/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="/slider/js/jquery.themepunch.revolution.js"></script>
+
+
+	<!-- Nav Menu CSS JS-->
+	<link rel="stylesheet" type="text/css" href="/nav/css/css3menu.css" />
+	<script type="text/javascript" src="/nav/js/css3-mediaqueries.js"></script>
+	<script type="text/javascript" src="/nav/js/collapser.js"></script>
+
+	<!-- CSS STYLE normalize-->
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+	<!-- CSS STYLE-->
+
+	<!-- GOOGLE FONTS -->
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
+
+	<script>
+		$(window).scroll(function(){
+			if ($(document).width() < 415) 
+				return;
+			if ($(window).scrollTop() > 1){
+				$("header").css("background","white");
+			}else{
+				$("header").css("background","none");
+			}
+		});
+		$(document).ready(function(){setInterval(function(){$.get("data/stock.html",function(data){$(".stock_nav").html(data);});},300000);});
+	</script>
+	<style>
+		.headline-news h2{ font-size: 1.0em; margin-top: .3em; margin-bottom: .3em;}
+		.headline-news h3{ font-size: 1.0em; margin-top: .1em; margin-bottom: .1em;}
+		.headline-news article:last-child{ border: none; display:none }
+		@media screen and (min-width:1400px) {
+			.headline-news article:last-child{ display:block; }
+		}
+	</style>
+</head>
+
+<!--
+#######################################
+	- THE BODY PART -
+######################################
+-->
+<body id="home">
+
+	<!-- HEADER -->
+	<header role="banner">
+		<div id="nav" class="container" role="navigation" >
+	<div id="logo"><a href="/" style="text-indent: -1000px">Home</a></div>
+	<div class="stock_nav">
+			<ul>
+		<li>
+			NASDAQ
+		</li>
+		<li>
+			<img src="/images/stock-arrow-up.png" alt="&uarr;">
+		</li>
+		<li>
+			$ 157.16		</li>
+		<li>
+			TSX
+		</li>
+		<li>
+			<img src="/images/stock-arrow-up.png" alt="&uarr;">
+		</li>
+		<li>
+			$ 189.76		</li>
+	</ul>
+
+	</div>
+	<div id="menu1" class="menu_container blue full_width">
+		<label for="hidden_menu_collapser" class="mobile_collapser">Menu
+				<ul>
+		<li>
+			NASDAQ
+		</li>
+		<li>
+			<img src="/images/stock-arrow-up.png" alt="&uarr;">
+		</li>
+		<li>
+			$ 157.16		</li>
+		<li>
+			TSX
+		</li>
+		<li>
+			<img src="/images/stock-arrow-up.png" alt="&uarr;">
+		</li>
+		<li>
+			$ 189.76		</li>
+	</ul>
+
+		</label> <!-- Mobile menu title -->
+		<input id="hidden_menu_collapser" type="checkbox" />
+		<ul>
+			<li>
+				<a href="#">ABOUT US </a>
+				<div class="menu_dropdown_block">
+					<ul class="menu_submenu_block">
+						<li><a href="/about_us/default.html">About Us</a></li>
+						<li><a href="/about_us/ceo_message.html">CEO Message</a></li>
+						<li><a href="/about_us/company_history.html">Company History</a></li>
+						<li class="has-submenu"><a href="#">Leadership</a>
+							<ul class="menu_submenu_block">
+								<li><a href="/about_us/founder_chairman.html">Founder & Chairman</a></li>
+								<li><a href="/about_us/board_of_directors.html">Board Of Directors</a></li>
+								<li><a href="/about_us/executive_officers.html">Executive Officers</a></li>
+							</ul>
+						</li>
+						<li><a href="/about_us/operating_philosophy.html">Operating Philosophy</a></li>
+						<li class="has-submenu"><a href="#">Becoming Our Partner</a>
+							<ul class="menu_submenu_block">
+								<li><a href="/about_us/partnership_philosophy.html">Partnership Philosophy</a></li>
+								<li><a href="/about_us/partner_criteria.html">Partner Criteria & Contact</a></li>
+							</ul>
+						</li>
+						<li><a href="/about_us/corporate_information.html">Corporate Information</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/brands/default.html">BRANDS</a>
+			</li>
+			<li>
+				<a href="#">INVESTORS </a>
+				<div class="menu_dropdown_block">
+					<ul class="menu_submenu_block">
+						<li><a href="/investors/why_invest.html">Why Invest</a></li>
+						<li><a href="/investors/newsroom.html">Newsroom</a></li>
+						<li class="has-submenu"><a href="#">Stock Information</a>
+							 <ul class="menu_submenu_block">
+								<li><a href="http://www.nasdaq.com/symbol/fsv" target="_blank">NASDAQ - FSV Stock Quote</a></li>
+								<li><a href="https://money.tmx.com/en/quote/FSV" target="_blank">TSX - FSV Stock Quote</a></li>
+								<li><a href="/investors/dividends.html">Dividends</a></li>
+							</ul>
+						</li>
+						<li><a href="/investors/financial_highlights.html">Financial Highlights</a></li>
+						<li><a href="/investors/growth_charts.html">Growth Charts</a></li>
+						<li><a href="/investors/recent_presentations.html">Recent Presentations</a></li>
+						<li><a href="/investors/annual_reports.html">Annual Reports</a></li>
+						<li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001637810&type=&dateb=&owner=exclude&count=100" target="_blank">SEC Filings</a></li>
+						<li><a href="http://www.sedar.com/DisplayCompanyDocuments.do?lang=EN&issuerNo=00037245" target="_blank">SEDAR Filings</a></li>
+						<li><a href="/investors/analyst_coverage.html">Analyst Coverage</a></li>
+						<li><a href="/investors/forward_looking_statement.html">Forward Looking Statements</a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="https://purpose.firstservice.com" target="_blank">SOCIAL PURPOSE</a>
+			</li>
+			<li id="Governance_menu">
+				<a href="#">GOVERNANCE</a>
+				<div class="menu_dropdown_block">
+					 <ul class="menu_submenu_block">
+						<li><a href="/governance/governance_overview.html">Governance Overview</a></li>
+						<li><a href="/governance/committee_mandates.html">Committee Mandates</a></li>
+						<li><a href="/governance/ethics_conduct_policies.html">Ethics and Conduct Policies</a></li>
+						<li><a href="/governance/ethics_hotline_policy.html">Ethics Hotline Policy</a></li>
+						<li><a href="/governance/our_people_our_success.html">Our People, Our Success</a></li>
+						<li><a href="/governance/nasdaq_canadian_corporate_governance.html">Differences in Nasdaq and Canadian<br><span style="padding-left:10px;">Corporate Governance</span></a></li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/careers/default.html">CAREERS </a>
+			</li>
+			<li class="submit right last">
+				<form action="/search/" id="search">
+					  <input title="Search" name="query" aria-label="Search" placeholder="Search"></input>
+					  <input alt="Search" type="image" src="/images/icon_search.png" border="0">
+				</form>
+			</li>
+		</ul>
+	</div><!-- /menu -->
+
+	<div class="clearfix"></div>
+	<div class="covid-19">
+		<p>
+			<a href="/covid-19.html">Learn about the necessary precautions we’re taking in response to the COVID-19 outbreak. <span> Read More ></span></a>
+		<p>
+	</div>
+	</div> <!-- /content -->
+</div><!-- page -->
+
+	</header> <!-- END OF HEADER -->
+	<div id="home_slider" >
+		<div id="slider" class="tp-banner-container">
+		<div class="tp-banner" >
+			<ul>	
+				<!-- SLIDE  -->
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+					<!-- MAIN IMAGE -->
+					<img src="images/fs1_x2.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+
+					<div class="tp-caption largewhitebg2 customin customout"
+						data-x="550"
+						data-y="340"
+						data-customin="x:0;y:20;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-speed="900"
+						data-start="1300"
+						data-easing="Power1.easeInOut"
+						data-endspeed="800"
+						data-endeasing="Linear.easeNone"
+						data-captionhidden="on"
+						style="z-index: 2;">
+						North American leader 
+						<br>
+						in essential outsourced 
+						<br>
+						property services 
+						<br>
+						<br>
+						<a class="learn-btn" href="/about_us/default.html" aria-label="Learn more about us">Learn More</a>
+					</div>
+				</li>
+			<!-- SLIDE  -->
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+					<!-- MAIN IMAGE -->
+					<img src="images/fs3_x2.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+
+					<div class="tp-caption largewhitebg2 customin customout"
+						data-x="550"
+						data-y="340"
+						data-customin="x:0;y:20;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-speed="900"
+						data-start="1300"
+						data-easing="Power1.easeInOut"
+						data-endspeed="800"
+						data-endeasing="Linear.easeNone"
+						data-captionhidden="on"
+						style="z-index: 2;">
+						Our greatest differentiator 
+						<br>
+						is the quality of our 
+						<br>
+						service delivery
+						<br>
+						<br>
+						<a class="learn-btn" href="/brands/default.html" aria-label="Learn more about our brands">Learn More</a>
+					</div>
+				</li>
+				<!-- SLIDE  -->
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+					<!-- MAIN IMAGE -->
+					<img src="images/fs4_bottom.svg"  alt="slidebg1"  data-bgfit="cover" data-bgposition=" top" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+
+					<div class="tp-static-layer tp-caption tp-resizeme mediaOffset"
+						data-customin="x:0;y:20;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-speed="900"
+						data-start="1300"
+						data-easing="Power1.easeInOut"
+						data-endspeed="800"
+						data-endeasing="Linear.easeNone"
+						data-captionhidden="on"
+						data-x="75"
+						data-y="660"
+						style="z-index: 2;background: none">
+						<a class="learn-btn" href="/investors/why_invest.html" aria-label="Learn more on why invest">Learn More</a>
+					</div>
+				</li>
+		<!-- SLIDE  -->
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+					<!-- MAIN IMAGE -->
+					<img src="images/fs7_x2.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+
+					<div class="tp-caption largewhitebg2 customin customout"
+						data-x="550"
+						data-y="340"
+						data-customin="x:0;y:20;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-speed="900"
+						data-start="1300"
+						data-easing="Power1.easeInOut"
+						data-endspeed="800"
+						data-endeasing="Linear.easeNone"
+						data-captionhidden="on"
+						style="z-index: 2;">
+						Compelling growth 
+						<br>
+						prospects
+						<br>
+						<br>
+						<a class="learn-btn" href="/brands/default.html" aria-label="Learn more about our brands">Learn More</a>
+					</div>
+				</li>
+				<!-- SLIDE  -->
+				<li data-transition="fade" data-slotamount="7" data-masterspeed="1500" >
+					<!-- MAIN IMAGE -->
+					<img src="images/fs5_x2.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+					<!-- LAYERS -->
+
+					<div class="tp-caption largewhitebg2 customin customout"
+						data-x="550"
+						data-y="340"
+						data-customin="x:0;y:20;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+						data-speed="900"
+						data-start="1300"
+						data-easing="Power1.easeInOut"
+						data-endspeed="800"
+						data-endeasing="Linear.easeNone"
+						data-captionhidden="on"
+						style="z-index: 2;">
+						We are 24,000 
+						<br>
+						strong and growing
+						<br>
+						<br>
+						<a class="learn-btn" href="/careers/default.html" aria-label="Learn more about careers">Learn More</a>
+					</div>
+				</li>
+			</ul>
+			<div class="tp-bannertimer"></div>
+		</div>
+	</div>
+	
+	</article>
+
+	<!-- THE SCRIPT INITIALISATION -->
+	<!-- LOOK THE DOCUMENTATION FOR MORE INFORMATIONS -->
+	<script type="text/javascript">
+
+		var revapi;
+
+		jQuery(document).ready(function() {
+
+			   revapi = jQuery('.tp-banner').revolution(
+				{
+					delay:5000,
+					startwidth:1170,
+					startheight:900,
+					hideThumbs:10,
+					fullWidth:"on",
+					forceFullWidth:"on"
+				});
+
+		});	//ready
+
+	</script>
+
+	<!-- END REVOLUTION SLIDER -->
+
+
+	</article><!-- Content End -->
+
+
+
+
+
+
+
+
+
+	</div>
+
+	<!--News and Leader Links -->
+	<section class="content clearfix">
+		<div class="clearfix">
+			<div class="headline-news">
+				<h1>
+					HEADLINES
+				</h1>
+				<article>
+					<h2>
+						FirstService Appoints Steve Grimshaw to its Board of Directors
+					</h2>
+					<h3 class="clearfix">
+						May 11, 2021
+						<a class="btn" href="/investors/newsroom/pdf/FSV_PR_Steve_Grimshaw_Board_Addition.pdf" target="_blank">PDF</a>
+					</h3>
+				</article>
+				<article>
+					<h2>
+						FirstService Declares Quarterly Cash Dividend on Common Shares
+					</h2>
+					<h3 class="clearfix">
+						May 11, 2021
+						<a class="btn" href="/investors/newsroom/pdf/Press_Release_Common_Dividend_Q2_2021.pdf" target="_blank">PDF</a>
+					</h3>
+				</article>
+				<article>
+					<h2>
+						FirstService Reports Strong First Quarter Results
+					</h2>
+					<h3 class="clearfix">
+						Apr 27, 2021
+						<a class="btn" href="/investors/newsroom/pdf/Q1_2021_Earnings_Release.pdf" target="_blank">PDF</a>
+						<a class="btn" href="https://edge.media-server.com/mmc/p/bctzskwq" target="_blank">WEBCAST</a>
+					</h3>
+					<p style="font-size: .7rem;line-height: 1rem;">For anyone who was unable to listen to the live rescheduled call on Tuesday, April 27, 2021 at 4 pm ET, the rebroadcast number is 1-855-859-2056 with the conference ID number 9457629. You may also hear the playback via the webcast link above.</p>
+				</article>
+				<article>
+					<h2>
+						FirstService Announces Election of Directors
+					</h2>
+					<h3 class="clearfix">
+						Apr 7, 2021
+						<a class="btn" href="/investors/newsroom/pdf/Press_Release_FSV_2021_Election_of_Directors.pdf" target="_blank">PDF</a>
+					</h3>
+				</article>
+				<article>
+					<h2>
+						FirstService Corporation | 2020 Annual General Meeting
+					</h2>
+					<h3>
+						Apr 6, 2021
+						<a class="btn" href="/investors/av/FirstService_AGM.mp4" target="_blank">WEBCAST</a>
+					</h3>
+				</article>
+			</div>
+		</div>
+		<div class="clearfix">
+			<div class="leader_links">
+				<ul>
+					<li id="ll_service">
+						<a href="/brands/" class="sweep-to-top">
+							<div class="leader-banner-grey">
+								Our Brands
+							</div>
+						</a>
+					</li>
+					<li id="ll_career">
+						<a href="careers/default.html" class="sweep-to-top">
+							<div  class="leader-banner-grey">
+								Career Opportunities
+							</div>
+						</a>
+					</li>
+				 </ul>
+				<ul>
+					<li id="ll_news">
+						<a href="/investors/av/FirstService_AGM.mp4" target="_blank" class="sweep-to-top">
+							<div class="leader-banner-blue">
+							Featured News
+							</div>
+						</a>
+					</li>
+					<li id="ll_presentation">
+						<a href="/pdf/FSV_Investor_Presentation.pdf" target="_blank" class="sweep-to-top">
+							<div class="leader-banner-blue">
+								Investor Presentation
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+<!-- text box -->
+	<section class="textboxes clearfix">
+		<div class="textbox_left">
+			<p class="fs_quote">
+				Leader in large 
+				<br>
+				markets with significant 
+				<br>
+				growth opportunities			
+			</p>	
+		</div>	
+		<div class="textbox_right">
+			<p>
+				FirstService Corporation is a North American leader in the essential property services sector serving its customers through two industry-leading platforms:
+			</p>
+			<p>
+				<strong>FirstService Residential</strong> - North America's largest manager of residential communities; and
+			</p>
+			<p>
+				<strong>FirstService Brands</strong> - one of North America's largest providers of essential property services to residential and commercial customers delivered through individually branded franchise systems and company-owned operations. 
+			</p>	
+		</div>	
+	</section>
+	<footer>
+				<ul>
+			<li>
+				<a href="/governance/governance_overview.html">
+					GOVERNANCE
+				</a>
+			</li>
+			<li>
+				<a href="/privacy_policy/default.html">
+					PRIVACY POLICY
+				</a>
+			</li>
+			<li>
+				<a href="/terms_of_use.html">
+					TERMS OF USE
+				</a>
+			</li>
+			<li>
+				<a href="/casl.html">
+					CASL
+				</a>
+			</li>
+			<li>
+				<a href="/contact_us/default.html">
+					CONTACT US
+				</a>
+			</li>
+			<li>
+				<a href="http://www.firstservice.com/firstnet/login/">
+					FIRSTNET
+				</a>
+			</li>
+			<li style="white-space: nowrap">
+				2021 FirstService Corporation All Rights Reserved
+			</li>
+			<li>
+				<a href="https://www.youtube.com/channel/UCvyEWuHpVe71jBAPXRsxl5g" target="_blank">
+					<img src="/images/icon_youtube.png" alt="youtube" height="40" width="40">
+				</a>
+			</li>
+		</ul>
+		
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114281303-1"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+				gtag('config', 'UA-114281303-1');
+			</script>
+
+	</footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+                  Add your site to Cloudflare and understand how our system works
+                
+                Configure Cloudflare DNS to protect and accelerate your site traffic
+              
+                Encrypt your site traffic and configure client encryption support
+              
+                  Set up accounts, protect your privacy, and manage invoices
+                
+                  Diagnose issues, resolve common HTTP errors, or communicate with Cloudflare Support
+                
+                Ask questions, get answers, and share Cloudflare tips in our community portal 
+              
+                   
+                  Provides dashboards for insight into security, performance, and reliability
+                
+                 
+              	Serves resources closer to your visitors, saving unnecessary traffic to your origin server
+              
+                  Protects and accelerates your site by proxying your traffic through Cloudflare
+                
+                  Allows granular control for monitoring, challenging, or blocking suspicious and malicious traffic
+                
+              	Manages general settings for networks and protoc

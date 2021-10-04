@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"1e7f13be6c",applicationID:"42010645"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="https://www.atlanticpower.com/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+  <title>Atlantic Power | Atlantic Power</title>
+  <link type="text/css" rel="stylesheet" href="https://www.atlanticpower.com/sites/default/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.atlanticpower.com/sites/default/files/css/css_7pKBf5k9Mye_kU6Ppe0W0pWVrEedyiGoOdjX8nGRaAg.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.atlanticpower.com/sites/default/files/css/css_2iydWmo69INFKTQgXWOWGkqdUYnZxmhAa7PKYj8a9Bc.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.atlanticpower.com/sites/default/files/css/css_I_Nu4PQnh32zbWAsOixTGuHLEhuLTteo0TmlRaYfAos.css" media="all" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <!--[if lt IE 10]>
+  <link type="text/css" rel="stylesheet" href="/sites/all/themes/atlantic_power/css/ie-lt-10.css" media="all" />
+  <![endif]-->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3202499-42‌"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA‌-3202499-42');
+  </script>
+
+  <script type="text/javascript" src="https://www.atlanticpower.com/sites/default/files/js/js_2DGK-XqONwv0l0yYiRFOSL4fceGCCqua6dGnqw_N_mU.js"></script>
+<script type="text/javascript" src="https://www.atlanticpower.com/sites/default/files/js/js_k7E0RC3GSyURYuL7foOc3QK2CIiNjD7emVIOdslEH_4.js"></script>
+<script type="text/javascript" src="https://www.atlanticpower.com/sites/default/files/js/js_6e_qJ0CCTBnYlKyguqe51TKjZFXt_VfDkR5h0hStGjQ.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"atlantic_power","theme_token":"CTfefAFcShT0AtytH_zYW_gqEbJpzKB9qYH-jXyQpkc","js":{"sites\/all\/themes\/atlantic_power\/js\/theme.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/libraries\/superfish\/jquery.hoverIntent.minified.js":1,"sites\/all\/libraries\/superfish\/sftouchscreen.js":1,"sites\/all\/libraries\/superfish\/superfish.js":1,"sites\/all\/modules\/contrib\/superfish\/superfish.js":1,"sites\/all\/themes\/bootstrap_barrio\/js\/script.js":1,"sites\/all\/themes\/atlantic_power\/js\/plugins\/jquery.qtip.min.js":1,"sites\/all\/themes\/atlantic_power\/js\/plugins\/jquery.cycle2.min.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/themes\/bootstrap_barrio\/css\/no-responsive.css":1,"sites\/all\/libraries\/bootstrap\/css\/bootstrap.css":1,"sites\/all\/libraries\/bootstrap\/css\/bootstrap-theme.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/field_collection\/field_collection.theme.css":1,"sites\/all\/libraries\/superfish\/css\/superfish.css":1,"sites\/all\/themes\/bootstrap_barrio\/css\/custom.css":1,"sites\/all\/themes\/bootstrap_barrio\/css\/style.css":1,"sites\/all\/themes\/bootstrap_barrio\/css\/yamm.css":1,"sites\/all\/themes\/atlantic_power\/css\/icofonts.css":1,"sites\/all\/themes\/atlantic_power\/css\/plugins\/jquery.qtip.min.css":1,"sites\/all\/themes\/atlantic_power\/css\/bootstrap-overrides.css":1,"sites\/all\/themes\/atlantic_power\/css\/base.css":1,"sites\/all\/themes\/atlantic_power\/css\/layout.css":1,"sites\/all\/themes\/atlantic_power\/css\/module.css":1,"sites\/all\/themes\/atlantic_power\/css\/state.css":1,"sites\/all\/themes\/atlantic_power\/css\/theme.css":1,"sites\/all\/themes\/atlantic_power\/css\/field_collection.theme.css":1}},"superfish":{"1":{"id":"1","sf":{"delay":"0","animation":{"opacity":"show","height":"show"},"speed":"\u0027fast\u0027","autoArrows":false,"dropShadows":false,"disableHI":false},"plugins":{"touchscreen":{"mode":"useragent_predefined"},"supposition":false,"bgiframe":false}}},"field_group":{"html-element":"default"}});
+//--><!]]>
+</script>
+  <meta name="google-site-verification" content="Q14lxeuobGysVccERC23pt-5nX2so860nTrudElWHw8" />
+</head>
+<body class="html front not-logged-in no-sidebars page-homepage" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <header id="navbar" class=" gradient-none border-none" role="banner">
+  <div class="navbar-inner">
+    <div class="container font-size-small">
+        <div class="region region-top-links">
+    <section id="block-menu-menu-top-links" class="block block-menu pull-right font-size-small">
+
+      
+  <div class="block-content"><ul class='menu nav nav-pills'>
+<li class="first leaf"><a href="http://atlanticpower.investorroom.com/get-news-alerts-by-email">Receive Email Notifications</a></li>
+<li class="last leaf"><a href="/about-us/contact-us">Contact Us</a></li>
+</ul>
+</div>
+
+</section> <!-- /.block -->
+  </div>
+    </div>
+    <div class="container">
+      <div class="logo-container col-xs-3">
+        <a href="/" class="active"><img src="/sites/all/themes/atlantic_power/images/atlantic-power-logo.gif" alt="" /></a>      </div>
+
+      <div id="header" class="pull-left col-xs-9">
+        <div class="row">
+            <div class="region region-header">
+    <section id="block-superfish-1" class="block block-superfish">
+
+      
+  <div class="block-content"><ul id="superfish-1" class="menu sf-menu sf-main-menu sf-horizontal sf-style-none sf-total-items-4 sf-parent-items-4 sf-single-items-0 nav nav-pills"><li id="menu-191-1" class="first odd sf-item-1 sf-depth-1 sf-total-children-6 sf-parent-children-1 sf-single-children-5 menuparent"><a href="/about-us" class="sf-depth-1 menuparent">About Us</a><ul><li id="menu-230-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="/about-us" class="sf-depth-2">Overview</a></li><li id="menu-674-1" class="middle even sf-item-2 sf-depth-2"><a href="/about-us/leadership" class="sf-depth-2">Leadership</a></li><li id="menu-266-1" class="middle odd sf-item-3 sf-depth-2 sf-no-children"><a href="/about-us/codes-conduct" class="sf-depth-2">Codes of Conduct</a></li><li id="menu-860-1" class="middle even sf-item-4 sf-depth-2 sf-no-children"><a href="/ehs" class="sf-depth-2">EHS</a></li><li id="menu-684-1" class="middle odd sf-item-5 sf-depth-2 sf-no-children"><a href="/about-us/contact-us" class="sf-depth-2">Contact Us</a></li><li id="menu-682-1" class="last even sf-item-6 sf-depth-2 sf-no-children"><a href="/about-us/work-us" class="sf-depth-2">Work With Us</a></li></ul></li><li id="menu-192-1" class="middle even sf-item-2 sf-depth-1 sf-total-children-2 sf-parent-children-1 sf-single-children-1 menuparent"><a href="/assets/projects-map" class="sf-depth-1 menuparent">Assets</a><ul><li id="menu-198-1" class="first odd sf-item-1 sf-depth-2"><a href="/assets/projects" class="sf-depth-2">Projects</a></li><li id="menu-199-1" class="last even sf-item-2 sf-depth-2 sf-no-children"><a href="/assets/projects-map" class="sf-depth-2">Project Map</a></li></ul></li><li id="menu-700-1" class="middle odd sf-item-3 sf-depth-1 sf-total-children-2 sf-parent-children-0 sf-single-children-2 menuparent"><a href="http://atlanticpower.investorroom.com/corporate-profile" class="sf-depth-1 menuparent">Investors</a><ul><li id="menu-920-1" class="first odd sf-item-1 sf-depth-2 sf-no-children"><a href="https://investors.atlanticpower.com/Acquisition-by-I-Squared-Capital" class="sf-depth-2">Acquisition By I Squared Capital </a></li><li id="menu-704-1" class="last even sf-item-2 sf-depth-2 sf-no-children"><a href="http://atlanticpower.investorroom.com/securities-filings" class="sf-depth-2">Securities Filings</a></li></ul></li><li id="menu-194-1" class="last even sf-item-4 sf-depth-1 sf-total-children-1 sf-parent-children-0 sf-single-children-1 menuparent"><a href="/media-and-events" class="sf-depth-1 menuparent">Press Releases</a><ul><li id="menu-698-1" class="firstandlast odd sf-item-1 sf-depth-2 sf-no-children"><a href="http://atlanticpower.investorroom.com/press-releases" class="sf-depth-2">Press Releases</a></li></ul></li></ul></div>
+
+</section> <!-- /.block -->
+  </div>
+        </div>
+      </div>
+    </div>
+    <div class="container breadcrumb-wrapper">
+          </div>
+  </div>
+</header>
+
+<div class="main-container container">
+  <div class="row js__equal-height__wrapper">
+    
+    <div class="col-xs-12 js__equal-height">
+
+      
+      <section class="col-xs-12">
+        <a id="main-content"></a>
+                                      <!--<h1 class="page-header">Atlantic Power</h1>-->
+                                                                              
+        
+                  <div id="content-inner">
+              <div class="region region-content">
+    <section id="block-bean-homepage-banner" class="block block-bean">
+
+      
+  <div class="block-content"><div class="entity entity-bean bean-banner gradient__reversed__gradual rounded clearfix">
+        <h2><none></h2>
+      <div class="content">
+    <div class="group-banner-images col-xs-8 col-xs-8__plus padding-all-5" id="bean-banner-full-group-banner-images"><div class="field field-name-field-slot-1-images field-type-image field-label-hidden field-wrapper pull-left"><div  class="field-items cycle-slideshow-banner cycle-slideshow-banner-1"><div  class="field-item odd"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image_-_rounded_tl/public/a1.png?itok=aRlKeIRM" width="221" height="338" alt="" /></div><div  class="field-item even"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image_-_rounded_tl/public/b1.png?itok=pE3EbN0K" width="221" height="338" alt="" /></div><div  class="field-item odd"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image_-_rounded_tl/public/c1.png?itok=Be0SArgi" width="221" height="338" alt="" /></div></div></div><div class="field field-name-field-slot-2-images field-type-image field-label-hidden field-wrapper pull-left margin-left-5"><div  class="field-items cycle-slideshow-banner cycle-slideshow-banner-2"><div  class="field-item odd"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image/public/a2.png?itok=ltv-fIRa" width="221" height="338" alt="" /></div><div  class="field-item even"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image/public/b2.png?itok=8jW3Zkch" width="221" height="338" alt="" /></div><div  class="field-item odd"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image/public/c2.png?itok=xMefyChe" width="221" height="338" alt="" /></div></div></div><div class="field field-name-field-slot-3-images field-type-image field-label-hidden field-wrapper pull-left margin-left-5"><div  class="field-items cycle-slideshow-banner-3"><div  class="field-item odd"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image_-_rounded_br/public/a3.png?itok=QesbGstB" width="221" height="338" alt="" /></div><div  class="field-item even"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image_-_rounded_br/public/b3.png?itok=wOFaozu0" width="221" height="338" alt="" /></div><div  class="field-item odd"><img src="https://www.atlanticpower.com/sites/default/files/styles/banner_image_-_rounded_br/public/c3.png?itok=D0rhKicp" width="221" height="338" alt="" /></div></div></div></div><div class="field field-name-field-banner-cta field-type-text-long field-label-hidden field-wrapper col-xs-4 col-xs-4__minus gradient gradient__reversed lighter-text font-size-larger-1"><div  class="field-items"><div  class="field-item odd"><p style="margin-top: -34px;"><strong><a href="https://investors.atlanticpower.com/Acquisition-by-I-Squared-Capital" style="font-size: 24px">Acquisition by<br />I Squared Capital</a></strong></p>
+
+<p><a href="https://investors.atlanticpower.com/Acquisition-by-I-Squared-Capital">Learn More</a></p>
+
+<hr />
+
+<p><img src="/sites/default/files/imce/lblInvestInPower.gif" alt="Invest in Power" /> Atlantic Power is a leading power generation and infrastructure company with a well-diversified portfolio of assets in the US and Canada.
+<a href="/assets/projects">View our assets</a></p>
+
+<!-- Images -->
+</div></div></div>  </div>
+</div>
+</div>
+
+</section> <!-- /.block -->
+<section id="block-bean-homepage-triblock" class="block block-bean tri-block-wrapper js__equal-height__wrapper">
+
+      
+  <div class="block-content"><div class="entity entity-bean bean-block-group clearfix">
+        <h2><none></h2>
+      <div class="content">
+    <div class="field field-name-field-grouped-blocks field-type-blockreference field-label-hidden field-wrapper"><div  class="field-items js__equal-height__wrapper"><div  class="field-item clearfix pull-left js__equal-height col-xs-4 rounded border col-xs-4__tri col-xx-n__minimal-padding odd"><section id="block-bean-homepage-spotlight" class="block block-bean">
+
+        <h2 class="block-title gradient"><a href="http://www.atlanticpower.com/Media-And-Events.aspx" class="block-title-link">Spotlight <i class="icon icon-search icon__large"></i></a></h2>
+    
+  <div class="block-content"><div class="entity entity-bean bean-spotlight clearfix">
+        <div class="content">
+    <div class="field-collection-container clearfix"><div class="field field-name-field-date-link field-type-field-collection field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><div class="field-collection-view clearfix view-mode-full"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">05/14/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-05-14-Atlantic-Power-Announces-Closing-of-Transaction-With-I-Squared-Capital">Atlantic Power Announces Closing of Transaction With I Squared Capital</a></div></div></div>  </div>
+</div>
+</div></div><div  class="field-item even"><div class="field-collection-view clearfix view-mode-full"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">05/11/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-05-11-Atlantic-Power-Announces-Intention-to-Redeem-Medium-Term-Notes">Atlantic Power Announces Intention to Redeem Medium Term Notes</a></div></div></div>  </div>
+</div>
+</div></div><div  class="field-item odd"><div class="field-collection-view clearfix view-mode-full"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">05/06/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-05-06-Atlantic-Power-Corporation-Releases-First-Quarter-2021-Results">Atlantic Power Corporation Releases First Quarter 2021 Results</a></div></div></div>  </div>
+</div>
+</div></div><div  class="field-item even"><div class="field-collection-view clearfix view-mode-full"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">04/29/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-04-29-Atlantic-Power-Announces-Cancellation-of-Convertible-Debentureholder-Meeting-and-Intention-to-Defease-Convertible-Debentures">Atlantic Power Announces Cancellation of Convertible Debentureholder Meeting and Intention to Defease Convertible Debentures</a></div></div></div>  </div>
+</div>
+</div></div><div  class="field-item odd"><div class="field-collection-view clearfix view-mode-full"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">04/19/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-04-19-Atlantic-Power-Obtains-Final-Court-Order-Approving-Arrangement"> Atlantic Power Obtains Final Court Order Approving Arrangement</a></div></div></div>  </div>
+</div>
+</div></div><div  class="field-item even"><div class="field-collection-view clearfix view-mode-full"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">04/07/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-04-07-Atlantic-Power-Announces-Common-and-Preferred-Shareholder-Approval-of-I-Squared-Transaction">Atlantic Power Announces Common and Preferred Shareholder Approval of I Squared Transaction</a></div></div></div>  </div>
+</div>
+</div></div><div  class="field-item odd"><div class="field-collection-view clearfix view-mode-full"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">04/05/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-04-05-Atlantic-Power-Corporation-Announces-Authorization-of-I-Squared-Transaction-by-Federal-Energy-Regulatory-Commission">Atlantic Power Corporation Announces Authorization of I Squared Transaction by Federal Energy Regulatory Commission</a></div></div></div>  </div>
+</div>
+</div></div><div  class="field-item even"><div class="field-collection-view clearfix view-mode-full"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">04/01/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-04-01-Atlantic-Power-Corporation-Executes-New-Agreement-at-Oxnard-for-2022-and-2023">Atlantic Power Corporation Executes New Agreement at Oxnard for 2022 and 2023</a></div></div></div>  </div>
+</div>
+</div></div><div  class="field-item odd"><div class="field-collection-view clearfix view-mode-full field-collection-view-final"><div class="entity entity-field-collection-item field-collection-item-field-date-link clearfix">
+  <div class="content">
+    <div class="field field-name-field-date-spotlight-item field-type-datetime field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><span class="date-display-single">03/16/2021</span></div></div></div><div class="field field-name-field-link-spotlight-item field-type-link-field field-label-hidden field-wrapper"><div  class="field-items"><div  class="field-item odd"><a href="https://investors.atlanticpower.com/2021-03-16-Atlantic-Power-Announces-Successful-Completion-of-Medium-Term-Note-Consent-Solicitation-Process-and-Adjournment-of-Meeting-of-Convertible-Debentureholders">Atlantic Power Announces Successful Completion of Medium Term Note Consent Solicitation; Adjournment of Debentureholder Meeting</a></div></div></div>  </div>
+</div>
+</div></div></div></div></div>  </div>
+</div>
+</div>
+
+</section> <!-- /.block --></div><div  class="field-item clearfix pull-left js__equal-height col-xs-4 rounded border col-xs-4__tri col-xx-n__minimal-padding even"><section id="block-block-1" class="block block-block">
+
+        <h2 class="block-title gradient"><a href="http://www.atlanticpower.com/about-us/leadership" class="block-title-link">Our Team <i class="icon icon-group icon__large"></i></a></h2>
+    
+  <div class="block-content"><p><img src="/sites/default/files/imce/homeOurTeam.jpg" alt="Our Team" /></p>
+
+<p><a href="about-us/leadership">Meet the Atlantic Power team </a></p>
+
+<p><a href="http://atlanticpower.investorroom.com/annual-reports">Read our most recent Annual Results</a></p>
+
+<p><a href="http://atlanticpower.investorroom.com/presentations">Read our most recent Investor Presentation</a></p>
+
+<!-- Images -->
+</div>
+
+</section> <!-- /.block --></div></div></div>  </div>
+</div>
+</div>
+
+</section> <!-- /.block -->
+  </div>
+          </div>
+        
+              </section>
+
+      
+    </div>
+
+  </div>
+  <footer class="footer container font-size-small">
+  <span class="pull-left">Copyright 2021 Atlantic Power Corporation. All rights reserved. Website by <a href="http://www.bostoninteractive.com">Boston Interactive</a></span>
+      <div class="region region-footer">
+    <section id="block-menu-menu-footer-links" class="block block-menu pull-right">
+
+      
+  <div class="block-content"><ul class='menu nav nav-pills nav-pills__plain'>
+<li class="first leaf"><a href="/about-us/contact-us">Contact Us</a></li>
+<li class="leaf"><a href="/disclaimer">Disclaimer</a></li>
+<li class="last leaf"><a href="/privacy">Privacy</a></li>
+</ul>
+</div>
+
+</section> <!-- /.block -->
+  </div>
+  </footer>
+</div>
+  <script type="text/javascript" src="https://www.atlanticpower.com/sites/default/files/js/js_K9_waWLOYOrUD0gEZZ0cfgSy9Z1ftvMN-Exn3Jaw5A8.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"1e7f13be6c","applicationID":"42010645","transactionName":"ZwYBMRcFXxFTW0JQCV5MIgYRDV4MHV1bSRJJPBMEAgFuB19IQkA=","queueTime":0,"applicationTime":544,"atts":"S0ECR18fTB8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

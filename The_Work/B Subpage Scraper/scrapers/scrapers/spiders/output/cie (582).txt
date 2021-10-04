@@ -1,0 +1,10 @@
+QuoteMedia’s Data Feed is a comprehensive, ultra-low latency, tick-by-tick enterprise level
+                    streaming market data solution. QuoteMedia’s Data Feed has been benchmarked as one of the
+                    fastest data streams in the industry, with all sources of latency removed and data processing
+                    fully optimized to ensure single digit millisecond performance. State of the art technology
+                    delivers normalized data from all North American exchanges with ultra-low latency, complete
+                    redundancy, and superior accuracy and reliability.QuoteMedia’s Data Feed contains complete coverage of all North American Exchanges and
+                    ECNs, including equities, options, futures, commodities, currencies, mutual funds, and indices.
+                    The data streams are tick-by-tick, in real-time or delayed, and completely normalized for ease of
+                    use. Supplemental fundamental, historical, and analytical data is also available, keyed to the
+                    same symbology for a complete market data solution.QuoteMedia offers flexible delivery options, including TCP or UDP protocols, dedicat

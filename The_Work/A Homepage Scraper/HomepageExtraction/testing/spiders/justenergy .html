@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"32397309"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="shortlink" href="http://investors.justenergy.com/" />
+<meta property="og:site_name" content="Just Energy Group Inc." />
+<link rel="canonical" href="https://investors.justenergy.com/investor-relations/" />
+<meta property="og:type" content="website" />
+<meta name="description" content="The Investor Relations website contains information about Just Energy Group Inc.&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta property="og:url" content="https://investors.justenergy.com/investor-relations" />
+<meta property="og:title" content="Investor Relations | Just Energy Group Inc." />
+<meta name="referrer" content="no-referrer" />
+<meta property="og:description" content="The Investor Relations website contains information about Just Energy Group Inc.&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/g/files/knoqqb34966/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://investors.justenergy.com/investor-relations" />
+<link rel="revision" href="https://investors.justenergy.com/investor-relations" />
+
+    <title>Investor Relations | Just Energy Group Inc.</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb34966/files/css/css_rfjm6CJ_0NMC2yDcg2-ndYMEx1qfufTwwHO3KArx5Oc.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb34966/files/css/css_iYVZ11x6bHP2LJXqOyWHdHe_F5-kKXXOlUkuhhRCA5Y.css" />
+<link rel="stylesheet" media="all" href="//use.fontawesome.com/releases/v5.2.0/css/all.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb34966/files/css/css_gSBVOOySgTaTr2lo6pMQ6BHtGYEKSLI9nhuso8YJRz0.css" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb34966/files/css/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU.css" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb34966/files/css/css_S3a2Hi_GgVf14I4cern8cTq1NA6Z6c0PdPIzqwn3ghc.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb34966/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8681512-6"></script> 
+<script> 
+window.dataLayer = window.dataLayer || []; 
+function gtag(){dataLayer.push(arguments);} 
+gtag('js', new Date()); 
+
+gtag('config', 'UA-8681512-6'); 
+</script> 
+  </head>
+  <body class="body-sidebars-first nir-node nir-node--type-nir-landing-page nir-node--5806 path-frontpage page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#main-menu">
+        Skip to main navigation
+      </a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<header>
+    <div class="container">
+                <span class="logo">
+        <a id="dnn_dnnHeader_dnnLOGO_hypLogo" title="Just Energy" href="https://www.justenergy.com/">
+            <img id="dnn_dnnHeader_dnnLOGO_imgLogo" src="/sites/g/files/knoqqb34966/themes/site/nir_pid2972/dist/images/just-energy-logo.png?ver=2018-05-07-132828-607" alt="Just Energy" />
+        </a>
+      </span>
+        <div class="buttons">
+
+            <button type="button" class="btn-shop content-hidden-country-ca d-inline-block" onclick="location.href='https://us.shop.justenergy.com'">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart" viewBox="0 0 37 40">
+                    <path d="M36.5 34.8L33.3 8h-5.9C26.7 3.9 23 .8 18.5.8S10.3 3.9 9.6 8H3.7L.5 34.8c-.2 1.5.4 2.4.9 3 .5.5 1.4 1.2 3.1 1.2h28c1.3 0 2.4-.4 3.1-1.3.7-.7 1-1.8.9-2.9zm-18-30c2.2 0 4.1 1.4 4.7 3.2h-9.5c.7-1.9 2.6-3.2 4.8-3.2zM4.5 35l2.8-23h2.2v3c0 1.1.9 2 2 2s2-.9 2-2v-3h10v3c0 1.1.9 2 2 2s2-.9 2-2v-3h2.2l2.8 23h-28z"></path>
+                </svg>
+            </button>
+            <button type="button" class="btn-shop content-show-country-ca content-hidden d-inline-block" onclick="location.href='https://ca.shop.justenergy.com'">
+                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart" viewBox="0 0 37 40">
+                    <path d="M36.5 34.8L33.3 8h-5.9C26.7 3.9 23 .8 18.5.8S10.3 3.9 9.6 8H3.7L.5 34.8c-.2 1.5.4 2.4.9 3 .5.5 1.4 1.2 3.1 1.2h28c1.3 0 2.4-.4 3.1-1.3.7-.7 1-1.8.9-2.9zm-18-30c2.2 0 4.1 1.4 4.7 3.2h-9.5c.7-1.9 2.6-3.2 4.8-3.2zM4.5 35l2.8-23h2.2v3c0 1.1.9 2 2 2s2-.9 2-2v-3h10v3c0 1.1.9 2 2 2s2-.9 2-2v-3h2.2l2.8 23h-28z"></path>
+                </svg>
+            </button>
+            <button type="button" class="btn-search"><i class="fa fa-search"></i></button>
+
+            <button type="button" class="btn-nav"><i class="fa fa-navicon"></i></button>
+        </div>
+                <nav>
+            <div class="nav-wrap">
+                                    
+                        
+    <h2 class="visually-hidden" id="block-investorrelations-2-menu">Investor Relations</h2>
+    
+
+                
+    
+                                                    <ul class="nav primary">
+                                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/" target="" rel="" class="nav-link is-active" title="Main Investor Relations Page" data-drupal-link-system-path="&lt;front&gt;">Overview</a>
+                                                </li>
+                                                                <li>
+                    <a href="/stock-dividend-info/stock-quote-chart" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5911">Stock &amp; Dividend Info</a>
+                    <button type="button" class="secondary"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                                                                <div class="secondary-container">
+                <ul>
+                                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/stock-dividend-info/stock-quote-chart" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5911">Stock &amp; Dividend Info</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/stock-dividend-info/stock-quote-chart" class="nav-link" data-drupal-link-system-path="node/5911">Stock Quote &amp; Chart</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/stock-dividend-info/analyst-coverage" class="nav-link" data-drupal-link-system-path="node/5896">Analyst Coverage</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/stock-dividend-info/dividends-history" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5931">Dividends History</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/stock-dividend-info/tax-information" target="" rel="" class="nav-link" data-drupal-link-system-path="node/8656">Tax Information</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/stock-dividend-info/investment-calculator" class="nav-link" data-drupal-link-system-path="node/5926">Investment Calculator</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/registrar-transfer-agent-auditor" target="" rel="" class="nav-link" data-drupal-link-system-path="node/9491">Registrar, Transfer Agent &amp; Auditor</a>
+                                                </li>
+            
+                            </ul>
+                </div>
+            
+        
+    
+                                </li>
+                                                                <li>
+                    <a href="/news-events/press-releases" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5816">News &amp; Events</a>
+                    <button type="button" class="secondary"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                                                                <div class="secondary-container">
+                <ul>
+                                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/news-events/press-releases" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5816">News &amp; Events</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/news-events/press-releases" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5816">Press Releases</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/news-events/events-presentations" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5826">Events &amp; Presentations</a>
+                                                </li>
+            
+                            </ul>
+                </div>
+            
+        
+    
+                                </li>
+                                                                <li>
+                    <a href="/financials/quarterly-results-annual-reports" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5986">Financials</a>
+                    <button type="button" class="secondary"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                                                                <div class="secondary-container">
+                <ul>
+                                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/financials/quarterly-results-annual-reports" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5986">Financials</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/financials/quarterly-results-annual-reports" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5986">Quarterly Results &amp; Annual Reports</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/financials/proxy-filings" target="" rel="" class="nav-link" data-drupal-link-system-path="node/8966">Proxy Filings</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/financials/other-filings" target="" rel="" class="nav-link" data-drupal-link-system-path="node/8661">Other Filings</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/financials/sec-filings" class="nav-link" data-drupal-link-system-path="node/6016">SEC Filings</a>
+                                                </li>
+            
+                            </ul>
+                </div>
+            
+        
+    
+                                </li>
+                                                                <li>
+                    <a href="/corporate-governance/overview" class="nav-link" data-drupal-link-system-path="node/5836">Corporate Governance</a>
+                    <button type="button" class="secondary"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                                                                <div class="secondary-container">
+                <ul>
+                                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/corporate-governance/overview" class="nav-link" data-drupal-link-system-path="node/5836">Overview</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/corporate-governance/board-of-directors" class="nav-link" data-drupal-link-system-path="node/5841">Board of Directors</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="https://www.justenergy.com/about-us/our-leadership-team" target="" rel="" class="nav-link">Management Team</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/corporate-governance/board-committees" class="nav-link" data-drupal-link-system-path="node/5851">Board Committees</a>
+                                                </li>
+            
+                            </ul>
+                </div>
+            
+        
+    
+                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/investor-faqs" class="nav-link" data-drupal-link-system-path="node/5941">Investor FAQs</a>
+                                                </li>
+                                                                <li>
+                    <a href="/contact-us/information-request" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5966">Contact Us</a>
+                    <button type="button" class="secondary"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                                                                                <div class="secondary-container">
+                <ul>
+                                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/contact-us/information-request" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5966">Contact Us</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/contact-us/information-request" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5966">Information Request</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/contact-us/email-alerts" class="nav-link" data-drupal-link-system-path="node/5946">Email Alerts</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/contact-us/rss-feeds" class="nav-link" data-drupal-link-system-path="node/5951">RSS Feeds</a>
+                                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="/contact-us/contact-information" target="" rel="" class="nav-link" data-drupal-link-system-path="node/5981">Contact Information</a>
+                                                </li>
+            
+                            </ul>
+                </div>
+            
+        
+    
+                                </li>
+                                                                <li>
+                    <button type="button" class="back"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+                                        <a href="https://www.justenergy.com/about-us" target="" rel="" class="nav-link">About Us</a>
+                                                </li>
+            
+                            </ul>
+            
+        
+    
+
+    
+        
+                
+                                <ul class="nav tertiary">
+
+                    <li><a href="tel:1-866-864-7668" class="nav-link h-phone"><i class="fa fa-phone" aria-hidden="true"></i>1-866-864-7668</a></li>
+                    <li><a class="nav-link" href="https://www.justenergy.com/contact-us"><i class="fa fa-question" aria-hidden="true"></i> Contact Us</a></li>
+                    <li><a class="nav-link" href="https://www.justenergy.com/myaccount"><i class="fa fa-user" aria-hidden="true"></i> My Account</a></li>
+                    <li class="cart-link content-hidden-country-ca">
+                        <a href="https://us.shop.justenergy.com/cart" class="nav-link">
+                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart" viewBox="0 0 37 40">
+                                <path d="M36.5 34.8L33.3 8h-5.9C26.7 3.9 23 .8 18.5.8S10.3 3.9 9.6 8H3.7L.5 34.8c-.2 1.5.4 2.4.9 3 .5.5 1.4 1.2 3.1 1.2h28c1.3 0 2.4-.4 3.1-1.3.7-.7 1-1.8.9-2.9zm-18-30c2.2 0 4.1 1.4 4.7 3.2h-9.5c.7-1.9 2.6-3.2 4.8-3.2zM4.5 35l2.8-23h2.2v3c0 1.1.9 2 2 2s2-.9 2-2v-3h10v3c0 1.1.9 2 2 2s2-.9 2-2v-3h2.2l2.8 23h-28z"></path>
+                            </svg> <span class="sr-only">Cart</span></a>
+                    </li>
+                    <li class="cart-link content-show-country-ca content-hidden d-sm-none">
+                        <a href="https://ca.shop.justenergy.com/cart" class="nav-link">
+                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-cart" viewBox="0 0 37 40">
+                                <path d="M36.5 34.8L33.3 8h-5.9C26.7 3.9 23 .8 18.5.8S10.3 3.9 9.6 8H3.7L.5 34.8c-.2 1.5.4 2.4.9 3 .5.5 1.4 1.2 3.1 1.2h28c1.3 0 2.4-.4 3.1-1.3.7-.7 1-1.8.9-2.9zm-18-30c2.2 0 4.1 1.4 4.7 3.2h-9.5c.7-1.9 2.6-3.2 4.8-3.2zM4.5 35l2.8-23h2.2v3c0 1.1.9 2 2 2s2-.9 2-2v-3h10v3c0 1.1.9 2 2 2s2-.9 2-2v-3h2.2l2.8 23h-28z"></path>
+                            </svg> <span class="sr-only">Cart</span></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div id="dnn_ContentPane">
+        <div class="DnnModule DnnModule-DNN_HTML DnnModule-1487 DnnVersionableControl">
+            <a name="1487"></a>
+
+            <section>
+                <div id="dnn_ctr1487_ContentPane">
+                    <!-- Start_Module_1487 -->
+                    <div id="dnn_ctr1487_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                        <div id="dnn_ctr1487_HtmlModule_lblContent">
+                            <section class="banner banner-large banner-homepage angular-hide" style="background-image: url(/sites/g/files/knoqqb34966/themes/site/nir_pid2972/dist/images/main-banner.jpg); background-position: 100% 60%;" rel="background-image: url(/sites/g/files/knoqqb34966/themes/site/nir_pid2972/dist/images/main-banner.jpg); background-position: 100% 60%;">
+                                <div class="container">
+                                    <div class="header-title">
+                                        <h1>Investor Relations </h1>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                    </div>
+                    <!-- End_Module_1487 -->
+                </div>
+            </section>
+        </div>
+        <div class="DnnModule DnnModule-DNN_Angular_Container DnnModule-1488">
+            <a name="1488"></a>
+
+            <section>
+                <div id="dnn_ctr1488_ContentPane">
+                    <!-- Start_Module_1488 -->
+                    <div id="dnn_ctr1488_ModuleContent" class="DNNModuleContent ModDNNAngularContainerC">
+
+                    </div>
+                    <!-- End_Module_1488 -->
+                </div>
+            </section>
+        </div>
+
+          <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-nir-pid2972-content" class="block--system-main-block block--system-main-block--5806 block--content--system-main-block block--content--system-main-block--5806 block--dab156e0-58f9-4482-95a8-5d4caa4d60cf block--dab156e0-58f9-4482-95a8-5d4caa4d60cf--5806 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              Investor Relations
+          </h1>
+    
+
+  <div>
+    
+<div class="DnnModule DnnModule-DNN_HTML DnnModule-2517 DnnVersionableControl">
+  <a name="2517"></a>
+
+  <section>
+    <div id="dnn_ctr2517_ContentPane">
+      <!-- Start_Module_2517 -->
+      <div id="dnn_ctr2517_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+        <div id="dnn_ctr2517_HtmlModule_lblContent">
+          <div class="div-homepage-leaf content text-center">
+            <div class="container">
+                <div class="block-region-slider"><div class="block-content--nir-lp-block block-content--nir-lp-block--9401 block--block-content35019ecf-58f2-44ce-b201-f3634da694fb block--block-content35019ecf-58f2-44ce-b201-f3634da694fb--5806 block--slider--block-content--35019ecf-58f2-44ce-b201-f3634da694fb block--slider--block-content--35019ecf-58f2-44ce-b201-f3634da694fb--5806 block--85fbe101-2e16-4a76-9a54-2f9c1b406490 block--85fbe101-2e16-4a76-9a54-2f9c1b406490--5806 block block-block-content block-block-content35019ecf-58f2-44ce-b201-f3634da694fb">
+  
+    
+      
+            <div class="field field--name-field-nir-lp-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-lp-block-body field--type-text-long field--label-hidden field__item"><div class="row content" id="profile-core-business">
+<div class="col-md-12 text-center">
+<p>On March 9, 2021, Just Energy filed for protection under the <em>Companies’ Creditors Arrangement Act </em>(Canada) and under Chapter 15 of the Bankruptcy Code in the United States, to learn more please click <a href="http://cfcanada.fticonsulting.com/justenergy/default.htm" target="_blank">here</a>.</p>
+</div>
+
+<div class="company overview">
+<p>Just Energy Group Inc. is a retail energy provider specializing in electricity and natural gas commodities and bringing energy efficient solutions and renewable energy options to customers.</p>
+</div>
+
+<p> </p>
+</div>
+</div>
+      
+</div>
+      
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- End_Module_2517 -->
+    </div>
+  </section>
+</div>
+
+
+<div class="DnnModule DnnModule-DNN_HTML DnnModule-1489 DnnVersionableControl">
+  <a name="1489"></a>
+
+  <section>
+    <div id="dnn_ctr1489_ContentPane">
+      <!-- Start_Module_1489 -->
+      <div id="dnn_ctr1489_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+        <div id="dnn_ctr1489_HtmlModule_lblContent">
+          <div class="container-grey div-three-column">
+            <div class="container">
+              <div class="row content pt-100 pb-100">
+                  <div class="block-region-slidergutter">
+  
+    
+          <div class="col-md-12 text-center">
+        <h2 style="font-size: 28pt;">
+            Events
+        </h2>
+    </div>
+  
+
+    <div class="row">
+              
+
+
+
+                <div class="col-md-4 col-sm-4">
+                  <div class="div-block text-center">
+                    <div class="div-text">
+                                                  <h4>
+                              
+<div class="field-nir-event-title">
+      <div class="field__item"><a href="/events/event-details/q2-fy2021" hreflang="en">Q2 FY2021</a></div>
+  </div>
+                          </h4>
+                                                                          <p class="nir-widget--field nir-widget--event--date">
+                              
+      
+      
+            Nov 12, 2020 at 10:00 AM EST
+      
+                          </p>
+                                            </div>
+                  </div>
+                </div>
+
+
+
+
+
+                <div class="col-md-4 col-sm-4">
+                  <div class="div-block text-center">
+                    <div class="div-text">
+                                                  <h4>
+                              
+<div class="field-nir-event-title">
+      <div class="field__item"><a href="/events/event-details/q1-fy2021" hreflang="en">Q1 FY2021</a></div>
+  </div>
+                          </h4>
+                                                                          <p class="nir-widget--field nir-widget--event--date">
+                              
+      
+      
+            Aug 28, 2020 at 11:00 AM EDT
+      
+                          </p>
+                                            </div>
+                  </div>
+                </div>
+
+
+
+
+
+                <div class="col-md-4 col-sm-4">
+                  <div class="div-block text-center">
+                    <div class="div-text">
+                                                  <h4>
+                              
+<div class="field-nir-event-title">
+      <div class="field__item"><a href="/events/event-details/q4-fy2020" hreflang="en">Q4 FY2020</a></div>
+  </div>
+                          </h4>
+                                                                          <p class="nir-widget--field nir-widget--event--date">
+                              
+      
+      
+            Jul 8, 2020 at 11:30 AM EDT
+      
+                          </p>
+                                            </div>
+                  </div>
+                </div>
+
+
+      
+</div> 
+
+      
+
+  	<div class="text-center">
+		<a href="/news-events/events-presentations" class="btn btn-primary enroll-now-btn">View All</a>
+    </div>
+
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- End_Module_1489 -->
+    </div>
+  </section>
+</div>
+
+
+<div class="DnnModule DnnModule-DNN_HTML DnnModule-1490 DnnVersionableControl">
+    <a name="1490"></a>
+
+    <section>
+        <div id="dnn_ctr1490_ContentPane">
+            <!-- Start_Module_1490 -->
+            <div id="dnn_ctr1490_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                <div id="dnn_ctr1490_HtmlModule_lblContent">
+                    <div class="div-two-column">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 div-left">
+                                    <div>
+                                    <ul class="nav-tabs">
+                                        <li>TSX</li>
+                                        <li>NYSE</li>
+                                    </ul>
+                                    </div>
+                                    <div class="block-region-column1"><div data-storage-id="node:5806:full:27496" data-uuid="ef6147b4-5c48-4bb5-a249-efadc198f426" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--5806 block--column1--market-data-block__stock-quote block--column1--market-data-block__stock-quote--5806 block--ef6147b4-5c48-4bb5-a249-efadc198f426 block--ef6147b4-5c48-4bb5-a249-efadc198f426--5806 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+    
+      
+
+<div class='quote-wrap user-toggle-off stock-quote__featured'>
+  <div class="quote-wrapper">
+                            <div class="stock-quote" data-exchange="">
+        <div class="exchange"></div>
+      <div class="quote-price"></div>
+                <div class="price-change "></div>
+              <time>May 18, 2021 8:29 AM EDT</time>
+    </div>
+                          <div class="stock-quote" data-exchange="">
+        <div class="exchange"></div>
+      <div class="quote-price"></div>
+                <div class="price-change "></div>
+              <time>May 18, 2021 8:29 AM EDT</time>
+    </div>
+    </div>
+</div>
+
+  </div>
+<div class="block--attribution-block__stock-info-attribution__thomson-reuters block--attribution-block__stock-info-attribution__thomson-reuters--5806 block--column1--attribution-block__stock-info-attribution__thomson-reuters block--column1--attribution-block__stock-info-attribution__thomson-reuters--5806 block--2f58128a-1a49-4441-8f00-f948675b17d4 block--2f58128a-1a49-4441-8f00-f948675b17d4--5806 block block-nir-attribution-block block-attribution-block__stock-info-attribution__thomson-reuters">
+  
+    
+      <p>
+  Data Provided by Refinitiv. Minimum 15 minutes delayed.</p>
+
+  </div>
+</div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 div-right">
+                                    <div class="block-region-column2"><div class="block--nir-assets__widget block--nir-assets__widget--5806 block--column2--nir-assets__widget block--column2--nir-assets__widget--5806 block--f8049b4f-84f6-4abe-9086-193bffd3e573 block--f8049b4f-84f6-4abe-9086-193bffd3e573--5806 block block-nir-assets block-nir-assets__widget">
+  
+    
+      <div class="nir-widget">
+      <h2>
+      Financial Reports
+    </h2>
+    <div class="nir-widget--content">
+        <div class="nir-widget--list">
+              
+<article role="article" class="clearfix node node--nir-asset--nir-widget-list node--type-nir-asset node--view-mode-nir-widget-list">
+
+  
+      <div class="nir-widget--field nir-widgets--asset--title">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investors.justenergy.com/static-files/493e020f-2efb-4e0a-9d0d-2c8346ec9d85" type="application/pdf">Third Quarter Report Fiscal 2021</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+  
+  
+  
+  
+  
+  
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-asset--nir-widget-list node--type-nir-asset node--view-mode-nir-widget-list">
+
+  
+      <div class="nir-widget--field nir-widgets--asset--title">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investors.justenergy.com/static-files/d0406672-419d-4ce0-aee0-a8f4672a5622" type="application/pdf">Second Quarter Report Fiscal 2021</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+  
+  
+  
+  
+  
+  
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-asset--nir-widget-list node--type-nir-asset node--view-mode-nir-widget-list">
+
+  
+      <div class="nir-widget--field nir-widgets--asset--title">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investors.justenergy.com/static-files/58b4233b-e2ab-49f0-8441-2320ee2a409f" type="application/pdf">First Quarter Report Fiscal 2021</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+  
+  
+  
+  
+  
+  
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-asset--nir-widget-list node--type-nir-asset node--view-mode-nir-widget-list">
+
+  
+      <div class="nir-widget--field nir-widgets--asset--title">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investors.justenergy.com/static-files/595f8c08-9465-4f4e-b60b-0c70ecbcfafd" type="application/pdf">2020 Annual Report</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+  
+  
+  
+  
+  
+  
+
+  
+</article>
+
+          </div>
+    <div class="nir-widget--pager">
+      
+    </div>
+    <div class="nir-widget--total-results">
+      
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End_Module_1490 -->
+        </div>
+    </section>
+</div>
+
+
+<div class="DnnModule DnnModule-DNN_HTML DnnModule-1491 DnnVersionableControl">
+    <a name="1491"></a>
+
+    <section>
+        <div id="dnn_ctr1491_ContentPane">
+            <!-- Start_Module_1491 -->
+            <div id="dnn_ctr1491_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                <div id="dnn_ctr1491_HtmlModule_lblContent">
+                    <div class="div-carousel-home content" style="background-image: url(sites/g/files/knoqqb34966/themes/site/nir_pid2972/dist/images/green-energy-main-justenergy.jpg);">
+                        <div class="container pt-100 pb-100">
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End_Module_1491 -->
+        </div>
+    </section>
+
+</div>
+
+
+<div class="DnnModule DnnModule-DNN_HTML DnnModule-1492 DnnVersionableControl">
+
+
+    <section>
+        <div id="dnn_ctr1492_ContentPane">
+            <!-- Start_Module_1492 -->
+            <div id="dnn_ctr1492_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                <div id="dnn_ctr1492_HtmlModule_lblContent">
+
+
+                    <section class="content pt-100 mg-b-20">
+
+                            <div class="block-region-footercolumn1"><div class="block--nir-news__widget block--nir-news__widget--5806 block--footercolumn1--nir-news__widget block--footercolumn1--nir-news__widget--5806 block--6ab05309-eff2-44b6-915a-fbeb7f566271 block--6ab05309-eff2-44b6-915a-fbeb7f566271--5806 block block-nir-news block-nir-news__widget">
+  
+    
+          <h2 class="text-center mb-5">Press Releases</h2>
+<div class="owl-carousel products-carousel" id="productsCarousel-fixed">
+
+    
+              
+
+<div class="item">
+  <h4>Just Energy Celebrates Earth Month Beyond April with Special Customer Promotions</h4>
+    <p>April 22, 2021</p>
+    
+  
+    <a href="/news-releases/news-release-details/just-energy-celebrates-earth-month-beyond-april-special-customer" class="btn btn-arrow" id="link-ecobee">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+</div>
+
+
+
+<div class="item">
+  <h4>Just Energy Provides Update on ERCOT Resettlements</h4>
+    <p>April 21, 2021</p>
+    
+  
+    <a href="/news-releases/news-release-details/just-energy-provides-update-ercot-resettlements" class="btn btn-arrow" id="link-ecobee">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+</div>
+
+
+
+<div class="item">
+  <h4>Just Energy Provides Update on CCAA and Chapter 15 Processes</h4>
+    <p>April 2, 2021</p>
+    
+  
+    <a href="/news-releases/news-release-details/just-energy-provides-update-ccaa-and-chapter-15-processes" class="btn btn-arrow" id="link-ecobee">Read More <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+
+</div>
+
+
+      
+      
+
+      
+</div>
+  </div>
+</div>
+                                                    <div class="text-center">
+                            <a href="/news-events/press-releases" class="btn btn-primary enroll-now-btn">View All</a>
+                        </div><br/>
+
+                    </section>
+                </div>
+
+            </div>
+            <!-- End_Module_1492 -->
+        </div>
+    </section>
+
+</div>
+
+<div class="DnnModule DnnModule-DNN_HTML DnnModule-1492 DnnVersionableControl">
+
+
+    <section>
+        <div id="dnn_ctr1492_ContentPane">
+            <!-- Start_Module_1492 -->
+            <div id="dnn_ctr1492_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                <div id="dnn_ctr1492_HtmlModule_lblContent">
+
+
+                    <section class="content mg-t-20 pb-100">
+                        <div class="container text-center">
+                            <div class="block-region-footercolumn2"><div class="block-content--nir-lp-block block-content--nir-lp-block--9376 block--block-content5c16e9a5-1f7e-4bde-8a24-f4ccd0244e8a block--block-content5c16e9a5-1f7e-4bde-8a24-f4ccd0244e8a--5806 block--footercolumn2--block-content--5c16e9a5-1f7e-4bde-8a24-f4ccd0244e8a block--footercolumn2--block-content--5c16e9a5-1f7e-4bde-8a24-f4ccd0244e8a--5806 block--ba81ac4d-c704-4bbd-840e-a0a75b854410 block--ba81ac4d-c704-4bbd-840e-a0a75b854410--5806 block block-block-content block-block-content5c16e9a5-1f7e-4bde-8a24-f4ccd0244e8a">
+  
+      <h2>IR Contact</h2>
+    
+      
+            <div class="field field--name-field-nir-lp-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-lp-block-body field--type-text-long field--label-hidden field__item"><div class="row">
+<div class="col-md-6"><strong>Investor Relations</strong><br />
+info@justenergy.com</div>
+
+<div class="col-md-6"><strong>Alpha IR Group</strong><br />
+617.982.0475<br />
+JE@alpha-ir.com
+<p> </p>
+</div>
+</div></div>
+      
+</div>
+      
+  </div>
+</div>
+                        </div>
+
+
+
+                    </section>
+                </div>
+
+            </div>
+            <!-- End_Module_1492 -->
+        </div>
+    </section>
+
+</div>
+
+
+
+
+<div class="DnnModule DnnModule-DNN_HTML DnnModule-1493 DnnVersionableControl">
+    <a name="1493"></a>
+
+    <section>
+        <div id="dnn_ctr1493_ContentPane">
+            <!-- Start_Module_1493 -->
+            <div id="dnn_ctr1493_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                <div id="dnn_ctr1493_HtmlModule_lblContent">
+                    <div class="div-enroll-option" style="background-image: url(sites/g/files/knoqqb34966/themes/site/nir_pid2972/dist/images/subscribe-bg.png);">
+                        <div class="container">
+                            <div class="row content pt-100">
+                                <div class="col-md-12">
+                                    <div class="text-center">
+
+                                        <div class="block-region-footercolumn3"><div class="block-content--nir-lp-block block-content--nir-lp-block--9426 block--block-contentc1189bba-4a95-4c9d-848c-4de16d4adc39 block--block-contentc1189bba-4a95-4c9d-848c-4de16d4adc39--5806 block--footercolumn3--block-content--c1189bba-4a95-4c9d-848c-4de16d4adc39 block--footercolumn3--block-content--c1189bba-4a95-4c9d-848c-4de16d4adc39--5806 block--321ccbb3-08d7-4097-9d93-d53e09c8f0ba block--321ccbb3-08d7-4097-9d93-d53e09c8f0ba--5806 block block-block-content block-block-contentc1189bba-4a95-4c9d-848c-4de16d4adc39">
+  
+    
+      
+            <div class="field field--name-field-nir-lp-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-lp-block-body field--type-text-long field--label-hidden field__item"><div class="text-center">
+<h2>Email Alerts</h2>
+
+<p>Sign up to receive email alerts whenever Just Energy posts new information to the site.</p>
+
+<p class="text-orange"><a class="btn btn-primary enroll-now-btn" href="/contact-us/email-alerts">Click Here</a></p>
+</div>
+</div>
+      
+</div>
+      
+  </div>
+</div>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- End_Module_1493 -->
+        </div>
+    </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+
+  </div>
+<div id="block-nir-pid2972-websitenoticeblock" class="block--website-notice-block block--website-notice-block--5806 block--content--website-notice-block block--content--website-notice-block--5806 block--4921e3cd-193b-43f4-b2b2-e5030ebcca23 block--4921e3cd-193b-43f4-b2b2-e5030ebcca23--5806 block block-nir-website-notices block-website-notice-block">
+  
+    
+      
+  </div>
+
+  </div>
+
+
+
+
+
+    </div>
+</main>
+
+<section class="toolkit-section">
+<div class="container">
+    <div class="row">
+
+            <div class="ir-tools">
+            
+                        
+    <h2 class="visually-hidden" id="block-toolkit-menu">Toolkit</h2>
+    
+
+                
+<div id="ndq-tools-wrap">
+    <ul id="ndq-tools">
+                                                                
+                
+                <li >
+                    <a href="javascript:window.print();" rel="nofollow" title="Print this Page" alt="Print this page">
+                        <div class="ndqicon-print-2">
+                            <span style="opacity: 0;">Print page</span>
+                        </div>
+                    </a>
+                </li>
+
+                                                        <li >
+                        <a href="/contact-us/email-alerts" title="Email Alerts" alt="Email Alerts">
+                            <div  class="ndqicon-alerts">
+                                <span style="opacity: 0;">Email Alerts</span>
+                            </div>
+                        </a>
+                    </li>
+                                                        <li >
+                        <a href="/contact-us/rss-feeds" title="RSS Feeds" alt="RSS Feeds">
+                            <div  class="ndqicon-rss-1">
+                                <span style="opacity: 0;">RSS Feeds</span>
+                            </div>
+                        </a>
+                    </li>
+                                                        <li >
+                        <a href="/contact-us/contact-information" title="Contact IR" alt="Contact IR">
+                            <div  class="ndqicon-chair">
+                                <span style="opacity: 0;">Contact IR</span>
+                            </div>
+                        </a>
+                    </li>
+                                    
+
+        
+
+    </ul>
+
+</div>
+        
+        </div>
+        </div>
+</div>
+</section>
+
+<footer>
+    <div id="dnn_FooterPane">
+        <div class="DnnModule DnnModule-DNN_HTML DnnModule-1494 DnnVersionableControl">
+            <a name="1494"></a>
+
+            <section>
+                <div id="dnn_ctr1494_ContentPane">
+                    <!-- Start_Module_1494 -->
+                    <div id="dnn_ctr1494_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                        <div id="dnn_ctr1494_HtmlModule_lblContent">
+
+
+                            <div class="footer-Links">
+                                <div class="container" style="overflow:hidden;">
+                                    <div class="footer-flex">
+                                        <div class="footer-col">
+                                            <ul>
+                                                <li class="footer-col-title" onclick="s.tl(true,'o','footer-expander-about-us')"><strong>About Us</strong></li>
+                                                <li><a href="https://www.justenergy.com/about-us" onclick="s.tl(this,'o','footer-about-just-energy')">About Just Energy</a></li>
+                                                <li><a href="https://www.justenergy.com/about-us/in-the-news" onclick="s.tl(this,'o','footer-in-the-news')">In the News</a></li>
+                                                <li><a href="https://www.justenergy.com/blog" onclick="s.tl(this,'o','footer-blog')">Blog</a></li>
+                                                <li><a href="https://www.justenergy.com/about-us/our-markets" onclick="s.tl(this,'o','footer-our-markets')">Our Markets</a></li>
+                                                <li><a href="http://investors.justenergy.com">Investors</a></li>
+                                                <li><a href="https://www.justenergy.com/career-center" onclick="s.tl(this,'o','footer-careers')">Careers</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-col">
+                                            <ul>
+                                                <li class="footer-col-title" onclick="s.tl(true,'o','footer-expander-justenergy')"><strong>JustEnergy.com</strong></li>
+                                                <li><a href="https://www.justenergy.com/for-homes" onclick="s.tl(this,'o','footer-for-homes')">For Homes</a></li>
+                                                <li><a href="https://www.justenergy.com/for-businesses" onclick="s.tl(this,'o','footer-for-business')">For Business</a></li>
+                                                <!-- <li><a href="/products">Advanced Solutions</a></li> -->
+                                                <li><a href="https://www.justenergy.com/locations" onclick="s.tl(this,'o','footer-locations')">Locations</a></li>
+                                                <li><a href="https://www.justenergy.com/just-energy-sitemap" onclick="s.tl(this,'o','footer-sitemap')">Sitemap</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-col">
+                                            <ul>
+                                                <li class="footer-col-title" onclick="s.tl(true,'o','footer-expander-discover')"><strong>Discover</strong></li>
+                                                <li><a href="https://www.justenergy.com/Perks-Rewards" onclick="s.tl(this,'o','footer-perks-rewards-program')">Perks Rewards Program</a></li>
+                                                <li><a href="https://us.shop.justenergy.com/" onclick="s.tl(this,'o','footer-shop')">Shop</a></li>
+                                                <li><a href="https://www.justenergy.com/app" onclick="s.tl(this,'o','footer-mobile-app')">Mobile App</a></li>
+                                                <li><a href="https://www.justenergy.com/carbon-calculator" onclick="s.tl(this,'o','footer-carbon-calculator')">Carbon Calculator</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-col">
+                                            <ul>
+                                                <li class="footer-col-title" onclick="s.tl(true,'o','footer-expander-need-help')"><strong>Need Help?</strong></li>
+                                                <li><a href="https://www.justenergy.com/contact-us" onclick="s.tl(this,'o','footer-contact-us')" style="white-space:nowrap;"><i class="fa fa-question"></i>  Contact Us</a></li>
+                                                <li><a href="tel:866-864-7668" class="inherit-color" onclick="s.tl(this,'o','footer-phone-number')" style="white-space:nowrap;"><i class="fa fa-phone"></i>  866-864-7668</a></li>
+                                                <li><a href="mailto:customersupport@justenergy.com" onclick="s.tl(this,'o','footer-email')" style="white-space:nowrap;"><i class="fa fa-envelope"></i>  Email</a></li>
+                                                <li><a href="https://www.justenergy.com/learning-center" onclick="s.tl(this,'o','footer-learning-center')" style="white-space:nowrap;"><i class="fa fa-graduation-cap"></i> Learning Center</a></li>
+                                                <li><a href="https://www.justenergy.com/report-an-outage" onclick="s.tl(this,'o','footer-report-an-outage')" style="white-space:nowrap;"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>  Report an Outage</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer-col">
+                                            <ul class="social">
+                                                <li class="footer-col-title" onclick="s.tl(true,'o','footer-expander-stay-connected')"><strong>Stay Connected</strong></li>
+                                                <li><a href="https://www.facebook.com/JustEnergyus" title="Facebook" onclick="s.tl(this,'o','footer-stay-connected-facebook')" target="_blank"><i class="fa fa-facebook"></i></a>
+                                                    <a href="https://twitter.com/JustEnergyus" title="Twitter" onclick="s.tl(this,'o','footer-stay-connected-twitter')" target="_blank"><i class="fa fa-twitter"> </i></a>
+                                                    <a href="https://www.youtube.com/user/JustEnergyGroup" title="YouTube" onclick="s.tl(this,'o','footer-stay-connected-youtube')" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                                                    <a href="https://www.linkedin.com/company/just-energy_2" title="LinkedIn" onclick="s.tl(this,'o','footer-stay-connected-linkedin')" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://play.google.com/store/apps/details?id=com.energy.advisor" title="Google Play App" onclick="s.tl(this,'o','footer-app-google')" target="_blank"><img src="/sites/g/files/knoqqb34966/themes/site/nir_pid2972/dist/images/google-play-badge.svg"></a>
+                                                </li>
+                                                <li>
+                                                    <a href="https://itunes.apple.com/app/id1139090493" title="Available for iPhone" onclick="s.tl(this,'o','footer-app-apple')" target="_blank"><img src="/sites/g/files/knoqqb34966/themes/site/nir_pid2972/dist/images/appstore.svg"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-copyright">
+                                <div class="container">
+                                    <p>JUST ENERGY and the JUST ENERGY design are trademarks of Just Energy Group Inc. used under license.
+                                    </p>
+                                    <p>Illinois customers: Just Energy is an alternative natural gas, electricity and green energy solutions supplier that has no affiliation with your public utility, with government or any customer group. Consumers will continue to receive bills only from their public utility and will continue to be charged by the utility for natural gas distribution in addition to the charges by Just Energy for natural gas supply. You may cancel without an exit fee at any time if you call Just Energy directly. You may cancel within 30 days of your first bill with Just Energy without an exit fee. If you cancel after that time period through your Utility or another supplier, you will be charged an exit fee of $50, per location. Call <a href="tel:1.866.864.7668" class="inherit-color">1.866.864.7668</a> or email <a href="mailto:cswest@justenergy.com" class="inherit-color">cswest@justenergy.com</a> if you wish to cancel. Massachusetts customers: A retail customer may obtain an information disclosure label upon request.
+                                        <br>
+                                        <br> Texas – PUCT License #10052, Maryland – MD Supplier License #IR-639 #IR-737. © 2021 Just Energy
+                                    </p>
+                                    <ul>
+                                        <li><a href="https://www.justenergy.com/about-us/privacy-policy">Privacy Policy</a></li>
+                                        <li><a href="https://www.justenergy.com/about-us/terms-of-use">Terms of Use</a></li>
+                                        <li><a href="https://www.justenergy.com/portals/0/files/Resi_Fixed_Your_Rights.pdf">TX - Your Rights as a Customer</a></li>
+                                        <li><a href="https://www.justenergy.com/portals/0/files/texassaver.pdf">TX - TexasSaver</a></li>
+                                        <li><a href="https://www.justenergy.com/variable">TX - Residential Variable Rates</a></li>
+                                        <li><a href="https://www.justenergy.com/portals/0/files/prepay3.pdf">TX - EasyStart Historical Prices</a></li>
+                                        <li><a href="https://www.justenergy.com/About-Us/Accessibility-Policy">ON - Accessibility Policy</a></li>
+                                        <li><a href="https://www.justenergy.com/portals/0/files/pad-form.pdf">CAN - Pre-Authorized Debit Form</a></li>
+                                        <li class="content-hidden ontario-regulatory-link"><a href="http://www.ontarioenergyboard.ca/OEB/" target="_blank">Ontario Energy Board website</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- please work -->
+                        </div>
+
+                    </div>
+                    <!-- End_Module_1494 -->
+                </div>
+            </section>
+        </div>
+    </div>
+</footer>
+
+  </div>
+
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgjustenergy";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5806","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"classy\/node,core\/html5shiv,nir_analytics\/nir_analytics.adobe_launch,nir_analytics\/nir_analytics.adobe_prod,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_market_data_block\/nir_market_data_block.command,nir_market_data_block\/nir_market_data_block.stockQuote,nir_multimedia\/nir_multimedia,nir_pid2972\/override,nir_website_notices\/nir_website_notices.notices,radix_layouts\/radix_layouts,system\/base","theme":"nir_pid2972","theme_token":null},"ajaxTrustedUrl":[],"user":{"uid":0,"permissionsHash":"155c206bdb8291fa42ea3dd8bd48231ad12cdca6c3bb72d9a2b1a299803a308c"}}</script>
+<script src="/sites/g/files/knoqqb34966/files/js/js_q0n8LqanZk7pzcoAF6APEOb_SZwru2ss3ZkswMPmzHI.js"></script>
+<script src="//assets.adobedtm.com/898335afd880/c52ee8aa1e90/launch-5ef258dce664.min.js" async></script>
+
+    
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"761e715901","applicationID":"32397309,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH3xCFkBQXGlbCgVQaXNXXhdCXlxZUBc9e1pUXWYKVUZzWlsRE1pZXF1CTg5HWVBC","queueTime":0,"applicationTime":375,"atts":"ShJUF18aSEg=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

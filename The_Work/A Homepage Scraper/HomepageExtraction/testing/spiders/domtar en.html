@@ -1,0 +1,3866 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+	<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"3605b254ad",applicationID:"73765757"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><link rel="canonical" href="https://www.domtar.com/en" />
+<link rel="shortlink" href="https://www.domtar.com/en" />
+<meta name="description" content="Domtar designs, manufactures, markets and distributes a wide variety of pulp, paper and personal care products." />
+<meta property="og:image" content="https://www.domtar.com/sites/default/files/styles/domtar_1460x1200px/public/2018-04/products_kitchen-desktop-v2.jpg?itok=_sTOZv2g" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="1200" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" hreflang="en" href="https://www.domtar.com/en/home" />
+<link rel="alternate" hreflang="fr" href="https://www.domtar.com/fr/accueil" />
+<link rel="shortcut icon" href="/sites/default/files/favicon-01_0.png" type="image/png" />
+<link rel="revision" href="https://www.domtar.com/en/home" />
+
+		<title>Domtar | The Sustainable Paper, Pulp and Packaging Company</title>
+		<link rel="stylesheet" media="all" href="/sites/default/files/css/css_JQyZ9StD4-4I5jikYtL8icbvn1b-f6xMTWUzpXDhKlc.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_kaYVOv_gAX8o-qidLKIqYvvBX-waJAQrB1LvuYA9qtY.css" />
+
+		
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-WGPLDJ6');</script>
+		<!-- End Google Tag Manager -->
+		</head>
+<body class="dmt-theme-corporate">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGPLDJ6"
+					  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+
+    
+
+<div class="dmt-root-layout" data-dmt-root-layout dmt-links-target-open>
+    <div class="dmt-root-layout__header" data-ng-class="{'is-toggled': dmtRootCtrl.isSideToggled}">
+                <div class="dmt-accessibility-navigation">
+    <ul class="dmt-accessibility-navigation-list">
+        <li><a class="accessible-caption" data-ng-click="scrollTo('block-domtar-content')" href="#block-domtar-content">Go to the main content</a></li>
+        <li><a class="accessible-caption" data-ng-click="scrollTo('block-footer')" href="#block-footer">Go to the footer</a></li>
+    </ul>
+</div><div class="dmt-top-header" data-dmt-top-header-search>
+    <a href="#" class="dmt-top-header__menu-button" data-ng-click="dmtTopHeaderSearchController.close($event)" data-dmt-root-layout-side-toggle aria-hidden="true">
+        <i class="dmt-icon-burger"></i>
+        <i class="dmt-icon-close"></i>
+    </a>
+
+    <div class="dmt-top-header__search" data-ng-class="{ 'open': !dmtTopHeaderSearchController.isClose }">
+                        <div class="views-exposed-form" data-drupal-selector="views-exposed-form-acquia-search-search-page" id="block-acquia-search">
+  
+    
+      <form autocomplete="off" action="/en/search" method="get" class="dmt-search">
+    
+<div class="dmt-input" data-dmt-input data-input-type="textfield">
+    <label  data-goto-top="{{ dmtFormInputCtrl.labelAtTop }}" for="search-field">
+      Search
+    </label>
+
+                      <input data-ng-blur="dmtFormInputCtrl.onBlur()"
+                 data-ng-focus="dmtFormInputCtrl.onFocus()"
+                          type="textfield"
+            name="search"
+            id="search-field"
+    >
+                </div>
+    <button type="submit" aria-label="Search">
+        <span class="dmt-icon-search"></span>
+    </button>
+</form>
+
+  </div>
+
+            
+    </div>
+
+    <div class="dmt-top-header__logo">
+        <div class="dmt-top-header__logo-inner">
+            <a href="https://www.domtar.com/en" aria-label="Go to homepage">                <img src="https://www.domtar.com/sites/default/files/domtar-site-content/logo/Domtar_Logo_0_0.png" alt="Domtar logo">
+            </a>
+        </div>
+    </div>
+
+    <div class="dmt-top-header__right-content">
+                        <nav role="navigation" aria-labelledby="block-topmenu-menu" id="block-topmenu">
+            
+  <h2 class="visually-hidden" id="block-topmenu-menu">Top Menu</h2>
+  
+
+        
+<div class="dmt-top-navigation">
+    <ul class="dmt-top-navigation__list">
+                    <li class="dmt-top-navigation__item">
+                                    <a class="dmt-link"         target="_self"
+            href="/en/who-we-are/investors-and-governance"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Investors and Governance
+                </span></a>                            </li>
+                    <li class="dmt-top-navigation__item">
+                                    <a class="dmt-link"         target="_blank"
+            href="https://jobs.jobvite.com/domtar/"
+    
+               aria-label="Careers (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Careers
+                </span><i class="dmt-icon-external dmt-link__icon" aria-hidden="true"></i></a>                            </li>
+                    <li class="dmt-top-navigation__item">
+                                    <a class="dmt-link"         target="_blank"
+            href="https://newsroom.domtar.com/"
+    
+               aria-label="Newsroom (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Newsroom
+                </span><i class="dmt-icon-external dmt-link__icon" aria-hidden="true"></i></a>                            </li>
+                    <li class="dmt-top-navigation__item">
+                                    <a class="dmt-link"         target="_self"
+            href="/en/contact-us"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Contact Us
+                </span></a>                            </li>
+            </ul>
+</div>
+
+  </nav>
+
+            
+                        <div class="language-switcher-language-url" id="block-languageswitcher" role="navigation">
+  
+    
+      
+<div class="dmt-language-selector">
+    <ul class="dmt-language-selector__list">
+                    <li class="dmt-language-selector__item">
+                                    <strong class="dmt-language-selector__link">EN</strong>
+                            </li>
+                    <li class="dmt-language-selector__item">
+                                    <a         href="/fr/accueil"
+     class="dmt-language-selector__link">FR</a>
+                            </li>
+            </ul>
+</div>
+
+
+  </div>
+
+            
+    </div>
+
+    <a href="#"
+       class="dmt-search--mobile"
+       data-ng-click="dmtTopHeaderSearchController.toggle($event)"
+       data-ng-class="{ 'active': !dmtTopHeaderSearchController.isClose }"
+       data-dmt-root-layout-side-toggle="false"
+    >
+        <i data-ng-class="{ 'dmt-icon-search': dmtTopHeaderSearchController.isClose, 'dmt-icon-close': !dmtTopHeaderSearchController.isClose }"></i>
+    </a>
+</div>
+
+    
+    </div>
+    <div class="dmt-root-layout__main">
+        <div class="dmt-root-layout__side" data-ng-class="{'is-toggled': dmtRootCtrl.isSideToggled}">
+            
+        <div class="dmt-side-bar">
+    <div class="dmt-side-bar__logo">
+        <div class="dmt-side-bar__logo-inner">
+                            <a href="/en"><img src="https://www.domtar.com/sites/default/files/domtar-site-content/logo/Domtar_Logo_0_0.png" alt="Domtar logo"></a>
+            
+        </div>
+    </div>
+
+    <div class="dmt-side-bar__content">
+        <div class="dmt-side-bar__main-navigation">
+                            <nav role="navigation" aria-labelledby="block-megamenumainsitetree-menu" id="block-megamenumainsitetree">
+            
+  <h2 class="visually-hidden" id="block-megamenumainsitetree-menu">Mega Menu (Main Site Tree)</h2>
+  
+
+        <div class="dmt-main-navigation" aria-live="polite" aria-relevant="additions removals">
+
+    
+<ul class="dmt-main-navigation__list"
+    data-level="first"
+    data-media-query="desktop"
+    dmt-main-navigation
+    data-ng-if="!dmtRootCtrl.isMobile"
+>
+
+                        <li class="dmt-main-navigation__list-item" data-level="first">
+                
+                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en"
+            data-level="first"
+            data-dmt-root-layout-content-toggle="!dmtRootCtrl.isContentOffset ||
+                            !(dmtMainNavigationCtrl.selected.value == &#039;menu-who-we-are&#039;) ? &#039;true&#039; : &#039;false&#039;"
+            data-prevent-default="true"
+            data-ng-init="dmtRootCtrl.removeFocus()"
+            data-ng-click="dmtMainNavigationCtrl.selectMenu(&#039;menu-who-we-are&#039;)"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Who we are
+            </span>
+        </span>
+    </span>
+</a>
+                
+                                                                                
+                                                                                                                                                                                                                                                                                                                    
+                                                                
+                                                                
+                    <ul class="dmt-main-navigation__list dmt-collapse__content"
+                        data-level="second"
+                        data-ng-class="{
+                            'is-selected': (dmtMainNavigationCtrl.selected.value === 'menu-who-we-are') && (dmtMainNavigationCtrl.selected.value !== '')
+                        }">
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                About Domtar
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar/our-company"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Company
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar/history"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                History
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar/vision-mission-and-values"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Vision, Mission and Values
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar/recognition"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Recognition
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/investors-and-governance"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Investors &amp; Governance
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/investors-governance/investors"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Investors
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/investors-governance/governance"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Governance
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/all-locations"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                All Locations
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/who-we-are/all-locations?division=81"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper, Pulp and Packaging
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                            </ul>
+                            </li>
+                                <li class="dmt-main-navigation__list-item" data-level="first">
+                
+                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en"
+            data-level="first"
+            data-dmt-root-layout-content-toggle="!dmtRootCtrl.isContentOffset ||
+                            !(dmtMainNavigationCtrl.selected.value == &#039;menu-what-we-make&#039;) ? &#039;true&#039; : &#039;false&#039;"
+            data-prevent-default="true"
+            data-ng-init="dmtRootCtrl.removeFocus()"
+            data-ng-click="dmtMainNavigationCtrl.selectMenu(&#039;menu-what-we-make&#039;)"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                What We Make
+            </span>
+        </span>
+    </span>
+</a>
+                
+                                                                                
+                                                                                                                                                                                                                    
+                                                                
+                    
+                    <ul class="dmt-main-navigation__list dmt-collapse__content"
+                        data-level="second"
+                        data-ng-class="{
+                            'is-selected': (dmtMainNavigationCtrl.selected.value === 'menu-what-we-make') && (dmtMainNavigationCtrl.selected.value !== '')
+                        }">
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/our-brands"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Brands
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/office-papers"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Office Papers
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/printing-and-publishing-papers"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Printing and Publishing Papers
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/what-we-make/paper/digital-production-inkjet-papers"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Digital &amp; Production Inkjet Papers
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/technical-and-specialty-papers"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Technical and Specialty papers
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/converting-papers"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Converting Papers
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/our-customers"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Customers
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/pulp-and-paper-business-continuity"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Pulp &amp; Paper Business Continuity
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Pulp
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp/lighthouse-fluff-pulp"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Lighthouse® Fluff Pulp
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp/papergrade-pulp"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Papergrade Pulp
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp/specialty-pulp"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Specialty Pulp
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp/engineered-absorbent-materials"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Engineered Absorbent Materials
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                            </ul>
+                            </li>
+                                <li class="dmt-main-navigation__list-item" data-level="first">
+                
+                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en"
+            data-level="first"
+            data-dmt-root-layout-content-toggle="!dmtRootCtrl.isContentOffset ||
+                            !(dmtMainNavigationCtrl.selected.value == &#039;menu-how-we-work&#039;) ? &#039;true&#039; : &#039;false&#039;"
+            data-prevent-default="true"
+            data-ng-init="dmtRootCtrl.removeFocus()"
+            data-ng-click="dmtMainNavigationCtrl.selectMenu(&#039;menu-how-we-work&#039;)"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                How We Work
+            </span>
+        </span>
+    </span>
+</a>
+                
+                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                            
+                    
+                    <ul class="dmt-main-navigation__list dmt-collapse__content"
+                        data-level="second"
+                        data-ng-class="{
+                            'is-selected': (dmtMainNavigationCtrl.selected.value === 'menu-how-we-work') && (dmtMainNavigationCtrl.selected.value !== '')
+                        }">
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/giving-back"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Giving Back
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/giving-back/earthchoice-ambassadors"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                EarthChoice® Ambassadors
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            rel=""
+            class=""
+            href="/en/how-we-work/giving-back/powerful-pages"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Powerful Pages
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/giving-back/community-investment"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Community Investment
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/working-safely"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Working Safely
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/working-safely/safety-performance"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Safety Performance
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/working-safely/right-and-responsibility-act"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Right and Responsibility to Act
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sustainability at Domtar
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/energy-and-emissions"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Energy and Emissions
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/water-management"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Water Management
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/waste-management"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Waste Management
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/forestry-and-fiber"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Forestry and Fiber
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/transportation-and-logistics"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Transportation and Logistics
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/our-collaborations"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Collaborations
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/our-people"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our People
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/our-people/diversity-inclusion"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Diversity &amp; Inclusion
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/our-people/creating-value-our-communities"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Creating Value for Our Communities
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/our-people/ethics-and-compliance"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Ethics and Compliance
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                            </ul>
+                            </li>
+                                <li class="dmt-main-navigation__list-item dmt-main-navigation__list-item-separator" data-level="first"></li>
+                                <li class="dmt-main-navigation__list-item" data-level="first">
+                
+                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en"
+            data-level="first"
+            data-dmt-root-layout-content-toggle="!dmtRootCtrl.isContentOffset ||
+                            !(dmtMainNavigationCtrl.selected.value == &#039;menu-resources&#039;) ? &#039;true&#039; : &#039;false&#039;"
+            data-prevent-default="true"
+            data-ng-init="dmtRootCtrl.removeFocus()"
+            data-ng-click="dmtMainNavigationCtrl.selectMenu(&#039;menu-resources&#039;)"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Resources
+            </span>
+        </span>
+    </span>
+</a>
+                
+                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                            
+                                                                
+                    <ul class="dmt-main-navigation__list dmt-collapse__content"
+                        data-level="second"
+                        data-ng-class="{
+                            'is-selected': (dmtMainNavigationCtrl.selected.value === 'menu-resources') && (dmtMainNavigationCtrl.selected.value !== '')
+                        }">
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-information"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Information
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/ideas-inspiration"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Ideas &amp; Inspiration
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/sustainability"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sustainability
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/trends"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Trends
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/spotlight"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Spotlight
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-information/spec-sheets-and-stocking-information"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Spec Sheets and Stocking Information
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/tips-best-practices"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Tips &amp; Best Practices
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/stock-item-book"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Stock Item Book
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/pulp-paper/sales-policies"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sales and Purchase Policies
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-information/paper-insights-library"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Insights Library
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-advocacy"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Advocacy
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-advocacy/paperbecause"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                PAPERbecause
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-advocacy/paperpal"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                PaperPal
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Tools
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools/paper-selector-tool"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Selector Tool
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools/paper-math-and-conversion"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Math and Conversion
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools/glossary-paper-terms"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Glossary of Paper Terms
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools/where-buy"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Where to Buy
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/corporate-documents"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Corporate Documents
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/corporate-documents/company-policies"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Company Policies
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/corporate-documents/governance-documents-and-charters"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Governance Documents and Charters
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/sustainability"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sustainability
+            </span>
+        </span>
+    </span>
+</a>
+                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/sustainability/our-certifications"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Certifications
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/sustainability/timber-regulation"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Timber Regulation
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/sustainability/sustainability-policies"
+            data-dmt-root-layout-content-toggle="false"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sustainability Policies
+            </span>
+        </span>
+    </span>
+</a>
+                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                            </ul>
+                            </li>
+            </ul>
+
+    
+<ul class="dmt-main-navigation__list dmt-collapse"
+    data-level="first"
+    data-media-query="mobile"
+    data-ng-if="dmtRootCtrl.isMobile"
+>
+                        <li class="dmt-main-navigation__list-item" data-level="first">
+                <div class="dmt-collapse"
+    data-dmt-collapse
+    data-ng-class="{
+        'is-collapsed': dmtCollapseCtrl.isCollapsed
+    }"
+>
+    <div
+        data-dmt-collapse-link
+        data-start-open="false"
+    >
+        <div class="dmt-collapse__cta"
+            data-dmt-collapse-cta
+            data-orientation="left">
+            <i class="dmt-icon-chevron"></i>
+            
+                        
+                        
+<a class="dmt-link-highlight"         target="_self"
+            href="/en"
+            data-level="first"
+            data-ng-click="dmtRootCtrl.toggleMobileMenu()"
+            data-ng-init="dmtRootCtrl.removeFocus()"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Who we are
+            </span>
+        </span>
+    </span>
+</a>
+                    
+        </div>
+        <div class="dmt-collapse__wrapper" data-dmt-collapse-content>
+            <div class="dmt-collapse__content">
+                                                                    <ul class="dmt-main-navigation__list" data-level="second">
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                About Domtar
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar/our-company"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Company
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar/history"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                History
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar/vision-mission-and-values"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Vision, Mission and Values
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/about-domtar/recognition"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Recognition
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/all-locations"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                All Locations
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/who-we-are/all-locations?division=81"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper, Pulp and Packaging
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/investors-and-governance"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Investors &amp; Governance
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/investors-governance/investors"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Investors
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/who-we-are/investors-governance/governance"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Governance
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                            </ul>
+                                            
+            </div>
+        </div>
+    </div>
+</div>
+            </li>
+                                 <li class="dmt-main-navigation__list-item" data-level="first">
+                <div class="dmt-collapse"
+    data-dmt-collapse
+    data-ng-class="{
+        'is-collapsed': dmtCollapseCtrl.isCollapsed
+    }"
+>
+    <div
+        data-dmt-collapse-link
+        data-start-open="false"
+    >
+        <div class="dmt-collapse__cta"
+            data-dmt-collapse-cta
+            data-orientation="left">
+            <i class="dmt-icon-chevron"></i>
+            
+                        
+                        
+<a class="dmt-link-highlight"         target="_self"
+            href="/en"
+            data-level="first"
+            data-ng-click="dmtRootCtrl.toggleMobileMenu()"
+            data-ng-init="dmtRootCtrl.removeFocus()"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                What We Make
+            </span>
+        </span>
+    </span>
+</a>
+                    
+        </div>
+        <div class="dmt-collapse__wrapper" data-dmt-collapse-content>
+            <div class="dmt-collapse__content">
+                                                                    <ul class="dmt-main-navigation__list" data-level="second">
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/our-brands"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Brands
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/office-papers"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Office Papers
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/printing-and-publishing-papers"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Printing and Publishing Papers
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/what-we-make/paper/digital-production-inkjet-papers"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Digital &amp; Production Inkjet Papers
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/technical-and-specialty-papers"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Technical and Specialty papers
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/converting-papers"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Converting Papers
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/paper/our-customers"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Customers
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/pulp-and-paper-business-continuity"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Pulp &amp; Paper Business Continuity
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Pulp
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp/lighthouse-fluff-pulp"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Lighthouse® Fluff Pulp
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp/papergrade-pulp"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Papergrade Pulp
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp/specialty-pulp"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Specialty Pulp
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/what-we-make/pulp/engineered-absorbent-materials"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Engineered Absorbent Materials
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                            </ul>
+                                            
+            </div>
+        </div>
+    </div>
+</div>
+            </li>
+                                 <li class="dmt-main-navigation__list-item" data-level="first">
+                <div class="dmt-collapse"
+    data-dmt-collapse
+    data-ng-class="{
+        'is-collapsed': dmtCollapseCtrl.isCollapsed
+    }"
+>
+    <div
+        data-dmt-collapse-link
+        data-start-open="false"
+    >
+        <div class="dmt-collapse__cta"
+            data-dmt-collapse-cta
+            data-orientation="left">
+            <i class="dmt-icon-chevron"></i>
+            
+                        
+                        
+<a class="dmt-link-highlight"         target="_self"
+            href="/en"
+            data-level="first"
+            data-ng-click="dmtRootCtrl.toggleMobileMenu()"
+            data-ng-init="dmtRootCtrl.removeFocus()"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                How We Work
+            </span>
+        </span>
+    </span>
+</a>
+                    
+        </div>
+        <div class="dmt-collapse__wrapper" data-dmt-collapse-content>
+            <div class="dmt-collapse__content">
+                                                                    <ul class="dmt-main-navigation__list" data-level="second">
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/giving-back"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Giving Back
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/giving-back/earthchoice-ambassadors"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                EarthChoice® Ambassadors
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            rel=""
+            class=""
+            href="/en/how-we-work/giving-back/powerful-pages"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Powerful Pages
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/giving-back/community-investment"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Community Investment
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sustainability at Domtar
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/energy-and-emissions"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Energy and Emissions
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/water-management"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Water Management
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/waste-management"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Waste Management
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/forestry-and-fiber"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Forestry and Fiber
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/transportation-and-logistics"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Transportation and Logistics
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/sustainability-domtar/our-collaborations"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Collaborations
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/working-safely"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Working Safely
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/working-safely/safety-performance"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Safety Performance
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/working-safely/right-and-responsibility-act"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Right and Responsibility to Act
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/our-people"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our People
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/our-people/diversity-inclusion"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Diversity &amp; Inclusion
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/our-people/creating-value-our-communities"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Creating Value for Our Communities
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/how-we-work/our-people/ethics-and-compliance"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Ethics and Compliance
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                            </ul>
+                                            
+            </div>
+        </div>
+    </div>
+</div>
+            </li>
+                                 <li class="dmt-main-navigation__list-item dmt-main-navigation__list-item-separator" data-level="first"></li>
+                                <li class="dmt-main-navigation__list-item" data-level="first">
+                <div class="dmt-collapse"
+    data-dmt-collapse
+    data-ng-class="{
+        'is-collapsed': dmtCollapseCtrl.isCollapsed
+    }"
+>
+    <div
+        data-dmt-collapse-link
+        data-start-open="false"
+    >
+        <div class="dmt-collapse__cta"
+            data-dmt-collapse-cta
+            data-orientation="left">
+            <i class="dmt-icon-chevron"></i>
+            
+                        
+                        
+<a class="dmt-link-highlight"         target="_self"
+            href="/en"
+            data-level="first"
+            data-ng-click="dmtRootCtrl.toggleMobileMenu()"
+            data-ng-init="dmtRootCtrl.removeFocus()"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Resources
+            </span>
+        </span>
+    </span>
+</a>
+                    
+        </div>
+        <div class="dmt-collapse__wrapper" data-dmt-collapse-content>
+            <div class="dmt-collapse__content">
+                                                                    <ul class="dmt-main-navigation__list" data-level="second">
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-information"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Information
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/ideas-inspiration"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Ideas &amp; Inspiration
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/sustainability"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sustainability
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/trends"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Trends
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/spotlight"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Spotlight
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-information/spec-sheets-and-stocking-information"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Spec Sheets and Stocking Information
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/listen-our-podcasts/tips-best-practices"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Tips &amp; Best Practices
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-information/stock-item-book"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Stock Item Book
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/pulp-paper/sales-policies"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sales and Purchase Policies
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-information/paper-insights-library"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Insights Library
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Tools
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools/paper-selector-tool"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Selector Tool
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools/paper-math-and-conversion"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Math and Conversion
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools/glossary-paper-terms"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Glossary of Paper Terms
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/paper-tools/where-buy"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Where to Buy
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/sustainability"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sustainability
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/sustainability/our-certifications"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Our Certifications
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/sustainability/timber-regulation"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Timber Regulation
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/sustainability/sustainability-policies"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Sustainability Policies
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-advocacy"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Paper Advocacy
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-advocacy/paperbecause"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                PAPERbecause
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         href="/en/resources/paper-advocacy/paperpal"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                PaperPal
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                                    <li class="dmt-main-navigation__list-item" data-level="second">
+
+                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/corporate-documents"
+            data-level="second"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Corporate Documents
+            </span>
+        </span>
+    </span>
+</a>
+                                                                                    <ul class="dmt-main-navigation__list" data-level="third">
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/corporate-documents/company-policies"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Company Policies
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                                    <li class="dmt-main-navigation__list-item" data-level="third">
+
+                                                                                                                
+<a class="dmt-link-highlight"         target="_self"
+            href="/en/resources/corporate-documents/governance-documents-and-charters"
+            data-level="third"
+    >
+    <span class="dmt-link-highlight__inner">
+        <span class="dmt-link-highlight__inner__content">
+            <span class="dmt-link-highlight__inner__content__text">
+                Governance Documents and Charters
+            </span>
+        </span>
+    </span>
+</a>                                                    </li>
+                                                                                            </ul>
+                                                                            </li>
+                                                            </ul>
+                                            
+            </div>
+        </div>
+    </div>
+</div>
+            </li>
+             </ul>
+
+</div>
+
+  </nav>
+
+            
+        </div>
+
+        <div>
+            <div class="dmt-side-bar__language-selector">
+                                <div class="language-switcher-language-url" id="block-languageswitcher-mobile" role="navigation">
+  
+    
+      
+<div class="dmt-language-selector">
+    <ul class="dmt-language-selector__list">
+                    <li class="dmt-language-selector__item">
+                                    <strong class="dmt-language-selector__link">EN</strong>
+                            </li>
+                    <li class="dmt-language-selector__item">
+                                    <a         href="/fr/accueil"
+     class="dmt-language-selector__link">FR</a>
+                            </li>
+            </ul>
+</div>
+
+
+  </div>
+
+            
+            </div>
+
+            <div class="dmt-side-bar__secondary-navigation">
+                                <nav role="navigation" aria-labelledby="block-topmenu-mobile-menu" id="block-topmenu-mobile">
+            
+  <h2 class="visually-hidden" id="block-topmenu-mobile-menu">Top Menu (Mobile)</h2>
+  
+
+        
+<div class="dmt-top-navigation">
+    <ul class="dmt-top-navigation__list">
+                    <li class="dmt-top-navigation__item">
+                                    <a class="dmt-link"         target="_self"
+            href="/en/who-we-are/investors-and-governance"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Investors and Governance
+                </span></a>                            </li>
+                    <li class="dmt-top-navigation__item">
+                                    <a class="dmt-link"         target="_blank"
+            href="https://jobs.jobvite.com/domtar/"
+    
+               aria-label="Careers (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Careers
+                </span><i class="dmt-icon-external dmt-link__icon" aria-hidden="true"></i></a>                            </li>
+                    <li class="dmt-top-navigation__item">
+                                    <a class="dmt-link"         target="_blank"
+            href="https://newsroom.domtar.com/"
+    
+               aria-label="Newsroom (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Newsroom
+                </span><i class="dmt-icon-external dmt-link__icon" aria-hidden="true"></i></a>                            </li>
+                    <li class="dmt-top-navigation__item">
+                                    <a class="dmt-link"         target="_self"
+            href="/en/contact-us"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Contact Us
+                </span></a>                            </li>
+            </ul>
+</div>
+
+  </nav>
+
+            
+
+                <div data-panel="other-websites">
+                                                        
+<div class="dmt-other-websites-block">
+    <h3 class="dmt-heading__gamma">
+        Our Other Websites
+    </h3>
+
+    <ul>
+                    <li>
+                <a         href="https://jobs.jobvite.com/domtar/"
+            target="_blank"
+    >
+                    Careers
+                </a>
+            </li>
+                    <li>
+                <a         href="http://www.ariva.ca/en/"
+            target="_blank"
+    >
+                    Ariva
+                </a>
+            </li>
+                    <li>
+                <a         href="https://www.theforestacademy.com/en/"
+            target="_blank"
+    >
+                    Forest Academy
+                </a>
+            </li>
+                    <li>
+                <a         href="http://www.eamcorporation.com/"
+            target="_blank"
+    >
+                    EAM Corporation
+                </a>
+            </li>
+                    <li>
+                <a         href="https://paper.domtar.com/"
+            target="_blank"
+    >
+                    Paper.Domtar.Com
+                </a>
+            </li>
+                    <li>
+                <a         href="https://www.xeroxpaper.ca/"
+            target="_blank"
+    >
+                    Xerox® Paper Canada
+                </a>
+            </li>
+                    <li>
+                <a         href="https://www.xeroxpaperusa.com/"
+            target="_blank"
+    >
+                    Xerox® Paper USA
+                </a>
+            </li>
+            </ul>
+</div>
+                            
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+        </div>
+        <div class="dmt-root-layout__content" data-ng-class="{'is-toggled': dmtRootCtrl.isSideToggled, 'is-offset': dmtRootCtrl.isContentOffset}">
+            <a href="#" class="dmt-root-layout__close"
+               data-dmt-root-layout-content-toggle="false"
+               prevent-default="true"
+               aria-hidden="true">
+                <i class="dmt-icon-arrow"></i>
+            </a>
+            <div class="dmt-root-layout__overlay-toggle" data-dmt-root-layout-side-toggle></div>
+            <div class="dmt-root-layout__overlay-offset" data-dmt-root-layout-content-toggle="false"></div>
+            <div class="dmt-root-layout__content-wrapper">          <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-domtar-content">
+  
+    
+      <main>
+    <div class="dmt-template-frontpage" dmt-template-frontpage>
+                    
+<div class="dmt-page-header">
+    <div class="dmt-page-header__image"
+        dmt-responsive-background="https://www.domtar.com/sites/default/files/styles/domtar_1460x1200px/public/2021-03/HP-Children%20Reading-Desktop.jpg?itok=Q2mKccfW">
+        <div class="dmt-page-header__image__inner"
+             data-size="mobile"
+             data-ng-if="dmtRootCtrl.isMobile && !dmtRootCtrl.isTablet">
+            <img src="https://www.domtar.com/sites/default/files/styles/domtar_730x600px/public/2021-03/HP-Children%20Reading-Desktop.jpg?itok=EucqL-vX"
+                 alt="Two little girls reading">
+        </div>
+        <div class="dmt-page-header__image__inner" data-size="tablet"
+             data-ng-if="dmtRootCtrl.isTablet">
+            <img         src="https://www.domtar.com/sites/default/files/styles/domtar_2160x900px/public/2021-03/HP-Children%20Reading-Tablet.jpg?itok=dYr7vDmq"
+            alt="Two little girls reading"
+            title=""
+    >
+        </div>
+    </div>
+    <div class="dmt-page-header__content">
+        <div class="dmt-page-header__content__inner">
+            <h1 class="dmt-heading__alpha">
+                Making life better, every day
+            </h1>
+            <div class="dmt-page-header__description">
+                Domtar makes products that people around the world rely on every day. We design, manufacture, market and distribute a wide variety of communication, specialty and packaging papers, market pulp and airlaid nonwovens.
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <article data-history-node-id="39" role="article" about="/en/home" class="dmt-template-frontpage__line-container">
+            <svg>
+                <path/>
+            </svg>
+
+                            <div class="dmt-component-spacing" data-size="large">
+                            <div class="dmt-page-header-feature-content">
+    <div class="dmt-page-header-feature-content__inner"
+        data-direction="horizontal"
+        data-dmt-header-feature-content
+        data-dmt-header-feature-content-relative-to=".dmt-page-header">
+                                        <dmt-parallax viewport-selection="[0, 100]" selector="#parallax" start="0" end="-50"></dmt-parallax>
+                                <div id="parallax">
+                                    
+            <div><section class="dmt-content-box"data-gutter="true">
+            <div class="dmt-box-title">
+    <h3 class="dmt-heading__gamma">
+        Reports
+            </h3>
+</div>
+    
+    <article class="dmt-content-box__inner">
+                <div class="dmt-document-box">
+
+            <ul class="dmt-document-box__documents">
+                                    <li class="dmt-document-box__item">
+                        2020 Form 10-K
+
+                        <a class="dmt-link"         target="_blank"
+            href="https://www.domtar.com/sites/default/files/2021-03/0001564590-21-009629_0.pdf"
+    
+               aria-label="(pdf) (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  (pdf)
+                </span></a>                    </li>
+                                    <li class="dmt-document-box__item">
+                        2019 Sustainability Report
+
+                        <a class="dmt-link"         target="_blank"
+            href="https://www.domtar.com/sites/default/files/2019-08/Domtar-Sustainability-Report-2019.pdf"
+    
+               aria-label="(pdf) (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  (pdf)
+                </span></a>                    </li>
+                                    <li class="dmt-document-box__item">
+                        Corporate Fact Sheet
+
+                        <a class="dmt-link"         target="_blank"
+            href="https://www.domtar.com/sites/default/files/2021-04/Domtar%20Corporate%20Fact%20Sheet%202021_1.pdf"
+    
+               aria-label="(pdf) (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  (pdf)
+                </span></a>                    </li>
+                                    <li class="dmt-document-box__item">
+                        Investor Fact Sheet
+
+                        <a class="dmt-link"         target="_blank"
+            href="https://www.domtar.com/sites/default/files/2021-04/Domtar_2021_Factsheet_ENG_V12.pdf"
+    
+               aria-label="(pdf) (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  (pdf)
+                </span></a>                    </li>
+                            </ul>
+
+                    </div>
+    
+    </article>
+</section>
+</div>
+      
+                                </div>
+                            
+    </div>
+</div>
+                    
+</div>            
+            <dmt-parallax viewport-selection="[20, 80]" selector=".dmt-content-image-block__image>picture" start="-15" end="0"></dmt-parallax>
+            <dmt-parallax viewport-selection="[20, 80]" selector=".dmt-content-image-block__multiple-images__img-1 picture" start="-15" end="0"></dmt-parallax>
+            <dmt-parallax viewport-selection="[0, 50]" selector=".dmt-content-image-block__multiple-images__img-2 picture" start="10" end="0"></dmt-parallax>
+            <dmt-parallax viewport-selection="[40, 70]" selector=".dmt-column-block__header img" start="0" end="15"></dmt-parallax>
+
+                                        <div class="dmt-component-spacing" data-size="">
+                            <div class="dmt-template-frontpage__first-box dmt-theme-paper">
+                            <article class="dmt-content-image-block" data-dmt-content-image-block data-orientation="left">
+
+    <div class="dmt-content-image-block__content">
+        <div class="dmt-content-image-block__content__inner">
+            <h3 class="dmt-heading__gamma dmt-title-editor">
+                <p dir="ltr"><span><a class="dmt-link__style-paper" href="/en/what-we-make/paper">PAPER</a> CONNECTS US IN SO MANY WAYS TO THE IMPORTANT THINGS IN LIFE.</span></p>
+
+            </h3>
+        </div>
+    </div>
+
+            <div class="dmt-content-image-block__image dmt-content-image-block__multiple-images">
+                            <div class="dmt-content-image-block__multiple-images__img-1">
+                    
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_675x450px/public/2018-02/Domtar-Creative-Meeting-HP-paper1-675-450.jpg?itok=19tD6aQh" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_450x300px/public/2018-02/Domtar-Creative-Meeting-HP-paper1-675-450.jpg?itok=uJYGO1H-" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_450x300px/public/2018-02/Domtar-Creative-Meeting-HP-paper1-675-450.jpg?itok=uJYGO1H-" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_675x450px/public/2018-02/Domtar-Creative-Meeting-HP-paper1-675-450.jpg?itok=19tD6aQh"
+            alt=""
+            title=""
+    >
+</picture>
+                </div>
+                            <div class="dmt-content-image-block__multiple-images__img-2">
+                    
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_470x313px/public/2018-02/Domtar-Paper-Rolls-HP-Paper2-675-450.jpg?itok=w9jFEUwP" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_300x200px/public/2018-02/Domtar-Paper-Rolls-HP-Paper2-675-450.jpg?itok=WSvuogH9" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_275x183px/public/2018-02/Domtar-Paper-Rolls-HP-Paper2-675-450.jpg?itok=jAWAFClO" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_470x313px/public/2018-02/Domtar-Paper-Rolls-HP-Paper2-675-450.jpg?itok=w9jFEUwP"
+            alt=""
+            title=""
+    >
+</picture>
+                </div>
+                    </div>
+    
+    <div class="dmt-content-image-block__content">
+        <div class="dmt-content-image-block__content__inner">
+            <div class="dmt-content-image-block__description">
+                <p><span>Domtar has the North American market’s largest selection of uncoated papers - from high-quality office, printing and digital papers, to innovative converting and specialty papers. </span></p>
+
+<p><span>But we don’t just sell paper. With our private brand expertise, well-known brands and paper industry knowledge, we’re the partner dedicated to helping you optimize your business. Whether through product selection, service platforms or inventory management, we’re here to serve you for the long-term. </span></p>
+
+            </div>
+            <a class="dmt-link"         href="/en/what-we-make/paper"
+            target="_self"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">Discover Domtar </span><span class="dmt-link__inner" data-end>Paper<i class="dmt-icon-arrow dmt-link__icon"></i></span></a>        </div>
+    </div>
+
+</article>
+                        </div>
+                    
+</div>            
+                                        <div class="dmt-component-spacing" data-size="large">
+                            <div class="dmt-template-frontpage__first-statistic">
+                            
+<div class="dmt-statistic-wrapper">
+    <div class="dmt-statistic" data-layout="standard">
+                    <div class="dmt-statistic__title">$3.7</div>
+
+            <div class="dmt-statistic__content">
+                <div class="dmt-heading__alpha">Billion</div>
+                <div class="dmt-statistic__description">In sales in 2020</div>
+            </div>
+        
+        
+            </div>
+</div>
+                        </div>
+                    
+</div>            
+                                        <div class="dmt-component-spacing" data-size="">
+                            <div class="dmt-template-frontpage__second-box dmt-theme-pulp">
+                            <article class="dmt-content-image-block" data-dmt-content-image-block data-orientation="right">
+
+    <div class="dmt-content-image-block__content">
+        <div class="dmt-content-image-block__content__inner">
+            <h3 class="dmt-heading__gamma dmt-title-editor">
+                <p><span>WITH UNMATCHED INDUSTRY KNOWLEDGE, DOMTAR HAS BEEN A TRUSTED AND INNOVATIVE <a class="dmt-link__style-pulp" href="/en/what-we-make/pulp">PULP</a> SUPPLIER FOR MORE THAN 60 YEARS.</span></p>
+
+            </h3>
+        </div>
+    </div>
+
+            <div class="dmt-content-image-block__image dmt-content-image-block__multiple-images">
+                            <div class="dmt-content-image-block__multiple-images__img-1">
+                    
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_675x450px/public/2018-03/HP-Pulp-1-v2.jpg?itok=krqW8bGK" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_450x300px/public/2018-03/HP-Pulp-1-v2.jpg?itok=8lX51lG3" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_450x300px/public/2018-03/HP-Pulp-1-v2.jpg?itok=8lX51lG3" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_675x450px/public/2018-03/HP-Pulp-1-v2.jpg?itok=krqW8bGK"
+            alt=""
+            title=""
+    >
+</picture>
+                </div>
+                            <div class="dmt-content-image-block__multiple-images__img-2">
+                    
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_470x313px/public/2018-04/Pulp-2-updated.jpg?itok=y-5288Tb" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_300x200px/public/2018-04/Pulp-2-updated.jpg?itok=2iRi8U_m" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_275x183px/public/2018-04/Pulp-2-updated.jpg?itok=kbsZXpbT" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_470x313px/public/2018-04/Pulp-2-updated.jpg?itok=y-5288Tb"
+            alt=""
+            title=""
+    >
+</picture>
+                </div>
+                    </div>
+    
+    <div class="dmt-content-image-block__content">
+        <div class="dmt-content-image-block__content__inner">
+            <div class="dmt-content-image-block__description">
+                <p><span>We are one of the world’s largest producers of market pulp used to make paper, tissue, towels, diapers, personal hygiene items and fiber-reinforced materials. </span></p>
+
+            </div>
+            <a class="dmt-link"         href="/en/what-we-make/pulp"
+            target="_self"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">Discover Domtar </span><span class="dmt-link__inner" data-end>Pulp<i class="dmt-icon-arrow dmt-link__icon"></i></span></a>        </div>
+    </div>
+
+</article>
+                        </div>
+                    
+</div>            
+                                        <div class="dmt-component-spacing" data-size="large">
+                            <div class="dmt-template-frontpage__second-statistic">
+                            
+<div class="dmt-statistic-wrapper">
+    <div class="dmt-statistic" data-layout="standard">
+                    <div class="dmt-statistic__title">23</div>
+
+            <div class="dmt-statistic__content">
+                <div class="dmt-heading__alpha">Manufacturing facilities</div>
+                <div class="dmt-statistic__description">in North America</div>
+            </div>
+        
+        
+            </div>
+</div>
+                        </div>
+                    
+</div>            
+                                        <div class="dmt-component-spacing" data-size="large">
+                            <div class="dmt-template-frontpage__third-box dmt-theme-personal-care">
+                            <article class="dmt-content-image-block" data-dmt-content-image-block data-orientation="left">
+
+    <div class="dmt-content-image-block__content">
+        <div class="dmt-content-image-block__content__inner">
+            <h3 class="dmt-heading__gamma dmt-title-editor">
+                <p><span><a href="https://newsroom.domtar.com/domtar-bag-challenge/">NEWSROOM</a> BEYOND THE BAG</span></p>
+
+            </h3>
+        </div>
+    </div>
+
+            <div class="dmt-content-image-block__image">
+            
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_945x630px/public/2021-03/HP_NR%20Beyond%20the%20Bag_0.jpg?itok=PtX9mKx-" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_630x420px/public/2021-03/HP_NR%20Beyond%20the%20Bag_0.jpg?itok=hf1p2hat" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_450x300px/public/2021-03/HP_NR%20Beyond%20the%20Bag_0.jpg?itok=d4sSHhII" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_945x630px/public/2021-03/HP_NR%20Beyond%20the%20Bag_0.jpg?itok=PtX9mKx-"
+            alt="Domtar Beyond The Bag"
+            title=""
+    >
+</picture>
+        </div>
+    
+    <div class="dmt-content-image-block__content">
+        <div class="dmt-content-image-block__content__inner">
+            <div class="dmt-content-image-block__description">
+                <p><span>Our innovative alternative to single-use plastic bags made the winner’s list for the Beyond the Bag Challenge.</span></p>
+
+<p><span>Domtar’s winning submission is a 100 percent paper-based material that is sourced from a renewable natural resource, robust enough for limited reuse in a bag application and curbside recyclable.</span></p>
+
+            </div>
+                    </div>
+    </div>
+
+</article>
+                        </div>
+                    
+</div>            
+                                        <div class="dmt-component-spacing" data-size="large">
+                            <div class="dmt-template-frontpage__third-statistic">
+                            
+<div class="dmt-statistic-wrapper">
+    <div class="dmt-statistic" data-layout="standard">
+                    <div class="dmt-statistic__title">6,400</div>
+
+            <div class="dmt-statistic__content">
+                <div class="dmt-heading__alpha">Employees</div>
+                <div class="dmt-statistic__description">Worldwide</div>
+            </div>
+        
+        
+            </div>
+</div>
+                        </div>
+                    
+</div>            
+                                        <div class="dmt-component-spacing" data-size="large">
+                            <div class="dmt-template-frontpage__fourth-box dmt-theme-biomaterials">
+                            <article class="dmt-content-image-block" data-dmt-content-image-block data-orientation="right">
+
+    <div class="dmt-content-image-block__content">
+        <div class="dmt-content-image-block__content__inner">
+            <h3 class="dmt-heading__gamma dmt-title-editor">
+                <p><a href="https://newsroom.domtar.com/eca-2020-year-end-review/">NEWSROOM</a> <span>YEAR-END REVIEW</span></p>
+
+            </h3>
+        </div>
+    </div>
+
+            <div class="dmt-content-image-block__image">
+            
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_945x630px/public/2021-03/HP_NR%20Year-End%20Review.jpg?itok=AYxEkY48" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_630x420px/public/2021-03/HP_NR%20Year-End%20Review.jpg?itok=Cx4kwhNL" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_450x300px/public/2021-03/HP_NR%20Year-End%20Review.jpg?itok=KLvb02Ac" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_945x630px/public/2021-03/HP_NR%20Year-End%20Review.jpg?itok=AYxEkY48"
+            alt="ECA Year-End Review"
+            title=""
+    >
+</picture>
+        </div>
+    
+    <div class="dmt-content-image-block__content">
+        <div class="dmt-content-image-block__content__inner">
+            <div class="dmt-content-image-block__description">
+                <p><span>By identifying and sharing innovative solutions, educating and encouraging sustainable habits and leading by example, EarthChoice Ambassadors helps push our sustainability message throughout our organization and our Domtar communities.</span></p>
+
+            </div>
+                    </div>
+    </div>
+
+</article>
+                        </div>
+                    
+</div>                    </article>
+
+        
+      <div>
+              <div>
+<div class="dmt-component-spacing" data-size="">
+                        <div class="dmt-card">
+    <div class="dmt-card__column">
+        <div class="dmt-card__column__inner" data-same-height="false">
+                                <section class="dmt-content-box"data-gutter="false">
+            <div class="dmt-box-title">
+    <h3 class="dmt-heading__gamma">
+        Annual Report 
+            </h3>
+</div>
+    
+    <article class="dmt-content-box__inner">
+                <div class="dmt-report" data-direction="horizontal">
+            <div class="dmt-report__image">
+                
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_345x390px/public/2020-04/cover-annual-report-2019-en.jpg?itok=g_2788bs" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_345x390px/public/2020-04/cover-annual-report-2019-en.jpg?itok=g_2788bs" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_345x390px/public/2020-04/cover-annual-report-2019-en.jpg?itok=g_2788bs" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_345x390px/public/2020-04/cover-annual-report-2019-en.jpg?itok=g_2788bs"
+            alt=""
+            title=""
+    >
+</picture>
+            </div>
+
+            <div class="dmt-report__content">
+                                    <p class="dmt-report__date">
+                        March 13, 2021
+                    </p>
+                
+                <p class="dmt-report__content-title">
+                    2020 Form 10-K
+                </p>
+
+                <p class="dmt-report__description">
+                    Domtar continues to build on its capabilities to maximize the value of each of its businesses.
+                </p>
+
+                                <a class="dmt-link"         target="_blank"
+            href="https://www.domtar.com/sites/default/files/2021-03/0001564590-21-009629_0.pdf"
+    
+               aria-label="Download now (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Download now
+                </span><i class="dmt-icon-arrow dmt-link__icon" aria-hidden="true"></i></a>            </div>
+        </div>
+
+    
+    </article>
+</section>
+
+                
+        </div>
+    </div>
+
+                <div class="dmt-card__column">
+            <div class="dmt-card__column__inner" data-same-height="false">
+                                    <section class="dmt-content-box"data-gutter="false">
+            <div class="dmt-box-title">
+    <h3 class="dmt-heading__gamma">
+        Sustainability Report
+            </h3>
+</div>
+    
+    <article class="dmt-content-box__inner">
+                <div class="dmt-report" data-direction="horizontal">
+            <div class="dmt-report__image">
+                
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_345x390px/public/2019-08/cover-SGR-2019-En-345-390.jpg?itok=U5s0dHfx" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_345x390px/public/2019-08/cover-SGR-2019-En-345-390.jpg?itok=U5s0dHfx" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_345x390px/public/2019-08/cover-SGR-2019-En-345-390.jpg?itok=U5s0dHfx" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_345x390px/public/2019-08/cover-SGR-2019-En-345-390.jpg?itok=U5s0dHfx"
+            alt=""
+            title=""
+    >
+</picture>
+            </div>
+
+            <div class="dmt-report__content">
+                
+                <p class="dmt-report__content-title">
+                    2019 Sustainability Report
+                </p>
+
+                <p class="dmt-report__description">
+                    Check out how we are building A Better Future Together in Domtar&#039;s latest sustainability report.
+                </p>
+
+                                <a class="dmt-link"         target="_blank"
+            href="https://www.domtar.com/sites/default/files/2019-08/Domtar-Sustainability-Report-2019.pdf"
+    
+               aria-label="Download now (open a new window)"               data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Download now
+                </span><i class="dmt-icon-arrow dmt-link__icon" aria-hidden="true"></i></a>            </div>
+        </div>
+
+    
+    </article>
+</section>
+
+                
+            </div>
+        </div>
+    </div>
+        
+    
+</div></div>
+              <div><div class="dmt-component-spacing" data-size="fullwidth">
+            <div class="dmt-column-block">
+    <div class="dmt-column-block__inner">
+        <div class="dmt-column-block__header">
+            
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_945x630px/public/2018-01/HP_HowWeDo_V2-945-630_0.jpg?itok=w1PtFmfO" media="(min-width: 991px)">
+
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_630x420px/public/2018-01/HP_HowWeDo_V2-945-630_0.jpg?itok=9ioRws-y" media="(min-width: 728px)">
+    
+            <source srcset="https://www.domtar.com/sites/default/files/styles/domtar_450x300px/public/2018-01/HP_HowWeDo_V2-945-630_0.jpg?itok=B1nto_Er" media="all">
+    
+    <img         src="https://www.domtar.com/sites/default/files/styles/domtar_945x630px/public/2018-01/HP_HowWeDo_V2-945-630_0.jpg?itok=w1PtFmfO"
+            alt="Domtar Volunteers group in front of a house that they helped repair."
+            title=""
+    >
+</picture>
+
+            <div class="dmt-column-block__title">
+                <h3 class="dmt-heading__gamma">
+                    How we do things is as important as what we do. At Domtar, we constantly find better ways to serve our customers, support our employees and strengthen our communities.  It’s just our way of doing things.
+                </h3>
+            </div>
+        </div>
+
+                    <ul class="dmt-column-block__content">
+                <li class="dmt-column-block__column">
+                                                                    <p><strong>Taking&nbsp;a Long-Term View</strong></p>
+
+<p>Sustainability at Domtar is our endeavor to take a longer-term view of creating and preserving value for our shareholders, customers, employees and communities.</p>
+
+                                                <a class="dmt-link"         href="/en/how-we-work/sustainability-domtar"
+            target="_self"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Learn more about Sustainability 
+                </span><i class="dmt-icon-arrow dmt-link__icon" aria-hidden="true"></i></a>                                    </li>
+                <li class="dmt-column-block__column">
+                                                                    <p><strong>Our Commitment to Caring Runs Deep</strong></p>
+
+<p><span><span><span>We are dedicated to investing in the communities where we live and work and to help people in times of need.</span></span></span></p>
+
+                                                <a class="dmt-link"         href="/en/how-we-work/giving-back"
+            target="_self"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Learn more about Giving Back
+                </span><i class="dmt-icon-arrow dmt-link__icon" aria-hidden="true"></i></a>                                    </li>
+                <li class="dmt-column-block__column">
+                                                                    <p><strong>Our People Are The Key to Our Success</strong></p>
+
+<p>We believe in making a difference and creating a culture of employees who not only want&nbsp;to grow, but also to help others develop along the way.</p>
+
+                                                <a class="dmt-link"         href="/en/how-we-work/our-people"
+            target="_self"
+    
+                              data-order=""
+               data-animated="true"><span class="dmt-link__inner">
+                  Learn more about Our People 
+                </span><i class="dmt-icon-arrow dmt-link__icon" aria-hidden="true"></i></a>                                    </li>
+            </ul>
+            </div>
+</div>
+    
+</div></div>
+              <div>
+<div class="dmt-component-spacing" data-size="">
+                        <div class="dmt-card">
+    <div class="dmt-card__column">
+        <div class="dmt-card__column__inner" data-same-height="true">
+                                <div class="dmt-external-block" data-logo="true">
+    <div class="dmt-content-with-footer">
+                                                    <div class="dmt-external-block__background" style="background-image: url(https://www.domtar.com/sites/default/files/styles/domtar_780x495px/public/2018-02/Newsroom%20780x495_V2.jpg?itok=HKhIsc6T);"></div>
+                            
+            <div class="dmt-external-block__inner">
+                                    <div class="dmt-external-block__logo">
+                        
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/2018-01/Newsroom%20140x140%203.jpg" media="(min-width: 991px)">
+
+    
+    
+    <img         src="https://www.domtar.com/sites/default/files/2018-01/Newsroom%20140x140%203.jpg"
+            alt=""
+            title=""
+    >
+</picture>
+                    </div>
+                
+                <div class="dmt-external-block__header">
+                    <h3 class="dmt-heading__delta">
+                        Inspiring Stories from the Domtar Newsroom
+                    </h3>
+                                    </div>
+
+                <div class="dmt-external-block__description">
+                    <p>The Domtar Newsroom is home to informative and inspiring stories about Domtar – our people, our products, our industry and our communities.</p>
+                </div>
+            </div>
+        
+
+    <footer class="dmt-content-with-footer__footer">
+                    
+    <a class="dmt-button"         href="https://newsroom.domtar.com/"
+            target="_blank"
+     data-type="primary">
+        <span class="dmt-button__text">Go to the Newsroom</span>&nbsp;<i class="dmt-icon-external dmt-button__icon"></i>    </a>
+        
+    </footer>
+</div></div>
+
+
+
+                
+        </div>
+    </div>
+
+                <div class="dmt-card__column">
+            <div class="dmt-card__column__inner" data-same-height="true">
+                                    <div class="dmt-external-block" data-logo="true">
+    <div class="dmt-content-with-footer">
+                                                    <div class="dmt-external-block__background" style="background-image: url(https://www.domtar.com/sites/default/files/styles/domtar_780x495px/public/2019-03/paper-blog-background.jpg?itok=wz42JOoI);"></div>
+                            
+            <div class="dmt-external-block__inner">
+                                    <div class="dmt-external-block__logo">
+                        
+
+<picture class="dmt-picture">
+    <source srcset="https://www.domtar.com/sites/default/files/2019-03/domtar-paper-logo-150.png" media="(min-width: 991px)">
+
+    
+    
+    <img         src="https://www.domtar.com/sites/default/files/2019-03/domtar-paper-logo-150.png"
+            alt=""
+            title=""
+    >
+</picture>
+                    </div>
+                
+                <div class="dmt-external-block__header">
+                    <h3 class="dmt-heading__delta">
+                        Engaging information about the world of paper
+                    </h3>
+                                    </div>
+
+                <div class="dmt-external-block__description">
+                    <p>Created as a resource for engaging, educational and inspiring information about the world of paper, this site includes our blog that focuses on the latest trends in paper, print and design. Share your work and fuel your creativity at the Gallery. Subscribe to Paper Matters™ magazine and industry updates. </p>
+                </div>
+            </div>
+        
+
+    <footer class="dmt-content-with-footer__footer">
+                    
+    <a class="dmt-button"         href="https://paper.domtar.com"
+            target="_blank"
+     data-type="primary">
+        <span class="dmt-button__text">Explore paper.domtar.com</span>&nbsp;<i class="dmt-icon-external dmt-button__icon"></i>    </a>
+        
+    </footer>
+</div></div>
+
+
+
+                
+            </div>
+        </div>
+    </div>
+        
+    
+</div></div>
+          </div>
+  
+
+
+    </div>
+</main>
+  </div>
+
+  </div>
+
+
+                
+<div class="dmt-footer" id="block-footer">
+    <div class="dmt-footer-section">
+        <div class="dmt-footer-section-panels">
+            <div class="dmt-footer-section-panels__panel">
+                <div class="dmt-footer-panels__panel-content" data-panel="contact">
+                    <h3 class="dmt-heading__gamma">
+                        Contact Information
+                    </h3>
+
+                    <article class="dmt-location-tile">
+            <h3 class="dmt-heading__delta">
+            Corporate Offices
+        </h3>
+    
+    
+    <div class="dmt-location-tile__description">
+                    <div data-info="person">
+                
+                                
+            </div>
+        
+                    <div data-info="address">
+                <p>234&nbsp;Kingsley Park Drive<br />
+Fort Mill SC 29715<br />
+<strong>United States</strong><br />
+1-803-802-7500<br />
+1-877-877-4685</p>
+
+<p>395 de Maisonneuve Blvd West<br />
+Montreal (Québec) H3A 1L6<br />
+<strong>Canada&nbsp;</strong><br />
+1-514-848-5555</p>
+
+            </div>
+        
+        <div data-info="extra-info">
+            
+            
+            
+                            <div>
+                    <a href="mailto:communications@domtar.com">communications@domtar.com</a>
+                </div>
+            
+                            <div>
+                    <a href="" target="_blank"></a>
+                </div>
+                    </div>
+
+            </div>
+
+    </article>
+                </div>
+            </div>
+            <div class="dmt-footer-section-panels__panel">
+                <div class="dmt-footer-panels__panel-content" data-panel="downloads">
+                    <h3 class="dmt-heading__gamma">
+                        Downloads
+                    </h3>
+                    <ul>
+                                                    <li>
+                                2020 Form 10-K
+                                <strong>(<a         href="https://www.domtar.com/sites/default/files/2021-03/0001564590-21-009629_0.pdf"
+            target="_blank"
+    >PDF</a>)</strong>
+                            </li>
+                                                    <li>
+                                2019 Sustainability Report
+                                <strong>(<a         href="https://www.domtar.com/sites/default/files/2019-08/Domtar-Sustainability-Report-2019.pdf"
+            target="_blank"
+    >PDF</a>)</strong>
+                            </li>
+                                                    <li>
+                                Corporate Fact Sheet
+                                <strong>(<a         href="https://www.domtar.com/sites/default/files/2021-04/Domtar%20Corporate%20Fact%20Sheet%202021_1.pdf"
+            target="_blank"
+    >PDF</a>)</strong>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+            <div class="dmt-footer-section-panels__panel">
+                
+<div class="dmt-other-websites-block">
+    <h3 class="dmt-heading__gamma">
+        Our Other Websites
+    </h3>
+
+    <ul>
+                    <li>
+                <a         href="https://jobs.jobvite.com/domtar/"
+            target="_blank"
+    >
+                    Careers
+                </a>
+            </li>
+                    <li>
+                <a         href="http://www.ariva.ca/en/"
+            target="_blank"
+    >
+                    Ariva
+                </a>
+            </li>
+                    <li>
+                <a         href="https://www.theforestacademy.com/en/"
+            target="_blank"
+    >
+                    Forest Academy
+                </a>
+            </li>
+                    <li>
+                <a         href="http://www.eamcorporation.com/"
+            target="_blank"
+    >
+                    EAM Corporation
+                </a>
+            </li>
+                    <li>
+                <a         href="https://paper.domtar.com/"
+            target="_blank"
+    >
+                    Paper.Domtar.Com
+                </a>
+            </li>
+                    <li>
+                <a         href="https://www.xeroxpaper.ca/"
+            target="_blank"
+    >
+                    Xerox® Paper Canada
+                </a>
+            </li>
+                    <li>
+                <a         href="https://www.xeroxpaperusa.com/"
+            target="_blank"
+    >
+                    Xerox® Paper USA
+                </a>
+            </li>
+            </ul>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dmt-footer-section">
+        <div class="dmt-footer-section-brand-bar">
+            <div class="dmt-footer-section-brand-bar__copyright">
+                © Domtar Corporation 2020. All rights reserved.
+            </div>
+            <div class="dmt-footer-section-brand-bar__links">
+                <ul>
+                                            <li>
+                            <a         href="/en/terms-and-conditions"
+            target="_self"
+    >
+                                Terms &amp; Conditions / Privacy
+                            </a>
+                        </li>
+                                            <li>
+                            <a         href="https://canopy.domtar.com"
+            target="_blank"
+    >
+                                Employee Access
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+            <div class="dmt-footer-section-brand-bar__social-links">
+                <ul>
+                                            <li>
+                            <a         href="https://www.facebook.com/DomtarEveryday/"
+            target="_blank"
+     aria-label="Visit Facebook page">
+                                <span class="dmt-icon-facebook"></span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a         href="https://www.linkedin.com/company/domtar/"
+            target="_blank"
+     aria-label="Visit LinkedIn page">
+                                <span class="dmt-icon-linkedin"></span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a         href="https://twitter.com/DomtarEveryday"
+            target="_blank"
+     aria-label="Visit Twitter page">
+                                <span class="dmt-icon-twitter"></span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a         href="https://www.youtube.com/channel/UCh8Zhq2Rmxhl5Km0krrGoYw"
+            target="_blank"
+     aria-label="Visit YouTube page">
+                                <span class="dmt-icon-youtube"></span>
+                            </a>
+                        </li>
+                                            <li>
+                            <a         href="https://www.instagram.com/domtarlife/"
+            target="_blank"
+     aria-label="Visit Instagram page">
+                                <span class="dmt-icon-instagram"></span>
+                            </a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+    </div>
+        </div>
+    </div>
+</div>
+
+<div data-dmt-modal>
+    <div class="dmt-modal" ng-class="{'is-ready': dmtModal.isReady}" data-ng-show="dmtModal.isModalOpened" data-ng-click="dmtModal.closeModal($event)">
+        <div class="dmt-modal__content" data-ng-click="$event.stopPropagation()">
+            <a class="dmt-modal__close" href="#" data-ng-click="dmtModal.closeModal($event)"
+               title="Close the modal">
+                <i class="dmt-icon-close"></i>
+            </a>
+            <div class="dmt-modal__content__inner">
+                <div class="dmt-modal__content__limit">
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div dmt-modal-template="modal404">
+    <div class="dmt-404">
+    <div class="dmt-card">
+    <div class="dmt-card__column">
+        <div class="dmt-card__column__inner" data-same-height="false">
+                        
+
+<picture class="dmt-picture">
+    <source srcset="/themes/custom/domtar/design-library/assets/images/404.jpg" media="(min-width: 991px)">
+
+    
+    
+    <img         src="/themes/custom/domtar/design-library/assets/images/404.jpg"
+            alt="404 Error"
+    >
+</picture>
+        
+        </div>
+    </div>
+
+                <div class="dmt-card__column">
+            <div class="dmt-card__column__inner" data-same-height="false">
+                            <div class="dmt-404__content">
+                <div class="dmt-heading__beta">404 Error</div>
+                <div class="dmt-heading__delta"><p>Oops, we recently updated our web site and it looks like this page has been recycled. Please use our search feature to find what you are looking for.</p>
+</div>
+                
+    <a class="dmt-button"         href="#"
+            data-ng-click="dmtModal.closeModal($event)"
+     data-type="primary">
+        <span class="dmt-button__text">Close</span>&nbsp;<i class="dmt-icon-arrow dmt-button__icon"></i>    </a>
+            </div>
+        
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<script src="/sites/default/files/js/js_BEttGF8rgRsm9tXrERUpzYUPI5tognYqpgMtpsh8zzg.js"></script>
+
+
+<script>
+	angular.element(document).ready(function () {
+		angular.bootstrap(document, ['dmt.patterns']);
+	});
+</script>
+
+	<script type="text/javascript">
+  piAId = '397062';
+
+  piCId = '48195';
+
+  piHostname = 'pi.pardot.com';
+
+
+  (function() {
+    function async_load() {
+      var s = document.createElement('script'); s.type = 'text/javascript';
+
+      s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+
+      var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+    }
+
+    if (window.attachEvent) {
+      window.attachEvent('onload', async_load);
+    } else {
+      window.addEventListener('load', async_load, false);
+    }
+
+  })();
+</script>
+    
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3605b254ad","applicationID":"73765757","transactionName":"ZVIGZURVCBFSUBZeCVwYJVJCXQkMHHcQQhZTWzhfWVADPnBcDEMUXVsIVERoKA1XVjReA0V0C19CRgkOX1YQGlhEXgFG","queueTime":0,"applicationTime":2467,"atts":"SRUFEwxPGx8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

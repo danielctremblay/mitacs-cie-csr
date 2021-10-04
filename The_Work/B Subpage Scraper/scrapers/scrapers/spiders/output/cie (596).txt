@@ -1,0 +1,2 @@
+Loaded "Professional" Level with much higher limits (9,000 symbols, 30 portfolios, 20 workspaces), DDE/RTD linking to spreadsheets, duplication of modules (such as multiple Level 2 modules) and more.The Premium Package is ideal for the Day-Trader, or the user who wants the equivalent of a top level Broker Workstation.On-Demand API access to Snap Quotes and up to 30 days of End-of-Day History for any symbol from major U.S. or Canadian stock exchanges. Data Formats: XML, JSON, CSV.
+        

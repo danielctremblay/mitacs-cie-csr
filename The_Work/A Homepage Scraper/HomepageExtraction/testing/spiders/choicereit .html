@@ -1,0 +1,908 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-cf41a010582b3ad779a",applicationID:"782848082"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+			<link rel="icon" type="image/x-icon" href="https://www.choicereit.ca/wp-content/themes/choice-properties/favicon.ico">
+	
+	<link rel="alternate" hreflang="en" href="https://www.choicereit.ca" />
+<link rel="alternate" hreflang="fr" href="https://www.choicereit.ca/fr/" />
+<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+
+	<!-- This site is optimized with the Yoast SEO plugin v15.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Choice Properties - Canada&#039;s Preeminent REIT</title>
+	<meta name="description" content="Creating Enduring Value for Generations. Choice Properties is Canada&#039;s Preeminent REIT. Learn more about Choice and our portfolio of properties." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://www.choicereit.ca/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Choice Properties - Canada&#039;s Preeminent REIT" />
+	<meta property="og:description" content="Creating Enduring Value for Generations. Choice Properties is Canada&#039;s Preeminent REIT. Learn more about Choice and our portfolio of properties." />
+	<meta property="og:url" content="https://www.choicereit.ca/" />
+	<meta property="og:site_name" content="Choice Properties" />
+	<meta property="article:modified_time" content="2021-01-05T15:14:57+00:00" />
+	<meta property="og:image" content="https://www.choicereit.ca/wp-content/uploads/2020/11/home-1.jpg" />
+	<meta property="og:image:width" content="2001" />
+	<meta property="og:image:height" content="892" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="1 minute">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://live-choice-properties-reit.pantheonsite.io/#website","url":"https://live-choice-properties-reit.pantheonsite.io/","name":"Choice Properties","description":"Canada&#039;s Preeminent REIT","potentialAction":[{"@type":"SearchAction","target":"https://live-choice-properties-reit.pantheonsite.io/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.choicereit.ca/#primaryimage","inLanguage":"en-US","url":"https://www.choicereit.ca/wp-content/uploads/2020/11/home-1.jpg","width":2001,"height":892},{"@type":"WebPage","@id":"https://www.choicereit.ca/#webpage","url":"https://www.choicereit.ca/","name":"Choice Properties - Canada's Preeminent REIT","isPartOf":{"@id":"https://live-choice-properties-reit.pantheonsite.io/#website"},"primaryImageOfPage":{"@id":"https://www.choicereit.ca/#primaryimage"},"datePublished":"2020-11-17T16:30:17+00:00","dateModified":"2021-01-05T15:14:57+00:00","description":"Creating Enduring Value for Generations. Choice Properties is Canada's Preeminent REIT. Learn more about Choice and our portfolio of properties.","breadcrumb":{"@id":"https://www.choicereit.ca/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.choicereit.ca/"]}]},{"@type":"BreadcrumbList","@id":"https://www.choicereit.ca/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://www.choicereit.ca/","url":"https://www.choicereit.ca/","name":"Home"}}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//unpkg.com' />
+<link rel='dns-prefetch' href='//www.choicereit.ca' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Choice Properties &raquo; Feed" href="https://www.choicereit.ca/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Choice Properties &raquo; Comments Feed" href="https://www.choicereit.ca/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.choicereit.ca\/wp\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://www.choicereit.ca/wp/wp-includes/css/dist/block-library/style.min.css?ver=5.6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='pg-wp-starter-style-css'  href='https://www.choicereit.ca/wp-content/themes/choice-properties/dist/build.css?ver=1621292689' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.choicereit.ca/wp/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://www.choicereit.ca/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://www.choicereit.ca/wp-json/" /><link rel="alternate" type="application/json" href="https://www.choicereit.ca/wp-json/wp/v2/pages/5" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.choicereit.ca/wp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.choicereit.ca/wp/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.6.2" />
+<link rel='shortlink' href='https://www.choicereit.ca/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.choicereit.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.choicereit.ca%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.choicereit.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.choicereit.ca%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.4.2 stt:1,4;" />
+
+			<!-- Google Tag Manager -->
+			<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-MNXDRMT');</script>
+			<!-- End Google Tag Manager -->
+
+            <style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body class="home page-template-default page page-id-5 accent-color-red header-style--rounded">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MNXDRMT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+
+		<!-- English Logo -->
+		<symbol id="choice-properties-logo--en" viewBox="0 0 388 51" aria-labelledby="choice-properties-title--en">
+			<title id="choice-properties-title--en">Choice Properties Logo</title>
+			<path d="M20.268 40.624C28.38 40.624 36.076 35.476 38.208 27.312H29.212C27.652 30.744 23.908 32.616 20.268 32.616C13.508 32.616 9.192 27.728 9.192 21.54C9.192 15.352 13.508 10.464 20.268 10.464C23.908 10.464 27.652 12.336 29.212 15.768H38.208C36.076 7.604 28.38 2.456 20.268 2.456C8.984 2.456 0.872 10.828 0.872 21.54C0.872 32.252 8.984 40.624 20.268 40.624ZM39.5767 40H47.4287V27.364C47.4287 22.684 49.7167 20.552 52.6807 20.552C55.4887 20.552 56.8927 22.736 56.8927 26.324V40H64.7447V24.972C64.7447 18.16 61.0527 13.428 54.6567 13.428C51.2767 13.428 48.6767 14.884 47.4287 16.652V0.999997H39.5767V40ZM79.8019 40.572C87.2899 40.572 93.4779 34.644 93.4779 27C93.4779 19.356 87.2899 13.428 79.8019 13.428C72.3139 13.428 66.1259 19.356 66.1259 27C66.1259 34.644 72.3139 40.572 79.8019 40.572ZM79.8019 33.24C76.5259 33.24 74.0299 30.692 74.0299 27C74.0299 23.308 76.5259 20.76 79.8019 20.76C83.0779 20.76 85.5739 23.308 85.5739 27C85.5739 30.692 83.0779 33.24 79.8019 33.24ZM99.0882 10.464C101.844 10.464 104.028 8.28 104.028 5.576C104.028 2.872 101.844 0.687998 99.0882 0.687998C96.4362 0.687998 94.2002 2.872 94.2002 5.576C94.2002 8.28 96.4362 10.464 99.0882 10.464ZM95.1882 40H103.04V14H95.1882V40ZM118.505 40.572C125.889 40.572 130.517 35.944 131.921 29.86H123.809C122.873 31.94 121.261 33.5 118.505 33.5C115.229 33.5 112.733 31.056 112.733 27C112.733 22.944 115.229 20.5 118.505 20.5C121.261 20.5 122.873 22.06 123.809 24.14H131.921C130.517 18.056 125.889 13.428 118.505 13.428C110.601 13.428 104.829 19.46 104.829 27C104.829 34.54 110.601 40.572 118.505 40.572ZM145.551 40.572C152.103 40.572 157.511 36.776 159.175 31.368H150.959C150.335 32.772 148.255 33.812 145.967 33.812C141.755 33.812 139.779 31.472 139.415 28.82H159.435C159.747 18.524 153.039 13.428 145.551 13.428C137.699 13.428 131.771 19.148 131.771 26.948C131.771 34.852 137.491 40.572 145.551 40.572ZM145.343 19.668C147.371 19.668 149.919 20.708 150.751 23.828H139.623C140.299 21.436 142.223 19.668 145.343 19.668Z" fill="currentColor"/>
+			<path d="M187.396 15.716C187.396 8.592 181.832 3.08 174.396 3.08H161.864V40H170.132V28.3H174.396C181.832 28.3 187.396 22.84 187.396 15.716ZM179.388 15.716C179.388 18.42 177.256 20.552 174.292 20.552H170.132V10.88H174.292C177.256 10.88 179.388 12.96 179.388 15.716ZM188.333 40H196.185V27.676C196.185 23.932 198.057 21.332 201.437 21.332C202.685 21.332 203.725 21.54 204.921 21.956V14C203.985 13.74 203.153 13.688 202.373 13.688C199.513 13.688 197.017 15.612 196.185 17.9V14H188.333V40ZM217.336 40.572C224.824 40.572 231.012 34.644 231.012 27C231.012 19.356 224.824 13.428 217.336 13.428C209.848 13.428 203.66 19.356 203.66 27C203.66 34.644 209.848 40.572 217.336 40.572ZM217.336 33.24C214.06 33.24 211.564 30.692 211.564 27C211.564 23.308 214.06 20.76 217.336 20.76C220.612 20.76 223.108 23.308 223.108 27C223.108 30.692 220.612 33.24 217.336 33.24ZM232.722 50.868H240.574V37.4C241.614 38.804 244.162 40.572 247.646 40.572C254.458 40.572 259.71 34.384 259.71 27C259.71 19.616 254.458 13.428 247.646 13.428C244.162 13.428 241.614 15.196 240.574 16.6V14H232.722V50.868ZM245.878 33.448C242.342 33.448 239.95 30.744 239.95 27C239.95 23.256 242.342 20.552 245.878 20.552C249.414 20.552 251.806 23.256 251.806 27C251.806 30.744 249.414 33.448 245.878 33.448ZM273.713 40.572C280.265 40.572 285.673 36.776 287.337 31.368H279.121C278.497 32.772 276.417 33.812 274.129 33.812C269.917 33.812 267.941 31.472 267.577 28.82H287.597C287.909 18.524 281.201 13.428 273.713 13.428C265.861 13.428 259.933 19.148 259.933 26.948C259.933 34.852 265.653 40.572 273.713 40.572ZM273.505 19.668C275.533 19.668 278.081 20.708 278.913 23.828H267.785C268.461 21.436 270.385 19.668 273.505 19.668ZM289.349 40H297.201V27.676C297.201 23.932 299.073 21.332 302.453 21.332C303.701 21.332 304.741 21.54 305.937 21.956V14C305.001 13.74 304.169 13.688 303.389 13.688C300.529 13.688 298.033 15.612 297.201 17.9V14H289.349V40ZM320.462 40.312C322.542 40.312 323.998 40.104 325.142 39.792V32.824C324.31 33.136 323.478 33.292 322.282 33.292C319.162 33.292 317.862 31.992 317.862 28.872V20.812H325.142V14H317.862V6.772H310.01V14H304.81V20.812H310.01V30.484C310.01 37.088 314.69 40.312 320.462 40.312ZM330.884 10.464C333.64 10.464 335.824 8.28 335.824 5.576C335.824 2.872 333.64 0.687998 330.884 0.687998C328.232 0.687998 325.996 2.872 325.996 5.576C325.996 8.28 328.232 10.464 330.884 10.464ZM326.984 40H334.836V14H326.984V40ZM350.405 40.572C356.957 40.572 362.365 36.776 364.029 31.368H355.813C355.189 32.772 353.109 33.812 350.821 33.812C346.609 33.812 344.633 31.472 344.269 28.82H364.289C364.601 18.524 357.893 13.428 350.405 13.428C342.553 13.428 336.625 19.148 336.625 26.948C336.625 34.852 342.345 40.572 350.405 40.572ZM350.197 19.668C352.225 19.668 354.773 20.708 355.605 23.828H344.477C345.153 21.436 347.077 19.668 350.197 19.668ZM376.545 40.572C383.097 40.572 387.725 37.4 387.725 32.564C387.725 28.456 385.645 25.804 380.393 24.4L375.661 23.152C374.465 22.84 373.009 22.476 373.009 21.124C373.009 20.084 374.049 19.46 375.661 19.46C377.013 19.46 378.365 19.928 378.677 21.852H386.581C386.217 16.34 381.537 13.428 375.817 13.428C368.953 13.428 364.949 16.756 364.949 21.28C364.949 25.128 366.977 28.3 371.501 29.444L376.753 30.796C378.781 31.316 379.717 31.836 379.717 32.98C379.717 33.916 378.833 34.644 376.805 34.644C374.569 34.644 372.801 33.604 372.697 31.524H364.429C364.689 36.62 369.473 40.572 376.545 40.572Z" fill="#888C8C"/>
+		</symbol>
+
+		<!-- French Logo -->
+		<symbol id="choice-properties-logo--fr" viewBox="0 0 1070.4 120.17" aria-labelledby="choice-properties-title--en">
+			<title id="choice-properties-title--fr">Propriétés De Choix</title>
+			<path fill="#7a7d82" d="M124.13,80.62a30,30,0,0,1-6.71,9.84A31.29,31.29,0,0,1,107.33,97a33.5,33.5,0,0,1-12.7,2.36H84.16v28.73H63.85V37.4H94.63a33.5,33.5,0,0,1,12.7,2.36,30.44,30.44,0,0,1,16.8,16.47,31.94,31.94,0,0,1,0,24.39ZM103.37,59.94a12.42,12.42,0,0,0-9-3.39H84.15V80.3H94.37a12.29,12.29,0,0,0,9-3.44,11.93,11.93,0,0,0,0-16.92Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="#7a7d82" d="M151.5,64.21v9.58a16.35,16.35,0,0,1,15.2-10.34c.93,0,1.91,0,2.93.13a16.88,16.88,0,0,1,3.32.63V83.75a28.87,28.87,0,0,0-4.21-1.15,24,24,0,0,0-4.34-.38q-6.26,0-9.58,4.34T151.5,97.8v30.26H132.22V64.21Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="#7a7d82" d="M196.24,126.92a32.77,32.77,0,0,1-10.66-7.09,34.76,34.76,0,0,1-7.22-10.6,33.31,33.31,0,0,1,0-26.18,34.76,34.76,0,0,1,7.22-10.6,32.77,32.77,0,0,1,10.66-7.09,34.54,34.54,0,0,1,26,0A32.92,32.92,0,0,1,233,72.45a34.73,34.73,0,0,1,7.21,10.6,33.31,33.31,0,0,1,0,26.18,34.73,34.73,0,0,1-7.21,10.6,32.92,32.92,0,0,1-10.67,7.09,34.54,34.54,0,0,1-26,0Zm23.18-19.67q4-4.22,4-11.11t-4-11.11a14.35,14.35,0,0,0-20.31,0q-4,4.22-4,11.11t4,11.11a14.35,14.35,0,0,0,20.31,0Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="#7a7d82" d="M267.79,64.21V70.6a21.65,21.65,0,0,1,2.62-2.68,18.92,18.92,0,0,1,3.83-2.56,24.16,24.16,0,0,1,5-1.85,23.83,23.83,0,0,1,5.94-.7,26,26,0,0,1,11.68,2.68,29.89,29.89,0,0,1,9.39,7.22,34.41,34.41,0,0,1,6.26,10.6,36.93,36.93,0,0,1,0,25.66,34.41,34.41,0,0,1-6.26,10.6,29.89,29.89,0,0,1-9.39,7.22,26,26,0,0,1-11.68,2.68,23.83,23.83,0,0,1-5.94-.7,24.16,24.16,0,0,1-5-1.85,18.92,18.92,0,0,1-3.83-2.56,21.65,21.65,0,0,1-2.62-2.68v33.07H248.51V64.21Zm23.56,43.29a16.28,16.28,0,0,0,4-11.36,16.32,16.32,0,0,0-4-11.37,14.65,14.65,0,0,0-21.07,0,16.36,16.36,0,0,0-4,11.37,16.32,16.32,0,0,0,4,11.36,14.65,14.65,0,0,0,21.07,0Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="#7a7d82" d="M339.73,64.21v9.58a16.35,16.35,0,0,1,15.19-10.34c.94,0,1.92,0,2.94.13a17,17,0,0,1,3.32.63V83.75A29.22,29.22,0,0,0,357,82.6a24,24,0,0,0-4.34-.38q-6.27,0-9.58,4.34T339.73,97.8v30.26H320.45V64.21Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="#7a7d82" d="M365.4,42A12.61,12.61,0,0,1,368,38.16a12.34,12.34,0,0,1,3.83-2.61,11.21,11.21,0,0,1,4.59-1,12,12,0,0,1,4.79,1,11.47,11.47,0,0,1,3.83,2.61A13.18,13.18,0,0,1,387.62,42a12,12,0,0,1,0,9.39,11.82,11.82,0,0,1-6.39,6.39,12.15,12.15,0,0,1-4.79.95,11.36,11.36,0,0,1-4.59-.95A12.92,12.92,0,0,1,368,55.21a11.5,11.5,0,0,1-2.62-3.83,12,12,0,0,1,0-9.39Zm20.75,22.22v63.85H366.87V64.21Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="#7a7d82" d="M489.62,127.36a22.49,22.49,0,0,1-8.11-4.47,21.52,21.52,0,0,1-5.49-7.53,25.79,25.79,0,0,1-2-10.66V80.94H461.21V64.21H474V46.46h19.28V64.21h17.88V80.94H493.26v19.8c0,3.83.85,6.59,2.55,8.3s4.47,2.55,8.3,2.55a25.68,25.68,0,0,0,3.84-.25,13.52,13.52,0,0,0,3.19-.9v17.11a29,29,0,0,1-4.92,1,58.65,58.65,0,0,1-6.58.32A33.16,33.16,0,0,1,489.62,127.36Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="#7a7d82" d="M602.65,127.75A30.1,30.1,0,0,1,593.4,123a22.79,22.79,0,0,1-6.13-7,20,20,0,0,1-2.49-8.75h20.3a7.06,7.06,0,0,0,3.13,5.75,12.29,12.29,0,0,0,7,1.91,10,10,0,0,0,5.43-1.15,3.42,3.42,0,0,0,1.72-2.93,3.57,3.57,0,0,0-1.79-3.26,22.79,22.79,0,0,0-5.49-2.11l-12.9-3.32q-8.43-2.17-12.26-7.53a21,21,0,0,1-3.83-12.52,16.78,16.78,0,0,1,1.79-7.72,17.26,17.26,0,0,1,5.24-6.07,26.68,26.68,0,0,1,8.42-4,39.7,39.7,0,0,1,11.24-1.47,35.82,35.82,0,0,1,9.9,1.34,25.82,25.82,0,0,1,8.24,4,20.27,20.27,0,0,1,5.74,6.45,21.1,21.1,0,0,1,2.56,8.94H619.77c-.43-2.39-1.35-4-2.75-4.73a9.66,9.66,0,0,0-4.66-1.15,9,9,0,0,0-4.73,1.09,3.34,3.34,0,0,0-1.78,3,3.67,3.67,0,0,0,.57,2.11A4.25,4.25,0,0,0,608,85.16a13.11,13.11,0,0,0,2.11.89,21.93,21.93,0,0,0,2.3.64L624,89.75q9.71,2.56,13.85,7.48c2.77,3.27,4.16,7.47,4.16,12.57a16.29,16.29,0,0,1-2,8.11,18.71,18.71,0,0,1-5.68,6.2,28.07,28.07,0,0,1-8.68,4,41,41,0,0,1-11.05,1.41A39,39,0,0,1,602.65,127.75Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="#7a7d82" d="M534.22,127a32.17,32.17,0,0,1-10.73-7,31.17,31.17,0,0,1-7-10.6A35.33,35.33,0,0,1,514,96a34.23,34.23,0,0,1,2.55-13.28,31.14,31.14,0,0,1,7.09-10.53,32.66,32.66,0,0,1,10.73-6.9,35.71,35.71,0,0,1,13.47-2.49A37.49,37.49,0,0,1,561,65.17a30.61,30.61,0,0,1,11.05,7.09,33,33,0,0,1,7.41,11.81,43.26,43.26,0,0,1,2.42,16.54H532.75a14.24,14.24,0,0,0,4.47,8.56q3.82,3.69,11.62,3.7a16.88,16.88,0,0,0,7.66-1.73,9.25,9.25,0,0,0,4.6-4.27h20.18a29.58,29.58,0,0,1-4.67,9.13,31.65,31.65,0,0,1-7.53,7.15,36.21,36.21,0,0,1-9.83,4.66,38.77,38.77,0,0,1-11.43,1.66A36.13,36.13,0,0,1,534.22,127Zm3.83-46a14.32,14.32,0,0,0-4.79,7.34h27.33a13,13,0,0,0-5.56-8,13,13,0,0,0-3.83-1.73,15.58,15.58,0,0,0-3.89-.51A14.14,14.14,0,0,0,538.05,81Z" transform="translate(-63.85 -34.59)"/>
+			<polygon fill="#7a7d82" points="510.37 2.81 490.54 22.51 476.49 22.51 490.41 2.81 510.37 2.81"/>
+			<path fill="#7a7d82" d="M412.07,127a32.17,32.17,0,0,1-10.73-7,31.17,31.17,0,0,1-7-10.6A35.33,35.33,0,0,1,391.83,96a34.23,34.23,0,0,1,2.55-13.28,31.14,31.14,0,0,1,7.09-10.53,32.66,32.66,0,0,1,10.73-6.9,35.75,35.75,0,0,1,13.47-2.49,37.58,37.58,0,0,1,13.22,2.36,30.65,30.65,0,0,1,11,7.09,33,33,0,0,1,7.41,11.81,43.26,43.26,0,0,1,2.42,16.54H410.6a14.34,14.34,0,0,0,4.47,8.56q3.82,3.69,11.62,3.7a16.88,16.88,0,0,0,7.66-1.73,9.25,9.25,0,0,0,4.6-4.27h20.18a29.77,29.77,0,0,1-4.66,9.13,31.88,31.88,0,0,1-7.54,7.15,36.21,36.21,0,0,1-9.83,4.66,38.77,38.77,0,0,1-11.43,1.66A36.13,36.13,0,0,1,412.07,127Zm3.83-46a14.32,14.32,0,0,0-4.79,7.34h27.33a13,13,0,0,0-5.56-8,13,13,0,0,0-3.83-1.73,15.58,15.58,0,0,0-3.89-.51A14.14,14.14,0,0,0,415.9,81Z" transform="translate(-63.85 -34.59)"/>
+			<polygon fill="#7a7d82" points="388.23 2.81 368.39 22.51 354.34 22.51 368.26 2.81 388.23 2.81"/>
+			<path fill="currentColor" d="M678.57,37.4a45.68,45.68,0,0,1,18,3.57,47,47,0,0,1,14.69,9.71A45.83,45.83,0,0,1,721.16,65a44.81,44.81,0,0,1,0,35.38,45.83,45.83,0,0,1-9.9,14.36,46.84,46.84,0,0,1-14.69,9.71,45.68,45.68,0,0,1-18,3.57H647.66V37.4ZM689,107.31a24.68,24.68,0,0,0,8.11-5.74,25.91,25.91,0,0,0,5.23-8.5,29.67,29.67,0,0,0,0-20.68,25.76,25.76,0,0,0-5.23-8.49A24.57,24.57,0,0,0,689,58.15,25.34,25.34,0,0,0,678.57,56H668v53.38h10.6A25.34,25.34,0,0,0,689,107.31Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="currentColor" d="M748.82,127a32.13,32.13,0,0,1-10.72-7,31,31,0,0,1-7-10.6A35.33,35.33,0,0,1,728.58,96a34.05,34.05,0,0,1,2.56-13.28,31.12,31.12,0,0,1,7.08-10.53A32.76,32.76,0,0,1,749,65.3a35.79,35.79,0,0,1,13.47-2.49,37.54,37.54,0,0,1,13.22,2.36,30.69,30.69,0,0,1,11.05,7.09,32.94,32.94,0,0,1,7.4,11.81,43.25,43.25,0,0,1,2.43,16.54H747.35a14.34,14.34,0,0,0,4.47,8.56q3.84,3.69,11.62,3.7a16.92,16.92,0,0,0,7.67-1.73,9.23,9.23,0,0,0,4.59-4.27h20.18a29.55,29.55,0,0,1-4.66,9.13,31.88,31.88,0,0,1-7.54,7.15,36.07,36.07,0,0,1-9.83,4.66,38.77,38.77,0,0,1-11.43,1.66A36.13,36.13,0,0,1,748.82,127Zm3.83-46a14.38,14.38,0,0,0-4.79,7.34h27.33A13.37,13.37,0,0,0,773,83.5a13.6,13.6,0,0,0-3.32-3.13,13.1,13.1,0,0,0-3.83-1.73,15.59,15.59,0,0,0-3.9-.51A14.14,14.14,0,0,0,752.65,81Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="currentColor" d="M828.87,126a45.25,45.25,0,0,1-25-24.84,49.15,49.15,0,0,1,0-36.78,45.25,45.25,0,0,1,25-24.84A49.3,49.3,0,0,1,848,35.86a46.64,46.64,0,0,1,14.56,2.3,48.39,48.39,0,0,1,13,6.52A43.62,43.62,0,0,1,885.76,55,40.16,40.16,0,0,1,892,68.56h-22.1a20.44,20.44,0,0,0-9.06-9.71A26.76,26.76,0,0,0,848,55.53a28.51,28.51,0,0,0-11.24,2.11,25.5,25.5,0,0,0-14.05,14.43,30.7,30.7,0,0,0,0,21.32,25.5,25.5,0,0,0,14.05,14.43A28.51,28.51,0,0,0,848,109.93a26.76,26.76,0,0,0,12.9-3.32,20.47,20.47,0,0,0,9.06-9.7H892a40.34,40.34,0,0,1-6.26,13.6,43.81,43.81,0,0,1-10.28,10.28,48.07,48.07,0,0,1-13,6.51A46.64,46.64,0,0,1,848,129.6,49.3,49.3,0,0,1,828.87,126Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="currentColor" d="M917,37.4V70.73a17.76,17.76,0,0,1,6.89-5.62,24.08,24.08,0,0,1,10.86-2.3,24.82,24.82,0,0,1,10.47,2.11A22.53,22.53,0,0,1,953,70.73a25,25,0,0,1,4.85,8.94,37.75,37.75,0,0,1,1.66,11.49v36.9H940.22V94.48q0-6.65-2.55-10.41c-1.71-2.51-4.3-3.77-7.79-3.77a12,12,0,0,0-9.2,4q-3.7,4-3.7,12.7v31H897.7V37.4Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="currentColor" d="M985.74,126.92a32.77,32.77,0,0,1-10.66-7.09,34.76,34.76,0,0,1-7.22-10.6,33.31,33.31,0,0,1,0-26.18,34.76,34.76,0,0,1,7.22-10.6,32.77,32.77,0,0,1,10.66-7.09,34.54,34.54,0,0,1,26,0,32.92,32.92,0,0,1,10.67,7.09,34.73,34.73,0,0,1,7.21,10.6,33.31,33.31,0,0,1,0,26.18,34.73,34.73,0,0,1-7.21,10.6,32.92,32.92,0,0,1-10.67,7.09,34.54,34.54,0,0,1-26,0Zm23.18-19.67q4-4.22,4-11.11t-4-11.11a14.35,14.35,0,0,0-20.31,0q-4,4.22-4,11.11t4,11.11a14.35,14.35,0,0,0,20.31,0Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="currentColor" d="M1036.54,42a12.61,12.61,0,0,1,2.62-3.83,12.46,12.46,0,0,1,3.83-2.61,11.26,11.26,0,0,1,4.6-1,12,12,0,0,1,4.79,1,11.57,11.57,0,0,1,3.83,2.61,13.35,13.35,0,0,1,2.55,3.83,12,12,0,0,1,0,9.39,12,12,0,0,1-11.17,7.34,11.41,11.41,0,0,1-4.6-.95,13,13,0,0,1-3.83-2.56,11.5,11.5,0,0,1-2.62-3.83,12,12,0,0,1,0-9.39Zm20.75,22.22v63.85H1038V64.21Z" transform="translate(-63.85 -34.59)"/>
+			<path fill="currentColor" d="M1061.34,64.21h22.73l13.53,18.52,13.54-18.52h23l-24.26,33,24.39,30.9h-23l-13.54-17.36-13.54,17.36h-23.11l24.52-30.9Z" transform="translate(-63.85 -34.59)"/>
+		</symbol>
+
+		<!-- Facebook -->
+		<symbol id="icon-facebook" viewBox="0 0 22 22" aria-labelledby="facebook-title">
+			<title id="facebook-title">Facebook</title>
+			<path fill="currentColor" d="M20,0 L2,0 C0.895,0 0,0.895 0,2 L0,20 C0,21.105 0.895,22 2,22 L12,22 L12,13 L9,13 L9,10 L12,10 L12,8.389 C12,5.339 13.486,4 16.021,4 C17.235,4 17.877,4.09 18.181,4.131 L18.181,7 L16.452,7 C15.376,7 15,7.568 15,8.718 L15,10 L18.154,10 L17.726,13 L15,13 L15,22 L20,22 C21.105,22 22,21.105 22,20 L22,2 C22,0.895 21.104,0 20,0 Z"></path>
+		</symbol>
+
+		<!-- LinkedIn -->
+		<symbol id="icon-linkedin" viewBox="0 0 24 24" aria-labelledby="linkedin-title">
+			<title id="linkedin-title">LinkedIn</title>
+			<path d="M16 0H2C0.895 0 0 0.895 0 2V16C0 17.105 0.895 18 2 18H16C17.105 18 18 17.105 18 16V2C18 0.895 17.105 0 16 0ZM6 14H3.477V7H6V14ZM4.694 5.717C3.923 5.717 3.408 5.203 3.408 4.517C3.408 3.831 3.922 3.317 4.779 3.317C5.55 3.317 6.065 3.831 6.065 4.517C6.065 5.203 5.551 5.717 4.694 5.717ZM15 14H12.558V10.174C12.558 9.116 11.907 8.872 11.663 8.872C11.419 8.872 10.605 9.035 10.605 10.174C10.605 10.337 10.605 14 10.605 14H8.082V7H10.605V7.977C10.93 7.407 11.581 7 12.802 7C14.023 7 15 7.977 15 10.174V14Z" fill="currentColor"/>
+		</symbol>
+
+		<!-- Instagram -->
+		<symbol id="icon-instagram" viewBox="0 0 18 18" aria-labelledby="instagram-title">
+			<title id="instagram-title">Instagram</title>
+			<path d="M5 0C2.243 0 0 2.243 0 5V13C0 15.757 2.243 18 5 18H13C15.757 18 18 15.757 18 13V5C18 2.243 15.757 0 13 0H5ZM5 2H13C14.654 2 16 3.346 16 5V13C16 14.654 14.654 16 13 16H5C3.346 16 2 14.654 2 13V5C2 3.346 3.346 2 5 2ZM14 3C13.7348 3 13.4804 3.10536 13.2929 3.29289C13.1054 3.48043 13 3.73478 13 4C13 4.26522 13.1054 4.51957 13.2929 4.70711C13.4804 4.89464 13.7348 5 14 5C14.2652 5 14.5196 4.89464 14.7071 4.70711C14.8946 4.51957 15 4.26522 15 4C15 3.73478 14.8946 3.48043 14.7071 3.29289C14.5196 3.10536 14.2652 3 14 3ZM9 4C6.243 4 4 6.243 4 9C4 11.757 6.243 14 9 14C11.757 14 14 11.757 14 9C14 6.243 11.757 4 9 4ZM9 6C10.654 6 12 7.346 12 9C12 10.654 10.654 12 9 12C7.346 12 6 10.654 6 9C6 7.346 7.346 6 9 6Z" fill="currentColor"/>
+		</symbol>
+
+		<!-- Twitter -->
+		<symbol id="icon-twitter" viewBox="0 0 22 22" fill="none" aria-labelledby="twitter-title">
+		<title id="twitter-title">Twitter</title>
+			<path d="M19.25 22H2.75C1.232 22 0 20.768 0 19.25V2.75C0 1.232 1.232 0 2.75 0H19.25C20.768 0 22 1.232 22 2.75V19.25C22 20.768 20.768 22 19.25 22Z" fill="currentColor"/>
+			<path d="M8.44787 16.5901C13.6344 16.5901 16.4724 12.2891 16.4724 8.56556C16.4724 8.44456 16.4724 8.32356 16.4669 8.20256C17.0169 7.80656 17.4954 7.30606 17.8749 6.73956C17.3689 6.96506 16.8244 7.11356 16.2524 7.18506C16.8354 6.83856 17.2809 6.28306 17.4954 5.62306C16.9509 5.94756 16.3459 6.17856 15.7024 6.30506C15.1854 5.75506 14.4539 5.41406 13.6454 5.41406C12.0889 5.41406 10.8239 6.67906 10.8239 8.23556C10.8239 8.45556 10.8514 8.67006 10.8954 8.87906C8.55237 8.76356 6.47337 7.63606 5.08187 5.93106C4.83987 6.34906 4.70237 6.83306 4.70237 7.35006C4.70237 8.32906 5.20287 9.19256 5.95637 9.69856C5.49437 9.68206 5.05987 9.55556 4.68037 9.34656C4.68037 9.35756 4.68037 9.36856 4.68037 9.38506C4.68037 10.7491 5.65387 11.8931 6.94087 12.1516C6.70437 12.2176 6.45687 12.2506 6.19837 12.2506C6.01687 12.2506 5.84087 12.2341 5.67037 12.2011C6.02787 13.3231 7.07287 14.1371 8.30487 14.1591C7.33687 14.9181 6.12137 15.3691 4.80137 15.3691C4.57587 15.3691 4.35037 15.3581 4.13037 15.3306C5.37337 16.1226 6.85837 16.5901 8.44787 16.5901Z" fill="#ffffff"/>
+		</symbol>
+
+		<!-- Next Arrow -->
+		<symbol id="icon-next" viewBox="0 0 10 19" aria-labelledby="next-title">
+			<title id="next-title">Next Icon</title>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M8.8327 9.7729L1.51208 18.2375L-0.000653642 16.9292L6.75422 9.11875L-0.000652259 1.30829L1.51209 -3.44723e-07L8.8327 8.4646L9.39844 9.11875L8.8327 9.7729Z" fill="currentColor"/>
+		</symbol>
+
+		<!-- Previous Arrow -->
+		<symbol id="icon-previous" viewBox="0 0 10 19" aria-labelledby="previous-title">
+			<title id="previous-title">Previous Icon</title>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M1.1673 9.2271L8.48792 0.762501L10.0007 2.07079L3.24578 9.88125L10.0007 17.6917L8.48791 19L1.1673 10.5354L0.601564 9.88125L1.1673 9.2271Z" fill="currentColor"/>
+		</symbol>
+
+		<!-- Search -->
+		<symbol id="icon-search" viewBox="0 0 32 32" aria-labelledby="search-title">
+			<title id="search-title">Search</title>
+			<path d="M5.64645 24.4727L5.29289 24.8262L5.64645 25.1798L6.8202 26.3536L7.17375 26.7071L7.52731 26.3536L13.7224 20.1585C15.1563 21.2121 16.923 21.8305 18.8348 21.8305C23.6113 21.8305 27.5 17.9418 27.5 13.1652C27.5 8.38865 23.6113 4.5 18.8348 4.5C14.0582 4.5 10.1695 8.38865 10.1695 13.1652C10.1695 15.077 10.7879 16.8437 11.8415 18.2776L5.64645 24.4727ZM18.8348 7.13305C22.1756 7.13305 24.867 9.82444 24.867 13.1652C24.867 16.5061 22.1756 19.1974 18.8348 19.1974C15.4939 19.1974 12.8026 16.5061 12.8026 13.1652C12.8026 9.82444 15.4939 7.13305 18.8348 7.13305Z" fill="currentColor" stroke="currentColor"/>
+		</symbol>
+
+		<!-- Arrow Left  -->
+		<symbol id="icon-arrow" viewBox="0 0 12 22" fill="none" aria-labelledby="icon-arrow-left-title">
+			<title id="icon-arrow-left-title">Arrow Left Icon</title>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4362 11.9909L2.01318 21.7302L0.500443 20.422L8.35774 11.3368L0.500444 2.25165L2.01318 0.943359L10.4362 10.6827L11.002 11.3368L10.4362 11.9909Z" fill="currentColor"/>
+		</symbol>
+
+		<!-- Download -->
+		<symbol id="icon-download" viewBox="0 0 32 32" fill="none" aria-labelledby="icon-download-title">
+			<title id="icon-download-title">Download Icon</title>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M15 5H17V17.7965L23.3418 12.2474L24.6588 13.7526L16.6588 20.7526L16.0003 21.3288L15.3418 20.7526L7.3418 13.7526L8.65881 12.2474L15 17.796V5ZM26 24H7V26H26V24Z" fill="currentColor"/>
+		</symbol>
+
+		<!-- Chevron Down/Up -->
+		<symbol id="icon-chevron-down" width="18" height="10" viewBox="0 0 18 10" fill="none" aria-labelledby="icon-chevron-down-title">
+			<title id="icon-chevron-down-title">Chevron Down/Up</title>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M9.65869 0.576877L17.6587 7.57688L16.3417 9.08203L9.00019 2.65822L1.65869 9.08203L0.341683 7.57688L8.34168 0.576877L9.00019 0.000684935L9.65869 0.576877Z" fill="#7B7D82"/>
+		</symbol>
+
+		<!-- Open -->
+		<symbol id="icon-open" width="10" height="17" viewBox="0 0 10 17" fill="none" aria-labelledby="open-title">
+			<title id="open-title">Open</title>
+      <path id="icn_arrowLeft" d="M1.53022 16.0859L8.0166 8.58594L1.53023 1.08594" stroke="currentColor" stroke-width="1.5"/>
+		</symbol>
+
+		<!-- Hamburger -->
+		<symbol id="icon-hamburger" width="25" height="17" viewBox="0 0 25 17" aria-labelledby="hamburger-title">
+			<title id="hamburger-title">Menu</title>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.5C0 0.671573 0.671573 0 1.5 0H23.5C24.3284 0 25 0.671573 25 1.5C25 2.32843 24.3284 3 23.5 3H1.5C0.671573 3 0 2.32843 0 1.5ZM0 8.5C0 7.67157 0.671573 7 1.5 7H23.5C24.3284 7 25 7.67157 25 8.5C25 9.32843 24.3284 10 23.5 10H1.5C0.671573 10 0 9.32843 0 8.5ZM1.5 14C0.671573 14 0 14.6716 0 15.5C0 16.3284 0.671573 17 1.5 17H23.5C24.3284 17 25 16.3284 25 15.5C25 14.6716 24.3284 14 23.5 14H1.5Z" fill="#7B7D82"/>
+		</symbol>
+
+		<!-- Icon Close -->
+		<symbol id="icon-close" aria-labelledby="close-title" viewBox="0 0 20 20">
+			<title id="close-title">Close</title>
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M3.182 1.06066C2.59621 0.474874 1.64646 0.474874 1.06068 1.06066C0.474891 1.64645 0.474891 2.59619 1.06068 3.18198L7.93935 10.0607L1.06066 16.9393C0.474874 17.5251 0.474874 18.4749 1.06066 19.0607C1.64645 19.6464 2.59619 19.6464 3.18198 19.0607L10.0607 12.182L16.617 18.7383C17.2028 19.3241 18.1526 19.3241 18.7383 18.7383C19.3241 18.1525 19.3241 17.2028 18.7383 16.617L12.182 10.0607L18.7383 3.50431C19.3241 2.91852 19.3241 1.96878 18.7383 1.38299C18.1525 0.797204 17.2028 0.797205 16.617 1.38299L10.0607 7.93933L3.182 1.06066Z" fill="#7B7D82"/>
+		</symbol>
+
+		<symbol id="icon-close-small" aria-labelledby="close-small-title" viewBox="0 0 9 9">
+			<title id="close-small-title">Close</title>
+			<path d="M8.67629 7.17703L5.93452 4.43917L8.67629 1.7013C9.05398 1.32361 9.05398 0.710566 8.67727 0.331851C8.2986 -0.0477913 7.68556 -0.046815 7.30689 0.330874L4.56322 3.0707L1.81954 0.330874C1.44087 -0.046815 0.827827 -0.0477913 0.449161 0.331851C0.0714716 0.710517 0.0714711 1.32356 0.450137 1.7013L3.19191 4.43917L0.450137 7.17703C0.0714711 7.55472 0.0714716 8.16777 0.449161 8.54648C0.63803 8.73628 0.886909 8.83022 1.13486 8.83022C1.38281 8.83022 1.63072 8.7353 1.81958 8.54741L4.56326 5.80759L7.30694 8.54741C7.49581 8.73628 7.74371 8.83022 7.99167 8.83022C8.23962 8.83022 8.4885 8.7353 8.67737 8.54648C9.05496 8.16777 9.05496 7.55472 8.67629 7.17703Z" fill="#7B7D82"/>
+		</symbol>
+
+		<!-- Icon Back -->
+		<symbol id="icon-back" viewBox="0 0 24 25" aria-labelledby="back-title">
+				<title id="back-title">Back</title>
+				<path d="M15.5759 6.33594L10.3868 12.3359L15.5759 18.3359" stroke="currentColor" fill="none" stroke-width="1.5"/>
+		</symbol>
+
+		<symbol id="icon-spinner" viewBox="0 0 24 24" fill="none" aria-labelledby="icon-spinner-title">
+			<title id="icon-spinner-title">Loading...</title>
+			<g>
+				<path d="M12 0.75C12 1.16421 12.337 1.49727 12.7502 1.52569C18.2426 1.90347 22.5 6.40239 22.5 12C22.5 17.6034 18.3713 22.1059 12.7504 22.4755C12.3371 22.5027 12 22.8358 12 23.25C12 23.6642 12.3362 24.0027 12.7493 23.9722C18.4894 23.5481 24 18.3251 24 12C24 5.65186 19.0043 0.413881 12.7501 0.0233574C12.3367 -0.00245668 12 0.335787 12 0.75Z" fill="currentColor"/>
+			</g>
+		</symbol>
+
+		<symbol id="icon-checkmark" viewBox="0 0 32 32" fill="none" aria-labelledby="icon-checkmark-title">
+			<title id="icon-checkmark-title">Check</title>
+			<path d="M9 16.3745L13.4698 20.4229L23.2091 11.9998" stroke="currentColor" stroke-width="3"/>
+		</symbol>
+
+		<!-- Smile outline -->
+		<symbol id="smile" viewBox="0 0 1920 226" preserveAspectRatio="none" fill="none">
+			<title id="smile-title">Smile</title>
+			<path d="M968.5 148C581.691 148 166 84 0 0V226H968.5H1920L1920 0C1758 58 1355.31 148 968.5 148Z" fill="white"/>
+		</symbol>
+
+		<!-- Success Icon -->
+		<symbol id="icon-success" viewBox="0 0 52 52" fill="none" aria-labelledby="icon-success-title">
+			<title id="icon-success-title">Success</title>
+			<g>
+				<circle cx="26" cy="26" r="26" fill="currentColor"/>
+				<path d="M12.3809 26.7323L21.283 34.6665L40.6802 18.1586" stroke="white" stroke-width="5"/>
+			</g>
+		</symbol>
+
+		<!-- Select Arrow -->
+		<symbol id="icon-select" viewBox="0 0 20 14" fill="none"  aria-labelledby="icon-select-title">
+			<title id="icon-select-title">Select</title>
+			<g>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0059 9.89837L3.91884 4.63397L4.73652 3.68851L10.4147 8.59932L16.093 3.68851L16.9106 4.63397L10.8236 9.89837L10.4147 10.252L10.0059 9.89837Z" fill="#7B7D82"/>
+      </g>
+		</symbol>
+
+		<!-- Video Play -->
+		<symbol id="icon-play" viewBox="0 0 17 24" fill="none" aria-labelledby="icon-play-title">
+			<title id="icon-play-title">Play Video</title>
+			<path d="M16.6348 12L0.868344 23.3784L0.868345 0.621578L16.6348 12Z" fill="currentColor"/>
+		</symbol>
+
+		<!-- C3 Logo -->
+		<symbol id="icon-c3" viewBox="0 0 223.6 118.1">
+			<title id="icon-c3-title">C3 Logo</title>
+			<g>
+				<path fill="currentColor" d="M57.7,10.5c-27,0-48.9,21.9-48.9,48.9s21.9,48.9,48.9,48.9s48.9-21.9,48.9-48.9S84.7,10.5,57.7,10.5z M58.3,92
+					c-18.1,0-32.7-14.5-32.7-32.6c0-18.1,14.7-32.7,32.8-32.7c15.1,0,27,9.6,31,22.8H74.1c-2.7-5.4-7.9-9-15.4-9
+					c-10.4,0-18.9,8.5-18.9,18.9s8.5,18.9,18.9,18.9c7.5,0,12.7-3.7,15.5-9.1h15.4C85.6,82.5,73.8,92,58.3,92z"/>
+				<path fill="currentColor" d="M113.9,10.3v97.5h97.9V10.3H113.9z M184,80.1c-1.1,2.3-2.6,4.3-4.5,6c-1.9,1.7-4.3,3-7,3.9
+					c-2.7,0.9-5.7,1.4-9,1.4c-2.9,0-5.7-0.5-8.5-1.4c-2.8-0.9-5.3-2.3-7.5-4.1c-2.2-1.8-4-4.1-5.4-6.8c-1.4-2.7-2.1-5.9-2.3-9.5h13.3
+					c0.3,2.9,1.4,5,3.2,6.4c1.9,1.4,4.2,2.1,7.1,2.1c2.6,0,4.7-0.6,6.2-1.9c1.6-1.3,2.4-2.9,2.4-5c0.1-2.2-0.8-4.1-2.5-5.5
+					c-1.7-1.4-4-2.1-6.8-2.1h-5.5V53h4.8c2.8,0,4.9-0.6,6.2-1.9c1.3-1.3,2-2.9,2-4.9c0.1-1.9-0.6-3.4-2-4.6c-1.4-1.2-3.1-1.8-5.2-1.8
+					c-2.7,0-4.8,0.8-6.4,2.3c-1.6,1.6-2.4,3.4-2.3,5.5h-13.4c0-3.4,0.6-6.3,1.9-8.9c1.3-2.6,3-4.8,5-6.6c2.1-1.8,4.5-3.2,7.1-4.1
+					c2.7-0.9,5.3-1.4,8.1-1.4c3.4,0,6.3,0.5,8.9,1.5c2.6,1,4.7,2.4,6.5,4.1c1.7,1.7,3.1,3.7,3.9,5.9c0.9,2.2,1.3,4.6,1.3,7
+					c0,3.1-0.7,5.8-2,8.1c-1.4,2.3-2.9,4.1-4.5,5.4c1.1,0.5,2.1,1.2,3.1,2c1,0.8,1.9,1.8,2.7,3c0.8,1.2,1.4,2.5,1.9,4
+					c0.5,1.5,0.7,3.1,0.7,4.9C185.6,75.3,185,77.8,184,80.1z"/>
+			</g>
+		</symbol>
+
+	</svg>
+
+        <div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
+	<!-- ALERT BAR START -->
+		<aside class="cpr-alert-bar" data-cookie="cpr-alert-bar-dismissed">
+		<div class="container">
+			<div class="cpr-alert-bar__inner">
+				<div class="row">
+
+											<div class="col-xs-12 col-lg-3">
+							<div class="cpr-alert-bar__title">
+								<div class="heading-five">COVID-19</div>
+							</div>
+						</div>
+					
+											<div class="col-xs-12 col-lg-8">
+							<div class="cpr-alert-bar__text">
+								<p><a href="https://choicereit.ca/covid-19-response/">Our response to COVID-19 </a></p>
+							</div>
+						</div>
+									</div>
+
+				<button class="cpr-alert-bar__close" aria-label="Close">
+					<span class="cpr-alert-bar__icon-container">
+						<svg class="spritemap__icon icon-close"><use xlink:href="#icon-close-small"></use></svg>
+					</span>
+				</button>
+			</div><!-- end .row -->
+		</div><!-- end .container -->
+	</aside>
+		<!-- ALERT BAR END -->
+
+	<header id="masthead" class="header__main site-header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__inner__brand">
+					<div>
+						<a id="home-link" class="has-accent-color header__home-link" href="https://www.choicereit.ca">
+							<svg height="51" width="388" viewbox="0 0 388 51"><use xlink:href="#choice-properties-logo--en"></use></svg>
+						</a>
+					</div>
+				</div>
+				<nav id="site-navigation" class="header__navigation main-navigation">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+							<span class="screen-reader-text">Primary Menu</span>
+							<span class="menu-toggle__icon">
+								<svg class="spritemap__icon icon-hamburger"><use xlink:href="#icon-hamburger"></use></svg>
+								<svg class="spritemap__icon icon-close"><use xlink:href="#icon-close"></use></svg>
+							</span>
+						</button>
+						<div id="primary-menu" class="main-menu">
+							<div class="container">
+								<div class="menu__container">
+								<div class="row">
+									<div class="col-lg-3 col-md-4 main-menu__container">
+										<div role="menu">
+											<ul id="menu-main-menu" class="menu"><li aria-expanded="false" aria-haspopup="true" role="menuitem" class=" menu-item menu-item-type-custom menu-item-object-custom"><a class="fade-in menu-item__link" href="/our-properties/">Find space</a></li>
+<li aria-expanded="false" aria-haspopup="true" role="menuitem" class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a class="fade-in menu-item__link menu-item__parent" href="#about">About<svg class="menu-item__open-icon" width="10" height="17" viewBox="0 0 10 17"><use xlink:href="#icon-open"></use></svg></a>
+<div role="region" class="submenu__container submenu">
+
+<div class="submenu__scroll">
+
+<ul class="dropdown-menu" role="menu">
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/about-overview/">Overview</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/leadership/">Leadership</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/careers/">Careers</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/sustainability/">Sustainability</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/choice-cares/">Choice Cares</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/contact/">Contact</a></li>
+
+</ul>
+
+</div>
+
+<button class="menu-item__back menu-subitem"><svg class="menu-item__back-icon" width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#icon-back"></use></svg>Back</button>
+
+</div>
+</li>
+<li aria-expanded="false" aria-haspopup="true" role="menuitem" class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a class="fade-in menu-item__link menu-item__parent" href="#portfolio">Portfolio<svg class="menu-item__open-icon" width="10" height="17" viewBox="0 0 10 17"><use xlink:href="#icon-open"></use></svg></a>
+<div role="region" class="submenu__container submenu">
+
+<div class="submenu__scroll">
+
+<ul class="dropdown-menu" role="menu">
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/portfolio/">Overview</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/our-properties/">Properties</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/developments/">Developments</a></li>
+
+</ul>
+
+</div>
+
+<button class="menu-item__back menu-subitem"><svg class="menu-item__back-icon" width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#icon-back"></use></svg>Back</button>
+
+</div>
+</li>
+<li aria-expanded="false" aria-haspopup="true" role="menuitem" class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a class="fade-in menu-item__link menu-item__parent" href="#investors">Investors<svg class="menu-item__open-icon" width="10" height="17" viewBox="0 0 10 17"><use xlink:href="#icon-open"></use></svg></a>
+<div role="region" class="submenu__container submenu">
+
+<div class="submenu__scroll">
+
+<ul class="dropdown-menu" role="menu">
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/investors-overview/">Overview</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/financial-reports/">Financial Reports</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/news-releases/">News Releases</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/governance/">Governance</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/regulatory-filings/">Regulatory Filings</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/events-webcasts/">Events &#038; Webcasts</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/tax-history/">Tax History</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/distribution-history/">Distribution History</a></li>
+<li role="menuitem" aria-haspopup="false" class=" menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item__link menu-subitem" href="https://www.choicereit.ca/analyst-coverage/">Analyst Coverage</a></li>
+
+</ul>
+
+</div>
+
+<button class="menu-item__back menu-subitem"><svg class="menu-item__back-icon" width="24" height="24" viewBox="0 0 24 24"><use xlink:href="#icon-back"></use></svg>Back</button>
+
+</div>
+</li>
+</ul>											<ul class="menu fade-in fade-in--4" >
+                        <li class="menu-item" role="menuitem">
+                                                    <a class="menu-item__link" href="https://www.choicereit.ca/wp/search">Search<svg class="search-bar__icon" viewBox="0 0 24 24"><use xlink:href="#icon-search"></use></svg></a>
+                        </li>
+                      </ul>
+										</div>
+										<div class="fade-in fade-in--5 main-menu__subitems">
+																						<div class="c3-login c3-login--inner">
+												<a href="/c3/">
+													<svg viewBox="0 0 45 22">
+														<use xlink:href="#icon-c3"></use>
+													</svg>
+													Login												</a>
+											</div>
+																																		<ul class="main-menu__social">
+                                                            														<li class="main-menu__social__item">
+															<a class="main-menu__social__link main-menu__social__link--linkedin" href="https://ca.linkedin.com/company/choicereit">
+																<svg class="spritemap__icon"><use xlink:href="#icon-linkedin"></use></svg>
+															</a>
+														</li>
+																											                                														<li class="main-menu__social__item">
+															<a class="main-menu__social__link main-menu__social__link--instagram" href="https://www.instagram.com/choicereit/?hl=en">
+																<svg class="spritemap__icon"><use xlink:href="#icon-instagram"></use></svg>
+															</a>
+														</li>
+																											                                														<li class="main-menu__social__item">
+															<a class="main-menu__social__link main-menu__social__link--twitter" href="https://twitter.com/choicereit">
+																<svg class="spritemap__icon"><use xlink:href="#icon-twitter"></use></svg>
+															</a>
+														</li>
+																																							</ul>
+																																	<form action="/">
+												<fieldset class="language-switcher language-switcher--mobile" aria-label="secondary-language-switcher" role="radiogroup">
+													<legend id="secondary-language-switcher" class="language-switcher__label hide-element">Select a language:</legend>
+																											<input aria-checked="true" checked type="checkbox" id="secondary-en" class="hide-element language-switcher__toggle " name="main-language" value="https://www.choicereit.ca/">
+														<label  for="secondary-en" class="language-switcher__label">En</label>
+																											<input aria-checked="false"  type="checkbox" id="secondary-fr" class="hide-element language-switcher__toggle " name="main-language" value="https://www.choicereit.ca/fr/">
+														<label  for="secondary-fr" class="language-switcher__label">Fr</label>
+																									</fieldset>
+											</form>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</nav><!-- #site-navigation -->
+				<div class="header__inner__menu">
+											<div class="c3-login c3-login--topbar">
+							<a href="/c3/">
+								<svg viewBox="0 0 45 22">
+									<use xlink:href="#icon-c3"></use>
+								</svg>
+								Login							</a>
+						</div>
+										<form class="language-switcher--main" action="/">
+						<fieldset class="language-switcher" aria-label="primary-language-switcher" role="radiogroup">
+							<legend id="primary-language-switcher" class="language-switcher__label screen-reader-text">Select a language:</legend>
+															<input aria-checked="true" checked type="checkbox" id="main-en" class="hide-element language-switcher__toggle " name="main-language" value="https://www.choicereit.ca/">
+								<label  for="main-en" class="language-switcher__label">En</label>
+															<input aria-checked="false"  type="checkbox" id="main-fr" class="hide-element language-switcher__toggle " name="main-language" value="https://www.choicereit.ca/fr/">
+								<label  for="main-fr" class="language-switcher__label">Fr</label>
+													</fieldset>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div class="scroll-wrapper">
+
+	<div id="content" class="site-content">
+<div >
+	<div class="hero">
+		<div class="hero__container hero__container--full hero__container--smile">
+							<h1 class="screen-reader-text">Choice Properties &#8211; Canada&#8217;s Preeminent REIT</h1>
+										<div class="hero__image">
+					<div class="hero__image__content animated-element parallax" data-animate="hero-in" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2020/11/home-1.jpg)"></div>
+					<svg class="hero__image__smile"><use xlink:href="#smile"></use></svg>
+				</div>
+										<div class="container">
+          <div class="row centered">
+            <div class="col-xxs-12 col-sm-10 col-lg-8 col-xl-7">
+              <h2 class="has-accent-color heading-one text-center animated-element" data-animate="slide-in">Creating enduring value for generations</h2>
+            </div>
+          </div>
+				</div>
+					</div>
+	</div>
+	 
+	<div class="hero__subcopy">
+		<div class="container">
+      <div class="row centered">
+        <div class="col-xxs-11 col-sm-8 col-lg-6">
+                            </div>
+      </div>
+		</div> 
+	</div> 
+	</div>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+<div id="post-5" class="post-5 page type-page status-publish has-post-thumbnail hentry">
+	<div class="entry-content page--rounded  ">
+		
+		<div id="things" class="component-container block--light">
+			<div class="container">
+				<div class="page-strip page-strip-accent   animated-element" data-animate="opacity-in">
+					<div class="row centered">
+
+						<div class="col-sm-12 col-md-10 col-lg-8 col-xl-7">
+							
+															<h2 class="has-accent-color heading-two animated-element" data-animate="slide-in">Our Properties</h2>
+							
+							<div class="page-strip__innerblocks animated-element" data-animate="slide-in">
+							
+
+				<div class="text-left">
+            
+<p class="wp-block-cpr-paragraph-no-accent">We believe that value comes from creating spaces that improve how our tenants live, work, and connect.</p>
+				</div>
+
+            
+
+
+<div class="wp-block-button is-style-fill--accent cpr-button cpr-button-icon cpr-button--search"><a class="wp-block-button__link" href="/our-properties/">Find Space<svg class="icon-for-button"><use xlink:href="#icon-search"></use></svg></a></div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+        	<div class="component-container image-text__container block--light">
+	<div class="container">
+				<div class="row centered   ">
+					<div class="col-xxs-10 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-v-center">
+												<div class="image-text__image image--circle animated-element" data-animate="opacity-in" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2020/11/sus.jpg)"></div>
+											</div>
+					<div class="col-lg-1 col-xl-1"></div>
+					<div class="col-xxs-12 col-lg-5 col-xl-5 col-v-center">
+						<div class="image-text__content animated-element" data-animate="slide-in">
+							
+															<h2 class="heading-one"><span class="has-accent-color">Sustainability</span></h2>
+							
+							                    
+				<div class="text-left">
+            
+<p class="wp-block-cpr-paragraph">We aspire to develop healthy, resilient communities through our dedication to social, economic, and environmental sustainability.</p>
+				</div>
+
+            							                    
+<div class="wp-block-button is-style-fill--accent cpr-button cpr-button-icon cpr-button--arrow"><a class="wp-block-button__link" href="/sustainability/">Learn More<svg class="icon-for-button"><use xlink:href="#icon-arrow"></use></svg></a></div>
+													</div>
+					</div>
+					<div class="col-lg-0 col-xl-1"></div>
+				</div><!-- end row -->
+	</div><!-- end container --> 
+	</div><!-- end image-text__container -->
+        	<div class="component-container image-text__container block--light">
+	<div class="container">
+				<div class="row centered  accent-color-override accent-color-purple reverse ">
+					<div class="col-xxs-10 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-v-center">
+												<div class="image-text__image image--circle animated-element" data-animate="opacity-in" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2020/11/cares.jpg)"></div>
+											</div>
+					<div class="col-lg-1 col-xl-1"></div>
+					<div class="col-xxs-12 col-lg-5 col-xl-5 col-v-center">
+						<div class="image-text__content animated-element" data-animate="slide-in">
+							
+															<h2 class="heading-one"><span class="has-accent-color">Choice Cares</span></h2>
+							
+							                    
+				<div class="text-left">
+            
+<p class="wp-block-cpr-paragraph">We care about our communities and empower our colleagues to become philanthropic leaders capable of lasting impact.</p>
+				</div>
+
+            							                    
+<div class="wp-block-button is-style-fill--accent cpr-button cpr-button-icon cpr-button--arrow"><a class="wp-block-button__link" href="/choice-cares/">Learn More<svg class="icon-for-button"><use xlink:href="#icon-arrow"></use></svg></a></div>
+													</div>
+					</div>
+					<div class="col-lg-0 col-xl-1"></div>
+				</div><!-- end row -->
+	</div><!-- end container --> 
+	</div><!-- end image-text__container -->
+        	<div class="component-container image-text__container block--light">
+	<div class="container">
+				<div class="row centered   ">
+					<div class="col-xxs-10 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-v-center">
+												<div class="image-text__image image--circle animated-element" data-animate="opacity-in" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2020/11/investorsmall.jpg)"></div>
+											</div>
+					<div class="col-lg-1 col-xl-1"></div>
+					<div class="col-xxs-12 col-lg-5 col-xl-5 col-v-center">
+						<div class="image-text__content animated-element" data-animate="slide-in">
+							
+															<h2 class="heading-one">Investors</h2>
+							
+							                    
+				<div class="text-left">
+            
+<p class="wp-block-cpr-paragraph">Choice Properties is a leading Real Estate Investment Trust that creates enduring value through the ownership, operation and development of high-quality commercial and residential properties.</p>
+				</div>
+
+            							                    
+<div class="wp-block-button is-style-fill--accent cpr-button cpr-button-icon cpr-button--arrow"><a class="wp-block-button__link" href="/investors">Access Investor Resources<svg class="icon-for-button"><use xlink:href="#icon-arrow"></use></svg></a></div>
+													</div>
+					</div>
+					<div class="col-lg-0 col-xl-1"></div>
+				</div><!-- end row -->
+	</div><!-- end container --> 
+	</div><!-- end image-text__container -->
+        
+		<div class="container page-strip__container component-container block--light">
+			<div class="page-strip is-accent-color">
+				<div class="row centered">
+
+					<div class="col-sm-12 col-md-10 col-lg-8 col-xl-7">
+						
+													<h2 class="heading-two heading--dark">Our True Colours</h2>
+						
+						<div class="page-strip__innerblocks">
+							
+
+				<div class="text-left">
+            
+<p class="wp-block-cpr-paragraph-no-accent">We have revitalized our visual identity to reflect our commitment to long-term value and, through the use of color, to express our active responsibility to the environment and our communities.</p>
+				</div>
+
+            
+
+
+<div class="wp-block-button is-style-outline--accent cpr-button cpr-button-icon cpr-button--arrow"><a class="wp-block-button__link" href="/about-overview/">See our brand in action<svg class="icon-for-button"><use xlink:href="#icon-arrow"></use></svg></a></div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+        	<div class="component-container image-text__container block--light">
+	<div class="container">
+				<div class="row centered  reverse ">
+					<div class="col-xxs-10 col-sm-8 col-md-7 col-lg-6 col-xl-5 col-v-center">
+												<div class="image-text__image image--circle animated-element" data-animate="opacity-in" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2020/11/careers.jpg)"></div>
+											</div>
+					<div class="col-lg-1 col-xl-1"></div>
+					<div class="col-xxs-12 col-lg-5 col-xl-5 col-v-center">
+						<div class="image-text__content animated-element" data-animate="slide-in">
+							
+															<h2 class="heading-one">Grow With Us</h2>
+							
+							                    
+				<div class="text-left">
+            
+<p class="wp-block-cpr-paragraph">Our culture is guided by a shared set of values grounded in Care, Ownership, Respect and Excellence. Our CORE values inspire us to be authentic, make connections, collaborate, learn from one another and grow as people and professionals.</p>
+				</div>
+
+            							                    
+<div class="wp-block-button is-style-fill--accent cpr-button cpr-button-icon cpr-button--arrow"><a class="wp-block-button__link" href="/careers/">Explore Careers<svg class="icon-for-button"><use xlink:href="#icon-arrow"></use></svg></a></div>
+													</div>
+					</div>
+					<div class="col-lg-0 col-xl-1"></div>
+				</div><!-- end row -->
+	</div><!-- end container --> 
+	</div><!-- end image-text__container -->
+        		<div  class="column-content-container__container component-container block--light">
+			<div class="container container--scroll">
+				<div class="column-container column-container--image-landscape column-container--heading-primary">
+
+					<div class="row">
+						<div class="col-xxs-12">
+														<h2 class="text-left heading-two animated-element" data-animate="slide-in">Our Developments</h2>
+													</div>
+					</div>
+
+					<div class="scroll-container__columns">
+						<div class="row row--scroll">
+						        			<div class="col-scroll col-scroll--4">
+                            <a href="https://www.choicereit.ca/developments/residential-development-ottawa/">
+            
+				<div class="column-content column-content--developments">
+					<div class="column-content__image-container animated-element" data-animate="opacity-in">
+						<div class="column-content__image" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2020/11/Developments-400-Kirkwood-Ave-3-1024x432.jpg)"></div> <!-- end image -->
+					</div>
+					<div class="column-content__text animated-element" data-animate="slide-in">
+						<h3 class="heading-four">
+							                  400 Kirkwood Ave.													</h3>
+																			<span class="faux-link">View Development</span>
+											</div>
+				</div> <!-- end column-content -->
+
+            					</a>
+							</div> <!-- end col -->
+		                			<div class="col-scroll col-scroll--4">
+                            <a href="https://www.choicereit.ca/developments/golden-mile/">
+            
+				<div class="column-content column-content--developments">
+					<div class="column-content__image-container animated-element" data-animate="opacity-in">
+						<div class="column-content__image" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2021/04/Developments-Golden-Mile-2-1-1024x434.jpg)"></div> <!-- end image -->
+					</div>
+					<div class="column-content__text animated-element" data-animate="slide-in">
+						<h3 class="heading-four">
+							                  Golden Mile													</h3>
+																			<span class="faux-link">View Development</span>
+											</div>
+				</div> <!-- end column-content -->
+
+            					</a>
+							</div> <!-- end col -->
+		                			<div class="col-scroll col-scroll--4">
+                            <a href="https://www.choicereit.ca/developments/the-brixton/">
+            
+				<div class="column-content column-content--developments">
+					<div class="column-content__image-container animated-element" data-animate="opacity-in">
+						<div class="column-content__image" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2020/11/Developments-The-Brixton-1024x432.png)"></div> <!-- end image -->
+					</div>
+					<div class="column-content__text animated-element" data-animate="slide-in">
+						<h3 class="heading-four">
+							                  The Brixton													</h3>
+																			<span class="faux-link">View Development</span>
+											</div>
+				</div> <!-- end column-content -->
+
+            					</a>
+							</div> <!-- end col -->
+		                			<div class="col-scroll col-scroll--4">
+                            <a href="https://www.choicereit.ca/developments/liberty-house/">
+            
+				<div class="column-content column-content--developments">
+					<div class="column-content__image-container animated-element" data-animate="opacity-in">
+						<div class="column-content__image" style="background-image: url(https://www.choicereit.ca/wp-content/uploads/2020/12/Developments-Liberty-House-1-1024x432.png)"></div> <!-- end image -->
+					</div>
+					<div class="column-content__text animated-element" data-animate="slide-in">
+						<h3 class="heading-four">
+							                  Liberty House													</h3>
+																			<span class="faux-link">View Development</span>
+											</div>
+				</div> <!-- end column-content -->
+
+            					</a>
+							</div> <!-- end col -->
+		        						</div>
+					</div>
+          				</div>
+			</div>
+		</div>
+        	</div><!-- .entry-content -->
+
+</div><!-- #post-5 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+		</div><!-- #content -->
+
+		<footer id="colophon" class="site-footer">
+			<div class="container">
+				<div class="site-footer__inner">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="has-accent-color">
+								<svg class="logo"><use xlink:href="#choice-properties-logo--en"></use></svg>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+												<div class="col-xs-12 col-md-7 col-xl-6">
+																	<div class="cpr-newsletter__text">
+																			<h2 class="has-accent-color">Subscribe to our mailing list</h2>
+																													<p>Get the latest news, presentations and events directly from our team.</p>
+																	</div>
+														<form class="cpr-newsletter__form row center" novalidate>
+								<div class="col-md-12 col-lg-12">
+									<div class="row center">
+										<div class="col-xs-12">
+											<div class="cpr-newsletter__inputs">
+												<div class="cpr-newsletter__form-contents">
+													
+		<div class="form-group">
+
+        
+		<label for="email">
+        E-mail		</label>
+
+        
+        		<input
+			type="email"
+			name="email"
+			id="email"
+			placeholder="youremail@provider.com"
+			aria-invalid="false"
+        required        data-invalid="This is not a valid email"        		/>
+		
+		<div class="helper-text" id="helper-email"></div>
+
+        
+		</div>
+
+        														
+        <div style="position: absolute; left: -6000px;" aria-hidden="true">
+        <label>comments            <input type="text" name="comments" tabindex="-1" value="">
+        </label>
+		</div>
+
+        														
+		<input type="hidden" name="lang" value="en">
+
+        													<div class="cpr-newsletter__response" role="alert" aria-live="polite"></div>
+													
+		<fieldset class="checkbox__group">
+
+		<legend class="checkbox__label sr-only">
+        Which mailing lists are you interested in?        		</legend>
+
+		<div class="checkbox__inputs">
+        			<div class="checkbox__input has-accent-color">
+				<input
+				type="checkbox"
+				value="Events_Webcasts"
+				name="newsletter-tags[]"
+				id="newsletter-tags--Events_Webcasts"/>
+				<label for="newsletter-tags--Events_Webcasts">Events &amp; Webcasts</label>
+			</div>
+						<div class="checkbox__input has-accent-color">
+				<input
+				type="checkbox"
+				value="Presentations"
+				name="newsletter-tags[]"
+				id="newsletter-tags--Presentations"/>
+				<label for="newsletter-tags--Presentations">Presentations</label>
+			</div>
+						<div class="checkbox__input has-accent-color">
+				<input
+				type="checkbox"
+				value="News_Releases"
+				name="newsletter-tags[]"
+				id="newsletter-tags--News_Releases"/>
+				<label for="newsletter-tags--News_Releases">News Releases</label>
+			</div>
+					</div>
+
+		</fieldset>
+
+        																											<div class="cpr-newsletter__confirm">
+														<p>By clicking “Subscribe,” I agree to receive marketing communications regarding Choice Properties products, services, and events via e-mail. I can withdraw my consent at any time.</p>
+														</div>
+																									</div>
+												<div class="wp-block-button is-style-fill--accent cpr-button--icon cpr-button cpr-button-icon cpr-button--arrow">
+													<button class="cpr-newsletter__submit wp-block-button__link">Subscribe														<svg class="icon-for-button icon--arrow">
+															<use xlink:href="#icon-arrow"></use>
+														</svg>
+														<svg class="icon-for-button icon-for-button--loading icon--loading hidden">
+															<use xlink:href="#icon-spinner"></use>
+														</svg>
+														<svg class="icon-for-button icon--checkmark hidden">
+															<use xlink:href="#icon-checkmark"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+																		<div class="col-xs-12 col-md-5 col-xl-6 first">
+							<div class="footer__company-info">
+																		<h2 class="heading-three"><span class="has-accent-color">Head Office</span></h2>
+									<address>
+											<p>The Weston Centre<br />
+700-22 St Clair Avenue East<br />
+Toronto, Ontario Canada<br />
+M4T 2S5</p>
+									</address>
+								
+									
+																		<p>Tel: 416-628-7771</p>
+								
+																		<p>Fax: 416-628-7777</p>
+															</div>
+						</div>
+											</div>
+					<div class="row reverse">
+						<div class="col-xxs-12 col-lg-8">
+							<ul id="menu-footer-legal-links" class="menu menu--legal"><li class='legal-copy  menu-item menu-item-type-post_type menu-item-object-page'><a href="https://www.choicereit.ca/privacy-policy/">Privacy Policy</a></li>
+<li class='legal-copy  menu-item menu-item-type-post_type menu-item-object-page'><a href="https://www.choicereit.ca/terms-of-use/">Terms of Use</a></li>
+<li class='legal-copy  menu-item menu-item-type-post_type menu-item-object-page'><a href="https://www.choicereit.ca/accessibility/">Accessibility</a></li>
+</ul>						</div>
+						<div class="col-xxs-12 col-lg-4">
+							<p class="legal-copy">&copy;2021 Choice Properties</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer><!-- #colophon -->
+
+	</div><!-- scroll-wrapper -->
+
+</div><!-- #page -->
+
+<script type='text/javascript' src='https://unpkg.com/focus-visible@latest/dist/focus-visible.min.js?ver=20151215' id='focus-visible-js'></script>
+<script type='text/javascript' id='pg-wp-build-js-extra'>
+/* <![CDATA[ */
+var ajaxInfo = {"ajaxUrl":"https:\/\/www.choicereit.ca\/wp\/wp-admin\/admin-ajax.php","securityNewsletter":"ba73300233","securityLeasing":"88fbf2bebb","securityArchive":"535da2f1c8","imagePath":"https:\/\/www.choicereit.ca\/wp-content\/themes\/choice-properties\/dist\/images\/"};
+var cprI18n = {"requiredField":"This field is required","problemField":"There is a problem with this field"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.choicereit.ca/wp-content/themes/choice-properties/dist/build.js?ver=20151215' id='pg-wp-build-js'></script>
+<script type='text/javascript' src='https://www.choicereit.ca/wp/wp-includes/js/wp-embed.min.js?ver=5.6.2' id='wp-embed-js'></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-cf41a010582b3ad779a","applicationID":"782848082","transactionName":"M1VaYhEAXUMCU0IMXgofeVUXCFxeTEBXAlQ=","queueTime":0,"applicationTime":808,"atts":"HxJZFFkaTk0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

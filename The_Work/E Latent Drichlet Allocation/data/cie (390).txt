@@ -1,0 +1,7 @@
+Note: The API is versioned as v5, however the Lighthouse version is independent and updated regularly.
+    PageSpeed Insights is using Lighthouse 8.0.0. See the  and read through the Notable changes. If you use the API, consider the Breaking changes for programmatic users.
+  
+    The CrUX API (which underpins PSI's field data section) has been updated, see their .
+  
+    Pagespeed's underlying Chrome instance was upgraded from Chrome 88 to Chrome 90. This wouldn't be very observable, except for possible impact of  that were part of 89 and 90.
+  Lighthouse 7.3.0 was deployed to PageSpeed Insights on April 1, 2021. See the .As of March 3, 2021, PageSpeed Insights uses http/2 to make network requests, if the server supports it. Previously, all requests were made with http/1.1 due to constraints in connectivity infrastructure.  With this improvement, you can expect more similarity between Lighthouse results from PSI and from Lighthouse CLI and DevTools (which have always made requests with h2). However, it's important to keep in mind that different environments (hardware & connectivity) will  measurement, so cross-environment consistency is near impossible.With this change, network con

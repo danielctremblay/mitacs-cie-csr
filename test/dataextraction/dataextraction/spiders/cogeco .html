@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cogeco</title>
+
+    <meta name="description" content="">
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/cgo/dist/css/cogecocorpo.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/cgo/dist/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/cgo/dist/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/cgo/dist/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/cgo/dist/favicons/manifest.json">
+    <link rel="mask-icon" href="/cgo/dist/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body class="l-intro">
+<section gr-grid="container container--small">
+    <div gr-grid="row">
+        <div gr-grid="block sm-2">
+            <div class="l-intro__logos">
+                <img src="/cgo/dist/img/svg/cogeco_logo_white-v2.svg" alt="Cogeco" class="l-intro__logo" width="205" height="40">
+                <img src="/cgo/dist/img/svg/cogeco_communications_logo-v2.svg" alt="Cogeco Communications" class="l-intro__logo" width="275" height="66">
+            </div>
+        </div>
+        <div class="l-intro__button" gr-grid="block sm-1">
+            <a href="javascript:void(0);" class="btn btn--white-plain js-skip-video">
+                Skip the video            </a>
+        </div>
+    </div>
+    <div gr-grid="row">
+        <div class="l-intro__video" gr-grid="block">
+            <div class="u-iframe-16-9">
+                <iframe src="https://player.vimeo.com/video/475988027" width="100%" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<script>
+    window.addEventListener('load', function () {
+        var elements = document.querySelectorAll('.js-skip-video');
+
+        for (var index = 0; index < elements.length; index++) {
+            elements[index].addEventListener('click', function() {
+                setCookie('skip_video', '1', 5);
+                location.reload();
+            });
+        }
+    }, false);
+
+    function setCookie(cname, cvalue, seconds) {
+        var d = new Date();
+        d.setTime(d.getTime() + (seconds * 1000));
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+</script>
+</html>

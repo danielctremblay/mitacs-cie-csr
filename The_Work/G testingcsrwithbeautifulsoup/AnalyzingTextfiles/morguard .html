@@ -1,0 +1,1049 @@
+
+<!DOCTYPE html >
+<html data-ng-app="morguardApp" lang="en" dir="ltr" class="ms-isBot">
+    <head><link href="/_layouts/images/favIcon.ico" rel="shortcut icon" /><meta charset="utf-8" /><meta name="google-site-verification" content="8pUcqC5nihgf22V1uq3TLLJguealGy7TUIiGdpMQ5NE" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="GENERATOR" content="Microsoft SharePoint" /><meta http-equiv="Content-type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	Morguard - Real Estate Ownership, Management and Investment
+</title><link rel="stylesheet" type="text/css" href="/_layouts/15/1033/styles/Themable/corev15.css?rev=WBDzE8Kp2NMrldHsGGXlEQ%3D%3D"/>
+<script type="text/javascript" src="/_layouts/15/init.js?rev=AS%2Bv0UYCkcLYkV95cqJXGA%3D%3D"></script>
+<script src="/style%20library/morguard/scripts/jquery.js"></script>
+<script src="/style%20library/morguard/scripts/bootstrap.min.js"></script>
+<script src="/style%20library/morguard/scripts/angular.js"></script>
+<script src="/style%20library/morguard/scripts/angular-local-storage.js"></script>
+<script src="/style%20library/morguard/scripts/angular-sanitize.js"></script>
+<script src="/style%20library/morguard/scripts/morguard_script_loader.js"></script>
+<script src="/style%20library/morguard/scripts/jquery-ui.js"></script>
+<script type="text/javascript" src="/ScriptResource.axd?d=D4KBmWLgNGctflZB4tM0jN0Tg_roeFK-vesmc4UJ5Hp8ZiLrSNyzv4K5ObglcmTGkt7lDAlF0RG_CpFsFnkzp1C20fC7cFXKyO8MuxT02-Q_zQSlaS4cq9tQEQfk388xuy3nXejgJeT6aVhFCbylAglUsl8DYa4Kb1i2MmsTOETqYL2CZR16iS_WU5zeI0em0&amp;t=127f3acd"></script>
+<script type="text/javascript" src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D"></script>
+<script type="text/javascript">RegisterSod("initstrings.js", "\u002f_layouts\u002f15\u002f1033\u002finitstrings.js?rev=S11vfGURQYVuACMEY0tLTg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("strings.js", "\u002f_layouts\u002f15\u002f1033\u002fstrings.js?rev=xXYZY4hciX287lShPZuClw\u00253D\u00253D");RegisterSodDep("strings.js", "initstrings.js");</script>
+<script type="text/javascript">RegisterSod("sp.init.js", "\u002f_layouts\u002f15\u002fsp.init.js?rev=jvJC3Kl5gbORaLtf7kxULQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=yNk\u00252FhRzgBn40LJVP\u00252BqfgdQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002f15\u002fsp.ui.dialog.js?rev=3Oh2QbaaiXSb7ldu2zd6QQ\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.init.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f15\u002fcore.js?rev=BoOTONqXW5dYCwvqGhdhCw\u00253D\u00253D");RegisterSodDep("core.js", "strings.js");</script>
+<script type="text/javascript">RegisterSod("menu.js", "\u002f_layouts\u002f15\u002fmenu.js?rev=cXv35JACAh0ZCqUwKU592w\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("mQuery.js", "\u002f_layouts\u002f15\u002fmquery.js?rev=VYAJYBo5H8I3gVSL3MzD6A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("callout.js", "\u002f_layouts\u002f15\u002fcallout.js?rev=ryx2n4ePkYj1\u00252FALmcsXZfA\u00253D\u00253D");RegisterSodDep("callout.js", "strings.js");RegisterSodDep("callout.js", "mQuery.js");RegisterSodDep("callout.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("clienttemplates.js", "\u002f_layouts\u002f15\u002fclienttemplates.js?rev=OAp3\u00252BvnM\u00252FjzKrKWlIed9qg\u00253D\u00253D");RegisterSodDep("clienttemplates.js", "initstrings.js");</script>
+<script type="text/javascript">RegisterSod("sharing.js", "\u002f_layouts\u002f15\u002fsharing.js?rev=XxxHIxIIc8BsW9ikVc6dgA\u00253D\u00253D");RegisterSodDep("sharing.js", "strings.js");RegisterSodDep("sharing.js", "mQuery.js");RegisterSodDep("sharing.js", "clienttemplates.js");RegisterSodDep("sharing.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("suitelinks.js", "\u002f_layouts\u002f15\u002fsuitelinks.js?rev=REwVU5jSsadDdOZlCx4wpA\u00253D\u00253D");RegisterSodDep("suitelinks.js", "strings.js");RegisterSodDep("suitelinks.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002f15\u002fsp.runtime.js?rev=5f2WkYJoaxlIRdwUeg4WEg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002f15\u002fsp.js?rev=KH0TnnC0v0EXqOw2JxIOzA\u00253D\u00253D");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("userprofile", "\u002f_layouts\u002f15\u002fsp.userprofiles.js?rev=p5tCOm\u00252FlHUwcfll7W3pKNw\u00253D\u00253D");RegisterSodDep("userprofile", "sp.runtime.js");</script>
+<script type="text/javascript">RegisterSod("followingcommon.js", "\u002f_layouts\u002f15\u002ffollowingcommon.js?rev=jWqEDmcjCSPmnQw2ZIfItQ\u00253D\u00253D");RegisterSodDep("followingcommon.js", "strings.js");RegisterSodDep("followingcommon.js", "sp.js");RegisterSodDep("followingcommon.js", "userprofile");RegisterSodDep("followingcommon.js", "core.js");RegisterSodDep("followingcommon.js", "mQuery.js");</script>
+<script type="text/javascript">RegisterSod("profilebrowserscriptres.resx", "\u002f_layouts\u002f15\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=ProfileBrowserScriptRes\u0026rev=J5HzNnB\u00252FO1Id\u00252FGI18rpRcw\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.mysitecommon.js", "\u002f_layouts\u002f15\u002fsp.ui.mysitecommon.js?rev=Ua8qmZSU9nyf53S7PEyJwQ\u00253D\u00253D");RegisterSodDep("sp.ui.mysitecommon.js", "sp.init.js");RegisterSodDep("sp.ui.mysitecommon.js", "sp.runtime.js");RegisterSodDep("sp.ui.mysitecommon.js", "userprofile");RegisterSodDep("sp.ui.mysitecommon.js", "profilebrowserscriptres.resx");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f15\u002fnon_ie.js?rev=W2q45TO627Zi6ztdktTOtA\u00253D\u00253D");RegisterSodDep("browserScript", "strings.js");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002f15\u002finplview.js?rev=iMf5THfqukSYut7sl9HwUg\u00253D\u00253D");RegisterSodDep("inplview", "strings.js");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002f15\u002fsp.core.js?rev=tZDGLPOvY1bRw\u00252BsgzXpxTg\u00253D\u00253D");RegisterSodDep("sp.core.js", "strings.js");RegisterSodDep("sp.core.js", "sp.init.js");RegisterSodDep("sp.core.js", "core.js");</script>
+<script type="text/javascript">RegisterSod("dragdrop.js", "\u002f_layouts\u002f15\u002fdragdrop.js?rev=xyQu9SPqkjO4R2\u00252BS3IwO8Q\u00253D\u00253D");RegisterSodDep("dragdrop.js", "strings.js");</script>
+<script type="text/javascript">RegisterSod("quicklaunch.js", "\u002f_layouts\u002f15\u002fquicklaunch.js?rev=\u00252BHeX6ARcp\u00252F9LpMq6FqQYyA\u00253D\u00253D");RegisterSodDep("quicklaunch.js", "strings.js");RegisterSodDep("quicklaunch.js", "dragdrop.js");</script>
+<link type="text/xml" rel="alternate" href="/_vti_bin/spsdisco.aspx" />
+            
+            
+            <script src="/Style%20Library/Morguard/widgets/ServicesAndLeasingApp/servicesandleasing.js"></script>
+            
+            
+            
+        
+            <link rel="canonical" href="https://www.morguard.com:443/" /><meta name="description" content="Morguard is a fully integrated real estate company.  We own, manage and invest in high-quality, well-located, geographically diversified assets across North America." /><meta name="keywords" content="Morguard Corporation, Real Estate Ownership, Real Estate Investment, Real Estate Management, Rai Sahi, Commercial Leasing, Morguard REIT, Morguard North American Residential REIT" />
+            
+            
+        
+        
+    
+       
+       
+        <!-- Bootstrap -->
+        <link href="/Style%20Library/Morguard/styles/bootstrap.min.css" rel="stylesheet" property="stylesheet" />
+        <!-- Custom Stylesheet -->
+        <link href="/Style%20Library/Morguard/styles/TopNav_Mobile.css" rel="stylesheet" property="stylesheet" /><link href="/Style%20Library/Morguard/styles/masterpage.css" rel="stylesheet" property="stylesheet" /><link href="/Style%20Library/Morguard/styles/page_layout.css" rel="stylesheet" property="stylesheet" /><link href="/Style%20Library/Morguard/styles/jquery-ui.css" rel="stylesheet" property="stylesheet" /><link id="ctl00_CssRegistrationTheme" rel="stylesheet" href="/Style%20Library/Morguard/styles/default_contrast.css" type="text/css" property="stylesheet" /><link href="/Style%20Library/Morguard/styles/morguardprint.css" rel="stylesheet" media="print" property="stylesheet" />
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<script type="text/javascript">
+	    function ProcessImn() { }
+	    function ProcessImnMarkers() { }
+	</script> 
+	
+	
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PT65NV');</script>
+<!-- End Google Tag Manager -->
+
+	
+	
+	
+    </head>
+    <body onhashchange="if (typeof(_spBodyOnHashChange) != 'undefined') _spBodyOnHashChange();" class="fnormal">
+
+	<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT65NV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	
+
+        
+        
+        <form method="post" action="./" id="aspnetForm">
+<input type="hidden" name="_wpcmWpid" id="_wpcmWpid" value="" />
+<input type="hidden" name="wpcmVal" id="wpcmVal" value="" />
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="noDigest" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="_wpSelected" id="_wpSelected" value="" />
+<input type="hidden" name="_wzSelected" id="_wzSelected" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBgIBD2QWBAIID2QWAmYPZBYCAgMPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTUuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAhQPZBYCAgMPZBYCZg9kFgJmDzwrAAYAZAIFD2QWBAIBD2QWAgIBD2QWGgUmZ184ZTU1ZTllMl80MzczXzRiYzdfYWY4Ml85NjkzM2MyNTQ0YTIPZBYCZg8WBB4FY2xhc3MFH21zLXJ0ZS1lbWJlZGNvZGUgbXMtcnRlLWVtYmVkd3AeCWlubmVyaHRtbAWkCw0KICAgICAgICAgIDxzY3JpcHQgc3JjID0iL1N0eWxlIExpYnJhcnkvTW9yZ3VhcmQvd2lkZ2V0cy9JbmZvZ3JhcGhpY0FwcC9JbmZvZ3JhcGhpYy5qcyI+IDwvc2NyaXB0Pg0KDQogICAgICAgICAgPGRpdiBjbGFzcz0iYmdfZGFyayI+DQogICAgICAgICAgPGRpdiBjbGFzcz0iY29sLW1kLTYgbm8tcGFkZGluZyI+DQogICAgICAgICAgPGRpdiBpZD0iaW5mb18xIiBjbGFzcz0iY29sLXhzLTYgY29sLW1kLTYiPjxhIGhyZWY9IiMiPjxpbWcgaWQ9IjFfMV9vbiIgc3JjPSIiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBjbGFzcz0iaW1nLXJlc3BvbnNpdmUiIGFsdD0iSW5mb2dyYXBoaWMiPjxpbWcgaWQ9IjFfMV9vZmYiIHNyYz0iIiB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgY2xhc3M9ImltZy1yZXNwb25zaXZlIiBhbHQ9IkluZm9ncmFwaGljIj48L2E+PC9kaXY+DQogICAgICAgICAgPGRpdiBpZD0iaW5mb18yIiBjbGFzcz0iY29sLXhzLTYgY29sLW1kLTYiPjxhIGhyZWY9IiMiPjxpbWcgaWQ9IjFfMl9vbiIgc3JjPSIiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBjbGFzcz0iaW1nLXJlc3BvbnNpdmUiIGFsdD0iSW5mb2dyYXBoaWMiPjxpbWcgaWQ9IjFfMl9vZmYiIHNyYz0iIiB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgY2xhc3M9ImltZy1yZXNwb25zaXZlIiBhbHQ9IkluZm9ncmFwaGljIj48L2E+PC9kaXY+DQogICAgICAgICAgPGRpdiBpZD0iaW5mb18zIiBjbGFzcz0iY29sLXhzLTYgY29sLW1kLTYiPjxhIGhyZWY9IiMiPjxpbWcgaWQ9IjJfMV9vbiIgc3JjPSIiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBjbGFzcz0iaW1nLXJlc3BvbnNpdmUiIGFsdD0iSW5mb2dyYXBoaWMiPjxpbWcgaWQ9IjJfMV9vZmYiIHNyYz0iIiB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgY2xhc3M9ImltZy1yZXNwb25zaXZlIiBhbHQ9IkluZm9ncmFwaGljIj48L2E+PC9kaXY+DQogICAgICAgICAgPGRpdiBpZD0iaW5mb180IiBjbGFzcz0iY29sLXhzLTYgY29sLW1kLTYiPjxhIGhyZWY9IiMiPjxpbWcgaWQ9IjJfMl9vbiIgc3JjPSIiIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBjbGFzcz0iaW1nLXJlc3BvbnNpdmUiIGFsdD0iSW5mb2dyYXBoaWMiPjxpbWcgaWQ9IjJfMl9vZmYiIHNyYz0iIiB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgY2xhc3M9ImltZy1yZXNwb25zaXZlIiBhbHQ9IkluZm9ncmFwaGljIj48L2E+PC9kaXY+DQogICAgICAgICAgPC9kaXY+DQoNCg0KICAgICAgICAgIDxkaXYgY2xhc3M9ImNvbC1tZC02IG5vLXBhZGRpbmciPg0KICAgICAgICAgIDxkaXYgY2xhc3M9IiBXUl9Qb3J0Zm9saW8iIGlkPSJwb3J0Zm9saW9fYXJlYSI+DQogICAgICAgICAgPC9kaXY+DQoNCg0KDQogICAgICAgICAgPC9kaXY+DQoNCiAgICAgICAgICA8YnIgY2xhc3M9ImNsZWFyZmxvYXQiPg0KICAgICAgICAgIDwvZGl2Pg0KICAgICAgICBkBSZnXzI0NTg2OWRjXzUyZWFfNDNhMF84Yzc1XzY3N2M0ZTg0MTYwZQ9kFgJmDxYEHwEFH21zLXJ0ZS1lbWJlZGNvZGUgbXMtcnRlLWVtYmVkd3AfAgXHAzxkaXYgaWQ9IkNhc2VTdHVkeUFwcFdlYnBhcnQyNSIgZWRpdC1zd2l0Y2g9IiIgZGlzcGxheS1jb250cm9sbGVyPSJDYXNlU3R1ZHlBcHBEaXNwbGF5Q3RybCIgZWRpdC1jb250cm9sbGVyPSJDYXNlU3R1ZHlBcHBFZGl0Q3RybCIgZGlzcGxheS10ZW1wbGF0ZT0iZGlzcGxheVRlbXBsYXRlIiBlZGl0b3ItdGVtcGxhdGU9ImVkaXRvclRlbXBsYXRlIj48L2Rpdj4NCg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KICAgICB2YXIgbW9yZ3VhcmRMaXN0b3B0aW9ucyA9IFsiL25ld3Mta25vd2xlZGdlL2Nhc2Utc3R1ZGllcy9wbHVzLTE1IiwiL05ld3NBbmRSZXNlYXJjaF8vUGFnZXMvcGx1cy0xNS5hc3B4IiwiTGFyZ2UiXTsNCiAgICAgbW9yZ3VhcmQubG9hZEFuZ3VsYXJXZWJQYXJ0KG1vcmd1YXJkTGlzdG9wdGlvbnMsIiNDYXNlU3R1ZHlBcHBXZWJwYXJ0MjUiKTsNCjwvc2NyaXB0Pg0KZAUmZ19lNmFlOGJiZV9iYjQ4XzRhY2ZfYWIxZF9iMTZjOThmMmU0NjAPZBYCZg8WBB8BBR9tcy1ydGUtZW1iZWRjb2RlIG1zLXJ0ZS1lbWJlZHdwHwIF0wM8ZGl2IGlkPSJDYXNlU3R1ZHlBcHBXZWJwYXJ0MzAiIGVkaXQtc3dpdGNoPSIiIGRpc3BsYXktY29udHJvbGxlcj0iQ2FzZVN0dWR5QXBwRGlzcGxheUN0cmwiIGVkaXQtY29udHJvbGxlcj0iQ2FzZVN0dWR5QXBwRWRpdEN0cmwiIGRpc3BsYXktdGVtcGxhdGU9ImRpc3BsYXlUZW1wbGF0ZSIgZWRpdG9yLXRlbXBsYXRlPSJlZGl0b3JUZW1wbGF0ZSI+PC9kaXY+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCiAgICAgdmFyIG1vcmd1YXJkTGlzdG9wdGlvbnMgPSBbIi9uZXdzLWtub3dsZWRnZS9jYXNlLXN0dWRpZXMvbW9yZ3VhcmQtYmVlcyIsIi9OZXdzQW5kUmVzZWFyY2hfL1BhZ2VzL01vcmd1YXJkLUJlZXMuYXNweCIsIlNtYWxsIl07DQogICAgIG1vcmd1YXJkLmxvYWRBbmd1bGFyV2ViUGFydChtb3JndWFyZExpc3RvcHRpb25zLCIjQ2FzZVN0dWR5QXBwV2VicGFydDMwIik7DQo8L3NjcmlwdD4NCmQFJmdfZWE0N2I3OTlfMDQxZV80NTZiXzgxMTNfZGFkZDBjMjc5ZjIzD2QWAmYPFgQfAQUfbXMtcnRlLWVtYmVkY29kZSBtcy1ydGUtZW1iZWR3cB8CBZwDPGRpdiBpZD0iRmVhdHVyZWRBcHBXZWJwYXJ0NiIgZWRpdC1zd2l0Y2g9IiIgZGlzcGxheS1jb250cm9sbGVyPSJGZWF0dXJlZEFwcExpc3RJdGVtQ3RybCIgZWRpdC1jb250cm9sbGVyPSJGZWF0dXJlZEFwcExpc3RDdHJsIiBkaXNwbGF5LXRlbXBsYXRlPSJkaXNwbGF5VGVtcGxhdGUiIGVkaXRvci10ZW1wbGF0ZT0iZWRpdG9yVGVtcGxhdGUiPjwvZGl2Pg0KDQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQoNCiAgICAgICAgICB2YXIgbW9yZ3VhcmRMaXN0b3B0aW9ucz0gWyI4IiwiRmVhdHVyZWQgSXRlbXMiLCIvIl07DQogICAgICAgICAgbW9yZ3VhcmQubG9hZEFuZ3VsYXJXZWJQYXJ0KG1vcmd1YXJkTGlzdG9wdGlvbnMsIiNGZWF0dXJlZEFwcFdlYnBhcnQ2Iik7DQogICAgICAgICAgPC9zY3JpcHQ+DQoNCmQFJmdfMmYwNjcyYzlfYmZiZV80ZTI1X2ExNjJfN2NkY2U0MWRhYzVmD2QWAmYPFgQfAQUfbXMtcnRlLWVtYmVkY29kZSBtcy1ydGUtZW1iZWR3cB8CBdEDPGRpdiBpZD0iQ2FzZVN0dWR5QXBwV2VicGFydDMiIGVkaXQtc3dpdGNoPSIiIGRpc3BsYXktY29udHJvbGxlcj0iQ2FzZVN0dWR5QXBwRGlzcGxheUN0cmwiIGVkaXQtY29udHJvbGxlcj0iQ2FzZVN0dWR5QXBwRWRpdEN0cmwiIGRpc3BsYXktdGVtcGxhdGU9ImRpc3BsYXlUZW1wbGF0ZSIgZWRpdG9yLXRlbXBsYXRlPSJlZGl0b3JUZW1wbGF0ZSI+PC9kaXY+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCiAgICAgdmFyIG1vcmd1YXJkTGlzdG9wdGlvbnMgPSBbIi9uZXdzLWtub3dsZWRnZS9jYXNlLXN0dWRpZXMvaGVyaXRhZ2UtcGxhY2UiLCIvTmV3c0FuZFJlc2VhcmNoXy9QYWdlcy9IZXJpdGFnZS1QbGFjZS5hc3B4IiwiU21hbGwiXTsNCiAgICAgbW9yZ3VhcmQubG9hZEFuZ3VsYXJXZWJQYXJ0KG1vcmd1YXJkTGlzdG9wdGlvbnMsIiNDYXNlU3R1ZHlBcHBXZWJwYXJ0MyIpOw0KPC9zY3JpcHQ+ZAUmZ19hYWJlMjIxOF8zZjcxXzQyNDVfYjY3Nl8yZWJkY2ZhODNjYmYPZBYCZg8WBB8BBR9tcy1ydGUtZW1iZWRjb2RlIG1zLXJ0ZS1lbWJlZHdwHwIFnQM8ZGl2IGlkPSJGZWF0dXJlZEFwcFdlYnBhcnQ3IiBlZGl0LXN3aXRjaD0iIiBkaXNwbGF5LWNvbnRyb2xsZXI9IkZlYXR1cmVkQXBwTGlzdEl0ZW1DdHJsIiBlZGl0LWNvbnRyb2xsZXI9IkZlYXR1cmVkQXBwTGlzdEN0cmwiIGRpc3BsYXktdGVtcGxhdGU9ImRpc3BsYXlUZW1wbGF0ZSIgZWRpdG9yLXRlbXBsYXRlPSJlZGl0b3JUZW1wbGF0ZSI+PC9kaXY+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0KICAgICAgICAgIHZhciBtb3JndWFyZExpc3RvcHRpb25zPSBbIjE0IiwiRmVhdHVyZWQgSXRlbXMiLCIvIl07DQogICAgICAgICAgbW9yZ3VhcmQubG9hZEFuZ3VsYXJXZWJQYXJ0KG1vcmd1YXJkTGlzdG9wdGlvbnMsIiNGZWF0dXJlZEFwcFdlYnBhcnQ3Iik7DQogICAgICAgICAgPC9zY3JpcHQ+DQoNCmQFJmdfY2ZkNzhlNzNfODA1ZV80MjlhXzg4NGVfYzVlZmEwYWNlZTM0D2QWAmYPFgQfAQUfbXMtcnRlLWVtYmVkY29kZSBtcy1ydGUtZW1iZWR3cB8CBd8gPCEtLSBTdGFydCBvZiBRdW90ZU1lZGlhLmNvbSBDdXN0b20gQ1NTIC0gQk9USCBSRVFVSVJFRCAtLT4NCjxsaW5rIHJlbD0ic3R5bGVzaGVldCIgdHlwZT0idGV4dC9jc3MiIGhyZWY9Imh0dHBzOi8vYXBwLnF1b3RlbWVkaWEuY29tL2Nzcy90b29scy5jc3MiIC8+DQo8bGluayByZWw9InN0eWxlc2hlZXQiIHR5cGU9InRleHQvY3NzIiBocmVmPSJodHRwczovL2FwcC5xdW90ZW1lZGlhLmNvbS9jc3MvbW9kdWxlLmNzcyIgLz4NCjwhLS0gRW5kIG9mIFF1b3RlTWVkaWEuY29tIEN1c3RvbSBDU1MgLSBCT1RIIFJFUVVJUkVEIC0tPg0KDQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQogICAgdmFyIHFtQ3VycmVudCA9ICIiOw0KICAgIHZhciBxbUFycm93ID0gIiI7DQoNCiAgICBmdW5jdGlvbiBxbVNob3dBcnJvdyhxbUN1cnJlbnQpIHsNCiAgICAgICAgaWYgKHFtQ3VycmVudC5zZWFyY2goJ3FtanNkYXRhdXAnKSAhPSAtMSkgew0KICAgICAgICAgICAgcW1BcnJvdyA9ICI8aW1nIHNyYz1cImh0dHBzOi8vYXBwLnF1b3RlbWVkaWEuY29tL3F1b3RldG9vbHMvaW1hZ2VzL3FtX3VwLmdpZlwiPiI7DQogICAgICAgIH0NCiAgICAgICAgZWxzZSBpZiAocW1DdXJyZW50LnNlYXJjaCgncW1qc2RhdGFkb3duJykgIT0gLTEpIHsNCiAgICAgICAgICAgIHFtQXJyb3cgPSAiPGltZyBzcmM9XCJodHRwczovL2FwcC5xdW90ZW1lZGlhLmNvbS9xdW90ZXRvb2xzL2ltYWdlcy9xbV9kb3duLmdpZlwiPiI7DQogICAgICAgIH0NCiAgICAgICAgZWxzZSB7DQogICAgICAgICAgICBxbUFycm93ID0gIjxpbWcgc3JjPVwiaHR0cHM6Ly9hcHAucXVvdGVtZWRpYS5jb20vcXVvdGV0b29scy9pbWFnZXMvcW1fbmMuZ2lmXCI+IjsNCiAgICAgICAgfQ0KICAgICAgICByZXR1cm4gcW1BcnJvdzsNCiAgICB9DQo8L3NjcmlwdD4NCg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCiAgICAvKiBNb3JndWFyZCBTdHlsZSAqLw0KICAgIC5zdG9ja1RpY2tlckNvbnRhaW5lciB7DQogICAgICAgIGZvbnQtZmFtaWx5OiBBcmlhbCwgSGVsdmV0aWNhLCBzYW5zLXNlcmlmOw0KICAgICAgICBkaXNwbGF5OiB0YWJsZTsNCiAgICAgICAgd2lkdGg6IDE4NXB4Ow0KICAgIH0NCg0KICAgIC5zdG9ja1RpY2tlclRpdGxlIHsNCiAgICAgICAgZm9udC1zaXplOiAxZW07DQogICAgICAgIGNvbG9yOiAjMDA0NjdGOw0KICAgICAgICBmb250LXdlaWdodDogYm9sZDsNCiAgICAgICAgcGFkZGluZy1ib3R0b206IDBweDsNCiAgICB9DQoNCiAgICAuc3RvY2tUaWNrZXJMYWJlbCB7DQogICAgICAgIGRpc3BsYXk6IHRhYmxlLWNlbGw7DQogICAgICAgIHdpZHRoOiAxMDBweDsNCiAgICAgICAgZm9udC1zaXplOiAxZW07DQogICAgICAgIGNvbG9yOiAjMDA0NjdGOw0KICAgICAgICBmb250LXdlaWdodDogbm9ybWFsOw0KICAgICAgICBwYWRkaW5nLXRvcDogMHB4Ow0KICAgICAgICBwYWRkaW5nLWJvdHRvbTogMHB4Ow0KICAgICAgICBmbG9hdDogbGVmdDsNCiAgICB9DQoNCiAgICAuc3RvY2tUaWNrZXJEYXRhIHsNCiAgICAgICAgZGlzcGxheTogdGFibGUtY2VsbDsNCiAgICAgICAgcGFkZGluZy10b3A6IDBweDsNCiAgICAgICAgcGFkZGluZy1yaWdodDogMHB4Ow0KICAgICAgICBwYWRkaW5nLWJvdHRvbTogMHB4Ow0KICAgICAgICBmbG9hdDogcmlnaHQ7DQogICAgfQ0KDQogICAgLnN0b2NrVGlja2VyRGV2aWRlciB7DQogICAgICAgIGRpc3BsYXk6IHRhYmxlLXJvdzsNCiAgICB9DQoNCiAgICAuc3RvY2tUaWNrZXJCb3R0b21TcGFjZSB7DQogICAgICAgIGRpc3BsYXk6IHRhYmxlLXJvdzsNCiAgICAgICAgd2lkdGg6IDFweDsNCiAgICAgICAgaGVpZ2h0OiAxMHB4Ow0KICAgIH0NCg0KICAgIC5xbUltYWdlQ2hhbmdlIHsNCiAgICAgICAgZmxvYXQ6IGxlZnQ7DQogICAgICAgIG1hcmdpbi10b3A6IDBweDsNCiAgICB9DQoNCiAgICAucW1QZXJjZW50Q2hhbmdlIHsNCiAgICAgICAgZmxvYXQ6IHJpZ2h0Ow0KICAgICAgICB0ZXh0LWFsaWduOiByaWdodDsNCiAgICAgICAgd2lkdGg6IDU1cHg7DQogICAgICAgIGZvbnQtc2l6ZTogMWVtOw0KICAgICAgICBjb2xvcjogYmxhY2s7DQogICAgICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7DQogICAgfQ0KPC9zdHlsZT4NCg0KPGRpdiBjbGFzcz0ic3RvY2tUaWNrZXJDb250YWluZXIiPg0KICAgIDxkaXYgY2xhc3M9InN0b2NrVGlja2VyVGl0bGUiPg0KICAgICAgICA8aDMgY2xhc3M9ImhlYWRpbmdfMyI+SU5WRVNUT1IgUkVMQVRJT05TPC9oMz4NCiAgICA8L2Rpdj4NCiAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9hcHAucXVvdGVtZWRpYS5jb20vcXVvdGV0b29scy9qc1ZhcnNRdW90ZXNTcGFuLmdvP3dlYm1hc3RlcklkPTEwMjA5MSZhbXA7cW1EZWNpbWFsPTMmYW1wO3N5bWJvbD1NUkM6Q0EmYW1wO2RmPU1NTStkLCt5eXl5K2hoOm1tK2EreiI+PC9zY3JpcHQ+DQogICAgPGRpdiBjbGFzcz0ic3RvY2tUaWNrZXJEZXZpZGVyIj4NCiAgICAgICAgPGRpdiBjbGFzcz0ic3RvY2tUaWNrZXJMYWJlbCI+DQogICAgICAgICAgICA8YSBocmVmPSJodHRwczovL3d3dy5tb3JndWFyZC5jb20vaW52ZXN0b3ItcmVsYXRpb25zL21vcmd1YXJkLWNvcnBvcmF0aW9uIj5UU1g6TVJDPC9hPg0KICAgICAgICA8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0ic3RvY2tUaWNrZXJEYXRhIj4NCiAgICAgICAgICAgIDxzY3JpcHQ+ZG9jdW1lbnQud3JpdGUoJzxzcGFuIGNsYXNzPSJxbUltYWdlQ2hhbmdlIj4nICsgcW1TaG93QXJyb3cocW1RdW90ZS5jaGFuZ2UpICsgJzwvc3Bhbj48c3BhbiBjbGFzcz0icW1QZXJjZW50Q2hhbmdlIj4nICsgcW1RdW90ZS5jaGFuZ2VQZXJjZW50ICsgJzwvc3Bhbj4gJyk7PC9zY3JpcHQ+DQogICAgICAgIDwvZGl2Pg0KICAgIDwvZGl2Pg0KICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2FwcC5xdW90ZW1lZGlhLmNvbS9xdW90ZXRvb2xzL2pzVmFyc1F1b3Rlc1NwYW4uZ28/d2VibWFzdGVySWQ9MTAyMDkxJmFtcDtxbURlY2ltYWw9MyZhbXA7c3ltYm9sPU1SVC5VTjpDQSZhbXA7ZGY9TU1NK2QsK3l5eXkraGg6bW0rYSt6Ij48L3NjcmlwdD4NCiAgICA8ZGl2IGNsYXNzPSJzdG9ja1RpY2tlckRldmlkZXIiPg0KICAgICAgICA8ZGl2IGNsYXNzPSJzdG9ja1RpY2tlckxhYmVsIj4NCiAgICAgICAgICAgIDxhIGhyZWY9Imh0dHBzOi8vd3d3Lm1vcmd1YXJkLmNvbS9pbnZlc3Rvci1yZWxhdGlvbnMvbW9yZ3VhcmQtcmVpdC8iPlRTWDpNUlQuVU48L2E+DQogICAgICAgIDwvZGl2Pg0KICAgICAgICA8ZGl2IGNsYXNzPSJzdG9ja1RpY2tlckRhdGEiPg0KICAgICAgICAgICAgPHNjcmlwdD5kb2N1bWVudC53cml0ZSgnPHNwYW4gY2xhc3M9InFtSW1hZ2VDaGFuZ2UiPicgKyBxbVNob3dBcnJvdyhxbVF1b3RlLmNoYW5nZSkgKyAnPC9zcGFuPjxzcGFuIGNsYXNzPSJxbVBlcmNlbnRDaGFuZ2UiPicgKyBxbVF1b3RlLmNoYW5nZVBlcmNlbnQgKyAnPC9zcGFuPiAnKTs8L3NjcmlwdD4NCiAgICAgICAgPC9kaXY+DQogICAgPC9kaXY+DQogICAgPHNjcmlwdCBzcmM9Imh0dHBzOi8vYXBwLnF1b3RlbWVkaWEuY29tL3F1b3RldG9vbHMvanNWYXJzUXVvdGVzU3Bhbi5nbz93ZWJtYXN0ZXJJZD0xMDIwOTEmYW1wO3FtRGVjaW1hbD0zJmFtcDtzeW1ib2w9TVJHLlVOOkNBJmFtcDtkZj1NTU0rZCwreXl5eStoaDptbSthK3oiPjwvc2NyaXB0Pg0KICAgIDxkaXYgY2xhc3M9InN0b2NrVGlja2VyRGV2aWRlciI+DQogICAgICAgIDxkaXYgY2xhc3M9InN0b2NrVGlja2VyTGFiZWwiPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cHM6Ly93d3cubW9yZ3VhcmQuY29tL2ludmVzdG9yLXJlbGF0aW9ucy9tb3JndWFyZC1ub3J0aC1hbWVyaWNhbi1yZXNpZGVudGlhbC1yZWl0Ij5UU1g6TVJHLlVOPC9hPg0KICAgICAgICA8L2Rpdj4NCiAgICAgICAgPGRpdiBjbGFzcz0ic3RvY2tUaWNrZXJEYXRhIj4NCiAgICAgICAgICAgIDxzY3JpcHQ+ZG9jdW1lbnQud3JpdGUoJzxzcGFuIGNsYXNzPSJxbUltYWdlQ2hhbmdlIj4nICsgcW1TaG93QXJyb3cocW1RdW90ZS5jaGFuZ2UpICsgJzwvc3Bhbj48c3BhbiBjbGFzcz0icW1QZXJjZW50Q2hhbmdlIj4nICsgcW1RdW90ZS5jaGFuZ2VQZXJjZW50ICsgJzwvc3Bhbj4gJyk7PC9zY3JpcHQ+DQogICAgICAgIDwvZGl2Pg0KICAgIDwvZGl2Pg0KICAgIDxkaXYgY2xhc3M9InN0b2NrVGlja2VyQm90dG9tU3BhY2UiPjwvZGl2Pg0KPC9kaXY+ZAUmZ19mMGI2NDY5OF8yMjBiXzQxODdfODViNV9jNmMyZjcyZGZmNDYPZBYCZg8WBB8BBR9tcy1ydGUtZW1iZWRjb2RlIG1zLXJ0ZS1lbWJlZHdwHwIFnQM8ZGl2IGlkPSJGZWF0dXJlZEFwcFdlYnBhcnQ4IiBlZGl0LXN3aXRjaD0iIiBkaXNwbGF5LWNvbnRyb2xsZXI9IkZlYXR1cmVkQXBwTGlzdEl0ZW1DdHJsIiBlZGl0LWNvbnRyb2xsZXI9IkZlYXR1cmVkQXBwTGlzdEN0cmwiIGRpc3BsYXktdGVtcGxhdGU9ImRpc3BsYXlUZW1wbGF0ZSIgZWRpdG9yLXRlbXBsYXRlPSJlZGl0b3JUZW1wbGF0ZSI+PC9kaXY+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCg0KICAgICAgICAgIHZhciBtb3JndWFyZExpc3RvcHRpb25zPSBbIjkwIiwiRmVhdHVyZWQgSXRlbXMiLCIvIl07DQogICAgICAgICAgbW9yZ3VhcmQubG9hZEFuZ3VsYXJXZWJQYXJ0KG1vcmd1YXJkTGlzdG9wdGlvbnMsIiNGZWF0dXJlZEFwcFdlYnBhcnQ4Iik7DQogICAgICAgICAgPC9zY3JpcHQ+DQoNCmQFJmdfOTU3YzFhZDFfNjc5MF80M2FkX2E5MGRfNDI5Yzg2YTFkOWY0D2QWAmYPFgQfAQUfbXMtcnRlLWVtYmVkY29kZSBtcy1ydGUtZW1iZWR3cB8CBd0DPGRpdiBpZD0iQ2FzZVN0dWR5QXBwV2VicGFydDUiIGVkaXQtc3dpdGNoPSIiIGRpc3BsYXktY29udHJvbGxlcj0iQ2FzZVN0dWR5QXBwRGlzcGxheUN0cmwiIGVkaXQtY29udHJvbGxlcj0iQ2FzZVN0dWR5QXBwRWRpdEN0cmwiIGRpc3BsYXktdGVtcGxhdGU9ImRpc3BsYXlUZW1wbGF0ZSIgZWRpdG9yLXRlbXBsYXRlPSJlZGl0b3JUZW1wbGF0ZSI+PC9kaXY+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCiAgICAgdmFyIG1vcmd1YXJkTGlzdG9wdGlvbnMgPSBbIi9uZXdzLWtub3dsZWRnZS9jYXNlLXN0dWRpZXMvNzctQmxvb3ItU3RyZWV0LVdlc3QiLCIvTmV3c0FuZFJlc2VhcmNoXy9QYWdlcy83Ny1CbG9vci1TdHJlZXQtV2VzdC5hc3B4IiwiU21hbGwiXTsNCiAgICAgbW9yZ3VhcmQubG9hZEFuZ3VsYXJXZWJQYXJ0KG1vcmd1YXJkTGlzdG9wdGlvbnMsIiNDYXNlU3R1ZHlBcHBXZWJwYXJ0NSIpOw0KPC9zY3JpcHQ+ZAUmZ18zYmIyZGQ0M18yZmIzXzQyYzJfOTNlM180MmVlNzUzYzM3NWIPZBYCZg8WBB8BBR9tcy1ydGUtZW1iZWRjb2RlIG1zLXJ0ZS1lbWJlZHdwHwIF4QM8ZGl2IGlkPSJDYXNlU3R1ZHlBcHBXZWJwYXJ0NDEiIGVkaXQtc3dpdGNoPSIiIGRpc3BsYXktY29udHJvbGxlcj0iQ2FzZVN0dWR5QXBwRGlzcGxheUN0cmwiIGVkaXQtY29udHJvbGxlcj0iQ2FzZVN0dWR5QXBwRWRpdEN0cmwiIGRpc3BsYXktdGVtcGxhdGU9ImRpc3BsYXlUZW1wbGF0ZSIgZWRpdG9yLXRlbXBsYXRlPSJlZGl0b3JUZW1wbGF0ZSI+PC9kaXY+DQoNCjxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4NCiAgICAgdmFyIG1vcmd1YXJkTGlzdG9wdGlvbnMgPSBbIi9uZXdzLWtub3dsZWRnZS9jYXNlLXN0dWRpZXMvYW5udWFsLXJlcG9ydHMtMjAyMCIsIi9OZXdzQW5kUmVzZWFyY2hfL1BhZ2VzL0FubnVhbC1SZXBvcnRzLTIwMjAuYXNweCIsIlNtYWxsIl07DQogICAgIG1vcmd1YXJkLmxvYWRBbmd1bGFyV2ViUGFydChtb3JndWFyZExpc3RvcHRpb25zLCIjQ2FzZVN0dWR5QXBwV2VicGFydDQxIik7DQo8L3NjcmlwdD4NCg0KZAUmZ184N2ViZjI3Zl8yNGIxXzQ2YmRfOWRhYV9jYWYyNDJmMWQzZmQPZBYCZg8WBB8BBR9tcy1ydGUtZW1iZWRjb2RlIG1zLXJ0ZS1lbWJlZHdwHwIFnwM8ZGl2IGlkPSJGZWF0dXJlZEFwcFdlYnBhcnQxMCIgZWRpdC1zd2l0Y2g9IiIgZGlzcGxheS1jb250cm9sbGVyPSJGZWF0dXJlZEFwcExpc3RJdGVtQ3RybCIgZWRpdC1jb250cm9sbGVyPSJGZWF0dXJlZEFwcExpc3RDdHJsIiBkaXNwbGF5LXRlbXBsYXRlPSJkaXNwbGF5VGVtcGxhdGUiIGVkaXRvci10ZW1wbGF0ZT0iZWRpdG9yVGVtcGxhdGUiPjwvZGl2Pg0KDQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQoNCiAgICAgICAgICB2YXIgbW9yZ3VhcmRMaXN0b3B0aW9ucz0gWyIxMCIsIkZlYXR1cmVkIEl0ZW1zIiwiLyJdOw0KICAgICAgICAgIG1vcmd1YXJkLmxvYWRBbmd1bGFyV2ViUGFydChtb3JndWFyZExpc3RvcHRpb25zLCIjRmVhdHVyZWRBcHBXZWJwYXJ0MTAiKTsNCiAgICAgICAgICA8L3NjcmlwdD4NCg0KZAUmZ19jMDlhZDUyM184ZGRjXzQ2YmFfODk4ZF84M2YyMjcxMzJjNTIPZBYCZg8WBB8BBR9tcy1ydGUtZW1iZWRjb2RlIG1zLXJ0ZS1lbWJlZHdwHwIFmgM8ZGl2IGlkPSJGZWF0dXJlZEFwcFdlYnBhcnQiIGVkaXQtc3dpdGNoPSIiIGRpc3BsYXktY29udHJvbGxlcj0iRmVhdHVyZWRBcHBMaXN0SXRlbUN0cmwiIGVkaXQtY29udHJvbGxlcj0iRmVhdHVyZWRBcHBMaXN0Q3RybCIgZGlzcGxheS10ZW1wbGF0ZT0iZGlzcGxheVRlbXBsYXRlIiBlZGl0b3ItdGVtcGxhdGU9ImVkaXRvclRlbXBsYXRlIj48L2Rpdj4NCg0KPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KDQogICAgICAgICAgdmFyIG1vcmd1YXJkTGlzdG9wdGlvbnM9IFsiNSIsIkZlYXR1cmVkIEl0ZW1zIiwiLyJdOw0KICAgICAgICAgIG1vcmd1YXJkLmxvYWRBbmd1bGFyV2ViUGFydChtb3JndWFyZExpc3RvcHRpb25zLCIjRmVhdHVyZWRBcHBXZWJwYXJ0Iik7DQogICAgICAgICAgPC9zY3JpcHQ+DQoNCmQFJmdfY2E4Zjc5NzBfYTIzYV80ZTdjXzkzZmFfYTc3MzMyYTRlNzEyD2QWAmYPFgQfAQUfbXMtcnRlLWVtYmVkY29kZSBtcy1ydGUtZW1iZWR3cB8CBeUDPGRpdiBpZD0iQ2FzZVN0dWR5QXBwV2VicGFydDQwIiBlZGl0LXN3aXRjaD0iIiBkaXNwbGF5LWNvbnRyb2xsZXI9IkNhc2VTdHVkeUFwcERpc3BsYXlDdHJsIiBlZGl0LWNvbnRyb2xsZXI9IkNhc2VTdHVkeUFwcEVkaXRDdHJsIiBkaXNwbGF5LXRlbXBsYXRlPSJkaXNwbGF5VGVtcGxhdGUiIGVkaXRvci10ZW1wbGF0ZT0iZWRpdG9yVGVtcGxhdGUiPjwvZGl2Pg0KDQo8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQogICAgIHZhciBtb3JndWFyZExpc3RvcHRpb25zID0gWyIvbmV3cy1rbm93bGVkZ2UvY2FzZS1zdHVkaWVzLzIwMjAtaG9vcHAtbGVhcC1hd2FyZHMiLCIvTmV3c0FuZFJlc2VhcmNoXy9QYWdlcy8yMDIwLWhvb3BwLWxlYXAtYXdhcmRzLmFzcHgiLCJTbWFsbCJdOw0KICAgICBtb3JndWFyZC5sb2FkQW5ndWxhcldlYlBhcnQobW9yZ3VhcmRMaXN0b3B0aW9ucywiI0Nhc2VTdHVkeUFwcFdlYnBhcnQ0MCIpOw0KPC9zY3JpcHQ+DQpkAgcPZBYCAgIPZBYCAgUPZBYCAgMPFgIeB1Zpc2libGVoFgJmD2QWBAICD2QWBgIBDxYCHwNoZAIDDxYCHwNoZAIFDxYCHwNoZAIDDw8WAh4JQWNjZXNzS2V5BQEvZGQCIw9kFgICAQ8WAh8ACysEAWRkhPWDFzONPAfZXYZcmZ95tBNkxJ1V1wBygNQTeiVjj6w=" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'aspnetForm';
+var g_presenceEnabled = true;
+var g_wsaEnabled = false;
+var g_wsaQoSEnabled = false;
+var g_wsaQoSDataPoints = [];
+var g_wsaLCID = 1033;
+var g_wsaListTemplateId = 850;
+var g_wsaSiteTemplateId = 'BLANKINTERNET#0';
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002f", webAbsoluteUrl: "https:\u002f\u002fwww.morguard.com", siteAbsoluteUrl: "https:\u002f\u002fwww.morguard.com", serverRequestPath: "\u002fPages\u002fdefault.aspx", layoutsUrl: "_layouts\u002f15", webTitle: "", webTemplate: "53", tenantAppVersion: "2379760993", isAppWeb: false, Has2019Era: true, webLogoUrl: "_layouts\u002f15\u002fimages\u002fsiteicon.png", webLanguage: 1033, currentLanguage: 1033, currentUICultureName: "en-US", currentCultureName: "en-US", clientServerTimeDelta: new Date("2021-05-18T12:34:22.8231210Z") - new Date(), siteClientTag: "1176$$15.0.5285.1000", crossDomainPhotosEnabled:false, webUIVersion:15, webPermMasks:{High:16,Low:196673},pageListId:"{22b26a0d-867b-49f4-9f93-9d4b45a9e6fa}",pageItemId:2, pagePersonalizationScope:1, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var _spWebPartComponents = new Object();//]]>
+</script>
+
+<script src="/_layouts/15/blank.js?rev=ZaOXZEobVwykPO9g8hq%2F8A%3D%3D" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+(function(){
+
+        if (typeof(_spBodyOnLoadFunctions) === 'undefined' || _spBodyOnLoadFunctions === null) {
+            return;
+        }
+        _spBodyOnLoadFunctions.push(function() 
+        {
+          ExecuteOrDelayUntilScriptLoaded(
+            function()
+            {
+              var pairs = SP.ScriptHelpers.getDocumentQueryPairs();
+              var followDoc, itemId, listId, docName;
+              for (var key in pairs)
+              {
+                if(key.toLowerCase() == 'followdocument') 
+                  followDoc = pairs[key];
+                else if(key.toLowerCase() == 'itemid') 
+                  itemId = pairs[key];
+                else if(key.toLowerCase() == 'listid') 
+                  listId = pairs[key];
+                else if(key.toLowerCase() == 'docname') 
+                  docName = decodeURI(pairs[key]);
+              } 
+
+              if(followDoc != null && followDoc == '1' && listId!=null && itemId != null && docName != null)
+              {
+                SP.SOD.executeFunc('followingcommon.js', 'FollowDocumentFromEmail', function() 
+                { 
+                  FollowDocumentFromEmail(itemId, listId, docName);
+                });
+              }
+
+            }, 'SP.init.js');
+
+        });
+    })();(function(){
+
+        if (typeof(_spBodyOnLoadFunctions) === 'undefined' || _spBodyOnLoadFunctions === null) {
+            return;
+        }
+        _spBodyOnLoadFunctions.push(function() {
+
+            if (typeof(SPClientTemplates) === 'undefined' || SPClientTemplates === null || (typeof(APD_InAssetPicker) === 'function' && APD_InAssetPicker())) {
+                return;
+            }
+
+            var renderFollowFooter = function(renderCtx,  calloutActionMenu)
+            {
+                if (renderCtx.ListTemplateType == 700) 
+                    myDocsActionsMenuPopulator(renderCtx, calloutActionMenu);
+                else
+                    CalloutOnPostRenderTemplate(renderCtx, calloutActionMenu);
+
+                var listItem = renderCtx.CurrentItem;
+                if (typeof(listItem) === 'undefined' || listItem === null) {
+                    return;
+                }
+                if (listItem.FSObjType == 0) {
+                    calloutActionMenu.addAction(new CalloutAction({
+                        text: Strings.STS.L_CalloutFollowAction,
+                        tooltip: Strings.STS.L_CalloutFollowAction_Tooltip,
+                        onClickCallback: function (calloutActionClickEvent, calloutAction) {
+                            var callout = GetCalloutFromRenderCtx(renderCtx);
+                            if (!(typeof(callout) === 'undefined' || callout === null))
+                                callout.close();
+                            SP.SOD.executeFunc('followingcommon.js', 'FollowSelectedDocument', function() { FollowSelectedDocument(renderCtx); });
+                        }
+                    }));
+                }
+            };
+
+            var registerOverride = function(id) {
+                var followingOverridePostRenderCtx = {};
+                followingOverridePostRenderCtx.BaseViewID = 'Callout';
+                followingOverridePostRenderCtx.ListTemplateType = id;
+                followingOverridePostRenderCtx.Templates = {};
+                followingOverridePostRenderCtx.Templates.Footer = function(renderCtx) {
+                    var  renderECB;
+                    if (typeof(isSharedWithMeView) === 'undefined' || isSharedWithMeView === null) {
+                        renderECB = true;
+                    } else {
+                        var viewCtx = getViewCtxFromCalloutCtx(renderCtx);
+                        renderECB = !isSharedWithMeView(viewCtx);
+                    }
+                    return CalloutRenderFooterTemplate(renderCtx, renderFollowFooter, renderECB);
+                };
+                SPClientTemplates.TemplateManager.RegisterTemplateOverrides(followingOverridePostRenderCtx);
+            }
+            registerOverride(101);
+            registerOverride(700);
+        });
+    })();if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();//]]>
+</script>
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BAB98CB3" />
+	<span id="DeltaSPWebPartManager">
+            
+        </span>
+            
+
+
+
+            
+            <div id="ms-designer-ribbon">
+                <div>
+	
+	<div id="s4-ribbonrow" style="visibility:hidden;display:none"></div>
+
+</div>
+
+
+
+            </div>
+            <span>
+<a id="ctl00_ctl51_ExplicitLogin" class="ms-signInLink" href="https://www.morguard.com/_layouts/15/Authenticate.aspx?Source=%2F" style="display:inline-block;">Sign In</a>
+<script type="text/javascript">
+                    $(".ms-signInLink").hide();
+                </script></span>
+
+            <div id="s4-workspace">
+                <div id="s4-bodyContainer">
+                    <!-- ============================= MAIN CONTAINER ===================== -->
+                    <div class="container WR_MainContainer">
+
+                        <!-- ============================================ HEADER =========== -->
+                        <!-- =========== TOP NAV - DESKTOP ======== -->
+                        <div class="WR_Navbar " id="topNavigationLinks">
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluidxxxx">
+                                    <!-- ======Brand and toggle get grouped for better mobile display==== -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                            <span class="sr-only">Toggle navigation
+                                            
+                                            </span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+
+                                        <div>
+	
+                                            <a id="ctl00_x542ca9a64abf4125880d5d0f2637659d" class="navbar-brand" href="/"><img id="ctl00_x4e871e85ae83440c99763ee954f88d55" title="Morguard Logo" class="img-responsive" src="/Style%20Library/Morguard/images/logo.png" alt="Morguard Logo" /></a>
+                                        
+</div>
+
+
+                                    </div>
+                                    <!-- ======Collect the nav links, forms, and other content for toggling===== -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <!-- =======Nav bar - Search====== -->
+                                        				                        
+										
+										<div id="zz1_TopNavigationMenu" class=" noindex ms-core-listMenu-horizontalBox">
+	<ul id="zz2_RootAspMenu" class="root ms-core-listMenu-root static">
+		<li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/services" accesskey="1"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Services</span></span></a><ul class="dynamic">
+			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/services/real-estate"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Real Estate</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/services/equities-and-fixed-income"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Equities and Fixed Income</span></span></a></li>
+		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/investor-relations"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Investor Relations</span></span></a><ul class="dynamic">
+			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/investor-relations/morguard-corporation"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Morguard Corporation</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/investor-relations/morguard-reit"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Morguard REIT</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/investor-relations/morguard-north-american-residential-reit"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Morguard North American Residential REIT</span></span></a></li>
+		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/leasing"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Leasing</span></span></a><ul class="dynamic">
+			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/leasing/leasing"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Leasing</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="http://www.morguardleasing.com/?province=All&amp;amp;region=All&amp;amp;sub-region=All&amp;amp;building_name=&amp;amp;SuiteType=OFFICE&amp;amp;Size=All&amp;amp;Availability=All&amp;amp;show_no_vacancy=&amp;amp;lang=en_CA&amp;amp;Submit=SEARCH"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Office</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="http://www.morguardleasing.com/?province=All&amp;amp;region=All&amp;amp;sub-region=All&amp;amp;building_name=&amp;amp;SuiteType=INDUSTRIAL&amp;amp;Size=All&amp;amp;Availability=All&amp;amp;show_no_vacancy=&amp;amp;lang=en_CA&amp;amp;Submit=SEARCH"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Industrial</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="http://www.morguardretailleasing.com/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Retail</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/leasing/retail-specialty-leasing"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Retail Specialty Leasing</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="http://www.morguardapartments.com/"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Apartments</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/leasing/hotels"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Hotels</span></span></a></li>
+		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/portfolio"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Portfolio</span></span></a><ul class="dynamic">
+			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/portfolio/portfolio"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Portfolio</span></span></a></li>
+		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news-knowledge"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">News &amp; Knowledge</span></span></a><ul class="dynamic">
+			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news-knowledge/news"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">News</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news-knowledge/case-studies"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Case Studies</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news-knowledge/research"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Research</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/news-knowledge/posts"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Posts</span></span></a></li>
+		</ul></li><li class="static dynamic-children"><a class="static dynamic-children menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/company"><span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children"><span class="menu-item-text">Company</span></span></a><ul class="dynamic">
+			<li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/company/about"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">About</span></span></a></li><li class="dynamic"><a class="dynamic menu-item ms-core-listMenu-item ms-displayInline ms-navedit-linkNode" tabindex="0" href="/company/sustainability"><span class="additional-background ms-navedit-flyoutArrow"><span class="menu-item-text">Sustainability</span></span></a></li>
+		</ul></li>
+	</ul>
+</div>	
+                                    </div>
+                                    <!-- ======navbar-collapse======= -->
+                                    <!-- Nav bar - Search -->
+                                    <div class="ICO_Search">
+                                        <a href="#">
+                                            <img src="/Style%20Library/Morguard/images/btn_search.png" class="img-responsive" alt="Search" title="Search" />
+                                        </a>
+                                    </div>
+                                    <!-- =====Nav bar - Search====== -->
+                                </div>
+                            </nav>
+                        </div>
+                        <!-- =========== TOP NAV - DESKTOP ======== -->
+                        <!-- =========== TOP NAV - MOIBLE ======== -->
+                        <div class="responsive_nav navbar-fixed-top" data-ng-controller="TopMobileNavigationLinksCtrl">
+                            <div id="left-flyout-nav" class="layout-left-flyout">
+                            </div>
+                            <div class="layout-right-content">
+                                <header class="the-header">
+                                    <div class="navbar ">
+                                        <!-- Nav bar - Search -->
+                                        <div class="ICO_Search">
+                                            <a href="#">
+                                                <img src="/Style%20Library/Morguard/images/btn_search.png" class="img-responsive" alt="Search" title="Search" />
+                                            </a>
+                                        </div>
+                                        <!-- =====Nav bar - Search====== -->
+                                        <!-- Trigger -->
+                                        <a class="btn-navbar btn-navbar-navtoggle btn-flyout-trigger" href="#">
+                                            <span class="icon-bar btn-flyout-trigger"></span>
+                                            <span class="icon-bar btn-flyout-trigger"></span>
+                                            <span class="icon-bar btn-flyout-trigger"></span>
+                                        </a>
+                                        <div>
+	
+                                            <a id="ctl00_x882ca9a64abf4125880d5d0f2637659d" class="navbar-brand" href="/"><img id="ctl00_x88871e85ae83440c99763ee954f88d55" title="Morguard Logo" class="img-responsive" src="/Style%20Library/Morguard/images/logo.png" alt="Morguard Logo" /></a>
+                                        
+</div>
+
+                                        <!-- Structure -->
+                                        <nav class="the-nav nav-collapse clearfix">
+                                            <ul class="nav nav-pill pull-left">
+
+                                                <li class="dropdown" data-ng-repeat="node in tree">
+                                                    <a data-ng-class="{has_subMenu:node.Nodes.length != 0,navbar_link_bold:node.NavTextColour == 'Blue'}" data-ng-href="{{ node.SimpleUrl }}">{{node.Title}}</a>
+                                                    <ul data-ng-class="{'subnav':node.Nodes.length != 0}">
+                                                        <li data-ng-repeat="subNode in node.Nodes">
+                                                            <a data-ng-href="{{ subNode.SimpleUrl }}">{{subNode.Title}}</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="nav pull-left nav-flyout flyout_bottom_nav" data-ng-bind-html="staticLinksContent">
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </header>
+                            </div>
+                        </div>
+                        <!-- =========== TOP NAV - MOIBLE ======== -->
+                        <!-- ========= Search Area Starts ======== -->
+                        <div class="col-xs-12 WR_Search">
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="row">
+                                        <div class="col-xs-10">
+                                            <label for="morguardSearchText" class="hidden">Search</label>
+                                            <input name="" type="text" id="morguardSearchText" title="Morguard Search" />
+                                        </div>
+                                        <div class="col-xs-2">
+                                            <input name="search" type="button" value="SEARCH" id="morguardSearchButton" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-2 text-right">
+                                    <a href="#" id="ICO_close">X
+                                    
+                                    </a>
+                                </div>
+                                <br class="clearfloat" />
+                            </div>
+                        </div>
+                        <div class="clearfloat"></div>
+                        <!-- ========== Search Area Ends =========== -->
+                        <!-- ========= TopNavigation ======== -->
+                        <!-- ============================================ HEADER =========== -->
+
+                        <!-- ============================================ BODY =========== -->
+                        <div class="WR_Body">
+                            <div data-name="ContentPlaceHolderMain">
+
+
+                                <span id="DeltaPlaceHolderMain">
+                                    
+			<div>
+                
+                
+                
+                
+                
+            </div>
+           
+           
+           <!-- =======================================================  PAGE LAYOUT AREA ======================================= -->
+           <!-- ========================================ROW 1 === -->
+                        <div class="row">
+                        <div class="col-md-12">
+                            
+                                <div class="col-md-6 no-padding hidden-xs">
+	                                <div data-name="WebPartZone">
+				    				
+				    				
+				   					<div>
+				        			<div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl45_g_ca8f7970_a23a_4e7c_93fa_a77332a4e712" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="ca8f7970-a23a-4e7c-93fa-a77332a4e712" HasPers="false" id="WebPartctl00_ctl45_g_ca8f7970_a23a_4e7c_93fa_a77332a4e712" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_ca8f7970_a23a_4e7c_93fa_a77332a4e712">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="CaseStudyAppWebpart40" edit-switch="" display-controller="CaseStudyAppDisplayCtrl" edit-controller="CaseStudyAppEditCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+     var morguardListoptions = ["/news-knowledge/case-studies/2020-hoopp-leap-awards","/NewsAndResearch_/Pages/2020-hoopp-leap-awards.aspx","Small"];
+     morguard.loadAngularWebPart(morguardListoptions,"#CaseStudyAppWebpart40");
+</script>
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div><div class="ms-PartSpacingVertical"></div>
+	</div><div id="MSOZoneCell_WebPartctl00_ctl45_g_c09ad523_8ddc_46ba_898d_83f227132c52" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="c09ad523-8ddc-46ba-898d-83f227132c52" HasPers="false" id="WebPartctl00_ctl45_g_c09ad523_8ddc_46ba_898d_83f227132c52" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_c09ad523_8ddc_46ba_898d_83f227132c52">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="FeaturedAppWebpart" edit-switch="" display-controller="FeaturedAppListItemCtrl" edit-controller="FeaturedAppListCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+
+          var morguardListoptions= ["5","Featured Items","/"];
+          morguard.loadAngularWebPart(morguardListoptions,"#FeaturedAppWebpart");
+          </script>
+
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+				   					</div>
+				    				
+									</div>                                
+					           </div>
+                            
+                                <div class="col-md-6 no-padding">
+                                	<div data-name="WebPartZone">
+				    				
+				    				
+				   					<div>
+				        			<div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl45_g_87ebf27f_24b1_46bd_9daa_caf242f1d3fd" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="87ebf27f-24b1-46bd-9daa-caf242f1d3fd" HasPers="false" id="WebPartctl00_ctl45_g_87ebf27f_24b1_46bd_9daa_caf242f1d3fd" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_87ebf27f_24b1_46bd_9daa_caf242f1d3fd">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="FeaturedAppWebpart10" edit-switch="" display-controller="FeaturedAppListItemCtrl" edit-controller="FeaturedAppListCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+
+          var morguardListoptions= ["10","Featured Items","/"];
+          morguard.loadAngularWebPart(morguardListoptions,"#FeaturedAppWebpart10");
+          </script>
+
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div><div class="ms-PartSpacingVertical"></div>
+	</div><div id="MSOZoneCell_WebPartctl00_ctl45_g_3bb2dd43_2fb3_42c2_93e3_42ee753c375b" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="3bb2dd43-2fb3-42c2-93e3-42ee753c375b" HasPers="false" id="WebPartctl00_ctl45_g_3bb2dd43_2fb3_42c2_93e3_42ee753c375b" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_3bb2dd43_2fb3_42c2_93e3_42ee753c375b">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="CaseStudyAppWebpart41" edit-switch="" display-controller="CaseStudyAppDisplayCtrl" edit-controller="CaseStudyAppEditCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+     var morguardListoptions = ["/news-knowledge/case-studies/annual-reports-2020","/NewsAndResearch_/Pages/Annual-Reports-2020.aspx","Small"];
+     morguard.loadAngularWebPart(morguardListoptions,"#CaseStudyAppWebpart41");
+</script>
+
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+				   					</div>
+				    				
+									</div>                                 
+							  </div>
+                                
+                   </div>
+                   </div>
+                   <!-- ========================================/ROW 1 === -->
+                   
+                   <!-- ========================================ROW 2 === -->
+                   <div class="row">
+                   <div class="col-md-12">
+                   
+                   <div class="wr_services">
+                   <div class="col-md-3 col-sm-xs col-md-offset-2" ng-controller="ServicesAndLeasingCtrl" contentSection="Services" ng-bind-html="pageContent">
+                   
+                       
+                   </div>
+                   
+                   
+                   <div class="col-md-3 col-xs-12">
+                   					<div data-name="WebPartZone">
+				    				
+				    				
+				   					<div>
+				        			<div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl45_g_cfd78e73_805e_429a_884e_c5efa0acee34" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="cfd78e73-805e-429a-884e-c5efa0acee34" HasPers="false" id="WebPartctl00_ctl45_g_cfd78e73_805e_429a_884e_c5efa0acee34" width="100%" class="ms-WPBody noindex " allowDelete="false" allowExport="false" style="" ><div id="ctl00_ctl45_g_cfd78e73_805e_429a_884e_c5efa0acee34">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><!-- Start of QuoteMedia.com Custom CSS - BOTH REQUIRED -->
+<link rel="stylesheet" type="text/css" href="https://app.quotemedia.com/css/tools.css" />
+<link rel="stylesheet" type="text/css" href="https://app.quotemedia.com/css/module.css" />
+<!-- End of QuoteMedia.com Custom CSS - BOTH REQUIRED -->
+
+<script type="text/javascript">
+    var qmCurrent = "";
+    var qmArrow = "";
+
+    function qmShowArrow(qmCurrent) {
+        if (qmCurrent.search('qmjsdataup') != -1) {
+            qmArrow = "<img src=\"https://app.quotemedia.com/quotetools/images/qm_up.gif\">";
+        }
+        else if (qmCurrent.search('qmjsdatadown') != -1) {
+            qmArrow = "<img src=\"https://app.quotemedia.com/quotetools/images/qm_down.gif\">";
+        }
+        else {
+            qmArrow = "<img src=\"https://app.quotemedia.com/quotetools/images/qm_nc.gif\">";
+        }
+        return qmArrow;
+    }
+</script>
+
+<style type="text/css">
+    /* Morguard Style */
+    .stockTickerContainer {
+        font-family: Arial, Helvetica, sans-serif;
+        display: table;
+        width: 185px;
+    }
+
+    .stockTickerTitle {
+        font-size: 1em;
+        color: #00467F;
+        font-weight: bold;
+        padding-bottom: 0px;
+    }
+
+    .stockTickerLabel {
+        display: table-cell;
+        width: 100px;
+        font-size: 1em;
+        color: #00467F;
+        font-weight: normal;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        float: left;
+    }
+
+    .stockTickerData {
+        display: table-cell;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        float: right;
+    }
+
+    .stockTickerDevider {
+        display: table-row;
+    }
+
+    .stockTickerBottomSpace {
+        display: table-row;
+        width: 1px;
+        height: 10px;
+    }
+
+    .qmImageChange {
+        float: left;
+        margin-top: 0px;
+    }
+
+    .qmPercentChange {
+        float: right;
+        text-align: right;
+        width: 55px;
+        font-size: 1em;
+        color: black;
+        font-weight: normal;
+    }
+</style>
+
+<div class="stockTickerContainer">
+    <div class="stockTickerTitle">
+        <h3 class="heading_3">INVESTOR RELATIONS</h3>
+    </div>
+    <script src="https://app.quotemedia.com/quotetools/jsVarsQuotesSpan.go?webmasterId=102091&amp;qmDecimal=3&amp;symbol=MRC:CA&amp;df=MMM+d,+yyyy+hh:mm+a+z"></script>
+    <div class="stockTickerDevider">
+        <div class="stockTickerLabel">
+            <a href="https://www.morguard.com/investor-relations/morguard-corporation">TSX:MRC</a>
+        </div>
+        <div class="stockTickerData">
+            <script>document.write('<span class="qmImageChange">' + qmShowArrow(qmQuote.change) + '</span><span class="qmPercentChange">' + qmQuote.changePercent + '</span> ');</script>
+        </div>
+    </div>
+    <script src="https://app.quotemedia.com/quotetools/jsVarsQuotesSpan.go?webmasterId=102091&amp;qmDecimal=3&amp;symbol=MRT.UN:CA&amp;df=MMM+d,+yyyy+hh:mm+a+z"></script>
+    <div class="stockTickerDevider">
+        <div class="stockTickerLabel">
+            <a href="https://www.morguard.com/investor-relations/morguard-reit/">TSX:MRT.UN</a>
+        </div>
+        <div class="stockTickerData">
+            <script>document.write('<span class="qmImageChange">' + qmShowArrow(qmQuote.change) + '</span><span class="qmPercentChange">' + qmQuote.changePercent + '</span> ');</script>
+        </div>
+    </div>
+    <script src="https://app.quotemedia.com/quotetools/jsVarsQuotesSpan.go?webmasterId=102091&amp;qmDecimal=3&amp;symbol=MRG.UN:CA&amp;df=MMM+d,+yyyy+hh:mm+a+z"></script>
+    <div class="stockTickerDevider">
+        <div class="stockTickerLabel">
+            <a href="https://www.morguard.com/investor-relations/morguard-north-american-residential-reit">TSX:MRG.UN</a>
+        </div>
+        <div class="stockTickerData">
+            <script>document.write('<span class="qmImageChange">' + qmShowArrow(qmQuote.change) + '</span><span class="qmPercentChange">' + qmQuote.changePercent + '</span> ');</script>
+        </div>
+    </div>
+    <div class="stockTickerBottomSpace"></div>
+</div></DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+				   					</div>
+				    				
+									</div>  
+                   </div>
+                   
+                   
+                    <div class="col-md-3 col-xs-12" ng-controller="ServicesAndLeasingCtrl" contentSection="Leasing" ng-bind-html="pageContent">
+                   
+                    </div>
+                   
+                   <br class="clearfloat" />
+                   </div>
+                  
+                   </div>
+                   </div>
+                   <!-- ========================================/ROW 2 === -->
+                   
+                   
+                   <!-- ========================================ROW 3 === -->
+                    <div class="row">
+                    <div class="col-md-12">
+                    
+                   					<div data-name="WebPartZone">
+				    				
+				    				
+				   					<div>
+				        			<div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl45_g_8e55e9e2_4373_4bc7_af82_96933c2544a2" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="8e55e9e2-4373-4bc7-af82-96933c2544a2" HasPers="false" id="WebPartctl00_ctl45_g_8e55e9e2_4373_4bc7_af82_96933c2544a2" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_8e55e9e2_4373_4bc7_af82_96933c2544a2">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp">
+          <script src ="/Style Library/Morguard/widgets/InfographicApp/Infographic.js"> </script>
+
+          <div class="bg_dark">
+          <div class="col-md-6 no-padding">
+          <div id="info_1" class="col-xs-6 col-md-6"><a href="#"><img id="1_1_on" src="" width="256" height="256" class="img-responsive" alt="Infographic"><img id="1_1_off" src="" width="256" height="256" class="img-responsive" alt="Infographic"></a></div>
+          <div id="info_2" class="col-xs-6 col-md-6"><a href="#"><img id="1_2_on" src="" width="256" height="256" class="img-responsive" alt="Infographic"><img id="1_2_off" src="" width="256" height="256" class="img-responsive" alt="Infographic"></a></div>
+          <div id="info_3" class="col-xs-6 col-md-6"><a href="#"><img id="2_1_on" src="" width="256" height="256" class="img-responsive" alt="Infographic"><img id="2_1_off" src="" width="256" height="256" class="img-responsive" alt="Infographic"></a></div>
+          <div id="info_4" class="col-xs-6 col-md-6"><a href="#"><img id="2_2_on" src="" width="256" height="256" class="img-responsive" alt="Infographic"><img id="2_2_off" src="" width="256" height="256" class="img-responsive" alt="Infographic"></a></div>
+          </div>
+
+
+          <div class="col-md-6 no-padding">
+          <div class=" WR_Portfolio" id="portfolio_area">
+          </div>
+
+
+
+          </div>
+
+          <br class="clearfloat">
+          </div>
+        </DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+				   					</div>
+				    				
+									</div>                  
+                </div>
+                </div>   
+                <!-- ========================================/ROW 3 === -->
+                
+                
+                 <!-- ========================================ROW 4 === -->
+                 <div class="row">
+                 <div class="col-md-12">
+                 
+                 
+      			 
+           		 <div class="col-md-6 col-lg-6 no-padding ">
+                                    <div data-name="WebPartZone">
+				    				
+				    				
+				   					<div>
+				        			<div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl45_g_245869dc_52ea_43a0_8c75_677c4e84160e" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="245869dc-52ea-43a0-8c75-677c4e84160e" HasPers="false" id="WebPartctl00_ctl45_g_245869dc_52ea_43a0_8c75_677c4e84160e" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_245869dc_52ea_43a0_8c75_677c4e84160e">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="CaseStudyAppWebpart25" edit-switch="" display-controller="CaseStudyAppDisplayCtrl" edit-controller="CaseStudyAppEditCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+     var morguardListoptions = ["/news-knowledge/case-studies/plus-15","/NewsAndResearch_/Pages/plus-15.aspx","Large"];
+     morguard.loadAngularWebPart(morguardListoptions,"#CaseStudyAppWebpart25");
+</script>
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+				   					</div>
+				    				
+									</div>                 
+				 </div>
+                 
+                 
+          		 <div class="col-md-6 col-lg-6 no-padding">
+                 					<div data-name="WebPartZone">
+				    				
+				    				
+				   					<div>
+				        			<div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl45_g_ea47b799_041e_456b_8113_dadd0c279f23" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="ea47b799-041e-456b-8113-dadd0c279f23" HasPers="false" id="WebPartctl00_ctl45_g_ea47b799_041e_456b_8113_dadd0c279f23" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_ea47b799_041e_456b_8113_dadd0c279f23">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="FeaturedAppWebpart6" edit-switch="" display-controller="FeaturedAppListItemCtrl" edit-controller="FeaturedAppListCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+
+          var morguardListoptions= ["8","Featured Items","/"];
+          morguard.loadAngularWebPart(morguardListoptions,"#FeaturedAppWebpart6");
+          </script>
+
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div><div class="ms-PartSpacingVertical"></div>
+	</div><div id="MSOZoneCell_WebPartctl00_ctl45_g_e6ae8bbe_bb48_4acf_ab1d_b16c98f2e460" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="e6ae8bbe-bb48-4acf-ab1d-b16c98f2e460" HasPers="false" id="WebPartctl00_ctl45_g_e6ae8bbe_bb48_4acf_ab1d_b16c98f2e460" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_e6ae8bbe_bb48_4acf_ab1d_b16c98f2e460">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="CaseStudyAppWebpart30" edit-switch="" display-controller="CaseStudyAppDisplayCtrl" edit-controller="CaseStudyAppEditCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+     var morguardListoptions = ["/news-knowledge/case-studies/morguard-bees","/NewsAndResearch_/Pages/Morguard-Bees.aspx","Small"];
+     morguard.loadAngularWebPart(morguardListoptions,"#CaseStudyAppWebpart30");
+</script>
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+				   					</div>
+				    				
+									</div>                 
+									</div>
+                
+                 </div>
+                 </div>
+                 <!-- ========================================/ROW 4 === -->
+                   
+                   
+                  <!-- ========================================ROW 5 === -->
+        		  <div class="row">
+        		  <div class="col-md-12">
+        	      
+                  <div class="col-md-6 no-padding">
+                   					<div data-name="WebPartZone">
+				    				
+				    				
+				   					<div>
+				        			<div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl45_g_aabe2218_3f71_4245_b676_2ebdcfa83cbf" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="aabe2218-3f71-4245-b676-2ebdcfa83cbf" HasPers="false" id="WebPartctl00_ctl45_g_aabe2218_3f71_4245_b676_2ebdcfa83cbf" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_aabe2218_3f71_4245_b676_2ebdcfa83cbf">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="FeaturedAppWebpart7" edit-switch="" display-controller="FeaturedAppListItemCtrl" edit-controller="FeaturedAppListCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+
+          var morguardListoptions= ["14","Featured Items","/"];
+          morguard.loadAngularWebPart(morguardListoptions,"#FeaturedAppWebpart7");
+          </script>
+
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div><div class="ms-PartSpacingVertical"></div>
+	</div><div id="MSOZoneCell_WebPartctl00_ctl45_g_2f0672c9_bfbe_4e25_a162_7cdce41dac5f" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="2f0672c9-bfbe-4e25-a162-7cdce41dac5f" HasPers="false" id="WebPartctl00_ctl45_g_2f0672c9_bfbe_4e25_a162_7cdce41dac5f" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_2f0672c9_bfbe_4e25_a162_7cdce41dac5f">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="CaseStudyAppWebpart3" edit-switch="" display-controller="CaseStudyAppDisplayCtrl" edit-controller="CaseStudyAppEditCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+     var morguardListoptions = ["/news-knowledge/case-studies/heritage-place","/NewsAndResearch_/Pages/Heritage-Place.aspx","Small"];
+     morguard.loadAngularWebPart(morguardListoptions,"#CaseStudyAppWebpart3");
+</script></DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+				   					</div>
+				    				
+									</div>
+                  </div>
+                 
+                  <div class="col-md-6 no-padding">
+                   					<div data-name="WebPartZone">
+				    				
+				    				
+				   					<div>
+				        			<div class="ms-webpart-zone ms-fullWidth">
+	<div id="MSOZoneCell_WebPartctl00_ctl45_g_957c1ad1_6790_43ad_a90d_429c86a1d9f4" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="957c1ad1-6790-43ad-a90d-429c86a1d9f4" HasPers="false" id="WebPartctl00_ctl45_g_957c1ad1_6790_43ad_a90d_429c86a1d9f4" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_957c1ad1_6790_43ad_a90d_429c86a1d9f4">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="CaseStudyAppWebpart5" edit-switch="" display-controller="CaseStudyAppDisplayCtrl" edit-controller="CaseStudyAppEditCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+     var morguardListoptions = ["/news-knowledge/case-studies/77-Bloor-Street-West","/NewsAndResearch_/Pages/77-Bloor-Street-West.aspx","Small"];
+     morguard.loadAngularWebPart(morguardListoptions,"#CaseStudyAppWebpart5");
+</script></DIV>
+			</div><div class="ms-clear"></div></div>
+		</div><div class="ms-PartSpacingVertical"></div>
+	</div><div id="MSOZoneCell_WebPartctl00_ctl45_g_f0b64698_220b_4187_85b5_c6c2f72dff46" class="s4-wpcell-plain ms-webpartzone-cell ms-webpart-cell-vertical ms-fullWidth ">
+		<div class="ms-webpart-chrome ms-webpart-chrome-vertical ms-webpart-chrome-fullWidth ">
+			<div WebPartID="f0b64698-220b-4187-85b5-c6c2f72dff46" HasPers="false" id="WebPartctl00_ctl45_g_f0b64698_220b_4187_85b5_c6c2f72dff46" width="100%" class="ms-WPBody noindex " allowDelete="false" style="" ><div id="ctl00_ctl45_g_f0b64698_220b_4187_85b5_c6c2f72dff46">
+				<DIV class="ms-rte-embedcode ms-rte-embedwp"><div id="FeaturedAppWebpart8" edit-switch="" display-controller="FeaturedAppListItemCtrl" edit-controller="FeaturedAppListCtrl" display-template="displayTemplate" editor-template="editorTemplate"></div>
+
+<script type="text/javascript">
+
+          var morguardListoptions= ["90","Featured Items","/"];
+          morguard.loadAngularWebPart(morguardListoptions,"#FeaturedAppWebpart8");
+          </script>
+
+</DIV>
+			</div><div class="ms-clear"></div></div>
+		</div>
+	</div>
+</div>
+				   					</div>
+				    				
+									</div>                  </div>
+                  
+                  </div>
+                  </div>
+                  <!-- ========================================/ROW 5 === -->
+                              
+           <!-- =======================================================  /PAGE LAYOUT AREA ======================================= -->
+           
+        <div style='display:none' id='hidZone'><menu class="ms-hide">
+	<ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/15/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
+
+	</ie:menuitem>
+</menu></div>
+                                </span>
+
+                            </div>
+                            
+                        </div>
+                        <!-- ============================================/ BODY =========== -->
+
+                        <!-- ============================================ FOOTER2 =========== -->
+                        <div class="row">
+                            <div class="col-md-12" data-ng-controller="FooterSocialMediaLinksCtrl" data-ng-bind-html="footerHtmlContent">
+                            </div>
+                        </div>
+                        <!-- ============================================ /FOOTER =========== -->
+                    </div>
+                    <!-- ============================= /MAIN CONTAINER ===================== -->
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    <script type="text/javascript">//<![CDATA[
+                        $(document).ready(function () {
+                            $(".ICO_Search").click(function () {
+                                $(".WR_Search").slideDown("fast");
+                                $("#morguardSearchText").val("");
+                            });
+
+                            $("#ICO_close").click(function () {
+                                $(".WR_Search").slideUp("fast");
+                                $("#morguardSearchText").val("");
+                            });
+
+                            var count = 0;
+                            var checkTreeSchedule = function () {
+                                if (morguard &&
+                                  morguard.isTreeReady) {
+                                    $('.the-nav').cbFlyout();
+                                } else {
+                                    setTimeout(checkTreeSchedule, 100);
+                                }
+                            };
+
+                            checkTreeSchedule();
+
+                            $("#morguardSearchButton").click(function () {
+                                var searchKeyword = $("#morguardSearchText").val();
+                                var url = "/search_/pages/results.aspx?k=" + searchKeyword;
+                                window.location = url;
+                            });
+
+                            $(function () {
+                                $(".dropdown").hover(
+                                        function () {
+                                            $('.dropdown-menu', this).stop(true, true).fadeIn("fast");
+                                            $(this).toggleClass('open');
+                                            $('b', this).toggleClass("caret caret-up");
+                                        },
+                                        function () {
+                                            $('.dropdown-menu', this).stop(true, true).fadeOut("fast");
+                                            $(this).toggleClass('open');
+                                            $('b', this).toggleClass("caret caret-up");
+                                        });
+                            });
+
+                            $('.inv_tab2 li:last').css('border-right', 'none');
+
+                            $('.ardida').click(function () {
+                                $('.inv_tab li').toggle();
+                                $('.inv_tab li:first').show();
+                                $('.ardida').toggleClass('inv_ar2');
+                            });
+
+                            //------------------Top Nav----------------
+                            $('#topNavigationLinks *:not(li) > ul > li:nth-child(1)').addClass('blue-color-item');
+                            $('#topNavigationLinks *:not(li) > ul > li:nth-child(2)').addClass('blue-color-item');
+                            $('#topNavigationLinks *:not(li) > ul > li:nth-child(3)').addClass('blue-color-item');
+
+                            $('#topNavigationLinks *:not(li) > ul > li.dynamic-children > a').click(function (event) {
+                                event.preventDefault();
+                            });
+
+                            //------------------End - Top Nav----------
+                            $('#morguardSearchText').keypress(function (event) {
+                                var keycode = (event.keyCode ? event.keyCode : event.which);
+                                if (keycode == '13') {
+                                    $('#morguardSearchButton').trigger("click");
+                                    return false;
+                                }
+                            });
+
+
+                        });
+
+                        //]]></script>                  
+
+                </div>
+            </div>
+            <div id="DeltaFormDigest">
+	
+                
+					<script type="text/javascript">//<![CDATA[
+        var formDigestElement = document.getElementsByName('__REQUESTDIGEST')[0];
+        if (!((formDigestElement == null) || (formDigestElement.tagName.toLowerCase() != 'input') || (formDigestElement.type.toLowerCase() != 'hidden') ||
+            (formDigestElement.value == null) || (formDigestElement.value.length <= 0)))
+        {
+            formDigestElement.value = '0xC597198BC76B2E0B466F4374ED10E5062A0223109707A3B79E13AAD1E3C3AA80AC929EFC8E03A844E255D835A239568ECAAF53CA1040C7AABECD02FA50315B11,18 May 2021 12:34:23 -0000';
+            g_updateFormDigestPageLoaded = new Date();
+        }
+        //]]>
+        </script>
+                
+            
+</div>
+        
+
+<script type="text/javascript">
+//<![CDATA[
+var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);var _fV4UI = true;
+function _RegisterWebPartPageCUI()
+{
+    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{22b26a0d-867b-49f4-9f93-9d4b45a9e6fa}",itemId: 2,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: false,forceCheckout: true,rootFolderUrl: "\u002fPages",itemPermissions:{High:16,Low:196673}};
+    SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
+    var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
+    var hid;
+    hid = document.getElementById("_wpSelected");
+    if (hid != null)
+    {
+        var wpid = hid.value;
+        if (wpid.length > 0)
+        {
+            var zc = document.getElementById(wpid);
+            if (zc != null)
+                wpcomp.selectWebPart(zc, false);
+        }
+    }
+    hid = document.getElementById("_wzSelected");
+    if (hid != null)
+    {
+        var wzid = hid.value;
+        if (wzid.length > 0)
+        {
+            wpcomp.selectWebPartZone(null, wzid);
+        }
+    }
+};
+function __RegisterWebPartPageCUI() {
+ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js");}
+_spBodyOnLoadFunctionNames.push("__RegisterWebPartPageCUI");var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';function _cUpdx4e871e85ae83440c99763ee954f88d55(){var myd = null; if (typeof(datax4e871e85ae83440c99763ee954f88d55) != 'undefined') {myd = datax4e871e85ae83440c99763ee954f88d55;} var myc = document.getElementById('ctl00_x4e871e85ae83440c99763ee954f88d55');_cUpdcx4e871e85ae83440c99763ee954f88d55(myd, myc);}function _cUpdcx4e871e85ae83440c99763ee954f88d55(data, ctrl){SiteLogoImagePageUpdate(ctrl, data);}function _cUpdx88871e85ae83440c99763ee954f88d55(){var myd = null; if (typeof(datax88871e85ae83440c99763ee954f88d55) != 'undefined') {myd = datax88871e85ae83440c99763ee954f88d55;} var myc = document.getElementById('ctl00_x88871e85ae83440c99763ee954f88d55');_cUpdcx88871e85ae83440c99763ee954f88d55(myd, myc);}function _cUpdcx88871e85ae83440c99763ee954f88d55(data, ctrl){SiteLogoImagePageUpdate(ctrl, data);}var g_clientIdDeltaPlaceHolderMain = "DeltaPlaceHolderMain";
+var g_clientIdDeltaPlaceHolderUtilityContent = "DeltaPlaceHolderUtilityContent";
+g_QuickLaunchControlIds.push("zz1_TopNavigationMenu");_spBodyOnLoadFunctionNames.push('QuickLaunchInitDroppable'); var g_zz1_TopNavigationMenu = null; function init_zz1_TopNavigationMenu() { if (g_zz1_TopNavigationMenu == null) g_zz1_TopNavigationMenu = $create(SP.UI.AspMenu, null, null, null, $get('zz1_TopNavigationMenu')); } if(g_spPreFetchKeys) {{ g_spPreFetchKeys.push('SP.Core.js');}}EnsureScriptFunc('SP.Core.js', 'SP.UI.AspMenu', init_zz1_TopNavigationMenu);
+//]]>
+</script>
+</form>
+        <span id="DeltaPlaceHolderUtilityContent">
+            
+        </span>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </body>
+</html>

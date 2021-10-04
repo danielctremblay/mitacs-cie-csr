@@ -1,0 +1,32 @@
+
+ 
+ 
+
+Have a question about free software licensing not answered here?
+See our other ,
+and if necessary contact the FSF Compliance Lab
+at .
+The free software definition presents the criteria for whether a
+particular software program qualifies as free software.  From time to
+time we revise this definition, to clarify it or to resolve questions
+about subtle issues.  See the 
+below for a list of changes that affect the definition of free
+software.
+
+“Open source” is something different: it has a very
+different philosophy based on different values.  Its practical
+definition is different too, but nearly all open source programs are
+in fact free.  We explain the
+difference in .
+
+“Free software” means software that respects users'
+freedom and community.  Roughly, it means that .  Thus, “free software” is a matter of
+liberty, not price.  To understand the concept, you should think of
+“free” as in “free speech,” not as in
+“free beer”.  We sometimes call it “libre
+software,” borrowing the French or Spanish word for
+“free” as in freedom, to show we do not mean the software
+is gratis.
+
+We campaign for these freedoms because everyone deserves them.  With
+these freedoms, the users (both individua

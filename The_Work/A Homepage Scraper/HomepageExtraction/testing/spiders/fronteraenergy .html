@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]> <html lang="><img src=x onerror=alert(1)>
+
+"class="no-js iem7"> <![endif]-->
+<!--[if lt IE 7 ]> <html lang="><img src=x onerror=alert(1)>
+
+" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="><img src=x onerror=alert(1)>
+
+" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="><img src=x onerror=alert(1)>
+
+" class="no-js ie8"> <![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="><img src=x onerror=alert(1)>
+
+" class="no-js"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home | Frontera Energy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Jorge Enrique Bogota">
+
+  <link rel="alternate" hreflang="en" href="http://www.fronteraenergy.ca/" />
+<link rel="alternate" hreflang="es" href="http://www.fronteraenergy.ca/es/" />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"wpemoji":"\/wordpress\/wp-includes\/js\/wp-emoji.js?ver=4.7.16","twemoji":"\/wordpress\/wp-includes\/js\/twemoji.js?ver=4.7.16"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji4" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var stringFromCharCode = String.fromCharCode,
+			flag, flag2, technologist, technologist2;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'U' and 'N' in them, if the browser doesn't render flag emoji
+				 * - The United Nations flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+				context.fillText( stringFromCharCode( 55356, 56826, 55356, 56819 ), 0, 0 );
+				if ( canvas.toDataURL().length < 3000 ) {
+					return false;
+				}
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				/*
+				 * Test for rainbow flag compatibility. As the rainbow flag was added out of sequence with
+				 * the usual Unicode release cycle, some browsers support it, and some don't, even if their
+				 * Unicode support is up to date.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + rainbow emoji).
+				 */
+				context.fillText( stringFromCharCode( 55356, 57331, 65039, 8205, 55356, 57096 ), 0, 0 );
+				flag = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55356, 57331, 55356, 57096 ), 0, 0 );
+				flag2 = canvas.toDataURL();
+
+				return flag !== flag2;
+			case 'emoji4':
+				/*
+				 * Emoji 4 has the best technologists. So does WordPress!
+				 *
+				 * To test for support, try to render a new emoji (woman technologist: medium skin tone),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (woman technologist: medium skin tone + personal computer).
+				 */
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 8205, 55357, 56507), 0, 0 );
+				technologist = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55357, 56425, 55356, 57341, 55357, 56507), 0, 0 );
+				technologist2 = canvas.toDataURL();
+
+				return technologist !== technologist2;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji4' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" href="/content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.9">
+<link rel="stylesheet" href="/content/plugins/form-maker/css/jquery-ui-1.10.3.custom.css?ver=4.7.16">
+<link rel="stylesheet" href="/content/plugins/form-maker/css/jquery-ui-spinner.css?ver=4.7.16">
+<link rel="stylesheet" href="/content/plugins/form-maker/css/calendar-jos.css?ver=4.7.16">
+<link rel="stylesheet" href="/content/plugins/form-maker/css/intlTelInput.css?ver=4.7.16">
+<link rel="stylesheet" href="/content/plugins/form-maker/css/form_maker_frontend.css?ver=4.7.16">
+<link rel="stylesheet" href="/content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.css?ver=1">
+<style id='wpml-legacy-horizontal-list-0-inline-css' type='text/css'>
+.wpml-ls-statics-shortcode_actions{background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions, .wpml-ls-statics-shortcode_actions .wpml-ls-sub-menu, .wpml-ls-statics-shortcode_actions a {border-color:#cdcdcd;}.wpml-ls-statics-shortcode_actions a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions a:hover,.wpml-ls-statics-shortcode_actions a:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-shortcode_actions .wpml-ls-current-language:hover>a, .wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+</style>
+<link rel="stylesheet" href="/content/plugins/social-icons-widget-by-wpzoom/css/socicon.css?ver=20160404">
+<link rel="stylesheet" href="/content/plugins/social-icons-widget-by-wpzoom/css/genericons.css?ver=20160404">
+<link rel="stylesheet" href="/content/plugins/social-icons-widget-by-wpzoom/css/font-awesome.min.css?ver=20160404">
+<link rel="stylesheet" href="/wordpress/wp-includes/css/dashicons.css?ver=4.7.16">
+<link rel="stylesheet" href="/content/uploads/titan-framework-ect-css.css?ver=4.7.16">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda%3A500%2C400&#038;subset=latin%2Clatin-ext&#038;ver=4.7.16">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3Ainherit%2Cinherititalic%2C400&#038;subset=latin%2Clatin-ext&#038;ver=4.7.16">
+<link rel="stylesheet" href="/content/plugins/tablepress/css/default.css?ver=1.8">
+<link rel="stylesheet" href="/content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.0.1">
+<link rel="stylesheet" href="/content/plugins/popup-maker/assets/css/pum-site.css?ver=1.9.1">
+<style id='popup-maker-site-inline-css' type='text/css'>
+/* Popup Google Fonts */
+@import url('//fonts.googleapis.com/css?family=Montserrat:100');
+
+/* Popup Theme 4594: Light Box */
+.pum-theme-4594, .pum-theme-lightbox { background-color: rgba( 22, 20, 127, 0.00 ) } 
+.pum-theme-4594 .pum-container, .pum-theme-lightbox .pum-container { padding: 11px; border-radius: 23px; border: 8px solid #000000; box-shadow: 0px 0px 30px 0px rgba( 196, 196, 196, 1.00 ); background-color: rgba( 249, 249, 249, 1.00 ) } 
+.pum-theme-4594 .pum-title, .pum-theme-lightbox .pum-title { color: #000000; text-align: center; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 27px; line-height: 8px } 
+.pum-theme-4594 .pum-content, .pum-theme-lightbox .pum-content { color: #000000; font-family: Sans-Serif; font-weight: 400 } 
+.pum-theme-4594 .pum-content + .pum-close, .pum-theme-lightbox .pum-content + .pum-close { position: absolute; height: 26px; width: 26px; left: auto; right: -4px; bottom: auto; top: -1px; padding: 0px; color: #ffffff; font-family: Arial; font-weight: 100; font-size: 24px; line-height: 24px; border: 2px solid #ffffff; border-radius: 26px; box-shadow: -22px 1px 28px 1px rgba( 27, 6, 45, 0.00 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 117, 26, 165, 1.00 ) } 
+
+/* Popup Theme 4595: Enterprise Blue */
+.pum-theme-4595, .pum-theme-enterprise-blue { background-color: rgba( 0, 0, 0, 0.70 ) } 
+.pum-theme-4595 .pum-container, .pum-theme-enterprise-blue .pum-container { padding: 28px; border-radius: 5px; border: 1px none #000000; box-shadow: 0px 10px 25px 4px rgba( 2, 2, 2, 0.50 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-4595 .pum-title, .pum-theme-enterprise-blue .pum-title { color: #315b7c; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 34px; line-height: 36px } 
+.pum-theme-4595 .pum-content, .pum-theme-enterprise-blue .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-4595 .pum-content + .pum-close, .pum-theme-enterprise-blue .pum-content + .pum-close { position: absolute; height: 28px; width: 28px; left: auto; right: 8px; bottom: auto; top: 8px; padding: 0px; color: #ffffff; font-family: Times New Roman; font-weight: 100; font-size: 20px; line-height: 20px; border: 1px none #ffffff; border-radius: 42px; box-shadow: -1px -2px 0px 0px rgba( 104, 104, 104, 0.61 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.29 ); background-color: rgba( 67, 31, 86, 1.00 ) } 
+
+/* Popup Theme 4600: Default Theme */
+.pum-theme-4600, .pum-theme-default-theme-3 { background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-4600 .pum-container, .pum-theme-default-theme-3 .pum-container { padding: 18px; border-radius: px; border: 1px none #000000; box-shadow: 1px 1px 3px px rgba( 2, 2, 2, 0.23 ); background-color: rgba( 249, 249, 249, 1.00 ) } 
+.pum-theme-4600 .pum-title, .pum-theme-default-theme-3 .pum-title { color: #000000; text-align: left; text-shadow: px px px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; font-style: normal; line-height: 36px } 
+.pum-theme-4600 .pum-content, .pum-theme-default-theme-3 .pum-content { color: #8c8c8c; font-family: inherit; font-weight: 400; font-style: inherit } 
+.pum-theme-4600 .pum-content + .pum-close, .pum-theme-default-theme-3 .pum-content + .pum-close { position: absolute; height: auto; width: auto; left: auto; right: px; bottom: auto; top: px; padding: 8px; color: #ffffff; font-family: inherit; font-weight: 400; font-size: 12px; font-style: inherit; line-height: 36px; border: 1px none #ffffff; border-radius: px; box-shadow: 1px 1px 3px px rgba( 2, 2, 2, 0.23 ); text-shadow: px px px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 183, 205, 1.00 ) } 
+
+/* Popup Theme 4599: Default Theme */
+.pum-theme-4599, .pum-theme-default-theme-2 { background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-4599 .pum-container, .pum-theme-default-theme-2 .pum-container { padding: 18px; border-radius: px; border: 1px none #000000; box-shadow: 1px 1px 3px px rgba( 2, 2, 2, 0.23 ); background-color: rgba( 249, 249, 249, 1.00 ) } 
+.pum-theme-4599 .pum-title, .pum-theme-default-theme-2 .pum-title { color: #000000; text-align: left; text-shadow: px px px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; font-style: normal; line-height: 36px } 
+.pum-theme-4599 .pum-content, .pum-theme-default-theme-2 .pum-content { color: #8c8c8c; font-family: inherit; font-weight: 400; font-style: inherit } 
+.pum-theme-4599 .pum-content + .pum-close, .pum-theme-default-theme-2 .pum-content + .pum-close { position: absolute; height: auto; width: auto; left: auto; right: px; bottom: auto; top: px; padding: 8px; color: #ffffff; font-family: inherit; font-weight: 400; font-size: 12px; font-style: inherit; line-height: 36px; border: 1px none #ffffff; border-radius: px; box-shadow: 1px 1px 3px px rgba( 2, 2, 2, 0.23 ); text-shadow: px px px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 183, 205, 1.00 ) } 
+
+/* Popup Theme 4598: Framed Border */
+.pum-theme-4598, .pum-theme-framed-border { background-color: rgba( 255, 255, 255, 0.50 ) } 
+.pum-theme-4598 .pum-container, .pum-theme-framed-border .pum-container { padding: 18px; border-radius: 0px; border: 20px outset #dd3333; box-shadow: 1px 1px 3px 0px rgba( 2, 2, 2, 0.97 ) inset; background-color: rgba( 255, 251, 239, 1.00 ) } 
+.pum-theme-4598 .pum-title, .pum-theme-framed-border .pum-title { color: #000000; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 100; font-size: 32px; line-height: 36px } 
+.pum-theme-4598 .pum-content, .pum-theme-framed-border .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-4598 .pum-content + .pum-close, .pum-theme-framed-border .pum-content + .pum-close { position: absolute; height: 20px; width: 20px; left: auto; right: -20px; bottom: auto; top: -20px; padding: 0px; color: #ffffff; font-family: Tahoma; font-weight: 700; font-size: 16px; line-height: 18px; border: 1px none #ffffff; border-radius: 0px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 0, 0, 0.55 ) } 
+
+/* Popup Theme 4597: Cutting Edge */
+.pum-theme-4597, .pum-theme-cutting-edge { background-color: rgba( 0, 0, 0, 0.50 ) } 
+.pum-theme-4597 .pum-container, .pum-theme-cutting-edge .pum-container { padding: 18px; border-radius: 0px; border: 1px none #000000; box-shadow: 0px 10px 25px 0px rgba( 2, 2, 2, 0.50 ); background-color: rgba( 30, 115, 190, 1.00 ) } 
+.pum-theme-4597 .pum-title, .pum-theme-cutting-edge .pum-title { color: #ffffff; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Sans-Serif; font-weight: 100; font-size: 26px; line-height: 28px } 
+.pum-theme-4597 .pum-content, .pum-theme-cutting-edge .pum-content { color: #ffffff; font-family: inherit; font-weight: 100 } 
+.pum-theme-4597 .pum-content + .pum-close, .pum-theme-cutting-edge .pum-content + .pum-close { position: absolute; height: 24px; width: 24px; left: auto; right: 0px; bottom: auto; top: 0px; padding: 0px; color: #1e73be; font-family: Times New Roman; font-weight: 100; font-size: 32px; line-height: 24px; border: 1px none #ffffff; border-radius: 0px; box-shadow: -1px 1px 1px 0px rgba( 2, 2, 2, 0.10 ); text-shadow: -1px 1px 1px rgba( 0, 0, 0, 0.10 ); background-color: rgba( 238, 238, 34, 1.00 ) } 
+
+/* Popup Theme 4596: Hello Box */
+.pum-theme-4596, .pum-theme-hello-box { background-color: rgba( 0, 0, 0, 0.75 ) } 
+.pum-theme-4596 .pum-container, .pum-theme-hello-box .pum-container { padding: 30px; border-radius: 80px; border: 14px solid #81d742; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.00 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-4596 .pum-title, .pum-theme-hello-box .pum-title { color: #2d2d2d; text-align: left; text-shadow: 0px 0px 0px rgba( 2, 2, 2, 0.23 ); font-family: Montserrat; font-weight: 100; font-size: 32px; line-height: 36px } 
+.pum-theme-4596 .pum-content, .pum-theme-hello-box .pum-content { color: #2d2d2d; font-family: inherit; font-weight: 100 } 
+.pum-theme-4596 .pum-content + .pum-close, .pum-theme-hello-box .pum-content + .pum-close { position: absolute; height: auto; width: auto; left: auto; right: -30px; bottom: auto; top: -30px; padding: 0px; color: #2d2d2d; font-family: Times New Roman; font-weight: 100; font-size: 32px; line-height: 28px; border: 1px none #ffffff; border-radius: 28px; box-shadow: 0px 0px 0px 0px rgba( 2, 2, 2, 0.23 ); text-shadow: 0px 0px 0px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 255, 255, 255, 1.00 ) } 
+
+/* Popup Theme 4593: Default Theme */
+.pum-theme-4593, .pum-theme-default-theme { background-color: rgba( 255, 255, 255, 1.00 ) } 
+.pum-theme-4593 .pum-container, .pum-theme-default-theme .pum-container { padding: 18px; border-radius: px; border: 1px none #000000; box-shadow: 1px 1px 3px px rgba( 2, 2, 2, 0.23 ); background-color: rgba( 249, 249, 249, 1.00 ) } 
+.pum-theme-4593 .pum-title, .pum-theme-default-theme .pum-title { color: #000000; text-align: left; text-shadow: px px px rgba( 2, 2, 2, 0.23 ); font-family: inherit; font-weight: 400; font-size: 32px; font-style: normal; line-height: 36px } 
+.pum-theme-4593 .pum-content, .pum-theme-default-theme .pum-content { color: #8c8c8c; font-family: inherit; font-weight: 400; font-style: inherit } 
+.pum-theme-4593 .pum-content + .pum-close, .pum-theme-default-theme .pum-content + .pum-close { position: absolute; height: auto; width: auto; left: auto; right: px; bottom: auto; top: px; padding: 8px; color: #ffffff; font-family: inherit; font-weight: 400; font-size: 12px; font-style: inherit; line-height: 36px; border: 1px none #ffffff; border-radius: px; box-shadow: 1px 1px 3px px rgba( 2, 2, 2, 0.23 ); text-shadow: px px px rgba( 0, 0, 0, 0.23 ); background-color: rgba( 0, 183, 205, 1.00 ) } 
+
+#pum-4618 {z-index: 1999999999}
+
+</style>
+<link rel="stylesheet" href="/content/uploads/smile_fonts/Defaults/Defaults.css?ver=4.7.16">
+<link rel="stylesheet" href="/?sccss=1&#038;ver=4.7.16">
+<link rel="stylesheet" href="/content/themes/pe/assets/css/main.css">
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js'></script>
+<script>window.jQuery || document.write('<script src="https://www.fronteraenergy.ca/content/themes/pe/assets/vendor/jquery/dist/jquery.min.js?1.11.1"><\/script>')</script>
+<script type='text/javascript' src='/content/plugins/form-maker/js/if_gmap_front_end.js?ver=4.7.16'></script>
+<script type='text/javascript' src='/content/plugins/form-maker/js/intlTelInput.js?ver=4.7.16'></script>
+<script type='text/javascript' src='/content/plugins/form-maker/js/calendar/calendar.js?ver=4.7.16'></script>
+<script type='text/javascript' src='/content/plugins/form-maker/js/calendar/calendar_function.js?ver=4.7.16'></script>
+<script type='text/javascript' src='/content/themes/pe/assets/js/scripts.js?ver=4.7.16'></script>
+<script type='text/javascript' src='/content/plugins/sitepress-multilingual-cms/res/js/jquery.cookie.js?ver=3.6.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpml_browser_redirect_params = {"pageLanguage":"en","languageUrls":{"en_US":"http:\/\/www.fronteraenergy.ca\/","en":"http:\/\/www.fronteraenergy.ca\/","US":"http:\/\/www.fronteraenergy.ca\/","es_ES":"http:\/\/www.fronteraenergy.ca\/es\/","es":"http:\/\/www.fronteraenergy.ca\/es\/","ES":"http:\/\/www.fronteraenergy.ca\/es\/"},"cookie":{"name":"_icl_visitor_lang_js","domain":"www.fronteraenergy.ca","path":"\/","expiration":24}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/content/plugins/sitepress-multilingual-cms/res/js/browser-redirect.js?ver=3.6.3'></script>
+<link rel='https://api.w.org/' href='https://www.fronteraenergy.ca/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.fronteraenergy.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.fronteraenergy.ca%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.fronteraenergy.ca/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.fronteraenergy.ca%2F&#038;format=xml" />
+                    <!-- Tracking code generated with Simple Universal Google Analytics plugin v1.0.4 -->
+                    <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                    ga('create', 'UA-153703205-1', 'auto');
+                    ga('send', 'pageview');
+
+                    </script>
+                    <!-- / Simple Universal Google Analytics plugin --><meta name="generator" content="WPML ver:3.6.3 stt:1,2;" />
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.fronteraenergy.ca"><link rel="https://theeventscalendar.com/" href="https://www.fronteraenergy.ca/wp-json/tribe/events/v1/" /><meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.fronteraenergy.ca/content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->	<link rel="canonical" href="https://www.fronteraenergy.ca/">
+<link rel="icon" href="https://www.fronteraenergy.ca/content/uploads/2017/06/icono-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://www.fronteraenergy.ca/content/uploads/2017/06/icono-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.fronteraenergy.ca/content/uploads/2017/06/icono-300x300.png" />
+<meta name="msapplication-TileImage" content="https://www.fronteraenergy.ca/content/uploads/2017/06/icono-300x300.png" />
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1496768246694{margin-top: -20px !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1621304484099{margin-top: -37px !important;}.vc_custom_1445894928467{margin-bottom: 0px !important;}.vc_custom_1618340627921{padding-top: 5px !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+  
+  <!-- media-queries.js / html5.js -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+  <![endif]-->
+
+</head>
+<body class="home page tribe-no-js wpb-js-composer js-comp-ver-5.0.1 vc_responsive">
+
+  <header class="navbar navbar-default navbar_cesar">
+		
+		<!--cabexera social -->
+			  <div class="container redes ">
+
+					<div class="pull-right">
+					<div class="botones_redes">
+					<div class="redes_sociales"><a href="https://www.facebook.com/FronteraEnergy" target="_blank"><img src="/content/uploads/2017/05/facebook_a.png"></a></div>
+					<div class="redes_sociales"><a href="https://twitter.com/FronteraEnergy" target="_blank"><img src="/content/uploads/2017/05/twitter_a.png"></a></div>
+					
+					</div>				
+					<div class='idioma_cesar col-lg-1 menus-xD language-select-list language-select-list--active-en'>	
+							<ul>
+                        <li class="language-select-list--item language-select-list--item-en" data-lang="en">
+                  <a href="/es/pacific-ep"><img src="https://www.fronteraenergy.ca/content/plugins/sitepress-multilingual-cms/res/flags/en.png" height="12" alt="en" width="18" /> English</a>
+                </li>
+                              <li class="language-select-list--item language-select-list--item-es" data-lang="es">
+                  <a href="/es/pacific-ep"><img src="https://www.fronteraenergy.ca/content/plugins/sitepress-multilingual-cms/res/flags/es.png" height="12" alt="es" width="18" /> Español</a>
+                </li>
+                    </ul>
+						</div>			
+								
+					</div> 
+
+			  </div>
+      		 <!--cabexera social -->
+      		 
+      		 
+      		 <!-- navigation -->
+<div class="nav-links">	
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+				<a ></a>
+				<a class="navbar-brand " href="https://www.fronteraenergy.ca/"><img src="/content/uploads/2017/05/frontera.png"  alt=""/></a>
+			</div>
+			<div class="collapse navbar-collapse link-effect" id="myNavbar">
+				<ul id="menu-colombia" class="nav navbar-nav"><li class="dropdown menu-about-us"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://www.fronteraenergy.ca/about-ep/">About Us <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-about-frontera-energy"><a href="https://www.fronteraenergy.ca/about-ep/">About Frontera Energy</a></li>
+	<li class="menu-leadership"><a href="https://www.fronteraenergy.ca/leadership/">Leadership</a></li>
+	<li class="menu-corporate-governance"><a href="https://www.fronteraenergy.ca/corporate-governance/">Corporate Governance</a></li>
+	<li class="menu-global-presence"><a href="https://www.fronteraenergy.ca/global-presence/">Global Presence</a></li>
+	<li class="menu-alliances"><a href="https://www.fronteraenergy.ca/alliances/">Alliances</a></li>
+</ul>
+</li>
+<li class="dropdown menu-corporate-responsibility"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">Corporate Responsibility <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-sustainability"><a href="https://www.fronteraenergy.ca/sustainability/">Sustainability</a></li>
+	<li class="menu-sustainability-reports"><a href="https://www.fronteraenergy.ca/sustainability-reports/">Sustainability Reports</a></li>
+	<li class="menu-estma-report"><a href="https://www.fronteraenergy.ca/estma-report/">Estma Report</a></li>
+</ul>
+</li>
+<li class="dropdown menu-ethics-compliance"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="https://www.fronteraenergy.ca/ethics-compliance/">Ethics &#038; Compliance <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-purpose-values"><a href="https://www.fronteraenergy.ca/purpose-values/">Purpose &#038; Values</a></li>
+	<li class="menu-declaration-of-ethics-compliance"><a href="https://www.fronteraenergy.ca/declaration-of-ethics-compliance/">Declaration of Ethics &#038; Compliance</a></li>
+	<li class="menu-ethics-committee-information"><a href="https://www.fronteraenergy.ca/ethics-committee-information/">Ethics Committee Information</a></li>
+	<li class="menu-code-of-business-conduct-ethics-manual"><a href="https://www.fronteraenergy.ca/code-of-business-conduct-ethics-manual/">Code of Business Conduct &#038; Ethics Manual</a></li>
+	<li class="menu-protection-of-personal-data"><a href="https://www.fronteraenergy.ca/protection-of-personal-data/">Protection of Personal Data</a></li>
+	<li class="menu-ethics-hotline"><a href="https://www.fronteraenergy.ca/ethics-hotline/">Ethics Hotline</a></li>
+</ul>
+</li>
+<li class="dropdown menu-investors"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">Investors <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-regulatory-filings"><a href="https://www.fronteraenergy.ca/regulatory-filings/">Regulatory Filings</a></li>
+	<li class="menu-reports-presentations"><a href="https://www.fronteraenergy.ca/reports-presentations/">Reports &#038; Presentations</a></li>
+	<li class="menu-annual-general-meeting"><a href="https://www.fronteraenergy.ca/agm/">Annual General Meeting</a></li>
+	<li class="menu-analysts-center"><a href="https://www.fronteraenergy.ca/interactive-analysts/">Analysts Center</a></li>
+	<li class="menu-dividends"><a href="https://www.fronteraenergy.ca/dividends/">Dividends</a></li>
+	<li class="menu-guyana-regional-map"><a href="https://www.fronteraenergy.ca/guyanaregionalmap/">Guyana Regional Map</a></li>
+	<li class="menu-analyst-coverage"><a href="https://www.fronteraenergy.ca/analyst-coverage/">Analyst Coverage</a></li>
+	<li class="menu-faqs-general-information"><a href="https://www.fronteraenergy.ca/faqs/">FAQs General Information</a></li>
+</ul>
+</li>
+<li class="menu-news"><a href="http://fronteraenergy.mediaroom.com">News</a></li>
+<li class="menu-contact-us"><a href="https://www.fronteraenergy.ca/contact-us/">Contact Us</a></li>
+</ul>			</div>
+		</div>
+	</nav>
+</div>
+<!-- /navigation -->
+      		 
+	</header>	
+  
+  <div class="wrap" role="document">
+    <div class="content">
+      <main class="main" role="main">
+          <div class="vc_container"><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_custom_1496768246694 vc_row-has-fill vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center  vc_custom_1621304484099">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="https://www.fronteraenergy.ca/content/uploads/2016/10/home-1-1-1250x500.jpg" width="1250" height="500" alt="home-1" title="home-1" /></div>
+		</figure>
+	</div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div></div><div class="vc_container"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"  style="height: 32px" ><span class="vc_empty_space_inner"></span></div>
+
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h1 style="text-align: center;"><strong>Frontera Energy, taking a step forward</strong></h1>
+
+		</div>
+	</div>
+<div class="vc_empty_space"  style="height: 32px" ><span class="vc_empty_space_inner"></span></div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1445894928467"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4 style="text-align: center;"><strong>2021 ANNUAL GENERAL MEETING OF SHAREHOLDERS</strong></h4>
+<h6 style="text-align: center;"></h6>
+<h5 style="text-align: center;"> Wednesday, May 19, 2021, at 10:00 a.m. EDT</h5>
+
+		</div>
+	</div>
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
+</div>
+	<div class="wpb_text_column wpb_content_element  vc_custom_1618340627921">
+		<div class="wpb_wrapper">
+			<p style="text-align: left;">This year, due to ongoing public health restrictions to manage the spread of COVID-19 and current restrictions on large public gatherings, the Meeting will be conducted in a virtual-only format via live audio webcast at <a href="https://web.lumiagm.com/211635922" data-saferedirecturl="https://www.google.com/url?q=https://web.lumiagm.com/211635922&amp;source=gmail&amp;ust=1618424763474000&amp;usg=AFQjCNG5g1qR9zOoLjdwSqnae8pm1yT9Gg">https://web.lumiagm.com/211635922</a>. The live audio webcast will allow Shareholders to have an equal opportunity to participate at the Meeting regardless of their geographic location or particular circumstances they may be facing as a result of COVID-19. Shareholders will not be able to attend the Meeting in person.</p>
+
+		</div>
+	</div>
+<div class="vc_btn3-container  hidden-xs vc_btn3-center">
+	<a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-grey" href="https://www.fronteraenergy.ca/agm/" title="">Read More</a></div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;"><strong>NEWS</strong></h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+		</div>
+	</div>
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;"><a href="https://fronteraenergy.mediaroom.com/2021-05-17-Frontera-Maintains-Production-Outlook">Frontera Maintains Production Outlook</a></p>
+<p style="text-align: center;"><a href="https://fronteraenergy.mediaroom.com/2021-05-05-Frontera-Announces-First-Quarter-2021-Results">Frontera Announces First Quarter 2021 Results</a></p>
+<p style="text-align: center;"><a href="https://fronteraenergy.mediaroom.com/2021-04-16-Frontera-and-CGX-Announce-19-Million-Loan-Agreement">Frontera and CGX Announce $19 Million Loan Agreement</a></p>
+<p style="text-align: center;"><a href="https://fronteraenergy.mediaroom.com/2021-03-24-Procuraduria-General-de-la-Nacion-delivers-favorable-opinion-on-conciliation-agreement-between-Frontera-CENIT-and-Bicentenario">Procuraduría General de la Nación delivers favorable opinion on conciliation agreement between Frontera, CENIT and Bicentenario</a></p>
+
+		</div>
+	</div>
+<div class="vc_btn3-container  hidden-xs vc_btn3-center">
+	<a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-rounded vc_btn3-style-modern vc_btn3-color-grey" href="http://fronteraenergy.mediaroom.com/news" title="" target="_blank">Read More</a></div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h3 style="text-align: center;"><strong>ABOUT FRONTERA</strong></h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+		</div>
+	</div>
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey"><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
+</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><strong>Frontera Energy Corp.</strong> is a Canadian public company dedicated to exploration and production of crude oil and natural gas with operations focused in the North Andean region. The Company is committed to working hand in hand with all its stakeholders to conduct business in a socially and environmentally responsible manner.</p>
+
+		</div>
+	</div>
+<div class="vc_btn3-container  hidden-xs vc_btn3-center">
+	<a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-modern vc_btn3-color-grey" href="/about-ep/" title="" target="_blank">Read More</a></div>
+</div></div></div></div></div></div></div></div></div><div class="vc_container"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space"  style="height: 42px" ><span class="vc_empty_space_inner"></span></div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>IMPORTANT NOTICE: NON AUTHORIZED INTERMEDIARIES OR AGENTS</p>
+<p>Please be advised that unauthorized individuals are fraudulently using Frontera’s name and trademark to carry out oil &amp; gas negotiations with third parties. Frontera does not use intermediaries or agents in its negotiations, nor has it authorized any third party to approach clients or suppliers on Frontera´s behalf to establish business relationships. Any official communication from Frontera will be directly from Company personnel and Frontera’s email domain (fronteraenergy.ca). For questions and concerns, please <a href="mailto:ir@fronteraenergy.ca?subject=Important%20Notice%20-%20Non%20Authorized%20Intermediaries%20or%20Agents%20">contact us.</a></p>
+
+		</div>
+	</div>
+
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>STATEMENT: APPLICATION AND INTERVIEW FORM</p>
+<p>False and unauthorized online employment application forms and offers are circulating on the Internet. These invite applicants to share personal and private information that is not in accordance with Canadian labour employment laws. As a company and brand owner, Frontera does not and would never knowingly support this process of recruitment, nor any outlet or individual involved in this type of activity. It is against the company and brand rules – and more importantly, against company’s ethics and values. Since this matter was brought to the attention of Frontera, the company have sought out the source of the documents and have reported the email address to its hosting service. The company will continue to monitor the internet for any new instances of this document and request that it be removed immediately.</p>
+<p>Please also note that any official communications with Frontera Energy employees will come from the fronteraenergy.ca domain name.</p>
+
+		</div>
+	</div>
+</div></div></div></div></div><div class="vc_container"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div></div>
+      </main><!-- /.main -->
+    </div><!-- /.content -->
+  </div><!-- /.wrap -->
+
+  
+  <footer class=" pie_pagina" role="contentinfo">
+    <div class="vc_container"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<ul>
+<li><a class="btn-lg" href="/glossary/">Glossary</a></li>
+<li><a class="btn-lg" href="http://www.elempleo.com/sitios-empresariales/colombia/frontera-energy/index.asp">Job opportunities</a></li>
+<li><a class="btn-lg" href="/whistleblowing/">Need to report an ethical issue?</a></li>
+<li><a class="btn-lg" href="/privacy-policy/">Privacy Policy</a></li>
+<li><a class="btn-lg" href="/sitemap">Sitemap</a></li>
+</ul>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<div class="logo_pie_total">		
+		
+		<div class="logos_pie col-md-2 col-xs-4"><a href="http://www.tmx.com/"><img src="/content/uploads/2016/10/TMX_Group_logo.svg_-1.png"></a></div>
+		
+		<div class="logos_pie col-md-2 col-xs-4"><a href="http://www.sedar.com/DisplayProfile.do?lang=EN&issuerType=03&issuerNo=00007953"><img src="/content/uploads/2016/10/sedar.png"></a></div>
+
+<div class="logos_pie col-md-2 col-xs-4"></div>
+<div class="logos_pie col-md-2 col-xs-4"></div>
+<div class="logos_pie col-md-2 col-xs-4"></div>
+<div class="logos_pie col-md-2 col-xs-4"></div>
+		
+		
+</div>		
+		</div>
+	</div>
+</div></div></div></div></div>  </footer>
+
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<div id="pum-4618" class="pum pum-overlay pum-theme-4594 pum-theme-lightbox popmake-overlay auto_open click_open" data-popmake="{&quot;id&quot;:4618,&quot;slug&quot;:&quot;contrataciones&quot;,&quot;theme_id&quot;:4594,&quot;cookies&quot;:[{&quot;event&quot;:&quot;on_popup_open&quot;,&quot;settings&quot;:{&quot;name&quot;:&quot;Inicio&quot;,&quot;key&quot;:&quot;&quot;,&quot;session&quot;:false,&quot;time&quot;:&quot;1 month&quot;,&quot;path&quot;:true}}],&quot;triggers&quot;:[{&quot;type&quot;:&quot;auto_open&quot;,&quot;settings&quot;:{&quot;cookie_name&quot;:&quot;&quot;,&quot;delay&quot;:&quot;450&quot;}},{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;cookie_name&quot;:null}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;small&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;40%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;slide&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}" role="dialog" aria-hidden="true" >
+
+	<div id="popmake-4618" class="pum-container popmake theme-4594 pum-responsive pum-responsive-small responsive size-small">
+
+				
+
+				
+
+		
+
+				<div class="pum-content popmake-content">
+			<p><a href="https://www.elempleo.com/sitios-empresariales/colombia/frontera-energy-2017/index.asp"><img class="aligncenter wp-image-4619 size-large" src="/content/uploads/2020/03/pop_up-1024x910.jpg" alt="" width="1024" height="910" /></a></p>
+		</div>
+
+
+				
+
+				            <button type="button" class="pum-close popmake-close" aria-label="Close">
+			×            </button>
+		
+	</div>
+
+</div>
+
+<!--
+TPC! Memory Usage (http://webjawns.com)
+Memory Usage: 65240592Memory Peak Usage: 66629104WP Memory Limit: 256MPHP Memory Limit: 512MCheckpoints: 10-->
+
+<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};var tribe_system_info = {"sysinfo_optin_nonce":"9fc994c2c1","clipboard_btn_text":"Copy to clipboard","clipboard_copied_text":"System info copied","clipboard_fail_text":"Press \"Cmd + C\" to copy"};/* ]]> */ </script><script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/www.fronteraenergy.ca\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.9'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/slider.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/spinner.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/effect-shake.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pum_vars = {"version":"1.9.1","ajaxurl":"https:\/\/www.fronteraenergy.ca\/wordpress\/wp-admin\/admin-ajax.php","restapi":"https:\/\/www.fronteraenergy.ca\/wp-json\/pum\/v1","rest_nonce":null,"default_theme":"4600","debug_mode":"","disable_tracking":"","home_url":"\/","message_position":"top","core_sub_forms_enabled":"1","popups":[]};
+var ajaxurl = "https:\/\/www.fronteraenergy.ca\/wordpress\/wp-admin\/admin-ajax.php";
+var pum_sub_vars = {"ajaxurl":"https:\/\/www.fronteraenergy.ca\/wordpress\/wp-admin\/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-4618":{"disable_on_mobile":false,"disable_on_tablet":false,"custom_height_auto":false,"scrollable_content":false,"position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"close_on_form_submission":false,"close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"triggers":[{"type":"auto_open","settings":{"cookie_name":"","delay":"450"}}],"cookies":[{"event":"on_popup_open","settings":{"name":"Inicio","key":"","session":false,"time":"1 month","path":true}}],"theme_id":"4594","size":"small","responsive_min_width":"0%","responsive_max_width":"40%","custom_width":"640px","custom_height":"380px","animation_type":"slide","animation_speed":"350","animation_origin":"center top","location":"center","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","zindex":"1999999999","close_button_delay":"0","close_on_form_submission_delay":"0","theme_slug":"lightbox","id":4618,"slug":"contrataciones"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/content/plugins/popup-maker/assets/js/site.js?defer&#038;ver=1.9.1'></script>
+<script type='text/javascript' src='/wordpress/wp-includes/js/wp-embed.js?ver=4.7.16'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var icl_vars = {"current_language":"en","icl_home":"http:\/\/www.fronteraenergy.ca\/","ajax_url":"https:\/\/www.fronteraenergy.ca\/wordpress\/wp-admin\/admin-ajax.php","url_type":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='/content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=4.7.16'></script>
+<script type='text/javascript' src='/content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=5.0.1'></script>
+<script> jQuery(function($){ $(".widget_meta a[href='https://www.fronteraenergy.ca/comments/feed/']").parent().remove(); }); </script>
+</body>
+</html>
+<!-- *´¨)
+     ¸.•´¸.•*´¨) ¸.•*¨)
+     (¸.•´ (¸.•` ¤ Comet Cache is Fully Functional ¤ ´¨) -->
+
+<!-- Cache File Version Salt:       n/a -->
+
+<!-- Cache File URL:                https://www.fronteraenergy.ca/ -->
+<!-- Cache File Path:               /cache/comet-cache/cache/https/www-fronteraenergy-ca/index.html -->
+
+<!-- Cache File Generated Via:      HTTP request -->
+<!-- Cache File Generated On:       May 18th, 2021 @ 2:34 am UTC -->
+<!-- Cache File Generated In:       3.30389 seconds -->
+
+<!-- Cache File Expires On:         May 25th, 2021 @ 2:34 am UTC -->
+<!-- Cache File Auto-Rebuild On:    May 25th, 2021 @ 2:34 am UTC -->
+
+<!-- Loaded via Cache On:    May 18th, 2021 @ 12:33 pm UTC -->
+<!-- Loaded via Cache In:    0.00202 seconds -->

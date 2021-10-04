@@ -1,0 +1,7 @@
+Your search did not match any results.We suggest you try the following to help find what you’re looking for:Do you want to run Java™ programs, or do you want to develop Java programs? If you want to run Java programs, but not develop them, download the Java Runtime Environment, or JRE™.
+               The new  is substantially different from prior Oracle JDK licenses. The new license permits certain uses, such as personal use and development use, at no cost -- but other uses authorized under prior Oracle JDK licenses may no longer be available. Please review the terms carefully before downloading and using this product. An FAQ is available .
+            
+               Commercial license and support is available with a low cost .
+            
+               Oracle also provides the latest OpenJDK release under the open source  at .
+            If you want to develop applications for Java, download the Java Development Kit, or JDK™. The JDK includes the JRE, so you do not have to download both separately.JRE 8u291 This software is licensed under the 

@@ -1,0 +1,10 @@
+Wednesday, April 10, 2019
+   Discover is a popular way for users to stay up-to-date on all their favorite topics, even when they're not searching. To provide publishers and sites visibility into their Discover traffic, we're adding a new report in Google Search Console to share relevant statistics and help answer questions such as:
+  
+    
+  
+   Discover is a feature within Google Search that helps users stay up-to-date on all their favorite topics, without needing a query. Users get to their Discover experience in the Google app, on the Google.com mobile homepage, and by swiping right from the homescreen on Pixel phones. It has grown significantly since launching in 2017 and now helps more than
+   
+   users get inspired and explore new information by surfacing articles, videos, and other content on topics they care most about. Users have the ability to follow topics directly or let Google know if they'd like to see more or less of a specific topic. In addition, Discover isn't limited to what's new. It surfaces the best of the web regardless of publication date, from recipes and human interest stories, to fashion videos and more. Here is our
+   
+   on how you can optimize your site

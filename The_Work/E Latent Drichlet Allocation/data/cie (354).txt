@@ -1,0 +1,7 @@
+GitHub requires JavaScript enabled during sign up, for our signup captcha. Please enable JavaScript during sign up.Make sure it's  OR   . .
+      By creating an account, you agree to the
+      .
+      For more information about GitHub's privacy practices, see the
+      .
+      We'll occasionally send you account-related emails.
+    

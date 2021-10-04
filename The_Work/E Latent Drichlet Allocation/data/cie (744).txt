@@ -1,0 +1,15 @@
+
+Dit is een bestand van het type .
+
+
+
+
+
+MediaWiki is  die gelicenseerd is onder versie 2 van de . Omdat een licentie voor MediaWiki kosteloos is, is er geen garantie, voor zover dat wettelijk mogelijk is. Lees de .
+MediaWiki vereist PHP 7.3.19+ en  5.5.8+, MariaDB, of een van de andere twee mogelijke databasesystemen. Voor meer informatie kunt u de pagina's over  en  raadplegen.
+Actieve ontwikkelaars van MediaWiki moeten de laatste versie van de MediaWikisoftware .
+De gitrepository bevat ook eerdere versie van de software, waardoor het mogelijk is om te schakelen naar een bepaalde versie.
+Microsoft SQL Server en Oracle Database, HHVM en PHP 7.0- en 7.1-ondersteuning zijn weggehaald sinds .
+Sommige gebruikers willen de handmatige installatie liever overslaan en kiezen voor een voorgeinstalleerde mediaWiki . Installatiebronnen van  bieden ook steeds vaker installatiepakketten van MediaWiki aan, met verschillende updatefrequenties en wisselende ondersteuning voor extensies. (Bijv. Debian, Ubuntu, Fedora, Gentoo).
+Blijf bij met nieuwe versies en houd uw server veilig!
+Als uw MediaWiki-installatie vergaand is aangepast, kan het moeilijk zijn om de nieuwste officiële wijzigingen / update

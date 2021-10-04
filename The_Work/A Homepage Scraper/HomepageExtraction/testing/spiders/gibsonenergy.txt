@@ -1,0 +1,938 @@
+
+
+	Home - Gibson Energy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24-Hour Emergency Line
+    
+    1-866-553-0111
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ticker.Info.Exchange}}: GEI {{ticker.Quote.Trade | currency}}
+ 
+
+
+
+As of {{ticker.Quote.Date.DatePart}} {{ticker.Quote.Date.TimePart}} EST
+
+last
+{{ticker.Quote.Trade | currency}}
+
+
+change
+{{ticker.Quote.Change | currency}}
+
+
+volume
+{{ticker.Quote.Volume}}
+
+
+% change
+{{ticker.Change}}
+
+
+52 week high
+{{ticker.Quote.FiftyTwoWeekHigh | currency}}
+
+
+52 week low
+{{ticker.Quote.FiftyTwoWeekLow | currency}}
+
+
+more stock information
+
+
+
+
+    
+    
+    Contractors
+  
+
+
+
+ 
+    Locations
+  
+
+
+
+    
+    
+    Contacts
+  
+
+
+
+    
+    
+    Important Documents
+  
+
+
+Investor Presentation
+
+2019 Sustainability Report
+
+Governance Documents and Policies
+
+Safety Data Sheets
+
+Water Fact Sheet 
+
+Asset Integrity Fact Sheet 
+
+
+
+
+
+
+
+
+
+
+24-Hour Emergency Line
+    
+    1-866-553-0111
+  
+
+
+
+
+
+
+About Us
+/about-us/#/
+
+
+
+ About Us
+We are a leading, oil-focused infrastructure company with a focused asset base and stable, long-term cash flows.
+
+
+
+
+Overview
+
+
+    Leadership  
+  
+
+
+    Governance  
+  
+
+
+    History  
+  
+
+
+
+
+
+
+
+Our History at Hardisty
+
+
+Leadership  Overview
+
+Governance  Overview
+
+History  Overview
+
+
+
+
+
+
+
+Operations
+/our-operations/#/
+
+
+
+ Operations
+With nearly 14 million barrels of storage, and over 500 km of crude pipelines, we touch 1 in every 4 barrels produced in Western Canada.
+
+
+
+
+Overview
+
+
+    Hardisty Terminal  
+  
+
+
+    Edmonton Terminal  
+  
+
+
+    Moose Jaw Facility  
+  
+
+
+    Canadian Pipeline and Other Terminals  
+  
+
+
+    U.S. Pipelines & Terminals  
+  
+
+
+    Marketing  
+  
+
+
+
+
+
+
+
+Learn more about our operations
+
+
+Hardisty Terminal  Overview
+
+Edmonton Terminal  Overview
+
+Moose Jaw Facility  Overview
+
+Canadian Pipeline and Other Terminals  Overview
+
+U.S. Pipelines & Terminals  Overview
+
+Marketing  Overview
+
+
+
+
+
+
+
+News & Events
+/news/#/
+
+
+Careers
+https://careers.gibsonenergy.com/#/
+
+
+Sustainability/ESG
+/our-sustainability-esg-approach/#/
+
+
+
+ Sustainability/ESG
+Safety, environmental protection and community play important roles in our growth as a company.
+
+
+
+
+Overview
+
+
+    Health & Safety  
+
+
+
+    Sustainability  
+  
+
+
+    Environment  
+  
+
+
+    Community  
+
+
+
+
+
+
+
+
+View our 2019 Sustainability Report
+
+
+Health & Safety  Overview
+
+Emergency Preparedness
+
+Pipeline Safety
+
+Safety Data Sheets
+
+
+Sustainability  Overview
+
+Environment  Overview
+
+Community  Overview
+
+Community Investment
+
+Community Engagement
+
+
+
+
+
+
+
+
+Investor Centre
+/investors/#/
+
+
+
+ Investor Centre
+We are a crude oil infrastructure company that connects customers to markets, employees to rewarding careers, and investors to long-term value.
+
+
+
+
+Overview
+
+
+    Press Releases  
+  
+
+
+    Presentations and Events  
+  
+
+
+    Financial Reports  
+  
+
+
+    Dividends  
+  
+
+
+    Analyst Coverage  
+  
+
+
+    Shareholder Information  
+  
+
+
+
+
+
+
+
+View our presentations and events
+
+
+Press Releases  Overview
+
+Presentations and Events  Overview
+
+Financial Reports  Overview
+
+Dividends  Overview
+
+Analyst Coverage  Overview
+
+Shareholder Information  Overview
+
+
+
+
+
+
+
+
+
+
+About Us
+
+
+
+
+
+About Us Overview
+
+
+    Leadership    
+  
+
+
+    Governance    
+  
+
+
+    History    
+  
+
+
+
+
+
+
+
+
+Operations
+
+
+
+
+
+Operations Overview
+
+
+    Hardisty Terminal    
+  
+
+
+    Edmonton Terminal    
+  
+
+
+    Moose Jaw Facility    
+  
+
+
+    Canadian Pipeline and Other Terminals    
+  
+
+
+    U.S. Pipelines & Terminals    
+  
+
+
+    Marketing    
+  
+
+
+
+
+
+
+
+
+News & Events
+
+
+
+
+
+News & Events Overview
+
+
+
+
+
+
+
+Careers
+
+
+
+
+
+Careers Overview
+
+
+
+
+
+
+
+Sustainability/ESG
+
+
+
+
+
+Sustainability/ESG Overview
+
+
+    Health & Safety    
+  
+
+
+    Sustainability    
+  
+
+
+    Environment    
+  
+
+
+    Community    
+  
+
+
+
+
+
+
+
+
+Investor Centre
+
+
+
+
+
+Investor Centre Overview
+
+
+    Press Releases    
+  
+
+
+    Presentations and Events    
+  
+
+
+    Financial Reports    
+  
+
+
+    Dividends    
+  
+
+
+    Analyst Coverage    
+  
+
+
+    Shareholder Information    
+  
+
+
+
+
+
+
+
+
+    
+    
+    Contractors
+  
+
+
+
+ 
+    Locations
+  
+
+
+
+    
+    
+    Contacts
+  
+
+
+
+    
+    
+    Important Documents
+  
+
+
+
+
+Important Documents
+
+
+
+
+
+
+Investor Presentation
+
+2019 Sustainability Report
+
+Governance Documents and Policies
+
+Safety Data Sheets
+
+Water Fact Sheet 
+
+Asset Integrity Fact Sheet 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Our Sustainability/ ESG Journey
+Gibson Announces Establishment of Expanded Sustainability and ESG Targets. Find out more how safety, environmental protection, diversity and inclusion and community play important roles in our growth as a company. 
+
+Learn More
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gibson Energy COVID-19 Update 4
+Updated October 20. Find out how we continue to protect our people, communities and business.
+
+Learn More
+
+
+
+
+
+
+
+
+
+
+
+
+
+DRU Joint Venture in Hardisty, AB
+Learn more about our diluent recovery project.
+
+Learn More
+
+
+
+
+
+
+
+
+
+
+
+
+
+Invest in Us
+Our premiere oil infrastructure assets underpin our distributable cash flow and dividend growth.
+
+Learn More
+
+
+
+
+
+
+
+
+
+
+
+
+
+Come Join Us
+At Gibson Energy, we believe our competitive advantage lies in the strength and talents of our employees.
+Learn More
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Our Operations
+Hardisty, AB Terminal
+
+Our Hardisty Terminal comprises 10 million barrels of storage and is strategically located at the heart of the most important heavy crude oil hub in Canada.
+
+
+
+
+
+
+
+
+
+
+
+Sustainability/ ESG
+Our Sustainability/ ESG Journey
+
+Gibson Announces Establishment of Expanded Sustainability and ESG Targets. Find out more how safety, environmental protection, diversity and inclusion and community play important roles in our growth as a company. 
+
+
+
+
+
+
+
+
+
+
+
+Our Operations
+Marketing
+
+Our in-house marketing team can help find and secure the best price for your crude oil and liquids.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Investor Centre 
+Shareholder Information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Our Locations
+Interactive Map
+
+                  Our North American Assets Map
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+Gibson Energy Announces Voting Results for Election of Board of Directors
+
+
+May 04, 2021
+
+
+
+
+Gibson Energy Declares Dividend
+
+
+May 03, 2021
+
+
+
+
+Gibson Energy Announces 2021 First Quarter Results
+
+
+May 03, 2021
+
+
+
+
+Gibson Energy Enhances its Sustainability Leadership Through the Closing of its Sustainability-Linked Credit Facility
+
+
+April 19, 2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Follow Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Us
+
+Our Operations
+
+Our Sustainability/ESG Approach
+
+News & Events
+
+Investor Centre
+
+Careers
+
+© 2021 Gibson Energy Inc.
+Privacy Policy • Legal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

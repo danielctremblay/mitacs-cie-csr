@@ -1,0 +1,2434 @@
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>    
+    
+	
+	
+    <!-- begin spin_special_output(head_start) -->
+    <script type="text/javascript" src="/template_files/1304/js/jquery-webdriver.js" wd_script_id="jquery-webdriver.js"></script>
+    <script type="text/javascript" src="/template_files/1304/js/webdriver.js" wd_script_id="webdriver.js"></script>
+
+    <style type="text/css" wd_script_id="ir_ticker_selector_style">
+        div.wd_ticker_selector {
+            text-align: right;
+            margin: 5px 0;
+        }
+    </style>
+    <script type="text/javascript">
+        webDriver.push_jQuery();
+    </script>
+    <script type="text/javascript" src="/template_files/1304/js/jquery-ui.js" wd_script_id="jquery-ui.js"></script>
+    <script type="text/javascript" src="/template_files/1304/js/wd_resize.js" wd_script_id="wd_resize.js"></script>
+    <link href="/template_files/1304/css/wd_linkmenu.css" type="text/css" rel="stylesheet" wd_script_id="wd_linkmenu.css">
+    <script type="text/javascript" wd_script_id="wd_linkmenu_script">
+        (function($, undefined) {
+            webDriver.resizeLinkMenu = function() {
+                $(this).data("wd_linkmenu_element").wd_linkmenu("resize");
+                return false;
+            };
+
+            var wd_linkmenu = function(element, options) {
+                this.init(element, options);
+            };
+
+            wd_linkmenu.prototype = {
+                init: function(element, options) {
+                    var self = this;
+
+                    this.$element = $(element);
+                    this._options = {
+                        "class": "",
+                        "label": "Menu",
+                    };
+
+                    this.options(options);
+
+                    this.$active = this.$orig_active = this.$element.find(".wd_linkmenu-active");
+                    var label = this.$active ? this.$active.text() : this._options["label"];
+
+                    this.$header = $("<div>")
+                        .addClass("wd_linkmenu-header")
+                        .attr("tabindex", "0")
+                        .data("wd_linkmenu_element", this.$element)
+                        .attr("wd_resize", "resizeLinkMenu")
+                        .on("click.wd_linkmenu", function(event) {
+                            self.toggle();
+                            event.preventDefault();
+                        })
+                        .insertBefore(this.$element);
+                    if (this._options["class"])
+                        this.$header.addClass(this._options["class"]);
+                    var attr_string = this.$element.attr("wd_linkmenu_header");
+                    if (attr_string) {
+                        var attrs = JSON.parse(attr_string);
+                        for (var name in attrs)
+                            this.$header.attr(name, attrs[name]);
+                    }
+                    this.$label = $("<span>")
+                        .addClass("wd_linkmenu-label")
+                        .text(label)
+                        .appendTo(this.$header);
+                    this.$icon = $("<span class=\"wd_linkmenu-icon fa fa-chevron-down\" title=\"Open\"><\/span>")
+                        .appendTo(this.$header);
+
+                    this.$items = this.$element.children(".wd_linkmenu-item");
+                    this.$items
+                        .addClass("wd_linkmenu-listitem")
+                        .prop("tabIndex", -1);
+
+                    // Remove any non-items (e.g. unintended text nodes)
+                    this.$element.empty();
+                    this.$element.append(this.$items);
+
+                    this.$element.addClass("wd_linkmenu-list");
+
+                    // TODO: make tabs treat show/hide similar to Load, Resize
+                    this.$element.closest("div.wd_assets").bind("wd_assets_show", function() {
+                        self.resize();
+                    });
+                    this.$element.closest("div.wd_tab_content").bind("wd_tab_show", function() {
+                        self.resize();
+                    });
+
+                    this.$element
+                        .appendTo($("body"))
+                        .hide();
+
+                    this.need_size = true;
+                    this.resize();
+
+                    this.$header.on("keydown.wd_linkmenu", function(event) {
+                        self.onkeydown(event, false);
+                    });
+                    this.$header.on("blur.wd_linkmenu", function() {
+                        self.onblur();
+                    });
+
+                    this.$element.on("keydown.wd_linkmenu", function(event) {
+                        self.onkeydown(event, true);
+                    });
+                    this.$element.on("blur.wd_linkmenu", function() {
+                        self.onblur();
+                    });
+                    this.$element.on("mousemove.wd_linkmenu", function(event) {
+                        self.onmousemove(event);
+                    });
+                    this.$items.not(".wd_disabled").on("click.wd_linkmenu", function() {
+                        self.onitemclick(this);
+                    })
+                },
+
+                options: function(options) {
+                    if (options) {
+                        $.extend(this._options, options);
+                    } else {
+                        return this._options;
+                    }
+                },
+
+                reload: function(options) {
+                    if (options) {
+                        this.options(options);
+                    }
+
+                    this.reset();
+                },
+
+                reset: function() {},
+
+                onkeydown: function(event, on_item) {
+                    var key = event.which || event.keyCode;
+                    var used = false;
+                    switch (key) {
+                        case 13: // Return
+                        case 32: // Space
+                            if (!on_item) {
+                                this.toggle();
+                                used = true;
+                            }
+                            break;
+                        case 27: // Escape
+                            this.close();
+                            used = true;
+                            break;
+                        case 9: // Tab
+                            if (on_item)
+                                this.$header[0].focus(); // Move focus back to normal flow
+                            break;
+                        case 33: // Page Up
+                        case 36: // Home
+                            if (!on_item)
+                                this.open();
+                            this.first();
+                            used = true;
+                            break;
+                        case 34: // Page Down
+                        case 35: // End
+                            if (!on_item)
+                                this.open();
+                            this.last();
+                            used = true;
+                            break;
+                        case 38: // Up
+                        case 37: // Left
+                            if (!on_item)
+                                this.open();
+                            this.prev();
+                            used = true;
+                            break;
+                        case 40: // Down
+                        case 39: // Right
+                            if (!on_item)
+                                this.open();
+                            this.next();
+                            used = true;
+                            break;
+                    }
+
+                    if (used) {
+                        event.stopImmediatePropagation();
+                        event.preventDefault();
+                    }
+                },
+
+                onmousemove: function(event) {
+                    var $item = $(event.target);
+                    if ($item.hasClass("wd_linkmenu-listitem"))
+                        this.goto($item);
+                },
+
+                onitemclick: function(item) {
+                    $item = $(item);
+                    this.$label.text($item.text());
+                    this.$orig_active = this.$active = $item;
+                    this.close();
+                    this.$header[0].focus();
+                },
+
+                open: function() {
+                    var self = this;
+                    $(document).on("mousedown.wd_linkmenu touchstart.wd_linkmenu", function(event) {
+                        if ($(event.target).closest(self.$header.add(self.$element)).length == 0)
+                            self.close();
+                    });
+
+                    this.$header.addClass("wd_linkmenu-active");
+                    this.$element
+                        .show()
+                        .position({
+                            my: "left top",
+                            at: "left bottom",
+                            of: this.$header
+                        });
+                    this.goto(this.$active);
+                },
+
+                close: function() {
+                    this.$element.hide();
+                    this.set_active(this.$orig_active);
+                    this.$header.removeClass("wd_linkmenu-active");
+
+                    $(document).off(".wd_linkmenu");
+                },
+
+                onblur: function() {
+                    if (!this.ignore_blur)
+                        this.close();
+                    this.ignore_blur = false;
+                },
+
+                toggle: function() {
+                    this.$element.is(":visible") ? this.close() : this.open();
+                },
+
+                set_active: function($item) {
+                    if ($item.length > 0) {
+                        if (this.$active)
+                            this.$active.removeClass("wd_linkmenu-active");
+                        this.$active = $item;
+                        this.$active.addClass("wd_linkmenu-active");
+                    }
+                },
+
+                goto: function($item) {
+                    if ($item.length > 0) {
+                        this.set_active($item);
+                        this.ignore_blur = true;
+                        this.$active[0].focus();
+                    }
+                },
+
+                next: function() {
+                    if (!this.$active)
+                        this.first();
+                    else
+                        this.goto(this.$active.next());
+                },
+
+                prev: function() {
+                    if (!this.$active)
+                        this.last();
+                    else
+                        this.goto(this.$active.prev());
+                },
+
+                first: function() {
+                    this.goto(this.$items.first());
+                },
+
+                last: function() {
+                    this.goto(this.$items.last());
+                },
+
+                destroy: function() {
+                    this.$items
+                        .removeClass("wd_linkmenu-listitem")
+                        .off(".wd_linkmenu");
+                    this.$element
+                        .off(".wd_linkmenu")
+                        .removeClass("wd_linkmenu-list")
+                        .insertBefore(this.$header);
+                    this.$header.remove();
+                },
+
+                resize: function() {
+                    if (this.need_size && this.$label.is(":visible")) {
+                        var temp_show = !this.$element.is(":visible");
+                        if (temp_show) {
+                            this.$element.show();
+                        }
+
+                        this.$label.width("auto");
+                        this.$element.width("auto");
+                        this.$label.width(this.$element.width());
+                        this.$element.width(this.$header.width());
+
+                        if (temp_show) {
+                            this.$element.hide();
+                        }
+                        this.need_size = false;
+                    }
+                }
+            };
+
+            $.fn.wd_linkmenu = function(options) {
+                var args = Array.prototype.slice.call(arguments, 1);
+                var result = this;
+
+                this.each(function() {
+                    var instance = $(this).data("wd_linkmenu");
+                    if (typeof options == "string") {
+                        var res = instance[options].apply(instance, args);
+                        if (typeof res != "undefined") {
+                            result = res;
+                            return false;
+                        }
+                    } else {
+                        if (!instance) {
+                            instance = new wd_linkmenu(this, options);
+                            $(this).data("wd_linkmenu", instance);
+                        }
+
+                        instance.reload(options);
+                    }
+                });
+
+                return result;
+            };
+        })(webDriver.jQuery);
+    </script>
+    <script type="text/javascript" wd_script_id="wd_linkmenu_init_script">
+        webDriver.jQuery(function($) {
+            $(".wd_linkmenu").each(function() {
+                var $menu = $(this);
+                $menu.wd_linkmenu();
+            });
+        });
+    </script>
+    <style type="text/css" wd_script_id="ir_featurebox_quote_style">
+        div.wd_quote-value {
+            margin: 5px 0 0 0;
+        }
+        
+        div.wd_quote-price {
+            display: inline;
+            font-weight: bold;
+        }
+        
+        div.wd_quote-change {
+            display: inline;
+            margin-left: 1ex;
+            padding-left: 15px;
+            font-weight: bold;
+        }
+        
+        div.wd_quote-change:before {
+            content: "(";
+        }
+        
+        div.wd_quote-change:after {
+            content: ")";
+        }
+        
+        div.wd_quote-value-down div.wd_quote-change {
+            color: #cc0000;
+            background: url(/template_files/1304/images/webdriver/stockpricedown.gif) left center no-repeat;
+        }
+        
+        div.wd_quote-value-up div.wd_quote-change {
+            color: #00cc00;
+            background: url(/template_files/1304/images/webdriver/stockpriceup.gif) left center no-repeat;
+        }
+    </style>
+    <link href="/template_files/1304/css/wd_wcag.css" type="text/css" rel="stylesheet" wd_script_id="wd_wcag.css">
+    <script type="text/javascript" src="/template_files/1304/js/wd_wcag.js" wd_script_id="wd_wcag.js"></script>
+    <script type="text/javascript" src="/template_files/1304/js/wd_tabs.js" wd_script_id="wd_tabs.js"></script>
+	<link href="/template_files/1304/css/wd_tabs.css" type="text/css" rel="stylesheet" wd_script_id="wd_tabs.css">
+    
+    <link href="/template_files/1304/thirdparty/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" wd_script_id="font-awesome.min.css">
+    </script>
+    <style type="text/css" wd_script_id="featurebox_financial_style">
+        div.wd_chart-quote-footer {
+            margin: 5px 0 0 0;
+            font-size: .75em;
+            color: #999999;
+        }
+    </style>
+    <style type="text/css" wd_script_id="featureboxes_style">
+        .wd_featurebox_icon {
+            display: inline;
+        }
+        
+        .wd_featurebox_icon img {
+            vertical-align: middle;
+        }
+        
+        div.wd_featurebox_group div.wd_tabs_wrapper {
+            border: none;
+            border-bottom: 1px solid #E1E1E1;
+            padding: 0 0 5px 0;
+        }
+        
+        div.wd_featurebox_group div.wd_featurebox {
+            border: none;
+            padding: 8px 0 0 0;
+        }
+        
+        div.wd_featurebox_group li.wd_tab {
+            float: none;
+            color: #666666;
+        }
+        
+        div.wd_featurebox_group li.wd_tab-active {
+            border: none;
+            background-color: transparent;
+            color: #000000;
+            font-weight: bold;
+        }
+        
+        div.wd_featurebox_group li.wd_tab-inactive {
+            cursor: auto;
+        }
+    </style>
+    <style type="text/css" wd_script_id="search_form_style">
+        .wd_search_form .wd_input_datepicker {
+            margin-right: 2px;
+        }
+        
+        .wd_search_type_checkbox {
+            margin-left: 20px;
+        }
+    </style>
+    <script type="text/javascript" wd_script_id="search_form_script">
+        function wd_toggle_search_form(link, advanced) {
+            var $ = webDriver.jQuery;
+            var $container = $(link).closest(".wd_search_form_container");
+            var basic_form = $container.find(".wd_search_form_basic");
+            var basic_query = basic_form.find('input[name="query"]');
+            var advanced_form = $container.find(".wd_search_form_advanced");
+            var advanced_query = advanced_form.find('input[name="query"]');
+
+            if (advanced) {
+                advanced_query.val(basic_query.val());
+                advanced_form.show();
+                basic_form.hide();
+            } else {
+                basic_query.val(advanced_query.val());
+                basic_form.show();
+                advanced_form.hide();
+            }
+        }
+
+        function wd_toggle_search_type_checkboxes(radio) {
+            var $ = webDriver.jQuery;
+            var $radio = $(radio);
+            var all = $radio.val() == "All" ? $radio.is(":checked") : !$radio.is(":checked");
+            var $checkboxes = $radio.closest(".wd_form_field").find(".wd_search_type_checkbox");
+            $checkboxes.find('input[type="checkbox"]').prop("disabled", all);
+            $checkboxes.toggle(!all);
+        }
+
+        webDriver.jQuery(function($) {
+            $('.wd_search_type_radio input[type="radio"]').each(function() {
+                wd_toggle_search_type_checkboxes(this);
+            });
+        });
+    </script>
+    
+<!--  Gallery stylesheets and scripts -->
+
+<link href="/template_files/1304/css/wd_modal.css" type="text/css" rel="stylesheet" wd_script_id="wd_modal.css">
+<script type="text/javascript" wd_script_id="wd_modal_script">
+(function($) {
+	webDriver.resizeModal = function() {
+		$(this).find(".wd_modal").wd_modal("resize");
+		return false;
+	}
+	
+	var modals = [];
+		
+	function _value(value, base) {
+		if (typeof value == "string" && value.indexOf("%") > 0) {
+			return  base * parseInt(value, 10) / 100;
+		} else {
+			return parseInt(value, 10);
+		}
+	}
+	
+	var wd_modal = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_modal.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.isOpen = false;
+			this.opener = null;
+			
+			this.$element = $(element);
+			this._options = {
+				autoOpen: false,
+				closeExisting: false,
+				closeOnEscape: true,
+				closeOnOverlayClick: true,
+				fadeDuration: null,
+				margin: "10%",
+				padding: 10
+			};
+			
+			this.options(options);
+			
+			this.$overlay = $("<div>").addClass("wd_modal-overlay").attr("wd_resize","resizeModal").appendTo($("body")).hide();
+			this.$outer = $("<div>").addClass("wd_modal-outer").appendTo(this.$overlay);
+			this.$inner = $("<div>").addClass("wd_modal-inner").appendTo(this.$outer).append(this.$element);
+			// Hack because I can't figure out where the extra few pixels at the bottom of the content are coming from
+			this.$inner.css("overflow-y", "hidden");
+			this.$close = $("<a class=\"wd_modal-close fa fa-times\" href=\"#close\" title=\"Close\"><span class=\"wd_sr-only\">Close Dialog<\/span><\/a>")
+					.on("click", function(event) {self.close(); event.preventDefault();})
+					.appendTo(this.$outer);
+			this.$element.addClass("wd_modal");
+			
+			if (this._options.autoOpen)
+				this.open(this._options.closeExisting);
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+
+				this._options.fadeDuration = parseInt(this._options.fadeDuration, 10);
+				if (isNaN(this._options.fadeDuration))
+					this._options.fadeDuration = false;
+				
+				if (!$.isArray(this._options.margin))
+					this._options.margin = [this._options.margin];
+				if (this._options.margin.length < 2)
+					this._options.margin[1] = this._options.margin[0];
+				if (this._options.margin.length < 3)
+					this._options.margin[2] = this._options.margin[0];
+				if (this._options.margin.length < 4)
+					this._options.margin[3] = this._options.margin[1];
+				
+				if (!$.isArray(this._options.padding))
+					this._options.padding = [this._options.padding];
+				if (this._options.padding.length < 2)
+					this._options.padding[1] = this._options.padding[0];
+				if (this._options.padding.length < 3)
+					this._options.padding[2] = this._options.padding[0];
+				if (this._options.padding.length < 4)
+					this._options.padding[3] = this._options.padding[1];
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.resize();
+		},
+		
+		open: function(closeExisting, now) {
+			if (this.isOpen)
+				return;
+			
+			var self = this;
+			var myCloseExisting = closeExisting;
+			
+			if (!this.opener)
+				this.opener = document.activeElement;
+
+			if (closeExisting && modals.length > 0) {
+				for (var i = modals.length - 1; i >= 0; --i)
+					modals[i].close(true, true);
+			}
+
+			this.$overlay.addClass("wd_modal-current");
+			$("body").append(this.$overlay);
+
+			if (!now && this._options.fadeDuration) {
+				this.$overlay.fadeIn(this._options.fadeDuration, function() {self.open(myCloseExisting, true);});
+			} else {
+				if (modals.length == 0) {
+					$("body").css("overflow","hidden");
+					$(document).on("keydown.wd_modal", function (event) {
+						var current = modals[modals.length - 1];
+						if ((event.which == 27 || event.keyCode == 27) && current._options.closeOnEscape) {
+							current.close();
+							event.stopImmediatePropagation();
+							event.preventDefault();
+						}
+					});
+				}
+
+				if (this._options.closeOnOverlayClick) {
+					this.$overlay.on("click.wd_modal", function (event) {
+						if (event.target == this) {
+							self.close();
+							event.preventDefault();
+						}
+					});
+				}
+
+				modals.push(this);
+				
+				this.$overlay.show();
+				
+				var $focus = this.$element.find(":focusable");
+				if ($focus.length > 0)
+					$focus[0].focus();
+				
+				this.isOpen = true;
+
+				this.$element.trigger("open");
+			}
+		},
+		
+		close: function(skipCurrent, now) {
+			if (!this.isOpen)
+				return;
+			
+			this.$element.trigger("beforeClose");
+			
+			// TODO: allow closing of lower modals
+			modals.pop();
+			
+			if (modals.length == 0) {
+				$("body").css("overflow","");
+				$(document).off("keydown.wd_modal");
+			}
+			
+			this.$overlay.off("click.wd_modal");
+			
+			if (this.opener) {
+				this.opener.focus();
+				this.opener = null;
+			}
+			
+			this.isOpen = false;
+			this.$overlay.removeClass("wd_modal-current").hide();
+			
+			if (!skipCurrent && modals.length > 0)
+				modals[modals.length-1].$overlay.addClass("wd_modal-current");
+			
+			this.$element.trigger("close");
+		},
+		
+		destroy: function() {
+			this.close(false, true);
+			$("body").append(this.$element);
+			this.$overlay.remove();
+		},
+		
+		resize: function() {
+			if (!this.isOpen)
+				return;
+			
+			var self = this;
+			var winWidth = $(window).width();
+			var winHeight = $(window).height();
+			
+			var margin = this._options.margin;
+			var padding = this._options.padding;
+			
+			var width = winWidth - _value(margin[1], winWidth) - _value(margin[3], winWidth) - _value(padding[1], winWidth) - _value(padding[1], winWidth);
+			var height = winHeight - _value(margin[0], winHeight) - _value(margin[2], winHeight) - _value(padding[0], winHeight) - _value(padding[2], winHeight);
+			
+			this.$inner.css("max-width", width);
+			this.$inner.css("max-height", height);
+			
+			$.each(["Top", "Right", "Bottom", "Left"], function(i, v) {
+				self.$outer.css("padding" + v, _value(padding[i])+"px");
+			});
+			
+			var fixed = this.$element.find("[wd_need_fixed_container]").is(":visible");
+			
+			this.$inner.css("width", width);
+			this.$inner.css("height", height);
+
+			webDriver.doResize(this.$inner);
+			
+			if (!fixed) {
+				this.$inner.css("width", "auto");
+				this.$inner.css("height", "auto");
+				if (this.$element.outerHeight() > height)
+					this.$inner.css("height", height);
+				if (this.$element.outerWidth() > width)
+					this.$inner.css("width", width);
+			}
+		}
+	};
+
+	$.fn.wd_modal = function(options) {
+		if (options == "exists") {
+			return !!$(this).data("wd_modal");
+		} else if (typeof options == "string") {
+            var instance = $(this).data("wd_modal");
+			if (!instance)
+				return null;
+			var args = Array.prototype.slice.call(arguments, 1);
+            return instance[options].apply(instance, args);
+        } else {
+            return this.each(function() {
+                var instance = $(this).data("wd_modal");
+                if (instance) {
+                    instance.reload(options);
+                } else {
+                    $(this).data("wd_modal", new wd_modal(this, options));
+                }
+            });
+        }
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" src="/template_files/1304/js/wd_hashchange.js" wd_script_id="wd_hashchange.js"></script>
+<script type="text/javascript" wd_script_id="asset_modal_support_script">
+			(function($) {
+				var prev_group_id = "";
+				var prev_type_id = "";
+				var prev_item_id = "";
+				var prev_hash = false;
+				var on_close = "back";
+				function hash_update() {
+					var hash = window.location.hash || "#";
+					if (hash == prev_hash) return;
+
+					var type_id = "";
+					var item_id = ""
+					var group_id = "main";
+
+					var apos = hash.indexOf("assets_");
+					if (apos >= 0) {
+						type_id = hash.substr(apos+7);
+
+						var dpos = type_id.indexOf("-");
+						if (dpos >= 0) {
+							group_id = type_id.substr(0, dpos);
+							type_id = type_id.substr(dpos+1);
+						}
+
+						var cpos = type_id.indexOf(":");
+						if (cpos >= 0) {
+							item_id = type_id.substr(cpos+1);
+							type_id = type_id.substr(0, cpos);
+						}
+					}
+
+					if (type_id == "")
+						type_id = "all";
+
+					if ((type_id != prev_type_id || group_id != prev_group_id) && item_id == "") {
+						var $carousel = $(".wd_asset_carousel_"+group_id+"_list")
+						if ($carousel.length > 0)
+							$carousel.wd_carousel("filter", (type_id == "all") ? false : ".wd_asset_type_"+type_id);
+
+						var $slideshow = $(".wd_asset_slideshow_"+group_id+"_list")
+						if ($slideshow.length > 0)
+							$slideshow.wd_slideshow("filter", (type_id == "all") ? false : ".wd_asset_type_"+type_id);
+
+						$(".wd_asset_carousel_type_link").removeClass("wd_active");
+						$(".wd_asset_carousel_type_link.wd_asset_type_"+type_id).addClass("wd_active");
+
+						prev_type_id = type_id;
+						on_close = "back";
+					}
+
+					if (type_id != prev_type_id || item_id != prev_item_id || group_id != prev_group_id) {
+						if (item_id == "") {
+							var save_close = on_close;
+							on_close = false;
+							hide_asset_modal();
+							on_close = save_close;
+						} else {
+							load_asset_modal(group_id, type_id, item_id);
+						}
+						set_social_share_data();
+
+						prev_item_id = item_id;
+
+						if (prev_hash === false)
+							on_close = "reset";
+					}
+
+					prev_group_id = group_id;
+					prev_hash = hash;
+				}
+
+				hide_asset_modal = function() {
+					$(".wd_asset_modal").wd_modal("close");
+				}
+
+				load_asset_modal = function(group_id, type_id, item_id) {
+					var $modal = $(".wd_asset_modal_"+group_id);;
+					if ($modal.length == 0)
+						return;
+
+					if (!$modal.wd_modal("exists")) {
+						$modal.wd_modal({
+							autoOpen: false,
+						});
+
+						$modal.show();
+
+						$modal.on("close", function() {
+							if (on_close == "back") {
+								history.back();
+							} else if (on_close == "reset") {
+								var href = window.location.href;
+								href = href.replace(/#.*$/, "#assets_all");
+								window.location.replace(href);
+							}
+						});
+					}
+
+					$modal.wd_modal("open", true);
+					
+					var $slideshow = $(".wd_asset_slideshow_"+group_id+"_list");
+					if ($slideshow.length > 0) {
+						var $slideshow_item = $slideshow.find(".wd_asset_"+type_id+"-"+item_id).not(".wd_clone");
+						if ($slideshow_item.length > 0)
+							$slideshow.wd_slideshow("scrollToItem", $slideshow_item);
+					}
+
+					var $carousel = $(".wd_asset_carousel_"+group_id+"_list");
+					if ($carousel.length > 0) {
+						var $carousel_item = $carousel.find(".wd_asset_"+type_id+"-"+item_id).not(".wd_clone");
+						if ($carousel_item.length > 0)
+							$carousel.wd_carousel("scrollToItem", $carousel_item);
+					}
+				}
+				
+				set_social_share_data = function() {
+					var href = window.location.href.replace("#", "#!");
+					window.addthis_share = {
+						url: href
+					}
+				}
+				
+				$(function() {
+					setTimeout(hash_update, 10);
+					$(window).hashchange(hash_update);
+				});
+			})(webDriver.jQuery);
+		</script>
+<style type="text/css" wd_script_id="asset_modal_support_style">
+			.wd_asset_modal .wd_captioned_image {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.wd_asset_modal img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.wd_asset_modal div.wd_toolbar.wd_toolbar-asset_modal {
+				position: fixed;
+				background: transparent;
+				top: 5%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border: none;
+				margin: 0;
+			}
+		</style>
+<style type="text/css" wd_script_id="asset_carousel_style">
+			.wd_asset_carousel_aspect {
+				position: relative;
+				height: 100%;
+				clear: both;
+			}
+			.wd_asset_carousel {
+				background-color: #666666;
+			}
+			.wd_carousel.wd_asset_carousel_wrapper a.wd_carousel-arrow:link,
+			.wd_carousel.wd_asset_carousel_wrapper a.wd_carousel-arrow:visited {
+				color: #aaaaaa;
+				font-size: 2em;
+				position: relative;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				transform: none;
+				margin: 10px 0;
+			}
+			.wd_carousel.wd_asset_carousel_wrapper a.wd_carousel-arrow:hover {
+				color: #666666;
+			}
+			.wd_carousel.wd_asset_carousel_wrapper .wd_carousel-prev {
+				float: left;
+			}
+			.wd_carousel.wd_asset_carousel_wrapper .wd_carousel-next {
+				float: right;
+			}
+			.wd_asset_carousel_list div.wd_toolbar {
+				border: none;
+				font-size: 10px;
+				position: relative;
+			}
+			.wd_asset_carousel_list span.wd_tool_icon a {
+				font-size: 10px;
+				width: 16px;
+				height: 16px;
+				padding: 3px;
+			}
+		</style>
+<script type="text/javascript" src="/template_files/1304/js/wd_imagesloaded.js" wd_script_id="wd_imagesloaded.js"></script>
+<link href="/template_files/1304/css/wd_carousel.css" type="text/css" rel="stylesheet" wd_script_id="wd_carousel.css">
+<script type="text/javascript" wd_script_id="wd_carousel_script">
+(function($, undefined) {
+	webDriver.loadCarousel = function() {
+		var options = {};
+		var options_string = $(this).attr("wd_carousel_options");
+		if (options_string)
+			options = JSON.parse(options_string);
+		$(this).wd_carousel(options);
+	}
+	
+	webDriver.resizeCarousel = function() {
+		$(this).find(".wd_carousel-list").wd_carousel("resize");
+		return false;
+	}
+	
+	var wd_carousel = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_carousel.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.$element = $(element);
+			this._options = {
+				selector: "li",
+				center: true,
+				slideSpeed: 500,
+				slideEasing: "linear",
+				infinite: true,
+				widthMode: "content", // content, columns, width
+				heightMode: "fixed", // content, fixed
+				columns: 3,
+				minWidth: 250,
+				scrollUnit: "item", // item, page
+				scrollSize: 1,
+				dragThreshold: 10,
+				"class": "",
+				autoScroll: 0
+			};
+			
+			this.options(options);
+			
+			this.$container = $("<div>").addClass("wd_carousel").attr("wd_resize","resizeCarousel").insertBefore(this.$element);
+			if (this._options["class"])
+				this.$container.addClass(this._options["class"]);
+			this.$cropper = $("<div>").addClass("wd_carousel-cropper").appendTo(this.$container);
+			this.$element
+					.addClass("wd_carousel-list")
+					.appendTo(this.$cropper)
+					.css({position:"absolute",top:0,left:0})
+					.on("dragstart", "*", function(event) {event.preventDefault();});
+			this.$prev = $("<a class=\"wd_carousel-arrow wd_carousel-prev fa fa-chevron-left\" href=\"#prev\"><\/a>")
+					.on("click", function(event) {
+						self.stop();
+						self.prev();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			this.$next = $("<a class=\"wd_carousel-arrow wd_carousel-next fa fa-chevron-right\" href=\"#next\"><\/a>")
+					.on("click", function(event) {
+						self.stop();
+						self.next();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			
+//			this.$dragger = $("<div>")
+//					.addClass("wd_carousel-dragger")
+//					.appendTo(this.$cropper)
+			this.$cropper
+					.on("click", function(event) {
+						self.onClick(event);
+					})
+					.on("mousedown touchstart", function(event) {
+						self.dragStart(event);
+					})
+					.on("mousemove touchmove", function(event) {
+						self.dragMove(event);
+					})
+					.on("mouseup touchend mouseleave touchcancel", function(event) {
+						self.dragEnd(event);
+					});
+			this.dragging = false;
+			this.dragged = false;
+			
+			this.$items = this.$element.children(this._options.selector);
+			this.$items.addClass("wd_carousel-item");
+			
+			// Remove any non-items (e.g. unintended text nodes)
+			this.$element.empty();
+			this.$element.append(this.$items);
+
+			this.navEnabled = true;
+			this.currentIndex = 0;
+			this.$currentItem = this.$items.eq(0);
+			
+			this.$clones = $([]);
+			
+			this.size_known = false;
+			this.$element.wd_imagesloaded(
+				function() {
+					self.size_known = true;					
+					self.resize();
+				},
+				"size"
+			);
+			
+			this.reset();
+			
+			this.start(this._options.autoScroll);
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.resize();
+		},
+
+		reset: function() {
+			this.$items.data("wd_carousel-index", null);
+			this.$clones.data("wd_carousel-index", null);
+			this.$element.children(".wd_clone").detach();
+			
+			var $children = this.$element.children();
+			this.itemCount = $children.length;
+			$children.each(function(index) {
+				$(this).data("wd_carousel-index", index);
+			});
+			
+			if (this.itemCount > 0) {
+				var $last_child = $children.eq(-1);
+				this.listWidth = $last_child.position().left + $last_child.outerWidth();
+			} else {
+				this.listWidth = 0;
+			}
+			
+			var cropperWidth = this.$cropper.innerWidth();
+			
+			if (this.itemCount < 2 || this.listWidth <= cropperWidth) {
+				var position = this._options.center ? ((cropperWidth-this.listWidth)/2) : 0;
+				this.$element.css("left", position);
+				$children.addClass("wd_carousel-current");
+				if (this.itemCount > 0 && this.size_known) {
+					this.$currentItem = this.itemAt(this.listWidth/2);
+					this.currentIndex = this.$currentItem.data("wd_carousel-index");
+				}
+				this.hideNav(true);
+			} else {
+				var left = cropperWidth;
+				for (var i = -1; i > -$children.length; --i) {
+					var $item = $children.eq(i);
+					var $clone = $item.data("wd_carousel-clone-left");
+					if (!$clone)
+						$clone = this.clone($item, "left");
+					this.$element.prepend($clone);
+					$clone.data("wd_carousel-index", i);
+					left -= $item.outerWidth();
+					if (left <= 0)
+						break;
+				}
+				
+				var right = 0;
+				for (var i = 0; i < $children.length; ++i) {
+					var $item = $children.eq(i);
+					var $clone = $item.data("wd_carousel-clone-right");
+					if (!$clone)
+						$clone = this.clone($item, "right");
+					this.$element.append($clone);
+					$clone.data("wd_carousel-index", $children.length+i);
+					right += $item.outerWidth();
+					if (right >= cropperWidth)
+						break;
+				}
+
+				this.hideNav(false);
+
+				var index = this.$currentItem.data("wd_carousel-index");
+				if (!index)
+					index = 0;
+				this.scrollToIndex(index, true);
+			}
+		},
+				
+		clone: function($item, dir) {
+			var $clone = $item.clone(true)
+				.attr("id","")
+				.addClass("wd_clone")
+				.data("wd_carousel-cloned-from", $item);
+		
+			$clone.find("[id]").each(function() {
+				$(this).attr("id", "");
+			});
+
+			$item.data("wd_carousel-clone-"+dir, $clone);
+			
+			this.$clones = this.$clones.add($clone);
+			
+			return $clone;
+		},
+				
+		hideNav: function(hide) {
+			this.$prev.toggle(!hide);
+			this.$next.toggle(!hide);
+			this.navEnabled = !hide;
+		},
+				
+		next: function() {
+			return this.scrollBy(this._options.scrollSize, this._options.scrollUnit);
+		},
+
+		prev: function() {
+			return this.scrollBy(-this._options.scrollSize, this._options.scrollUnit);
+		},
+		
+		scrollBy: function(count, unit) {
+			if (!this.navEnabled)
+				return false;
+			
+			var index;
+			if (unit == "item") {
+				index = this.currentIndex + count;
+			} else { // unit == "page"
+				var pageWidth = this.$cropper.innerWidth();
+				var offset = count;
+				if (this._options.center) {
+					pageWidth /= 2;
+					++offset;
+				}
+				var position = offset * pageWidth - this.$element.position().left;
+				var $item = this.itemAt(position);
+				index = $item.data("wd_carousel-index");
+				if (index == this.currentIndex)
+					index += (count < 0) ? -1 : 1;
+			}
+			
+			return this.scrollToIndex(index);
+		},
+				
+		_doAutoScroll: function() {
+			if (this.navEnabled && this.autoScrollInterval > 0) {
+				var self = this;
+				this.autoScrollTimer = setTimeout(function() {
+						self.next();
+					},
+					this.autoScrollInterval
+				);
+			}
+		},
+		
+		start: function(interval) {
+			this.pause();
+			if (interval !== undefined)
+				this.autoScrollInterval = interval;
+			this._doAutoScroll();
+		},
+		
+		pause: function() {
+			if (this.autoScrollTimer) {
+				clearTimeout(this.autoScrollTimer);
+				this.autoScrollTimer = null;
+			}
+		},
+				
+		stop: function() {
+			this.pause();
+			this.autoScrollInterval = 0;
+		},
+		
+		scrollToIndex: function(index, now) {
+			if (this.itemCount == 0 || !this.navEnabled)
+				return false;
+			
+			this.pause();
+			
+			var $children = this.$element.children().not(".wd_clone");
+			
+			index = (index + $children.length) % $children.length;
+			var $child = $children.eq(index);
+			
+			this.$element.find(".wd_carousel-current").removeClass("wd_carousel-current");
+			$child.addClass("wd_carousel-current");
+			
+			var position = -$child.position().left;
+			if (this._options.center) {
+				position += this.$cropper.innerWidth()/2 - $child.outerWidth()/2;
+			}
+			
+			if (this._options.slideEasing && !now) {
+				this.$element.stop();
+				
+				var cur_offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var cur_pos = this.$element.position().left;
+				var $cur_item = this.itemAt(cur_offset - cur_pos);
+				var cur_dist = Math.abs(position - cur_pos);
+				
+				var $clone, clone_pos, clone_dist;
+				$clone = $cur_item.data("wd_carousel-clone-left");
+				if ($clone) {
+					var clone_pos = -$clone.position().left;
+					if (this._options.center) {
+						clone_pos += this.$cropper.innerWidth()/2 - $clone.outerWidth()/2;
+					}
+					clone_dist = Math.abs(position - clone_pos);
+					if (clone_dist < cur_dist) {
+						cur_pos = clone_pos;
+						cur_dist = clone_dist;
+					}
+				}
+
+				$clone = $cur_item.data("wd_carousel-clone-right");
+				if ($clone) {
+					var clone_pos = -$clone.position().left;
+					if (this._options.center) {
+						clone_pos += this.$cropper.innerWidth()/2 - $clone.outerWidth()/2;
+					}
+					clone_dist = Math.abs(position - clone_pos);
+					if (clone_dist < cur_dist) {
+						cur_pos = clone_pos;
+						cur_dist = clone_dist;
+					}
+				}
+
+				var self = this;
+				this.$element.css("left", cur_pos);
+				this.$element.animate({left: position}, this._options.slideSpeed, this._options.slideEasing, function() {self.start();});
+			} else {
+				this.$element.css("left", position);
+				this.start();
+			}
+
+			this.currentIndex = index;
+			this.$currentItem = $child;
+		},
+				
+		scrollToItem: function(item) {
+			var index = $(item).data("wd_carousel-index");
+			if (index !== null)
+				this.scrollToIndex(index);
+		},
+				
+		makeItemCurrent: function(item) {
+			var $item = $(item);
+			if (!$item.hasClass("wd_carousel-current")) {
+				this.$element.find(".wd_carousel-current").removeClass("wd_carousel-current");
+				
+				var $clonedFrom = $item.data("wd_carousel-cloned-from");
+				if ($clonedFrom) {
+					var clone_pos = $item.position().left;
+					var item_pos = $clonedFrom.position().left;
+					var offset = clone_pos - item_pos;
+					this.$element.css("left", this.$element.css("left") + offset);
+					this.dragListX += offset;
+					$item = $clonedFrom;
+				}
+				
+				$item.addClass("wd_carousel-current");
+				this.currentIndex = $item.data("wd_carousel-index");
+				this.$currentItem = $item;
+			}
+		},
+				
+		itemAt: function(position) {
+			var $children = this.$element.children();
+			if ($children.length == 0)
+				return null;
+			
+			var $item = $children.eq(Math.floor($children.length/2));
+			var dir = 0;
+			while (true) {
+				if (position < $item.position().left) {
+					$item = $item.prev();
+					if (dir == 1)
+						break;
+					dir = -1;
+				} else if (position > $item.position().left + $item.outerWidth()) {
+					$item = $item.next();
+					if (dir == -1)
+						break;
+					dir = 1;
+				} else {
+					break;
+				}
+				if ($item.length == 0)
+					break;
+			}
+			
+			return $item;
+		},
+				
+		onClick: function(event) {
+			if (this.dragged) {
+				event.stopImmediatePropagation();
+				event.stopPropagation();
+				event.preventDefault();
+			}
+		},
+				
+		dragStart: function(event) {
+			this.dragged = false;
+
+			if (!this.navEnabled)
+				return;
+
+			this.pause();
+			this.dragIndex = this.currentIndex;
+			
+			this.dragStartX = this.eventPosition(event);
+			if (this.dragStartX === undefined)
+				return;
+			
+			this.dragListX = this.$element.position().left;
+
+//			this.$cropper.addClass("dragging");
+			this.dragging = true;
+		},
+				
+		dragMove: function(event) {
+			if (!this.dragging)
+				return;
+			
+			event.preventDefault();
+			
+			var pos = this.eventPosition(event);
+			var delta = pos - this.dragStartX;
+			
+			if (!this.dragged && Math.abs(delta) >= this._options.dragThreshold) {
+				this.$cropper.addClass("dragging");
+				this.dragged = true;
+			}
+			
+			if (this.dragged) {
+				var list_position = this.dragListX+delta;
+				this.$element.css("left", list_position);
+				
+				var offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var position = offset - this.$element.position().left;
+				var $item = this.itemAt(position);
+				this.makeItemCurrent($item);
+			}
+		},
+				
+		dragEnd: function(event) {
+			if (!this.dragging)
+				return;
+			
+			if (this.dragged) {
+				var offset = this._options.center ? (this.$cropper.innerWidth() / 2) : 0;
+				var position = offset - this.$element.position().left;
+				var $item = this.itemAt(position);
+				var index = $item.data("wd_carousel-index");
+				if (index !== null && index != this.dragIndex)
+					this.stop();
+				this.scrollToIndex(index);
+			}
+
+			this.$cropper.removeClass("dragging");
+			this.dragging = false;
+			this.start();
+		},
+				
+		eventPosition: function(event) {
+			if (event.originalEvent && event.originalEvent.touches) {
+				var touches = event.originalEvent.touches;
+				if (touches.length != 1)
+					return undefined;
+				return touches[0].pageX;
+			} else {
+				return event.pageX;
+			}
+		},
+				
+		filter: function(selector) {
+			this.$element.children().detach();
+			var $items = this.$items;
+			if (selector)
+				$items = $items.filter(selector);
+			if ($items.length > 0)
+				this.$element.append($items);
+			this.reset();
+		},
+		
+		destroy: function() {
+			this.stop();
+			this.filter(false);
+			this.$clones = $([]);
+			this.$items
+				.removeClass("wd_carousel-item")
+				.data("wd_carousel-index", null)
+				.data("wd_carousel-clone-right", null)
+				.data("wd_carousel-clone-left", null);
+			this.$element
+				.removeClass("wd_carousel-list")
+				.insertBefore(this.$container);
+			this.$container.remove();
+		},
+		
+		resize: function() {
+			if (this._options.widthMode != "content") {
+				var totalWidth = this.$cropper.innerWidth();
+				var columns = this._options.columns;
+				if (this._options.widthMode == "width")
+					columns = Math.max(Math.floor(totalWidth / this._options.minWidth), 1);
+				var width = totalWidth / columns;
+				this.$items.outerWidth(width);
+				this.$clones.outerWidth(width);
+			}
+			
+			webDriver.doResize(this.$element);
+			
+			if (this._options.heightMode == "content") {
+				var height = this.$element.outerHeight();
+				this.$cropper.height(height);
+			}
+			
+			this.reset();
+		}
+	};
+
+	$.fn.wd_carousel = function(options) {
+		var args = Array.prototype.slice.call(arguments, 1);
+		var result = this;
+		
+		this.each(function() {
+			var instance = $(this).data("wd_carousel");
+			if (typeof options == "string") {
+				var res = instance[options].apply(instance, args);
+				if (typeof res != "undefined") {
+					result = res;
+					return false;
+				}
+			} else {
+                if (instance) {
+                    instance.reload(options);
+                } else {
+                    $(this).data("wd_carousel", new wd_carousel(this, options));
+                }
+			}
+        });
+		
+		return result;
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" src="/template_files/1304/js/wd_scriptloader.js" wd_script_id="wd_scriptloader.js"></script>
+<link href="/template_files/1304/css/wd_slideshow.css" type="text/css" rel="stylesheet" wd_script_id="wd_slideshow.css">
+<script type="text/javascript" wd_script_id="wd_slideshow_script">
+(function($, undefined) {
+	webDriver.resizeSlideshow = function() {
+		$(this).find(".wd_slideshow-list").wd_slideshow("resize");
+		return false;
+	}
+	
+	var wd_slideshow = function(element, options) {
+		this.init(element, options);
+	};
+	
+	wd_slideshow.prototype = {
+		init: function(element, options) {
+			var self = this;
+			
+			this.$element = $(element);
+			this._options = {
+				selector: "li",
+				preload: false,
+				"class": "",
+				resize: "container" // children, self, container
+			};
+			
+			this.options(options);
+			
+			this.$container = $("<div>").addClass("wd_slideshow").attr("wd_resize","resizeSlideshow").attr("tabindex","-1").insertBefore(this.$element);
+			if (this._options["class"])
+				this.$container.addClass(this._options["class"]);
+			this.$cropper = $("<div>").addClass("wd_slideshow-cropper").appendTo(this.$container);
+			this.$element
+					.addClass("wd_slideshow-list")
+					.appendTo(this.$cropper)
+			;
+			this.$prev = $("<a class=\"wd_slideshow-arrow wd_slideshow-prev fa fa-chevron-left\" href=\"#prev\" title=\"Previous\"><span class=\"wd_sr-only\">Previous Item<\/span><\/a>")
+					.on("click", function(event) {
+						self.prev();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			this.$next = $("<a class=\"wd_slideshow-arrow wd_slideshow-next fa fa-chevron-right\" href=\"#next\" title=\"Next\"><span class=\"wd_sr-only\">Next Item<\/span><\/a>")
+					.on("click", function(event) {
+						self.next();
+						event.preventDefault();
+					})
+					.appendTo(this.$container);
+			
+			this.$container.on("keydown.wd_slideshow", function (event) {
+				var key = event.which || event.keyCode;
+				if (key == 37) {
+					self.prev();
+					event.stopImmediatePropagation();
+					event.preventDefault();
+				}
+				if (key == 39) {
+					self.next();
+					event.stopImmediatePropagation();
+					event.preventDefault();
+				}
+			});
+
+			this.$items = this.$element.children(this._options.selector);
+			this.$items.addClass("wd_slideshow-item");
+			
+			// Remove any non-items (e.g. unintended text nodes)
+			this.$element.empty();
+			this.$element.append(this.$items);
+
+			this.navEnabled = true;
+			this.currentIndex = 0;
+			this.$currentItem = this.$items.eq(0);
+			
+			if (this._options.preload)
+				this.load_next();
+		},
+		
+		options: function(options) {
+			if (options) {
+				$.extend(this._options, options);
+			} else {
+				return this._options;
+			}
+		},
+		
+		reload: function(options) {
+			if (options) {
+				this.options(options);
+			}
+			
+			this.reset();
+		},
+
+		reset: function() {
+			this.$items.data("wd_slideshow-index", null);
+			
+			var $children = this.$element.children();
+			this.itemCount = $children.length;
+			$children.each(function(index) {
+				$(this).data("wd_slideshow-index", index);
+			});
+
+			this.hideNav(this.itemCount < 2);
+			
+			var index = this.$currentItem.data("wd_slideshow-index");
+			if (!index)
+				index = 0;
+			
+			this.scrollToIndex(index, false);
+		},
+				
+		hideNav: function(hide) {
+			this.$prev.toggle(!hide);
+			this.$next.toggle(!hide);
+			this.navEnabled = !hide;
+		},
+				
+		item_loaded: function(item) {
+			var $item = $(item);
+			return ($item.children().length > 0 || !$item.attr("wd_ajax_url"));
+		},
+				
+		load_next: function() {
+			var self = this;
+			var next = null;
+			var $children = this.$element.children().not(".wd_clone");
+
+			var after = this.currentIndex;
+			var before = this.currentIndex;
+			while (after < $children.length || before >= 0) {
+				if (after < $children.length && !this.item_loaded($children[after])) {
+					next = $children[after];
+					break;
+				}
+				++after;
+				if (before >= 0 && !this.item_loaded($children[before])) {
+					next = $children[before];
+					break;
+				}
+				--before;
+			}
+			
+			if (!next) {
+				var $filtered = this.$items.remove($children);
+
+				$filtered.each(function() {
+					if (!self.item_loaded(this)) {
+						next = this;
+						return false;
+					}
+				});
+			}
+			
+			if (next)
+				this.load_item(next, function() {self.load_next();});
+		},
+		
+		load_item: function(item, on_complete) {
+			var self = this;
+			var $item = $(item);
+			var complete = on_complete;
+			
+			if (!this.item_loaded($item)) {
+				$item.html("<div>Loading...</div>");
+				$item.addClass("wd_loading");
+				$item.load(
+					$item.attr("wd_ajax_url"),
+					function(response, status, xhr) {
+						if ($item.children().length == 0)
+							$item.append("<div>No content</div>");
+						webDriver.queueCallback(function() {
+							if ($item.hasClass("wd_slideshow-current"))
+								self.resize(self._options["resize"] == "container");
+							$item.removeClass("wd_loading");
+							if ($item.hasClass("wd_slideshow-current")) {
+								$item.wd_imagesloaded(
+									function() {
+										self.resize(self._options["resize"] == "container");
+									},
+									"size"
+								);
+							}
+						});
+
+						if (complete)
+							complete(response, status, xhr);
+					}
+				);
+			}
+		},
+				
+		next: function() {
+			return this.scrollBy(1);
+		},
+
+		prev: function() {
+			return this.scrollBy(-1);
+		},
+		
+		scrollBy: function(count) {
+			var index = this.currentIndex + count;
+			
+			return this.scrollToIndex(index, true);
+		},
+		
+		scrollToIndex: function(index, update_hash) {
+			var self = this;
+			var $children = this.$element.children().not(".wd_clone");
+			
+			var orig_index = index;
+			index = (index + $children.length) % $children.length;
+			var $child = $children.eq(index);
+			
+			if (update_hash && $child.attr("wd_item_hash")) {
+				var hash = "#"+$child.attr("wd_item_hash");
+				var current_hash = window.location.hash || "#";
+				if (hash != current_hash) {
+					var href = window.location.href+"#";
+					href = href.replace(/#.*$/, hash);
+					window.location.replace(href);
+					return;
+				}
+			}
+			
+			this.$element.find(".wd_slideshow-current").removeClass("wd_slideshow-current");
+			$child.addClass("wd_slideshow-current");
+			
+			if (!this.item_loaded($child))
+				this.load_item($child);
+			
+			this.$container[0].focus();
+
+			this.currentIndex = index;
+			this.$currentItem = $child;
+			
+			this.resize(this._options["resize"] == "container");
+		},
+				
+		scrollToItem: function(item) {
+			var index = $(item).data("wd_slideshow-index");
+			if (index !== null)
+				this.scrollToIndex(index, true);
+		},
+				
+		filter: function(selector) {
+			this.$element.children().detach();
+			var $items = this.$items;
+			if (selector)
+				$items = $items.filter(selector);
+			this.$element.append($items);
+			this.reset();
+		},
+		
+		destroy: function() {
+			this.filter(false);
+			this.$items
+				.removeClass("wd_slideshow-item")
+				.data("wd_slideshow-index", null)
+			;
+			this.$element
+				.removeClass("wd_slideshow-list")
+				.insertBefore(this.$container)
+			;
+			this.$container.remove();
+		},
+		
+		resize: function(resize_container) {
+			if (resize_container) {
+				webDriver.doResize(this.$container, "container");
+			} else if (this.$currentItem && !this.$currentItem.hasClass("wd_loading")) {
+				webDriver.doResize(this.$currentItem);
+			}
+		}
+	};
+
+	$.fn.wd_slideshow = function(options) {
+		var args = Array.prototype.slice.call(arguments, 1);
+		var result = this;
+		
+		this.each(function() {
+			var instance = $(this).data("wd_slideshow");
+			if (typeof options == "string") {
+				var res = instance[options].apply(instance, args);
+				if (typeof res != "undefined") {
+					result = res;
+					return false;
+				}
+			} else {
+                if (!instance) {
+					instance = new wd_slideshow(this, options);
+					$(this).data("wd_slideshow", instance);
+				}
+				
+                instance.reload(options);
+			}
+        });
+		
+		return result;
+    };
+})(webDriver.jQuery);
+</script>
+<script type="text/javascript" wd_script_id="template_list_slideshow_script">
+						webDriver.jQuery(function($) {
+							$(".wd_layout-slideshow").each(function() {
+								var $slideshow = $(this);
+								$slideshow.wd_slideshow({
+									preload: true,
+									"class": "wd_asset_slideshow_wrapper wd_asset_slideshow_main_wrapper"
+								});
+							});
+						});
+					</script>
+<style type="text/css" wd_script_id="template asset_carousel_item:gallery:system style">
+.wd_gallery_asset {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	color: #ffffff;
+	min-height: 100px;
+	min-width: 100px;
+}
+.wd_gallery_asset .wd_asset_image {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-size: 0px;
+}
+.wd_gallery_asset .wd_asset_image img {
+	max-width: 100%;
+	max-height: 100%;
+	flex-shrink: 0;
+	margin: 0;
+	float: none;
+}
+.wd_gallery_asset .wd_icon_overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .75) none center center no-repeat;
+	opacity: 0.0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_link_underlay {
+	display: none !important;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+}
+.wd_gallery_asset .wd_icon_overlay a.wd_link_underlay:hover {
+	background-color: transparent;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container {
+	font-size: 50px;
+	position: relative;
+	text-align: center;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a,
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a:link,
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a:visited {
+	color: #cccccc;
+}
+.wd_gallery_asset .wd_icon_overlay .wd_icon_container > a:hover {
+	text-decoration: none;
+	background-color: transparent;
+}
+.wd_gallery_asset .wd_title_overlay {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	pointer-events: none;
+	opacity: 0.0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-moz-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-webkit-box-align: end;
+	-webkit-align-items: flex-end;
+	-moz-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+}
+.wd_gallery_asset:hover .wd_icon_overlay,
+.wd_gallery_asset:hover .wd_title_overlay,
+.wd_gallery_asset:focus-within .wd_icon_overlay,
+.wd_gallery_asset:focus-within .wd_title_overlay {
+	opacity: 1.0;
+}</style>
+<script type="text/javascript" src="/template_files/1304/js/wd_load.js" wd_script_id="wd_load.js"></script>
+<script type="text/javascript" src="/template_files/1304/js/wd_fixed_aspect_ratio.js" wd_script_id="wd_fixed_aspect_ratio.js"></script>
+<script type="text/javascript" wd_script_id="move_content_script">
+	(function($) {
+		function wd_move_content() {
+			$("[wd_move_after]").each(function() {
+				var $this = $(this);
+				var selectors = $this.attr("wd_move_after").split("|");
+				for (var i = 0; i < selectors.length; ++i) {
+					var $dest = $(selectors[i]);
+					if ($dest.length > 0) {
+						$this.insertAfter($dest.eq(0));
+						break;
+					}
+				}
+			});
+		}
+		
+		$(function() {
+			wd_move_content();
+		});
+	})(webDriver.jQuery);
+</script>
+
+<style type="text/css" wd_script_id="template detail:newsfeed_releases:system style">
+.wd_title {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+.wd_subtitle {
+	font-weight: bold;
+}
+table.wd_extimagetable {
+	border-style: none; 
+	border-spacing:0px;
+	clear: right; 
+	float: right; 
+}
+td.wd_extimagecell {
+	text-align: right; 
+	margin: 0px 0px 5px 5px;
+	padding:0px;
+}
+td.wd_extimagecell img {
+	padding-left:10px;
+	padding-bottom:10px;
+	border-style: none; 
+}
+blockquote.wd_pullquote {
+	font-style: italic;
+	width:200px;
+	margin:0 0 20px 20px;
+	line-height: 1.8em;
+	float: right;
+	clear: right;
+}
+blockquote.wd_pullquote:before {
+	content: "“ ";
+	font-size: xx-large;
+}
+blockquote.wd_pullquote:after {
+	content: " ”";
+	font-size: xx-large;
+	float: right;
+}
+.fullscreen-button {
+	border: 1px solid #d1d1d1;
+	background: #e3e3e3 url(images/webdriver/view_full_screen_button_background.png) no-repeat;
+	padding: 3px 3px 3px 30px;
+	margin: 5px 0px 5px 0px;
+	color: #727272;
+	width: 220px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.wd_contact {
+	margin: 1em 0;
+}
+.wd_release_data {
+	margin: 1em 0;
+}
+.wd_caption {
+	text-align: center;
+	font-size: 0.72em;
+	font-style: italic;
+	margin: 1em 0 0 0;
+}
+</style>
+    
+<!-- ----------------- -->
+    
+    
+    <script type="text/javascript">
+        webDriver.pop_jQuery();
+    </script>
+
+    <!-- end spin_special_output(head_start) -->
+
+    <title>Home Page | Anaconda Mining</title>
+
+    
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:url" content="https://www.anacondamining.com/" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/template_files/1304/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/template_files/1304/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/template_files/1304/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/template_files/1304/css/wdcontent.css">
+    <link rel="stylesheet" type="text/css" href="/template_files/1304/css/wd_media_query.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Cairo" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="/template_files/1304/images/favicon.png">
+
+    <link rel="alternate" href="https://www.anacondamining.com/" type="application/rss+xml" title="Home Page | Anaconda Mining">
+
+    <!-- begin spin_special_output(head_end) -->
+    <link rel="canonical" href="https://www.anacondamining.com/" />
+    <!-- end spin_special_output(head_end) -->
+    <style>
+        #wd_featurebox-standard_9 img {
+            width:120px !important;
+        }
+    </style>
+</head>
+
+<body class="wd_pageid_129">
+
+    <!--NAV -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="wd_topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-xs-5 ">
+                        <a href="stock-information">
+                            <div class="wd_featureboxes_topstock wd_featureboxes-vertical">
+                                <div id="wd_featurebox-financial_4" class="wd_featurebox_container wd_featurebox-financial">
+                                    <div class="wd_featurebox_title"></div>
+                                    <div class="wd_featurebox">
+                                        <div class="wd_ticker_selector"><span role="menu" class="wd_linkmenu"><a href="#" role="menuitem" class="wd_linkmenu-item wd_linkmenu-active">TSX: ANX</a></span></div>
+                            			<div class="wd_quote-container" id="ir_featurebox_4-quote">
+                            				<script src="/anxfr/stock_quote_iframe?template=stock_widget_anx&format=js"></script>
+                            			</div>
+                                        <div class="wd_chart-quote-footer" id="ir_featurebox_4-footer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd_featureboxes_topstock wd_featureboxes-vertical">
+                                <div id="wd_featurebox-financial_4" class="wd_featurebox_container wd_featurebox-financial">
+                                    <div class="wd_featurebox_title"></div>
+                                    <div class="wd_featurebox">
+                                        <div class="wd_ticker_selector"><span role="menu" class="wd_linkmenu"><a href="#" role="menuitem" class="wd_linkmenu-item wd_linkmenu-active">OTCQX: ANXGF</a></span></div>
+                            			<div class="wd_quote-container" id="ir_featurebox_4-quote">
+                            			    <script src="/anxgf/stock_quote_iframe?template=stock_widget_anx&format=js"></script>
+                            			</div>
+                                        <div class="wd_chart-quote-footer" id="ir_featurebox_4-footer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-xs-6 ">
+                        <ul class="list-inline quicklinks pull-right">
+                        	                                <li><a href="/anx/careers/3313">Careers</a></li>
+                                <li><a href="/anx/contact_us">Contacts</a></li>
+                                <li><a href="/anx?lan=fr">Français</a></li>
+                        	                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/anx"><img src="/template_files/1304/images/anaconda_logo.png"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+            	
+            	<!-- Main Navigation -->
+            	<ul class="nav navbar-nav">
+    <li class="inactive has_children">
+        <a class="inactive has_children" href="/anx/about/3301" target="_self">About</a>
+        <ul class="dropdown-menu">
+            <li><a href="/anx/corporate_values_and_mission/3526" target="_self">Corporate Values and Mission</a>
+            </li>
+            <li><a href="/anx/management_team" target="_self">Senior Management</a>
+            </li>
+            <li><a href="/anx/officers_and_directors" target="_self" class="on">Board of Directors</a>
+            </li>
+            <li><a href="/anx/technical_advisory_committee/3297" target="_self">Technical Advisors</a>
+            </li>
+            <li><a href="/anx/corporate_governance" target="_self">Corporate Governance</a>
+            </li>
+            <li><a href="/anx/corporate_social_responsibility/3298" target="_self">Corporate Social Responsibility</a>
+            </li>
+        </ul>
+    </li>
+    <li class="inactive has_children">
+        <a class="inactive has_children" href="/anx/operations_and_projects/3302" target="_self">Operations and Projects</a>
+        <ul class="dropdown-menu">
+            <li><a href="/anx/goldboro_project/3312" target="_self">Goldboro Project</a></li>
+            <li><a href="/anx/point_rousse_project/3311" target="_self">Point Rousse Project</a></li>
+            <li><a href="/anx/tilt_cove_project/3308" target="_self">Tilt Cove Project</a></li>
+        </ul>
+    </li>
+
+    <li class="inactive has_children">
+        <a class="inactive has_children" href="/anx/stock_quote" target="_self">Investors</a>
+        <ul class="dropdown-menu">
+            <li><a href="/anx/stock_quote" target="_self">Stock Information</a>
+            </li>
+            <li><a href="/anx/financial_information/3304" target="_self">Financial Information</a>
+            </li>
+            <li><a target="_blank" href="/anx/corporate_documents?type=100444&template=most_recent_redirect" target="_self">Investor Presentation</a>
+            </li>
+            <li><a href="/anx/analyst_coverage" target="_self">Analyst Coverage</a>
+            </li>
+            <li><a href="/anx/annual_general_meeting/3303" target="_self">Annual General Meeting 2021</a>
+            </li>
+            <li><a href="/anx/email_alerts" target="_self">Investor Alerts</a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="inactive has_children">
+        <a class="inactive has_children" href="/anx/press_releases" target="_self">News and Media</a>
+        <ul class="dropdown-menu">
+            <li><a href="/anx/press_releases" target="_self">Press Releases</a>
+            </li>
+            <li><a href="/anx/goldboro_community/3316" target="_self">Goldboro - Community</a>
+            </li>
+        </ul>
+    </li>
+
+</ul>
+            	<!--------------------->
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- END NAV -->
+
+	<link href="/template_files/1304/css/single_slider_responsive.css" type="text/css" rel="stylesheet" wd_script_id="single_slider_responsive.css">
+<link href="/template_files/1304/css/wd_form.css" type="text/css" rel="stylesheet" wd_script_id="wd_form.css">
+<link href="/template_files/1304/css/wd_modal.css" type="text/css" rel="stylesheet" wd_script_id="wd_modal.css">
+
+<div class="big-slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="single_slider_responsive" class="single_slider_carousel slide">
+                <ol class="single_slider_carousel_indicators">
+                    <li data-target="#single_slider_responsive" data-slide-to="0"><span></span></li>
+                </ol>
+                <div class="single_slider_carousel_container">
+                    <div class="single_slider_carousel_inner">
+                        <div class="item"><img src="/template_files/1304/image/slide G 1000x286.jpg" title="" alt="" border="0" />
+                            <div class="single_slider_carousel_caption">
+                                <h4 style="line-height:1 !important">Creating an Emerging Gold Producer in Atlantic Canada</h4></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carousel nav -->
+                <a class="single_slider_carousel_control left" href="#single_slider_responsive" data-slide="prev">&lsaquo;</a>
+                <a class="single_slider_carousel_control right" href="#single_slider_responsive" data-slide="next">&rsaquo;</a>
+            </div>
+            <div class="single_slider_carousel_bottom"></div>
+        </div>
+    </div>
+</div>
+
+<!-- BEGIN CONTAINER -->
+<div class="container">
+    <div class="wd_container">
+
+        <!-- BEGIN LEFT SIDEBAR -->
+        <!-- END LEFT SIDEBAR -->
+
+        <!-- BEGIN CONTENT-WRAPPER -->
+        <div class="wd_content-wrapper col-md-12">
+            <div class="wd_featureboxes_middle wd_featureboxes-horizontal">
+                <div id="wd_featurebox-teaser_2" class="wd_featurebox_container wd_featurebox-teaser">
+                    <div class="wd_featurebox_title">News</div>
+                    <div class="wd_featurebox">
+                        <div class="wd_newsfeed_releases-teaser">
+                            <div class="subscribe_link"><a href="/anx/email_alerts"><span class="wd_subscribe_email-icon fa fa-envelope-o"></span></a> <a href="/anx/email_alerts">Investor Alerts</a></div>
+                            <script src="/anx/press_releases_iframe?template=anx_home&per_page=2&format=js"></script>
+                        </div>
+                        <p class="more"><a href="/anx/press_releases">View All</a></p>
+                    </div>
+                </div>
+                <div id="wd_featurebox-standard_5" class="wd_featurebox_container wd_featurebox-standard">
+                    <div class="wd_featurebox_title">Presentations</div>
+                    <div class="wd_featurebox">
+                        <table width="325" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" style="margin: 0px 0px 0px 0px;" role="presentation">
+                            <tr>
+                                <td>
+                                    <a href="/anx/corporate_documents?type=100444&template=most_recent_redirect" target="_blank"><img src="/anx/corporate_documents?type=100445&template=most_recent_redirect" border="0" alt="" title="" /></a>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>&nbsp;</p>
+                        <!-- <p><a class="more" href="events-presentations">View All</a></p> -->
+                    </div>
+                </div>
+            <div class="wd_featureboxes_socialhub wd_featureboxes-vertical">
+                <div id="wd_featureboxes_tabs-socialhub" class="wd_tabs_container">
+                    <div class="wd_tabs_wrapper">
+                        <ul class="wd_tabs" role="tablist">
+                            <li id="wd_featurebox-social_1_tab" class="wd_tab wd_tabs_wd_featureboxes_tabs-socialhub_tab wd_tab-inactive" title="Facebook" onclick="wd_tab_select('wd_featureboxes_tabs-socialhub','wd_featurebox-social_1');" onkeydown="webDriver.WCAG_Keypress(this, event);" tabindex="0" role="tab" aria-selected="false">
+                                <div class="wd_featurebox_icon"><img src="/template_files/1304/image/facebook_32.png"></div>
+                            </li>
+                            <li id="wd_featurebox-social_2_tab" class="wd_tab wd_tabs_wd_featureboxes_tabs-socialhub_tab wd_tab-inactive" title="Twiiter" onclick="wd_tab_select('wd_featureboxes_tabs-socialhub','wd_featurebox-social_2');" onkeydown="webDriver.WCAG_Keypress(this, event);" tabindex="-1" role="tab" aria-selected="false">
+                                <div class="wd_featurebox_icon"><img src="/template_files/1304/image/twitter_32.png"></div>
+                            </li>
+                            <li id="wd_featurebox-social_3_tab" class="wd_tab wd_tabs_wd_featureboxes_tabs-socialhub_tab wd_tab-inactive" title="LinkedIn" onclick="wd_tab_select('wd_featureboxes_tabs-socialhub','wd_featurebox-social_3');" onkeydown="webDriver.WCAG_Keypress(this, event);" tabindex="-1" role="tab" aria-selected="false">
+                                <div class="wd_featurebox_icon"><img src="/template_files/1304/image/linkedin_32.png"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wd_tabs_content_wrapper">
+                        <div id="wd_featurebox-social_1_tab_content" class="wd_tab_content wd_tabs_wd_featureboxes_tabs-socialhub_content wd_tab_content-active" role="tabpanel" aria-expanded="true">
+                            <div id="wd_featurebox-social_1" class="wd_featurebox_container wd_featurebox-social wd_featurebox-social_facebook">
+                                <div class="wd_featurebox">
+                                    <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FAnacondaMining&amp;header=false&amp;width=329&amp;height=300&amp;show_faces=true&amp;stream=true&amp;colorscheme=light&amp;border_color=%23ffffff&amp;locale=en_US" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:329px; height:300px;" allowTransparency="true" title="Facebook Like Box"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wd_featurebox-social_2_tab_content" class="wd_tab_content wd_tabs_wd_featureboxes_tabs-socialhub_content wd_tab_content-inactive" role="tabpanel" aria-expanded="false">
+                            <div id="wd_featurebox-social_2" class="wd_featurebox_container wd_featurebox-social wd_featurebox-social_twitter">
+                                <div class="wd_featurebox"><a class="twitter-timeline" height="300" href="https://twitter.com/Anaconda_Mining" data-widget-id="598584575799926784">Tweets by @Anaconda_Mining</a>
+                                    <script>
+                                        ! function(d, s, id) {
+                                            var js, fjs = d.getElementsByTagName(s)[0],
+                                                p = /^http:/.test(d.location) ? 'http' : 'https';
+                                            if (!d.getElementById(id)) {
+                                                js = d.createElement(s);
+                                                js.id = id;
+                                                js.src = p + "://platform.twitter.com/widgets.js";
+                                                fjs.parentNode.insertBefore(js, fjs);
+                                            }
+                                        }(document, "script", "twitter-wjs");
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="wd_featurebox-social_3_tab_content" class="wd_tab_content wd_tabs_wd_featureboxes_tabs-socialhub_content wd_tab_content-inactive" role="tabpanel" aria-expanded="false">
+                            <div id="wd_featurebox-social_3" class="wd_featurebox_container wd_featurebox-social wd_featurebox-social_linkedin">
+                                <div class="wd_featurebox">
+                                    <div class="wd_social_header">
+                                        <div class="wd_social_follow">
+                                            <script type="IN/FollowCompany" data-id="6317202" data-counter="right"></script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="wd_featureboxes_middle2 wd_featureboxes-vertical">
+            	<div class="home-title">PROJECTS</div>
+                <div id="wd_featurebox-standard_6" class="wd_featurebox_container wd_featurebox-standard">
+                    <div class="wd_featurebox_title">Goldboro</div>
+                    <div class="wd_featurebox">
+                        <table width="365" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" style="margin: 0px 0px 0px 0px;" role="presentation">
+                            <tr>
+                                <td><img src="/template_files/1304/image/Anaconda-PR-Goldboro-Drill-Results-July-2017-Exhibit-C-1 365x205.png" border="0" alt="" title="" /></td>
+                            </tr>
+                        </table>
+                        <p>The Goldboro Gold Project is a high-grade, advanced exploration and development project that forms a strategic part of Anaconda&rsquo;s strategy for near-term growth. Goldboro is located on tidewater approximately 185 km northeast of Halifax.</p>
+
+                        <p><a class="more" href="/anx/goldboro_project/3312"><span style="font-family: &quot;Proxima Nova&quot;, Helvetica, sans-serif; font-size: 14px;">View More</span></a></p>
+                    </div>
+                </div>
+                <div id="wd_featurebox-standard_7" class="wd_featurebox_container wd_featurebox-standard">
+                    <div class="wd_featurebox_title">Point Rousse</div>
+                    <div class="wd_featurebox">
+                        <table width="365" class="wd_imagetable" border="0" cellpadding="0" cellspacing="0" style="margin: 0px 0px 0px 0px;" role="presentation">
+                            <tr>
+                                <td><img src="/template_files/1304/image/anaconda_may2016-04c 365x205.jpg" border="0" alt="" title="" /></td>
+                            </tr>
+                        </table>
+                        <p>The Point Rousse Project located in the Baie Verte Mining District in Newfoundland, is comprised of the Pine Cove open pit mine, the fully-permitted Pine Cove Mill and tailings facility, the Stog&#39;er Tight and Argyle deposits, and approximately 5,800 hectares of prospective gold-bearing property.</p>
+
+                        <p><a class="more" href="/anx/point_rousse_project/3311">View More</a></p>
+                    </div>
+                </div>
+                <div id="wd_featurebox-standard_5" class="wd_featurebox_container wd_featurebox-standard">
+                    <div class="wd_featurebox_title">Gold Miner Set for Growth</div>
+                    <div class="wd_featurebox">
+						<video id="127586" playsinline="playsinline" controls poster=https://content.jwplatform.com/thumbs/criM6L77-720.jpg style="width:100%;max-width:720px;margin-top:30px;" title="Anaconda Mining: Gold Miner Set for Growth | Investment Opportunities | Business Television | B-TV | B-TV.com | Broadcast on BNN Bloomberg | Video"><source src=https://content.jwplatform.com/videos/criM6L77-gJjLxEC2.mp4 type="video/mp4"><p>© 2021 <a href=https://www.b-tv.com>www.B-TV.com</a>. All Rights Reserved.</p></video>
+                    </div>
+                </div>
+            </div>
+            <br clear="all"> </div>
+
+        <!-- END CONTENT -->
+
+        <!-- END CONTENT-WRAPPER -->
+
+    </div>
+</div>
+<!-- END CONTAINER -->
+
+<div class="container-fluid subs">
+    <div class="container">
+        <div class="wd_featureboxes_subs wd_featureboxes-vertical">
+            <div id="wd_featurebox-subscribe_1" class="wd_featurebox_container wd_featurebox-subscribe">
+                <div class="wd_featurebox_title"></div>
+                <div class="wd_featurebox">
+                    <div class="wd_subscribe_featurebox">
+                        <div class="wd_intro"><a href="/anx/email_alerts">Click here</a> to subscribe to receive email news alerts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" wd_script_id="single_slider_responsive_script">
+	webDriver.jQuery(".single_slider_carousel").carousel({
+		interval: 8000,
+		pause: ""
+	});
+	webDriver.jQuery(".single_slider_carousel, .single_slider_carousel_bottom").css("visibility","visible");
+	webDriver.jQuery(".single_slider_carousel_indicators li:first, .single_slider_carousel_inner .item:first").addClass("active");
+	webDriver.jQuery(".single_slider_carousel_control").click(function(e) {
+		e.preventDefault();
+	});
+	webDriver.jQuery(".single_slider_carousel").touchwipe({
+		 wipeLeft: function() { webDriver.jQuery(".single_slider_carousel").carousel("next"); },
+		 wipeRight: function() { webDriver.jQuery(".single_slider_carousel").carousel("prev"); },
+		 preventDefaultEvents: true
+	});	
+</script>
+    <div class="container-fluid subfoot">
+        <div class="container">
+            <div class="wd_featureboxes_foot wd_featureboxes-vertical">
+                <div id="wd_featurebox-standard_9" class="wd_featurebox_container wd_featurebox-standard">
+                    <div class="wd_featurebox_title"></div>
+                    <div class="wd_featurebox">
+                        <ul>
+                            <li>
+                                <a href="http://www.profitguide.com/microsite/profit500/2016/ranking/441-anaconda-mining" target="_blank"><img src="/template_files/1304/image/P500-Logo-2016-ADS-Blue2.png" /></a>
+                            </li>
+                            <li>
+                                <a href="http://www.bestplacestoworkatlantic.com/" target="_blank"><img src="/template_files/1304/image/BPTW16.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="http://www.pdac.ca/" target="_blank"><img src="/template_files/1304/image/PDAC_INVESTORS_EXCHANGE_EXHIBITOR_CMYK.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="https://www.stthomas.edu/workplaceforum/" target="_blank"><img src="/template_files/1304/image/ForumWPI.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="http://www.atlanticbusinessmagazine.net/2015-top-50-ceo-award-winners/" target="_blank"><img src="/template_files/1304/image/Top502016.jpg" /></a>
+                            </li>
+                            <li>
+                                <a href="/anx" target="_blank"><img src="/template_files/1304/image/empdist2016.png" /></a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank"><img src="/template_files/1304/images/Best 50 OTCQX.png" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid foot">
+        <div class="container">
+        	            	&copy; Copyright 2021. Anaconda Mining Inc. All rights reserved. <a href="/anx/legal_information/3315" target="_self">Legal Information</a> &nbsp;|&nbsp;
+            	<a href="/anx/privacy_policy/3314" target="_self">Privacy Policy</a>
+        	
+        </div>
+    </div>
+</body>
+
+<!-- 
+<script wd_script_id="piwik_tracking_code"></script>
+<script type="text/javascript">
+    var _paq = _paq || [];
+
+    _paq.push(["setCustomVariable", 1, "Content Type", "Standard", "page"]);
+
+    _paq.push(["setCustomVariable", 3, "Navigation Page", "About : Board of Directors", "page"]);
+
+    _paq.push(["trackPageView"]);
+    _paq.push(["enableLinkTracking"]);
+    (function() {
+        var u = "//stats.drivetheweb.com/";
+        _paq.push(["setTrackerUrl", u + "piwik.php"]);
+        _paq.push(["setSiteId", 4468]);
+        var d = document,
+            g = d.createElement("script"),
+            s = d.getElementsByTagName("script")[0];
+        g.type = "text/javascript";
+        g.async = true;
+        g.defer = true;
+        g.src = u + "piwik.js";
+        s.parentNode.insertBefore(g, s);
+    })();
+</script>
+<noscript>
+    <img src="https://stats.drivetheweb.com/piwik.php?idsite=4468&rec=1" style="border:0" alt="" />
+</noscript>
+-->
+
+</html>

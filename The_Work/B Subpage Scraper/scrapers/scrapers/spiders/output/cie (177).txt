@@ -1,0 +1,3 @@
+GitHub’s search supports a variety of different operations. Here’s a quick cheat sheet for some of the common searches.For more information, visit our .Repository search looks through the projects you have access to on GitHub. You can also filter the results:Code search looks through the files hosted on GitHub. You can also filter the results:Issue search looks through issues and pull requests on GitHub. You can also filter the results:User search finds users with an account on GitHub. You can also filter the results:
+    Welcome to the thunderbird-website wiki!
+  

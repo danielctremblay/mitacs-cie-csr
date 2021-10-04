@@ -1,0 +1,20 @@
+Wednesday, May 08, 2019
+   Over the last few weeks, we've been discussing structured data: first providing
+   
+   and then showing how to
+   .
+    Today we are announcing support for FAQ and How-to structured data on Google Search and the
+    Google Assistant, including new reports in Search Console to monitor how your site is performing.
+  
+   In this post, we provide details to help you implement structured data on your FAQ and how-to
+    pages in order to make your pages eligible to feature on Google Search as rich results and
+    How-to Actions for the Assistant. We also show examples of how to monitor your search appearance
+    with new Search Console enhancement reports.
+  
+   How-to rich results provide users with richer previews of web results that guide users through
+    step-by-step tasks. For example, if you provide information on how to tile a kitchen backsplash,
+    tie a tie, or build a treehouse, you can add How-to structured data to your pages to enable the
+    page to appear as a rich result on Search and a How-to Action for the Assistant.
+  
+   Add structured data to the steps, tools, duration, and other properties to enable a How-to rich
+    result for your conte

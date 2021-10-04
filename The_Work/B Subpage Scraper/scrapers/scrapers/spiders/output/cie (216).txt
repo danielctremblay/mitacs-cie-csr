@@ -1,0 +1,19 @@
+The Chrome User Experience Report provides user experience metrics for how 
+real-world Chrome users experience popular destinations on the web.The Chrome User Experience Report is powered by real user measurement of key 
+user experience metrics across the public web, aggregated from users who have 
+opted-in to syncing their browsing history, have not set up a Sync passphrase, 
+and have  
+enabled. The resulting data is made available via:Metrics provided by the public Chrome User Experience Report hosted on 
+Google BigQuery are powered by standard web platform APIs exposed by modern 
+browsers and aggregated to origin-resolution. Site owners that want more 
+detailed (URL level resolution) analysis and insight into their site 
+performance and can use the same APIs to gather detailed real user measurement 
+(RUM) data for their own origins.For guidance on which metrics to track and optimize for, and best practices on 
+how to interpret real user measurement data, refer to our 
+ 
+documentation.Defined by the 
+ 
+and 
+:“First Paint reports the time when the browser first rendered after 
+navigation. This excludes the default background paint, but includes 
+non-default background paint. This 

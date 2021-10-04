@@ -1,0 +1,22 @@
+Thunderbird is a free email application that’s easy to set up and customize - and it’s loaded with great features!
+    Your system doesn't meet the  to run Thunderbird.
+  
+    Please follow  to install Thunderbird.
+  
+    
+       •
+       •
+    
+    
+  
+        Thunderbird makes email better for you, bringing together speed, privacy and the latest technologies. Focus on what matters and forget about complexity.
+      
+        Multiple features, such as built-in Do Not Track and remote content blocking, work together to ensure your safety and privacy, so you can have peace of mind.
+      
+        With Add-ons (Extensions & Themes) and many more features you can change the look and feel of Thunderbird in an instant.
+      
+        Keep yourself up to date with recent announcements and releases by following the official Thunderbird Blog!
+      
+                Mailfence Encrypted Email Suite in Thunderbird Today, the Thunderbird team is happy to announce that we have partnered with Mailfence to offer their encrypted email service in Thunderbird’s account setup. To check this out, you click on “Get a new … 
+              
+                Updating to Thunderbird 78 from 68 Soon the Thun

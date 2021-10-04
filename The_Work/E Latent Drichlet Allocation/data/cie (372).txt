@@ -1,0 +1,28 @@
+Tuesday, March 18, 2008
+  
+
+  February is that time of the year: the
+   
+   conference hits London! A few of us were there to meet webmasters and search engine
+    representatives to talk about the latest trends and issues in the search engine world.
+
+  It was a three-day marathon full of interesting talks - and of course, we heard a lot of good
+    questions in between the sessions! If you didn't get a chance to talk with us, fear not: we've
+    pulled together some of the best questions we encountered. You can find a few of them below, and
+    an additional set in our Webmaster Help Group. Please join the
+  !
+
+  
+
+  All sites can benefit from submitting a Sitemap to Google Webmaster Tools. You may help us to do a
+    better job of crawling and understanding your site, especially if it has dynamic content or a
+    complicated architecture.
+
+Besides, you will have access to more information about your site, for example the number of pages
+    from your Sitemaps that are indexed by Google, any errors Google found with your Sitemap, as
+    well as warnings about potential problems. Also, you can submit specialized Sitemaps for certain
+    types of content including
+   ,
+   ,
+   
+   a

@@ -1,0 +1,18 @@
+Google Search indexes 
+      pages to provide a fast, reliable web experience. When an AMP page is available, it can be
+      featured on mobile search as part of rich results and carousels. While AMP itself isn't a
+      ranking factor,
+       for Google Search. Google Search applies the same standard to all
+      pages, regardless of the technology used to build the page. For more information on the
+      benefits of using AMP, see the
+      .On mobile search, the AMP icon helps users quickly identify pages that load quickly and
+      smoothly. When users select an AMP page, Google Search retrieves the page from the
+      , enabling a variety of load optimizations that often
+      make these pages appear instantly, such as prerendering. Currently, AMP pages on desktop don't
+      display with rich features (such as the AMP logo and carousels) and aren't served from the
+      Google AMP Cache/AMP Viewer.
+       AMP Pages behave
+      like standard results.The following table describes how your AMP content could appear in Google Search results.
+      To help Google better understand your page, you can add
+       to your page. It's
+      important to note that Google doesn't guarant

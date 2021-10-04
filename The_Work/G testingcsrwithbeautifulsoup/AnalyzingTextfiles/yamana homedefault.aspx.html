@@ -1,0 +1,1226 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	Yamana Gold - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":717,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1" name="viewport" /><meta content="uUkRhMexKuoXbfVAjc3Rj7KjNeyo8meawju4y-n3FjU" name="google-site-verification" /><!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s26.q4cdn.com/719777497/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.yamana.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" />
+<link type="image/x-icon" rel="icon" media="" href="//s26.q4cdn.com/719777497/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s26.q4cdn.com/719777497/files/favicon.ico" />
+<link rel="stylesheet" media="print" href="//s26.q4cdn.com/719777497/files/css/print.css" />
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s26.q4cdn.com/719777497/files/css/global.css?v=46257" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s26.q4cdn.com/719777497/files/css/client.css?v=45987" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s26.q4cdn.com/719777497/files/css/print.css" /><script type="text/javascript" src="//s26.q4cdn.com/719777497/files/js/q4.core.1.1.4.min.js"></script>
+<script type="text/javascript" src="//s26.q4cdn.com/719777497/files/js/q4.app.1.1.4.min.js"></script>
+<script type="text/javascript" src="https://widgets.q4app.com/widgets/q4.api.1.13.5.min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="https://www.yamana.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+(function ($) {
+    function initGaTracking(isp, org) {
+        isp = isp || '(not set)';
+        org = org || '(not set)';
+        $.each(trackingCodes, function (i, data) {
+            if (data.qualifier === "Q4") {
+                ga('create', data.trackingCode, 'auto'); // Q4 tracker
+                ga('set', { 'dimension1': isp });
+                ga('set', { 'dimension2': org });
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+            } else {
+                ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+                ga(data.qualifier + '.set', 'anonymizeIp', true);
+                ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+            }
+        });
+    }
+
+    var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-55960801-1'}];
+    var ipSessStorageKey = 'ipApiInfo';
+    var ipJsonStringified = sessionStorage.getItem(ipSessStorageKey);
+
+    if (ipJsonStringified) {
+        try {
+            var ipJsonParsed = JSON.parse(ipJsonStringified);
+            initGaTracking(ipJsonParsed.isp, ipJsonParsed.org);
+        } catch (e) {
+            console.error('Failed to JSON parse IP API session storage data\n', e);
+            initGaTracking();
+        }
+    } else {
+        $.getJSON('https://pro.ip-api.com/json/?key=xdjZbj0ZiVVozCo&fields=isp,org')
+            .done(function (ipJson) {
+                sessionStorage.setItem(ipSessStorageKey, JSON.stringify(ipJson));
+                initGaTracking(ipJson.isp, ipJson.org);
+            })
+            .fail(function () {
+                initGaTracking();
+            });
+    }
+})(jQuery);
+</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="Sectionhome PageDefault PageHome LayoutHomePageLayout Languageen-US page-home transparent-header">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:__doPostBack(&#39;lnkPostback&#39;,&#39;&#39;)" style="display: none"></a>
+                    
+<div class="layout layout--home">
+    <div class="layout_inner">
+        <div class="layout_header">
+            <div class="pane pane--header">
+                <div class="pane_inner"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="module module-embed module-skip">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a class="module-skip_link" href="#maincontent">Skip to main content</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="module module-embed module-logo module-logo--header">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="/" title="Home">
+    <img class="logo_rgb" src="//s26.q4cdn.com/719777497/files/design/logo-yamanagold.svg" alt="Yamana Gold Inc. Logo" />
+    <img class="logo_white" src="//s26.q4cdn.com/719777497/files/design/logo-yamanagold_white.svg" alt="Yamana Gold Inc. Logo" />
+</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><nav class="nav nav--main"><ul class="level1">
+	<li class="has-children"><a href="https://www.yamana.com/about/company-overview/default.aspx">About</a><ul class="level2">
+		<li><a href="https://www.yamana.com/about/company-overview/default.aspx">Company Overview</a></li><li><a href="https://www.yamana.com/about/directors/default.aspx">Directors</a></li><li><a href="https://www.yamana.com/about/management/default.aspx">Management</a></li><li><a href="https://www.yamana.com/about/ethics-and-governance/default.aspx">Ethics & Governance</a></li><li><a href="https://www.yamana.com/about/our-values/default.aspx">Our Values</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/portfolio/producing-mines/default.aspx">Portfolio</a><ul class="level2">
+		<li class="has-children"><a href="https://www.yamana.com/portfolio/producing-mines/default.aspx">Producing Mines</a><ul class="level3">
+			<li><a href="https://www.yamana.com/portfolio/producing-mines/canadian-malartic/default.aspx">Canadian Malartic</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/cerro-moro/default.aspx">Cerro Moro</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/el-penon/default.aspx">El Peñón</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/jacobina/default.aspx">Jacobina</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/minera-florida/default.aspx">Minera Florida</a></li>
+		</ul></li><li><a href="https://www.yamana.com/portfolio/advancing-projects/default.aspx">Advancing Projects</a></li><li><a href="https://www.yamana.com/portfolio/exploration/default.aspx">Exploration</a></li><li><a href="https://www.yamana.com/portfolio/strategic-assets/default.aspx">Strategic Assets</a></li><li><a href="https://www.yamana.com/portfolio/mineral-reserves-and-mineral-resources/default.aspx">Mineral Reserves and Mineral Resources</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/investors/investor-overview/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.yamana.com/investors/investor-overview/default.aspx">Investor Overview</a></li><li><a href="https://www.yamana.com/investors/news/default.aspx">News</a></li><li><a href="https://www.yamana.com/investors/events-and-presentations/default.aspx">Events & Presentations</a></li><li><a href="https://www.yamana.com/investors/financial-reports-and-corporate-reports/default.aspx">Financial and Corporate Reports</a></li><li class="has-children"><a href="https://www.yamana.com/investors/investor-resources/transfer-agent/default.aspx">Investor Resources</a><ul class="level3">
+			<li><a href="https://www.yamana.com/investors/investor-resources/transfer-agent/default.aspx">Transfer Agent</a></li><li><a href="https://www.yamana.com/investors/investor-resources/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.yamana.com/investors/investor-resources/dividend-information/default.aspx">Dividend Information</a></li><li><a href="https://www.yamana.com/investors/investor-resources/share-price/default.aspx">Share Price</a></li>
+		</ul></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=YRI&amp;Exchange=TSX" target="_blank">Interactive Analyst Center</a></li><li><a href="https://www.yamana.com/investors/annual-meeting/default.aspx">Annual Meeting</a></li><li><a href="https://www.yamana.com/investors/monarch-gold-acquisition-shareholder-information/default.aspx">Monarch Gold Acquisition Shareholder Information</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/responsibility/our-approach/default.aspx">Responsibility</a><ul class="level2">
+		<li><a href="https://www.yamana.com/responsibility/our-approach/default.aspx">Our Approach</a></li><li><a href="https://www.yamana.com/responsibility/year-at-a-glance/default.aspx">Year at a Glance</a></li><li><a href="https://www.yamana.com/responsibility/hsec-governance/default.aspx">HSEC Governance</a></li><li><a href="https://www.yamana.com/responsibility/our-people/default.aspx">Our People</a></li><li><a href="https://www.yamana.com/responsibility/health-and-safety/default.aspx">Health and Safety</a></li><li><a href="https://www.yamana.com/responsibility/environment/default.aspx">Environment</a></li><li><a href="https://www.yamana.com/responsibility/community-relations/default.aspx">Community Relations</a></li><li><a href="https://www.yamana.com/responsibility/tailings-management/default.aspx">Tailings Management</a></li><li><a href="https://www.yamana.com/responsibility/covid-19-update/default.aspx">COVID-19 Update</a></li><li><a href="https://www.yamana.com/responsibility/responsibility-reports/default.aspx">Responsibility Reports</a></li>
+	</ul></li><li><a href="https://www.yamana.com/blog/default.aspx">Blog</a></li><li class="has-children"><a href="https://www.yamana.com/careers/career-opportunities/default.aspx">Careers</a><ul class="level2">
+		<li><a href="https://www.yamana.com/careers/career-opportunities/default.aspx">Career Opportunities</a></li><li><a href="https://yamanagold.hiringroom.com/jobs" target="_blank">Argentina</a></li><li><a href="https://trabalheconosco.vagas.com.br/yamana">Brazil</a></li><li><a href="https://www.yamana.com/careers/canada/default.aspx">Canada</a></li><li><a href="https://www.yamana.com/careers/chile/default.aspx">Chile</a></li>
+	</ul></li><li><a href="https://www.yamana.com/contact/default.aspx">Contact</a></li>
+</ul></nav></span><span class='HeaderPaneDiv4'><div id="_ctrl0_ctl15_divModuleContainer" class="module module-embed layout_toggle">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <i class="q4-icon_menu" tabindex="0"></i>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv5'><div id="_ctrl0_ctl18_divModuleContainer" class="module module-search module-search--desktop" role="search">
+    <div class="module_container module_container--outer">
+        <div id="_ctrl0_ctl18_lblTitle" class="module-search_toggle" role="button" aria-label="toggle search" tabindex="0"><span id="_ctrl0_ctl18_lblModuleTitle" class="ModuleTitle"><i class="q4-icon_search"></i></span></div>
+        <div class="module_container module_container--inner">
+            <div class="module_container module_container--inner_wrap">
+                <div class="module_container--content">
+                    <span tabindex="0" class="button_close"><span class="q4-icon_cross"></span></span>
+                    <label for="_ctrl0_ctl18_txtSearchInput" id="_ctrl0_ctl18_lblSearchText" class="module-search_text sr-only">Search query</label>
+                    <input name="_ctrl0$ctl18$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl18_txtSearchInput" class="module_input module-search_input" title="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl18$btnSearch&#39;, &#39;&#39;); " />
+                    <input type="submit" name="_ctrl0$ctl18$btnSearch" value="Search" id="_ctrl0_ctl18_btnSearch" class="module_button module-search_button" />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl57_divModuleContainer" class="module module-embed module-stock-header">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-stock-header_nyse"></div>
+<div class="module-stock-header_tse"></div>
+<div class="module-stock-header_lse"></div>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.17.min.js"></script>
+<script>
+var stockQuoteHeaderSettings = {
+    useXignite: true,
+    changeCls: ['module-stock-header_down', 'module-stock-header_up'],
+    stockTpl: (
+        '{{#.}}' +
+        '<span class="module-stock-header_description1">{{symbol}}-{{exchange}}:</span>' +
+        '<span class="module-stock-header_stock-price">${{tradePrice}}</span>' +
+        '{{/.}}'
+    )
+};
+$('.module-stock-header_nyse').stockQuote(stockQuoteHeaderSettings, {
+    lookupIndex: 1
+});
+$('.module-stock-header_tse').stockQuote(stockQuoteHeaderSettings, {
+    lookupIndex: 2
+});
+// $('.module-stock-header_lse').stockQuote(stockQuoteHeaderSettings, {
+//     lookupIndex: 3
+// });
+var stockTplLSE = (
+    /* beautify preserve:start */
+    '<span class="module-stock-header_description1">{{symbol}}-{{exchange}}:</span>' +
+    '<span class="module-stock-header_stock-price">{{currency}} {{tradePrice}}</span>'
+    /* beautify preserve:end */
+);
+$.getJSON("https://ir.q4europe.com/ServiceEngine/api/json/reply/RequestStockDataBundle?apiversion=1&solutionID=4090&customerKey=yamanagold&instrumentTypes=Listing", function(data) {
+    // console.log(data.data[0].prevClose, data.data[0].symbol, data.data[0].currency);
+    data.tradePrice = data.data[0].lastTradePrice;
+    data.exchange = 'LSE';
+    data.symbol = data.data[0].symbol;
+    data.currency = $.trim(data.data[0].currency);
+    $('.module-stock-header_lse').html(Mustache.render(stockTplLSE, data));
+});
+</script>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--banner">
+                <div class="pane_inner"><span class='HeaderPane2Div2'><div id="_ctrl0_ctl60_divModuleContainer" class="module module-embed module-slider dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_container module_container--widget"></div>
+<script>
+$('.module-slider .module_container--widget').downloads({
+    downloadType: 'Slider',
+    showAllYears: true, 
+    template: (
+        /* beautify preserve:start */
+        '<div class="module_container--content">' +
+            '{{#items}}' +
+                '<div class="module_item-container" style="background-image: url({{thumb}});">' +
+                    '<div class="module_item {{tags}}">' +
+                        '<div class="module_item-wrap">' +
+                            '<h1 class="module-slider_title">{{{title}}}</h1>' +
+                            '<div class="module-slider_description">{{{description}}}</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>' +
+            '{{/items}}' +
+        '</div>' +
+        '<div class="module-slider-nav">' +
+            '<div class="module-slider-nav_arrows"></div>' +
+            '<div class="module-slider-nav_dots"></div>' +
+        '</div>' +
+        '<div class="module-slider-helper">'+
+        	'<div class="module-slider-helper-wrap"><span>Scroll</span></div>'+
+    	'</div>'
+    	/* beautify preserve:end */
+    ),
+    complete: function(e) {
+        $(e.target).find('.module_container--content').slick({
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            appendArrows: $('.module-slider-nav_arrows'),
+            appendDots: $('.module-slider-nav_dots'),
+            arrows: true,
+            dots: true,
+            prevArrow: '<button class="slick-prev" aria-label="Previous" title="Previous" type="button"><span class="sr-only">Previous</span></button>',
+            nextArrow: '<button class="slick-next" aria-label="Next" title="Next" type="button"><span class="sr-only">Next</span></button>'
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--navigation">
+                <div class="pane_inner"><span class='NavigationPaneDiv7'><nav class="nav nav--mobile"><ul class="level1">
+	<li class="has-children"><a href="https://www.yamana.com/about/company-overview/default.aspx">About</a><ul class="level2">
+		<li><a href="https://www.yamana.com/about/company-overview/default.aspx">Company Overview</a></li><li><a href="https://www.yamana.com/about/directors/default.aspx">Directors</a></li><li><a href="https://www.yamana.com/about/management/default.aspx">Management</a></li><li><a href="https://www.yamana.com/about/ethics-and-governance/default.aspx">Ethics & Governance</a></li><li><a href="https://www.yamana.com/about/our-values/default.aspx">Our Values</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/portfolio/producing-mines/default.aspx">Portfolio</a><ul class="level2">
+		<li class="has-children"><a href="https://www.yamana.com/portfolio/producing-mines/default.aspx">Producing Mines</a><ul class="level3">
+			<li><a href="https://www.yamana.com/portfolio/producing-mines/canadian-malartic/default.aspx">Canadian Malartic</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/cerro-moro/default.aspx">Cerro Moro</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/el-penon/default.aspx">El Peñón</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/jacobina/default.aspx">Jacobina</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/minera-florida/default.aspx">Minera Florida</a></li>
+		</ul></li><li><a href="https://www.yamana.com/portfolio/advancing-projects/default.aspx">Advancing Projects</a></li><li><a href="https://www.yamana.com/portfolio/exploration/default.aspx">Exploration</a></li><li><a href="https://www.yamana.com/portfolio/strategic-assets/default.aspx">Strategic Assets</a></li><li><a href="https://www.yamana.com/portfolio/mineral-reserves-and-mineral-resources/default.aspx">Mineral Reserves and Mineral Resources</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/investors/investor-overview/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.yamana.com/investors/investor-overview/default.aspx">Investor Overview</a></li><li><a href="https://www.yamana.com/investors/news/default.aspx">News</a></li><li><a href="https://www.yamana.com/investors/events-and-presentations/default.aspx">Events & Presentations</a></li><li><a href="https://www.yamana.com/investors/financial-reports-and-corporate-reports/default.aspx">Financial and Corporate Reports</a></li><li class="has-children"><a href="https://www.yamana.com/investors/investor-resources/transfer-agent/default.aspx">Investor Resources</a><ul class="level3">
+			<li><a href="https://www.yamana.com/investors/investor-resources/transfer-agent/default.aspx">Transfer Agent</a></li><li><a href="https://www.yamana.com/investors/investor-resources/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.yamana.com/investors/investor-resources/dividend-information/default.aspx">Dividend Information</a></li><li><a href="https://www.yamana.com/investors/investor-resources/share-price/default.aspx">Share Price</a></li>
+		</ul></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=YRI&amp;Exchange=TSX" target="_blank">Interactive Analyst Center</a></li><li><a href="https://www.yamana.com/investors/annual-meeting/default.aspx">Annual Meeting</a></li><li><a href="https://www.yamana.com/investors/monarch-gold-acquisition-shareholder-information/default.aspx">Monarch Gold Acquisition Shareholder Information</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/responsibility/our-approach/default.aspx">Responsibility</a><ul class="level2">
+		<li><a href="https://www.yamana.com/responsibility/our-approach/default.aspx">Our Approach</a></li><li><a href="https://www.yamana.com/responsibility/year-at-a-glance/default.aspx">Year at a Glance</a></li><li><a href="https://www.yamana.com/responsibility/hsec-governance/default.aspx">HSEC Governance</a></li><li><a href="https://www.yamana.com/responsibility/our-people/default.aspx">Our People</a></li><li><a href="https://www.yamana.com/responsibility/health-and-safety/default.aspx">Health and Safety</a></li><li><a href="https://www.yamana.com/responsibility/environment/default.aspx">Environment</a></li><li><a href="https://www.yamana.com/responsibility/community-relations/default.aspx">Community Relations</a></li><li><a href="https://www.yamana.com/responsibility/tailings-management/default.aspx">Tailings Management</a></li><li><a href="https://www.yamana.com/responsibility/covid-19-update/default.aspx">COVID-19 Update</a></li><li><a href="https://www.yamana.com/responsibility/responsibility-reports/default.aspx">Responsibility Reports</a></li>
+	</ul></li><li><a href="https://www.yamana.com/blog/default.aspx">Blog</a></li><li class="has-children"><a href="https://www.yamana.com/careers/career-opportunities/default.aspx">Careers</a><ul class="level2">
+		<li><a href="https://www.yamana.com/careers/career-opportunities/default.aspx">Career Opportunities</a></li><li><a href="https://yamanagold.hiringroom.com/jobs" target="_blank">Argentina</a></li><li><a href="https://trabalheconosco.vagas.com.br/yamana">Brazil</a></li><li><a href="https://www.yamana.com/careers/canada/default.aspx">Canada</a></li><li><a href="https://www.yamana.com/careers/chile/default.aspx">Chile</a></li>
+	</ul></li><li><a href="https://www.yamana.com/contact/default.aspx">Contact</a></li>
+</ul></nav></span></div>
+            </div>
+        </div>
+        <div class="layout_content" id="maincontent">
+            <div class="layout_content-wrap-top clearfix">
+                <div class="pane pane--left">
+                    <div class="pane_inner"><span class='LeftPaneDiv'></span></div>
+                </div>
+                <div class="pane pane--breadcrumb">
+                    <div class="pane_inner"><span class='BreadcrumbPaneDiv8'><nav class="nav nav--secondary"><ul class="level1">
+	<li class="has-children"><a href="https://www.yamana.com/about/company-overview/default.aspx">About</a><ul class="level2">
+		<li><a href="https://www.yamana.com/about/company-overview/default.aspx">Company Overview</a></li><li><a href="https://www.yamana.com/about/directors/default.aspx">Directors</a></li><li><a href="https://www.yamana.com/about/management/default.aspx">Management</a></li><li><a href="https://www.yamana.com/about/ethics-and-governance/default.aspx">Ethics & Governance</a></li><li><a href="https://www.yamana.com/about/our-values/default.aspx">Our Values</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/portfolio/producing-mines/default.aspx">Portfolio</a><ul class="level2">
+		<li class="has-children"><a href="https://www.yamana.com/portfolio/producing-mines/default.aspx">Producing Mines</a><ul class="level3">
+			<li><a href="https://www.yamana.com/portfolio/producing-mines/canadian-malartic/default.aspx">Canadian Malartic</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/cerro-moro/default.aspx">Cerro Moro</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/el-penon/default.aspx">El Peñón</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/jacobina/default.aspx">Jacobina</a></li><li><a href="https://www.yamana.com/portfolio/producing-mines/minera-florida/default.aspx">Minera Florida</a></li>
+		</ul></li><li><a href="https://www.yamana.com/portfolio/advancing-projects/default.aspx">Advancing Projects</a></li><li><a href="https://www.yamana.com/portfolio/exploration/default.aspx">Exploration</a></li><li><a href="https://www.yamana.com/portfolio/strategic-assets/default.aspx">Strategic Assets</a></li><li><a href="https://www.yamana.com/portfolio/mineral-reserves-and-mineral-resources/default.aspx">Mineral Reserves and Mineral Resources</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/investors/investor-overview/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.yamana.com/investors/investor-overview/default.aspx">Investor Overview</a></li><li><a href="https://www.yamana.com/investors/news/default.aspx">News</a></li><li><a href="https://www.yamana.com/investors/events-and-presentations/default.aspx">Events & Presentations</a></li><li><a href="https://www.yamana.com/investors/financial-reports-and-corporate-reports/default.aspx">Financial and Corporate Reports</a></li><li class="has-children"><a href="https://www.yamana.com/investors/investor-resources/transfer-agent/default.aspx">Investor Resources</a><ul class="level3">
+			<li><a href="https://www.yamana.com/investors/investor-resources/transfer-agent/default.aspx">Transfer Agent</a></li><li><a href="https://www.yamana.com/investors/investor-resources/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="https://www.yamana.com/investors/investor-resources/dividend-information/default.aspx">Dividend Information</a></li><li><a href="https://www.yamana.com/investors/investor-resources/share-price/default.aspx">Share Price</a></li>
+		</ul></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=YRI&amp;Exchange=TSX" target="_blank">Interactive Analyst Center</a></li><li><a href="https://www.yamana.com/investors/annual-meeting/default.aspx">Annual Meeting</a></li><li><a href="https://www.yamana.com/investors/monarch-gold-acquisition-shareholder-information/default.aspx">Monarch Gold Acquisition Shareholder Information</a></li>
+	</ul></li><li class="has-children"><a href="https://www.yamana.com/responsibility/our-approach/default.aspx">Responsibility</a><ul class="level2">
+		<li><a href="https://www.yamana.com/responsibility/our-approach/default.aspx">Our Approach</a></li><li><a href="https://www.yamana.com/responsibility/year-at-a-glance/default.aspx">Year at a Glance</a></li><li><a href="https://www.yamana.com/responsibility/hsec-governance/default.aspx">HSEC Governance</a></li><li><a href="https://www.yamana.com/responsibility/our-people/default.aspx">Our People</a></li><li><a href="https://www.yamana.com/responsibility/health-and-safety/default.aspx">Health and Safety</a></li><li><a href="https://www.yamana.com/responsibility/environment/default.aspx">Environment</a></li><li><a href="https://www.yamana.com/responsibility/community-relations/default.aspx">Community Relations</a></li><li><a href="https://www.yamana.com/responsibility/tailings-management/default.aspx">Tailings Management</a></li><li><a href="https://www.yamana.com/responsibility/covid-19-update/default.aspx">COVID-19 Update</a></li><li><a href="https://www.yamana.com/responsibility/responsibility-reports/default.aspx">Responsibility Reports</a></li>
+	</ul></li><li><a href="https://www.yamana.com/blog/default.aspx">Blog</a></li><li class="has-children"><a href="https://www.yamana.com/careers/career-opportunities/default.aspx">Careers</a><ul class="level2">
+		<li><a href="https://www.yamana.com/careers/career-opportunities/default.aspx">Career Opportunities</a></li><li><a href="https://yamanagold.hiringroom.com/jobs" target="_blank">Argentina</a></li><li><a href="https://trabalheconosco.vagas.com.br/yamana">Brazil</a></li><li><a href="https://www.yamana.com/careers/canada/default.aspx">Canada</a></li><li><a href="https://www.yamana.com/careers/chile/default.aspx">Chile</a></li>
+	</ul></li><li><a href="https://www.yamana.com/contact/default.aspx">Contact</a></li>
+</ul></nav></span></div>
+                </div>
+            </div>
+            <div class="layout_content-wrap-bottom clearfix">
+                <div class="pane pane--content">
+                    <div class="pane_inner"><span class='ContentPaneDiv'><span class='ContentPaneDiv3'><div id="_ctrl0_ctl63_divModuleContainer" class="module module-html module-intro">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="grid">
+    <div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+        <h2 class="module_title">Evolve, Adapt, Advance</h2>
+    </div>
+    <div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+        <p>We plan for the long term while constantly evolving, adapting, and optimizing to meet the ever-changing needs and demands of our business, stakeholders, and employees. </p>
+        <a href="/about/company-overview/default.aspx" class="module_link-more">Learn more</a>
+    </div>
+</div>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv4'><div id="_ctrl0_ctl66_divModuleContainer" class="module module-html module-sustainability small-title module--thick-top module--no-padding-bottom">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="grid">
+    <div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+        <div class="module-sustainability_box">
+            <div class="module-sustainability-top">
+                <h2 class="module_title"><span class="subtitle">Sustainability</span><span class="title">Climate Change Strategy</span></h2>
+                <p>As a responsible gold miner we are committed to playing our part in transitioning to a low-carbon economy. Our Climate Change Strategy is focused on emissions reduction as well as mitigation, adaption and preparedness and is underpinned by science-based targets.</p>
+                <div class="module_link-container">
+                    <a href="/responsibility/environment#climate" class="module_link-more">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="grid">
+    <div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+        <div class="module-sustainability_box">
+            <div class="module-sustainability-top">
+                <h2 class="module_title"><span class="subtitle">Sustainability</span><span class="title">Responsible mining is at the Core of how we Operate</span></h2>
+                <p>At Yamana, health, safety, environment and community relations programs are integrated into all our operations.</p>
+                <div class="module_link-container">
+                    <a href="/responsibility/corporate-social-responsibility-reports/default.aspx" class="module_link-more">Learn more</a>
+                </div>
+            </div>
+            <div class="module-sustainability-bottom q4icons dark">
+                <h3>Material Issues Report</h3>
+                <a class="module_link module_link-download" href="//s26.q4cdn.com/719777497/files/doc_downloads/2019-Yamana-MIR_200612_final-web.pdf" target="_blank">
+                    <span class="q4icons_icon" aria-hidden="true"></span>
+                    <span class="module_link-text">Download PDF</span>
+                    <span class="module_file-size">(5.68 MB)</span>
+                    <span class="sr-only">(opens in new window)</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>--><style></style>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv5'><div id="_ctrl0_ctl69_divModuleContainer" class="module module-embed module-producing-mines module--thick background--grey">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="grid module-map-header">
+    <div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+        <h2 class="module_title">Producing Mines</h2>
+    </div>
+    <div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+        <a href="/portfolio/producing-mines/default.aspx" class="module_link-more">View Full portfolio</a>
+    </div>
+</div>
+<div class="module-map">
+    <div class="grid ">
+        <div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+            <div class="module-map_container">
+                <img src="//s26.q4cdn.com/719777497/files/images/producing-mines/map-dots.svg" alt="Map Dots Image">
+                <div class="module-map_dots">
+                    <div class="module-map_dot dot1" data-tab=".dot1"><span></span></div>
+                    <div class="module-map_dot dot2" data-tab=".dot2"><span></span></div>
+                    <div class="module-map_dot dot3" data-tab=".dot3"><span></span></div>
+                    <div class="module-map_dot dot4" data-tab=".dot4"><span></span></div>
+                    <div class="module-map_dot dot5" data-tab=".dot5"><span></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid_col grid_col--1-of-2 grid_col--md-1-of-1">
+            <span class="module-map_details-caption">Click on map items to learn more</span>
+            <div class="module-map_details_container">
+                <div class="module-map_details dot1">
+                    <div class="module-map_details-top">50% Yamana owned</div>
+                    <div class="module-map_details-image"><img src="//s26.q4cdn.com/719777497/files/images/producing-mines/canadian-malartic.jpg" alt="Canadian Malartic Image"></div>
+                    <div class="module-map_details-text">
+                        <h3><span class="subtitle">Canada</span>Canadian Malartic</h3>
+                        <p>Canada’s biggest gold mine and established producer is advancing a large underground project with the potential to extend mine life for decades.</p>
+                        <a href="/portfolio/producing-mines/canadian-malartic/default.aspx" class="module_link-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="module-map_details dot2">
+                    <div class="module-map_details-top">100% Yamana owned</div>
+                    <div class="module-map_details-image"><img src="//s26.q4cdn.com/719777497/files/images/producing-mines/jacobina.jpg" alt="Jacobina Image"></div>
+                    <div class="module-map_details-text">
+                        <h3><span class="subtitle">Brazil</span>Jacobina</h3>
+                        <p>Top tier, long life underground mine that has more than doubled production since 2014, with opportunities for further significant growth.</p>
+                        <a href="/portfolio/producing-mines/jacobina/default.aspx" class="module_link-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="module-map_details dot3">
+                    <div class="module-map_details-top">100% Yamana owned</div>
+                    <div class="module-map_details-image"><img src="//s26.q4cdn.com/719777497/files/images/producing-mines/el-penon.jpg" alt="El Peñón Image"></div>
+                    <div class="module-map_details-text">
+                        <h3><span class="subtitle">Chile</span>El Peñón</h3>
+                        <p>An optimized high grade underground mine with consistent performance and strong cash flow generation and a remarkable track record of ongoing exploration success.</p>
+                        <a href="/portfolio/producing-mines/el-penon/default.aspx" class="module_link-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="module-map_details dot4">
+                    <div class="module-map_details-top">100% Yamana owned</div>
+                    <div class="module-map_details-image"><img src="//s26.q4cdn.com/719777497/files/images/producing-mines/minera-florida.jpg" alt="minera florida Image"></div>
+                    <div class="module-map_details-text">
+                        <h3><span class="subtitle">Chile</span>Minera Florida</h3>
+                        <p>Established underground mine transitioning to newer high-grade zones that will provide the foundation for future production increases and extended mine life.</p>
+                        <a href="/portfolio/producing-mines/minera-florida/default.aspx" class="module_link-more">Learn more</a>
+                    </div>
+                </div>
+                <div class="module-map_details dot5">
+                    <div class="module-map_details-top">100% Yamana owned</div>
+                    <div class="module-map_details-image"><img src="//s26.q4cdn.com/719777497/files/images/producing-mines/cerro-moro.jpg" alt="Cerro Moro Image"></div>
+                    <div class="module-map_details-text">
+                        <h3><span class="subtitle">Argentina</span>Cerro Moro</h3>
+                        <p>High-grade underground and open-pit mine with exploration upside to provide sustainable production and drive future growth.</p>
+                        <a href="/portfolio/producing-mines/cerro-moro/default.aspx" class="module_link-more">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+// q4Defaults.tabs($('.module-map'), '.module-map_container', '.module-map_dot', '.module-map_details', '.module-map_select', false);
+var $widget = $('.module-producing-mines'),
+    pinIndex = 0;
+$widget.find('.module-map_details_container').slick({
+    asNavFor: $widget.find('.module-map_dots'),
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: true,
+    draggable: false,
+    fade: true,
+    initialSlide: pinIndex,
+    nextArrow: '<a tabindex="0" class="module_link-more">Next</a>'
+});
+$widget.find('.module-map_dots').slick({
+    asNavFor: $widget.find('.module-map_details_container'),
+    infinite: true,
+    draggable: false,
+    focusOnSelect: true,
+    initialSlide: pinIndex,
+    arrows: false
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv6'><div id="_ctrl0_ctl72_divModuleContainer" class="module module-embed module-news module-news-latest">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="grid">
+    <div class="grid_col grid_col--5-of-12 grid_col--md-1-of-1">
+        <h2 class="module_title">Latest Yamana Gold News</h2>
+        <a href="/investors/news/default.aspx" class="module_link-more">View All news</a>
+    </div>
+    <div class="grid_col grid_col--7-of-12 grid_col--md-1-of-1">
+        <div class="module_container module_container--content"></div>
+    </div>
+</div>
+<script>
+$('.module-news-latest .module_container--content').news({
+    showAllYears: true,
+    limit: 3,
+    titleLength: 100,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '{{#items}}' +
+            '<div class="module_item">' +
+                '<div class="module_item-wrap">' +
+                    '<div class="module_date-time">' +
+                        '<span class="module_date-text">{{date}}</span>' +
+                    '</div>' +
+                    '<div class="module_headline">' +
+                        '<a class="module_headline-link" href="{{url}}"{{#blank}} target="_blank"{{/blank}}>{{title}} {{#blank}}<span class="sr-only">(opens in new window)</span>{{/blank}}</a>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+        '{{/items}}'
+        /* beautify preserve:end */
+    ),
+    beforeRender: function(e, data) {
+        $.each(data.items, function(idx, item) {
+            var url = item.url.toLowerCase().split('.');
+            if (url[url.length - 1] == 'pdf') {
+                item.blank = true;
+            }
+        });
+    }
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv7'><div id="_ctrl0_ctl75_divModuleContainer" class="module module-embed module-event-and-report module-wide module--no-padding-top">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <style>
+    .module_item.grid_col.grid_col--1-of-2.event-widget-boxes {
+    display: inline-block;
+    width: 55rem;
+}
+</style>
+<div class="grid grid--wide grid--flex">
+    <div class="grid_col grid_col--1-of-2 grid_col--lc-1-of-1 grid_col--md-1-of-1">
+        <div class="module-event-latest">
+            <div class="module_container module_container--content"></div>
+        </div>
+    </div>
+    <div class="grid_col grid_col--1-of-2 grid_col--lc-1-of-1 grid_col--md-1-of-1">
+        <div class="module-latest-annual-report">
+            <div class="module_container module_container--content">
+                <div class="module_item">
+                    <div class="grid grid--flex grid--no-gutter">
+                        <div class="grid_col grid_col--3-of-5 grid_col--sm-3-of-5">
+                            <div class="module_item-wrap dark">
+                                <div class="module_headline"><span class="module_headline-link">Visit our media Centre</span></div>
+                                <div class="module_links module_links--stack q4icons">
+                                    <div class="module_link-container">
+                                        <a class="module_link-more" href="/media/default.aspx">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid_col grid_col--2-of-5 grid_col--sm-2-of-5">
+                            <div class="module-event-latest_image module-event-latest_image--media"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$('.module-event-latest .module_container--content').events({
+    showAllYears: true,
+    limit: 1,
+    // limitSort: 1, 
+    titleLength: 40,
+    dateFormat: {
+        date: 'dddd, MMMM D, YYYY',
+        time: 'hh:mm a'
+    },
+    tags: ['quarterly'],
+    useMoment: true,
+    append: false,
+    template: (
+        /* beautify preserve:start */
+        '{{#items}}' +
+                '<div class="grid grid--flex grid--no-gutter">' +
+                    '<div class="grid_col grid_col--3-of-5 grid_col--sm-3-of-5">' +
+                        '<div class="module_item-wrap">' +
+                            '<div class="module_headline">' +
+                                '<a class="module_headline-link" href="{{url}}">{{title}}</a>' +
+                            '</div>' +
+                            '<div class="module_date-time">' +
+                                '<span class="module_date-text">{{date.date}} at {{date.time}} {{timeZone}}</span>' +
+                            '</div>' +
+                            '<div class="module_links module_links--stack q4icons">' +
+                                '{{#webcast}}' +
+                                    '<div class="module_webcast">' +
+                                        '<a class="module_link module_webcast-link" href="{{webcast}}" target="_blank">' +
+                                            '<span class="module_link-text">View Webcast</span>' +
+                                            '<span class="q4icons_icon" aria-hidden="true"></span>' +
+                                            '<span class="sr-only">(opens in new window)</span>'+
+                                        '</a>' +
+                                    '</div>' +
+                                '{{/webcast}}' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    '<div class="grid_col grid_col--2-of-5 grid_col--sm-2-of-5">' +
+                        '<div class="module-event-latest_image"></div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+        '{{/items}}'
+        /* beautify preserve:end */
+    )
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv8'><div id="_ctrl0_ctl78_divModuleContainer" class="module module-embed module-stock-landing module--thin-top module--no-padding-bottom background--grey">
+    <div class="module_container module_container--outer">
+        <h2 id="_ctrl0_ctl78_lblTitle" class="module_title"><span id="_ctrl0_ctl78_lblModuleTitle" class="ModuleTitle">Invest with Yamana Gold</span></h2>
+        <div class="module_container module_container--inner">
+            <div class="module_link-more-container">
+    <a href="/investors/investor-overview/default.aspx" class="module_link-more">Investors</a>
+</div>
+<div class="module_container--content grid--flex grid--wide">
+    <div class="module-stock-landing_item module-stock-landing_item--nyse grid_col grid_col--1-of-3 grid_col--md-1-of-1"></div>
+    <div class="module-stock-landing_item module-stock-landing_item--tse grid_col grid_col--1-of-3 grid_col--md-1-of-1"></div>
+    <div class="module-stock-landing_item module-stock-landing_item--lse grid_col grid_col--1-of-3 grid_col--md-1-of-1"></div>
+</div>
+<script>
+var stockQuoteHomeSettings = {
+    dateFormat: {
+        date: 'D MMM YYYY',
+        time: 'h:mm a'
+    },
+    useMoment: true,
+    changeCls: ['module-stock-landing_down', 'module-stock-landing_up'],
+    stockTpl: (
+        /* beautify preserve:start */
+        '{{#.}}' +
+            '<div class="module-stock-landing_top">' +
+                '<span class="module-stock-landing_description1">{{exchange}}: {{symbol}}</span>' +
+                '<span class="module-stock-landing_date">{{tradeDate.time}} on {{tradeDate.date}}</span>' +
+            '</div>' +
+            '<div class="module-stock-landing_bottom">' +
+                '<div class="module-stock-landing_stock-price">${{tradePrice}}</div>' +
+                '<span class="module-stock-landing_change {{uod}}">' +
+                    '<span class="module-stock-landing_indicator">{{uodSymbol}}</span>{{change}} ' + //( {{percChange}}% )
+                '</span>' +
+                '<div class="module-stock-landing_arrow {{uod}}"></div>' +
+            '</div>' +
+        '{{/.}}'
+        /* beautify preserve:end */
+    )
+};
+$('.module-stock-landing_item--nyse').stockQuote(stockQuoteHomeSettings, {
+    lookupIndex: 1
+});
+$('.module-stock-landing_item--tse').stockQuote(stockQuoteHomeSettings, {
+    lookupIndex: 2
+});
+// $('.module-stock-landing_item--lse').stockQuote(stockQuoteHomeSettings, {
+//     lookupIndex: 3
+// });
+
+var addZero = function(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+};
+var convertTime = function(time) {
+    var militaryTime = time.split(':'),
+        hours = militaryTime[0],
+        suffix = "am";
+    if (hours >= 12) {
+        suffix = "pm";
+        hours = hours - 12;
+    }
+    if (hours === 0)
+        hours = 12;
+
+    return hours + ':' + militaryTime[1] + ' ' + suffix;
+};
+var stockTplLandingLSE = (
+    /* beautify preserve:start */
+        '<div class="module-stock-landing_top">' +
+            '<span class="module-stock-landing_description1">{{exchange}}: {{symbol}}</span>' +
+            '<span class="module-stock-landing_date">{{tradeDateTime}} on {{tradeDateDate}}</span>' +
+        '</div>' +
+        '<div class="module-stock-landing_bottom">' +
+            '<div class="module-stock-landing_stock-price">{{currency}} {{tradePrice}}</div>' +
+            '<span class="module-stock-landing_change {{uod}}">' +
+                '<span class="module-stock-landing_indicator">{{uodSymbol}}</span>{{change}} ' + //( {{percChange}}% )
+            '</span>' +
+            '<div class="module-stock-landing_arrow {{uod}}"></div>' +
+        '</div>'
+    /* beautify preserve:end */
+);
+$.getJSON("https://ir.q4europe.com/ServiceEngine/api/json/reply/RequestStockDataBundle?apiversion=1&solutionID=4090&customerKey=yamanagold&instrumentTypes=Listing", function(data) {
+    var newStockDate = new Date(data.data[0].tradeTimestamp);
+    data.tradePrice = data.data[0].lastTradePrice;
+    data.exchange = 'LSE';
+    data.symbol = data.data[0].symbol;
+    data.currency = $.trim(data.data[0].currency);
+    data.change = data.data[0].change.toFixed(2);
+    data.uod = data.data[0].change < 0 ? 'module-stock-landing_down' : 'module-stock-landing_up';
+    data.uodSymbol = data.data[0].change >= 0 ? '+' : '';
+    data.tradeDateDate = $.datepicker.formatDate('d M yy', newStockDate);
+    data.tradeDateTime = convertTime(addZero(newStockDate.getHours()) + ':' + addZero(newStockDate.getMinutes()));
+    $('.module-stock-landing_item--lse').html(Mustache.render(stockTplLandingLSE, data));
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='ContentPaneDiv9'><div id="_ctrl0_ctl81_divModuleContainer" class="module module-html module-interactive-analyst module--no-padding-top background--grey title-small dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_container--content">
+    <h2 class="module_title">Interactive Analyst Center</h2>
+    <div class="grid">
+        <div class="grid_col grid_col--2-of-3 grid_col--md-1-of-1">
+            <p>Detailed data on Yamana’s financial and operational performance.</p>
+        </div>
+        <div class="grid_col grid_col--1-of-3 grid_col--md-1-of-1">
+            <a href="http://apps.indigotools.com/IR/IAC/?Ticker=YRI&amp;Exchange=TSX" target="_blank" class="module_link-more">Learn more</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div></span></span></div>
+                </div>
+                <div class="pane pane--right">
+                    <div class="pane_inner"><span class='RightPaneDiv'></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="layout_footer" role="contentinfo">
+            <div class="pane pane--footer">
+                <div class="pane_inner"><span class='FooterPaneDiv'><span class='FooterPaneDiv11'><div id="_ctrl0_ctl27_divModuleContainer" class="module module-html module-back-to-top">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="button-back-to-top" role="button" aria-label="back to top" tabindex="0">
+    <span class="button_text">Back to top</span>
+    <span class="q4-icon_up"></span>
+</div>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--footer2">
+                <div class="pane_inner"><span class='FooterPane2Div12'><div id="_ctrl0_ctl30_divModuleContainer" class="module module-html module-logo-social-footer dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_container--content">
+    <div class="module-logo-footer">
+        <a href="/" title="Home"><img src="//s26.q4cdn.com/719777497/files/design/logo-yamanagold_white.svg" alt="Yamana Gold Inc. Logo"></a>
+    </div>
+    <div class="module-social-footer">
+        <ul class="list--reset">
+            <li><a target="_blank" href="http://www.facebook.com/pages/Yamana-Gold/150944298311295" title="Follow us on Facebook"><i class="q4-icon_facebook"></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fwww.yamana.com%2FNews-and-Events%2FPressReleaseDetail%2F2014%2FYamana-Gold-Announces-Second-Quarter-2014-Results%2Fdefault.aspx&amp;region=follow_link&amp;screen_name=YamanaGoldInc&amp;tw_p=followbutton&amp;variant=2.0" title="Follow us on Twitter"><i class="q4-icon_twitter"></i></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/company/yamana-gold-inc-/" title="Follow us on Linkedin"><i class="q4-icon_linkedin"></i></a></li>
+            <!-- <li><a target="_blank" href="http://www.slideshare.net/yamanagold2016" title="Follow us on Slideshare"><i class="q4-icon_slideshare"></i></a></li> -->
+        </ul>
+    </div>
+</div>
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div13'><div id="_ctrl0_ctl33_divModuleContainer" class="module module-html module-footer-navigation">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <nav class="nav nav--footer js--appended"></nav>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--credits">
+                <div class="pane_inner"><span class='Q4FooterDiv14'><div id="_ctrl0_ctl36_divModuleContainer" class="module module-html copyright">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            © <span class="copyright_year"></span> Yamana Gold
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv15'><div id="_ctrl0_ctl39_divModuleContainer" class="module module-q4-credits">
+    <div class="module_container module_container--outer">
+        <div class="module_container module_container--inner">
+            <a href="https://www.q4inc.com/Powered-by-Q4/" id="_ctrl0_ctl39_hrefWebsiteRecording" class="module-q4-credits-link" target="_blank">
+                <span id="_ctrl0_ctl39_lblWebsiteRecording" class="module-q4-credits_powered-text">Powered By Q4 Inc.</span>
+                <span id="_ctrl0_ctl39_lblVersion" class="module-q4-credits_version-text">5.56.0.1</span>
+                <span class="sr-only">(opens in new window)</span>
+            </a>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv16'><div id="_ctrl0_ctl42_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl42_divModuleContainer" class="module-quicklinks-footer">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl42_qlList" class="module-quicklinks-footer">
+                
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.yamana.com/disclaimer/default.aspx" id="_ctrl0_ctl42_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Disclaimer</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.yamana.com/privacy-policy/default.aspx" id="_ctrl0_ctl42_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Privacy Policy</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv17'><div id="_ctrl0_ctl45_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script>
+var q4App = $.extend(true, q4Defaults, {
+    options: {
+        headerOffset: function() {
+            // if ($(window).width() > 1024) {
+            // return $('.pane--header').outerHeight() + $('.pane--navigation .pane_inner').outerHeight();
+            // } else {
+            return $('.pane--header').outerHeight();
+            // }
+        },
+        mailingListConfig: {
+            tpl: (
+                '<div id="SubscriberConfirmation" class="module module-subscribe module-subscribe--fancy module-subscribe--footer dark">' +
+                '   <div class="module_container--outer">' +
+                '       <h2 class="module_title">Investor Email Alerts</h2>' +
+                '       <div class="module_container--inner">' +
+                '           <p class="module_message module_message--success"></p>' +
+                '       </div>' +
+                '   </div>' +
+                '</div>'
+            ),
+            submitText: 'Subscribe'
+        }
+    },
+    sections: function() {
+        var hash = decodeURIComponent(window.location.hash.length ? window.location.hash.substring(1) : ''),
+            isMobileOpen = function() {
+                return $('.layout').hasClass('js--mobile');
+            };
+        setTimeout(function() {
+            if ($('.module-' + hash).length) {
+                q4App.scrollTo($('.module-' + hash), 700);
+                window.location.hash = hash;
+            }
+            if ($('a[data-name*="' + hash + '"]').length) {
+                window.location.hash = hash;
+                q4App.scrollTo($('a[data-name*="' + hash + '"]'), 700);
+            }
+        }, 1000);
+
+        $('body').on('click', 'a[href*="#"]', function(e) {
+            var hash = $(this).attr('href').split('#').pop();
+            if (isMobileOpen()) {
+                $('.layout').removeClass('js--mobile');
+            }
+            if ($('.module-' + hash).length) {
+                e.preventDefault();
+                window.location.hash = hash;
+                q4App.scrollTo($('.module-' + hash), 700);
+            } else if ($('a[data-name*="' + hash + '"]').length) {
+                e.preventDefault();
+                window.location.hash = hash;
+                q4App.scrollTo($('a[data-name*="' + hash + '"]'), 700);
+            }
+        });
+    },
+    thirdNavigation: function() {
+        $('.nav--banner').find('.level1 > li').each(function() {
+            var hrefHash = $(this).find('> a').attr('href').split('#').pop();
+            if ($('.module-' + hrefHash).length) {
+                $('.module-' + hrefHash).addClass('section').addClass('section--' + hrefHash);
+            }
+            $(this).find('> a').on('click', function() {
+                $(this).closest('li').addClass('js--selected').siblings().removeClass('js--selected');
+            });
+        });
+
+        $(window).on('scroll resize', function() {
+            var wScroll = $(window).scrollTop();
+            $('.section').each(function(index) {
+                var classValue = $(this).attr('class').split('section--')[1],
+                    top = $(this).offset().top - $('.pane--header').outerHeight() - 7,
+                    secHeight = $(this).outerHeight();
+                if (top <= wScroll && (top + secHeight) > wScroll) {
+                    $('.nav--banner').find('a[href="#' + classValue + '"]').closest('li').addClass('js--selected').siblings().removeClass('js--selected');
+                }
+            });
+        });
+    },
+    stickyNavBar: function() {
+        var inst = this,
+            $document = $(document),
+            $layout = $('.layout'),
+            $fixedElement = $('.pane--header'),
+            $stickyNavWrapper = $('.pane--navigation'),
+            $nav = $('.nav--banner');
+
+        $document.on("scroll resize", function() {
+            var scrollPosition = $(this).scrollTop(),
+                sections = $('.layout_content .module'),
+                headerOffset = q4App.options.headerOffset + 7;
+
+            if (scrollPosition > 0) {
+                $layout.addClass('js--header-small');
+            } else {
+                $layout.removeClass('js--header-small');
+            }
+
+            if (scrollPosition > $stickyNavWrapper.offset().top - $fixedElement.outerHeight()) {
+                $layout.addClass('js--nav-banner-sticky');
+            } else {
+                $layout.removeClass('js--nav-banner-sticky');
+            }
+        });
+    },
+    toggle: function($container, item, toggle, panel, accordion, allButton, openFirst) {
+        var $this = this,
+            $item = $container.find(item);
+
+        $this.accessibilize($container.find(toggle), $container.find(panel));
+        $container.find(panel).attr('role', 'tabpanel');
+        $item.on('click keypress', toggle, function(e) {
+            e.preventDefault();
+            if (e.which == 13 || e.type == 'click') {
+                if (accordion) {
+                    $this._accordionTrigger($(this), $container, item, toggle, panel);
+                } else {
+                    $this._toggleTrigger($(this), $container, item, panel);
+                }
+
+                if (allButton) {
+                    if (!$container.find(item + '.js--active').length) {
+                        $container.find('.toggle-all').removeClass('js--active');
+                    }
+                    if ($container.find(item + '.js--active').length === $container.find(item).length) {
+                        $container.find('.toggle-all').addClass('js--active');
+                    }
+                }
+            }
+        });
+
+        if (allButton) {
+            $this._toggleAll($container, item, toggle, panel);
+        }
+
+        if (openFirst) {
+            $item.first().find(toggle).attr('aria-pressed', true);
+            $item.first().addClass('js--active').find(panel).removeClass('js--hidden');
+            $item.not(':first').find(panel).hide();
+        }
+    },
+    checkNavSec: function() {
+        if (!$('.nav--secondary').length || $('.nav--secondary').height() == 0) {
+            $('body').addClass('js--sec-nav-displayed');
+        }
+    },
+    scrollingTable: function(selector) {
+        $(selector).not(selector + ' table').wrap('<div class="table-wrapper" />');
+    },
+    meetingFancy: function($selector, trigger) {
+        var meetingCookie = sessionStorage.getItem('requestMeeting');
+        if (meetingCookie != 'closed') {
+            $selector.removeClass('js--hidden');
+        }
+        $selector.on('click', '.button--cookie', function() {
+            $selector.addClass('js--hidden');
+            sessionStorage.setItem("requestMeeting", 'closed');
+        });
+        $selector.on('click', trigger, function(e) {
+            e.preventDefault();
+            $.fancybox.open({
+                type: 'iframe',
+                src: '/request-meeting-iframe/default.aspx',
+                opts: {
+                    margin: [10, 0],
+                    slideClass: 'fancybox-slide--form',
+                    parentEl: 'form'
+                }
+            });
+        });
+        window.addEventListener('message', function(event) {
+            if (event.data == 'close-fancybox') {
+                $.fancybox.close();
+            }
+        }, false);
+    },
+    iconFix: function() {
+        $('.q4icons .module_link').each(function() {
+            if (!$(this).children('.q4icons_icon').length) {
+                $(this).append('<span class="q4icons_icon" aria-hidden="true"></span>');
+            }
+        });
+    },
+    searchDesktop: function() {
+        $('.module-search').on('click', '.module-search_toggle', function(e) {
+            e.preventDefault();
+            $('body').toggleClass('js--search-opened');
+        });
+        $('.module-search').on('click', '.button_close', function(e) {
+            e.preventDefault();
+            $('body').removeClass('js--search-opened');
+        });
+    },
+    footerNav: function() {
+        $('.nav--main .level1').clone().appendTo('.nav--footer');
+    },
+    fancySignup: function() {
+        var inst = this,
+            validationLock = true,
+            signup = inst.options.mailingListSignupCls,
+            $signup = $(signup),
+            confirm = 'div[id*="SubscriberConfirmation"]',
+            $confirm = $('div[id*="SubscriberConfirmation"]'), // jshint ignore:line
+            footerSuccess = inst.options.mailingListConfig.location + ' ' + confirm + ' .module_message--success',
+            $footerSuccess = $(footerSuccess);
+
+        // Subscriber Confirmation fix
+        if ($confirm.is(':visible')) {
+            if ($confirm.filter(':visible').closest(inst.options.mailingListConfig.location).length) {
+                var successText = $confirm.filter(':visible').closest(inst.options.mailingListConfig.location).find('.module_message--success').text();
+                $confirm.filter(':visible').parent().html(inst.options.mailingListConfig.tpl).find('.module_message--success').html(successText);
+            }
+            inst.scrollTo($('div[id*="SubscriberConfirmation"]').filter(':visible'), 0);
+            if (!$footerSuccess.length) {
+                $('.module-unsubscribe,' + inst.options.mailingListConfig.hideOnConfirmation).addClass('js--hidden');
+            }
+        }
+
+        if (!$signup.length) {
+            return;
+        }
+
+        $signup.each(function() {
+            var $this = $(this);
+
+            // If a confirmation or error message is visible on page load, scroll to the module
+            if ($this.find('input.module_input').length && $this.find('input.module_input').val().length) {
+                inst.scrollTo($this, 0);
+            }
+            // Create a second submit button to be displayed inside fancybox. Replace input type submit with button
+            var $submit = $this.find('input[type="submit"]');
+            $submit.addClass('js--hidden');
+            $submit[0].outerHTML = $submit[0].outerHTML.replace(/^<input/, '<button') + '<span class="button_text">' + $submit[0].value + '</span></button>';
+            $this.find('.module_actions').append('<button type="submit" class="button module-subscribe_submit-button module-subscribe_submit-button--fancy"><span class="button_text">' + inst.options.mailingListConfig.submitText + '</span></button>');
+
+            $this.on('click', '.module-subscribe_submit-button--fancy', function(e) {
+                e.preventDefault();
+                validationLock = false;
+
+                var $parent = $(this).closest(signup),
+                    errors = inst._mailingListValidation($parent);
+
+                if (!errors.length) {
+                    $(this).closest(signup).find('.module_actions [type="submit"]').not(this).trigger('click');
+                    return false;
+                } else {
+                    inst.scrollTo($this.find('.module_error-container'), 0);
+                }
+
+                return false;
+            });
+
+            // Run validation on change
+            $this.find('input, select').on('change', function() {
+                if (!validationLock) {
+                    inst._mailingListValidation($this);
+                }
+            });
+
+            // Validate submit on enter
+            $this.find('input[type="text"], input[type="email"]').on('keydown', function(e) {
+                if (e.keyCode == 13) {
+                    e.preventDefault();
+                    $(this).closest(signup).find('.module_actions [type="submit"]').trigger('click');
+                    return false;
+                }
+            });
+        });
+    },
+    minHeightContent: function() {
+        if ($('.pane--breadcrumb').filter(":visible").length) {
+            $('.pane--left .pane_inner').css('min-height', $('.pane--breadcrumb').height() + 30);
+        }
+    },
+    backToTopButton: function() {
+        $(window).on('scroll resize', function(e) {
+            $(window).scrollTop() >= $(window).height() / 2 ? $('.layout').addClass('js--back-to-top-visible') : $('.layout').removeClass('js--back-to-top-visible');
+        });
+        $('.module-back-to-top').on('click', '.module_container--outer', function() {
+            $('html, body').animate({
+                scrollTop: $('.layout').eq(0).offset().top
+            }, 500);
+        });
+    },
+    init: function() {
+        var app = this;
+        app.cleanUp();
+        app.submitOnEnter('.module-unsubscribe');
+        app.submitOnEnter('.module-search');
+        app.validateSubmit('.module-search');
+        app.superfish($('.nav--main .level1'), {
+            cssArrows: false,
+            delay: 0,
+            speed: 0,
+            speedOut: 0
+        });
+        app.mobileMenuToggle($('.layout'), '.pane--navigation', '.layout_toggle i');
+        app.cleanQuickLinks($('.module-links'));
+        app.copyright($('.copyright_year'));
+        app.reveal('.pane--footer .module-subscribe', '.module_input', '.module-subscribe_mailing-list, .module_actions', true);
+        app.docTracking();
+        app.fancySignup();
+        app.resetDate(['.nav a[href*="s4.q4web.com"]:not([href$=".pdf"])']);
+        app.previewToolbar();
+        app.sections();
+        app.contrast.init();
+        app.meetingFancy($('.module-cta'), '.button--meeting');
+        app.iconFix();
+        app.accessibleNavKeyboard('.nav--main', '1', '.nav--secondary');
+        app.searchDesktop();
+        app.footerNav();
+        app.checkNavSec();
+        app.minHeightContent();
+        app.stickyNavBar();
+        app.backToTopButton();
+        app.thirdNavigation();
+    }
+});
+
+q4App.init();
+</script>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv19'><div id="_ctrl0_ctl48_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div id="iac-disclaimer">
+    <div class="module-disclaimer_container">
+        <h2 class="h3 underline uppercase">Disclaimer</h2>
+        <p>You are now leaving the Yamana Gold Inc. website to go to an independent third party website.
+            <br>Yamana has no control over information at third party sites hyperlinked to this one. These links are being provided for the convenience of the users of this website and Yamana does not endorse and is not responsible or liable for the content, nature or reliability of any linked website or any link contained in a linked website. Yamana takes no responsibility for monitoring, updating, supplementing or correcting any information on any linked website and makes no representation or warranties regarding such information.
+        </p>
+        <h3 class="h4 uppercase">NON-GAAP Information</h3>
+        <p>Yamana discloses certain non-GAAP measures including Cash costs per ounce of gold, Cash costs per ounce of silver, Co-product cash costs per ounce of gold, Co-product cash costs per ounce of silver, Co-product cash costs per pound of copper, All-in sustaining costs per ounce of gold, All-in sustaining costs per ounce of silver, All-in sustaining co-product costs per ounce of gold, and All-in sustaining co-product costs per ounce of silver to supplement its Consolidated Financial Statements, which are presented in accordance with IFRS. The term IFRS and generally accepted accounting principles (“GAAP”) are used interchangeably. The Company believes that these measures, together with measures determined in accordance with IFRS, provide investors with an improved ability to evaluate the underlying performance of the Company. Non-GAAP measures do not have any standardized meaning prescribed under IFRS, and therefore they may not be comparable to similar measures employed by other companies. The data is intended to provide additional information and should not be considered in isolation or as a substitute for measures of performance prepared in accordance with IFRS.</p>
+        <div class="module_buttons-container">
+            <a tabindex="0" href="http://apps.indigotools.com/IR/IAC/?Ticker=YRI&amp;Exchange=TSX" class="button agree" target="_blank" onclick="javascript:$.fancybox.close()">Agree</a>
+            <a tabindex="0" onclick="javascript:$.fancybox.close()" class="button disagree">Disagree</a>
+        </div>
+    </div>
+</div>
+<script>
+$('a[href*="apps.indigotools.com"]').not('#iac-disclaimer .agree').on('click keypress', function(e) {
+    e.preventDefault();
+    $.fancybox.open({
+        src: $('#iac-disclaimer').html(),
+        type: 'inline',
+        opts: {
+            slideClass: 'iac-disclaimer'
+        },
+        modal: true
+    });
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv20'><div id="_ctrl0_ctl51_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        <h2 id="_ctrl0_ctl51_lblTitle" class="module_title"><span id="_ctrl0_ctl51_lblModuleTitle" class="ModuleTitle">External Popup</span></h2>
+        <div class="module_container module_container--inner">
+            <div id="external-popup">
+    <div class="module-disclaimer_container">
+        <h2 class="h3 underline uppercase">Notice regarding Third Party Links</h2>
+        <p>You are now leaving the Yamana Gold Inc. website to go to an independent third party website.</p>
+        <p>Yamana has no control over information at third party sites hyperlinked to this one. These links are being provided for the convenience of the users of this website and Yamana does not endorse and is not responsible or liable for the content, nature or reliability of any linked website or any link contained in a linked website. Yamana takes no responsibility for monitoring, updating, supplementing or correcting any information on any linked website and makes no representation or warranties regarding such information.</p>
+    </div>
+</div>
+<script>
+$('a[href*="yamana.bumeran.com.ar"], a[href*="trabalheconosco.vagas.com.br"], a[href*="www.vagas.com.br"], a[href*="yamanagold.hiringroom.com"]').not('#external-popup .agree').on('click keypress', function(e) {
+    e.preventDefault();
+    var urlLink = $(this).attr('href'),
+        htmlPopup = (
+        '<div id="external-popup">'+
+            '<div class="module-disclaimer_container">'+ 
+            $('#external-popup .module-disclaimer_container').html()+
+            '<div class="module_buttons-container text-center">'+
+                '<a tabindex="0" href="'+urlLink+'" class="button agree uppercase" target="_blank" onclick="javascript:$.fancybox.close()">Click Here to Proceed to External Website</a>'+
+            '</div>'+
+        '</div>'
+    );
+    $.fancybox.open({
+        src: htmlPopup,
+        type: 'inline',
+        opts: {
+            slideClass: 'external-popup'
+        },
+        modal: true
+    });
+});
+</script>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv21'><div id="_ctrl0_ctl54_divModuleContainer" class="module module-embed">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=3re6g4pyqhihwarusopola" async="true"></script>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

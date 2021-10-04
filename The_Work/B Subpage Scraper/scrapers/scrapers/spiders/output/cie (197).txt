@@ -1,0 +1,16 @@
+
+      A Frequently Asked Question (FAQ) page contains a list of questions and answers pertaining to
+      a particular topic. Properly marked up FAQ pages may be eligible to have a rich result on
+      Search and an , which
+      can help your site reach the right users. Here's an example of an FAQ rich result:
+    
+    Structured data is a standardized format for providing information about a page and classifying the page
+    content. If you're new to structured data, you can learn more about
+    .
+    
+    Here's an overview of how to build, test, and release structured data. For a step-by-step guide
+    on how to add structured data to a web page, check out the
+    .FAQ rich results are available in all countries and languages where Google Search
+      is available. The feature is available on desktop and mobile devices.Here's an example of  in JSON-LD:Here's an example of  in Microdata:For your FAQ page to be eligible for FAQ rich results, you must follow these guidelines:::You must include the required properties for your content to be eligible for display as a rich
+  result. You can also include the recommended properties to add more information to your structured
+  data, wh

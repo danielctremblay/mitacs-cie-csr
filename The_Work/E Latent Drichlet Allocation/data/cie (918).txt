@@ -1,0 +1,10 @@
+Low Latency, Reliable Data to Power your SystemsQuoteMedia's Streaming Data Feed is a powerful enterprise level streaming market data solution.
+                            Data streams are tick-by-tick and available in real-time or delayed. Data is normalized for ease of use, and fully optimized to ensure single digit millisecond performance.
+                             Power your Javascript or Web-based ProductsWe also deliver market data and research in our JSON Financial Data APIs.  
+                            This allows you to easily integrate our data into your web products.  
+                            For javascript developers, JSON is natively supported and pluggable into AJAX 
+                            for dynamically updating HTML5 applications. 
+                             Real-Time, Delayed or End of Day XML FeedsQuoteMedia provides XML Market Data APIs for quotes, fundamentals, options, filings, news, research, analytics and more. 
+                            Simply formatted and delivered over the web, XML calls are query based, rather than streaming, 
+                            so you only receive the data you need when you need it. 
+                         

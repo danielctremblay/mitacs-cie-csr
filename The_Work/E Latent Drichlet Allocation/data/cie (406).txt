@@ -1,0 +1,19 @@
+
+      PageSpeed Insights (PSI) reports on the performance of a page on both mobile and desktop
+      devices, and provides suggestions on how that page may be improved.
+    
+      PSI provides both lab and field data about a page. Lab data is useful for debugging
+      performance issues, as it is collected in a controlled environment. However, it may not
+      capture real-world bottlenecks. Field data is useful for capturing true, real-world user
+      experience - but has a more limited set of metrics. See  for more information on the 2 types of data.
+    
+      At the top of the report, PSI provides a score which summarizes the page’s performance.
+      This score is determined by running  to collect and
+      analyze  about the page. A score of 90 or above is considered good.
+      50 to 90 is a score that needs improvement, and below 50 is considered poor.
+    
+      When PSI is given a URL, it will look it up in the  (CrUX) dataset. If available, PSI reports the  (FCP),  (FID),
+       (LCP), and  (CLS) metric data for the origin and potentially the specific page URL.
+    
+      PSI also classifies field data into 3 buckets, describing experiences deemed good, needs
+      im

@@ -1,0 +1,874 @@
+<!doctype html>
+<html dir="ltr" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-Compatible" content="ie=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"NRJS-ce23e6af80739377585",applicationID:"997425810"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Preload Fonts -->
+	<link rel="preload" href="https://triconresidential.com/wp-content/themes/triconresidential/assets/fonts/DomaineText-Medium.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://triconresidential.com/wp-content/themes/triconresidential/assets/fonts/ProximaNova-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://triconresidential.com/wp-content/themes/triconresidential/assets/fonts/ProximaNova-Bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="https://triconresidential.com/wp-content/themes/triconresidential/assets/fonts/DomaineText-Black.woff2" as="font" type="font/woff2" crossorigin>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5H7KD8K');</script>
+	<!-- End Google Tag Manager -->
+
+	<script>
+    window.__INITIAL_SETTINGS__ = {
+        svgVersion: 1619446758,
+        location: {
+            coords: {
+                lat: '22.717',
+                long: '75.8337',
+            },
+            city: 'Indore',
+            region: {
+                id: '544296',
+                name: 'Toronto',
+                slug: 'toronto',
+                distance: '7588'
+            },
+            country: 'IN',
+        },
+        speedbumpDomains: [ 'leadmanaging.com' ]
+    }
+    var vh = window.innerHeight * 0.01;document.documentElement.style.setProperty('--vh', vh + 'px');
+    window.lazySizesConfig = window.lazySizesConfig || {};window.lazySizesConfig.init = false;
+    </script>
+
+	<title>Investing with Tricon Residential - Tricon Residential Stock</title>
+<meta name="description" content="Our mission is to provide quality housing for people across North America and to generate strong risk-adjusted returns for our public and private investors. View investment information, corporate reports and filings, and learn more about Tricon&#039;s mission in serving both consumers and investors." />
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="https://triconresidential.com/investors/" />
+<meta property="og:url" content="https://triconresidential.com/investors/" />
+<meta property="og:site_name" content="Tricon Residential" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="article:author" content="https://www.facebook.com/TriconResidential" />
+<meta property="article:publisher" content="https://www.facebook.com/TriconResidential" />
+<meta property="og:title" content="Investing with Tricon Residential - Tricon Residential Stock" />
+<meta property="og:description" content="Our mission is to provide quality housing for people across North America and to generate strong risk-adjusted returns for our public and private investors. View investment information, corporate reports and filings, and learn more about Tricon&#039;s mission in serving both consumers and investors." />
+<meta property="og:image" content="https://s34643.pcdn.co/wp-content/uploads/Tricon-Residential-Social.jpg" />
+<meta property="og:image:secure_url" content="https://s34643.pcdn.co/wp-content/uploads/Tricon-Residential-Social.jpg" />
+<meta property="og:image:width" content="1640" />
+<meta property="og:image:height" content="856" />
+<meta property="og:image:alt" content="Tricon Residential Social" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Investing with Tricon Residential - Tricon Residential Stock" />
+<meta name="twitter:description" content="Our mission is to provide quality housing for people across North America and to generate strong risk-adjusted returns for our public and private investors. View investment information, corporate reports and filings, and learn more about Tricon&#039;s mission in serving both consumers and investors." />
+<meta name="twitter:image:src" content="https://s34643.pcdn.co/wp-content/uploads/Tricon-Residential-Social.jpg" />
+        <script type="application/ld+json">
+            {"@context":"https:\/\/schema.org","@type":"Organization","name":"Tricon Residential","url":"https:\/\/triconresidential.com","logo":"https:\/\/triconresidential.com\/tricon_logo.svg","sameAs":["https:\/\/www.facebook.com\/TriconResidential","https:\/\/www.instagram.com\/tricon.residential\/"],"contactPoint":[{"@type":"ContactPoint","telephone":"+0018448742661","contactOption":"TollFree","contactType":"customer support"}]}        </script>
+        <link rel='stylesheet' id='egg-stylesheet-css'  href='https://triconresidential.com/wp-content/themes/triconresidential/assets/css/style.css?v=1621287264' type='text/css' media='all' />
+
+		<link rel="manifest" crossorigin="use-credentials" href="https://triconresidential.com/wp-content/themes/triconresidential/components/favicons/manifest.webmanifest" >
+		<link rel="icon" type="image/svg+xml" href="https://triconresidential.com/wp-content/themes/triconresidential/components/favicons/favicon.svg">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<meta name="theme-color" content="#002357">
+		<meta name="apple-mobile-web-app-title" content="Tricon">
+		<meta name="author" content="Tricon Residential">
+		<meta name="revisit-after" content="15 days">
+		<meta name="rating" content="general">
+		<meta name="distribution" content="global">
+	
+	
+				<style>.bannerMedia {background-position: 50% 50%;}@media only screen and (max-width: 48em) {.bannerMedia {background-image: url('https://s34643.pcdn.co/wp-content/uploads/2020/08/Page-13-Option-2-THP-Vistancia-West-Phoenix-AZ-960x960.jpg');}}@media only screen and (min-width: 48em) {.bannerMedia {background-image: url('https://s34643.pcdn.co/wp-content/uploads/1016048158-video-placeholder-1280x720.jpg');}}@media only screen and (min-width: 75em) {.bannerMedia.noVideo {background-image: url('https://s34643.pcdn.co/wp-content/uploads/1016048158-video-placeholder-1920x1080.jpg');}}</style>
+	
+</head>
+
+<body class="page-template-default page page-id-19 page-parent">
+
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H7KD8K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="testVue"></div>
+<div id="container" class="type-dark default">
+
+    
+	<a class="screen-reader-text" href="#content">Skip to Content</a>
+
+	
+	<header class="pageHeader hasHero dark">
+
+		<a id="logo" href="https://triconresidential.com" title="Tricon Residential Home">
+			<svg><title>Tricon Residential</title><use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#tricon_logo"></use></svg>
+		</a>
+
+		
+
+
+
+<a id="favoriteToggle" title="View Favorites" target="_blank" rel="noopener" href="https://secure.triconresidential.com/favorites/dashboard">
+	<svg class="favorite">
+		<title>View Favorites</title>
+		<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#favorite"></use>
+	</svg>
+</a>
+
+
+<button id="menuToggle">
+	<span class="label">MENU</span>
+	<svg class="open">
+		<title>Open Menu</title>
+		<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#menu"></use>
+	</svg>
+	<svg class="close">
+		<title>Close Menu</title>
+		<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#close"></use>
+	</svg>
+</button>
+
+<div class="menuFull-wrap">
+	<nav class="menuFull">
+		
+		<ul id="menu-main-menu" class="mainNav"><li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="https://triconresidential.com/find/">U.S. Rental Homes</a></li>
+<li id="menu-item-544441" class="menu-item menu-item-type-post_type menu-item-object-region menu-item-544441"><a href="https://triconresidential.com/region/toronto/">Toronto Rental Living</a></li>
+<li id="menu-item-566487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566487"><a href="https://triconresidential.com/about/tricondifference/">The Tricon Difference</a></li>
+<li id="menu-item-532525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-532525"><a href="https://triconresidential.com/resources/">Resources</a></li>
+<li id="menu-item-532526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-532526"><a href="https://triconresidential.com/currentresidents/">Residents</a></li>
+</ul>		
+					<div class="pillNav">
+				<a class="addTripodUTM" href="https://secure.triconresidential.com/public/login" target="_blank" rel="noopener">Sign In</a>
+				<a class="addTripodUTM" href="https://secure.triconresidential.com/public/register" target="_blank" rel="noopener">Create Account</a>
+			</div>
+		
+	</nav>
+	
+	<nav class="bottomNav">
+
+		<ul id="menu-sub-menu" class="blueNav"><li id="menu-item-136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="https://triconresidential.com/about/">About Us</a></li>
+<li id="menu-item-566488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-566488"><a href="https://triconresidential.com/investors/sustainability/">Sustainability</a></li>
+<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="https://triconresidential.com/careers/">Careers</a></li>
+<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-19 current_page_item menu-item-67"><a href="https://triconresidential.com/investors/" aria-current="page">Investors</a></li>
+<li id="menu-item-566473" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-566473"><a target="_blank" rel="noopener" href="https://triconcapital.altareturn.com/">Private Investor Login</a></li>
+</ul>		
+		
+	</nav>
+</div>
+
+	</header>
+
+
+<div class="heroBanner height-full dark menutype-subpages topFade leftFade">
+
+
+	
+
+    	    <div class="heroContent ">
+
+	        <h1 class="heroTitle">Investing with Tricon Residential</h1>
+
+	        
+	        
+	    </div>
+    
+
+	
+		
+	
+
+        <div class="bannerMedia hasVideo">
+
+				    <video id="hero-video" class="videoBackground" muted playsinline loop="loop" width="1920" height="1080">
+		        <source data-src="https://s34643.pcdn.co/wp-content/uploads/2020/08/1016048158-hd.mp4" type="video/mp4"/>
+		    </video>
+		    <button id="hero-video-button" title="Pause Video">
+		        <svg class="pause"><title>Pause</title><use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#pause"></use></svg>
+		        <svg class="play"><title>Play</title><use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#play"></use></svg>
+		    </button>
+		
+    </div>
+
+
+</div>
+
+
+
+
+
+
+	<div id="subMenu" class="subMenu">
+		
+		<a href="#subMenu" class="toggleSubPages" title="Toggle Sub Menu">
+			<svg>
+				<title>Arrow</title>
+				<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#arrow-down"></use>
+			</svg>
+			<span>More</span>
+		</a>
+		
+		<ul class="subPages">
+			<li class="current_page_root current_page_item">
+				<a href="https://triconresidential.com/investors/">Company Profile</a>
+			</li>
+			<li class="page_item page-item-42 page_item_has_children"><a href="https://triconresidential.com/investors/news-events/">News &#038; Events</a></li>
+<li class="page_item page-item-586242"><a href="https://triconresidential.com/investors/reports-filings/">Reports &#038; Filings</a></li>
+<li class="page_item page-item-48"><a href="https://triconresidential.com/investors/stock-dividends/">Stock &#038; Dividends</a></li>
+<li class="page_item page-item-49"><a href="https://triconresidential.com/investors/private-capital/">Private Capital</a></li>
+<li class="page_item page-item-30"><a href="https://triconresidential.com/investors/corporate-governance/">Corporate Governance</a></li>
+<li class="page_item page-item-31"><a href="https://triconresidential.com/investors/sustainability/">Sustainability</a></li>
+		</ul>
+		
+					<div class="buttonLinks">
+							<a class="button" href="https://triconcapital.altareturn.com/" target="_blank">Private Investor Login</a>
+						
+						</div>
+			
+	</div>
+
+
+
+<main id="content">
+	
+	
+<section id="block1" class="cardBlock wrap cf">
+	
+		
+	<div class="cards style-three total-3">
+						<div class="card color-solid_blue_dark">
+				
+							<svg class="cardIcon" aria-hidden="true" focusable="false">
+					<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#people"></use>
+				</svg>
+	
+						
+							<div class="cardContent">
+					
+										
+										<h3 class="h4">Our History</h3>
+										
+										<p><span class="h5"><strong>1988</strong></span><br />
+Founded<br />
+<br />
+<span class="h5"><strong>2010</strong></span><br />
+Listed (TSX)<br />
+<br />
+<span class="h5"><strong>33</strong></span><br />
+Years</p>
+									</div>
+						
+			
+					
+		</div>	
+						<div class="card color-solid_blue_dark">
+				
+							<svg class="cardIcon" aria-hidden="true" focusable="false">
+					<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#chart"></use>
+				</svg>
+	
+						
+							<div class="cardContent">
+					
+										
+										<h3 class="h4">Our Assets Under Management (AUM)</h3>
+										
+										<p><span class="h5"><strong>$9 billion</strong></span><br />
+Total AUM<br />
+<br />
+<span class="h5"><strong>$3.9 billion</strong></span><br />
+Third-Party AUM<br />
+<br />
+<span class="h5"><strong>~90%</strong></span><br />
+Invested in the U.S. Sun Belt</p>
+									</div>
+						
+			
+					
+		</div>	
+						<div class="card color-solid_blue_dark">
+				
+							<svg class="cardIcon" aria-hidden="true" focusable="false">
+					<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#home"></use>
+				</svg>
+	
+						
+							<div class="cardContent">
+					
+										
+										<h3 class="h4">Our Portfolio </h3>
+										
+										<p><span class="h5"><strong>23,502</strong></span><br />
+Single-Family Rental Homes<br />
+<br />
+<span class="h5"><strong>7,789</strong></span><br />
+Stabilized Multi-Family Rental Apartments<br />
+<br />
+<span class="h5"><strong>3,720</strong></span><br />
+Multi-Family Rental Apartments Under Development </p>
+									</div>
+						
+			
+					
+		</div>	
+		
+		<div class="card empty" role="presentation"></div>
+		<div class="card empty" role="presentation"></div>
+	</div>
+
+
+	
+
+</section>
+<section id="block2" class="textBlock style-one color-default">
+	
+			
+	<div class="wrap">
+
+				<div class="entryContent cardContent">
+			<p class="small" style="text-align: center; margin-top: -20px;">AUM and portfolio numbers updated as of May 14, 2021.</p>
+		</div>
+				
+				
+			
+	</div>
+	
+		
+</section>	
+<section id="block3" class="halfBlock style-staggeredLeft">
+	
+	<div class="mediaBlock">
+			<figure class="lazyrectangle">
+			<img class="lazyload lazypreload" 
+				srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				data-src="https://s34643.pcdn.co/wp-content/uploads/119-Carter-Creek-Dr-Temple-GA-Cropped-400x240.jpg" 
+				data-srcset="https://s34643.pcdn.co/wp-content/uploads/119-Carter-Creek-Dr-Temple-GA-Cropped-400x240.jpg 400w, 
+				https://s34643.pcdn.co/wp-content/uploads/119-Carter-Creek-Dr-Temple-GA-Cropped-800x480.jpg 800w"
+				sizes="50vw" width="1600" height="960"
+				alt="">
+		</figure>
+		
+				
+		</div>
+	
+	<div class="staggeredContent color-solid_blue_dark">
+		<div class="cardContent entryContent">
+			
+						
+			<h4>Our mission is to provide quality housing for people across North America and to generate strong risk-adjusted returns for our public and private investors.</h4>
+<p>Founded in 1988, we’re a housing specialist with a 30+ year track record of investments in the United States and Canada. We’re predominantly focused on rental housing. We own and operate over 31,000 single-family and multi-family rental properties in 21 markets across the United States and Canada, which we manage using an integrated technology-enabled operating platform. We strive to be North America’s pre-eminent rental housing company serving the middle-market demographic by owning quality properties in attractive markets, and by focusing on operational excellence delivered through exceptional customer service.</p>
+<p>We invest our own capital and manage capital for many of the world’s largest institutional investors including leading pension funds, sovereign wealth funds, insurance companies, endowments, foundations and family offices.</p>
+		</div>
+	</div>
+
+
+
+</section>
+<section id="block4" class="textBlock style-wide color-default">
+	
+			
+	<div class="wrap">
+
+				<div class="entryContent cardContent">
+			<h2 style="text-align: center;">Our Geographic Footprint</h2>
+<p style="text-align: center;">We own and manage over 31,000 single-family and multi-family rental properties in the U.S. and Canada.</p>
+		</div>
+				
+				
+			
+	</div>
+	
+		
+</section>
+	<section class="centeredMap">
+		
+				
+		<div class="wrapInner">
+			<section class="regionMap">
+    <figure class="lazytwothirds"><img class="lazyload lazypreload"
+    	data-src="https://triconresidential.com/wp-content/themes/triconresidential/assets/img/region_map_transparent.png" 
+    	alt="Regions Tricon Serves" width="840" height="560">
+    </figure>
+	<a href="/find/bay-area-ca/" class="marker" style="top:51%; left:2.2%;" aria-label="Listings in Bay Area, CA">
+		<span class="circle"></span>
+        <span class="city">Bay Area, CA</span>
+	</a>
+	<a href="/find/sacramento/" class="marker" style="top:49%; left:4%;" aria-label="Listings in Sacramento, CA">
+		<span class="circle"></span>
+        <span class="city">Sacramento, CA</span>
+	</a>
+	<a href="/find/central-valley/" class="marker" style="top:53%; left:5%;" aria-label="Listings in Central Valley, CA">
+		<span class="circle"></span>
+        <span class="city">Central Valley, CA</span>
+	</a>
+	<a href="/find/la/" class="marker" style="top:65%; left:8%;" aria-label="Listings in Los Angeles, CA">
+		<span class="circle"></span>
+        <span class="city">Los Angeles, CA</span>
+	</a>
+	<a href="/find/inland-empire-ca/" class="marker" style="top:68%; left:7.5%;" aria-label="Listings in Inland Empire, CA">
+		<span class="circle"></span>
+        <span class="city">Inland Empire, CA</span>
+	</a>
+	<a href="/find/reno/" class="marker" style="top:47%; left:8%;" aria-label="Listings in Reno, NV">
+		<span class="circle"></span>
+        <span class="city">Reno, NV</span>
+	</a>
+	<a href="/find/vegas/" class="marker" style="top:60%; left:13%" aria-label="Listings in Las Vegas, NV">
+		<span class="circle"></span>
+        <span class="city">Las Vegas, NV</span>
+	</a>
+	<a href="/find/phoenix/" class="marker" style="top:70%; left:19%;" aria-label="Listings in Phoenix, AZ">
+		<span class="circle"></span>
+        <span class="city">Phoenix, AZ</span>
+	</a>
+	<a href="/find/dallas/" class="marker" style="top:75%; left:47%;" aria-label="Listings in Dallas, TX">
+		<span class="circle"></span>
+        <span class="city">Dallas, TX</span>
+	</a>
+	<a href="/find/san-antonio/" class="marker" style="top:86%; left:45%;" aria-label="Listings in San Antonio, TX">
+		<span class="circle"></span>
+        <span class="city">San Antonio, TX</span>
+	</a>
+	<a href="/find/houston/" class="marker" style="top:83%; left:52%;" aria-label="Listings in Houston, TX">
+		<span class="circle"></span>
+        <span class="city">Houston, TX</span>
+	</a>
+	<a href="/find/indy/" class="marker" style="top:46%; left:64%;" aria-label="Listings in Indianapolis, IN">
+		<span class="circle"></span>
+        <span class="city">Indianapolis, IN</span>
+	</a>
+	<a href="/find/atlanta/" class="marker" style="top:67%; left:71%;" aria-label="Listings in Atlanta, GA">
+		<span class="circle"></span>
+        <span class="city">Atlanta, GA</span>
+	</a>
+	<a href="/find/nashville-tn/" class="marker" style="top:59%; left:65%;" aria-label="Listings in Nashville, TN">
+		<span class="circle"></span>
+        <span class="city">Nashville, TN</span>
+	</a>
+	<a href="/find/charlotte/" class="marker" style="top:57%; left:77%;" aria-label="Charlotte, NC">
+		<span class="circle"></span>
+        <span class="city">Charlotte, NC</span>
+	</a>
+	<a href="/find/raleigh-nc/" class="marker" style="top:54%; left:82%;" aria-label="Raleigh, NC">
+		<span class="circle"></span>
+        <span class="city">Raleigh, NC</span>
+	</a>
+	<a href="/find/columbia/" class="marker" style="top:64%; left:77%;" aria-label="Listings in Columbia, SC">
+		<span class="circle"></span>
+        <span class="city">Columbia, SC</span>
+	</a>
+	<a href="/find/jacksonville/" class="marker" style="top:76%; left:79%;" aria-label="Listings in Jacksonville, FL">
+		<span class="circle"></span>
+        <span class="city">Jacksonville, FL</span>
+	</a>
+	<a href="/find/orlando/" class="marker" style="top:85%; left:82%;" aria-label="Listings in Orlando, FL">
+		<span class="circle"></span>
+        <span class="city">Orlando, FL</span>
+	</a>
+	<a href="/find/tampa/" class="marker" style="top:85%; left:79%;" aria-label="Listings in Tampa, FL">
+		<span class="circle"></span>
+        <span class="city">Tampa, FL</span>
+	</a>
+	<a href="/find/southeast-florida/" class="marker" style="top:90%; left:84%;" aria-label="Listings in Southeast, FL">
+		<span class="circle"></span>
+        <span class="city">Southeast, FL</span>
+	</a>
+	<a href="/region/toronto/" class="marker" style="top:28%; left:73%;" aria-label="Toronto, Ontario">
+		<span class="circle"></span>
+        <span class="city">Toronto, Ontario</span>
+	</a>
+</section>			<br><br>
+		</div>
+	</section>
+
+
+	
+<section id="block6" class="halfBlock style-staggeredRight">
+	
+	<div class="mediaBlock">
+			<figure class="lazyrectangle">
+			<img class="lazyload lazypreload" 
+				srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+				data-src="https://s34643.pcdn.co/wp-content/uploads/shutterstock_1290555481_01-e1607039942140-400x240.jpg" 
+				data-srcset="https://s34643.pcdn.co/wp-content/uploads/shutterstock_1290555481_01-e1607039942140-400x240.jpg 400w, 
+				https://s34643.pcdn.co/wp-content/uploads/shutterstock_1290555481_01-e1607039942140-800x480.jpg 800w"
+				sizes="50vw" width="1600" height="960"
+				alt="">
+		</figure>
+		
+				
+		</div>
+	
+	<div class="staggeredContent color-blue">
+		<div class="cardContent entryContent">
+			
+						
+			<h4>Centralized Operating Platform</h4>
+<p>We use an integrated, tech-enabled platform to operate our business.</p>
+<ul class="checkmark">
+<li>Technology and Innovation</li>
+<li>Acquisitions</li>
+<li>Resident Underwriting</li>
+<li>Leasing</li>
+<li>Repair &amp; Maintenance</li>
+<li>Call Center</li>
+<li>Construction &amp; Development</li>
+</ul>
+		</div>
+	</div>
+
+
+
+</section>
+<section id="block7" class="cardBlock wrap cf">
+	
+		
+	<div class="cards style-three total-3">
+						<a href="https://triconresidential.com/investors/news-events/" target="" class="card color-blue">
+		
+				
+							
+								<figure class="lazyrectangle"><img
+					src="https://s34643.pcdn.co/wp-content/uploads/The-Selby-Exterior-Hero-Shots-16-400x240.jpg"
+					srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+					data-srcset="
+						https://triconresidential.com/wp-content/uploads/The-Selby-Exterior-Hero-Shots-16-400x240.jpg 800w,
+						https://triconresidential.com/wp-content/uploads/The-Selby-Exterior-Hero-Shots-16-400x240.jpg 400w"
+					width="800" height="480"
+					alt=""
+					class="lazyload lazypreload" />
+				</figure>
+										
+							<div class="cardContent">
+					
+										
+										<h3 class="h4">News & Events</h3>
+										
+									</div>
+						
+			
+					
+		</a>	
+						<a href="https://triconresidential.com/investors/reports-filings/" target="" class="card color-blue">
+		
+				
+							
+								<figure class="lazyrectangle"><img
+					src="https://s34643.pcdn.co/wp-content/uploads/Labatt_View2_R1-400x240.jpg"
+					srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+					data-srcset="
+						https://triconresidential.com/wp-content/uploads/Labatt_View2_R1-400x240.jpg 800w,
+						https://triconresidential.com/wp-content/uploads/Labatt_View2_R1-400x240.jpg 400w"
+					width="800" height="480"
+					alt=""
+					class="lazyload lazypreload" />
+				</figure>
+										
+							<div class="cardContent">
+					
+										
+										<h3 class="h4">Reports & Filings</h3>
+										
+									</div>
+						
+			
+					
+		</a>	
+						<a href="https://triconresidential.com/investors/stock-dividends/" target="" class="card color-blue">
+		
+				
+							
+								<figure class="lazyrectangle"><img
+					src="https://s34643.pcdn.co/wp-content/uploads/The-James_Exterior-Rendering_South-East-View-1-400x240.jpg"
+					srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+					data-srcset="
+						https://triconresidential.com/wp-content/uploads/The-James_Exterior-Rendering_South-East-View-1-400x240.jpg 800w,
+						https://triconresidential.com/wp-content/uploads/The-James_Exterior-Rendering_South-East-View-1-400x240.jpg 400w"
+					width="800" height="480"
+					alt=""
+					class="lazyload lazypreload" />
+				</figure>
+										
+							<div class="cardContent">
+					
+										
+										<h3 class="h4">Stock & Dividends</h3>
+										
+									</div>
+						
+			
+					
+		</a>	
+		
+		<div class="card empty" role="presentation"></div>
+		<div class="card empty" role="presentation"></div>
+	</div>
+
+
+	
+
+</section>
+<section id="block8" class="textBlock style-two color-solid_blue_light">
+	
+			
+	<div class="wrap">
+
+				<div class="entryContent cardContent">
+			<h3>Contact Us</h3>
+<p>7 St. Thomas Street, Suite 801<br />
+Toronto, Ontario M5S 2B7</p>
+<p>Tel: 416 925 7228<br />
+Fax: 416 925 7964</p>
+<h3 style="padding-top: 30px;">Investor Information</h3>
+<p>Sign up to receive financial information and updates via email.</p>
+<p><a class="buttonOutline" href="/investors/news-events/email-alerts/">Register</a></p>
+		</div>
+				
+				<div class="entryContent cardContent second">
+			<h3>Information Request</h3>
+
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper' id='gform_wrapper_55' ><form method='post' enctype='multipart/form-data'  id='gform_55'  action='/investors/' novalidate>
+                        <div class='gform_body gform-body'><ul id='gform_fields_55' class='gform_fields top_label form_sublabel_below description_below'><li id="field_55_5" class="gfield gf_left_half gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible" ><label class='gfield_label' for='input_55_5' >Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_text'><input name='input_5' id='input_55_5' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /> </div></li><li id="field_55_2" class="gfield gf_right_half gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible" ><label class='gfield_label' for='input_55_2' >Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_2' id='input_55_2' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_55_3" class="gfield gfield_contains_required field_sublabel_below field_description_below gfield_visibility_visible" ><label class='gfield_label' for='input_55_3' >Message<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_3' id='input_55_3' class='textarea small'     aria-required="true" aria-invalid="false"   rows='10' cols='50'></textarea></div></li><li id="field_55_6" class="gfield gfield_contains_required field_sublabel_below field_description_below hidden_label gfield_visibility_visible" ><label class='gfield_label gfield_label_before_complex'  >Consent<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_consent'><input name='input_6.1' id='input_55_6_1' type='checkbox' value='1'   aria-required="true" aria-invalid="false"   /> <label class="gfield_consent_label" for='input_55_6_1' >I have reviewed and agree to Tricon’s <a target="_blank" rel="nofollow" href="/privacy-policy/">Privacy Policy</a> and understand the <a target="_blank" rel="nofollow" href="/terms-of-agreement/">Terms of Agreement and Qualification Criteria.</a> By submitting my information, I consent to receiving electronic messages from Tricon Residential Inc., including invitations to programs and events, as well as legal updates and other notifications.</label><span class="gfield_required gfield_required_asterisk">*</span><input type='hidden' name='input_6.2' value='I have reviewed and agree to Tricon’s &lt;a target=&quot;_blank&quot; rel=&quot;nofollow&quot; href=&quot;/privacy-policy/&quot;&gt;Privacy Policy&lt;/a&gt; and understand the &lt;a target=&quot;_blank&quot; rel=&quot;nofollow&quot; href=&quot;/terms-of-agreement/&quot;&gt;Terms of Agreement and Qualification Criteria.&lt;/a&gt; By submitting my information, I consent to receiving electronic messages from Tricon Residential Inc., including invitations to programs and events, as well as legal updates and other notifications.' class='gform_hidden' /><input type='hidden' name='input_6.3' value='6' class='gform_hidden' /></div></li></ul></div>
+        <div class='gform_footer top_label'> <input type='submit' id='gform_submit_button_55' class='gform_button button' value='Submit'  onclick='if(window["gf_submitting_55"]){return false;}  if( !jQuery("#gform_55")[0].checkValidity || jQuery("#gform_55")[0].checkValidity()){window["gf_submitting_55"]=true;}  ' onkeypress='if( event.keyCode == 13 ){ if(window["gf_submitting_55"]){return false;} if( !jQuery("#gform_55")[0].checkValidity || jQuery("#gform_55")[0].checkValidity()){window["gf_submitting_55"]=true;}  jQuery("#gform_55").trigger("submit",[true]); }' /> 
+            <input type='hidden' class='gform_hidden' name='is_submit_55' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='55' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_55' value='WyJ7XCI2LjFcIjpcIjcyYjAxNGExNzc4MzRkN2NiMWI4YmNlNjdiMzlmYWIyXCIsXCI2LjJcIjpcImU5YWE1YzM4YTQ2ZGNlMTI3YTBlNDQwYjExYjRkNzI5XCIsXCI2LjNcIjpcImFkZmJiOTY4NzY1MjUxYWVjY2ZhMDNiNTdmNGI3YzQ5XCJ9IiwiZGE4NDUxNjI2YmFjYTc5M2E0YWZhMDNiYzViNzliZDYiXQ==' />
+            <input type='hidden' class='gform_hidden' name='gform_target_page_number_55' id='gform_target_page_number_55' value='0' />
+            <input type='hidden' class='gform_hidden' name='gform_source_page_number_55' id='gform_source_page_number_55' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		</div>
+				
+			
+	</div>
+	
+		
+</section>
+</main>
+
+
+<footer class="pageFooter default">
+
+	<div class="wrap">
+
+	<div class="footerTop">
+
+		<a id="logoFooter" href="https://triconresidential.com" title="Home">
+			<svg>
+				<title>Tricon Residential</title>
+				<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#tricon_logo"></use>
+			</svg>
+        </a>
+
+        <p class="tagline">Professionally managed, quality single-family rental homes and apartments across North America.</p>
+
+        
+        <div class="socialNav footerSocialNav">
+            <a href="https://www.facebook.com/TriconResidential.Home/" target="_blank" rel="noopener">
+                <svg>
+                    <title>facebook</title>
+                    <use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#facebook"></use>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/triconresidential.home/" target="_blank" rel="noopener">
+                <svg>
+                    <title>instagram</title>
+                    <use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#instagram"></use>
+                </svg>
+            </a>
+            <a href="https://g.page/TriconResidential" target="_blank" rel="noopener">
+                <svg>
+                    <title>google</title>
+                    <use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#google"></use>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/tricon-residential/" target="_blank" rel="noopener">
+                <svg>
+                    <title>linkedin</title>
+                    <use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#linkedin"></use>
+                </svg>
+            </a>
+        </div>
+
+	</div>
+
+    <nav class="footerLinks">
+        <ul id="menu-footer-links" class=""><li id="menu-item-576275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-576275"><a href="https://triconresidential.com/find/">U.S. Rental Homes</a>
+<ul class="sub-menu">
+	<li id="menu-item-576276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576276"><a href="https://triconresidential.com/communities/">Our Dedicated Communities</a></li>
+	<li id="menu-item-560757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560757"><a href="https://triconresidential.com/resources/smarthome/">Smart Homes</a></li>
+	<li id="menu-item-560756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560756"><a href="https://triconresidential.com/resources/sell-your-home/">Sell Your Home</a></li>
+	<li id="menu-item-560753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560753"><a href="https://triconresidential.com/regions/">Regions We Serve</a></li>
+</ul>
+</li>
+<li id="menu-item-586732" class="menu-item menu-item-type-post_type menu-item-object-region menu-item-has-children menu-item-586732"><a href="https://triconresidential.com/region/toronto/">Toronto Rental Living</a>
+<ul class="sub-menu">
+	<li id="menu-item-576279" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-576279"><a href="https://triconresidential.com/region/toronto/#block1">Our Properties</a></li>
+	<li id="menu-item-560763" class="menu-item menu-item-type-post_type menu-item-object-community menu-item-560763"><a href="https://triconresidential.com/community/theselby/">The Selby</a></li>
+	<li id="menu-item-586748" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-586748"><a href="https://triconresidential.com/region/toronto/#block3">The Tricon Difference</a></li>
+	<li id="menu-item-576278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576278"><a href="https://triconresidential.com/exclusive-partners/">Exclusive Partners</a></li>
+</ul>
+</li>
+<li id="menu-item-576307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-576307"><a href="https://triconresidential.com/resources/">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-560752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560752"><a href="https://triconresidential.com/resources/pet-friendly-us/">Pet Friendly – U.S.</a></li>
+	<li id="menu-item-560755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560755"><a href="https://triconresidential.com/resources/pet-friendly-canada/">Pet Friendly – Canada</a></li>
+	<li id="menu-item-576315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576315"><a href="https://triconresidential.com/resources/militarydiscount/">Military Discount</a></li>
+	<li id="menu-item-576317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576317"><a href="https://triconresidential.com/resources/fraud-prevention/">Fraud Prevention</a></li>
+	<li id="menu-item-576316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576316"><a href="https://triconresidential.com/resources/realtors/">Realtor Commissions</a></li>
+	<li id="menu-item-576311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576311"><a href="https://triconresidential.com/resources/vendor-guidelines/">Vendor Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-576306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-576306"><a href="https://triconresidential.com/currentresidents/">Current Residents</a>
+<ul class="sub-menu">
+	<li id="menu-item-576314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576314"><a href="https://triconresidential.com/resources/pods/">PODS Moving &#038; Storage</a></li>
+	<li id="menu-item-576313" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576313"><a href="https://triconresidential.com/resources/cort/">CORT Rental Furniture</a></li>
+	<li id="menu-item-576312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576312"><a href="https://triconresidential.com/resources/why-renters-insurance/">Why Renters Insurance?</a></li>
+</ul>
+</li>
+<li id="menu-item-560759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-560759"><a href="https://triconresidential.com/about/">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-586246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-586246"><a href="/about/#block7">Our Leadership</a></li>
+	<li id="menu-item-576416" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576416"><a href="https://triconresidential.com/about/our-people/">Our People</a></li>
+	<li id="menu-item-560758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560758"><a href="https://triconresidential.com/about/tricondifference/">The Tricon Difference</a></li>
+	<li id="menu-item-576277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576277"><a href="https://triconresidential.com/about/investing-in-communities/">Investing in Communities</a></li>
+</ul>
+</li>
+<li id="menu-item-560761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560761"><a href="https://triconresidential.com/careers/">Careers</a></li>
+<li id="menu-item-560760" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-19 current_page_item menu-item-has-children menu-item-560760"><a href="https://triconresidential.com/investors/" aria-current="page">Investors</a>
+<ul class="sub-menu">
+	<li id="menu-item-576286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576286"><a href="https://triconresidential.com/investors/news-events/">News &#038; Events</a></li>
+	<li id="menu-item-586243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586243"><a href="https://triconresidential.com/investors/reports-filings/">Reports &#038; Filings</a></li>
+	<li id="menu-item-576300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576300"><a href="https://triconresidential.com/investors/stock-dividends/">Stock &#038; Dividends</a></li>
+	<li id="menu-item-576302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576302"><a href="https://triconresidential.com/investors/private-capital/">Private Capital</a></li>
+	<li id="menu-item-576301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576301"><a href="https://triconresidential.com/investors/corporate-governance/">Corporate Governance</a></li>
+	<li id="menu-item-560895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-560895"><a href="https://triconresidential.com/investors/sustainability/">Sustainability</a></li>
+</ul>
+</li>
+</ul>    </nav>
+
+</div>
+	<div class="footerBottom">
+		<div class="wrap">
+			<div class="footerBottomLinks">&copy; 2021 <a href="/">Tricon Residential</a>. All rights reserved.
+	<div class="policyLinks">
+		<a href="/licenses/">Licenses</a> <a href="/privacy-policy/">Privacy Policy</a> <a href="/terms-of-use/">Terms of Use</a> <a href="/terms-of-agreement/">Terms of Agreement</a>
+	</div>
+</div>
+
+<div class="footerBottomImages">
+	
+	<svg>
+		<title>Equal Housing Opportunity</title>
+		<use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#equal-housing-opportunity"></use>
+	</svg>
+	
+	<a href="https://www.bbb.org/us/ca/santa-ana/profile/property-management/tricon-residential-1126-172014624" target="_blank" rel="noopener">
+		<img class="lazyload" data-src="https://triconresidential.com/wp-content/themes/triconresidential/assets/img/BBB.png" title="BBB Rating A+" alt="Better Business Bureau" width="130" height="57">
+	</a>
+	
+	<a href="/careers/#block11">
+		<img class="lazyload" data-src="https://triconresidential.com/wp-content/themes/triconresidential/assets/img/great-place-to-work-2020.png" title="Certified Great Place To Work" alt="Great Place to Work" width="53" height="90">
+	</a>
+	
+</div>		</div>
+	</div>
+
+</footer>
+
+<div class="cover light"></div>
+<div class="cover dark"></div>
+
+</div>
+
+	<div id="stickyBottomCTA" class="type-simple color-blue">
+		<div class="triggerArea">
+			<div class="triggerContent">
+				
+				<p>
+										<svg class="ctaIcon" aria-hidden="true" focusable="false"><use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#emblem"></use></svg>
+								<iframe title="Stock Ticker" class="stockTicker" height="60" width="100%" src="https://irs.tools.investis.com/clients/ca/tricon_residential_inc/ticker/ticker.aspx?culture=en-US"></iframe>				</p>
+				
+								
+			</div>
+		</div>
+		<button class="minimize">&times;</button>
+	</div>
+
+
+<div id="dialog-speedbump" role="dialog" class="confirmLoginCard dark hidden">
+<!--     <button aria-label="close" class="close">×</button> -->
+    <div class="speedbump_content">
+	    <h5>Leaving Tricon Residential</h5>
+	    <div class="confirmLogin">
+	        <p>You followed a link on TriconResidential.com that redirects to another website.</p>
+	        <br>
+	        <button class="buttonUnderline closeSpeedBump">Go Back</button>
+	        <a href="javascript:void(0)" id="externalLink" class="button continue" target="_blank">
+		        <svg><use xlink:href="https://triconresidential.com/wp-content/themes/triconresidential/assets/icons/icons.svg?1619446758#link"></use></svg>
+		        Continue
+		    </a>
+	    </div>
+    </div>
+</div>
+
+<script>window.__INITIAL_SETTINGS__.portals = '{}' </script><link rel='stylesheet' id='gforms_reset_css-css'  href='https://s34643.pcdn.co/wp-content/plugins/gravityforms/legacy/css/formreset.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css'  href='https://s34643.pcdn.co/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css'  href='https://s34643.pcdn.co/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css'  href='https://s34643.pcdn.co/wp-content/plugins/gravityforms/legacy/css/browsers.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/js/jquery.min.js' id='jquery-js'></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/js/scripts.js?1621287264' id='egg-js-js'></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/vendors~AdvancedHomeSearch~CommunitiesBlock~FloorplansBlock~HomesBlock~NeighborhoodMap~SearchWidget.js?1621287264' id='vendors~AdvancedHomeSearch~CommunitiesBlock~FloorplansBlock~HomesBlock~NeighborhoodMap~SearchWidget-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/vendors~AdvancedHomeSearch~CommunitiesBlock~FloorplansBlock~HomesBlock~SearchWidget.js?1621287264' id='vendors~AdvancedHomeSearch~CommunitiesBlock~FloorplansBlock~HomesBlock~SearchWidget-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/vendors~AdvancedHomeSearch~CommunitiesBlock~HomesBlock~SearchWidget.js?1621287264' id='vendors~AdvancedHomeSearch~CommunitiesBlock~HomesBlock~SearchWidget-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/FloorplansBlock~NeighborhoodMap.js?1621287264' id='FloorplansBlock~NeighborhoodMap-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/vendors~AdvancedHomeSearch~SearchWidget.js?1621287264' id='vendors~AdvancedHomeSearch~SearchWidget-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/AdvancedHomeSearch.js?1621287264' id='AdvancedHomeSearch-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/CommunitiesBlock.js?1621287264' id='CommunitiesBlock-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/FloorplansBlock.js?1621287264' id='FloorplansBlock-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/HomesBlock.js?1621287264' id='HomesBlock-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/NeighborhoodMap.js?1621287264' id='NeighborhoodMap-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/SearchWidget.js?1621287264' id='SearchWidget-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/vendors~CommunitiesBlock.js?1621287264' id='vendors~CommunitiesBlock-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/vendors~HomesBlock.js?1621287264' id='vendors~HomesBlock-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/js/manifest.js?1621287264' id='manifest-js'></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/js/vendor.js?1621287264' id='vendor-js'></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/js/main.js?1621287264' id='main-js'></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/debug-utm.js?1621287264' id='debug-utm-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/gallery-carousel.js?1621287264' id='gallery-carousel-js' defer></script>
+<script type='text/javascript' src='https://triconresidential.com/wp-content/themes/triconresidential/assets/vue/vendors~gmap-cluster.js?1621287264' id='vendors~gmap-cluster-js' defer></script>
+<script type='text/javascript' src='https://s34643.pcdn.co/wp-includes/js/dist/vendor/wp-polyfill.min.js' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wp-polyfill-js-after'>
+( 'fetch' in window ) || document.write( '<script src="https://s34643.pcdn.co/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js?ver=3.0.0"></scr' + 'ipt>' );( document.contains ) || document.write( '<script src="https://s34643.pcdn.co/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script src="https://s34643.pcdn.co/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js?ver=3.42.0"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script src="https://s34643.pcdn.co/wp-includes/js/dist/vendor/wp-polyfill-url.min.js?ver=3.6.4"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script src="https://s34643.pcdn.co/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js?ver=3.0.12"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script src="https://s34643.pcdn.co/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js?ver=2.0.2"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script src="https://s34643.pcdn.co/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js?ver=2.3.4"></scr' + 'ipt>' );
+</script>
+<script type='text/javascript' src='https://s34643.pcdn.co/wp-includes/js/dist/dom-ready.min.js' id='wp-dom-ready-js'></script>
+<script type='text/javascript' src='https://s34643.pcdn.co/wp-includes/js/dist/hooks.min.js' id='wp-hooks-js'></script>
+<script type='text/javascript' src='https://s34643.pcdn.co/wp-includes/js/dist/i18n.min.js' id='wp-i18n-js'></script>
+<script type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type='text/javascript' id='wp-a11y-js-translations'>
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", { "locale_data": { "messages": { "": {} } } } );
+</script>
+<script type='text/javascript' src='https://s34643.pcdn.co/wp-includes/js/dist/a11y.min.js' id='wp-a11y-js'></script>
+<script type='text/javascript' defer='defer' src='https://s34643.pcdn.co/wp-content/plugins/gravityforms/js/jquery.json.min.js' id='gform_json-js'></script>
+<script type='text/javascript' id='gform_gravityforms-js-extra'>
+/* <![CDATA[ */
+var gform_i18n = {"datepicker":{"days":{"monday":"Mon","tuesday":"Tue","wednesday":"Wed","thursday":"Thu","friday":"Fri","saturday":"Sat","sunday":"Sun"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"}}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2},"base_url":"https:\/\/triconresidential.com\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/triconresidential.com\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_legacy_multi = {"55":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' id='gform_gravityforms-js-before'>
+var gform={hooks:{action:{},filter:{}},addAction:function(o,r,n,t){gform.addHook("action",o,r,n,t)},addFilter:function(o,r,n,t){gform.addHook("filter",o,r,n,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,n){gform.removeHook("filter",o,r,n)},addHook:function(o,r,n,t,l){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var i=gform.hooks[o][r];null==l&&(l=r+"_"+i.length),null==t&&(t=10),gform.hooks[o][r].push({tag:l,callable:n,priority:t})},doHook:function(o,r,n){if(n=Array.prototype.slice.call(n,1),null!=gform.hooks[o][r]){var t,l=gform.hooks[o][r];l.sort(function(o,r){return o.priority-r.priority});for(var i=0;i<l.length;i++)"function"!=typeof(t=l[i].callable)&&(t=window[t]),"action"==o?t.apply(null,n):n[0]=t.apply(null,n)}if("filter"==o)return n[0]},removeHook:function(o,r,n,t){if(null!=gform.hooks[o][r])for(var l=gform.hooks[o][r],i=l.length-1;0<=i;i--)null!=t&&t!=l[i].tag||null!=n&&n!=l[i].priority||l.splice(i,1)}};
+</script>
+<script type='text/javascript' defer='defer' src='https://s34643.pcdn.co/wp-content/plugins/gravityforms/js/gravityforms.min.js' id='gform_gravityforms-js'></script>
+<script type='text/javascript'> jQuery(document).bind('gform_post_render', function(event, formId, currentPage){if(formId == 55) {} } );jQuery(document).bind('gform_post_conditional_logic', function(event, formId, fields, isInit){} );</script><script type='text/javascript'> document.addEventListener( 'DOMContentLoaded', function(){jQuery(document).trigger('gform_post_render', [55, 1]) } ); </script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-ce23e6af80739377585","applicationID":"997425810","transactionName":"bgBbYEoDXxAEVBFbX1dKeFdMC14NSl4LVlVB","queueTime":0,"applicationTime":612,"atts":"QkdYFgIZTB4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

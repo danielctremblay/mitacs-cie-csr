@@ -1,0 +1,1989 @@
+
+
+	IoT Solutions - Modules, IoT Platforms & IoT Connectivity | Sierra Wireless
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Toggle navigation
+
+
+
+
+
+
+
+
+
+
+Products & Solutions
+
+
+Industries
+
+
+Innovation
+
+
+Resources
+
+
+Support
+
+
+Company
+
+
+Buy
+
+
+
+
+
+
+
+
+
+
+A Comprehensive Set of IoT Solutions
+We simplify IoT by providing the devices, software and service solutions for 2G, 3G, 4G LTE and 5G. 
+Explore
+
+
+
+
+
+
+
+Octave: The All-in-One Edge-to-Cloud Solution for Connecting Your Industrial Assets
+
+Learn More
+
+
+
+
+
+
+Featured Services
+Connectivity Services to Simplify your IoT Journey
+Whether your machines or other assets are globally dispersed or regional, simplify how you connect and manage your IoT deployments.
+Learn More
+
+
+
+
+
+
+
+Fully-Integrated Managed Services
+Our solutions for asset tracking, offender monitoring & remote tank monitoring combine deep knowledge of each vertical with IoT expertise to resolve industry-specific issues.
+Learn How
+
+
+
+
+
+
+Featured Product
+High-Speed Networking Modules
+These connectorized modules provide plug and play connectivity on the world’s fastest 5G and 4G networks providing unprecedented speeds and network performance.
+Learn More
+
+
+
+
+
+
+
+Ensure Always-on Connectivity for Your Critical Workers
+Fully managed wireless connectivity, end-to-end wireless broadband solutions for permanent, temporary, and back-up
+Learn How
+
+
+
+
+
+
+Featured Product
+High Performance Multi-Network Vehicle Routers
+The AirLink MG90 and MG90 5G are purpose-built to provide secure, always-on connectivity. 
+Learn How
+
+
+
+
+
+
+
+
+
+
+All-in-One Edge-to-Cloud Solution
+
+Octave
+
+
+
+
+
+Connectivity Services
+
+Smart Connectivity
+
+
+Enhanced Carrier Connectivity
+
+
+
+
+
+Managed IoT Services
+
+Asset Tracking
+
+
+Satellite Tracking
+
+
+Fleet Tracking
+
+
+Offender Monitoring
+
+
+Remote Monitoring
+
+
+Alarm Monitoring
+
+
+
+
+
+
+
+
+
+IoT Modules and Modems
+
+Cellular Modules
+
+
+Wi-Fi and Bluetooth Modules
+
+
+GNSS Positioning Modules
+
+
+Cellular Modems
+
+
+Open Source Projects
+
+
+Ready-to-Connect Solutions
+
+
+
+
+
+Managed Connectivity Services
+
+
+
+
+
+
+Routers and Gateways
+
+Services
+AirLink Complete
+Professional Services
+
+
+Solutions
+Vehicle Networking
+Enterprise Networking
+Industrial Networking
+Public Safety Networking
+FirstNet Ready™
+Network Management
+
+
+All Routers & Gateways
+
+
+Antennas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fully Integrated IoT Solutions for Any Industry
+Harness the power of the IoT for your business and deliver new levels of innovation and efficiency.
+Explore
+
+
+
+
+
+
+
+75% of Industrial IoT Projects Fail. Make Yours the Exception.
+Learn how industrial companies can overcome complexity in IIoT development and commercialization.
+Learn More
+
+
+
+
+
+
+
+Expanding the IoT into the Utility – Simply
+Discover how Sierra Wireless Octave combined with Losant’s IoT Enterprise platform can be used to simplify the building of IoT applications for utilities.                    
+Watch Webinar
+
+
+
+
+
+
+
+The Fast, Cost-Effective Way to Deliver Telematics for Fleet Management
+
+Download White Paper
+
+
+
+
+
+
+
+5 Key Trends in Public Safety & the Technology Implications
+Discover trends shaping the future of first responders and what public safety agencies need to prepare for.               
+Watch Webinar
+
+
+
+
+
+
+
+Liveable Cities Enables Smart City Traffic Management Via Street Light Infrastructure
+
+Find Out How
+
+
+
+
+
+
+
+Transforming Medical Care with Connectivity
+Learn about using wireless technologies in hospitals and connecting high-value hospital assets.               
+Download Report
+
+
+
+
+
+
+
+Perto Veloh Smart Delivers Improved Speed and Ruggedness to Perto’s Retail Customers
+
+Learn How
+
+
+
+
+
+
+
+
+
+
+Industrial Manufacturing
+
+Industrial Asset Monitoring
+
+
+Industrial Purifiers
+
+
+Air Compressors
+
+
+Washing Machines
+
+
+
+
+
+Energy and Natural Resources
+
+Energy
+
+
+Smart Metering
+
+
+Smart Grid
+
+
+Oil and Gas
+
+
+Utilities
+
+
+
+
+
+
+
+
+
+Transport and Logistics
+
+Telematics
+
+
+Fleet Management
+
+
+Asset Tracking
+
+
+
+
+
+Public Safety
+
+Police, EMS, and Fire
+
+
+Offender Monitoring
+
+
+
+
+
+Smart Cities
+
+Public Lighting
+
+
+Transit
+
+
+
+
+
+
+
+
+
+Healthcare
+
+Connected Medical Devices
+
+
+
+
+
+Commercial Building Infrastructure
+
+
+Retail
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Innovation @ the Edge
+Empowering businesses to transform and thrive in the connected economy. 
+Explore
+
+
+
+
+
+
+
+
+
+
+5G
+
+
+LPWA
+
+
+Open Source
+
+
+
+
+
+
+Octave
+
+
+Smart Connectivity
+
+
+First Responder Network
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Understanding the IoT for your Business
+Resources to explore endless IoT applications.
+Explore
+
+
+
+
+
+
+Featured Blog Post
+What is IT/OT Convergence?
+Use the IIoT to converge your IT with OT in ways that empower you to create value in today’s connected economy.
+Read More
+
+
+
+
+
+
+
+Subscribe to the Sierra Wireless e-Newsletters
+Receive regular updates on our latest innovations, product launches, customer stories, and news of wireless applications in the Internet of Things (IoT) space across all sectors and regions.
+Subscribe
+
+
+
+
+
+
+
+
+
+
+All Resources
+
+
+Blog
+
+
+Newsletter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Support
+Find the latest technical information related to Sierra Wireless products and solutions.
+Learn more
+
+
+
+
+
+
+
+
+
+
+The Source
+
+
+Request Support
+
+
+Request Repair
+
+
+Knowledgebase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Sierra Wireless
+Building wireless solutions is in our DNA. We have the technology and the global team to deliver.
+Learn More
+
+
+
+
+
+
+
+
+
+
+About Us
+
+About Sierra Wireless
+
+
+Our History of Innovation
+
+
+Investor Relations
+
+
+Corporate Sustainability
+
+
+Security
+
+
+
+
+
+Security
+
+
+Leadership Team
+
+
+
+
+
+
+Newsroom
+
+Newsroom
+
+
+Image Gallery
+
+
+
+
+
+Cyber Security Update
+
+
+Events
+
+
+Careers
+
+
+Contact
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Buy
+Shop online, talk with our experts, or find a distributor or reseller and learn more about our products and services.
+Learn More
+
+
+
+
+
+
+
+
+
+
+Shop Online
+
+
+Contact Sales
+
+
+Find a Distributor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONTACT US 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Products & Solutions
+All-in-One Edge-to-Cloud Solution
+Octave
+
+slide down
+Connectivity Services
+Smart Connectivity
+Enhanced Carrier Connectivity
+
+slide down
+Managed IoT Services
+Asset Tracking
+Satellite Tracking
+Fleet Tracking
+Offender Monitoring
+Remote Monitoring
+Alarm Monitoring
+
+slide down
+IoT Modules and Modems
+Cellular Modules
+Wi-Fi and Bluetooth Modules
+GNSS Positioning Modules
+Cellular Modems
+Open Source Projects
+Ready-to-Connect Solutions
+
+slide down
+Managed Connectivity Services
+Routers and Gateways
+Services
+AirLink Complete
+Professional Services
+
+slide down
+Solutions
+Vehicle Networking
+Enterprise Networking
+Industrial Networking
+Public Safety Networking
+FirstNet Ready™
+Network Management
+
+slide down
+All Routers & Gateways
+Antennas
+
+slide down
+
+slide down
+Industries
+Industrial Manufacturing
+Industrial Asset Monitoring
+Industrial Purifiers
+Air Compressors
+Washing Machines
+
+slide down
+Energy and Natural Resources
+Energy
+Smart Metering
+Smart Grid
+Oil and Gas
+Utilities
+
+slide down
+Transport and Logistics
+Telematics
+Fleet Management
+Asset Tracking
+
+slide down
+Public Safety
+Police, EMS, and Fire
+Offender Monitoring
+
+slide down
+Smart Cities
+Public Lighting
+Transit
+
+slide down
+Healthcare
+Connected Medical Devices
+
+slide down
+Commercial Building Infrastructure
+Retail
+
+slide down
+Innovation
+5G
+LPWA
+Open Source
+Octave
+Smart Connectivity
+First Responder Network
+
+slide down
+Resources
+All Resources
+Blog
+Newsletter
+
+slide down
+Support
+The Source
+Request Support
+Request Repair
+Knowledgebase
+
+slide down
+Company
+About Us
+About Sierra Wireless
+Our History of Innovation
+Investor Relations
+Corporate Sustainability
+Security
+
+slide down
+Security
+Leadership Team
+Newsroom
+Newsroom
+Image Gallery
+
+slide down
+Cyber Security Update
+Events
+Careers
+Contact
+
+slide down
+Buy
+Shop Online
+Contact Sales
+Find a Distributor
+
+slide down
+
+Login
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+CORONAVIRUS (COVID-19) UPDATES & INFORMATION For Our Customers, Partners and Communities  Learn more >
+
+
+
+
+AKM FIRE UPDATE Regarding the supply chain impact on certain Sierra Wireless products Learn more >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ready to Use the IoT to Unlock Value in Today’s Connected Economy?
+
+
+With Sierra, The Future Starts Now
+
+
+
+Sierra Wireless simplifies the IoT, delivering you the device, software and service solutions you need to accelerate your data-driven transformation.
+
+
+
+
+
+
+
+Watch Video
+
+
+
+
+
+
+
+
+
+Inline content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Start your 5G Future with Sierra
+Our first-to-market 5G module, with support for mmWave, sub 6 GHz and LTE, and our industry-leading multi-network 5G vehicle, mission, and business-critical routers are now available.
+
+Learn more
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Introducing the XR Series – The World’s Most Advanced 5G Routers
+Supercharge your 5G deployments with the industry’s highest-performing multi-network 5G routers. Our XR series delivers the fastest speeds on the best performing networks, even in the most challenging environments.
+Our XR solutions offer complete device-to-cloud security and remote management capabilities so you can be confident that your devices are operating at top performance.
+Priced to drive adoption, the XR series shows that the best 5G experience and performance is possible for any 5G application.
+XR90 – for mobile applications, such as Transit and Public Safety
+XR80 – for mobile and fixed applications, such as Commercial Fleets, Manufacturing and Distance Learning 
+
+
+
+
+
+
+
+
+
+
+
+
+
+A Comprehensive Set of IoT Solutions
+
+
+
+
+
+All-in-OneEdge-to-Cloud Solution
+
+Octave, the first IoT solution that integrates all the ingredients you need – device modules & gateways, wireless connectivity, and cloud APIs – into a single solution for connecting your industrial assets to the cloud.
+
+Octave
+Case Studies
+
+
+
+
+
+
+Connectivity Services and Managed IoT Solutions
+
+Our connectivity services simplify your IoT deployments with secure and resilient global coverage.
+Managed IoT Solutions empower you to rapidly launch and manage IoT applications.
+Connectivity Services
+Managed IoT Solutions
+Case Studies
+
+
+
+
+
+
+Embedded Solutions and Networking Solutions
+
+A broad portfolio of secure, high-performance embedded modules, routers and gateways, ready-to-connect your assets and work forces to the cloud via 4G, 5G and LPWA cellular networks.
+
+Embedded Modules
+Routers & Gateways
+Case Studies for Embedded Modules
+Case Studies for Routers & Gateways
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+See how companies have used Sierra Wireless solutions to unlock value in the connected economy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+See Case Studies
+
+
+
+
+
+
+
+
+
+
+
+Sierra Wireless solutions are creating new opportunities in your industry
+
+
+
+
+
+
+
+
+
+
+
+
+
+Industrial Manufacturing
+
+
+
+
+
+
+
+Energy and Natural Resources
+
+
+
+
+
+
+
+Public Safety
+
+
+
+
+
+
+
+Transport and Logistics
+
+
+
+
+
+
+
+Other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+From air compressor and power tools suppliers to washing machine and battery manufacturers, industrial companies across a range of sectors are leveraging IIoT solutions to monitor and track their assets, transform their business models, and build lasting relationships with customers.
+
+
+Start here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sierra Wireless’s IoT solutions for smart metering, smart grids and pipeline management enable companies to use smart energy insights to transform their business.
+
+
+Start here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The IoT is transforming mission-critical applications first responders need to do their jobs while improving health and safety in their communities.
+
+
+Start here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sierra Wireless’ IoT solutions enable companies to manage their fleet, and track vehicles, containers and other assets as they move through the supply chain.
+
+
+Start here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+See how Sierra Wireless’s IoT solutions for smart cities, healthcare, automotive and retail can create new opportunities for your business.
+
+
+Start here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+What Will Happen to IoT Security in 2021?
+
+Learn more
+
+
+
+
+
+
+
+
+Sierra Wireless Announces World's First Multi-Network 5G Vehicle Router
+
+Learn more
+
+
+
+
+
+
+
+
+LUCI Smart Wheelchair Connected with Sierra Wireless LPWA Solution
+
+Learn more
+
+
+
+
+
+
+
+
+
+
+Empowering businesses to reimagine their future in the connected world
+
+
+
+
+When you start with Sierra Wireless’ intelligent wireless solutions, you're building for the future. Our innovative products, solutions and services already connect thousands of businesses to critical data and millions of people to information. We remain focused on developing leading technology solutions and on empowering businesses and industries to transform and thrive in the connected economy so they can reduce complexity, turn data into intelligence and get their connected products and services to market faster.
+
+
+
+
+Start here
+
+
+
+
+1st
+
+Sierra Wireless has been first-to-market with many innovations, including the world’s first 5G M2 module and multi-network 5G vehicle router.
+
+
+
+168M
+
+Sierra Wireless has shipped over 168 million devices to connect the Internet of Things (IoT).
+
+
+
+Device-to-Cloud
+
+Sierra Wireless is the only company in the world that has cellular modules, gateway and connectivity services to provide complete Device-to-Cloud IoT solutions with security.
+
+
+
+LPWA to 5G
+
+Sierra Wireless makes some of the smallest embedded wireless modules to help your business connect to any network.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sierra Wireless is an IoT pioneer, empowering businesses and industries to transform and thrive in the connected economy.
+
+Subscribe to our IoT newsletter
+Get the latest on innovations, product launches, customer stories and news of wireless applications in the IoT space.
+
+Subscribe
+
+
+
+
+
+
+
+Products
+
+
+
+
+
+All-in-One Edge-to-Cloud Solution
+
+
+
+
+Connectivity Services
+
+
+
+
+Embedded Solutions: Modules and Modems
+
+
+
+
+Networking Solutions: Routers and Gateways
+
+
+
+
+
+
+
+Resources
+
+
+
+
+
+All Resources
+
+
+
+
+Blog
+
+
+
+
+
+
+
+
+About Sierra Wireless
+
+
+
+
+
+Latest News
+
+
+
+
+Investor Relations
+
+
+
+
+Security Information
+
+
+
+
+Corporate Sustainability
+
+
+
+
+Careers
+
+
+
+
+Contact Us
+
+
+
+
+
+
+
+Support
+
+
+
+
+
+Source
+
+
+
+
+Request Support
+
+
+
+
+Request Repair
+
+
+
+
+Knowledgebase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© Sierra Wireless. All rights reserved.
+
+
+Privacy    Legal    Sitemap
+    5G Japan Site
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CONTACT US
+
+
+
+
+
+Complete the form below and we'll find the right person to get in touch with you.
+
+
+
+
+
+
+
+
+
+Thank you! Your message has been sent. A sales representative will contact you shortly.
+
+
+
+
+
+
+
+
+
+Welcome back {{ model['emailAddress' + key] }}
+
+
+Not You?
+
+
+
+This resource is temporarily unavailable. Please try again later.
+
+
+
+
+
+ Loading...
+
+
+
+
+
+
+
+
+ Submitting...
+
+
+By checking this box, you consent to receive commercial electronic messages from Sierra Wireless, Inc. and Sierra Wireless group companies such as newsletters, event invitations, promotional and educational content, product updates, transaction-related emails, and customer service emails, in accordance with our privacy policy. We may be reached by email at [email protected] or by mail: contact us. You may withdraw your consent at any time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Results from sierrawireless.com
+
+
+
+
+{{facet.Title}} {{facet.Count}}
+
+
+
+
+Searching...
+
+
+
+
+
+
+
+
+
+
+See all results from sierrawireless.com
+
+
+No results found
+
+
+
+
+
+
+
+The Source
+
+Searching...
+
+
+
+
+View all results from our Support site:
+
+The Source
+
+
+
+No results found
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The Source
+
+
+
+
+
+
+
+
+
+Partner Community
+
+
+
+
+
+
+
+
+
+AirVantage
+
+
+
+
+
+
+
+
+
+Shop
+
+
+
+
+
+
+
+
+
+Octave
+
+
+
+
+
+
+
+
+
+AirLink Management Services
+
+
+
+
+
+
+
+
+
+Maingate Manager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Subscribe to our IoT Newsletter
+
+
+
+
+
+
+
+
+
+
+
+
+Thank you for your interest in our IoT newsletter. You are subscribed now.
+
+
+
+
+
+
+
+
+
+Welcome back {{ model['emailAddress' + key] }}
+
+
+Not You?
+
+
+
+This resource is temporarily unavailable. Please try again later.
+
+
+
+
+
+ Loading...
+
+
+
+
+
+
+
+
+ Submitting...
+
+
+By checking this box, you consent to receive commercial electronic messages from Sierra Wireless, Inc. and Sierra Wireless group companies such as newsletters, event invitations, promotional and educational content, product updates, transaction-related emails, and customer service emails, in accordance with our privacy policy. We may be reached by email at [email protected] or by mail: contact us. You may withdraw your consent at any time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+ allows users to upload photos directly from their mobile phone into Commons, and is available for . 
+For more information see 
+This app is maintained by volunteers, and WMF does not officially take part. Issue is tracked at .

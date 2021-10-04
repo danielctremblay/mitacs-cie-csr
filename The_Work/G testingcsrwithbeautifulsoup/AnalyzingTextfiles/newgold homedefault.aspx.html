@@ -1,0 +1,1244 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head><title>
+	New Gold Inc. - Home
+</title><meta content="text/html; charset=UTF-8" http-equiv="Content-type" /><meta content="RevealTrans(Duration=0,Transition=0)" http-equiv="Page-Enter" /><meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"4b6f7f959c","applicationID":"229922501","transactionName":"b1xWMUIDWBdWARFYX1YWdTZgTVIBUQMQXUQWWEcVSA==","queueTime":0,"applicationTime":986,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:false}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQYBUlRVChACVlhbBQMCVlU=",licenseKey:"4b6f7f959c",applicationID:"229922501"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(24),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(25),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(25),a=t(24);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(21),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(24),c=t(25),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(26);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],19:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],20:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(23),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],21:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],22:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],23:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],24:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],25:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],26:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,s,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),s=m(n),f=s.length,u=0;u<f;u++)s[u].apply(c,r);var l=d[y[n]];return l&&l.push([x,n,r,c]),c}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return l[t]=l[t]||i(n)}function v(t,e){u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:c,aborted:!1};return x}function o(t){return f(t,s,a)}function a(){return new r}function c(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var s="nr@context",f=t("gos"),u=t(24),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(y,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=t(18),c=t("handle"),s=t(24),f=t("ee"),u=t(22),d=t(19),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;if(d(l.location)){NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:a.getLastTimestamp(),now:a,origin:g,features:{},xhrWrappable:x,userAgent:u};t(15),t(20),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,s,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,s],u],t)}c(n+"start",[o,a,s],u,f);try{return l=e.apply(a,o)}catch(h){throw c(n+"err",[o,a,h],u,f),h}finally{c(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,s,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)s=e[f],c=t[s],a(c)||(t[s]=n(c,u?s+r:r,i,s,o))}function c(n,r,o,a){if(!h||e){var c=h;h=!0;try{t.emit(n,r,o,e,a)}catch(s){i([s,n,r,o],t)}h=c}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function c(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function s(t,e,n){var r=t[e];t[e]=c(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(25),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=s,e.exports.argsToArray=f},{}]},{},["loader",2,12,4,3]);</script><meta content="width=device-width, initial-scale=1" name="viewport" /><link type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/351510513/files/css/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" />
+<link type="image/x-icon" rel="icon" media="" href="//s2.q4cdn.com/351510513/files/favicon.ico" />
+<link type="image/x-icon" rel="shortcut icon" media="" href="//s2.q4cdn.com/351510513/files/favicon.ico" />
+<link rel="stylesheet" media="print" href="//s2.q4cdn.com/351510513/files/css/print.css" />
+<!--[if lte IE 8]>
+<link id="respond-proxy" rel="respond-proxy" media="screen" href="//s2.q4cdn.com/351510513/files/js/respond-proxy.html" />
+<link id="respond-redirect" rel="respond-redirect" media="screen" href="https://www.newgold.com/js/respond.proxy.gif" />
+<![endif]-->
+
+<link id="htmlGlobalLinkCss" type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/351510513/files/css/global.css?v=40755" /><link id="htmlClientLinkCss" type="text/css" rel="stylesheet" media="all" href="//s2.q4cdn.com/351510513/files/css/client.css?v=41382" /><link id="htmlLinkPrintCss" type="text/css" rel="stylesheet" media="print" href="//s2.q4cdn.com/351510513/files/css/print.css" /><script type="text/javascript" src="//s2.q4cdn.com/351510513/files/js/q4.core.1.0.4.min.js"></script>
+<script type="text/javascript" src="//s2.q4cdn.com/351510513/files/js/q4.app.1.0.4.min.js"></script>
+<script type="text/javascript" src="//widgets.q4app.com/widgets/q4.api.1.12.6.min.js"></script>
+<script type="text/javascript" src="//widgets.q4app.com/widgets/q4.briefcase.1.0.5.min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="https://www.newgold.com/js/respond.proxy.js"></script>
+<![endif]-->
+
+<script type="text/javascript">(function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+(function ($) {
+    function initGaTracking(isp, org) {
+        isp = isp || '(not set)';
+        org = org || '(not set)';
+        $.each(trackingCodes, function (i, data) {
+            if (data.qualifier === "Q4") {
+                ga('create', data.trackingCode, 'auto'); // Q4 tracker
+                ga('set', { 'dimension1': isp });
+                ga('set', { 'dimension2': org });
+                ga('set', 'anonymizeIp', true);
+                ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Q4 tracker
+            } else {
+                ga('create', data.trackingCode, 'auto', { 'name': data.qualifier }); // Client tracker
+                ga(data.qualifier + '.set', 'anonymizeIp', true);
+                ga(data.qualifier + '.send', 'pageview', { 'page': location.pathname + location.search + location.hash }); // send pageview to Client tracker
+            }
+        });
+    }
+
+    var trackingCodes = [{qualifier: 'Q4', trackingCode: 'UA-20533600-49'}, {qualifier: 'Client', trackingCode: 'UA-146296151-1'}];
+    var ipSessStorageKey = 'ipApiInfo';
+    var ipJsonStringified = sessionStorage.getItem(ipSessStorageKey);
+
+    if (ipJsonStringified) {
+        try {
+            var ipJsonParsed = JSON.parse(ipJsonStringified);
+            initGaTracking(ipJsonParsed.isp, ipJsonParsed.org);
+        } catch (e) {
+            console.error('Failed to JSON parse IP API session storage data\n', e);
+            initGaTracking();
+        }
+    } else {
+        $.getJSON('https://pro.ip-api.com/json/?key=xdjZbj0ZiVVozCo&fields=isp,org')
+            .done(function (ipJson) {
+                sessionStorage.setItem(ipSessStorageKey, JSON.stringify(ipJson));
+                initGaTracking(ipJson.isp, ipJson.org);
+            })
+            .fail(function () {
+                initGaTracking();
+            });
+    }
+})(jQuery);
+</script></head>
+<body style="margin: 0px" class="BodyBackground">
+    <input type="hidden" id="__RequestVerificationToken"/>
+    
+    
+    <div id="pageClass" class="Sectionhome PageDefault PageHome LayoutHomePageLayout Languageen-US">
+        <div class="PageDefaultInner">
+            <div id="litPageDiv" class="PageHome SectionHome ParentSection_home">
+                <a name="top"></a>
+                <form action="default.aspx" method="post" id="fmForm1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function GetViewType(){ return '2'; }
+function GetRevisionNumber(){ return '1'; }
+function GetLanguageId(){ return '1'; }
+function GetVersionNumber(){ return '5.56.0.1'; }
+function GetPoweredBy(){return 'q4inc';}
+function GetViewDate(){{ return ''; }}
+function GetSignature(){{ return ''; }}
+//]]>
+</script>
+
+                    
+                    <a id="lnkPostback" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;lnkPostback&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="display: none"></a>
+                    
+<div class="layout layout--home">
+    <div class="layout_inner">
+        <div class="layout_header">
+            <div class="pane pane--header grid--no-gutter">
+                <div class="pane_inner clearfix"><span class='HeaderPaneDiv'><span class='HeaderPaneDiv1'><div id="_ctrl0_ctl06_divModuleContainer" class="module module-embed module-skip">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a class="module-skip_link" href="#maincontent">Skip to main content</a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv2'><div id="_ctrl0_ctl09_divModuleContainer" class="module module-embed module-logo">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="/"><img src="//s2.q4cdn.com/351510513/files/design/logo2.png" alt="New Gold"></a>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv3'><nav class="nav nav--main no-type-list"><ul class="level1">
+	<li class="has-children"><a href="https://www.newgold.com/company/default.aspx">Company</a><ul class="level2">
+		<li><a href="https://www.newgold.com/company/mission-and-values/default.aspx">Mission and Values</a></li><li><a href="https://www.newgold.com/company/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="https://www.newgold.com/company/management/default.aspx">Management</a></li><li class="has-children"><a href="https://www.newgold.com/company/governance/default.aspx">Governance</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newgold.com/assets/default.aspx">Assets</a><ul class="level2">
+		<li class="no-link"><span>Operating Assets:</span></li><li class="has-children"><a href="https://www.newgold.com/assets/rainy-river/default.aspx">Rainy River</a></li><li class="has-children"><a href="https://www.newgold.com/assets/new-afton/default.aspx">New Afton</a></li><li><a href="https://www.newgold.com/assets/Reserves-and-Resources-/default.aspx"><span style="font-size:14px; padding-left: 0px; font-family: "Foundry Sterling W01 Bd", Arial, Helvetica, sans-serif;">Reserves & Resources:</span></a></li><li class="no-link"><span>Gold Stream:</span></li><li class="has-children"><a href="https://www.newgold.com/assets/blackwater/default.aspx">Blackwater Gold Stream</a></li><li class="no-link"><span>In Reclamation:</span></li><li class="has-children"><a href="https://www.newgold.com/assets/cerro-san-pedro/default.aspx">Cerro San Pedro</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newgold.com/investors/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.newgold.com/investors/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.newgold.com/investors/corporate-presentations/default.aspx">Corporate Presentations</a></li><li class="has-children"><a href="https://www.newgold.com/investors/financial-information/reports-and-financials/default.aspx">Financial and Other Reports</a></li><li class="has-children"><a href="https://www.newgold.com/investors/events-and-presentations/presentations-events-and-webcasts/default.aspx">Events & Webcasts</a></li><li class="has-children"><a href="https://www.newgold.com/investors/shareholder-information/stock-performance/default.aspx">Shareholder Information</a></li><li><a href="https://www.newgold.com/investors/investor-briefcase/default.aspx">Investor Briefcase</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newgold.com/responsibility/default.aspx">Responsibility</a><ul class="level2">
+		<li><a href="https://www.newgold.com/responsibility/ESG/default.aspx">ESG</a></li><li class="has-children"><a href="https://www.newgold.com/responsibility/reports/annual-csr-report/default.aspx">Reports</a></li><li class="has-children"><a href="https://www.newgold.com/responsibility/responsibility/health-and-safety/default.aspx">Responsibility</a></li><li class="has-children"><a href="https://www.newgold.com/responsibility/assets/rainy-river/default.aspx">Assets</a></li><li><a href="https://communityinvestment.newgold.com/en/" target="_blank">Community Investment Program</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newgold.com/careers/default.aspx">Careers</a><ul class="level2">
+		<li><a href="https://www.newgold.com/careers/the-new-gold-difference/default.aspx">The New Gold Difference</a></li><li><a href="https://www.newgold.com/careers/working-at-new-gold/default.aspx">Working at New Gold</a></li><li><a href="https://www.newgold.com/careers/what-our-employees-say/default.aspx">What Our Employees Say</a></li><li><a href="https://www.newgold.com/careers/our-commitments/default.aspx">Our Commitments</a></li>
+	</ul></li><li><a href="https://www.newgold.com/contact/default.aspx">Contact</a></li><li class="has-children"><a href="https://www.newgold.com/covid-19/default.aspx">COVID-19 Updates</a><ul class="level2">
+		<li><a href="https://www.newgold.com/covid-19/Rainy-River-Mine/default.aspx">Rainy River Mine</a></li><li><a href="https://www.newgold.com/covid-19/New-Afton-Mine/default.aspx">New Afton Mine</a></li>
+	</ul></li>
+</ul></nav></span><span class='HeaderPaneDiv4'><div id="_ctrl0_ctl15_divModuleContainer" class="module module-embed layout_toggle">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <button class="q4-icon_menu" type="button" tabindex="0"></button>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv5'><div id="_ctrl0_ctl18_divModuleContainer" class="module module-embed layout_toggle-stock">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <button class="q4-icon_ic_trending_up_white_24px" type="button" tabindex="0"></button>
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv6'><div id="_ctrl0_ctl21_divModuleContainer" class="module module-embed module module-stock-header">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="stock-widget--NYSE"></div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.min.js"></script>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.11.min.js"></script>
+<script>
+     $('.stock-widget--NYSE').stockQuote({
+       dateFormat: 'mm/d/yy',
+       changeCls: ['down', 'up'],
+       stock:["AMEX:NGD"],
+       stockTpl: (
+        '{{#.}}' +
+            ' <div class="module_container module_container--outer">  ' +
+                ' <div class="module_container module_container--inner"> ' +
+                    ' <span  class="module-stock-header_description1">NYSE American: NGD</span> ' +
+                   '  <span  class="module-stock-header_description2"></span> ' +
+                    ' <span class="module-stock-header_stock-price">{{tradePrice}}</span> ' +
+                    ' <span class="module-stock-header_change module-stock-header_{{uod}}"> ' +
+                        ' <span class="module-stock-header_indicator">{{uodSymbol}}</span>{{change}} ' +
+                   '  </span> ' +
+                ' </div> ' +
+           '  </div> ' +
+        '{{/.}}' 
+        )
+    });
+</script>
+
+
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv7'><div id="_ctrl0_ctl24_divModuleContainer" class="module module-embed module module-stock-header ">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="stock-widget--TSX"></div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.min.js"></script>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.11.min.js"></script>
+<script>
+     $('.stock-widget--TSX').stockQuote({
+       dateFormat: 'mm/d/yy',
+       changeCls: ['down', 'up'],
+       stock:["TSE:NGD.CA"],
+       stockTpl: (
+        '{{#.}}' +
+        ' <div class="module_container module_container--outer"> ' +
+            ' <div class="module_container module_container--inner"> ' +
+                ' <span class="module-stock-header_description1">TSX: NGD</span> ' +
+                ' <span class="module-stock-header_description2"></span> ' +
+                ' <span class="module-stock-header_stock-price">{{tradePrice}}</span> ' +
+                ' <span class="module-stock-header_change module-stock-header_{{uod}}"> ' +
+                    ' <span class="module-stock-header_indicator">{{uodSymbol}}</span>{{change}} ' +
+                ' </span> ' +
+            ' </div> ' +
+       '  </div> ' +
+        '{{/.}}' 
+        )
+    });
+</script>
+
+
+
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv8'><div id="_ctrl0_ctl27_divModuleContainer" class="module module-embed module module-stock-header">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="stock-widget--gold"></div> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.3/mustache.min.js"></script>
+<script src="https://widgets.q4app.com/widgets/q4.stockQuote.1.0.11.min.js"></script>
+<script>
+     $('.stock-widget--gold').stockQuote({
+       dateFormat: 'mm/d/yy',
+       changeCls: ['down', 'up'],
+       stock: ["USD:XAU"],
+       // stock: ["Spot Gold:/gc_c"],
+       stockTpl: (
+        '{{#.}}' +
+        ' <div class="module_container module_container--outer"> ' +
+            ' <div class="module_container module_container--inner"> ' +
+                ' <span  class="module-stock-header_description1">GOLD: US</span> ' +
+                ' <span  class="module-stock-header_description2"></span> ' +
+                ' <span class="module-stock-header_stock-price">{{tradePrice}}</span> ' +
+               '  <span class="module-stock-header_change module-stock-header_{{uod}}"> ' +
+                    ' <span class="module-stock-header_indicator">{{uodSymbol}}</span>{{change}} ' +
+                ' </span>   ' +
+            ' </div> ' +
+       '  </div> ' +
+        '{{/.}}' 
+        )
+    });
+</script>
+
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv9'><div id="_ctrl0_ctl30_divModuleContainer" class="module module-search" role="search">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <span id="_ctrl0_ctl30_lblSearchText" class="module-search_text"></span>
+            <input type="submit" name="_ctrl0$ctl30$btnSearch" value="" id="_ctrl0_ctl30_btnSearch" class="module_button module-search_button" />
+            <input name="_ctrl0$ctl30$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl30_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl30$btnSearch&#39;, &#39;&#39;); " />
+            
+        </div>
+    </div>
+</div></span><span class='HeaderPaneDiv10'><div id="_ctrl0_ctl33_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl33_divModuleContainer" class="module module-links module-header-social-links no-type-list">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl33_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl33_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/rss-feeds/default.aspx" id="_ctrl0_ctl33_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self"><i class="q4-icon_rss"></i><span class="sr-only">RSS</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl33_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.youtube.com/channel/UCAxEHzpexSI2h25i1BIk4ag" id="_ctrl0_ctl33_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_youtube"></i><span class="sr-only">Youtube</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl33_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.linkedin.com/company/new-gold/?originalSubdomain=ca" id="_ctrl0_ctl33_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_linkedin"></i><span class="sr-only">Linkedin</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl33_QuickLinkList_ctl03_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://twitter.com/NewGoldInc" id="_ctrl0_ctl33_QuickLinkList_ctl03_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_twitter"></i><span class="sr-only">Twitter</span></a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="pane pane--banner grid--no-gutter">
+                <div class="pane_inner clearfix"></div>
+            </div>
+            <div class="pane pane--navigation">
+                <div class="pane_inner clearfix"><span class='NavigationPaneDiv14'><nav class="nav nav--main-mobile no-type-list"><ul class="level1">
+	<li class="has-children"><a href="https://www.newgold.com/company/default.aspx">Company</a><ul class="level2">
+		<li><a href="https://www.newgold.com/company/mission-and-values/default.aspx">Mission and Values</a></li><li><a href="https://www.newgold.com/company/board-of-directors/default.aspx">Board of Directors</a></li><li><a href="https://www.newgold.com/company/management/default.aspx">Management</a></li><li class="has-children"><a href="https://www.newgold.com/company/governance/default.aspx">Governance</a><ul class="level3">
+			<li><a href="https://www.newgold.com/company/governance/board-mandate-and-committee-charters/default.aspx">Board Mandate & Committee Charters</a></li><li><a href="https://www.newgold.com/company/governance/governance-and-by-laws/default.aspx">Governance & By-laws</a></li><li><a href="https://www.newgold.com/company/governance/corporate-policies/default.aspx">Corporate Policies</a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.newgold.com/assets/default.aspx">Assets</a><ul class="level2">
+		<li class="no-link"><span>Operating Assets:</span></li><li class="has-children"><a href="https://www.newgold.com/assets/rainy-river/default.aspx">Rainy River</a><ul class="level3">
+			<li><a href="/assets/rainy-river/default.aspx#overview-map">Overview</a></li><li><a href="/assets/rainy-river/default.aspx#history">Site History</a></li><li><a href="/assets/rainy-river/default.aspx#reports">Geology, Exploration, Technical Reports</a></li><li><a href="/assets/rainy-river/default.aspx#mining">Responsible Mining</a></li><li><a href="https://www.newgold.com/assets/rainy-river/environmental-annual-reporting/default.aspx">Environmental Annual Reporting</a></li><li><a href="/assets/rainy-river/default.aspx#community-relations">Community Relations</a></li><li><a href="/assets/rainy-river/default.aspx#contact">Contact Us</a></li><li><a href="https://www.newgold.com/assets/rainy-river/environmental-assessment-report/default.aspx">Environmental Assessment Report</a></li><li><a href="https://www.newgold.com/assets/rainy-river/project-summary/default.aspx">Project Summary</a></li><li><a href="https://www.newgold.com/assets/rainy-river/geology-exploration-and-technical-reports/default.aspx">Geology, Exploration, & Technical Reports</a></li>
+		</ul></li><li class="has-children"><a href="https://www.newgold.com/assets/new-afton/default.aspx">New Afton</a><ul class="level3">
+			<li><a href="/assets/new-afton/default.aspx#overview-map">Overview</a></li><li><a href="/assets/new-afton/default.aspx#history">Site History</a></li><li><a href="/assets/new-afton/default.aspx#reports">Geology, Exploration, Technical Reports</a></li><li><a href="/assets/new-afton/default.aspx#responsible-mining">Responsible Mining</a></li><li><a href="/assets/new-afton/default.aspx#community-relations">Community Relations</a></li><li><a href="/assets/new-afton/default.aspx#contact">Contact Us</a></li><li><a href="/assets/new-afton/default.aspx#beyond-new-afton">Beyond New Afton</a></li>
+		</ul></li><li><a href="https://www.newgold.com/assets/Reserves-and-Resources-/default.aspx"><span style="font-size:14px; padding-left: 0px; font-family: "Foundry Sterling W01 Bd", Arial, Helvetica, sans-serif;">Reserves & Resources:</span></a></li><li class="no-link"><span>Gold Stream:</span></li><li class="has-children"><a href="https://www.newgold.com/assets/blackwater/default.aspx">Blackwater Gold Stream</a><ul class="level3">
+			<li><a href="/assets/blackwater/default.aspx#overview-map">Overview</a></li>
+		</ul></li><li class="no-link"><span>In Reclamation:</span></li><li class="has-children"><a href="https://www.newgold.com/assets/cerro-san-pedro/default.aspx">Cerro San Pedro</a><ul class="level3">
+			<li><a href="/assets/cerro-san-pedro/default.aspx#overview-map">Overview</a></li><li><a href="/assets/cerro-san-pedro/default.aspx#history">Site History</a></li><li><a href="/assets/cerro-san-pedro/default.aspx#mining">Responsible Mining</a></li><li><a href="/assets/cerro-san-pedro/default.aspx#community-relations-cerro">Community Relations</a></li><li><a href="/assets/cerro-san-pedro/default.aspx#contact">Contact Us</a></li>
+		</ul></li>
+	</ul></li><li class="has-children"><a href="https://www.newgold.com/investors/default.aspx">Investors</a><ul class="level2">
+		<li><a href="https://www.newgold.com/investors/news-releases/default.aspx">News Releases</a></li><li><a href="https://www.newgold.com/investors/corporate-presentations/default.aspx">Corporate Presentations</a></li><li class="has-children"><a href="https://www.newgold.com/investors/financial-information/reports-and-financials/default.aspx">Financial and Other Reports</a><ul class="level3">
+			<li><a href="https://www.newgold.com/investors/financial-information/reports-and-financials/default.aspx">Reports and Financials</a></li><li><a href="https://www.newgold.com/investors/financial-information/reserves-and-resources/default.aspx">Reserves & Resources</a></li><li><a href="/responsibility/reports/estma-report/default.aspx">ESTMA Report</a></li>
+		</ul></li><li class="has-children"><a href="https://www.newgold.com/investors/events-and-presentations/presentations-events-and-webcasts/default.aspx">Events & Webcasts</a><ul class="level3">
+			<li class="has-children"><a href="https://www.newgold.com/investors/events-and-presentations/presentations-events-and-webcasts/default.aspx">Events & Webcasts</a><ul class="level4">
+				<li><a href="https://www.newgold.com/investors/events-and-presentations/presentations-events-and-webcasts/annual-meeting-of-shareholders/default.aspx">Annual Meeting of Shareholders </a></li>
+			</ul></li>
+		</ul></li><li class="has-children"><a href="https://www.newgold.com/investors/shareholder-information/stock-performance/default.aspx">Shareholder Information</a><ul class="level3">
+			<li><a href="https://www.newgold.com/investors/shareholder-information/stock-performance/default.aspx">Stock Performance</a></li><li><a href="https://www.newgold.com/investors/shareholder-information/analyst-coverage/default.aspx">Analyst Coverage</a></li><li><a href="http://apps.indigotools.com/IR/IAC/?Ticker=NGD&amp;Exchange=AMEX" target="_blank">Interactive Analyst Center</a></li><li><a href="https://www.newgold.com/investors/shareholder-information/frequently-asked-questions-/default.aspx">Frequently Asked Questions </a></li>
+		</ul></li><li><a href="https://www.newgold.com/investors/investor-briefcase/default.aspx">Investor Briefcase</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newgold.com/responsibility/default.aspx">Responsibility</a><ul class="level2">
+		<li><a href="https://www.newgold.com/responsibility/ESG/default.aspx">ESG</a></li><li class="has-children"><a href="https://www.newgold.com/responsibility/reports/annual-csr-report/default.aspx">Reports</a><ul class="level3">
+			<li><a href="https://www.newgold.com/responsibility/reports/annual-csr-report/default.aspx">Annual CSR Report</a></li><li><a href="https://www.newgold.com/responsibility/reports/estma-report/default.aspx">ESTMA Report</a></li>
+		</ul></li><li class="has-children"><a href="https://www.newgold.com/responsibility/responsibility/health-and-safety/default.aspx">Responsibility</a><ul class="level3">
+			<li><a href="https://www.newgold.com/responsibility/responsibility/health-and-safety/default.aspx">Health and Safety</a></li><li><a href="https://www.newgold.com/responsibility/responsibility/the-environment/default.aspx">The Environment</a></li><li><a href="https://www.newgold.com/responsibility/responsibility/our-communities/default.aspx">Our Communities</a></li>
+		</ul></li><li class="has-children"><a href="https://www.newgold.com/responsibility/assets/rainy-river/default.aspx">Assets</a><ul class="level3">
+			<li><a href="https://www.newgold.com/responsibility/assets/rainy-river/default.aspx">Rainy River</a></li><li><a href="https://www.newgold.com/responsibility/assets/new-afton/default.aspx">New Afton</a></li><li><a href="https://www.newgold.com/responsibility/assets/cerro-san-pedro/default.aspx">Cerro San Pedro</a></li>
+		</ul></li><li><a href="https://communityinvestment.newgold.com/en/" target="_blank">Community Investment Program</a></li>
+	</ul></li><li class="has-children"><a href="https://www.newgold.com/careers/default.aspx">Careers</a><ul class="level2">
+		<li><a href="https://www.newgold.com/careers/the-new-gold-difference/default.aspx">The New Gold Difference</a></li><li><a href="https://www.newgold.com/careers/working-at-new-gold/default.aspx">Working at New Gold</a></li><li><a href="https://www.newgold.com/careers/what-our-employees-say/default.aspx">What Our Employees Say</a></li><li><a href="https://www.newgold.com/careers/our-commitments/default.aspx">Our Commitments</a></li>
+	</ul></li><li><a href="https://www.newgold.com/contact/default.aspx">Contact</a></li><li class="has-children"><a href="https://www.newgold.com/covid-19/default.aspx">COVID-19 Updates</a><ul class="level2">
+		<li><a href="https://www.newgold.com/covid-19/Rainy-River-Mine/default.aspx">Rainy River Mine</a></li><li><a href="https://www.newgold.com/covid-19/New-Afton-Mine/default.aspx">New Afton Mine</a></li>
+	</ul></li>
+</ul></nav></span><span class='NavigationPaneDiv15'><div id="_ctrl0_ctl39_divModuleContainer" class="module module-search" role="search">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <span id="_ctrl0_ctl39_lblSearchText" class="module-search_text"></span>
+            <input type="submit" name="_ctrl0$ctl39$btnSearch" value="" id="_ctrl0_ctl39_btnSearch" class="module_button module-search_button" />
+            <input name="_ctrl0$ctl39$txtSearchInput" type="text" maxlength="256" id="_ctrl0_ctl39_txtSearchInput" class="module_input module-search_input" aria-label="Search query" placeholder="Search" value="" onkeypress="javascript:var key; if (window.event) { key = window.event.keyCode; } else if (e) { key = e.which; } else { return true; } if (key == 13) __doPostBack(&#39;_ctrl0$ctl39$btnSearch&#39;, &#39;&#39;); " />
+            
+        </div>
+    </div>
+</div></span><span class='NavigationPaneDiv16'><div id="_ctrl0_ctl42_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl42_divModuleContainer" class="module module-links module-header-social-links no-type-list">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl42_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/rss-feeds/default.aspx" id="_ctrl0_ctl42_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self"><i class="q4-icon_rss"></i><span class="sr-only">RSS</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="/none" id="_ctrl0_ctl42_QuickLinkList_ctl01_link" class="module-links_list-item-link"><i class="q4-icon_facebook"></i><span class="sr-only">Facebook</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://twitter.com/NewGoldInc" id="_ctrl0_ctl42_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_twitter"></i><span class="sr-only">Twitter</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl42_QuickLinkList_ctl03_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.linkedin.com/company/new-gold/?originalSubdomain=ca" id="_ctrl0_ctl42_QuickLinkList_ctl03_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_linkedin"></i><span class="sr-only">Linkedin</span></a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+            <div class="pane pane--breadcrumb">
+                <div class="pane_inner clearfix"><span class='BreadcrumbPaneDiv17'><div id="_ctrl0_ctl45_divModuleContainer" class="module module-stock-header no-border-top">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <span id="_ctrl0_ctl45_lblDescription1" class="module-stock-header_description1">GOLD: US</span>
+            <span id="_ctrl0_ctl45_lblDescription2" class="module-stock-header_description2"></span>
+            <a href="https://www.newgold.com/default.aspx" id="_ctrl0_ctl45_hrefPrice" class="module-stock-header_stock-price">1,867.50</a>
+            
+                <span class="module-stock-header_change module-stock-header_up">
+                    <span class='module-stock-header_indicator'>+</span>29.60
+                </span>
+            
+            
+            
+                <span class="module-stock-header_percent-change module-stock-header_up">
+                    <span class='module-stock-header_indicator'>+</span>1.61%
+                </span>
+            
+            
+            <span id="_ctrl0_ctl45_lblVolumeText" class="module-stock-header_volume-text">Volume: </span>
+            <span id="_ctrl0_ctl45_lblVolume" class="module-stock-header_volume">41</span>
+            <span id="_ctrl0_ctl45_lblDescription3" class="module-stock-header_description3"></span>
+            <span id="_ctrl0_ctl45_lblStockDate" class="module-stock-header_date">May 17, 2021</span>
+        </div>
+    </div>
+</div></span><span class='BreadcrumbPaneDiv19'><div id="_ctrl0_ctl51_divModuleContainer" class="module module-stock-header">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <span id="_ctrl0_ctl51_lblDescription1" class="module-stock-header_description1">TSX: NGD</span>
+            <span id="_ctrl0_ctl51_lblDescription2" class="module-stock-header_description2"></span>
+            <a href="https://www.newgold.com/default.aspx" id="_ctrl0_ctl51_hrefPrice" class="module-stock-header_stock-price">2.34</a>
+            
+                <span class="module-stock-header_change module-stock-header_up">
+                    <span class='module-stock-header_indicator'>+</span>0.13
+                </span>
+            
+            
+            
+                <span class="module-stock-header_percent-change module-stock-header_up">
+                    <span class='module-stock-header_indicator'>+</span>5.88%
+                </span>
+            
+            
+            <span id="_ctrl0_ctl51_lblVolumeText" class="module-stock-header_volume-text">Volume: </span>
+            <span id="_ctrl0_ctl51_lblVolume" class="module-stock-header_volume">1,947,095</span>
+            <span id="_ctrl0_ctl51_lblDescription3" class="module-stock-header_description3"></span>
+            <span id="_ctrl0_ctl51_lblStockDate" class="module-stock-header_date">May 17, 2021</span>
+        </div>
+    </div>
+</div></span><span class='BreadcrumbPaneDiv20'><div id="_ctrl0_ctl54_divModuleContainer" class="module module-stock-header">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <span id="_ctrl0_ctl54_lblDescription1" class="module-stock-header_description1">NYSE MKT: NGD</span>
+            <span id="_ctrl0_ctl54_lblDescription2" class="module-stock-header_description2"></span>
+            <a href="https://www.newgold.com/default.aspx" id="_ctrl0_ctl54_hrefPrice" class="module-stock-header_stock-price">1.94</a>
+            
+                <span class="module-stock-header_change module-stock-header_up">
+                    <span class='module-stock-header_indicator'>+</span>0.11
+                </span>
+            
+            
+            
+                <span class="module-stock-header_percent-change module-stock-header_up">
+                    <span class='module-stock-header_indicator'>+</span>6.01%
+                </span>
+            
+            
+            <span id="_ctrl0_ctl54_lblVolumeText" class="module-stock-header_volume-text">Volume: </span>
+            <span id="_ctrl0_ctl54_lblVolume" class="module-stock-header_volume">34,241</span>
+            <span id="_ctrl0_ctl54_lblDescription3" class="module-stock-header_description3"></span>
+            <span id="_ctrl0_ctl54_lblStockDate" class="module-stock-header_date">May 17, 2021</span>
+        </div>
+    </div>
+</div></span><span class='BreadcrumbPaneDiv1'><div id="_ctrl0_ctl78_divModuleContainer" class="module module-html module-sections-navigation no-type-list">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="menu">
+    <li data-menuanchor="first-section"><a href="#first-section"><span class="sr-only">First section</span></a></li>
+    <li data-menuanchor="second-section"><a href="#second-section"><span class="sr-only">Second section</span></a></li>
+    <!-- <li data-menuanchor="third-section"><a href="#third-section"><span class="sr-only">Third section</span></a></li> -->
+</ul>
+        </div>
+    </div>
+</div></span></div>
+            </div>
+        </div>
+        <div class="layout_content" id="maincontent">
+            <div class="pane pane--left section" data-anchor="first-section">
+                <div class="pane_inner clearfix"><span class='LeftPaneDiv'><span class='LeftPaneDiv2'><div id="_ctrl0_ctl81_divModuleContainer" class="module module-embed module-slider-home">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module_container module_container--content"></div>
+<script type="text/javascript">
+$('.module-slider-home').downloads({
+    showAllYears: true,
+    fetchAllYears: true,
+    itemContainer: '.module_container--content',
+    downloadType: 'Slider',
+    itemTemplate: (
+        /* beautify preserve:start */
+
+             '<div class="module_item" style="background-image: url({{thumb}});">' +
+                   // '{{#items}}' +
+                     '<div class="module_item-text">' +
+                         // '<h4>{{title}}</h4>' +
+                         // '<img src="{{thumb}}" />' +
+                         '<span class="module_description">{{{description}}}</span>' +
+                     '</div>' +
+                   // '{{/items}}' +
+            '</div>'
+            /* beautify preserve:end */
+    ),
+    complete: function(e) {
+        addSliderWidgets();
+        $(e.target).find('.module_container--content').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            autoplay: true,
+            speed: 1000,
+            autoplaySpeed: 6000
+        });
+    }
+});
+
+    //Function to be run after the slider loads, applied in the slider's complete function
+function addSliderWidgets() {
+    //News widget
+    $('.module-news-slider').news({
+        usePublic: GetViewType() != "0",
+        apiKey: 'E5A21135249A450C88E459BA712FA405', 
+        showAllYears: true,
+        limit: 1,
+        itemContainer: '.module_container--content',
+        template: (
+            '{{#items}}' +
+            '<div class="module-section_description-section">' +
+            '<p>' +
+            '{{title}}' +
+            '</p>' +
+            '</div>' +
+            '<a href="{{url}}" target="_blank" class="button button--dark">Read More</a>' +
+            '<a href="#second-section" class="scroll-to-next q4-icon_NG-icons-dnArrow"><span class="sr-only">Second section</span></a>' +
+            '{{/items}}'
+        )
+    });
+    //presentation widget 
+    $('.module-presentation-slider').presentations({
+        //usePublic: GetViewType() != "0",
+        apiKey: 'E5A21135249A450C88E459BA712FA405', 
+        showAllYears: true,
+        limit: 1,
+        itemContainer: '.module_container--content',
+        template: (
+            '{{#items}}' +
+            '<div class="module-section_description-section">' +
+            '<p>' +
+            '{{title}}' +
+            '</p>' +
+            '</div>' +
+            '<a href="{{docUrl}}" target="_blank" class="button button--dark">View Presentation</a>' +
+            // '<a href="#second-section" class="scroll-to-next q4-icon_NG-icons-dnArrow"><span class="sr-only">Second section</span></a>' +
+            '{{/items}}'
+        )
+    });
+}
+</script>
+
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <!-- <div class="pane pane--content section" data-anchor="second-section">
+                <div class="pane_inner clearfix"><span class='ContentPaneDiv'></span></div>
+            </div> -->
+            <div class="pane pane--right section" data-anchor="second-section">
+                <div class="pane_inner clearfix"><span class='RightPaneDiv'><span class='RightPaneDiv3'><div id="_ctrl0_ctl84_divModuleContainer" class="module module-html module-section module-section--assets">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <a href="#second-section" class="scroll-to-prev q4-icon_NG-icons-upArrow"><span class="sr-only">Prev section</span></a>
+<div class="module-section_description-section">
+    <h2>Assets</h2>
+<p>New Gold has a portfolio of two core producing assets located in Canada, a top-rated, politically secure, mining friendly jurisdiction, as well as an 8% gold stream on the 100% owned Artemis Gold Blackwater development project.</p>
+<ul>
+    <li>Rainy River, a gold-silver mine in Ontario</li>
+    <li>New Afton, a gold-copper mine in British Columbia </li>
+    <li>Blackwater Project gold stream</li>
+</ul>
+<p>&nbsp;</p>
+<div class="module-assets_links">
+    <span>
+        <a class="button button--dark" href="/assets/rainy-river/default.aspx">Rainy River Mine</a>
+    </span>
+    <span>
+        <a class="button button--dark" href="/assets/new-afton/default.aspx">New Afton Mine</a>
+    </span>
+    <span>
+        <a class="button button--dark" href="/assets/blackwater/default.aspx">Blackwater Gold Stream</a>
+    </span>
+</div>
+</div>
+<!-- <a href="#third-section" class="scroll-to-next q4-icon_NG-icons-dnArrow"><span class="sr-only">Next section</span></a> -->
+        </div>
+    </div>
+</div></span></span></div>
+            </div>
+            <div class="layout_footer section fp-auto-height" role="contentinfo" data-anchor="fourth-section">
+                <div class="pane pane--footer grid--no-gutter">
+                    <div class="pane_inner clearfix"><span class='FooterPaneDiv'><span class='FooterPaneDiv18'><div id="_ctrl0_ctl48_divModuleContainer" class="module module-html copyright">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="footer-logo"><a href="/"><img src="//s2.q4cdn.com/351510513/files/design/ng-logo-white.svg" alt="New Gold"></a></div>
+© Copyright <span class="copyright_year"></span> New Gold Inc.
+        </div>
+    </div>
+</div></span><span class='FooterPaneDiv22'><div id="_ctrl0_ctl57_divModuleContainer" class="module module-subscribe module-subscribe--fancy">
+    <div class="module_container module_container--outer">
+        <h2 id="_ctrl0_ctl57_lblTitle" class="module_title"><span id="_ctrl0_ctl57_lblModuleTitle" class="ModuleTitle">Subscribe</span><span id="_ctrl0_ctl57_lblHelpPage"></span></h2>
+        <div class="module_container module_container--inner">
+            <div class="module_introduction"><span id="_ctrl0_ctl57_lblIntroText" class="IntroText"><p>To receive notifications via email, enter your email address and select at least one subscription below. After submitting your information, you will receive an email. You must click the link in the email to activate your subscription. You can sign up for additional subscriptions at any time.</p><p class="module_required-text"><span class="red-star">*</span> Required</p></span></div>
+            
+                <div class="module-subscribe_table-wrap">
+                    <table class="module-subscribe_table module-subscribe_form">
+                        
+                        
+                        <tr id="_ctrl0_ctl57_rowEmailAddress" class="module-subscribe_table-input module-subscribe_email">
+	<td>
+                                <label for="_ctrl0_ctl57_txtEmail" id="_ctrl0_ctl57_lblEmailAddressText">Email Address</label>
+                                <span id="_ctrl0_ctl57_lblRequiredEmailAddress" class="module_required">*</span>
+                                <input name="_ctrl0$ctl57$txtEmail" type="text" maxlength="128" id="_ctrl0_ctl57_txtEmail" class="module_input" placeholder="Enter your Email" />
+                                
+                                
+                            </td>
+</tr>
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </table>
+                    <table id="_ctrl0_ctl57_tableMailingLists" class="module-subscribe_table module-subscribe_mailing-list">
+	<tr id="_ctrl0_ctl57_rowMailingListLabel" class="module-subscribe_table-input module-subscribe_list-header">
+		<td>
+                                <label for="_ctrl0_ctl57_chkLists" id="_ctrl0_ctl57_lblMailingListsText">Mailing Lists</label>
+                                <span id="_ctrl0_ctl57_lblRequiredMailingLists" class="module_required">*</span>
+                            </td>
+	</tr>
+	<tr id="_ctrl0_ctl57_rowMailingLists" class="module-subscribe_table-input module-subscribe_list">
+		<td>
+                                <span id="_ctrl0_ctl57_chkLists"><input id="_ctrl0_ctl57_chkLists_0" type="checkbox" name="_ctrl0$ctl57$chkLists$0" value="31" /><label for="_ctrl0_ctl57_chkLists_0">News releases</label><br /><input id="_ctrl0_ctl57_chkLists_1" type="checkbox" name="_ctrl0$ctl57$chkLists$1" value="34" /><label for="_ctrl0_ctl57_chkLists_1">Corporate presentations</label><br /><input id="_ctrl0_ctl57_chkLists_2" type="checkbox" name="_ctrl0$ctl57$chkLists$2" value="37" /><label for="_ctrl0_ctl57_chkLists_2">Corporate reports</label></span>
+                                
+                                
+                            </td>
+	</tr>
+</table>
+
+            <div id="_ctrl0_ctl57_UCCaptcha_divModuleContainer" class="CaptchaContainer">
+<table id="_ctrl0_ctl57_UCCaptcha_Table1" cellpadding="0" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2"><img src="https://www.newgold.com/q4api/v4/captcha?clientId=_ctrl0_ctl57_UCCaptcha" id="_ctrl0_ctl57_UCCaptcha_Image1" /></td>
+	</tr>
+	<tr>
+		<td colspan="2"><b>Enter the code shown above.</b></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<input name="_ctrl0$ctl57$UCCaptcha$txtCode" type="text" id="_ctrl0_ctl57_UCCaptcha_txtCode" />
+		</td>
+	</tr>
+</table>
+
+</div>
+            <div class="module_actions">
+                <input type="submit" name="_ctrl0$ctl57$btnSubmit" value="Submit" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;_ctrl0$ctl57$btnSubmit&quot;, &quot;&quot;, true, &quot;2e463b33-0b9d-45f8-ad91-d332f4dbf769&quot;, &quot;&quot;, false, false))" id="_ctrl0_ctl57_btnSubmit" class="button module-subscribe_submit-button" />
+            </div>
+            <div class="module_unsubscribe-link"><p>By providing your email address, you consent to receive the information you requested from New Gold. You may withdraw your consent by clicking the unsubscribe link below.</p><p><small><a href="/contact/email-alerts/default.aspx">Unsubscribe</a></small></p></div>            
+            </div>
+        </div>
+    </div>
+</div>
+<div id="_ctrl0_ctl57_divEditSubscriberConfirmation" class="module module-subscribe module_confirmation-container" style="DISPLAY:none;">
+    <div class="module_container module_container--outer">
+        <h2 class="module_title">Email Alert Sign Up Confirmation</h2>
+        <div class="module_container module_container--inner">
+            
+        </div>
+    </div>
+</div></span><span class='FooterPaneDiv24'><div id="_ctrl0_ctl63_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl63_divModuleContainer" class="module module-links module-footer-links-top no-type-list dark">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl63_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl63_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/company/default.aspx" id="_ctrl0_ctl63_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Company</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl63_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.newgold.com/assets/default.aspx" id="_ctrl0_ctl63_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Assets</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl63_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/investors/default.aspx" id="_ctrl0_ctl63_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_self">Investors</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl63_QuickLinkList_ctl03_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.newgold.com/responsibility/default.aspx" id="_ctrl0_ctl63_QuickLinkList_ctl03_link" class="module-links_list-item-link" target="_self">Responsibility</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl63_QuickLinkList_ctl04_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/careers/default.aspx" id="_ctrl0_ctl63_QuickLinkList_ctl04_link" class="module-links_list-item-link" target="_self">Careers</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl63_QuickLinkList_ctl05_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.newgold.com/contact/default.aspx" id="_ctrl0_ctl63_QuickLinkList_ctl05_link" class="module-links_list-item-link" target="_self">Contact</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span></span></div>
+                </div>
+                <div class="pane pane--footer2">
+                    <div class="pane_inner clearfix"><span class='FooterPane2Div25'><div id="_ctrl0_ctl66_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl66_divModuleContainer" class="module module-links module-footer-links-bottom no-type-list">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl66_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl66_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/accessibility-policy/default.aspx" id="_ctrl0_ctl66_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self">Accessibility</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl66_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.newgold.com/glossary/default.aspx" id="_ctrl0_ctl66_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_self">Glossary</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl66_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/legal-notice/default.aspx" id="_ctrl0_ctl66_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_self">Legal Notice/Disclaimer</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl66_QuickLinkList_ctl03_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.newgold.com/privacy-policy/default.aspx" id="_ctrl0_ctl66_QuickLinkList_ctl03_link" class="module-links_list-item-link" target="_self">Privacy</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl66_QuickLinkList_ctl04_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/resources/default.aspx" id="_ctrl0_ctl66_QuickLinkList_ctl04_link" class="module-links_list-item-link" target="_self">Resources</a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl66_QuickLinkList_ctl05_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.newgold.com/site-map/default.aspx" id="_ctrl0_ctl66_QuickLinkList_ctl05_link" class="module-links_list-item-link" target="_self">Site Map</a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span><span class='FooterPane2Div26'><div id="_ctrl0_ctl69_RightBlock" class="hidden"></div>
+<div id="_ctrl0_ctl69_divModuleContainer" class="module module-links module-footer-social-links no-type-list">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <ul id="_ctrl0_ctl69_qlList" class="module-links_list">
+                
+                        <li id="_ctrl0_ctl69_QuickLinkList_ctl00_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.newgold.com/rss-feeds/default.aspx" id="_ctrl0_ctl69_QuickLinkList_ctl00_link" class="module-links_list-item-link" target="_self"><i class="q4-icon_rss"></i><span class="sr-only">RSS</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl69_QuickLinkList_ctl01_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://www.youtube.com/channel/UCAxEHzpexSI2h25i1BIk4ag" id="_ctrl0_ctl69_QuickLinkList_ctl01_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_youtube"></i><span class="sr-only">Youtube</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl69_QuickLinkList_ctl02_liQuickLink" class="QuickLinkRow">
+                            
+                            
+                            <a href="https://www.linkedin.com/company/new-gold/?originalSubdomain=ca" id="_ctrl0_ctl69_QuickLinkList_ctl02_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_linkedin"></i><span class="sr-only">Linkedin</span></a>
+                            
+                        </li>
+                    
+                        <li id="_ctrl0_ctl69_QuickLinkList_ctl03_liQuickLink" class="QuickLinkRowAlt">
+                            
+                            
+                            <a href="https://twitter.com/NewGoldInc" id="_ctrl0_ctl69_QuickLinkList_ctl03_link" class="module-links_list-item-link" target="_blank"><i class="q4-icon_twitter"></i><span class="sr-only">Twitter</span></a>
+                            
+                        </li>
+                    
+            </ul>
+        </div>
+    </div>
+</div></span></div>
+                </div>
+                <div class="pane pane--credits">
+                    <div class="pane_inner clearfix"><span class='Q4FooterDiv23'><div id="_ctrl0_ctl60_divModuleContainer" class="module module-html hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <div class="module-disclaimer">
+    <div class="module-disclaimer_inner">
+        <h2>Disclaimer</h2>
+        <p>Please note that you are now entering a website directly or indirectly maintained by a third party (the "External Site") and that you do so at your own risk. The terms of this disclaimer are supplemental to the Legal Notice maintained at www.newgold.com, which is applicable to your use of the External Site. References to the “Company” in this disclaimer include New Gold Inc. and all of its subsidiaries, affiliates and related companies.</p>
+        <p>The Company has no control over the External Site, any data or other content contained therein or any additional linked websites. The link to the External Site is provided for convenience purposes only. The information and other content on the External Site is not meant to modify, qualify, supplement or amend information disclosed by or on behalf of the Company under corporate, securities or other legislation in any jurisdiction, and should not be used to make investment decisions involving the Company’s securities.</p>
+        <p>By clicking “Accept” you acknowledge and agree that neither the Company nor third party provider Virtua Research, Inc. (“Virtua”) is responsible, or accepts or assumes any responsibility or liability whatsoever for, the content, the data or the technical operation of the External Site. Further, by entering the External Site, you also acknowledge and agree that you completely and irrevocably waive any and all rights and claims against the Company and Virtua and further acknowledge and agree that in no event shall the Company or Virtua, its officers, employees, directors and agents be liable for any (i) indirect, consequential, incidental, special, compensatory or punitive damages, (ii) damages for loss of income, loss of business profits, business interruption, loss of data or business information, loss of or damage to property, (iii) claims of third parties, or (iv) other pecuniary loss, arising out of or related to the Legal Notice, this disclaimer or the External Site.</p>
+        <p>By entering the External Site, you further acknowledge and agree that the disclaimer of warranties and limitations of liability set out in this disclaimer shall apply regardless of the causes, circumstances or form of action giving rise to the loss, damage, claim or liability, even if such loss, damage, claim or liability is based upon breach of contract (including, without limitation, a claim of fundamental breach or breach of a fundamental term), tort (including, without limitation, negligence), strict liability or any other legal or equitable theory, and even if the Company and Virtua are advised of the possibility of the loss, damage, claim or liability. The waiver and release specifically includes, without limitation, any and all rights and claims pertaining to the processing of personal data, including but not limited to any rights under any applicable data protection statute(s). If in any jurisdiction, any part of this disclaimer is held to be unenforceable by a court of competent jurisdiction, such part of this disclaimer shall be restricted or eliminated to the minimum extent and the remaining disclaimer shall otherwise remain in full force and effect.</p>
+        <p>Please note the information presented is deemed representative at the time of its original release. Changes in historical information may occur due to adjustments in accounting and reporting standards &amp; procedures.</p>
+        <h2>Non-GAAP Information</h2>
+        <p>In addition to disclosing results determined in accordance with GAAP, the Company may also disclose certain non-GAAP (such as cash costs and all-in sustaining costs) results of operations, including certain ratios, operational and miscellaneous data, as well as net income, diluted earnings per share, operating expenses, and operating income that make certain adjustments or exclude certain charges and gains that are outlined in the schedules included in this website and other non-GAAP measures. Management of the Company believes that this non-GAAP information provides investors with additional information to assess the Company’s operating performance by making certain adjustments or excluding costs or gains and assists investors in comparing the Company’s operating performance to prior periods. Management uses this non-GAAP information, along with GAAP information, in evaluating its historical operating performance. Neither the Company nor Virtua takes any responsibility for third party pricing data provided for informational purposes and certain ratio results formulated from the provided third party pricing data. The non-GAAP information is not prepared in accordance with GAAP, have no standardized meaning under GAAP and may not be comparable to non-GAAP information used by other companies. The non-GAAP information should not be viewed as a substitute for, or superior to, other data prepared in accordance with GAAP. See the Company’s cautionary statements in its latest interim and annual MD&amp;A’s.</p>
+        <div class="module-disclaimer_wrap-buttons text-center">
+            <a class="button" href="#" data-fancybox-close="">Decline</a>
+            <a class="button button-accept" href="http://apps.indigotools.com/IR/IAC/?Ticker=NGD&amp;Exchange=AMEX" target="_blank">Accept</a>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv27'>
+<div class="module module-q4-credits">
+    <div class="module_container module_container--outer">
+        <div class="module_container module_container--inner">
+            <a href="https://www.q4inc.com/Powered-by-Q4/" id="_ctrl0_ctl72_hrefWebsiteRecording" class="module-q4-credits-link" target="_blank">
+                <span id="_ctrl0_ctl72_lblWebsiteRecording" class="module-q4-credits_powered-text">Powered By Q4 Inc.</span>
+                <span id="_ctrl0_ctl72_lblVersion" class="module-q4-credits_version-text">5.56.0.1</span>
+                <span class="sr-only">(opens in new window)</span>
+            </a>
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv28'><div id="_ctrl0_ctl75_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script>
+    var q4App = $.extend(q4Defaults, {
+        fancySignup: function () { // OVERWRITE VALIDATION SCROLL ON HOMEPAGE FOR FULLPAGE.JS
+            var inst = this,
+                validationLock = true,
+                signup = inst.options.mailingListSignupCls,
+                $signup = $(signup),
+                confirm = 'div[id*="SubscriberConfirmation"]',
+                $confirm = $('div[id*="SubscriberConfirmation"]'), // jshint ignore:line
+                footerSuccess = inst.options.mailingListConfig.location + ' ' + confirm + ' .module_message--success',
+                $footerSuccess = $(footerSuccess);
+
+            // Subscriber Confirmation fix
+            if ($confirm.is(':visible')) {
+                if ($confirm.filter(':visible').closest(inst.options.mailingListConfig.location).length) {
+                    var successText = $confirm.filter(':visible').closest(inst.options.mailingListConfig.location).find('.module_message--success').text();
+                    $confirm.filter(':visible').parent().html(inst.options.mailingListConfig.tpl).find('.module_message--success').html(successText);
+                }
+                inst.scrollTo($('div[id*="SubscriberConfirmation"]').filter(':visible'), 0);
+                if (!$footerSuccess.length) {
+                    $('.module-unsubscribe,' + inst.options.mailingListConfig.hideOnConfirmation).addClass('js--hidden');
+                }
+            }
+
+            if (!$signup.length) {
+                return;
+            }
+
+            $signup.each(function () {
+                var $this = $(this);
+
+                // If a confirmation or error message is visible on page load, scroll to the module
+                if ($this.find('input.module_input').length && $this.find('input.module_input').val().length) {
+                    inst.scrollTo($this, 0);
+                }
+
+                $this.find('.CaptchaContainer').addClass('js--hidden');
+
+                // Accessibility fixes
+                $this.find('.CaptchaContainer img').attr('alt', 'Captcha');
+                $this.find('.CaptchaContainer input[type="text"]').attr('aria-label', 'Captcha Text');
+                $this.find('table').removeAttr('cellpadding cellspacing border width');
+                $this.find('.CaptchaContainer b').parent().html(function () {
+                    return '<strong>' + $(this).find('b').text() + '</strong>';
+                });
+                // Create a second submit button to be displayed inside fancybox. Replace input type submit with button
+                var $submit = $this.find('input[type="submit"]');
+                $submit.removeAttr('onclick').appendTo($this.find('.CaptchaContainer'));
+                $submit[0].outerHTML = $submit[0].outerHTML.replace(/^<input/, '<button') + '<span class="button_text">' + $submit[0].value + '</span></button>';
+                $this.find('.module_actions').append('<button type="submit" class="button module-subscribe_submit-button module-subscribe_submit-button--fancy"><span class="button_text">' + inst.options.mailingListConfig.submitText + '</span></button>');
+
+                $this.on('click', '.module-subscribe_submit-button--fancy', function (e) {
+                    e.preventDefault();
+                    validationLock = false;
+
+                    var $parent = $(this).closest(signup),
+                        errors = inst._mailingListValidation($parent);
+
+                    if (!errors.length) {
+                        $parent.find('.CaptchaContainer').removeClass('js--hidden').data('container', $parent.attr('id'));
+
+                        $.fancybox.open({
+                            src: $parent.find('.CaptchaContainer'),
+                            type: 'inline',
+                            opts: {
+                                onComplete: function () {
+                                    $('.fancybox-container').appendTo($('#litPageDiv form:first'));
+                                }
+                            }
+                        });
+                    } else {
+                        if ( !$('.layout').hasClass('layout--home') ) {
+                            inst.scrollTo($this.find('.module_error-container'), 0);
+                        }
+                    }
+
+                    return false;
+                });
+
+                // Run validation on change
+                $this.find('input, select').on('change', function () {
+                    if (!validationLock) {
+                        inst._mailingListValidation($this);
+                    }
+                });
+
+                // Submit form on enter
+                $this.find('.CaptchaContainer input[type="text"]').on('keydown', function (e) {
+                    if (e.keyCode == 13) {
+                        e.preventDefault();
+                        $(this).closest('.CaptchaContainer').find('[type="submit"]').trigger('click');
+                        return false;
+                    }
+                });
+
+                // Make sure the Captcha is filled out
+                $this.find('.CaptchaContainer')
+                    .prepend('<div class="module_error-container"></div>')
+                    .find('[type="submit"]').on('click', function (e) {
+                    var $container = $(this).closest('.CaptchaContainer');
+
+                    if (!$container.find('input[type="text"]').val().length) {
+                        e.preventDefault();
+                        $container.find('.module_error-container').html(inst.options.captchaValidationText + ' ' + inst.options.requiredText);
+                    } else if ($container.find('input[type="text"]').val().length !== 6) {
+                        e.preventDefault();
+                        $container.find('.module_error-container').html(inst.options.captchaValidationText + ' ' + inst.options.invalidText);
+                    }
+                });
+
+                // Validate submit on enter
+                $this.find('input[type="text"], input[type="email"]').on('keydown', function (e) {
+                    if (e.keyCode == 13) {
+                        e.preventDefault();
+                        $(this).closest(signup).find('.module_actions [type="submit"]').trigger('click');
+                        return false;
+                    }
+                });
+            });
+        },
+        init: function() {
+            var app = this;
+            app.cleanUp();
+            app.unWrapLink('a.module-stock-header_stock-price');
+            app.unWrapLink('a.module-breadcrumb_link');
+            app.submitOnEnter('.module-unsubscribe');
+            app.submitOnEnter('.module-search');
+            app.validateSubmit('.module-search');
+            app.superfish($('.nav--main .level1'), {cssArrows:false});
+            app.cleanQuickLinks($('.module-links'));
+            app.copyright($('.copyright_year'));
+            app.docTracking();
+            app.fancySignup();
+            app.resetDate(['.nav a[href*="s4.q4web.com"]:not([href$=".pdf"])']);
+            app.previewToolbar();
+            app.toggleNavStockMobile();
+            app.secondaryNavMobileToggle();
+            app.secondaryNavToggle();
+            app.disclaimerPopup();
+            app.addToBriefcase();
+            app.sections();
+            app.hideSection();
+        },
+        addToBriefcase: function(){
+            if($('.add-to-briefcase').data('briefcase-name') == undefined){
+                $('.add-to-briefcase').attr('data-briefcase-name',  $('.module-breadcrumb span:last-child').text() );
+            }
+            $('.add-to-briefcase').briefcase();  
+        },
+        scollingTable: function(selector) {
+            $(selector).not(selector + ' table').wrap('<div class="table-wrapper" />');
+        },
+        //toggle the header navigation and stock modules on mobile
+        toggleNavStockMobile: function() {
+            $('.layout_toggle button').on('click', function() {
+                $('.layout').toggleClass('js--mobile').removeClass('js--stock');
+            });
+            $('.layout_toggle-stock button').on('click', function() {
+                $('.layout').toggleClass('js--stock').removeClass('js--mobile');
+            });
+        },
+        //toogle the secondary navigation on desktop
+        secondaryNavToggle: function() {
+            $('.nav--secondary .level2 li.has-children').append('<span class="q4-icon_plus"></span>');
+            $('.nav--secondary').on('click', '.level2 > li.has-children > span', function() {
+                //e.preventDefault();
+                var $parent = $(this).parent();
+                $parent.find('.level3').slideToggle();
+                //$parent.siblings().find('.level3').slideUp();                   
+                $parent.toggleClass('js--expanded');
+            });
+        },
+        //toogle the secondary navigation on mobile
+        secondaryNavMobileToggle: function() {
+            $('.nav--secondary-mobile .level2 li.has-children').append('<span class="q4-icon_plus"></span>');
+            $('.module-page-title').on('click', '.module_title',function(){
+                $('.layout').toggleClass('js--show-nav-mobile');
+            });
+            if ($('.nav--secondary-mobile .level1 > li.selected').hasClass('has-children') || $('.nav--secondary-mobile .level1 > li.expanded').hasClass('has-children')) {
+                $('.layout').addClass('js--nav-has-children');
+            }
+            $('.nav--secondary-mobile').on('click', '.level2 > li.has-children > span', function() {
+                //e.preventDefault();
+                var $parent = $(this).parent();
+                $parent.find('.level3').slideToggle();
+                $parent.siblings().find('.level3').slideUp();                   
+                $parent.toggleClass('js--expanded').siblings().removeClass('js--expanded');
+            });
+        },
+        //disclaimer popup functionality
+        disclaimerPopup: function() {
+            $('.nav').on('click keypress', 'a:contains("Interactive")', function(e) {
+                e.preventDefault();
+                $.fancybox.open({
+                    src: '.module-disclaimer',
+                    type: 'inline',
+                    opts: {
+                        slideClass: 'fancybox-slide--no-padding',
+                        onComplete: function() {
+                            $('.module-disclaimer').on('click', '.button-accept', function() {
+                                $.fancybox.close();
+                            });
+                        }
+                    }
+                });
+            });
+        },
+
+        sections: function(){
+            var hash = window.location.hash.length ? window.location.hash.substring(1) : "";
+            isMobileOpen = function() {
+                return $('.layout').hasClass('js--mobile');
+            };
+
+            if ( $('.module-'+hash).length ) {
+                setTimeout(function(){
+                    q4App._toggleTrigger($('.module-accordion-' + hash).find('.module_title'), $('.module-accordion-' + hash).closest('.module_container--outer'), $('.module-accordion-' + hash), $('.module-accordion-' + hash).find('.module_container--inner'));
+                    q4App.scrollTo($('.module-'+hash));
+                    window.location.hash = hash;
+                }, 1000);                
+            }
+            $('nav').on('click','a[href*="#"]', function(e){
+                var $parent = $(this).closest('ul').parent('li'),
+                    hash = $(this).attr('href').split('#')[1];
+                if ($parent.hasClass('selected')) {
+                    if ( isMobileOpen() ) {
+                        $('.layout').removeClass('js--mobile');
+                    }
+                    e.preventDefault();
+                    window.location.hash = hash;
+                    q4App.scrollTo($('.module-'+hash));
+                }
+                q4App._toggleTrigger($('.module-accordion-' + hash).find('.module_title'), $('.module-accordion-' + hash).closest('.module_container--outer'), $('.module-accordion-' + hash), $('.module-accordion-' + hash).find('.module_container--inner'));
+            });
+        },
+
+        hideSection: function(){
+            $('.nav--main .level1 > li:contains("COVID-19 Updates")').addClass('js---hidden');
+        }
+    });
+
+    q4App.init();
+
+    
+</script>
+
+        </div>
+    </div>
+</div></span><span class='Q4FooterDiv4'><div id="_ctrl0_ctl87_divModuleContainer" class="module module-embed hidden">
+    <div class="module_container module_container--outer">
+        
+        <div class="module_container module_container--inner">
+            <script type="text/javascript" src="//s2.q4cdn.com/351510513/files/js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+    //full page script
+    $('.layout_content').fullpage({
+        anchors: ['first-section', 'second-section', 'third-section'],
+        menu: '.pane--breadcrumb',
+        responsiveWidth: 1024,
+        responsiveSlides: true
+    });
+    //latest annual
+    $('.module-featured-annual .module_container--content').financials({
+        showAllYears: true,
+        fetchAllYears: true,
+        reportTypes: ['Annual Report'],
+        docCategories: ['file'],
+        limit: 1,
+        itemContainer: '.module_item-container',
+        itemNotFoundMessage: '<div class="module-not-found-message"><i class="q4-icon_warning-line"></i> No items found.</div>',
+        loadingMessage: '<p class="module_loader"><i class="q4-icon_spinner"></i><span class="sr-only">Loading latest financials...</span></p>',
+        itemTemplate: (
+            /* beautify preserve:start */
+                '<div class="module_item">' +
+                        '<div class="module_links">' +
+                            '{{#docs}}' +
+                                '<div class="wrap-module_link">' +
+                                    '<a class="module_link" href="{{docUrl}}" target="_blank">' +
+                                        '<img src="{{docThumb}}" alt="Thumb Image"/>' +
+                                        '<span class="module_link-text">Corporate Reports</span>' +
+                                    '</a>' +
+                                '</div>' +
+                            '{{/docs}}' +
+                        '</div>' +
+                '</div>'
+            /* beautify preserve:end */
+        ),
+        complete: function(){
+            $('.module-featured-annual .module_links').each(function() {
+                if ($(this).text().length == 0) {
+                    $(this).parent().remove();
+                }
+            });
+
+            if ($('.module-featured-annual .module_item').length > 1) {
+                $('.module-featured-annual .module_item:last-child').addClass('js--hidden');
+            }   else {
+                $('.module-featured-annual .module_item:last-child').removeClass('js--hidden');
+            }
+        }
+    });
+
+    //corporate presentation
+    $('.module-presentation-featured .module_container--content').presentations({
+        showAllYears: true,
+        fetchAllYears: true,
+        limit:1,
+        itemNotFoundMessage: '<div class="module-not-found-message"><i class="q4-icon_warning-line"></i> Check back at a later date.</div>',
+        loadingMessage: '<p class="module_loader"><i class="q4-icon_spinner"></i><span class="sr-only">Loading latest events...</span></p>',
+        template: (
+            /* beautify preserve:start */
+            '{{#items.0}}' +
+                '<div class="module_item">' +
+                    '<div class="module_links">' +
+                        '<a class="module_link" href="{{docUrl}}" target="_blank">'+
+                            '<img src="{{thumb}}" alt="Thumb Image"/>' +
+                            '<span class="module_link-text">Corporate Presentation</span>' +
+                        '</a>' +
+                    '</div>' +
+                '</div>'+
+            '{{/items.0}}'
+            /* beautify preserve:end */
+        )
+    });
+
+    //latest news
+    $('.news .module_container--content').news({
+        showAllYears: true,
+        limit:1,
+        itemNotFoundMessage: '<div class="module-not-found-message"><i class="q4-icon_warning-line"></i> Check back at a later date.</div>',
+        loadingMessage: '<p class="module_loader"><i class="q4-icon_spinner"></i><span class="sr-only">Loading latest events...</span></p>',
+        template: (
+            /* beautify preserve:start */
+            '{{#items}}' +
+                '<div class="module_item">' +
+                    '<div class="module_links">' +
+                        '<a class="module_link" href="{{url}}">'+
+                            '<img src="//s2.q4cdn.com/351510513/files/design/news-releases-thumb.png" alt="Thumb Image"/>' +
+                            '<span class="module_link-text">News Releases</span>' +
+                        '</a>' +
+                    '</div>' +
+                '</div>'+
+            '{{/items}}'
+            /* beautify preserve:end */
+        )
+    });
+</script>
+        </div>
+    </div>
+</div></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    <input type="hidden" name="__antiCSRF" id="__antiCSRF" value=""/>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="/js/anti-csrf.js">
+    </script>
+</body>
+</html>

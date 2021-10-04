@@ -1,0 +1,10 @@
+
+        Build code for the websites on thunderbird.net and start.thunderbird.net
+      
+        Use Git or checkout with SVN using the web URL.
+    
+      Work fast with our official CLI.
+      .
+    If nothing happens,  and try again.If nothing happens,  and try again.If nothing happens,  and try again.Your codespace will open once ready.There was a problem preparing your codespace, please try again.This repo contains the Thunderbird in-client Start page and the  website.On Ubuntu, you would need to use apt-get instead of yum, and similarly for different package managers.If you need the localizations to display pages translated from English into other languages:A basic build is .
+It builds  into the  directory by default.There are additional arguments:thunderbird.net templates are in the  directory, and start page in the  dir. Assets are shared and in the  dir.To view the website for testing purposes, run . This also works with the start page.You can then navigate to:  to view the website. None of the apache redirects work in this mode, so you have to click your
+desired locale manually in the browser, but the site should behave normally after that.In general, you only need to man

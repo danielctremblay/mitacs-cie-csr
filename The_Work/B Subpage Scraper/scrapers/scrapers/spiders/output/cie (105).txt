@@ -1,0 +1,13 @@
+Loading...http://www.fortisbc.com/ |
+	    01:14:18 October 21, 2014Got an HTTP 302 response at crawl timeRedirecting to...http://www.fortisbc.com/Pages/default.aspx
+          The Wayback Machine is an initiative of the
+          ,
+          a 501(c)(3) non-profit, building a digital library of
+          Internet sites and other cultural artifacts in digital form.
+          Other  include
+           &
+          .
+        
+          Your use of the Wayback Machine is subject to the Internet Archive's
+          .
+        
